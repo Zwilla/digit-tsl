@@ -1,0 +1,56 @@
+Croatia 
+
+    Financijska agencija 
+
+        FINA Digital Certificate Registry - QC - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        FINA Digital Certificate Registry GOV - QC - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        FINA Digital Certificate Registry - NQC - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        FINA Digital Certificate Registry GOV - NQC - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        Fina QTSA 2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Fina RDC 2015 Digital Certificate Registry - QC - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Fina RDC 2015 Digital Certificate Registry GOV - QC - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Fina RDC 2015 Digital Certificate Registry - NQC - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        Fina RDC 2015 Digital Certificate Registry GOV - NQC - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        FINA Time-Stamping Service - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+    Agencija za komercijalnu djelatnost d.o.o. 
+
+        HR electronic IDentity - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Zagrebačka banka dioničko društvo 
+
+        Zaba QPKI - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+

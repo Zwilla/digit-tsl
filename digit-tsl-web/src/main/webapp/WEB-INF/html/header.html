@@ -1,0 +1,47 @@
+<div th:fragment="header">
+    <header>
+        <div id="header_ec" class="full">
+            <div class="top">
+                <div class="content clearfix">
+                    <ul id="services">
+                        <li class="first"><a href="http://ec.europa.eu/geninfo/legal_notices_en.htm" class="service" target="_blank"><span th:text="#{schemeInfo.legalNotice}"></span></a></li>
+                        <li><a ng-click="getContact()" class="service cursor-pointer">Contact</a></li>
+                        <li class="dropdown" ng-if="authorized()">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-user"> </span>
+                                <span>{{userInfo.ecasId}}</span>
+                            </a>
+                            <ul class="dropdown-menu logIconColor" style="padding: 0 0 0 0 !important; min-width: 90px !important;">
+                                <li>
+                                    <span class="fa fa-sign-out" style="padding-left: 2px; padding-right: 2px;"></span>
+                                    <a href="/tl-manager/end-session" class="cursor-pointer no-services" th:text="#{tLogout}" target="_self"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="title">
+                <div class="content">
+                    <span th:text="#{europeanComission}"></span>
+                </div>
+            </div>
+            <div class="sub-title">
+                <div class="content">
+                    <img th:src="@{/style/header/logo_en.gif}" class="logo" alt="European Commission logo" />
+                    <span th:text="#{title}"></span>
+                    -
+                    <span th:text="#{footer.based}" style="margin-left: 0px;"></span>
+                </div>
+            </div>
+        </div>
+        <div class="path full">
+            <div class="content">
+                <ul>
+                    <li class="first"><a href="http://ec.europa.eu/index_en.htm"><span th:text="#{europeanComission}"></span></a></li>
+                    <li class="last"><span th:text="#{title}"></span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+</div>

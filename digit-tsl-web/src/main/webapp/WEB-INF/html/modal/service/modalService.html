@@ -1,0 +1,232 @@
+<!-- Browse service in a modal for edition -->
+<script th:src="@{/controllers/modalController/modalB64Controller.js}"></script>
+<link rel="stylesheet" th:href="@{/public/bootstrap-fileinput/4.2.0/css/fileinput.min.css}" />
+<!-- Override open border in modal -->
+<style>
+.isOpenBorder {
+    border-left-style: none !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+</style>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div style="display: inline-block; width: 96% !important">
+            <check disabled="service.checkToRun" id="service.id" listcheck="listChecks" label="serviceProvider_trustService" istreeparent="true"></check>
+            <change id="service.id" listdiff="listDiffProviders" label="serviceProvider_trustService" istreeparent="true"information="information"></change>
+            <uri value="service.head" style="width: 95% !important; display: inline;"></uri>
+            <!-- 				<span ng-show="form.$invalid" class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span> -->
+        </div>
+        <div style="display: inline">
+            <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+            <span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <!-- Type Identifier -->
+        <div class="row">
+            <div class="col-sm-2 text-right">
+                <div class="divCheckChange">
+                    <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_TYPE_IDENTIFIER" listcheck="listChecks" label="serviceProvider_serviceInformation_type" istreeparent="false"></check>
+                    <change id="service.id+'_'+TAG_SERVICE_TYPE_IDENTIFIER" listdiff="listDiffProviders" label="serviceProvider_serviceInformation_type" istreeparent="false"information="information"></change>
+                </div>
+                <span th:text="#{serviceProvider.serviceInformation.type}"></span>
+            </div>
+            <div class="col-sm-10 remove-padding">
+                <select ng-model="service.typeIdentifierBis" required name="type" style="width: 94%;" ng-change="changeTypeIdentifier()">
+                    <option ng-repeat="serviceType in serviceTypeIdentifiers" ng-click="changeTypeIdentifier(serviceType.label)">{{serviceType.label}}</option>
+                </select>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+            </div>
+        </div>
+        <!-- Current State -->
+        <div class="row">
+            <div class="col-sm-2 text-right">
+                <div class="divCheckChange">
+                    <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_STATUS" listcheck="listChecks" label="serviceProvider_serviceInformation_currentState" istreeparent="false"></check>
+                    <change id="service.id+'_'+TAG_SERVICE_STATUS" listdiff="listDiffProviders" label="serviceProvider_serviceInformation_currentState" istreeparent="false"information="information"></change>
+                </div>
+                <span th:text="#{serviceProvider.serviceInformation.currentState}"></span>
+            </div>
+            <div class="col-sm-10 remove-padding">
+                <select ng-model="service.currentStatus" required name="currentStatus" style="width: 94%;">
+                    <option ng-repeat="status in serviceStatus">{{status.label}}</option>
+                </select>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                <!-- 					<span ng-if="form.currentStatus.$invalid" tooltip="{{tRequiredInStandard}}" tooltip-placement="right" class="requiredIcon" >(*)</span> -->
+            </div>
+        </div>
+        <!-- Status Starting Date -->
+        <div class="row">
+            <div class="col-sm-2 text-right">
+                <div class="divCheckChange">
+                    <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_STATUS_STARTING_TIME" listcheck="listChecks" label="serviceProvider_serviceInformation_stateDate" istreeparent="false"></check>
+                    <change id="service.id+'_'+TAG_SERVICE_STATUS_STARTING_TIME" listdiff="listDiffProviders" label="serviceProvider_serviceInformation_stateDate" istreeparent="false"information="information"></change>
+                </div>
+                <span th:text="#{serviceProvider.serviceInformation.stateDate}"></span>
+            </div>
+            <div class="col-sm-6 remove-padding col-sm-6" style="display: inline">
+                <div style="display: inline">
+                    <input style="height:34px!important;" required name="startingDate" type="text" datepicker-popup="{{format}}" ng-model="service.currentStatusStartingDate" is-open="opened" datepicker-options="dateOptions"
+                        date-disabled="disabled(date, mode)" close-text="Close" />
+                    <button type="button" class="btn btn-default" ng-click="open($event)">
+                        <i class="fa fa-calendar"></i>
+                    </button>
+                </div>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                <!-- 					<span ng-if="form.startingDate.$invalid" tooltip="{{tRequiredInStandard}}" tooltip-placement="right" class="requiredIcon" >(*)</span> -->
+            </div>
+        </div>
+        <!-- Service Name -->
+        <div class="row paddingB-10">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_NAME" listcheck="listChecks" label="serviceProvider_serviceName" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SERVICE_NAME" listdiff="listDiffProviders" label="serviceProvider_serviceName" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.serviceName}"></span>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                <span ng-click="addTable(service.serviceName)" class="addIcon fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add"></span>
+            </div>
+            <br />
+            <div class="row" ng-repeat="name in service.serviceName track by $index">
+                <div class="col-sm-2 text-right">
+                    <div class="divCheckChange">
+                        <check disabled="service.checkToRun" id="name.id" listcheck="listChecks" label="serviceProvider_serviceName" istreeparent="false"></check>
+                        <change id="name.id" listdiff="listDiffProviders" label="serviceProvider_serviceName" istreeparent="false"information="information"></change>
+                    </div>
+                    <select ng-model="name.language" required name="name.language_{{name.id}}" style="width: 70%;">
+                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="name.language== l.label">{{l.label}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-10 remove-padding">
+                    <input ng-model="name.value" required name="name.value_{{name.id}}" style="width: 95%;" />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(name.language+' '+serviceProvider_serviceName)}}" confirmed="deleteTable(service.serviceName,$index)" class="trashIcon fa fa-trash cursor-pointer"
+                        tooltip="{{tDelete}}" tooltip-placement="right"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Scheme Definition URI -->
+        <div class="row paddingB-10">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_SCHEME_SERVICE_DEFINITION_URI" listcheck="listChecks" label="serviceProvider_schemeDef" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SCHEME_SERVICE_DEFINITION_URI" listdiff="listDiffProviders" label="serviceProvider_schemeDef" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.schemeDef}"></span>
+                <span ng-click="addTable(service.schemeDefinitionUri)" class="addIcon fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add"></span>
+            </div>
+            <br />
+            <div class="row" ng-repeat="defURI in service.schemeDefinitionUri track by $index">
+                <div class="col-sm-2 text-right">
+                    <div class="divCheckChange">
+                        <check disabled="service.checkToRun" id="defURI.id" listcheck="listChecks" label="serviceProvider_schemeDef" istreeparent="false"></check>
+                        <change id="defURI.id" listdiff="listDiffProviders" label="serviceProvider_schemeDef" istreeparent="false"information="information"></change>
+                    </div>
+                    <select ng-model="defURI.language" required name="uri.language_{{defURI.id}}" style="width: 70%;">
+                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="defURI.language== l.label">{{l.label}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-10 remove-padding">
+                    <input ng-model="defURI.value" required name="uri.value_{{defURI.id}}" style="width: 95%;" />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(defURI.language+' '+serviceProvider_schemeDef)}}" confirmed="deleteTable(service.schemeDefinitionUri,$index)"
+                        class="trashIcon fa fa-trash cursor-pointer" tooltip="{{tDelete}}" tooltip-placement="right"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Supply Point -->
+        <div class="row paddingB-10">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_SUPPLY_POINT" listcheck="listChecks" label="serviceProvider_serviceSupply" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SERVICE_SUPPLY_POINT" listdiff="listDiffProviders" label="serviceProvider_serviceSupply" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.serviceSupply}"></span>
+                <span ng-click="addTable(service.supplyPoint)" class="addIcon fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add"></span>
+            </div>
+            <br />
+            <div class="row" ng-repeat="supplyPoint in service.supplyPoint track by $index">
+                <div class="col-sm-2 text-right">
+                    <div class="divCheckChange">
+                        <check disabled="service.checkToRun" id="supplyPoint.id" listcheck="listChecks" label="serviceProvider_serviceSupply" istreeparent="false"></check>
+                        <change id="supplyPoint.id" listdiff="listDiffProviders" label="serviceProvider_serviceSupply" istreeparent="false"information="information"></change>
+                    </div>
+                </div>
+                <div class="col-sm-10 remove-padding">
+                    <input ng-model="supplyPoint.value" required name="supply.value_{{supplyPoint.id}}" style="width: 95%;" />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(supplyPoint.value+' '+serviceProvider_serviceSupply)}}"  confirmed="deleteTable(service.supplyPoint,$index)"
+                        class="trashIcon fa fa-trash cursor-pointer" tooltip="{{tDelete}}" tooltip-placement="right"></span>
+                </div>
+            </div>
+        </div>
+        <!-- TSP Definition URI -->
+        <div class="row paddingB-10">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_TSP_SERVICE_DEFINITION_URI" listcheck="listChecks" label="serviceProvider_tspSchemeDef" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_TSP_SERVICE_DEFINITION_URI" listdiff="listDiffProviders" label="serviceProvider_tspSchemeDef" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.tspSchemeDef}"></span>
+                <span ng-click="addTable(service.tspdefinitionUri)" class="addIcon fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add"></span>
+            </div>
+            <br />
+            <div class="row" ng-repeat="tspdefinitionUri in service.tspdefinitionUri track by $index">
+                <div class="col-sm-2 text-right">
+                    <div class="divCheckChange">
+                        <check disabled="service.checkToRun" id="tspdefinitionUri.id" listcheck="listChecks" label="serviceProvider_tspSchemeDef" istreeparent="false"></check>
+                        <change id="tspdefinitionUri.id" listdiff="listDiffProviders" label="serviceProvider_tspSchemeDef" istreeparent="false"information="information"></change>
+                    </div>
+                    <select ng-model="tspdefinitionUri.language" required name="tspdefinitionUri.language_{{tspdefinitionUri.id}}" style="width: 70%;">
+                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="tspdefinitionUri.language== l.label">{{l.label}}</option>
+                    </select>
+                </div>
+                <div class="col-sm-10 remove-padding">
+                    <input ng-model="tspdefinitionUri.value" required name="tspdefinitionUri.value_{{tspdefinitionUri.id}}" style="width: 95%;" />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tspdefinitionUri.language+' '+serviceProvider_tspSchemeDef)}}" confirmed="deleteTable(service.tspdefinitionUri,$index)"
+                        class="trashIcon fa fa-trash cursor-pointer" tooltip="{{tDelete}}" tooltip-placement="right"></span>
+                </div>
+            </div>
+        </div>
+        <!-- Extension -->
+        <div class="row paddingB-10">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_EXTENSION" listcheck="listChecks" label="serviceProvider_extension" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SERVICE_EXTENSION" listdiff="listDiffProviders" label="serviceProvider_extension" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.extension}" style="margin-left: 2px;"></span>
+                <div class="dropdown" style="display: inline; float: right;">
+                    <span class="addIcon fa fa-plus dropdown-toggle cursor-pointer" type="button" data-toggle="dropdown" tooltip-placement="right" tooltip="Add"></span>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a ng-click="addExtension('additionnalServiceInformation')" th:text="#{extension.additionalService}" class="cursor-pointer"></a></li>
+                        <li><a ng-click="addExtension('takenOverBy')" th:text="#{extension.takenOverBy}" class="cursor-pointer"></a></li>
+                        <li><a ng-click="addExtension('qualificationExtension')" th:text="#{extension.qualificationExtension}" class="cursor-pointer"></a></li>
+                        <li><a ng-click="addExtension('expiredCertRevocationDate')" th:text="#{extension.expiredCertRevocation}" class="cursor-pointer"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Table -->
+            <div class="row" ng-repeat="extension in service.extension track by $index">
+                <extensiondir extension="extension" listcheck="listChecks" listchange="listdiff" style="width:92%;display:inline-block" edit="true"></extensiondir>
+
+                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(labelExtension(extension))}}"  confirmed="deleteTable(service.extension,$index)"
+                    class="fa fa-trash cursor-pointer trashDirectiveIcon" tooltip-placement="right" tooltip="{{tDelete}}"></span>
+                <span ng-click="editExtension(extension,$index)" class="editDirectiveIcon fa fa-edit cursor-pointer" tooltip="Edit" tooltip-placement="left"></span>
+            </div>
+        </div>
+        <!-- Digital Identities -->
+        <div class="row">
+            <div class="col-sm-12 scheme-information">
+                <check disabled="service.checkToRun" id="service.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="serviceProvider_digitalIdentities" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listDiffProviders" label="serviceProvider_digitalIdentities" istreeparent="true"information="information"></change>
+                <span th:text="#{serviceProvider.digitalIdentities}"></span>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                <span ng-if="service.digitalIdentification.length<1" ng-click="addDigitalIdentitie()" class="addIcon fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add"></span>
+            </div>
+            <!-- Table -->
+            <div class="row" ng-repeat="digitalId in service.digitalIdentification">
+                <digitalidentity digital="digitalId" listcheck="listChecks" listchange="listDiffProviders" edit="true" style="width:92%;display:inline-block" type="service.typeIdentifier" checktorun="service.checkToRun"></digitalidentity>
+
+                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':confirm_deleteDigital}}" confirmed="deleteDigitalIdentitie(digitalId)" class="fa fa-trash cursor-pointer trashDirectiveIcon"
+                    tooltip-placement="right" tooltip="{{tDelete}}"></span>
+                <span ng-click="editDigitalIdentitie(digitalId,$index)" class="editDirectiveIcon fa fa-edit cursor-pointer" tooltip-placement="left" tooltip="Edit"></span>
+            </div>
+        </div>
+    </div>
+</div>

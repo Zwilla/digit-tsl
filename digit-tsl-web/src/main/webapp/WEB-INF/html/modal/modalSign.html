@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <span>{{myTLInfo.dbName}} ({{myTLInfo.sequenceNumber}})</span>
+        <span style="float: right;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+    </div>
+    <div class="panel-body">
+        <div ng-if="loadSign==true && authorized('SIG')">
+            <div id="certificate" class="row">
+                <div class="col-sm-10" style="margin-left: 25px;">
+                    <div ng-repeat="lS in listSeal track by $index" class="radio">
+                        <input type="radio" name="radioCert" ng-model="myTLInfo.selectedSeal" value="{{listSeal[$index]}}" ng-if="listSeal[$index]!=''" ng-click="resetCert()">{{lS}}
+                    </div>
+                    <label class="radio">
+                        <input type="radio" name="radioCert" ng-click="resetSmartCard()" style="margin-top:0!important;"> <span th:text="#{tOtherSmartCard}"></span>
+                    </label>
+                </div>
+            </div>
+            <div align="right">
+                <button ng-if="certSelect!=null" class="btn btn-warning" ng-click="ok()">Sign</button>
+                <button ng-if="certSelect==null" class="btn btn-warning" disabled>Sign</button>
+            </div>
+        </div>
+        <div ng-if="loadSign == false">
+            <div class="row" align="center">
+                <label style="margin-top: 15px;" th:text="#{tsignatureProcess}"></label>
+                <span>{{signatureProccessStatus}}</span>
+            </div>
+            <div class="row">
+                <div th:replace="spinner :: spinner" th:remove="tag"></div>
+            </div>
+        </div>
+    </div>
+</div>
+

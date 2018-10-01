@@ -1,0 +1,59 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <check disabled="myTLInfo.checkToRun" id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="true"></check>
+        <change id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="true"information="information"></change>
+        <span style="display: inline-block;">{{myTLInfo.dbName}} ({{myTLInfo.schemeInformation.sequenceNumber}}) - {{myTLInfo.label}}</span>
+        <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+        <span style="float: right;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
+        <span style="float: right; margin-right: 5px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+    </div>
+    <div class="panel-body">
+        <div class="row dropdown" style="display: inline; float: right;">
+            <span class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button" data-toggle="dropdown"></span>
+            <ul class="dropdown-menu">
+                <li ng-repeat="lang in languages" class="lang-list"><a ng-click="addTab(lang.label);activeTab(myTabs.length-1)" class="cursor-pointer ">{{lang.label}}</a></li>
+            </ul>
+        </div>
+        <!-- Table -->
+        <tabset>
+            <tab ng-repeat="tab in myTabs" active="tab.isActive">
+                <tab-heading>
+                    <check disabled="myTLInfo.checkToRun" id="tab.id" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="false"></check>
+                    <change id="tab.id" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="false"information="information"></change>
+                    <span style="margin-left: 5px;">{{tab.language}}</span>
+                </tab-heading>
+                <div class="row">
+                    <span class="col-sm-2 text-right" th:text="#{address.street}">:</span>
+                    <input ng-model="tab.street" class="col-sm-8" name="street_{{tab.id}}" required />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 text-right" th:text="#{address.locality}"></span>
+                    <input ng-model="tab.locality" ng-model="tab.locality" class="col-sm-5" name="locality_{{tab.id}}" required />
+                    <span style="padding-right: 15px; padding-left: 15px;" th:text="#{address.postalcode}"></span>
+                    <input style="width: 15.5%;" ng-model="tab.postalCode" name="postal_{{tab.id}}" required />
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right" style="margin-left: -1px;">(*)</span>
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 text-right" th:text="#{address.state}"></span>
+                    <input ng-model="tab.stateOrProvince" class="col-sm-8" />
+                </div>
+                <div class="row">
+                    <span class="col-sm-2 text-right" th:text="#{address.country}"></span>
+                    <select class="col-sm-8" ng-model="tab.countryCode" name="country_{{tab.id}}" required>
+                        <option ng-repeat="cN in countryName" value="{{cN.label}}" ng-selected="tab.countryCode == cN.label">{{cN.description}}
+                    </select>
+                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                </div>
+                <!-- Delete -->
+                <div class="row" align="right">
+                    <span th:text="#{tDelete}"></span>
+                    {{tab.language}}
+                    <span th:text="#{tLanguage}" style="margin-right: 5px;"></span>
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tab.language+' '+myTLInfo.label)}}"  confirmed="deleteTab(tab)" class="fa fa-trash cursor-pointer "
+                        style="margin-right: 10px;"></span>
+                </div>
+            </tab>
+        </tabset>
+    </div>
+</div>

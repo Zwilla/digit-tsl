@@ -1,0 +1,50 @@
+Belgium 
+
+    Certipost n.v./s.a. 
+
+        CN=Belgium Root CA, C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CN=Belgium Root CA2, C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CN=Belgium Root CA3, C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CN=Belgium Root CA4, C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CN=Certipost Public CA for Qualified Signatures, O=Certipost n.v./s.a., C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CN=Certipost E-Trust Primary Qualified CA, O=Certipost s.a./n.v., C=BE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Society for Worldwide Interbank Financial Telecommunication SCRL 
+
+        SWIFTNet PKI Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    QuoVadis Trustlink BVBA 
+
+        QuoVadis BE PKI Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        QuoVadis BE PKI Certification Authority G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Zetes S.A./N.V. 
+
+        Zetes TSP PKI certification authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+

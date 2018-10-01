@@ -1,0 +1,144 @@
+<!---------------
+	History
+---------------->
+<div th:fragment="history">
+    <div style="margin-top: 10px;" ng-init="service.editHistory=false;service.showHistory.open='1'">
+        <div ng-hide="tableVisibility(service.history)">
+            <div ng-hide="iconTableVisibility(service.history)" class="openClose">
+                <span ng-if="service.showHistory.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="service.showHistory.open='1'"></span>
+                <span ng-if="service.showHistory.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="service.showHistory.open='0'"></span>
+            </div>
+            <div class="divCheckChange">
+                <check disabled="myTl.checkToRun"  id="service.id+'_'+TAG_SERVICE_HISTORY" listcheck="listChecks" label="serviceProvider_history" istreeparent="true"></check>
+                <change id="service.id+'_'+TAG_SERVICE_HISTORY" listdiff="listDiffProviders" label="serviceProvider_history" istreeparent="true" information="information"></change>
+            </div>
+            <label class="noMargin" th:text="#{serviceProvider.history}"></label>
+            <span ng-click="editTlDraft('editHistoryMode',service)" ng-if="myTl.userEditable && service.editHistory==false" class="fa fa-edit cursor-pointer editIcon"
+                ng-init="myTl.historyEdition.tooltip=EditTooltip(serviceProvider_history)" tooltip="{{myTl.historyEdition.tooltip}}" tooltip-placement="right"></span>
+            <span ng-click="editHistoryMode(service)" ng-show="service.editHistory==true" tooltip-placement="bottom" tooltip="Cancel" style="margin-left: 10px" class="fa fa-remove cursor-pointer"></span>
+            <span ng-click="addHistory([serviceProvider.index,service.index,null])" ng-if="service.editHistory==true" tooltip-placement="bottom" tooltip="Add" style="margin-left: 10px"
+                class="fa fa-plus cursor-pointer"></span>
+        </div>
+        <div ng-repeat="history in service.history" ng-if="service.showHistory.open=='1'" ng-init="history.index = $index">
+            <div style="margin-left: 15px;" ng-class="isOpen(history.open)">
+                <div style="max-width: 50%; display: inline-block;">
+                    <div class="openClose">
+                        <span ng-if="history.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="history.open='1'"></span>
+                        <span ng-if="history.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer white" ng-click="history.open='0'"></span>
+                    </div>
+                    <div class="divCheckChange">
+                        <check disabled="myTl.checkToRun"  id="history.id" listcheck="listChecks" label="history.serviceName[0].value" istreeparent="true"></check>
+                        <change id="history.id" listdiff="listDiffProviders" label="history.serviceName[0].value" istreeparent="true" information="information"></change>
+                    </div>
+                    <span>{{history.serviceName[0].value | cut:true:55:'...'}}</span>
+                </div>
+                <div ng-bind-html="historyNode(history)" style="display: inline;" ng-if="history.open!='1'"></div>
+                <span ng-click="editTlDraft('editHistory',[serviceProvider.index,service.index,history.index],history)" ng-if="myTl.userEditable && service.editHistory==false"
+                    class="fa fa-edit cursor-pointer editIcon" tooltip="{{history.editHistory}}" ng-init="history.editHistory=EditTooltip(history.serviceName[0].value)" tooltip-placement="right"></span>
+                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':history.serviceName[0].value}}" confirmed="deleteHistory(history,[serviceProvider.index,service.index,null]);"
+                    ng-if="service.editHistory==true" style="margin-right: 10px" class="fa fa-trash cursor-pointer" tooltip="Delete {{ history.serviceName[0].value | cut:true:110:'...' }}"
+                    tooltip-placement="right"></span>
+            </div>
+            <!-- Service Information -->
+            <div ng-if="history.open=='1'" style="margin-left: 15px;" class="isOpenBorder">
+                <div class="container-fluid isOpenTopBorder">
+                    <!-- Type Identifier -->
+                    <div class="row">
+                        <div class="col-sm-2 text-right scheme-information">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_TYPE_IDENTIFIER" listcheck="listChecks" label="serviceProvider_serviceInformation_type" istreeparent="false"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_TYPE_IDENTIFIER" listdiff="listDiffProviders" label="serviceProvider_serviceInformation_type" istreeparent="false" information="information"></change>
+                            </div>
+                            <span th:text="#{serviceProvider.serviceInformation.type}"></span>
+                        </div>
+                        <div class="col-sm-9">
+                            <uri value="history.typeIdentifier"></uri>
+                        </div>
+                    </div>
+                    <!-- Service Name -->
+                    <div class="row">
+                        <div class="col-sm-2 scheme-information text-right">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_NAME " listcheck="listChecks" label="serviceProvider_serviceName" istreeparent="true"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_NAME " listdiff="listDiffProviders" label="serviceProvider_serviceName" istreeparent="true" information="information"></change>
+                            </div>
+                            <span th:text="#{serviceProvider.serviceName}"></span>
+                        </div>
+                        <div class="col-sm-10" ng-init="history.serviceNameShow='0'">
+                            <div ng-hide="iconTableVisibility(history.serviceName)" class="openClose">
+                                <span ng-if="history.serviceNameShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="history.serviceNameShow='1'"></span>
+                                <span ng-if="history.serviceNameShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="history.serviceNameShow='0'"></span>
+                            </div>
+                            <div ng-if="history.serviceNameShow=='0'" class="tabInformationClose">
+                                <span>{{history.serviceName[0].value}}</span>
+                            </div>
+                            <div ng-if="history.serviceNameShow=='1'" class="tabInformationOpen">
+                                <tabset> <tab ng-repeat="info in history.serviceName"> <tab-heading> <check disabled="myTl.checkToRun"  id="info.id" listcheck="listChecks"
+                                    label="serviceProvider_serviceName" istreeparent="false"></check> <change id="info.id" listdiff="listDiffProviders" label="serviceProvider_serviceName"
+                                    istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Current State -->
+                    <div class="row">
+                        <div class="col-sm-2 scheme-information text-right">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_STATUS" listcheck="listChecks" label="history_previousStatus" istreeparent="false"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_STATUS" listdiff="listDiffProviders" label="history_previousStatus" istreeparent="false" information="information"></change>
+                            </div>
+                            <span th:text="#{history.previousStatus}"></span>
+                        </div>
+                        <div class="col-sm-9">
+                            <uri value="history.currentStatus"></uri>
+                        </div>
+                    </div>
+                    <!-- Status Starting Date -->
+                    <div class="row">
+                        <div class="col-sm-2 scheme-information text-right">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_STATUS_STARTING_TIME" listcheck="listChecks" label="history_stateDate" istreeparent="false"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_STATUS_STARTING_TIME" listdiff="listDiffProviders" label="history_stateDate" istreeparent="false" information="information"></change>
+                            </div>
+                            <span th:text="#{history.stateDate}"></span>
+                        </div>
+                        <div class="col-sm-9">
+                            <span>{{history.currentStatusStartingDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+                        </div>
+                    </div>
+                    <!-- Extension -->
+                    <div class="row" ng-hide="tableVisibility(history.extension)">
+                        <div class="col-sm-2 scheme-information text-right">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_EXTENSION" listcheck="listChecks" label="serviceProvider_extension" istreeparent="true"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_EXTENSION" listdiff="listDiffProviders" label="serviceProvider_extension" istreeparent="true" information="information"></change>
+                            </div>
+                            <span th:text="#{serviceProvider.extension}" style="margin-left: 2px;"></span>
+                        </div>
+                        <div class="col-sm-10" ng-if="history.extension[0]!=null" style="padding-right: 0;">
+                            <extensiondir extension="history.extension[0]" listcheck="listChecks" listchange="listDiffProviders" tl="myTl"></extensiondir>
+                        </div>
+                        <div class="row" ng-repeat="extension in history.extension" ng-hide="$first">
+                            <div class="col-sm-2"></div>
+                            <div style="display: inline-block; padding-right: 0;" class="col-sm-10">
+                                <extensiondir extension="extension" listcheck="listChecks" listchange="listDiffProviders" tl="myTl"></extensiondir>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Digital Identities -->
+                    <div class="row" ng-hide="tableVisibility(history.digitalIdentification)">
+                        <div class="col-sm-2 scheme-information text-right">
+                            <div class="divCheckChange">
+                                <check disabled="myTl.checkToRun"  id="history.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="serviceProvider_digitalIdentities" istreeparent="true"></check>
+                                <change id="history.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listDiffProviders" label="serviceProvider_digitalIdentities" istreeparent="true" information="information"></change>
+                            </div>
+                            <span th:text="#{serviceProvider.digitalIdentities}" style="margin-left: 2px;"></span>
+                        </div>
+                        <div class="col-sm-10" style="padding-right: 0;">
+                            <digitalidentity digital="history.digitalIdentification[0]" listcheck="listChecks" listchange="listDiffProviders" tl="myTl" checktorun="myTl.checkToRun"></digitalidentity>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

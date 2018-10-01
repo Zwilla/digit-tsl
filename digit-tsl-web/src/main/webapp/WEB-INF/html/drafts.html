@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/controllers/draftController.js}"></script>
+<script th:src="@{/script/factory/nexuFactory.js}"></script>
+<script th:src="@{/controllers/modalController/modalSignController.js}"></script>
+<script th:src="@{/controllers/modalController/modalDisclaimerController.js}"></script>
+
+<script th:src="@{/script/nexu-ec-integration.js}"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+    <div class="body" ng-controller="draftController" ng-init="initMenu()">
+
+        <!-- Menu -->
+        <div th:replace="menu :: nav" th:remove="tag"></div>
+
+        <!-- MAIN CONTENT -->
+        <main ng-if="loadDraft==false">
+        <div align="center">
+            <label>{{loadingDrafts}}</label>
+        </div>
+        <div th:replace="spinner :: spinner"></div>
+        </main>
+        <main ng-show="loadDraft==true">
+        <div ng-hide="draftStoreValidity"></div>
+        <div id="draftDiv" ng-hide="!draftStoreValidity">
+            <div id="dataDiv" class="panel panel-primary">
+                <div class="panel-heading" style="max-height: 35px">
+                    <span th:text="#{draftMenuTitle}"></span>
+                    <div ng-click="newDraftStore()" style="display: inline-block; float: right;" class="cursor-pointer">
+                        <span class="fa fa-edit"></span>
+                        <span th:text="#{draft.createRepository}" style="margin-left: 3px;"></span>
+                    </div>
+                </div>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th th:text="#{tbCountry}" style="margin-left: 10px;"></th>
+                            <th th:text="#{tFileName}" class="text-center"></th>
+                            <th th:text="#{tbSN}" class="text-right"></th>
+                            <th th:text="#{tlBrowser.issueDate}" class="text-right"></th>
+                            <th th:text="#{tlBrowser.expiryDate}" class="text-right"></th>
+                            <th th:text="#{tbStatus}" class="text-center"></th>
+                            <th th:text="#{table.action}" class="text-center"></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left" ng-repeat="draft in drafts">
+                            <td style="margin-left: 5px;"><a ng-href="/tl-manager/tl/{{draft.id}}" class="cursor-link" style="min-width: 35px; display: inline-block">{{
+                                    draft.territoryCode }}</a> <a ng-href="/tl-manager/tl/{{draft.id}}" class="cursor-link">{{ draft.countryName }}</a></td>
+                            <td class="text-center"><a class="cursor-link" ng-href="/tl-manager/tl/{{draft.id}}">{{ draft.name }}</a></td>
+                            <td style="text-align: right;">{{ draft.sequenceNumber}}</td>
+                            <td class="text-right">{{ draft.issueDate | date:'yyyy-MM-dd' }}</td>
+                            <td ng-class="styleDate(message.nextUpdateDate)" style="text-align: right;">{{ draft.nextUpdateDate| date:'yyyy-MM-dd' }}</td>
+                            <td align="center">
+                                <div ng-bind-html="styleTbStatus(draft.checkStatus)" class="inline-block" style="padding-left: 5px;"></div> <a
+                                ng-href="/tl-manager/api/checks/download/{{draft.id}}/{{draftStoreId}}" style="color: black; margin-left: 5px;" tooltip-placement="bottom"
+                                tooltip="Download status report"> <span class="fa fa-download cursor-pointer"></span>
+                            </a>
+                            </td>
+                            <td align="center">
+                                <div class="dropdown" style="display: inline; margin-left: 5px;" ng-if="draft.checkToRun">
+                                    <span class="fa fa-download dropdown-toggle cursor-pointer " type="button" data-toggle="dropdown" tooltip="Export" tooltip-placement="bottom"></span>
+                                    <ul class="dropdown-menu">
+                                        <li><a ng-href="/tl-manager/api/tl/download/{{draft.id}}/{{draftStoreId}}" th:text="#{tXML}"></a></li>
+                                        <li><a ng-href="/tl-manager/api/pretty/download/{{draft.id}}" th:text="#{tPDF}"></a></li>
+                                        <li><a ng-href="/tl-manager/api/tl/download/sha2/{{draft.id}}/{{draftStoreId}}" th:text="#{tSHA2}"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="cursor-pointer" style="display: inline; margin-left:5px;" ng-if="!draft.checkToRun" ng-click="exportCheckToRunError()">
+                                    <span class="fa fa-download dropdown-toggle cursor-pointer" data-toggle="dropdown" tooltip="Export" tooltip-placement="bottom"></span>
+                                </div>
+                                <span ng-click="signTl(draft,true,null)" class="fa fa-key cursor-pointer" tooltip-placement="bottom" tooltip="Sign" style="margin-left: 5px;"></span>
+                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(draft.name+' (Sn'+draft.sequenceNumber+')')}}" confirmed="deleteDraft(draft)"
+                                    class="fa fa-times cursor-pointer" tooltip-placement="bottom" tooltip="{{tDelete}}" style="margin-left: 5px;"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div ng-show="false">
+                    <form style="margin-left: 5px; margin-right: 400px; margin-bottom: 10px;">
+                        <!-- tl file upload -->
+                        <input uploadLabel="OK" id="uploadFile" type="file" class="file" name="myFile" file-model="myFile"
+                            onchange="angular.element(this).scope().uploadFile(this.files[0],angular.element(this))" data-show-upload="false" data-show-remove="false"
+                            data-show-preview="false" />
+                    </form>
+                </div>
+
+            </div>
+            <div id="createDiv">
+                <br />
+                <div>
+                    <select style="height: 34px !important;" ng-model="territory">
+                        <option value=""><span th:text="#{tSelectCountry}"></span></option>
+                        <option ng-repeat="c in country" ng-value="c.label">{{c.description}}</option>
+                    </select>
+                    <div style="display: inline;">
+                        <button type="button" class="btn btn-default" ng-click="createFromPublish()" th:text="#{draft.createFromPublish}" ng-disabled="territory==''"></button>
+                        <span th:text="#{draft.createFromPublishInformation1}"></span>
+                        <span> {{territory}} </span>
+                        <span th:text="#{draft.createFromPublishInformation2}"></span>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <button type="button" class="btn btn-default click" style="width: 280px;" th:text="#{draft.createImport}"></button>
+                    <span th:text="#{draft.createImportInformation}"></span>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>
+<script>
+    $(function() {
+        $(".click").click(function() {
+            $('#uploadFile').click();
+        });
+    });
+</script>
+</html>

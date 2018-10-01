@@ -1,0 +1,76 @@
+Latvia 
+
+    Latvian State Radio and Television center 
+
+        E-ME SSI (RCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        E-ME PSI (PCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        E-ME SI (CA1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME LZI (TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        EME LZI1 (TSA1) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        E-ME SI (CA1) from 04.2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME SI (CA1) from 10.2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        eParaksts LZI1 (TSA1) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        E-ME LZI2 (TSA2) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        E-ME SI (CA1) from 03.2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME SI (CA1) from 08.2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME SI (CA1) from 02.2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME PSI (PCA) from 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        eParaksts LZI1 (TSA1) from 07.2015  - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        eParaksts LZI2 (TSA2) from 07.2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        E-ME SI (CA1) from 09.2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        E-ME SI (CA1) from 05.2016 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        eParaksts CA  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+

@@ -1,0 +1,12 @@
+Iceland 
+
+    Audkenni ehf. 
+
+        Fulltgilt audkenni - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ocsp.audkenni.is - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+

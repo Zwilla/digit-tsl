@@ -1,0 +1,107 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:import namespace="http://www.w3.org/XML/1998/namespace"  schemaLocation="http://www.w3.org/2001/xml.xsd"/>  
+  <xs:element name="MemberStateNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:int" name="VersionIdentifier"/>
+        <xs:element type="xs:string" name="ToolIdentifier"/>
+        <xs:element type="xs:string" name="NotificationIdentifier"/>
+        <xs:element name="SchemeContact">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Name"/>
+              <xs:element type="xs:string" name="PostalAddress"/>
+              <xs:element type="xs:string" name="PhoneNumber"/>
+              <xs:element name="ElectronicAddresses">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="URI" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PointersToOtherTSL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OtherTSLPointer" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ServiceDigitalIdentities">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ServiceDigitalIdentity" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="DigitalId">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="X509Certificate"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element type="xs:string" name="TSLLocation"/>
+                    <xs:element name="AdditionalInformation">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="OtherInformation" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="TSLType" minOccurs="0"/>
+                                <xs:element type="xs:string" name="SchemeTerritory" minOccurs="0"/>
+                                <xs:element type="xs:string" name="MimeType" minOccurs="0"/>
+                                <xs:element name="SchemeOperatorName" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Name" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute ref="xml:lang"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="SchemeTypeCommunityRules" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="URI" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute ref="xml:lang"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:date" name="SubmissionDate"/>
+        <xs:element type="xs:date" name="EffectDate"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

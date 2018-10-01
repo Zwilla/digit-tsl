@@ -1,0 +1,94 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <span th:text="#{disclaimer.warning}" style="display: inline-block;"></span>
+    </div>
+    <div class="panel-body">
+        <!-- Changes -->
+        <p>
+        <p th:text="#{disclaimer.formatChange}" style="margin: 0 0 0;"></p>
+        <div>
+            <span th:text="#{disclaimer.allChanges}" style="padding-right: 3px;"></span>
+            (
+            <span class="fa fa-exchange"></span>
+            ).
+        </div>
+        <!-- Checks -->
+        <p style="margin-top: 20px;">
+        <p th:text="#{disclaimer.pleaseNote}" style="margin: 0 0 0;"></p>
+        <div>
+            <span th:text="#{disclaimer.beCompliant}" style="padding-right: 3px"></span>
+        </div>
+        <div>
+            <span th:text="#{disclaimer.allChecks}" style="padding-right: 3px"></span>
+            (
+            <span class="fa fa-exclamation-circle"></span>
+            /
+            <span class="fa fa-exclamation-triangle"></span>
+            ).
+        </div>
+
+        <br />
+        <span th:text="#{disclaimer.impactedFields}" style="text-decoration: underline;"></span>
+        <table class="table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="disclaimerTableLeft"></th>
+                    <th class="disclaimerTableRight"></th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td th:text="#{disclaimer.tslVersion}"></td>
+                    <td th:text="#{disclaimer.tslVersionImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.sequenceNumber}"></td>
+                    <td th:text="#{disclaimer.sequenceNumberImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.nextUpdate}"></td>
+                    <td th:text="#{disclaimer.nextUpdateImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.issueDate}"></td>
+                    <td th:text="#{disclaimer.issueDateImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.schemeName}"></td>
+                    <td th:text="#{disclaimer.schemeNameImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.statusDetermination}"></td>
+                    <td th:text="#{disclaimer.statusDeterminationImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.legalNotice}"></td>
+                    <td th:text="#{disclaimer.legalNoticeImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.currentStatus}"></td>
+                    <td th:text="#{disclaimer.currentStatusImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.serviceExtension}"></td>
+                    <td th:text="#{disclaimer.serviceExtensionImpact}"></td>
+                </tr>
+                <tr>
+                    <td th:text="#{disclaimer.serviceHistory}"></td>
+                    <td th:text="#{disclaimer.serviceHistoryImpact}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="panel-footer" align="right">
+        <div ng-if="disclaimerLoading">
+            {{loadingStatus}}
+            <div style="display: inline-block; width: 46px; height: 34px;" class="btn btn-warning no-cursor">
+                <i class="fa fa-spinner fa-pulse"></i>
+            </div>
+        </div>
+        <button class="btn btn-warning" ng-click="ok()" ng-if="!disclaimerLoading">OK</button>
+
+    </div>
+</div>

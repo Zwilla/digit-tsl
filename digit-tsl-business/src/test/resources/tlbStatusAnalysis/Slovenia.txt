@@ -1,0 +1,132 @@
+Slovenia 
+
+    Ministrstvo za javno upravo 
+
+        SIGOV-CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SIGEN-CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SI-TSA 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        SI-TSA 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        SI-TSA 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        SI-TSA 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+    Republika Slovenija 
+
+        SIGOV-CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SIGEN-CA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SI-TRUST Root - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SI-PASS-CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    HALCOM D.D. 
+
+        HALCOM CA PO - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM CA PO 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM CA FO - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM CA TS 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        HALCOM CA PO 3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM CA TS 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        HALCOM SECURE SERVER CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM SECURE SERVER CA 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Halcom Root CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HALCOM CA TS 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        Halcom Root Certificate Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Halcom CA PO e-signature 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Halcom CA FO e-signature 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    NLB d.d. 
+
+        CA NLB - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        AC NLB - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    POŠTA SLOVENIJE, D.O.O. 
+
+        POŠTArCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        TSA 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        TSA 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+    Ministry of Defence 
+
+        SIMoD-CA-Restricted - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SIMoD-CA-Restricted - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SIMoD-CA-Restricted - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SIMoD-CA-Restricted - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+        tsa1pki - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        tsa1pki - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+

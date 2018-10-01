@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/controllers/dataPropertiesController.js}"></script>
+<script th:src="@{/controllers/modalController/modalPropertieEditController.js}"></script>
+</head>
+<body>
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+
+    <div class="body" ng-controller="dataPropertiesController">
+
+        <!-- Menu -->
+        <div th:replace="menu :: nav" th:remove="tag"></div>
+
+        <!-- Main Content -->
+        <main ng-show="loadProperties==false">
+        <div align="center">
+            <label>{{loadingStatusProperties}}</label>
+        </div>
+        <div th:replace="spinner :: spinner"></div>
+        </main>
+        <main class="panel panel-primary" style="border-style:none;" ng-show="loadProperties==true">
+        <div class="panel-heading" style="max-height: 35px">
+            <span th:text="#{propertie.management}"></span>
+            {{nbCurrentEntity}}
+        </div>
+        <div>
+            <table class="table" style="float: left; width: 240px; border-style: solid; border-width: 1px; margin-top: 10px;" id="code-list-table">
+                <thead>
+                    <tr class="active">
+                        <th th:text="#{propertie.codeList}"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="filtre in listFilter">
+                        <td ng-click="changefilter(filtre)" ng-class="classFilter(filtre)"><span>{{filtre | labelizeTag}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-striped" style="float: left; width: 855px; margin-top: 10px; margin-left: 5px;" id="properties-table">
+                <thead>
+                    <tr>
+                        <th th:text="#{propertie.label}" style="width: 70%"></th>
+                        <th th:text="#{propertie.value}" style="width: 28%"></th>
+                        <th><span ng-click="addPropertie()" class="fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add property"></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="dataPropertie in dataProperties" ng-if="filterCode(dataPropertie)">
+                        <td>{{dataPropertie.label}}</td>
+                        <td>{{dataPropertie.description}}</td>
+                        <td><span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':dataPropertie.label}}" confirmed="deletePropertie(dataPropertie)" tooltip="Delete property"
+                                class="fa fa-trash cursor-pointer" tooltip-placement="right"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>

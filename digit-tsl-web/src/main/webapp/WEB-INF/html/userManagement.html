@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/controllers/userManagementController.js}"></script>
+<script th:src="@{/controllers/modalController/modalAddUserController.js}"></script>
+
+</head>
+<body ng-controller="userManagementController">
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+    <div class="body">
+
+        <div class="alert alert-warning alert-dismissible" role="alert" ng-show="eutb404">
+            <strong th:text="#{warning}"></strong>
+            <label th:text="#{tbServiceUnavailable}"></label>
+        </div>
+
+        <!-- Menu -->
+        <div th:replace="menu :: nav" th:remove="tag"></div>
+
+        <!-- MAIN CONTENT -->
+        <main ng-if="loadUser==false">
+        <div align="center">
+            <label>{{loadUserStatus}}</label>
+        </div>
+        <div th:replace="spinner :: spinner"></div>
+        </main>
+        <main class="panel panel-primary" style="border-style:none;" ng-if="loadUser==true">
+        <div class="panel-heading" style="max-height: 35px;">
+            <span th:text="#{tUsers}"></span>
+            <div style="float: right; margin-right: -3px;">
+                <span ng-click="addUser()" class="fa fa-plus cursor-pointer " tooltip="{{userManagement_add}}" tooltip-placement="right"></span>
+            </div>
+
+        </div>
+        <table class="table table-condensed">
+            <thead text-align="right">
+                <tr>
+                    <th th:text="#{ecas.name}"></th>
+                    <th ng-repeat="role in roles" id={{role.name}} ng-if="role.code!='SUP'">{{role.name}}</th>
+                    <th th:text="#{tbCountry}"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="left" ng-repeat="user in users" ng-if="!isSup(user)">
+                    <td ng-bind="user.ecasId"></td>
+                    <td ng-repeat="role in roles" ng-if="role.code!='SUP'"><input type="checkbox" ng-checked="initCheck(user,role)" ng-click="addOrRemoveRole(user,role)"
+                        style="height: 13px !important;"></input></td>
+                    <td><select ng-model="user.codeTerritory" ng-change="updateTerritory(user)" style="width: 150px;">
+                            <option ng-repeat="t in countryCodeNameProperties" ng-value="t.label" ng-selected="t.label==user.codeTerritory">{{t.label}}</option>
+                    </select></td>
+                    <td align="center"><span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':user.ecasId}}" confirmed="reallyDelete(user)" class="fa fa-trash cursor-pointer"
+                            id="button-delete-user" tooltip="{{delete_user}}" tooltip-placement="right"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>
+</html>

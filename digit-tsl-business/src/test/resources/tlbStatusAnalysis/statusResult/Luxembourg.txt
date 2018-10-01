@@ -1,0 +1,42 @@
+Luxembourg 
+
+    LuxTrust S.A. 
+
+        LuxTrust Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        LuxTrust Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        LuxTrust Global Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        LuxTrust Global Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        LuxTrust Global Qualified Certification Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        LuxTrust Global Qualified Certification Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        LuxTrust Global Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        LuxTrust Qualified Time Stamping - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    SeMarket Certification Authority S.A.  
+
+        SeMarket Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+

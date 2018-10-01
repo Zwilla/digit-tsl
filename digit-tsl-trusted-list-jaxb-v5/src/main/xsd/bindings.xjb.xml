@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<jxb:bindings version="1.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
+
+	<jxb:globalBindings>
+		<jxb:serializable uid="1" />
+	</jxb:globalBindings>
+
+	<jxb:bindings schemaLocation="ts_119612v020101_sie_xsd.xsd"
+		node="/xs:schema">
+		<jxb:schemaBindings>
+			<jxb:package name="eu.europa.esig.jaxb.v5.ecc" />
+			<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+		</jxb:schemaBindings>
+		<jxb:bindings schemaLocation="http://uri.etsi.org/01903/v1.3.2/XAdES.xsd"
+			node="/xs:schema">
+			<jxb:schemaBindings>
+				<jxb:package name="eu.europa.esig.jaxb.v5.xades" />
+				<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+			</jxb:schemaBindings>
+			<jxb:bindings
+				schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd"
+				node="/xs:schema">
+				<jxb:schemaBindings>
+					<jxb:package name="eu.europa.esig.jaxb.v5.xmldsig" />
+					<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+				</jxb:schemaBindings>
+			</jxb:bindings>
+		</jxb:bindings>
+	</jxb:bindings>
+
+	<jxb:bindings schemaLocation="ts_119612v020101_additionaltypes_xsd.xsd"	node="/xs:schema">
+		<jxb:schemaBindings>
+			<jxb:package name="eu.europa.esig.jaxb.v5.tslx" />
+			<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+		</jxb:schemaBindings>
+
+		<jxb:bindings schemaLocation="http://uri.etsi.org/19612/v1.2.1/tsl.xsd"	node="/xs:schema">
+			<jxb:schemaBindings>
+				<jxb:package name="eu.europa.esig.jaxb.v5.tsl" />
+				<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+			</jxb:schemaBindings>
+		</jxb:bindings>
+	</jxb:bindings>
+
+	<jxb:bindings schemaLocation="XAdESv141.xsd" node="/xs:schema">
+		<jxb:schemaBindings>
+			<jxb:package name="eu.europa.esig.jaxb.v5.xades141" />
+			<jxb:nameXmlTransform>
+					<jxb:typeName suffix="V5" />
+				</jxb:nameXmlTransform>
+		</jxb:schemaBindings>
+	</jxb:bindings>
+</jxb:bindings>

@@ -1,0 +1,130 @@
+<div th:fragment="certificat" class="row">
+    <div class="row" ng-show="tCertificate.show==true" ng-init="convertAsn1(tCertificate)">
+        <!-- Cerial Certificate -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.certSerial}"></span>
+            </div>
+            <div class="col-sm-10">
+                <span>{{ tCertificate.certSerial}}</span>
+            </div>
+        </div>
+        <!-- Signature Algorithm -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.signatureAlgorithm}"></span>
+            </div>
+            <div class="col-sm-10">
+                <span>{{tCertificate.certDigestAlgo}}</span>
+            </div>
+        </div>
+        <!-- Issuer -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.issuer}"></span>
+            </div>
+            <div class="col-sm-10">
+                <span>{{tCertificate.certIssuer}}</span>
+            </div>
+        </div>
+        <!-- Subject -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.subject}"></span>
+            </div>
+            <div class="col-sm-10">
+                <span style="word-wrap: break-word;">{{tCertificate.certSubject}}</span>
+            </div>
+        </div>
+        <!-- Validity -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.validity}"></span>
+            </div>
+            <div class="col-sm-10">
+                <span>{{ tCertificate.certNotBefore | date:'yyyy-MM-dd HH:mm:ss'}} - {{ tCertificate.certAfter | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+            </div>
+        </div>
+        <!-- Cert Ski B64 -->
+        <div class="row">
+            <div>
+                <div class="col-sm-2 text-right ">
+                    <span th:text="#{digitalIdentification.x509ski}"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>{{tCertificate.certSkiB64}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- Key Usage -->
+        <div class="row" ng-if="tCertificate.keyUsageList!=null">
+            <div>
+                <div class="col-sm-2 text-right ">
+                    <span th:text="#{digitalIdentification.keyUsage}"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>{{tCertificate.keyUsageList[0]}}</span>
+                </div>
+            </div>
+            <div ng-repeat="key in tCertificate.keyUsageList track by $index" ng-hide="$first">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <span>{{key}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- Extended Key Usage -->
+        <div class="row" ng-if="tCertificate.extendedKeyUsageList!=null">
+            <div>
+                <div class="col-sm-2 text-right ">
+                    <span th:text="#{digitalIdentification.extendedKeyUsage}"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>{{tCertificate.extendedKeyUsageList[0]}}</span>
+                </div>
+            </div>
+            <div ng-repeat="extendedKey in tCertificate.extendedKeyUsageList track by $index" ng-hide="$first">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <span>{{extendedKey}}</span>
+                </div>
+            </div>
+        </div>
+        <!-- Certificate B64 -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.certB64}"></span>
+            </div>
+            <div ng-init="tCertificate.certB64Open='0'">
+                <span ng-if="tCertificate.certB64Open!='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-right closeTabIcon cursor-pointer" ng-click="tCertificate.certB64Open='1'"></span>
+                <span ng-if="tCertificate.certB64Open=='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-down openTabIcon cursor-pointer" ng-click="tCertificate.certB64Open='0'"></span>
+                <p class="col-sm-9" ng-if="tCertificate.certB64Open=='0'" style="margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ tCertificate.certB64}}</p>
+                <pre class="col-sm-9" ng-if="tCertificate.certB64Open=='1'" style="margin-bottom: 0px; word-wrap: break-word; white-space: pre-wrap; word-break: break-all;">{{ tCertificate.certB64}}</pre>
+            </div>
+        </div>
+        <!-- Certificate Info -->
+        <div style="margin-top: 5px;" class="row" ng-if="tCertificate.certificateInfo!=null">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.certInfo}"></span>
+            </div>
+            <div ng-init="tCertificate.certInfoOpen='0'">
+                <span ng-if="tCertificate.certInfoOpen!='1'" style="width: 10px;" class="col-sm-1 fa fa-caret-right closeTabIcon cursor-pointer" ng-click="tCertificate.certInfoOpen='1'"></span>
+                <span ng-if="tCertificate.certInfoOpen=='1'" style="width: 10px;" class="col-sm-1 fa fa-caret-down openTabIcon cursor-pointer" ng-click="tCertificate.certInfoOpen='0'"></span>
+                <p class="col-sm-9" ng-if="tCertificate.certInfoOpen=='0'" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ tCertificate.certificateInfo}}</p>
+                <pre class="col-sm-9" ng-if="tCertificate.certInfoOpen=='1'" style="word-wrap: break-word;">{{ tCertificate.certificateInfo}}</pre>
+            </div>
+        </div>
+        <!-- ASN1 -->
+        <div class="row">
+            <div class="col-sm-2 text-right ">
+                <span th:text="#{digitalIdentification.asn1}"></span>
+            </div>
+            <div ng-init="asn1.open='0'">
+                <span ng-if="asn1.open!='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-right closeTabIcon cursor-pointer" ng-click="asn1.open='1'"></span>
+                <span ng-if="asn1.open=='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-down openTabIcon cursor-pointer" ng-click="asn1.open='0'"></span>
+                <p class="col-sm-9" ng-if="asn1.open=='0'" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ tCertificate.asn1}}</p>
+                <pre class="col-sm-9" ng-if="asn1.open=='1'" style="word-wrap: break-word; white-space: pre; font-size: 90%">{{ tCertificate.asn1}}</pre>
+            </div>
+        </div>
+    </div>
+</div>

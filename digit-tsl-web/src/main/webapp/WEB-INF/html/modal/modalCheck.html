@@ -1,0 +1,17 @@
+<div class="panel panel-primary">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <span style="display: inline-block;"><span th:text="#{tNotification.checks}"></span>: {{ label| cut:false:110:'...'}}</span>
+        <span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+    </div>
+    <div class="panel-body">
+        <div style="margin-left: 588px;">
+            <span th:text="#{check.typeCheck}"> </span>
+            <select ng-model="filtre">
+                <option value="" label="All"></option>
+                <option ng-repeat="i in STATUS" value="{{i}}" ng-if="i!='IGNORE'">{{i}}
+            </select>
+        </div>
+        <paginator options="tableOptions"></paginator>
+    </div>
+</div>

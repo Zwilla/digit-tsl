@@ -1,0 +1,378 @@
+Poland 
+
+    National Bank of Poland 
+
+        Polish National Root (NCCert) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        Polish National Root (Centrast) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        Polish National Root (NCCert2016) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+    Unizeto Technologies S.A. 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+
+            non Regulatory; 
+
+        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+
+            non Regulatory; 
+
+        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+
+            QPres for eSig; 
+
+        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+
+            QPres for eSig; 
+
+        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+
+            QeRDS; 
+
+        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+
+            QeRDS; 
+
+        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Polish Security Printing Works 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+    Krajowa Izba Rozliczeniowa S.A. 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    TP Internet sp. z o.o. 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    MobiCert Sp. z o.o. 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Safe Technologies S.A. 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    ENIGMA Systemy Ochrony Informacji Sp.z o.o. 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+            Timestamping; 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    EuroCert Sp. z. o.o. 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Asseco Data Systems S.A. 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+
+            non Regulatory; 
+
+        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+
+            QPres for eSig; 
+
+        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            QVal for eSeal;QVal for eSig; 
+
+        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+
+            QeRDS; 
+
+        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSig; 
+
+        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+
+            non Regulatory; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            QVal for eSeal;QVal for eSig; 
+
+        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+

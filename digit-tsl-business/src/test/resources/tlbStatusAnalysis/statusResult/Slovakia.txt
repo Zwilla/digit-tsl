@@ -1,0 +1,308 @@
+Slovakia 
+
+    National Security Authority SK 
+
+        Root Certification Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        Root Certification Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        Trusted publishing of signature policies 2 - http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority 
+
+            non Regulatory; 
+
+        Trusted publishing of TL and signature policies 2 - http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority 
+
+            non Regulatory; 
+
+        The Slovak National Certification Authority 2 (SNCA2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        The Slovak National Certification Authority (SNCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        Time Stamp Authority 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamp Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamp Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamp Authority 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamp Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        Time Stamp Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Disig a.s. 
+
+        SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        CA Disig - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        CA Disig - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        CA Disig QCA3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA TSU01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA TSU02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA TSU03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        TSA TSU01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA TSU02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA TSU03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA  - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        aTSA CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Ministry of Defence Slovak Republic 
+
+        Certification Authority Ministry of Defence Slovak Republic (CAMOSR) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        Certification Authority Ministry of Defence Slovak Republic 2 (CAMOSR2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        TSA vfp - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA ext - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSA mil - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    The First Slovak Certification Authority 
+
+        PSCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        PSCA2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        PSCA3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        PSCA (TSA2007) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        PSCA (TSA2008) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        PSCA (TSA2010) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        PSCA (TSA2012) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    I. Certification Authority (I.CA) 
+
+         I.CA - Qualified Certification Authority, 09/2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        I.CA Qualified CA/RSA 07/2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal;QCert for eSig; 
+
+        I.CA - Time Stamping Authority, TSS/TSU 1, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        I.CA - Time Stamping Authority, TSS/TSU 2, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        I.CA - Time Stamping Authority, TSS/TSU 3, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        I.CA - Time Stamping Authority, TSS/TSU 4, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+

@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TLCCResults xmlns="http://www.etsi.org/19162/conformanceChecker">
+    <TrustServiceStatusList>
+        <Check checkId="CHILDREN_SCHEMA" status="ERROR">Cheking order and cardinality of children of TrustServiceStatusList aganist specification.Children order and number DO NOT MATCH specification
+Specification: SchemeInformation TrustServiceProviderList? ds:Signature
+Elements found: SchemeInformation TrustServiceProviderList
+Error indication (^ appears at the end of the last correct child): SchemeInformation TrustServiceProviderList^
+</Check>
+        <TSLTag>
+            <Check checkId="IS_URI" status="SUCCESS">The value of component TSLTag must be a valid URI.Value found: http://uri.etsi.org/19612/TSsdfsdfLTag</Check>
+            <Check checkId="TAG_1" status="ERROR">TSLtag MUST be "http://uri.etsi.org/19612/TSLTag" Found value: "http://uri.etsi.org/19612/TSsdfsdfLTag"</Check>
+        </TSLTag>
+        <SchemeInformation>
+            <TSLVersionIdentifier>
+                <Check checkId="IS_INTEGER" status="SUCCESS">Component TSLVersionIdentifier MUST be an integer. Found value: "5"</Check>
+                <Check checkId="SCHI_VI_VALUE_AS_SPEC" status="SUCCESS">TSLVersion Identifier MUST be 5.</Check>
+            </TSLVersionIdentifier>
+            <TSLSequenceNumber>
+                <Check checkId="IS_INTEGER" status="SUCCESS">Component TSLSequenceNumber MUST be an integer. Found value: "10"</Check>
+                <Check checkId="SCHI_SEQNUM_EQ_GREATER_THAN_1" status="SUCCESS">Component TSLSequenceNumber MUST be equal or greater than 1. Found value: "10"</Check>
+            </TSLSequenceNumber>
+            <TSLType>
+                <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLType must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/TSLTypsdfsd sdfsdfde/EUgeneric"</Check>
+                <Check checkId="IS_URI" status="ERROR">The value of component TSLType must be a valid URI. The string does not correspond to a URI Reference. Details: Illegal character in path at index 51: http://uri.etsi.org/TrstSvc/TrustedList/TSLTypsdfsd sdfsdfde/EUgeneric</Check>
+            </TSLType>
+            <SchemeTerritory>
+                <Check checkId="OTHER_FOR_NEUMS_NECLOL" status="ERROR">For a list that is neither the EC List of Trusted Lists or one of the EUMS Trusted Lists, the SchemeTerritory value MUST NOT be neither "EU" nor none of the codes of the EUMS. Found value: "LI"</Check>
+            </SchemeTerritory>
+            <SchemeOperatorName>
+                <Name index="1" language="de">
+                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Amt für Kommunikation"</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                </Name>
+                <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the SchemeOperatorName-Name elements shall be 'en'.</Check>
+            </SchemeOperatorName>
+            <SchemeOperatorAddress>
+                <PostalAddresses>
+                    <PostalAddress index="1" language="de">
+                        <Check checkId="CHILDREN_SCHEMA" status="ERROR">Cheking order and cardinality of children of PostalAddress aganist specification.Children order and number DO NOT MATCH specification
+Specification: StreetAddress Locality StateOrProvince? PostalCode? CountryName
+Elements found: CountryName
+Error indication (^ appears at the end of the last correct child): ^CountryName
+</Check>
+                        <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of PostalAddress is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                        <CountryName>
+                            <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component CountryName must have a not empty string as value. Value found: "LI"</Check>
+                        </CountryName>
+                    </PostalAddress>
+                    <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the PostalAddress elements shall be 'en'.</Check>
+                </PostalAddresses>
+                <ElectronicAddress>
+                    <URI index="1" language="de">
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/#/11109/amt-fur-kommunikation"</Check>
+                        <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/#/11109/amt-fur-kommunikation</Check>
+                        <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                        <Check checkId="URI_MUST_HAVE_SCHEME" status="SUCCESS">The value of each URI element in ElectronicAddress element must have a scheme. Found scheme: "http"</Check>
+                        <Check checkId="URI_MAILTO_OR_HTTP" status="SUCCESS">The scheme of the value of each URI element in ElectronicAddress element must be either "mailto" or one of ("http" or "https").</Check>
+                    </URI>
+                    <URI index="2" language="fi">
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "mailto:"</Check>
+                        <Check checkId="IS_URI" status="ERROR">The value of component URI must be a valid URI. The string does not correspond to a URI Reference. Details: Expected scheme-specific part at index 7: mailto:</Check>
+                        <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "fi"</Check>
+                        <Check checkId="URI_MUST_HAVE_SCHEME" status="SUCCESS">The value of each URI element in ElectronicAddress element must have a scheme. Found scheme: "http"</Check>
+                        <Check checkId="URI_MAILTO_OR_HTTP" status="SUCCESS">The scheme of the value of each URI element in ElectronicAddress element must be either "mailto" or one of ("http" or "https").</Check>
+                    </URI>
+                    <URI index="3" language="es">
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://tytytyty"</Check>
+                        <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://tytytyty</Check>
+                        <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "es"</Check>
+                        <Check checkId="URI_MUST_HAVE_SCHEME" status="SUCCESS">The value of each URI element in ElectronicAddress element must have a scheme. Found scheme: "http"</Check>
+                        <Check checkId="URI_MAILTO_OR_HTTP" status="SUCCESS">The scheme of the value of each URI element in ElectronicAddress element must be either "mailto" or one of ("http" or "https").</Check>
+                    </URI>
+                    <URI index="4" language="">
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "www.nolanguage.fr"</Check>
+                        <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: www.nolanguage.fr</Check>
+                        <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="ERROR">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: ""</Check>
+                        <Check checkId="URI_MUST_HAVE_SCHEME" status="ERROR">The value of each URI element in ElectronicAddress element must have a scheme. No scheme found.</Check>
+                    </URI>
+                    <URI index="5" language="null">
+                        <Check checkId="ATTRIBUTES_SCHEMA" status="ERROR">Cheking attributes of URI aganist specification. No attributes where found in this element. However the specification is as follows: xml:lang
+</Check>
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "www.noattributelanguage.fr"</Check>
+                        <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: www.noattributelanguage.fr</Check>
+                        <Check checkId="URI_MUST_HAVE_SCHEME" status="ERROR">The value of each URI element in ElectronicAddress element must have a scheme. No scheme found.</Check>
+                    </URI>
+                    <Check checkId="ELADD_ONE_MAILTO_ONE_HTTP" status="ERROR">Within the element ElectronicAddress there must be at least one URI whose scheme is "mailto" and at least one whose scheme is either "http" or "https". No URI found with "mailto" scheme. </Check>
+                    <Check checkId="ELADD_ONE_MAILTO_LANG_EN" status="ERROR">Within the element ElectronicAddress there must be at least one URI whose scheme is "mailto" and whose xml:lang attribute value is "en".</Check>
+                    <Check checkId="ELADD_ONE_HTTP_LANG_EN" status="ERROR">Within the element ElectronicAddress there must be at least one URI whose scheme is either "http" or "https", and whose xml:lang attribute value is "en".</Check>
+                </ElectronicAddress>
+            </SchemeOperatorAddress>
+            <SchemeName>
+                <Name index="1" language="de">
+                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "LI:Vertrauensliste mit Angaben zu den qualifizierten Vertrauensdiensteanbietern, die vom ausstellenden Mitgliedstaat beaufsichtigt werden, sowie Angaben zu den von ihnen angebotenen qualifizierten Vertrauensdiensten gemäß der Verordnung (EU) Nr. 910/2014 des Europäischen Parlaments und des Rates vom 23. Juli 2014 über die elektronische Identifizierung und Vertrauensdienste für elektronische Transaktionen im Binnenmarkt und zur Aufhebung der Richtlinie 1999/93/EG."</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                </Name>
+                <Name index="2" language="de">
+                    <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component Name must have a not empty string as value. Found empty string</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                </Name>
+                <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the SchemeName-Name elements shall be 'en'.</Check>
+            </SchemeName>
+            <SchemeInformationURI>
+                <URI index="1" language="de">
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "httr-beaufsichtigten-bzw-akkreditierten-zertifizierungsdiensteanbieter"</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: httr-beaufsichtigten-bzw-akkreditierten-zertifizierungsdiensteanbieter</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                </URI>
+                <URI index="2" language="bg-latn">
+                    <Check checkId="NOT_EMPTY_URI" status="ERROR">The value of URI must be a non empty URI reference. The string for the URI is empty</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: </Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="ERROR">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "bg-latn"</Check>
+                </URI>
+                <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the SchemeInformationURI-URI elements shall be 'en'.</Check>
+            </SchemeInformationURI>
+            <StatusDeterminationApproach>
+                <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of StatusDeterminationApproach must be a non empty URI reference. The string for the URI is: "http://uri.etsifdsfsdfdsf.org/TrstSvc/TrustedList/StatusDetn/EUappropriate"</Check>
+                <Check checkId="IS_URI" status="SUCCESS">The value of component StatusDeterminationApproach must be a valid URI.Value found: http://uri.etsifdsfsdfdsf.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</Check>
+                <Check
+                    checkId="URI_VAL_COHERENT_WITH_UNKNOWN_TYPE_DIFFERENT_VALUES" status="SUCCESS">It is unknown whether the list is a non EUMS list or a non EC list of lists. Nevertheless the value of StatusDeterminationApproach component is coheren with both of them. Found value: "http://uri.etsifdsfsdfdsf.org/TrstSvc/TrustedList/StatusDetn/EUappropriate". The value does not seem registered in the ETSI Identified Organization Domain</Check>
+            </StatusDeterminationApproach>
+            <SchemeTypeCommunityRules>
+                <URI index="1" language="en">
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstdffdfSvc/TrustedList/schemerules/LI"</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstdffdfSvc/TrustedList/schemerules/LI</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                    <Check checkId="URI_VAL_NOEUMS_NORECLOL" status="SUCCESS"> The URI value must not be neither a value corresponding to an EUMS Trusted List nor a value corresponding to the EC list of lists.</Check>
+                </URI>
+                <URI index="2" language="el-latn">
+                    <Check checkId="NOT_EMPTY_URI" status="ERROR">The value of URI must be a non empty URI reference. The string for the URI is empty</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: </Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="ERROR">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "el-latn"</Check>
+                    <Check checkId="URI_VAL_NOEUMS_NORECLOL" status="SUCCESS"> The URI value must not be neither a value corresponding to an EUMS Trusted List nor a value corresponding to the EC list of lists.</Check>
+                </URI>
+                <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeTypeCommunityRules-URI elements shall be 'en'. Found in SchemeTypeCommunityRules-URI[1]</Check>
+            </SchemeTypeCommunityRules>
+            <PolicyOrLegalNotice>
+                <TSLLegalNotice index="1" language="de">
+                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component TSLLegalNotice must have a not empty string as value.</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of TSLLegalNotice is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                    <Check checkId="LEGAL_NOTICE_NONEUL" status="SUCCESS">The "TSLLegalNotice" component's value for a non EU list is none of the values specified for EUMS nor the value specified for the EC LoL.</Check>
+                </TSLLegalNotice>
+                <TSLLegalNotice index="2" language="eu">
+                    <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component TSLLegalNotice must have a not empty string as value. Found empty string</Check>
+                    <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of TSLLegalNotice is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "eu"</Check>
+                    <Check checkId="LEGAL_NOTICE_NONEUL" status="SUCCESS">The "TSLLegalNotice" component's value for a non EU list is none of the values specified for EUMS nor the value specified for the EC LoL.</Check>
+                </TSLLegalNotice>
+            </PolicyOrLegalNotice>
+            <HistoricalInformationPeriod>
+                <Check checkId="IS_INTEGER" status="SUCCESS">Component HistoricalInformationPeriod MUST be an integer. Found value: "0"</Check>
+                <Check checkId="HISTPERIOD_VAL" status="ERROR">The "HistoricalInformationPeriod" component MUST have the value "65535". Found value: "0"</Check>
+            </HistoricalInformationPeriod>
+            <PointersToOtherTSL>
+                <OtherTSLPointer index="1">
+                    <ServiceDigitalIdentities>
+                        <ServiceDigitalIdentity index="1">
+                            <DigitalId index="1">
+                                <X509Certificate>
+                                    <Check checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509Certificate must contain an X509 certificate.Suceeded to parse certificate in this component. Certificate details: Issuer: "C=ES,O=FNMT-RCM,CN=ISA CA". SubjectName: "C=BE,O=EUROPEAN COMMISSION,CN=(SIGN) JOLANDA VAN EIJNDTHOVEN". SerialNumber: 60885511170996547428278302050024098572. Public Key's SHA1 digest: '8cfe8d9929932db10a8ae384da6ed66d690d9efa'</Check>
+                                    <Check
+                                    checkId="PUB_KEY_IN_X509_CERT" status="SUCCESS">The X509 certificate must contain a public key. SHA1 of the public key of the X509 certificate: '8cfe8d9929932db10a8ae384da6ed66d690d9efa'</Check>
+                                </X509Certificate>
+                            </DigitalId>
+                        </ServiceDigitalIdentity>
+                    </ServiceDigitalIdentities>
+                    <TSLLocation>
+                        <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLLocation must be a non empty URI reference. The string for the URI is: "http//ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml"</Check>
+                        <Check checkId="IS_URI" status="SUCCESS">The value of component TSLLocation must be a valid URI.Value found: http//ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</Check>
+                    </TSLLocation>
+                    <AdditionalInformation>
+                        <OtherInformation index="1"/>
+                        <OtherInformation index="2"/>
+                        <OtherInformation index="3">
+                            <Check checkId="CHILDREN_SCHEMA" status="ERROR">Cheking order and cardinality of children of OtherInformation aganist specification.Children order and number DO NOT MATCH specification
+Specification: TSLType || SchemeOperatorName || SchemeTypeCommunityRules || SchemeTerritory || tsx:MimeType
+Elements found: tsx:MimeType SchemeTerritory
+Error indication (^ appears at the end of the last correct child): tsx:MimeType^ SchemeTerritory
+</Check>
+                            <MimeType>
+                                <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component MimeType must have a not empty string as value. Value found: "application/vnd.etsi.tsl+xml"</Check>
+                            </MimeType>
+                        </OtherInformation>
+                        <OtherInformation index="4">
+                            <SchemeOperatorName>
+                                <Name index="1" language="el-latn">
+                                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "European Commission"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="ERROR">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "el-latn"</Check>
+                                </Name>
+                                <Name index="2" language="de">
+                                    <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component Name must have a not empty string as value. Found empty string</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                </Name>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the SchemeOperatorName-Name elements shall be 'en'.</Check>
+                            </SchemeOperatorName>
+                        </OtherInformation>
+                        <OtherInformation index="5"/>
+                        <OtherInformation index="5"/>
+                    </AdditionalInformation>
+                </OtherTSLPointer>
+            </PointersToOtherTSL>
+            <NextUpdate>
+                <Check checkId="NEXTUP_LISTISSUE" status="SUCCESS">The difference between NextUpdate and List Issue Date and Time MUST not exceed 6 months ListIssueDateTime value found: Sun Mar 12 02:00:00 CET 2017. NextUpdate value found: Thu Aug 14 02:00:00 CEST 2014</Check>
+            </NextUpdate>
+            <DistributionPoints>
+                <URI index="1">
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/files/ak/xml-llv-ak-tsl.xml"</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/files/ak/xml-llv-ak-tsl.xml</Check>
+                </URI>
+                <URI index="2">
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "mailto:"</Check>
+                    <Check checkId="IS_URI" status="ERROR">The value of component URI must be a valid URI. The string does not correspond to a URI Reference. Details: Expected scheme-specific part at index 7: mailto:</Check>
+                </URI>
+                <URI index="3">
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://aqzserdftg"</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://aqzserdftg</Check>
+                </URI>
+                <URI index="4">
+                    <Check checkId="ATTRIBUTES_SCHEMA" status="ERROR">Cheking attributes of URI aganist specification.Present attributes DO NOT MATCH specification
+Unexpected attributes found: xml:lang
+Specification: 
+Attributes found: xml:lang
+</Check>
+                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "www.unexpected.uri"</Check>
+                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: www.unexpected.uri</Check>
+                </URI>
+            </DistributionPoints>
+        </SchemeInformation>
+        <TrustServiceProviderList>
+            <TrustServiceProvider index="1">
+                <TSPInformation>
+                    <TSPName>
+                        <Name index="1" language="ca">
+                            <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Liechtensteinische Post AG"</Check>
+                            <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "ca"</Check>
+                        </Name>
+                        <Name index="2" language="de">
+                            <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component Name must have a not empty string as value. Found empty string</Check>
+                            <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                        </Name>
+                        <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the TSPName-Name elements shall be 'en'.</Check>
+                    </TSPName>
+                    <TSPTradeName>
+                        <Name index="1" language="el-latn">
+                            <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "NTRLI-FL-0002.000.966-5"</Check>
+                            <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="ERROR">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "el-latn"</Check>
+                        </Name>
+                        <Name index="2" language="null">
+                            <Check checkId="ATTRIBUTES_SCHEMA" status="ERROR">Cheking attributes of Name aganist specification. No attributes where found in this element. However the specification is as follows: xml:lang
+</Check>
+                            <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component Name must have a not empty string as value. Found empty string</Check>
+                        </Name>
+                        <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the TSPTradeName-Name elements shall be 'en'.</Check>
+                        <Check checkId="TSP_TRN_NONE_OF_PATTERNS" status="ERROR">None of the English components of the Trade Name seem to match neither the pattern NTRCC-X nor VATCC-X, nor PASCC-X, nor IDCCC-X, nor PNOCC-X, nor TINCC-X None of the values found match any of the aformentioned patterns.</Check>
+                    </TSPTradeName>
+                    <TSPAddress>
+                        <PostalAddresses>
+                            <PostalAddress index="1" language="de">
+                                <Check checkId="CHILDREN_SCHEMA" status="ERROR">Cheking order and cardinality of children of PostalAddress aganist specification.Children order and number DO NOT MATCH specification
+Specification: StreetAddress Locality StateOrProvince? PostalCode? CountryName
+Elements found: CountryName
+Error indication (^ appears at the end of the last correct child): ^CountryName
+</Check>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of PostalAddress is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                <CountryName>
+                                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component CountryName must have a not empty string as value. Value found: "LI"</Check>
+                                </CountryName>
+                            </PostalAddress>
+                            <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the PostalAddress elements shall be 'en'.</Check>
+                        </PostalAddresses>
+                        <ElectronicAddress>
+                            <URI index="1" language="en">
+                                <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "mailto:"</Check>
+                                <Check checkId="IS_URI" status="ERROR">The value of component URI must be a valid URI. The string does not correspond to a URI Reference. Details: Expected scheme-specific part at index 7: mailto:</Check>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                            </URI>
+                            <URI index="2" language="en">
+                                <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.post.li/"</Check>
+                                <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.post.li/</Check>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                <Check checkId="URI_MUST_HAVE_SCHEME" status="SUCCESS">The value of each URI element in ElectronicAddress element must have a scheme. Found scheme: "http"</Check>
+                                <Check checkId="URI_MAILTO_OR_HTTP" status="SUCCESS">The scheme of the value of each URI element in ElectronicAddress element must be either "mailto" or one of ("http" or "https").</Check>
+                            </URI>
+                            <Check checkId="ELADD_ONE_MAILTO_ONE_HTTP" status="ERROR">Within the element ElectronicAddress there must be at least one URI whose scheme is "mailto" and at least one whose scheme is either "http" or "https". No URI found with "mailto" scheme. </Check>
+                            <Check checkId="ELADD_ONE_MAILTO_LANG_EN" status="ERROR">Within the element ElectronicAddress there must be at least one URI whose scheme is "mailto" and whose xml:lang attribute value is "en".</Check>
+                            <Check checkId="ELADD_ONE_HTTP_LANG_EN" status="SUCCESS">Within the element ElectronicAddress there must be at least one URI whose scheme is either "http" or "https", and whose xml:lang attribute value is "en".</Check>
+                        </ElectronicAddress>
+                    </TSPAddress>
+                    <TSPInformationURI>
+                        <URI index="1" language="fr">
+                            <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/#/112176"</Check>
+                            <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/#/112176</Check>
+                            <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "fr"</Check>
+                        </URI>
+                        <URI index="2" language="de">
+                            <Check checkId="NOT_EMPTY_URI" status="ERROR">The value of URI must be a non empty URI reference. The string for the URI is empty</Check>
+                            <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: </Check>
+                            <Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                        </URI>
+                        <Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the TSPInformationURI-URI elements shall be 'en'.</Check>
+                    </TSPInformationURI>
+                    <TSPInformationExtensions>
+                        <Extension index="1">
+                            <Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it.</Check>
+                        </Extension>
+                    </TSPInformationExtensions>
+                </TSPInformation>
+                <TSPServices>
+                    <TSPService index="1">
+                        <ServiceInformation>
+                            <ServiceTypeIdentifier>
+                                <Check
+                                    checkId="SVC_TYPE_IN_REG_910_2014" status="ERROR">The value of ServiceTyeIdentifier in the service information section MUST be one of the starndardized values supporting EU Regulation 910/2014. Found ServiceTypeIdentifier value: http://uri.etsi.org/TrstSvc/Svctype/Archsdfsdfsdfdsfiv</Check>
+                            </ServiceTypeIdentifier>
+                            <ServiceName>
+                                <Name index="1" language="da">
+                                    <Check checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Liechtenstein Post Advanced CA"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "da"</Check>
+                                </Name>
+                                <Name index="2" language="de">
+                                    <Check checkId="NOT_EMPTY_STRING" status="ERROR">Component Name must have a not empty string as value. Found empty string</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                </Name>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the ServiceName-Name elements shall be 'en'.</Check>
+                            </ServiceName>
+                            <ServiceDigitalIdentity>
+                                <DigitalId index="1">
+                                    <X509Certificate>
+                                    <Check
+                                    checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509Certificate must contain an X509 certificate.Suceeded to parse certificate in this component. Certificate details: Issuer: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SubjectName: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SerialNumber: 1420482354. Public Key's SHA1 digest: '8cd6f25a9acdaa458461fe7deb0c2a722b6349de'</Check>
+                                    <Check
+                                    checkId="SAME_CERT_NOT_IN_OTHER_SERVICE_EQUAL_TYPE" status="SUCCESS">The X509 certificate must not be present in the TL as the digital identity of another service of the same type.</Check>
+                                    <Check
+                                    checkId="PUB_KEY_IN_X509_CERT" status="SUCCESS">The X509 certificate must contain a public key. SHA1 of the public key of the X509 certificate: '8cd6f25a9acdaa458461fe7deb0c2a722b6349de'</Check>
+                                    <Check
+                                    checkId="X509_CERT_SN_O_EQUAL_TSPNAME" status="SUCCESS">Any X509 certificate within one digital identity component must have the attribute O within its SubjectName equal to the Trust Service Provider's name. One of the TSP Name instances is included in one 'O' attribute in the cert. The following pair shows the contents of the O attribute and the name found in TSPName: (O='z', '')</Check>
+                                    </X509Certificate>
+                                </DigitalId>
+                                <DigitalId index="2">
+                                    <X509SubjectName>
+                                    <Check
+                                    checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509SubjectName must contain an SubjectName. Found value: "CN=Simon, OU=a, O=z, L=e, ST=r, C=t"</Check>
+                                    <Check
+                                    checkId="X509SUBJECTNAME_AS_IN_OTHER_X509CERTS" status="SUCCESS">Any X509SubjectName element shall contain a value equal to the SubjectName of a certificate present in the ServiceDigitalIdentity parent component.</Check>
+                                    </X509SubjectName>
+                                </DigitalId>
+                                <DigitalId index="3">
+                                    <X509SKI>
+                                    <Check
+                                    checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509SKI must contain an SubjectKeyIdentifier data. Found value: "8cd6f25a9acdaa458461fe7deb0c2a722b6349de"</Check>
+                                    <Check
+                                    checkId="SKI_EQUAL_SKI_IN_CERTIFICATE" status="SUCCESS">The content of the X509SKI component must be equal to the SubjectKeyIdentifier present in any X509 certificate within the digital identity. The SubjectKeyIdentifier of the certificate with Issuer: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SubjectName: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SerialNumber: 1420482354. Public Key's SHA1 digest: '8cd6f25a9acdaa458461fe7deb0c2a722b6349de' is the same as the content of this component</Check>
+                                    </X509SKI>
+                                </DigitalId>
+                                <DigitalId index="4">
+                                    <Other>
+                                    <Check
+                                    checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it.</Check>
+                                    </Other>
+                                </DigitalId>
+                                <DigitalId index="5">
+                                    <Other>
+                                    <Check
+                                    checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it.</Check>
+                                    </Other>
+                                </DigitalId>
+                            </ServiceDigitalIdentity>
+                            <ServiceStatus>
+                                <Check
+                                    checkId="SVC_STAT_IN_REG_910_2014" status="ERROR">The ServiceStatus value MUST be a valid value for the EU Regulation 910/2014 starting on 1st July 2016. Found ServiceStatus found value: http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/dsfsdfsqsdqsdetbynationallaw</Check>
+                            </ServiceStatus>
+                            <StatusStartingTime>
+                                <Check checkId="SVC_START_BEFORE_NOW" status="ERROR">The StatusStartingTime MUST be earlier than the checking instant. StatusStartingTime found value: 2020-11-12T23:00:00Z</Check>
+                                <Check
+                                    checkId="SVC_START_AFTER_PREVIOUS" status="SUCCESS">The StatusStartingTime MUST be greater than the time presentin StatusStartingTime within the most recent ServiceHistoryInstance if the statuses indicated in both parts are different. ServiceStatus in both parts had different values and StatusStartingTime this section is greater than StatusStartingTime in previous historical instanceValue in this section: 2020-11-12T23:00:00Z. Value in previous historic instance: 2016-06-30T00:00:00Z</Check>
+                            </StatusStartingTime>
+                            <SchemeServiceDefinitionURI>
+                                <URI index="1" language="cs">
+                                    <Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/#/112176/electronic-signature"</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/#/112176/electronic-signature</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "cs"</Check>
+                                </URI>
+                                <URI index="2" language="de">
+                                    <Check checkId="NOT_EMPTY_URI" status="ERROR">The value of URI must be a non empty URI reference. The string for the URI is empty</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: </Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                </URI>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the SchemeServiceDefinitionURI-URI elements shall be 'en'.</Check>
+                            </SchemeServiceDefinitionURI>
+                            <TSPServiceDefinitionURI>
+                                <URI index="1" language="cs">
+                                    <Check checkId="NOT_EMPTY_URI" status="ERROR">The value of URI must be a non empty URI reference. The string for the URI is empty</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: </Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "cs"</Check>
+                                </URI>
+                                <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="ERROR">The value of the xml:lang attribute of one of the TSPServiceDefinitionURI-URI elements shall be 'en'.</Check>
+                            </TSPServiceDefinitionURI>
+                            <ServiceInformationExtensions>
+                                <Extension index="1">
+                                    <TakenOverBy>
+                                    <SchemeTerritory>
+                                    <Check
+                                    checkId="ONE_OF_EUMS_CCODES" status="SUCCESS">For an EUMS Trusted List the SchemeTerritory value MUST be the country code of one of the EU member States.Found value: "LI"</Check>
+                                    </SchemeTerritory>
+                                    <TSPName>
+                                    <Name index="1" language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Office for Communications"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </Name>
+                                    <Name index="2" language="de">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Amt für Kommunikation"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                    </Name>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the TSPName-Name elements shall be 'en'. Found in TSPName-Name[1]</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_TSPNAME" status="ERROR">The English part of TSPName component of TakenOverBy extension MUST be equal to the English part of the TSPName of one of the TSPs listed in the Trusted List.</Check>
+                                    </TSPName>
+                                    <URI language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/#/112176/electronic-signature"</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/#/112176/electronic-signature</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_URI_SCH_AUTH" status="SUCCESS">The scheme and authority of the URI element in the TakenOverBy Extension SHOULD BE equal to the scheme and authority of one the following URIS: the URI within the ElectronicAddress of the taking over TSP, the TSPInformationURI of the taking over TSP, the URI within the ElectronicAddress of the Trusted List Scheme Operator, or the SchemeInformationURI of the Trusted List Scheme. Found the same scheme and authority values in URI "http://www.llv.li/#/11109/amt-fur-kommunikation", which is a component of Scheme Operator's ElectronicAddress</Check>
+                                    </URI>
+                                    <SchemeOperatorName>
+                                    <Name index="1" language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Office for Communications"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </Name>
+                                    <Name index="2" language="de">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Amt für Kommunikation"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                    </Name>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeOperatorName-Name elements shall be 'en'. Found in SchemeOperatorName-Name[1]</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_SCHOPNAME" status="ERROR">The English part of SchemeOperatorName component of TakenOverBy extension MUST be equal to the English part of SchemeOperatorName in the SchemeInformation section of the Trusted List.</Check>
+                                    </SchemeOperatorName>
+                                    </TakenOverBy>
+                                </Extension>
+                                <Extension index="2">
+                                    <AdditionalServiceInformation>
+                                    <URI language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures"</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </URI>
+                                    </AdditionalServiceInformation>
+                                </Extension>
+                            </ServiceInformationExtensions>
+                        </ServiceInformation>
+                        <ServiceHistory>
+                            <ServiceHistoryInstance index="1">
+                                <ServiceTypeIdentifier>
+                                    <Check
+                                    checkId="SVC_TYPE_IN_DIR_1999_93_EC" status="ERROR">When the StatusStartingTime in an historic instance is previous to the entry into force of the EU Regulation 910/2014, then the type of service in the service section MUST be one of the standardized values supporting EC Directive 1999/93/EC. ServiceTypeIdentifier value found: http://uri.etsi.org/TrstSvc/Svctype/AdESGedfggggggggggneration. StatusStartingTime value found: 2016-06-30T00:00:00Z</Check>
+                                </ServiceTypeIdentifier>
+                                <ServiceName>
+                                    <Name index="1" language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Liechtenstein Post Advanced CA"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </Name>
+                                    <Name index="2" language="de">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Liechtenstein Post Advanced CA"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                    </Name>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the ServiceName-Name elements shall be 'en'. Found in ServiceName-Name[1]</Check>
+                                </ServiceName>
+                                <ServiceDigitalIdentity>
+                                    <DigitalId index="1">
+                                    <X509SubjectName>
+                                    <Check
+                                    checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509SubjectName must contain an SubjectName. Found value: "CN=Simon, OU=a, O=z, L=e, ST=r, C=t"</Check>
+                                    <Check
+                                    checkId="X509SUBJECTNAME_DIFFERENT_FROM_OTHER_X509CERTS" status="WARNING">Any X509SubjectName element shall contain a value equal to the subject name of a certificate present in the ServiceDigitalIdentity parent element.A new SubjectName has been found within a X509SubjectName in the Service Digital Identity, different from other(s) found so far. However this may be due to the fact that the conversion of DNs to String is not canonical. Users are kindly asked to review the X509SubjectName and certificate according to the details given here. SubjectName found in X509 certificate: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". Value of X509SubjectName component: "CN=Simon, OU=a, O=z, L=e, ST=r, C=t"</Check>
+                                    </X509SubjectName>
+                                    </DigitalId>
+                                    <DigitalId index="2">
+                                    <X509SKI>
+                                    <Check
+                                    checkId="DIG_ID_AS_EXPECTED" status="SUCCESS">The component X509SKI must contain an SubjectKeyIdentifier data. Found value: "8cd6f25a9acdaa458461fe7deb0c2a722b6349de"</Check>
+                                    <Check
+                                    checkId="SKI_EQUAL_SKI_IN_CERTIFICATE" status="SUCCESS">The content of the X509SKI component must be equal to the SubjectKeyIdentifier present in any X509 certificate within the digital identity. The SubjectKeyIdentifier of the certificate with Issuer: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SubjectName: "C=t,ST=r,L=e,O=z,OU=a,CN=Simon". SerialNumber: 1420482354. Public Key's SHA1 digest: '8cd6f25a9acdaa458461fe7deb0c2a722b6349de' is the same as the content of this component</Check>
+                                    </X509SKI>
+                                    </DigitalId>
+                                    <DigitalId index="3">
+                                    <Other>
+                                    <Check
+                                    checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it.</Check>
+                                    </Other>
+                                    </DigitalId>
+                                    <DigitalId index="4">
+                                    <Other>
+                                    <Check
+                                    checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it.</Check>
+                                    </Other>
+                                    </DigitalId>
+                                </ServiceDigitalIdentity>
+                                <ServiceStatus>
+                                    <Check
+                                    checkId="SVC_STAT_VALID_FOR_TYPE" status="ERROR">The ServiceStatus value MUST be a valid value for the service type. StatusStartingTime was previous to the entry into force of Regulation 910/2014. ServiceTypeIdentifier value found: http://uri.etsi.org/TrstSvc/Svctype/AdESGedfggggggggggneration; ServiceStatus value found: http://uri.fdsfsdfsdfetsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</Check>
+                                </ServiceStatus>
+                                <StatusStartingTime>
+                                    <Check
+                                    checkId="SVC_START_BEFORE_NOW" status="ERROR">The StatusStartingTime MUST be earlier than the checking instant. StatusStartingTime found value: 2020-11-12T23:00:00Z</Check>
+                                </StatusStartingTime>
+                                <ServiceInformationExtensions>
+                                    <Extension index="1">
+                                    <TakenOverBy>
+                                    <SchemeTerritory>
+                                    <Check
+                                    checkId="ONE_OF_EUMS_CCODES" status="SUCCESS">For an EUMS Trusted List the SchemeTerritory value MUST be the country code of one of the EU member States.Found value: "LI"</Check>
+                                    </SchemeTerritory>
+                                    <TSPName>
+                                    <Name index="1" language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Office for Communications"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </Name>
+                                    <Name index="2" language="de">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Amt für Kommunikation"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                    </Name>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the TSPName-Name elements shall be 'en'. Found in TSPName-Name[1]</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_TSPNAME" status="ERROR">The English part of TSPName component of TakenOverBy extension MUST be equal to the English part of the TSPName of one of the TSPs listed in the Trusted List.</Check>
+                                    </TSPName>
+                                    <URI language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://www.llv.li/#/112176/electronic-signature"</Check>
+                                    <Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://www.llv.li/#/112176/electronic-signature</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_URI_SCH_AUTH" status="SUCCESS">The scheme and authority of the URI element in the TakenOverBy Extension SHOULD BE equal to the scheme and authority of one the following URIS: the URI within the ElectronicAddress of the taking over TSP, the TSPInformationURI of the taking over TSP, the URI within the ElectronicAddress of the Trusted List Scheme Operator, or the SchemeInformationURI of the Trusted List Scheme. Found the same scheme and authority values in URI "http://www.llv.li/#/11109/amt-fur-kommunikation", which is a component of Scheme Operator's ElectronicAddress</Check>
+                                    </URI>
+                                    <SchemeOperatorName>
+                                    <Name index="1" language="en">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Office for Communications"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
+                                    </Name>
+                                    <Name index="2" language="de">
+                                    <Check
+                                    checkId="NOT_EMPTY_STRING" status="SUCCESS">Component Name must have a not empty string as value. Value found: "Amt für Kommunikation"</Check>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of Name is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "de"</Check>
+                                    </Name>
+                                    <Check
+                                    checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeOperatorName-Name elements shall be 'en'. Found in SchemeOperatorName-Name[1]</Check>
+                                    <Check
+                                    checkId="SVC_TAKENOVER_SCHOPNAME" status="ERROR">The English part of SchemeOperatorName component of TakenOverBy extension MUST be equal to the English part of SchemeOperatorName in the SchemeInformation section of the Trusted List.</Check>
+                                    </SchemeOperatorName>
+                                    </TakenOverBy>
+                                    </Extension>
+                                </ServiceInformationExtensions>
+                                <Check
+                                    checkId="STAT_TRANSITION_TYPE_KNOWN" status="SUCCESS">The transition between statues MUST be one of the following: from EUDir to EUDir, from EUDir to EUDir or from EUReg to EUReg. The statuses values in both the section under test and the previous historical section do not allow to identify the type of transition</Check>
+                            </ServiceHistoryInstance>
+                        </ServiceHistory>
+                    </TSPService>
+                </TSPServices>
+            </TrustServiceProvider>
+        </TrustServiceProviderList>
+    </TrustServiceStatusList>
+</TLCCResults>

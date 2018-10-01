@@ -1,0 +1,292 @@
+Czech Republic 
+
+    First certification authority, a.s. 
+
+        (1) I.CA - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (2) I.CA - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (11) I.CA - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (16) I.CA - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (9) I.CA - Qualified Time Stamping Authority, nCipher DSE200 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (10) I.CA - Qualified Time Stamping Authority, Time Stamp Server 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (12) I.CA - Qualified Time Stamping Authority, Time Stamp Server 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (17) I.CA - Time Stamping Authority, TSS/TSU 1, 12/2009 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (18) I.CA - Time Stamping Authority, TSS/TSU 2, 12/2009 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (19) I.CA - Time Stamping Authority, TSS/TSU 3, 12/2009 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (34) I.CA - Time Stamping Authority, TSS/TSU 1, 12/2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (35) I.CA - Time Stamping Authority, TSS/TSU 3, 12/2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (36) I.CA - Time Stamping Authority, TSS/TSU 2, 12/2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (53) I.CA - Time Stamping Authority, TSS/TSU 1, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (54) I.CA - Time Stamping Authority, TSS/TSU 2, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (55) I.CA - Time Stamping Authority, TSS/TSU 3, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (56) I.CA - Time Stamping Authority, TSS/TSU 4, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (77)  I.CA Time Stamping Authority TSS/TSU 4 12/2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (78) I.CA - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        I.CA QVerify - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            QVal for eSeal;QVal for eSig; 
+
+    The Czech Post, s.p. 
+
+        (4) PostSignum - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (21) PostSignum - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (13) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (14) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (15) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (25) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (26) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (27) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (28) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (29) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (30) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (31) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (32) PostSignum - Qualified Time Stamping Authority, TSU 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (33) PostSignum - Qualified Time Stamping Authority, TSU 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (37) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (38) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (39) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (40) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (41) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (42) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (43) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (44) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (45) PostSignum - Qualified Time Stamping Authority, TSU 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (46) PostSignum - Qualified Time Stamping Authority, TSU 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (47) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (48) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (49) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (50) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (51) PostSignum - Qualified Time Stamping Authority, TSU 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (52) PostSignum - Qualified Time Stamping Authority, TSU 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (57) PostSignum - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (58) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (59) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (60) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (61) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (62) PostSignum - Qualified Time Stamping Authority, TSU 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (63) PostSignum - Qualified Time Stamping Authority, TSU 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (68) PostSignum - Qualified Time Stamping Authority, TSU 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (69) PostSignum - Qualified Time Stamping Authority, TSU 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (70) PostSignum - Qualified Time Stamping Authority, TSU 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (71) PostSignum - Qualified Time Stamping Authority, TSU 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (72) PostSignum - Qualified Time Stamping Authority, TSU 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (73) PostSignum - Qualified Time Stamping Authority, TSU 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    eIdentity a.s. 
+
+        (8) ACAeID - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (23) ACAeID2 - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (24) ACAeID2 - Time Stamping Authority TSA1, TSU1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (64) ACAeID2.1 - issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        (65) ACAeID2 - Time Stamping Authority TSA1, TSU2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (74) ACAeID2 - Time Stamping Authority TSA1, TSU3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (75) ACAeID2 - Time Stamping Authority TSA1, TSU4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        (76) ACAeID2 - Time Stamping Authority TSA1, TSU5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+

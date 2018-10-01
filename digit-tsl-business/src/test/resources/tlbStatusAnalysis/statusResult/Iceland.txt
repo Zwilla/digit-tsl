@@ -1,0 +1,12 @@
+Iceland 
+
+    Audkenni ehf. 
+
+        Fulltgilt audkenni - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ocsp.audkenni.is - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            QCert for eSig; 
+

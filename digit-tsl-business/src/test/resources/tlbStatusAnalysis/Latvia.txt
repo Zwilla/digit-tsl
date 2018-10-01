@@ -1,0 +1,64 @@
+Latvia 
+
+    Latvian State Radio and Television center 
+
+        E-ME SSI (RCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME PSI (PCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME SI (CA1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME LZI (TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        EME LZI1 (TSA1) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        E-ME SI (CA1) from 04.2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME SI (CA1) from 10.2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        eParaksts LZI1 (TSA1) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        E-ME LZI2 (TSA2) - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        E-ME SI (CA1) from 03.2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME SI (CA1) from 08.2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME SI (CA1) from 02.2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME PSI (PCA) from 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        eParaksts LZI1 (TSA1) from 07.2015  - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        eParaksts LZI2 (TSA2) from 07.2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+
+        E-ME SI (CA1) from 09.2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        E-ME SI (CA1) from 05.2016 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        eParaksts CA  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+

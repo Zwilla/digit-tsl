@@ -1,0 +1,132 @@
+Estonia 
+
+    SK ID Solutions AS 
+
+        ESTEID-SK - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK 2007 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK 2011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EID-SK 2007 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EID-SK 2011 qualified certificates for electronic signatures - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EID-SK 2016 qualified certificates for electronic signatures - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        KLASS3-SK - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Klass3-SK 2010 qualified certificate for electronic seal - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        ESTEID-SK OCSP RESPONDER 2005 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK 2007 OCSP RESPONDER - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK 2007 OCSP RESPONDER 2010 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EID-SK 2007 OCSP RESPONDER - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EID-SK 2007 OCSP RESPONDER 2010 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        KLASS3-SK OCSP RESPONDER 2009 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        KLASS3-SK 2010 OCSP RESPONDER - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        SK OCSP RESPONDER 2011 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SK Proxy OCSP Responder 2009 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ESTEID-SK OCSP RESPONDER - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        KLASS3-SK OCSP RESPONDER (2003) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        KLASS3-SK OCSP RESPONDER (2006) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        SK Proxy OCSP Responder 2008 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SK Time-Stamping Authority for qualified electronic time stamps - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    GuardTime AS 
+
+        TSA0 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        H5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+

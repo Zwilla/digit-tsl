@@ -1,0 +1,32 @@
+Sweden 
+
+    SignGuard Europe AB 
+
+        SignGuard Europe AB - qualified certificate service - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SignGuard Europe AB – Qualified OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    TrustWeaver AB 
+
+        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+

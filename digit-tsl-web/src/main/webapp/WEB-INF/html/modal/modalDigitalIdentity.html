@@ -1,0 +1,109 @@
+<!-- Browse pointer in a modal for edition -->
+<script th:src="@{/controllers/modalController/modalB64Controller.js}"></script>
+<link rel="stylesheet" th:href="@{/public/bootstrap-fileinput/4.2.0/css/fileinput.min.css}" />
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <div style="display: inline-block; width: 95% !important;">
+            <check disabled="digital.checkToRun" id="digital.id" listcheck="listChecks" label="tDigitalIdentitie" istreeparent="true"></check>
+            <change id="digital.id" listdiff="listdiff" label="tDigitalIdentitie" istreeparent="true" information="information"></change>
+            <span>
+                <span th:text="#{serviceProvider.digitalIdentities}"></span>
+                : {{digital.name | cut:false:85:'...'}}
+            </span>
+            <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+        </div>
+        <div style="display: inline;">
+            <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+            <span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <!-- Pointer && Having PKI -->
+        <div class="row" style="margin-bottom: 10px;">
+            <div class="col-sm-12 scheme-information">
+                <span th:text="#{digitalIdentification.digital.id}"></span>
+                <div class="dropdown" style="display: inline; float: right;">
+                    <span class="fa fa-plus dropdown-toggle cursor-pointer " style="color: #337ab7;" type="button" data-toggle="dropdown" tooltip-placement="right" tooltip="Add"></span>
+                    <ul class="dropdown-menu">
+                        <li><a th:text="#{digitalIdentification.certificate}" ng-show="digitalType!='history' && !digital.isOther" class="cursor-pointer click"></a></li>
+                        <li><a th:text="#{digitalIdentification.certB64}" ng-show="digitalType!='history' && !digital.isOther" class="cursor-pointer"
+                            ng-click="addDigitalB64()"></a></li>
+                        <li><a th:text="#{digitalIdentification.other}" ng-click="addOther()" class="cursor-pointer "></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div ng-show="digitalType!='history'">
+                <div ng-repeat="tCertificate in digital.certificateList">
+                    <div class="row">
+                        <div class="col-sm-2 scheme-information">
+                            <span th:text="#{digitalIdentification.certificate}"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <div ng-init="tCertificate.show=false">
+                                <span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                <span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+
+                                <check disabled="digital.checkToRun" id="tCertificate.id" listcheck="listcheck" label="digital.subjectName" istreeparent="true"></check>
+                                <change id="tCertificate.id" listdiff="listchange" label="digital.subjectName" istreeparent="true" information="information"></change>
+                                <span>{{tCertificate.certSubjectShortName}}: {{ tCertificate.certNotBefore | date:'yyyy-MM-dd HH:mm:ss'}} - {{ tCertificate.certAfter |
+                                    date:'yyyy-MM-dd HH:mm:ss'}}</span>
+
+                                <span
+                                    ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tCertificate.certSubjectShortName+' ('+(tCertificate.certNotBefore | date:'yyyy-MM-dd HH:mm:ss')+' - '+(tCertificate.certAfter | date:'yyyy-MM-dd HH:mm:ss')+')')}}"
+                                    confirmed="deleteCertificate(tCertificate)" style="float: right; margin-right: 5px; margin-top: 3px;" class="fa fa-trash cursor-pointer"
+                                    tooltip-placement="right" tooltip="{{tDelete}}"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:replace="certificat :: certificat"></div>
+                </div>
+            </div>
+            <div ng-show="digitalType!='pointer' && !digital.isOther">
+                <!-- Subject -->
+                <div class="row">
+                    <div class="col-sm-2 scheme-information">
+                        <span th:text="#{digitalIdentification.subjectName}"></span>
+                    </div>
+                    <div class="col-sm-10">
+                        <input ng-model="digital.subjectName" style="width: 95%;" />
+                    </div>
+                </div>
+                <!-- Ski -->
+                <div class="row">
+                    <div class="col-sm-2 scheme-information">
+                        <span th:text="#{digitalIdentification.x509ski}"></span>
+                    </div>
+                    <div class="col-sm-10">
+                        <input ng-model="digital.x509ski" style="width: 95%;" />
+                    </div>
+                </div>
+            </div>
+            <!-- Other -->
+            <div class="row" ng-repeat="other in digital.other track by $index" ng-if="digital.other[$index]">
+                <div class="col-sm-2 scheme-information">
+                    <span style="display: block;" th:text="#{service.other}"></span>
+                </div>
+                <div class="col-sm-10">
+                    <input ng-model="digital.other[$index]" style="width: 95%;" />
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':confirm_thisOther}}" confirmed="deleteOther($index)" class="fa fa-trash cursor-pointer"
+                        style="margin-right: 5px; margin-top: 5px; float: right;" tooltip-placement="right" tooltip="{{tDelete}}"></span>
+                </div>
+            </div>
+        </div>
+        <!-- certificate file upload -->
+        <input ng-show="false" id="input-4" type="file" class="file" name="myFile" file-model="myFile"
+            onchange="angular.element(this).scope().addCertificate(this.files[0],angular.element(this))" data-show-caption="false" data-show-preview="false"
+            data-show-remove="false" data-show-upload="false" />
+    </div>
+</div>
+
+<script>
+    $(function() {
+        $(".click").click(function() {
+            $('#input-4').click();
+        });
+    });
+</script>
+<script th:src="@{/public/bootstrap-fileinput/4.2.0/js/fileinput.min.js}" type="text/javascript"></script>

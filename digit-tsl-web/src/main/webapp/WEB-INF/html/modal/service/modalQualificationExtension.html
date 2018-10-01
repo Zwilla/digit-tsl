@@ -1,0 +1,479 @@
+<div class="panel panel-primary" ng-init="isQualificationExtension=true">
+    <div class="panel-heading">
+        <div style="display: inline-block; width: 94% !important">
+            <check disabled="myTl.checkToRun" id="extension.id" listcheck="listChecks" label="extension_qualifications" istreeparent="true"></check>
+            <change id="extension.id" listdiff="listDiff" label="extension_qualifications" istreeparent="true" information="information"></change>
+            <span th:text="#{extension.qualificationExtension}"></span>
+        </div>
+        <div style="display: inline">
+            <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+            <span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
+        </div>
+    </div>
+    <div class="panel-body">
+        <!-- Critical -->
+        <div class="row" style="padding-bottom: 5px;">
+            <div class="col-sm-2 text-right">
+                <span th:text="#{extension.critical}"></span>
+            </div>
+            <div class="col-sm-8">
+                <select ng-model="extension.critical" required name="critical">
+                    <option value="true" ng-selected="extension.critical == true">true</option>
+                    <option value="false" ng-selected="extension.critical == false">false</option>
+                </select>
+                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 scheme-information">
+                <span th:text="#{extension.qualificationList}"></span>
+                <span class="fa fa-plus cursor-pointer" ng-click="addQualification()" style="float: right; color: #337ab7; margin-right: -10px" tooltip="Add Qualification Element"
+                    tooltip-placement="right"></span>
+            </div>
+        </div>
+        <!-- Qualifications List -->
+        <div ng-repeat="qualif in extension.qualificationsExtension" style="margin-left: 10px;">
+            <div class="row" ng-init="qualif.show='0';extension.qualificationsExtension[0].show='1'">
+                <span ng-if="qualif.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="qualif.show='1'"></span>
+                <span ng-if="qualif.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="qualif.show='0'"></span>
+                <span th:text="#{extension.qualification}"></span>
+
+                <div style="float: right; display: inline-block">
+                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(extension_qualification+' '+$index+1)}}" confirmed="deleteTab(extension.qualificationsExtension,qualif)"
+                        tooltip="Delete Qualification Element" tooltip-placement="right" style="margin-left: 5px;" class="fa fa-trash cursor-pointer"></span>
+                </div>
+            </div>
+            <!-- Qualification -->
+            <div ng-if="qualif.show=='1'" style="margin-left: 20px;">
+                <!-- Qualifiers -->
+                <div class="row">
+                    <div class="col-sm-12 scheme-information">
+                        <span th:text="#{extension.additionnalServiceInformation.qualifiers}"></span>
+                        <span ng-click="addTableString(qualif.qualifTypeList)" style="float: right; color: #337ab7; margin-right: -10px;" class="fa fa-plus cursor-pointer" tooltip-placement="right"
+                            tooltip="Add Qualifiers"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" ng-repeat="tab in qualif.qualifTypeList track by $index" style="padding-bottom: 2px; padding-top: 2px; padding-right: 0px !important;">
+                        <div class="col-sm-11">
+                            <select ng-model="qualif.qualifTypeList[$index]" required name="qualiftab_{{$index}}" style="width: 105%;">
+                                <option ng-repeat="qualifier in qualifiers" ng-selected="tab==qualifier.label">{{qualifier.label}}</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-1" style="padding-right: 0px;">
+                            <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right" style="margin-left: 10px;">(*)</span>
+                            <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_additionnalServiceInformation_qualifier}}" confirmed="deleteTab(qualif.qualifTypeList,tab)"
+                                tooltip="{{tDelete}}" tooltip-placement="right" class="fa fa-trash cursor-pointer" style="float: right; margin-top: 5px; margin-right: 1px;"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Criteria -->
+                <div style="margin-top: 10px;">
+                    <!-- Asserts -->
+                    <div class="row">
+                        <div class="col-sm-2 scheme-information" ng-init="qualif.criteria.show='1'">
+                            <span ng-if="qualif.criteria.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="qualif.criteria.show='1'"></span>
+                            <span ng-if="qualif.criteria.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="qualif.criteria.show='0'"></span>
+                            <span th:text="#{extension.additionnalServiceInformation.criteria}"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
+                            <select ng-model="qualif.criteria.asserts" style="height: 20px !important;">
+                                <option value="all" ng-selected="qualif.criteria.asserts=='all'">all</option>
+                                <option value="atLeastOne" ng-selected="qualif.criteria.asserts=='atLeastOne'">atLeastOne</option>
+                                <option value="none" ng-selected="qualif.criteria.asserts=='none'">none</option>
+                            </select>
+                            <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+                        </div>
+                    </div>
+                    <div ng-if="qualif.criteria.show=='1'" class="isOpenBorder">
+                        <div class="container-fluid isOpenTopBorder">
+                            <!-- Description -->
+                            <div class="row" style="margin-bottom: 10px;">
+                                <div class="col-sm-2 scheme-information">
+                                    <span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
+                                </div>
+                                <div class="col-sm-10" style="padding-left: 2">
+                                    <input ng-model="qualif.criteria.description" class="col-sm-11" />
+                                </div>
+                            </div>
+                            <!-- Key Usage -->
+                            <div class="col-sm-12 scheme-information" style="margin-bottom: 5px;">
+                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.keyUsageList}"></span>
+                                <span ng-click="addKeyUsageList(qualif.criteria)" style="float: right; color: #337ab7; margin-right: -10px" class="fa fa-plus cursor-pointer" tooltip-placement="right"
+                                    tooltip="Add Key Usage"></span>
+                            </div>
+                            <div style="margin-left: 20px; margin-bottom: 5px;" ng-repeat="keyUsageList in qualif.criteria.keyUsage">
+                                <div class="scheme-information" class="row" ng-init="keyUsage.show='0'">
+                                    <div class="row col-sm-10" style="padding-bottom:  5px;">
+                                        <div class="col-sm-2 scheme-information">
+                                            <span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                            <span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.keyUsage}"></span>
+                                        </div>
+                                    </div>
+                                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_additionnalServiceInformation_qualifiers_keyUsageList}}"
+                                        confirmed="deleteTab(qualif.criteria.keyUsage,keyUsageList)" tooltip="Delete KeyUsage" tooltip-placement="right" style="margin-left: 5px; float: right"
+                                        class="fa fa-trash cursor-pointer"></span>
+                                </div>
+                                <div ng-if="keyUsage.show=='1'" class="row">
+                                    <div style="display: block; margin-left: 20px;">
+                                        <div ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-6" style="display: inline-block; margin-top: 4px;">
+                                            <span style="min-width: 120px; display: inline-block;">{{bit.value}}</span>
+                                            <select ng-model="bit.isValue" style="margin-left: 5px;">
+                                                <option value="undefined" ng-selected="bit.isValue == 'undefined' || bit.isValue ==null">undefined</option>
+                                                <option value="true" ng-selected="bit.isValue == true || bit.isValue =='true'">true</option>
+                                                <option value="false" ng-selected="bit.isValue == false || bit.isValue =='false'">false</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Policy -->
+                            <div class="col-sm-12 scheme-information" ng-init="initPolicyList(qualif.criteria)" style="margin-bottom: 5px;">
+                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.policySetList}"></span>
+                                <span ng-click="addPolicyList(qualif.criteria.policyList)" style="float: right; color: #337ab7; margin-right: -10px" class="fa fa-plus cursor-pointer"
+                                    tooltip-placement="right" tooltip="Add Policy List"></span>
+                            </div>
+                            <div style="margin-left: 20px; margin-bottom: 5px;">
+                                <div ng-repeat="policyList in qualif.criteria.policyList">
+                                    <div class="scheme-information" class="row" ng-init="policyList.show='0'">
+                                        <div class="row col-sm-10" style="padding-bottom:5px;">
+                                            <div class="col-sm-2 scheme-information">
+                                                <span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                                <span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.policySet}"></span>
+                                            </div>
+                                        </div>
+                                        <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_additionnalServiceInformation_qualifiers_policySetList}}"
+                                            confirmed="deleteTab(qualif.criteria.policyList,policyList)" tooltip="Delete PolicySet" tooltip-placement="right" style="margin-left: 5px; float: right"
+                                            class="fa fa-trash cursor-pointer"></span>
+                                        <span ng-click="addPolicyIdentifier(policyList.policyBit)" style="color: #337ab7; float: right;" class="fa fa-plus cursor-pointer" tooltip-placement="right"
+                                            tooltip="Add Policy Identifier"></span>
+                                    </div>
+                                    <div ng-if="policyList.show=='1'" class="row">
+                                        <div ng-repeat="policyIdentifier in policyList.policyBit" ng-init="initShow(policyIdentifier.show)">
+                                            <!-- Identifier -->
+                                            <div class="row col-sm-10">
+                                                <div class="col-sm-2 text-right">
+                                                    <span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                                    <span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                                    <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input ng-model="policyIdentifier.identifierValue" style="width: 75%;" /> <select ng-model="policyIdentifier.identifierType" style="width: 19.2%;">
+                                                        <option value=""></option>
+                                                        <option ng-repeat="obj in identifierType" ng-value="obj.label" ng-selected="policyIdentifier.identifierType == obj.label">{{obj.label}}</option>
+                                                    </select>
+                                                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_policyIdentifier}}" confirmed="deleteTab(policyList.policyBit,policyIdentifier)"
+                                                        tooltip="Delete Identifier" tooltip-placement="right" style="margin-left: 6px;" class="fa fa-trash cursor-pointer"></span>
+                                                </div>
+                                            </div>
+                                            <div ng-if="policyIdentifier.show=='1'">
+                                                <!-- Description -->
+                                                <div class="row col-sm-10">
+                                                    <div class="col-sm-2 text-right">
+                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <input ng-model="policyIdentifier.description" style="width: 95%;" />
+                                                    </div>
+                                                </div>
+                                                <!-- Documentation -->
+                                                <div class="row col-sm-10">
+                                                    <div class="col-sm-2 text-right">
+                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
+                                                    </div>
+                                                    <div class="col-sm-10">
+                                                        <input ng-model="policyIdentifier.documentationReferences[0]" style="width: 95%;" />
+                                                        <span ng-click="addTableString(policyIdentifier.documentationReferences)" style="float: right; color: #337ab7; margin-right: 3px;"
+                                                            class="fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add Documentation References"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="row" ng-repeat="doc in policyIdentifier.documentationReferences track by $index" ng-hide="$first">
+                                                    <div class="row col-sm-10">
+                                                        <div class="col-sm-2"></div>
+                                                        <div class="col-sm-10">
+                                                            <input ng-model="policyIdentifier.documentationReferences[$index]" style="width: 95%;" />
+                                                            <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_documentation_reference}}"
+                                                                confirmed="deleteTab(policyIdentifier.documentationReferences,policyIdentifier.documentationReferences[$index])" tooltip="Delete Documentation References"
+                                                                tooltip-placement="right" style="margin-left: 10px;" class="fa fa-trash cursor-pointer"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Other Criteria -->
+                            <div style="margin-bottom: 5px;">
+                                <div class="row">
+                                    <div class="col-sm-12 scheme-information" ng-init="qualif.criteria.otherList = initOtherList(qualif.criteria.otherList)">
+                                        <span th:text="#{extension.other}"></span>
+                                        <div class="dropdown" style="display: inline; float: right; margin-right: -10px; color: #337ab7;">
+                                            <span class="fa fa-plus dropdown-toggle cursor-pointer " type="button" data-toggle="dropdown" tooltip-placement="right" tooltip="Add"></span>
+                                            <ul class="dropdown-menu">
+                                                <li><a ng-click="addTable(qualif.criteria.otherList.certDnaList)" th:text="#{extension.certDNA}" class="cursor-pointer"></a></li>
+                                                <li><a ng-click="addTable(qualif.criteria.otherList.extendedKeyUsageList)" th:text="#{extension.extendedKeyUsage}" class="cursor-pointer"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CertDNA -->
+                                <div class="row" ng-if="qualif.criteria.otherList.certDnaList!=null && qualif.criteria.otherList.certDnaList.length>0">
+                                    <div style="margin-left: 20px;">
+                                        <div class="col-sm-2 scheme-information">
+                                            <span th:text="#{extension.certDNA}"></span>
+                                        </div>
+                                        <div class="col-sm-10" ng-if="qualif.criteria.otherList.certDnaList[0]!=null">
+                                            <div style="display: block; margin-bottom: 10px;" ng-repeat="certDna in qualif.criteria.otherList.certDnaList">
+                                                <input ng-model="certDna.identifierValue" class="col-sm-11" />
+                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_certDNA}}" confirmed="deleteTab(qualif.criteria.otherList.certDnaList,certDna)"
+                                                    tooltip="Delete Cert DNA" tooltip-placement="right" style="margin-left: 10px;" class="fa fa-trash cursor-pointer"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Extended KeyUsage -->
+                                <div class="row" ng-if="qualif.criteria.otherList.extendedKeyUsageList!=null && qualif.criteria.otherList.extendedKeyUsageList.length>0">
+                                    <div style="margin-left: 20px; margin-top: 10px;">
+                                        <div class="col-sm-2 scheme-information">
+                                            <span th:text="#{extension.extendedKeyUsage}"></span>
+                                        </div>
+                                        <div class="col-sm-10" ng-if="qualif.criteria.otherList.extendedKeyUsageList[0]!=null">
+                                            <div style="display: block; margin-bottom: 10px;" ng-repeat="keyUsage in qualif.criteria.otherList.extendedKeyUsageList">
+                                                <input ng-model="keyUsage.identifierValue" class="col-sm-11" />
+                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_extendedKeyUsage}}"
+                                                    confirmed="deleteTab(qualif.criteria.otherList.extendedKeyUsageList,keyUsage)" tooltip="Delete E. Key Usage" tooltip-placement="right"
+                                                    style="margin-left: 10px;" class="fa fa-trash cursor-pointer"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!------ Criteria List -------->
+                            <div class="row">
+                                <div class="col-sm-12 scheme-information">
+                                    <span th:text="#{extension.additionnalServiceInformation.criteriaList}"></span>
+                                    <span ng-click="addCriteria(qualif.criteria)" style="float: right; color: #337ab7; margin-right: -10px;" class="fa fa-plus cursor-pointer" tooltip-placement="right"
+                                        tooltip="Add Criteria list"></span>
+                                </div>
+                            </div>
+                            <div ng-hide="tableVisibility(qualif.criteria.criteriaList)">
+                                <div ng-repeat="criteriaList in qualif.criteria.criteriaList">
+                                    <!-- Criteria -->
+                                    <div style="margin-top: 5px; margin-left: 20px;">
+                                        <!-- Asserts -->
+                                        <div class="row">
+                                            <div class="col-sm-2 scheme-information" ng-init="criteriaList.show='0'">
+                                                <span ng-if="criteriaList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="criteriaList.show='1'"></span>
+                                                <span ng-if="criteriaList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="criteriaList.show='0'"></span>
+                                                <span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
+                                                <select ng-model="criteriaList.asserts" style="height: 20px !important;">
+                                                    <option value="all" ng-selected="criteriaList.asserts=='all'">all</option>
+                                                    <option value="atLeastOne" ng-selected="criteriaList.asserts=='atLeastOne'">atLeastOne</option>
+                                                    <option value="none" ng-selected="criteriaList.asserts=='none'">none</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-1" style="padding-right: 0;">
+                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_additionnalServiceInformation_criteria}}"
+                                                    confirmed="deleteTab(qualif.criteria.criteriaList,criteriaList)" tooltip="Delete Criteria" tooltip-placement="right" style="margin-left: 35px;"
+                                                    class="fa fa-trash cursor-pointer"></span>
+                                            </div>
+                                        </div>
+                                        <div ng-if="criteriaList.show=='1'" class="isOpenBorder">
+                                            <div class="container-fluid isOpenTopBorder">
+                                                <!-- Description -->
+                                                <div class="row">
+                                                    <div class="col-sm-2 scheme-information">
+                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
+                                                    </div>
+                                                    <div class="col-sm-10" style="padding-left: 2">
+                                                        <input ng-model="criteriaList.description" style="width: 95%;" />
+                                                    </div>
+                                                </div>
+                                                <!-- Key Usage -->
+                                                <div class="col-sm-12 scheme-information" style="margin-bottom: 5px; margin-top: 5px;">
+                                                    <span th:text="#{extension.additionnalServiceInformation.qualifiers.keyUsageList}"></span>
+                                                    <span ng-click="addKeyUsageList(criteriaList)" style="float: right; color: #337ab7; margin-right: -10px" class="fa fa-plus cursor-pointer"
+                                                        tooltip-placement="right" tooltip="Add Key Usage"></span>
+                                                </div>
+                                                <div class="row">
+                                                    <div style="margin-left: 20px; margin-bottom: 5px;">
+                                                        <div ng-repeat="keyUsageList in criteriaList.keyUsage">
+                                                            <div class="scheme-information" class="row" ng-init="keyUsage.show='0'">
+                                                                <div class="row col-sm-10" style="padding-bottom:5px;">
+                                                                    <div class="col-sm-2 scheme-information">
+                                                                        <span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                                                        <span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                                                        <span th:text="#{digitalIdentification.keyUsage}"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':digitalIdentification_keyUsage}}"
+                                                                    confirmed="deleteTab(criteriaList.keyUsage,keyUsageList)" tooltip="Delete Key Usage" tooltip-placement="right"
+                                                                    style="margin-left: 5px; float: right" class="fa fa-trash cursor-pointer"></span>
+                                                            </div>
+                                                            <div ng-if="keyUsage.show=='1'" class="row">
+                                                                <div style="display: block; margin-left: 20px;">
+                                                                    <div ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-6" style="display: inline-block; margin-top: 5px;">
+                                                                        <span style="min-width: 120px; display: inline-block;">{{bit.value}}</span>
+                                                                        <select ng-model="bit.isValue" style="margin-left: 5px;">
+                                                                            <option value="undefined" ng-selected="bit.isValue == 'undefined' || bit.isValue ==null">undefined</option>
+                                                                            <option value="true" ng-selected="bit.isValue == true || bit.isValue =='true'">true</option>
+                                                                            <option value="false" ng-selected="bit.isValue == false || bit.isValue =='false'">false</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Policy -->
+                                                <div class="col-sm-12 scheme-information" style="margin-bottom: 5px;" ng-init="initPolicyList(criteriaList)">
+                                                    <span th:text="#{extension.additionnalServiceInformation.qualifiers.policySetList}"></span>
+                                                    <span ng-click="addPolicyList(criteriaList.policyList)" style="float: right; color: #337ab7; margin-right: -10px" class="fa fa-plus cursor-pointer"
+                                                        tooltip-placement="right" tooltip="Add Policy List"></span>
+                                                </div>
+                                                <div class="row">
+                                                    <div style="margin-left: 20px; margin-bottom: 5px;">
+                                                        <div ng-repeat="policyList in criteriaList.policyList">
+                                                            <div class="scheme-information" class="row" ng-init="policyList.show='0'">
+                                                                <div class="row col-sm-10" style="padding-bottom:5px;">
+                                                                    <div class="col-sm-2 scheme-information">
+                                                                        <span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                                                        <span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policySet}"></span>
+                                                                    </div>
+                                                                </div>
+                                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_policyList}}" confirmed="deleteTab(criteriaList.policyList,policyList)"
+                                                                    tooltip="Delete Policy List" tooltip-placement="right" style="margin-left: 5px; float: right" class="fa fa-trash cursor-pointer"></span>
+                                                                <span ng-click="addPolicyIdentifier(policyList.policyBit)" style="color: #337ab7; float: right;" class="fa fa-plus cursor-pointer"
+                                                                    tooltip-placement="right" tooltip="Add Policy Identifier"></span>
+                                                            </div>
+                                                            <div ng-if="policyList.show=='1'" class="row">
+                                                                <div ng-repeat="policyIdentifier in policyList.policyBit" ng-init="initShow(policyIdentifier.show)">
+                                                                    <!-- Identifier -->
+                                                                    <div class="row col-sm-10">
+                                                                        <div class="col-sm-2 text-right">
+                                                                            <span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'"
+                                                                                class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                                                                            <span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'"
+                                                                                class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+                                                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+                                                                        </div>
+                                                                        <div class="col-sm-10">
+                                                                            <input ng-model="policyIdentifier.identifierValue" style="width: 75%;" /> <select
+                                                                                ng-model="policyIdentifier.identifierType" style="width: 20%;">
+                                                                                <option value=""></option>
+                                                                                <option ng-repeat="obj in identifierType" ng-value="obj.label"
+                                                                                    ng-selected="policyIdentifier.identifierType == obj.label">{{obj.label}}</option>
+                                                                            </select>
+                                                                            <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_policyIdentifier}}"
+                                                                                confirmed="deleteTab(policyList.policyBit,policyIdentifier)" tooltip="Delete Policy Identifier"
+                                                                                tooltip-placement="right" style="margin-left: 6px;" class="fa fa-trash cursor-pointer"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div ng-if="policyIdentifier.show=='1'">
+                                                                        <!-- Description -->
+                                                                        <div class="row col-sm-10">
+                                                                            <div class="col-sm-2 text-right">
+                                                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
+                                                                            </div>
+                                                                            <div class="col-sm-10">
+                                                                                <input ng-model="policyIdentifier.description" style="width: 95%;" />
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- Documentation -->
+                                                                        <div class="row col-sm-10">
+                                                                            <div class="col-sm-2 text-right">
+                                                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
+                                                                            </div>
+                                                                            <div class="col-sm-10">
+                                                                                <input ng-model="policyIdentifier.documentationReferences[0]" style="width: 95%;" />
+                                                                                <span ng-click="addTableString(policyIdentifier.documentationReferences)"
+                                                                                    style="float: right; color: #337ab7; margin-right: 3px;" class="fa fa-plus cursor-pointer" tooltip-placement="right"
+                                                                                    tooltip="Add Documentation References"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row" ng-repeat="doc in policyIdentifier.documentationReferences track by $index" ng-hide="$first">
+                                                                            <div class="row col-sm-10">
+                                                                                <div class="col-sm-2"></div>
+                                                                                <div class="col-sm-10">
+                                                                                    <input ng-model="policyIdentifier.documentationReferences[$index]" style="width: 95%;" />
+                                                                                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_documentation_reference}}"
+                                                                                        confirmed="deleteTab(policyIdentifier.documentationReferences,policyIdentifier.documentationReferences[$index])"
+                                                                                        tooltip="Delete Documentation References" tooltip-placement="right" style="margin-left: 10px;"
+                                                                                        class="fa fa-trash cursor-pointer"></span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Other Criteria -->
+                                                <div style="margin-top: 0px;" class="row">
+                                                    <div class="col-sm-12 scheme-information" ng-init="criteriaList.otherList = initOtherList(criteriaList.otherList)">
+                                                        <span th:text="#{extension.other}">Other</span>
+                                                        <div class="dropdown" style="display: inline; float: right; margin-right: -10px; color: #337ab7;">
+                                                            <span class="fa fa-plus dropdown-toggle cursor-pointer " type="button" data-toggle="dropdown" tooltip-placement="right" tooltip="Add"></span>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a ng-click="addTable(criteriaList.otherList.certDnaList)" th:text="#{extension.certDNA}" class="cursor-pointer"></a></li>
+                                                                <li><a ng-click="addTable(criteriaList.otherList.extendedKeyUsageList)" th:text="#{extension.extendedKeyUsage}"
+                                                                        class="cursor-pointer"></a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- CertDNA -->
+                                                <div class="row" ng-if="criteriaList.otherList.certDnaList!=null && criteriaList.otherList.certDnaList.length>0">
+                                                    <div style="margin-left: 20px;">
+                                                        <div class="col-sm-2 scheme-information">
+                                                            <span th:text="#{extension.certDNA}"></span>
+                                                        </div>
+                                                        <div class="col-sm-10" ng-if="criteriaList.otherList.certDnaList[0]!=null">
+                                                            <div style="display: block; margin-bottom: 10px;" ng-repeat="certDna in criteriaList.otherList.certDnaList">
+                                                                <input ng-model="certDna.identifierValue" class="col-sm-11" />
+                                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_certDNA}}"
+                                                                    confirmed="deleteTab(criteriaList.otherList.certDnaList,certDna)" tooltip="Delete Cert DNA" tooltip-placement="right"
+                                                                    style="margin-left: 10px;" class="fa fa-trash cursor-pointer"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Extended KeyUsage -->
+                                                <div class="row" ng-if="criteriaList.otherList.extendedKeyUsageList!=null && criteriaList.otherList.extendedKeyUsageList.length>0">
+                                                    <div style="margin-left: 20px; margin-top: 10px;">
+                                                        <div class="col-sm-2 scheme-information">
+                                                            <span th:text="#{extension.extendedKeyUsage}"></span>
+                                                        </div>
+                                                        <div class="col-sm-10" ng-if="criteriaList.otherList.extendedKeyUsageList[0]!=null">
+                                                            <div style="display: block; margin-bottom: 10px;" ng-repeat="keyUsage in criteriaList.otherList.extendedKeyUsageList">
+                                                                <input ng-model="keyUsage.identifierValue" class="col-sm-11" />
+                                                                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':digitalIdentification_extendedKeyUsage}}"
+                                                                    confirmed="deleteTab(criteriaList.otherList.extendedKeyUsageList,keyUsage)" tooltip="Delete E. Key Usage" tooltip-placement="right"
+                                                                    style="margin-left: 10px;" class="fa fa-trash cursor-pointer"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

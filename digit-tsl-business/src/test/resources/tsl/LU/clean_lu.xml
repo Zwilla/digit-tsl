@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" TSLTag="http://uri.etsi.org/19612/TSLTag" Id="TrustServiceStatusList-1">
+	<SchemeInformation>
+		<TSLVersionIdentifier>5</TSLVersionIdentifier>
+		<TSLSequenceNumber>27</TSLSequenceNumber>
+		<TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+		<SchemeOperatorName>
+			<Name xml:lang="en">ILNAS</Name>
+		</SchemeOperatorName>
+		<SchemeOperatorAddress>
+			<PostalAddresses>
+				<PostalAddress xml:lang="en">
+					<StreetAddress>1, Avenue du Swing</StreetAddress>
+					<Locality>Belvaux</Locality>
+					<PostalCode>L-4367</PostalCode>
+					<CountryName>LU</CountryName>
+				</PostalAddress>
+			</PostalAddresses>
+			<ElectronicAddress>
+				<URI xml:lang="en">mailto:confiance-numerique@ilnas.etat.lu</URI>
+				<URI xml:lang="fr">mailto:confiance-numerique@ilnas.etat.lu</URI>
+				<URI xml:lang="de">mailto:confiance-numerique@ilnas.etat.lu</URI>
+				<URI xml:lang="fr">https://portail-qualite.public.lu/fr/index.html</URI>
+				<URI xml:lang="en">https://portail-qualite.public.lu/fr/confiance-numerique/prestataires-services-confiance/liste-confiance/scheme-information/index.html</URI>
+			</ElectronicAddress>
+		</SchemeOperatorAddress>
+		<SchemeName>
+			<Name xml:lang="en">LU:Trusted list including information related to the qualified trust service providers which are supervised by the issuing Member State, together with information related to the qualified trust services provided by them, in accordance with the relevant provisions laid down in Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC.</Name>
+		</SchemeName>
+		<SchemeInformationURI>
+			<URI xml:lang="en">https://portail-qualite.public.lu/fr/confiance-numerique/prestataires-services-confiance/liste-confiance/scheme-information/index.html</URI>
+		</SchemeInformationURI>
+		<StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+		<SchemeTypeCommunityRules>
+			<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+		</SchemeTypeCommunityRules>
+		<SchemeTerritory>LU</SchemeTerritory>
+		<PolicyOrLegalNotice>
+			<TSLLegalNotice xml:lang="en">The applicable legal framework for the present trusted list is Regulation (EU) No 910/2014 of the European Parliament and of the Council of 23 July 2014 on electronic identification and trust services for electronic transactions in the internal market and repealing Directive 1999/93/EC.</TSLLegalNotice>
+		</PolicyOrLegalNotice>
+		<HistoricalInformationPeriod>65535</HistoricalInformationPeriod>
+		<PointersToOtherTSL>
+			<OtherTSLPointer>
+				<ServiceDigitalIdentities>
+					<ServiceDigitalIdentity>
+						<DigitalId>
+							<X509Certificate>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</X509Certificate>
+						</DigitalId>
+					</ServiceDigitalIdentity>
+				</ServiceDigitalIdentities>
+				<TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
+				<AdditionalInformation>
+					<OtherInformation>
+						<TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+					</OtherInformation>
+					<OtherInformation>
+						<SchemeTerritory>EU</SchemeTerritory>
+					</OtherInformation>
+					<OtherInformation>
+						<ns3:MimeType>application/vnd.etsi.tsl+xml</ns3:MimeType>
+					</OtherInformation>
+					<OtherInformation>
+						<SchemeOperatorName>
+							<Name xml:lang="en">European Commission</Name>
+						</SchemeOperatorName>
+					</OtherInformation>
+					<OtherInformation>
+						<SchemeTypeCommunityRules>
+							<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+						</SchemeTypeCommunityRules>
+					</OtherInformation>
+				</AdditionalInformation>
+			</OtherTSLPointer>
+		</PointersToOtherTSL>
+		<ListIssueDateTime>2016-10-24T01:00:00Z</ListIssueDateTime>
+		<NextUpdate>
+			<dateTime>2017-04-24T00:00:00Z</dateTime>
+		</NextUpdate>
+		<DistributionPoints>
+			<URI>https://portail-qualite.public.lu/fr/publications/confiance-numerique/liste-confiance-nationale/tsl-xml/TSL-XML.xml</URI>
+		</DistributionPoints>
+	</SchemeInformation>
+	<TrustServiceProviderList>
+		<TrustServiceProvider>
+			<TSPInformation>
+				<TSPName>
+					<Name xml:lang="en">LuxTrust S.A.</Name>
+				</TSPName>
+				<TSPTradeName>
+					<Name xml:lang="en">VATLU-20976985</Name>
+				</TSPTradeName>
+				<TSPAddress>
+					<PostalAddresses>
+						<PostalAddress xml:lang="en">
+							<StreetAddress>IVY Building - 13-15 Parc d'Activités</StreetAddress>
+							<Locality>Capellen</Locality>
+							<PostalCode>L-8308</PostalCode>
+							<CountryName>LU</CountryName>
+						</PostalAddress>
+					</PostalAddresses>
+					<ElectronicAddress>
+						<URI xml:lang="en">mailto:info@luxtrust.lu</URI>
+					</ElectronicAddress>
+				</TSPAddress>
+				<TSPInformationURI>
+					<URI xml:lang="en">https://www.luxtrust.lu/en/repository</URI>
+				</TSPInformationURI>
+				<TSPInformationExtensions>
+					<Extension Critical="true">
+						<ns4:ObjectIdentifier>
+							<ns4:Identifier>extension</ns4:Identifier>
+						</ns4:ObjectIdentifier>
+					</Extension>
+				</TSPInformationExtensions>
+			</TSPInformation>
+			<TSPServices>
+				<TSPService>
+					<ServiceInformation>
+						<ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+						<ServiceName>
+							<Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
+						</ServiceName>
+						<ServiceDigitalIdentity>
+							<DigitalId>
+								<X509Certificate>MIID8DCCAtigAwIBAgICA+swDQYJKoZIhvcNAQEFBQAwQDELMAkGA1UEBhMCTFUxFjAUBgNVBAoTDUx1eFRydXN0IHMuYS4xGTAXBgNVBAMTEEx1eFRydXN0IHJvb3QgQ0EwHhcNMDgwNjA1MDkyNTI0WhcNMTYxMDE4MTA0MDM0WjBFMQswCQYDVQQGEwJMVTEWMBQGA1UEChMNTHV4VHJ1c3QgUy5BLjEeMBwGA1UEAxMVTHV4VHJ1c3QgUXVhbGlmaWVkIENBMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAybFXzA+8RNnvlCd+sZ8BnH6WO3LmaLi419Ygd9VBYcIwLmMx9KgAKF3u4B87Hee5NL4Xvhm/B9DuDUH5OGZ3P2Dwf7putVEvATvW8jzYq6CzarUthzb9ux+KTdTT+d4y6tkgVggy9DBe+bz635oZm2PPQT9kzoR48RBN730KA/MJIa0Sa7ZDphL37WHSA4/TWh9F1/LBRVGC0F4Mg1hU/u+kovF5mTuUK+ncU7+FS0cQRhAD+C4WfLI/WuzuE+T6ZuZ6Iqg6+vqgf6iKwL6iVZmwKkJPvV3+3Wgy3zq5tpDvsIGj4kXd1riQGKsEeDfN8y71DG3OdBqF1Yd7ue7ziwIDAQABo4HuMIHrMA8GA1UdEwQIMAYBAf8CAQAwQgYDVR0gBDswOTA3BggrgSsBAQEBADArMCkGCCsGAQUFBwIBFh1odHRwOi8vcmVwb3NpdG9yeS5sdXh0cnVzdC5sdTARBglghkgBhvhCAQEEBAMCAAcwDgYDVR0PAQH/BAQDAgHGMB8GA1UdIwQYMBaAFN2K1zDx+ZFx6UdwDCXlrKGN34wlMDEGA1UdHwQqMCgwJqAkoCKGIGh0dHA6Ly9jcmwubHV4dHJ1c3QubHUvTFRSQ0EuY3JsMB0GA1UdDgQWBBSNkKMH3RoTd5lMkqtNQ94/zSlkBTANBgkqhkiG9w0BAQUFAAOCAQEAapxOpigXTejGgHBWMAwDBMdZQHpPyoCmw32OIj1qqezO5nDnjG5gfJni/rp5IFMpV//xmCkjqyO92PyYbcHNSUpP1SjCkyn10e6ipmzpXK0MbgFvIPglAgA5dXxTNf0Q77eWu36fz5VKQEmJzqoXTccq4nuLL9rLZ88YUlczMaWscETIZCB4kecKVyqHf4+T0JucZqX7zzfpiVyTr2M+OGl9qiOmKwBGkzseJt+MgYWrskJADKDZMr4bQxkxnhzCSQoraX7DugxM0fH47MitCc74uZrWIJ6qQjCLBtKzxUGy7B3pYOjLlThr7S64cd12yuR+NjHAFZ2DTXwxKg/FQg==</X509Certificate>
+							</DigitalId>
+							<DigitalId>
+								<X509SubjectName>CN=LuxTrust Qualified CA,O=LuxTrust S.A.,C=LU</X509SubjectName>
+							</DigitalId>
+						</ServiceDigitalIdentity>
+						<ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+						<StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
+						<ServiceInformationExtensions>
+							<Extension Critical="true">
+								<AdditionalServiceInformation>
+									<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+								</AdditionalServiceInformation>
+							</Extension>
+							<Extension Critical="true">
+								<ns3:TakenOverBy>
+									<ns3:URI xml:lang="en">TakenOverByExtension</ns3:URI>
+									<ns3:TSPName>
+										<Name>NAME_TakenOverByExtension</Name>
+									</ns3:TSPName>
+									<SchemeOperatorName>
+										<Name xml:lang="en">OPERATOR_NAME_TakenOverByExtension</Name>
+									</SchemeOperatorName>
+									<SchemeTerritory>LU</SchemeTerritory>
+								</ns3:TakenOverBy>
+							</Extension>
+							<Extension Critical="true">
+								<ns5:Qualifications>
+									<ns5:QualificationElement>
+										<ns5:Qualifiers>
+											<ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+										</ns5:Qualifiers>
+										<ns5:CriteriaList assert="none">
+											<ns5:Description>QualificationExtension</ns5:Description>
+										</ns5:CriteriaList>
+									</ns5:QualificationElement>
+								</ns5:Qualifications>
+							</Extension>
+							<Extension Critical="false">
+								<ExpiredCertsRevocationInfo>2016-10-04T22:00:00Z</ExpiredCertsRevocationInfo>
+							</Extension>
+						</ServiceInformationExtensions>
+					</ServiceInformation>
+					<ServiceHistory>
+						<ServiceHistoryInstance>
+							<ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+							<ServiceName>
+								<Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
+							</ServiceName>
+							<ServiceDigitalIdentity>
+								<DigitalId>
+									<X509SubjectName>CN=LuxTrust Qualified CA, O=LuxTrust S.A., C=LU</X509SubjectName>
+								</DigitalId>
+								<DigitalId>
+									<X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
+								</DigitalId>
+							</ServiceDigitalIdentity>
+							<ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+							<StatusStartingTime>2013-10-13T00:00:00Z</StatusStartingTime>
+						</ServiceHistoryInstance>
+					</ServiceHistory>
+				</TSPService>
+			</TSPServices>
+		</TrustServiceProvider>
+	</TrustServiceProviderList>
+</TrustServiceStatusList>

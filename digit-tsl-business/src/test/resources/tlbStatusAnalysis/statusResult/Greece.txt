@@ -1,0 +1,72 @@
+Greece 
+
+    HELLENIC PUBLIC ADMINISTRATION CERTIFICATION AUTHORITY 
+
+        Hellenic Public Administration CA - HPARCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Hellenic Public Administration Root CA (HPARCA) – Certification Services for Citizens - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        HELLENIC PUBLIC ADMINISTRATION CERTIFICATION SERVICES - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        HPARCA Services for Administration Bodies (Legal Entities) before 1/8/2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+        HPARCA Services for Administration Bodies (Legal Entities) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Cert for eSig; 
+
+    ADACOM ADVANCED INTERNET APPLICATIONS S.A. 
+
+        ADACOM Qualified Certificate Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ADACOM Qualified Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    ATHENS STOCK EXCHANGE S.A. 
+
+        ASYK Qualified Certificates CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ATHEX Qualified Certificates CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ATHEX Qualified Certificates CA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    BYTE Computer S.A. 
+
+        BYTE ePrescription Certification Authority 001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BYTE General Certification Authority 001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    GREEK ACADEMIC NETWORK 
+
+        Hellenic Academic and Research Institutions RootCA 2011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Hellenic Academic and Research Institutions RootCA 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Hellenic Academic and Research Institutions ECC RootCA 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+

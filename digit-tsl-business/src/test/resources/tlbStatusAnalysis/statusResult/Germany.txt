@@ -1,0 +1,2824 @@
+Germany 
+
+    Bundesagentur fuer Arbeit 
+
+        BA-QC-TSP-10:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-12:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-27:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-28:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-29:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-2:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-30:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-31:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-32:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-33:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-34:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-35:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-36:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-37:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-38:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-39:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-3:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-40:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-41:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-42:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-43:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-44:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-45:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-46:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-47:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-48:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-49:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-4:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-50:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-51:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-52:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-53:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-54:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-56:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-58:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-5:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-6:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-7:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-8:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-TSP-9:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BA-QC-Wurzel-CA-1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BA-QC-Wurzel-CA-2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Bundesnetzagentur 
+
+        10R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        11R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        12R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        13R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        14R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        14R-TSL 1:PN - http://uri.etsi.org/TrstSvd/Svctype/TLIssuer 
+
+            non Regulatory; 
+
+        14R-TSL 2:PN - http://uri.etsi.org/TrstSvd/Svctype/TLIssuer 
+
+            non Regulatory; 
+
+        15R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        3R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        4R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        5R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        6R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        7R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        8R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+        9R-CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+            non Regulatory; 
+
+    Bundesnotarkammer 
+
+        BNotK CA 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK CA 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK CA 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK CA 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK CA 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK CA 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        BNotK TSS 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BNotK TSS 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BNotK TSS 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BNotK TSS 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BNotK TSS 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        BNotK TSS 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        CA BNotK 10:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 11:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 12:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 13:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 14:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 3:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 4:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA BNotK 9:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA der ZS der BNotK 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA der ZS der BNotK 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TSS BNotK 22:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS BNotK 23:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS BNotK 24:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS BNotK 25:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS BNotK 26:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    D-TRUST GmbH 
+
+        ChamberSign Qualified CA 1 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 1 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 1 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 2 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 2 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 3 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 3 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ChamberSign Qualified CA 4 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 1 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 1 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 1 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 10 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 11 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 12 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 2 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 2 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 2 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 3 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 3 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 4 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 6 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 7 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified CA 9 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 1 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 1 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 1 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 2 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 2 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 2 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 3 2008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 3 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 3 2014:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST Qualified Root CA 4 2012:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2012 CA 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2012 CA 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2012 CA 7 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2012 CA 8 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2012 TSS 19 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2012 TSS 20 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2012 TSS 21 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2012 TSS 22 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2012 TSS 23 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 CA 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 CA 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 CA 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 CA 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 CA 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 CA 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akr 2012 TSS 24 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akr 2012 TSS 25 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akr 2012 TSS 26 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akr 2012 TSS 27 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akr 2012 TSS 28 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST_akkr_CA-07_2006 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akkr_CA-08_2006 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2002_CA2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2007_ca6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2008_ca1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2008_ca2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2008_ca3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2008_ca4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2012_ca1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2012_ca2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST_akr_2012_ca4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 3:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 4:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-Trust.HBA-qCA 6:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2016 TSS 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2016 TSS 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2016 CA 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2016 CA 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST akkr 2014 TSS 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 7 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 8 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 10 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 11 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 12 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 9 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST akkr 2014 TSS 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        D-TRUST qualified Signature ID card - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        D-TRUST qualified Seal ID card - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSeal; 
+
+        D-TRUST qualified EV SSL ID - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for WSA; 
+
+    DATEV eG 
+
+        CA DATEV D01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D201 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D202 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D203 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D217 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D218 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D219 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D247 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D248 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D249 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D250 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D251 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D252 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D85 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D86 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV D87 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV ZSM 01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV ZSM 02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV ZSM 03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV ZSM 04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DATEV ZSM 05 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    DGN Deutsches Gesundheitsnetz Service GmbH 
+
+        DEDGN qCA für Ärzte 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEDGN qCA für Ärzte 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 1 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 2 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 3 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 4 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 5 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 6 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 7 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        dgnservice CA 8 Type A 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DGN Zeitstempel - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Deutsche Post Com GmbH 
+
+        CA DP Com 13:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 14:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 15:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 3:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 4:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 6:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 7:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 8:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA DP Com 9:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Deutsche Post Signtrust und DMDA GmbH 
+
+        CA Signtrust 10:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 11:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 6:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 7:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 8:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        CA Signtrust 9:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TSS Signtrust 50:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 51:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 52:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 53:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 54:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 55:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 56:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 57:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 58:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS Signtrust 59:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Deutsche Rentenversicherung Westfalen 
+
+        QC 11 Mitarbeiter CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Deutsche Telekom AG 
+
+        TSYSI.HBA-qCA 4:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TSYSI.HBA-qCA 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 13:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 14:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 15:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 16:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 17 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 17:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 18 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 18:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 19 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 19:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 25:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 26:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 27:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 28:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 29:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 2:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 30:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 31:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 32:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 33:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 34:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 35:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG CA 36:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TeleSec PKS SigG TSS 32:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TeleSec PKS SigG TSS 33:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TeleSec PKS SigG TSS 34:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TeleSec PKS SigG TSS 35:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    Deutscher Sparkassen Verlag GmbH 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-05 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-06 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-07 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2008-08 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2009-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2009-02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2009-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2009-04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2009-06 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2010-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2010-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2010-04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2010-05 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2010-06 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-05 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2011-06 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2012-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2012-02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2012-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2012-04 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2013-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2013-03 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2013-05 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2014-01 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST CA fuer qualifizierte Zertifikate 2014-02 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2005-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2006-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2007-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2008-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2009-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2010-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2010-002 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2010-003 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2011-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Root CA 2012-001 - Notified Operation - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-007:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-009:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2005-010:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-007:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-009:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2006-010:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-007:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-009:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2007-010:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2008-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2009-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-007:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-008:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2010-009:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2011-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-001:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-002:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-003:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-004:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-005:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2012-006:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2015-01:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2015-02:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2015-03:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        S-TRUST Qualified Signature CA 2015-04:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Exceet Secure Solutions AG 
+
+        AuthentiDate TSA for Healthcare IT Solutions C055 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate TSA for Healthcare IT Solutions C056 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate TSA for Healthcare IT Solutions C067 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate TSA for Healthcare IT Solutions C068 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C045 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C046 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C047 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C048 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C049 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C050 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C051 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C052 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C053 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C054 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C057 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C058 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C059 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C060 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C061 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C062 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C063 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C064 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C065 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        AuthentiDate Timestamp Authority C066 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C001 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C002 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C003 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C004 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C005 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C006 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C007 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C008 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C009 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C010 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C011 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C012 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C013 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C014 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C015 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C016 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C017 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C018 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C019 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C020 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C021 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C022 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C023 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C024 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C025 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C026 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C027 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C028 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C029 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C030 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C031 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C032 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C033 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C034 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C035 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C036 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C037 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C038 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C039 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C040 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C041 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C042 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C043 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TSS AuthentiDate C044 1:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        exceet TSA 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        exceet TSA 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        exceet trustcenter OCSP1 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Cert for eSig; 
+
+    Deutsche Rentenversicherung Rheinland 
+
+        QC 13 Mitarbeiter CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Deutsche Rentenversicherung Bund 
+
+        QC 70 Mitarbeiter CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2007 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2008 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2010 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2012 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2012 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Root Certification Authority of Deutsche Rentenversicherung for Qualified Certificates 2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TCDRV_TST_641070 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641074 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641075 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_500159 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_500160 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_500161 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_627876 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_639601 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_639602 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_627877 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_639603 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_639604 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_500155 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_639600 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641076 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641077 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641078 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TCDRV_TST_641079 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    TC TrustCenter GmbH 
+
+        TC TrustCenter CA 10:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter CA 4:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter CA 5:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter CA 6:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter CA 7:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter CA 9:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        TC TrustCenter TSS 20:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        TC TrustCenter TSS 21:PN - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    medisign GmbH 
+
+        DEMDS qCA für Psychotherapeuten 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Zahnärzte 1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Zahnärzte 2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Zahnärzte 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Zahnärzte 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 7 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Ärzte 8 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-1 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-2 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-3 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-4 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-5 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MED-ZOD2-qCA-6 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 7 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DEMDS qCA für Psychotherapeuten 8 1:PN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    1&1 De-Mail GmbH 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        1&1 EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+    Mentana-Claimsoft GmbH 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Mentana EU Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+    Exceet Secure Solutions GmbH 
+
+        exceet TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    T-Systems International GmbH 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        T-Systems EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+    Telekom Deutschland GmbH 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+
+        Telekom Deutschland EU-Mail - http://uri.etsi.org/TrstSvc/Svctype/EDS/REM/Q 
+
+            QeRDS; 
+

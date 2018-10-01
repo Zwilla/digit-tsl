@@ -1,0 +1,26 @@
+<div>
+    <table class="table table-striped" ng-class="{'table-border' : options.displayBorder}">
+        <thead>
+            <tr>
+                <th ng-repeat="tr in options.thead" style="width: {{tr.size}}"><span ng-class="{'display-none' : !options.displayHeading}">{{tr.label}}</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in paginedTable[selectPage-1]">
+                <td ng-repeat="(key, value) in item" style="word-break: break-word">
+                    <div ng-if="!value.action" compile="value"></div>
+                    <div ng-if="value.action" ng-click="evalFunction(value.action)" compile="value.html"></div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div align="center" ng-if="nbPage>1">
+    <ul class="pagination cursor-pointer" style="margin: 0px; padding: 0px">
+        <li ng-click="setPage(1)" ng-class="{'disabled' : selectPage==1}"><span>&laquo; First</span></li>
+        <li ng-click="setPage(selectPage-1)" ng-class="{'disabled' : selectPage==1}"><span>&laquo;</span></li>
+        <li ng-repeat="n in pagination" ng-click="setPage(n)" ng-class="isActive(n)"><span>{{n}}</span></li>
+        <li ng-click="setPage(selectPage+1)" ng-class="{'disabled' : selectPage==nbPage}"><span>&raquo;</span></li>
+        <li ng-click="setPage(nbPage)" ng-class="{'disabled' : selectPage==nbPage}"><span>Last &raquo;</span></li>
+    </ul>
+</div>

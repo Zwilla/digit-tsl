@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="getUserInfo()">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/controllers/401ErrorController.js}"></script>
+
+</head>
+<body ng-controller="401errorController">
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+    <div class="body">
+        <main>
+        <div class="alert alert-danger alert-dismissible" style="margin-top: 15px;">
+            <div>
+                <span th:text="#{tError401}"></span>
+                <span> {{timer}} </span>
+                <span th:text="#{tSecond}"></span>
+                <div>
+                    (
+                    <a ng-href="{{url}}" target="_self" style="color: inherit;" class="uri" th:text="#{tClickHere}"></a>
+                    <span th:text="#{tRedirectBrowser}"></span>
+                    )
+
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>
+</html>

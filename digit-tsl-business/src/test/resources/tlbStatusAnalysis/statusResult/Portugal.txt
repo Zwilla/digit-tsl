@@ -1,0 +1,144 @@
+Portugal 
+
+    ECCE 
+
+        ECCE (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        ECCE 001 (CA-Qualified certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Cartão de Cidadão 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0002 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0003 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0004 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0005 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0006 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0007 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0008 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0010 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    Justica 
+
+        ECM Justica (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    ECAR 
+
+        ECAR (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+    MULTICERT - Serviços de Certificação Electrónica S.A. 
+
+        Multicert 001 (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        Multicert 002 (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+    British Telecommunications plc 
+
+        BT/DigitalSign (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DigitalSign (LRA in Portugal) - http://uri.etsi.org/TrstSvc/Svctype/RA 
+
+            non Regulatory; 
+
+    DigitalSign - Certificadora Digital 
+
+        DigitalSign Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DigitalSign TSA (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DigitalSign TSA - G2 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DigitalSign TSA - G2 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DigitalSign Qualified CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DigitalSign TSA - G3 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+
+        DigitalSign Qualified CA - G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            QCert for eSig; 
+
+        DigitalSign TSA - G4 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+            QTimestamping; 
+

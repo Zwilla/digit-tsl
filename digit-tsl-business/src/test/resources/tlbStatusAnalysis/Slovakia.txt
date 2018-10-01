@@ -1,0 +1,252 @@
+Slovakia 
+
+    National Security Authority SK 
+
+        Root Certification Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+        Root Certification Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+
+        Trusted publishing of signature policies 2 - http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority 
+
+        Trusted publishing of TL and signature policies 2 - http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority 
+
+        The Slovak National Certification Authority 2 (SNCA2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        The Slovak National Certification Authority (SNCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        Time Stamp Authority 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        Time Stamp Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        Time Stamp Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        Time Stamp Authority 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        Time Stamp Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        Time Stamp Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    Disig a.s. 
+
+        SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        CA Disig - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        CA Disig - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        CA Disig QCA3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA TSU01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA TSU02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA TSU03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP2 CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP SVK eID ACA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        OCSP CA Disig QCA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TSA TSU01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA TSU02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA TSU03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA CA Disig - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA  - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        aTSA CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    Ministry of Defence Slovak Republic 
+
+        Certification Authority Ministry of Defence Slovak Republic (CAMOSR) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        Certification Authority Ministry of Defence Slovak Republic 2 (CAMOSR2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        TSA vfp - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA ext - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        TSA mil - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    The First Slovak Certification Authority 
+
+        PSCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        PSCA2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        PSCA3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        PSCA (TSA2007) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        PSCA (TSA2008) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        PSCA (TSA2010) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        PSCA (TSA2012) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    I. Certification Authority (I.CA) 
+
+         I.CA - Qualified Certification Authority, 09/2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        I.CA Qualified CA/RSA 07/2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        I.CA - Time Stamping Authority, TSS/TSU 1, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        I.CA - Time Stamping Authority, TSS/TSU 2, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        I.CA - Time Stamping Authority, TSS/TSU 3, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        I.CA - Time Stamping Authority, TSS/TSU 4, 11/2013 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+

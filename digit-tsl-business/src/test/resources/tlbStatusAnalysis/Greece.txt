@@ -1,0 +1,78 @@
+Greece 
+
+    HELLENIC PUBLIC ADMINISTRATION CERTIFICATION AUTHORITY 
+
+        Hellenic Public Administration CA - HPARCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Hellenic Public Administration Root CA (HPARCA) – Certification Services for Citizens - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HELLENIC PUBLIC ADMINISTRATION CERTIFICATION SERVICES - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HPARCA Services for Administration Bodies (Legal Entities) before 1/8/2013 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        HPARCA Services for Administration Bodies (Legal Entities) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    ADACOM ADVANCED INTERNET APPLICATIONS S.A. 
+
+        ADACOM Qualified Certificate Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ADACOM Qualified Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    ATHENS STOCK EXCHANGE S.A. 
+
+        ASYK Qualified Certificates CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ATHEX Qualified Certificates CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ATHEX Qualified Certificates CA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    BYTE Computer S.A. 
+
+        BYTE ePrescription Certification Authority 001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        BYTE General Certification Authority 001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    GREEK ACADEMIC NETWORK 
+
+        Hellenic Academic and Research Institutions RootCA 2011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Hellenic Academic and Research Institutions RootCA 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        Hellenic Academic and Research Institutions ECC RootCA 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+

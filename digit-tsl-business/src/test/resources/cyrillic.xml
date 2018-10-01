@@ -1,0 +1,159 @@
+<root memberState="BG" mpPointer="http://crc.bg/files/_bg/TSL-CRC-BG-signed.xml" hrPointer="http://crc.bg/files/_bg/TSL-CRC-BG-signed.pdf" dateOfSubmission="15-12-2015">
+  <schemeOperatorNames class="linked-hash-map">
+    <schemeOperatorName>
+      <language>en</language>
+      <value>Communications Regulation Commission</value>
+    </schemeOperatorName>
+    <schemeOperatorName>
+      <language>bg</language>
+      <value>Комисия за регулиране на съобщенията</value>
+    </schemeOperatorName>
+  </schemeOperatorNames>
+  <certificate>Certificate 1 : Веселин Божков Божков 2012-11-15 - 2017-11-15 12:28:05</certificate>
+  <certificate>Certificate 2 : Ирина Станчева Романска 2014-09-04 - 2019-09-04 12:01:14</certificate>
+  <changes/>
+  <new-hrPointer>&lt;OtherTSLPointer xmlns=&quot;http://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;http://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;http://uri.etsi.org/02231/v2/add
+itionaltypes#&quot; xmlns:ns5=&quot;http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;http://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
+  &lt;ServiceDigitalIdentities&gt;&#xd;
+    &lt;ServiceDigitalIdentity&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509Certificate&gt;MIIFUTCCBDmgAwIBAgIIM7DFMDyB1XwwDQYJKoZIhvcNAQEFBQAwgYcxgYQwCQYDVQQGDAJCRzAVBgNVBAMMDkNSQyBNZW1iZXJzIENBMBUGA1UECwwOQ1JDIE1lbWJlcnMgQ0EwHAYKCZImiZPyLGQBGRYOY3JjLW1lbW
+JlcnMtY2EwKwYDVQQKDCRDb21tdW5pY2F0aW9ucyBSZWd1bGF0aW9uIENvbW1pc3Npb24wHhcNMTIxMTE1MTEyODA1WhcNMTcxMTE1MTEyODA1WjCB6DGB5TAJBgNVBAYMAkJHMAsGA1UEEQwEMTAwMDAMBgNVBAcMBVNvZmlhMA8GA1UECwwIQ2hhaXJtY
+W4wEgYDVQQJDAs2IEd1cmtvIHN0cjAcBgkqhkiG9w0BCQEWD3Zib3poa292QGNyYy5iZzAcBgoJkiaJk/IsZAEZFg5jcmMtbWVtYmVycy1jYTArBgNVBAoMJENvbW11bmljYXRpb25zIFJlZ3VsYXRpb24gQ29tbWlzc2lvbjAvBgNVBAMMKNCS0LXRgdC1
+0LvQuNC9INCR0L7QttC60L7QsiDQkdC+0LbQutC+0LIwggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAQCKnw+xckNqW++OppSxnAqaSHILSgT8cR1t7vN4/4lS/kyOzsmyilRHP3MqdduPnx6bAl/oW4lxxU0scHK4qyPJM8RPqvcMNsM5Vlyp8+q
+5ytZQvbuWBsbHENZ68Nyj0dtaSsZWxaho1JYvE7feTUMQaAIxJ5HCSfij9nHP0PP9XA53MOpKZ+H7NNsBe2t4PFa2MaK5LuS54HYROofSrx6j0LRre0p3T3D/4ZfRH62k2IGikAvS9iK93e9u7GcS8ozNtObDys5AXMyJylgg7gvPccUAAC3tbHERyGp+7t
+DhRr7qsNgD8jKLVEIIQHgWzm3oA51p1Xppro0MPz4hkhI3AgQAqnrBo4IBWzCCAVcwDgYDVR0PAQH/BAQDAgbAMBEGA1UdJQQKMAgGBgQAkTcDADAkBggrBgEFBQcBAwQYMBYwFAYIKwYBBQUHCwEwCAYGBACORgEBMH8GA1UdIAR4MHYwdAYJKwYBBAH/F
+AECMGcwNwYIKwYBBQUHAgEWK2h0dHA6Ly93d3cuY3JjLmJnL2ZpbGVzL19iZy9tZW1iZXJzLWNhLmh0bWwwLAYIKwYBBQUHAgIwIBoeQ1JDIFRTTCBTaWduaW5nIENlcnRpZmljYXRlIENQMDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly93d3cuZWdvdi5i
+Zy9jcmwvY3JjLW1lbWJlcnMtY2EuY3JsMA8GA1UdEwEB/wQFMAMBAQAwHQYDVR0OBBYEFGKuRxwBsTCtBlelS0n99RamUm2/MB8GA1UdIwQYMBaAFAkINvmsvi5j6+G+YL3jm5fJ4lE4MA0GCSqGSIb3DQEBBQUAA4IBAQBnBn/q6hgNLO2RcQZ5BnYPYhG
+81/lcua8T6Um7lmO4JLP+BXhmFexheR24Hs6RpgDpTwNq4aWb3Juh5GMqtWALIGOMbbegQHQ4Sa0nrVcWsUVStI9oOv8LpRfrECKYHNLjNnVliOa9dYfHcWX5aFuDc78DlBp7HwPX7L1UbK0zMRIlm4dqNfAHGvUrv7pDa1j2etRMCxO9c6Fzzh7fMYJ+/1
+MP6nu7bz554jCFuz5Q+VVq3m7EyGT2TbGi/m2zCF2gWke6OJamhRf8Fy3dYIS3EDampRsaiNG32Qz3ZKyyRwb6QI9IZouy9zCMKwgDeXiXZP+r1WowMO9QRkmepCGd&lt;/X509Certificate&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SubjectName&gt;C=BG,2.5.4.17=#130431303030,L=Sofia,OU=Chairman,STREET=6 Gurko str,1.2.840.113549.1.9.1=#160f76626f7a686b6f76406372632e6267,DC=crc-members-ca,O=Communications Regulat
+ion Commission,CN=Ð’ÐµÑ�ÐµÐ»Ð¸Ð½ Ð‘Ð¾Ð¶ÐºÐ¾Ð² Ð‘Ð¾Ð¶ÐºÐ¾Ð²&lt;/X509SubjectName&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SKI&gt;Yq5HHAGxMK0GV6VLSf31FqZSbb8=&lt;/X509SKI&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+    &lt;/ServiceDigitalIdentity&gt;&#xd;
+    &lt;ServiceDigitalIdentity&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509Certificate&gt;MIIFWDCCBECgAwIBAgIJAIW0w8KGYDu+MA0GCSqGSIb3DQEBBQUAMIGHMYGEMAkGA1UEBgwCQkcwFQYDVQQDDA5DUkMgTWVtYmVycyBDQTAVBgNVBAsMDkNSQyBNZW1iZXJzIENBMBwGCgmSJomT8ixkARkWDmNyYy1tZW
+1iZXJzLWNhMCsGA1UECgwkQ29tbXVuaWNhdGlvbnMgUmVndWxhdGlvbiBDb21taXNzaW9uMB4XDTE0MDkwNDEwMDExNFoXDTE5MDkwNDEwMDExNFowge8xgewwCQYDVQQGDAJCRzALBgNVBBEMBDEwMDAwDAYDVQQHDAVTb2ZpYTARBgNVBAsMCkNSQyBNZ
+W1iZXIwEgYDVQQJDAs2IEd1cmtvIHN0cjAcBgoJkiaJk/IsZAEZFg5jcmMtbWVtYmVycy1jYTAdBgkqhkiG9w0BCQEWEGlyb21hbnNrYUBjcmMuYmcwKwYDVQQKDCRDb21tdW5pY2F0aW9ucyBSZWd1bGF0aW9uIENvbW1pc3Npb24wMwYDVQQDDCzQmNGA
+0LjQvdCwINCh0YLQsNC90YfQtdCy0LAg0KDQvtC80LDQvdGB0LrQsDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALeau49s8E/Amx+zQnH76Vkep/eOntMOpFVKYp2KxhMX8p9pJ0N6iJgJs7DiPSbkqVQ1LnG8+Dj9Z0BQiPgh8Sg7EIxmCf6
+YVcmWc14naYxYzMqCwbBz3Uu5xOzfE8/0WIyGHQHpHa5DZk8bZBuyKICfGOoKrL1SlCHZ3pkXawPLyyupBjvInRBY3dCfPRDOq6XZVCJKwaQoWhiPYtjB3pgiWlU5Hd7RbiSh2EaV2vVdLvoQ5rb71FdnWUgiW4zjc+2KtoWnWQ0RBTfWCQL6XJgBdXyBA5
+d9ONUQRfbWKeyq1+9vMXR2H9arW5QD/Sra59NaN6ZaS4WWc6n7NrLhdU8CAwEAAaOCAVswggFXMA4GA1UdDwEB/wQEAwIGwDARBgNVHSUECjAIBgYEAJE3AwAwJAYIKwYBBQUHAQMEGDAWMBQGCCsGAQUFBwsBMAgGBgQAjkYBATB/BgNVHSAEeDB2MHQGC
+SsGAQQB/xQBAjBnMDcGCCsGAQUFBwIBFitodHRwOi8vd3d3LmNyYy5iZy9maWxlcy9fYmcvbWVtYmVycy1jYS5odG1sMCwGCCsGAQUFBwICMCAaHkNSQyBUU0wgU2lnbmluZyBDZXJ0aWZpY2F0ZSBDUDA6BgNVHR8EMzAxMC+gLaArhilodHRwOi8vd3d3
+LmVnb3YuYmcvY3JsL2NyYy1tZW1iZXJzLWNhLmNybDAPBgNVHRMBAf8EBTADAQEAMB0GA1UdDgQWBBRTRU7qRNyUTqcHzCscgHucWf61qjAfBgNVHSMEGDAWgBQJCDb5rL4uY+vhvmC945uXyeJRODANBgkqhkiG9w0BAQUFAAOCAQEAB3/B1OoF3Pm9fqg
+EmD1ug7+f8IeGYaRDQWKa3ieFm1Dl6VypydHilogYgFtUjvcOTJYi+INb0HglfOxoqx64RzzEleCSSz2tp5IlL0aKylMqv8Zoe/zPE5Qow7ZEx0M6vHRi8nM0v3RmzeMORdiFQWyvoNuJmPLtTO/UFC3DbabWozmNjGN8/OV8VOyLr637YEP6UpILbvPt9V
+Vn3aC7Ll0SoxRH7kcfiCQ+RJYhB2DJVhvXnOXw1Jzeuyu9a8AVUrb2Aaw9sK3tSWQbCZeg1rxsMuEYpFUqM982ClVCAWG/X04S4DYthY1U9RDE1fGNzKKs/XtzdhiZTXtlW5jyFA==&lt;/X509Certificate&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SubjectName&gt;C=BG,2.5.4.17=#130431303030,L=Sofia,OU=CRC Member,STREET=6 Gurko str,DC=crc-members-ca,1.2.840.113549.1.9.1=#161069726f6d616e736b61406372632e6267,O=Communications Reg
+ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° Ð Ð¾Ð¼Ð°Ð½Ñ�ÐºÐ°&lt;/X509SubjectName&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SKI&gt;U0VO6kTclE6nB8wrHIB7nFn+tao=&lt;/X509SKI&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+    &lt;/ServiceDigitalIdentity&gt;&#xd;
+  &lt;/ServiceDigitalIdentities&gt;&#xd;
+  &lt;TSLLocation&gt;http://crc.bg/files/_bg/TSL-CRC-BG-signed.pdf&lt;/TSLLocation&gt;&#xd;
+  &lt;AdditionalInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;TSLType&gt;http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeTerritory&gt;BG&lt;/SchemeTerritory&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;ns4:MimeType&gt;application/pdf&lt;/ns4:MimeType&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeOperatorName&gt;&#xd;
+        &lt;Name xml:lang=&quot;en&quot;&gt;Communications Regulation Commission&lt;/Name&gt;&#xd;
+        &lt;Name xml:lang=&quot;bg&quot;&gt;ÐšÐ¾Ð¼Ð¸Ñ�Ð¸Ñ� Ð·Ð° Ñ€ÐµÐ³ÑƒÐ»Ð¸Ñ€Ð°Ð½Ðµ Ð½Ð° Ñ�ÑŠÐ¾Ð±Ñ‰ÐµÐ½Ð¸Ñ�Ñ‚Ð°&lt;/Name&gt;&#xd;
+      &lt;/SchemeOperatorName&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeTypeCommunityRules&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
+      &lt;/SchemeTypeCommunityRules&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+  &lt;/AdditionalInformation&gt;&#xd;
+&lt;/OtherTSLPointer&gt;&#xd;
+</new-hrPointer>
+  <new-mpPointer>&lt;OtherTSLPointer xmlns=&quot;http://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;http://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;http://uri.etsi.org/02231/v2/add
+itionaltypes#&quot; xmlns:ns5=&quot;http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;http://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
+  &lt;ServiceDigitalIdentities&gt;&#xd;
+    &lt;ServiceDigitalIdentity&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509Certificate&gt;MIIFUTCCBDmgAwIBAgIIM7DFMDyB1XwwDQYJKoZIhvcNAQEFBQAwgYcxgYQwCQYDVQQGDAJCRzAVBgNVBAMMDkNSQyBNZW1iZXJzIENBMBUGA1UECwwOQ1JDIE1lbWJlcnMgQ0EwHAYKCZImiZPyLGQBGRYOY3JjLW1lbW
+JlcnMtY2EwKwYDVQQKDCRDb21tdW5pY2F0aW9ucyBSZWd1bGF0aW9uIENvbW1pc3Npb24wHhcNMTIxMTE1MTEyODA1WhcNMTcxMTE1MTEyODA1WjCB6DGB5TAJBgNVBAYMAkJHMAsGA1UEEQwEMTAwMDAMBgNVBAcMBVNvZmlhMA8GA1UECwwIQ2hhaXJtY
+W4wEgYDVQQJDAs2IEd1cmtvIHN0cjAcBgkqhkiG9w0BCQEWD3Zib3poa292QGNyYy5iZzAcBgoJkiaJk/IsZAEZFg5jcmMtbWVtYmVycy1jYTArBgNVBAoMJENvbW11bmljYXRpb25zIFJlZ3VsYXRpb24gQ29tbWlzc2lvbjAvBgNVBAMMKNCS0LXRgdC1
+0LvQuNC9INCR0L7QttC60L7QsiDQkdC+0LbQutC+0LIwggEjMA0GCSqGSIb3DQEBAQUAA4IBEAAwggELAoIBAQCKnw+xckNqW++OppSxnAqaSHILSgT8cR1t7vN4/4lS/kyOzsmyilRHP3MqdduPnx6bAl/oW4lxxU0scHK4qyPJM8RPqvcMNsM5Vlyp8+q
+5ytZQvbuWBsbHENZ68Nyj0dtaSsZWxaho1JYvE7feTUMQaAIxJ5HCSfij9nHP0PP9XA53MOpKZ+H7NNsBe2t4PFa2MaK5LuS54HYROofSrx6j0LRre0p3T3D/4ZfRH62k2IGikAvS9iK93e9u7GcS8ozNtObDys5AXMyJylgg7gvPccUAAC3tbHERyGp+7t
+DhRr7qsNgD8jKLVEIIQHgWzm3oA51p1Xppro0MPz4hkhI3AgQAqnrBo4IBWzCCAVcwDgYDVR0PAQH/BAQDAgbAMBEGA1UdJQQKMAgGBgQAkTcDADAkBggrBgEFBQcBAwQYMBYwFAYIKwYBBQUHCwEwCAYGBACORgEBMH8GA1UdIAR4MHYwdAYJKwYBBAH/F
+AECMGcwNwYIKwYBBQUHAgEWK2h0dHA6Ly93d3cuY3JjLmJnL2ZpbGVzL19iZy9tZW1iZXJzLWNhLmh0bWwwLAYIKwYBBQUHAgIwIBoeQ1JDIFRTTCBTaWduaW5nIENlcnRpZmljYXRlIENQMDoGA1UdHwQzMDEwL6AtoCuGKWh0dHA6Ly93d3cuZWdvdi5i
+Zy9jcmwvY3JjLW1lbWJlcnMtY2EuY3JsMA8GA1UdEwEB/wQFMAMBAQAwHQYDVR0OBBYEFGKuRxwBsTCtBlelS0n99RamUm2/MB8GA1UdIwQYMBaAFAkINvmsvi5j6+G+YL3jm5fJ4lE4MA0GCSqGSIb3DQEBBQUAA4IBAQBnBn/q6hgNLO2RcQZ5BnYPYhG
+81/lcua8T6Um7lmO4JLP+BXhmFexheR24Hs6RpgDpTwNq4aWb3Juh5GMqtWALIGOMbbegQHQ4Sa0nrVcWsUVStI9oOv8LpRfrECKYHNLjNnVliOa9dYfHcWX5aFuDc78DlBp7HwPX7L1UbK0zMRIlm4dqNfAHGvUrv7pDa1j2etRMCxO9c6Fzzh7fMYJ+/1
+MP6nu7bz554jCFuz5Q+VVq3m7EyGT2TbGi/m2zCF2gWke6OJamhRf8Fy3dYIS3EDampRsaiNG32Qz3ZKyyRwb6QI9IZouy9zCMKwgDeXiXZP+r1WowMO9QRkmepCGd&lt;/X509Certificate&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SubjectName&gt;C=BG,2.5.4.17=#130431303030,L=Sofia,OU=Chairman,STREET=6 Gurko str,1.2.840.113549.1.9.1=#160f76626f7a686b6f76406372632e6267,DC=crc-members-ca,O=Communications Regulat
+ion Commission,CN=Ð’ÐµÑ�ÐµÐ»Ð¸Ð½ Ð‘Ð¾Ð¶ÐºÐ¾Ð² Ð‘Ð¾Ð¶ÐºÐ¾Ð²&lt;/X509SubjectName&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SKI&gt;Yq5HHAGxMK0GV6VLSf31FqZSbb8=&lt;/X509SKI&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+    &lt;/ServiceDigitalIdentity&gt;&#xd;
+    &lt;ServiceDigitalIdentity&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509Certificate&gt;MIIFWDCCBECgAwIBAgIJAIW0w8KGYDu+MA0GCSqGSIb3DQEBBQUAMIGHMYGEMAkGA1UEBgwCQkcwFQYDVQQDDA5DUkMgTWVtYmVycyBDQTAVBgNVBAsMDkNSQyBNZW1iZXJzIENBMBwGCgmSJomT8ixkARkWDmNyYy1tZW
+1iZXJzLWNhMCsGA1UECgwkQ29tbXVuaWNhdGlvbnMgUmVndWxhdGlvbiBDb21taXNzaW9uMB4XDTE0MDkwNDEwMDExNFoXDTE5MDkwNDEwMDExNFowge8xgewwCQYDVQQGDAJCRzALBgNVBBEMBDEwMDAwDAYDVQQHDAVTb2ZpYTARBgNVBAsMCkNSQyBNZ
+W1iZXIwEgYDVQQJDAs2IEd1cmtvIHN0cjAcBgoJkiaJk/IsZAEZFg5jcmMtbWVtYmVycy1jYTAdBgkqhkiG9w0BCQEWEGlyb21hbnNrYUBjcmMuYmcwKwYDVQQKDCRDb21tdW5pY2F0aW9ucyBSZWd1bGF0aW9uIENvbW1pc3Npb24wMwYDVQQDDCzQmNGA
+0LjQvdCwINCh0YLQsNC90YfQtdCy0LAg0KDQvtC80LDQvdGB0LrQsDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALeau49s8E/Amx+zQnH76Vkep/eOntMOpFVKYp2KxhMX8p9pJ0N6iJgJs7DiPSbkqVQ1LnG8+Dj9Z0BQiPgh8Sg7EIxmCf6
+YVcmWc14naYxYzMqCwbBz3Uu5xOzfE8/0WIyGHQHpHa5DZk8bZBuyKICfGOoKrL1SlCHZ3pkXawPLyyupBjvInRBY3dCfPRDOq6XZVCJKwaQoWhiPYtjB3pgiWlU5Hd7RbiSh2EaV2vVdLvoQ5rb71FdnWUgiW4zjc+2KtoWnWQ0RBTfWCQL6XJgBdXyBA5
+d9ONUQRfbWKeyq1+9vMXR2H9arW5QD/Sra59NaN6ZaS4WWc6n7NrLhdU8CAwEAAaOCAVswggFXMA4GA1UdDwEB/wQEAwIGwDARBgNVHSUECjAIBgYEAJE3AwAwJAYIKwYBBQUHAQMEGDAWMBQGCCsGAQUFBwsBMAgGBgQAjkYBATB/BgNVHSAEeDB2MHQGC
+SsGAQQB/xQBAjBnMDcGCCsGAQUFBwIBFitodHRwOi8vd3d3LmNyYy5iZy9maWxlcy9fYmcvbWVtYmVycy1jYS5odG1sMCwGCCsGAQUFBwICMCAaHkNSQyBUU0wgU2lnbmluZyBDZXJ0aWZpY2F0ZSBDUDA6BgNVHR8EMzAxMC+gLaArhilodHRwOi8vd3d3
+LmVnb3YuYmcvY3JsL2NyYy1tZW1iZXJzLWNhLmNybDAPBgNVHRMBAf8EBTADAQEAMB0GA1UdDgQWBBRTRU7qRNyUTqcHzCscgHucWf61qjAfBgNVHSMEGDAWgBQJCDb5rL4uY+vhvmC945uXyeJRODANBgkqhkiG9w0BAQUFAAOCAQEAB3/B1OoF3Pm9fqg
+EmD1ug7+f8IeGYaRDQWKa3ieFm1Dl6VypydHilogYgFtUjvcOTJYi+INb0HglfOxoqx64RzzEleCSSz2tp5IlL0aKylMqv8Zoe/zPE5Qow7ZEx0M6vHRi8nM0v3RmzeMORdiFQWyvoNuJmPLtTO/UFC3DbabWozmNjGN8/OV8VOyLr637YEP6UpILbvPt9V
+Vn3aC7Ll0SoxRH7kcfiCQ+RJYhB2DJVhvXnOXw1Jzeuyu9a8AVUrb2Aaw9sK3tSWQbCZeg1rxsMuEYpFUqM982ClVCAWG/X04S4DYthY1U9RDE1fGNzKKs/XtzdhiZTXtlW5jyFA==&lt;/X509Certificate&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SubjectName&gt;C=BG,2.5.4.17=#130431303030,L=Sofia,OU=CRC Member,STREET=6 Gurko str,DC=crc-members-ca,1.2.840.113549.1.9.1=#161069726f6d616e736b61406372632e6267,O=Communications Reg
+ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° Ð Ð¾Ð¼Ð°Ð½Ñ�ÐºÐ°&lt;/X509SubjectName&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+      &lt;DigitalId&gt;&#xd;
+        &lt;X509SKI&gt;U0VO6kTclE6nB8wrHIB7nFn+tao=&lt;/X509SKI&gt;&#xd;
+      &lt;/DigitalId&gt;&#xd;
+    &lt;/ServiceDigitalIdentity&gt;&#xd;
+  &lt;/ServiceDigitalIdentities&gt;&#xd;
+  &lt;TSLLocation&gt;http://crc.bg/files/_bg/TSL-CRC-BG-signed.xml&lt;/TSLLocation&gt;&#xd;
+  &lt;AdditionalInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;TSLType&gt;http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeTerritory&gt;BG&lt;/SchemeTerritory&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;ns4:MimeType&gt;application/vnd.etsi.tsl+xml&lt;/ns4:MimeType&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeOperatorName&gt;&#xd;
+        &lt;Name xml:lang=&quot;en&quot;&gt;Communications Regulation Commission&lt;/Name&gt;&#xd;
+        &lt;Name xml:lang=&quot;bg&quot;&gt;ÐšÐ¾Ð¼Ð¸Ñ�Ð¸Ñ� Ð·Ð° Ñ€ÐµÐ³ÑƒÐ»Ð¸Ñ€Ð°Ð½Ðµ Ð½Ð° Ñ�ÑŠÐ¾Ð±Ñ‰ÐµÐ½Ð¸Ñ�Ñ‚Ð°&lt;/Name&gt;&#xd;
+      &lt;/SchemeOperatorName&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+    &lt;OtherInformation&gt;&#xd;
+      &lt;SchemeTypeCommunityRules&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
+      &lt;/SchemeTypeCommunityRules&gt;&#xd;
+    &lt;/OtherInformation&gt;&#xd;
+  &lt;/AdditionalInformation&gt;&#xd;
+&lt;/OtherTSLPointer&gt;&#xd;
+</new-mpPointer>
+</root>

@@ -1,0 +1,136 @@
+Bulgaria 
+
+    BORICA - BANKSERVICE AD 
+
+        B-Trust Operational CA QES - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        B-Trust Operational QCA for SIA LATTELECOM - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        B-Trust Time Stamp Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+        B-Trust Validation Authority - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        B-Trust Validation Authority QES - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+    Bankservice PLC 
+
+        B-Trust Operational CA – Universal Electronic Signature - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+             ! EMPTY LIST !  
+
+    InfoNotary PLC 
+
+        InfoNotary Validation Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            Undefined; 
+
+        InfoNotary Validation Services OCSP Authority - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        InfoNotary Validation Services Time-Stamping Authority Class 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+        i-Notary Company Q Sign CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        i-Notary Personal Q Sign CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+    Information Services Plc. 
+
+        OCSP - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        StampIT Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        StampIT TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+    Spektar JSC 
+
+        Spektar Qualified  CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        Spektar Secondary Qualified  CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        Spektar Time Stamp Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+        Spektar On-line Certificate Status Protocol - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+    System for electronic payments Bulgaria / SEP Bulgaria JSC 
+
+        MobiSafe CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        MobiSafe OCSP - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        MobiSafe TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+        OCSP - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        SEP OCSP - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        SEP QES CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        Time Stamp - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+
+        eSign QES CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+    Evrotrust Technologies JSC 
+
+        Evrotrust RSA Operational CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            Undefined; 
+
+        Evrotrust RSA QS Validation - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        Evrotrust RSA Validation - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+
+            Undefined; 
+
+        Evrotrust TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+            Timestamping; 
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/controllers/keyStoreController.js}"></script>
+<script th:src="@{/script/factory/digitalIdentitiesFactory.js}"></script>
+<script th:src="@{/controllers/modalController/modalB64Controller.js}"></script>
+
+<style>
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+
+    <div class="body" ng-controller="keyStoreController">
+
+        <!-- Menu -->
+        <div th:replace="menu :: nav" th:remove="tag"></div>
+
+        <!-- MAIN CONTENT -->
+        <main ng-if="loadKeyStore==false">
+        <div align="center">
+            <label>{{loadingKeyStoreStatus}}</label>
+        </div>
+        <div th:replace="spinner :: spinner"></div>
+        </main>
+        <main id="content" class="panel panel-primary" ng-show="loadKeyStore==true" style="border-style: none;">
+        <div class="panel-heading" style="max-height: 35px">
+            <span th:text="#{keyStore.title}"></span>
+            <div class="dropdown" style="float: right; margin-right: -3px;">
+                <span class="fa fa-plus dropdown-toggle cursor-pointer " type="button" data-toggle="dropdown" tooltip-placement="right" tooltip="Add certificate"></span>
+                <ul class="dropdown-menu  dropdown-menu-right">
+                    <li><a th:text="#{digitalIdentification.certificate}" class="cursor-pointer" ng-confirm="{{confirm_addSigningCertificate}}"
+                            confirmed="uploadSimulateClick()"></a></li>
+                    <li><a th:text="#{digitalIdentification.certB64}" class="cursor-pointer" ng-confirm="{{confirm_addSigningCertificate}}" confirmed="addDigitalB64()"></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div ng-repeat="tCertificate in certificates">
+            <div class="row" ng-init="tCertificate.show=false;">
+                <div style="width: 96.8%; display: inline-block; margin-left: 5px;" ng-class="isOpen(tCertificate.show)">
+                    <span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+                    <span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer white"></span>
+                    <span>{{tCertificate.certSubjectShortName}} ({{ tCertificate.certNotBefore | date:'yyyy-MM-dd'}} - {{ tCertificate.certAfter | date:'yyyy-MM-dd'}})</span>
+                </div>
+                <div style="width: 3%; display: inline;">
+                    <span
+                        ng-confirm="{{confirm_deleteSigningCertificate+' '+confirm_delete | replaceIn:'%OBJ%':(tCertificate.certSubjectShortName+' ('+(tCertificate.certNotBefore | date:'yyyy-MM-dd HH:mm:ss')+' - '+(tCertificate.certAfter | date:'yyyy-MM-dd HH:mm:ss')+')')}}"
+                        confirmed="deleteCertificate(tCertificate)" class="fa fa-trash cursor-pointer" style="margin-left: 5px;" tooltip="Delete certificate"
+                        tooltip-placement="right"></span>
+                </div>
+            </div>
+            <div style="margin-left: 10px;">
+                <div th:replace="certificat :: certificat"></div>
+            </div>
+        </div>
+        <div ng-show="false">
+            <!-- certificate file upload -->
+            <input ng-show="false" id="uploadFile" type="file" class="file" name="myFile" file-model="myFile"
+                onchange="angular.element(this).scope().addCertificate(this.files[0],angular.element(this))" data-show-caption="false" data-show-preview="false"
+                data-show-remove="false" data-show-upload="false" />
+        </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>
+</html>

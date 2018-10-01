@@ -1,0 +1,116 @@
+Austria 
+
+    A-Trust Gesellschaft für Sicherheitssysteme im elektronischen Datenverkehr GmbH 
+
+        TrustSign-Sig-01 (key no. 1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        TrustSign-Sig-01 (key no. 2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        TrustSign-Sig-01 (key no. 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign uni - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-01 (key no. 1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-01 (key no. 2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-01 (key no. 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-02 (key no. 1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-02 (key no. 2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-03 (key no. 1) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-03 (key no. 2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-Premium-Sig-05 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-premium-mobile-03 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        a-sign-premium-mobile-05 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        OCSP Responder 03-1 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        EU-Identity-mobile-05 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    Bundesamt für Eich- und Vermessungswesen 
+
+        Sicherer Zeitstempeldienst-01 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+        Sicherer Zeitstempeldienst-02 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+    Datakom Austria GmbH 
+
+        a-sign Premium CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    Rundfunk und Telekom Regulierungs-GmbH 
+
+        Trusted List CA 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+        RTR Services 4 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+
+    e-commerce monitoring GmbH 
+
+        GLOBALTRUST QUALIFIED 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GLOBALTRUST 2015 QUALIFIED 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GLOBALTRUST QUALIFIED TIMESTAMP 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        GLOBALTRUST 2015 QUALIFIED TIMESTAMP 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+        GLOBALTRUST QUALIFIED TIMESTAMP 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+        GLOBALTRUST 2015 QUALIFIED TIMESTAMP 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+
+    PrimeSign GmbH 
+
+        CRYPTAS-PrimeSign Qualified Root CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC 
+

@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <span><span th:text="#{tlsoContact}"></span> : {{tl.countryName}}</span>
+        <span class="fa fa-times cursor-pointer" ng-click="ok()" style="margin-left: 5px; float: right"></span>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <span th:text="#{tlContact.submissionDate}" class="col-sm-2 text-right"></span>
+            <span class="col-sm-10">{{tl.contact.submissionDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+        </div>
+        <div class="row">
+            <span th:text="#{tlContact.name}" class="col-sm-2 text-right"></span>
+            <span class="col-sm-10">{{tl.contact.name}}</span>
+        </div>
+        <div class="row">
+            <span th:text="#{tlContact.phoneNumber}" class="col-sm-2 text-right"></span>
+            <span class="col-sm-10">{{tl.contact.phoneNumber}}</span>
+        </div>
+        <div class="row">
+            <span th:text="#{tlContact.postalAddress}" class="col-sm-2 text-right"></span>
+            <span class="col-sm-10">{{tl.contact.postalAddress}}</span>
+        </div>
+        <div class="row">
+            <span th:text="#{tlContact.email}" class="col-sm-2 text-right"></span>
+            <span class="col-sm-10">
+                <textarea readonly ng-model="tl.contactAddress" style="width: 100%; height: 200px; resize: none;"></textarea>
+            </span>
+        </div>
+    </div>
+</div>

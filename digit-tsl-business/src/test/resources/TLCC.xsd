@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://www.etsi.org/19162/conformanceChecker" xmlns:tns="http://www.etsi.org/19162/conformanceChecker" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AdditionalInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:OtherInformation" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AdditionalServiceInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="AttributeOID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Canonicalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CertSubjectDNAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:AttributeOID" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Check">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="checkId" type="xs:NCName" use="required"/>
+          <xs:attribute name="status" type="xs:NCName" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CountryName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="CriteriaList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="tns:CriteriaList"/>
+          <xs:element ref="tns:KeyUsage"/>
+          <xs:element ref="tns:PolicySet"/>
+        </xs:choice>
+        <xs:element ref="tns:otherCriteriaList" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DigitalId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:X509Certificate" minOccurs="0"/>
+        <xs:element ref="tns:Other" minOccurs="0"/>
+        <xs:element ref="tns:X509SKI" minOccurs="0"/>
+        <xs:element ref="tns:X509SubjectName" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DistributionPoints">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DocumentationReference">
+    <xs:complexType>
+      <xs:sequence/>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="DocumentationReferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="tns:Check"/>
+          <xs:element ref="tns:DocumentationReference"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ElectronicAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ExpiredCertsRevocationInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ExtendedKeyUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:KeyPurposeId" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Extension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:AdditionalServiceInformation" minOccurs="0"/>
+        <xs:element ref="tns:ExpiredCertsRevocationInfo" minOccurs="0"/>
+        <xs:element ref="tns:Qualifications" minOccurs="0"/>
+        <xs:element ref="tns:TakenOverBy" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="HistoricalInformationPeriod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Identifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="KeyInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:X509Data" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="KeyPurposeId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="KeyUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:KeyUsageBit" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="KeyUsageBit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Locality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MimeType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Name">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+      <xs:attribute name="language" type="xs:NCName" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="NextUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Other">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="OtherInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:SchemeOperatorName" minOccurs="0"/>
+        <xs:element ref="tns:SchemeTerritory" minOccurs="0"/>
+        <xs:element ref="tns:SchemeTypeCommunityRules" minOccurs="0"/>
+        <xs:element ref="tns:TSLType" minOccurs="0"/>
+        <xs:element ref="tns:MimeType" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="OtherTSLPointer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceDigitalIdentities" minOccurs="0"/>
+        <xs:element ref="tns:TSLLocation" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:AdditionalInformation" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PointersToOtherTSL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:OtherTSLPointer" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PolicyIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Identifier" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:DocumentationReferences" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PolicyOrLegalNotice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TSLLegalNotice" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PolicySet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:PolicyIdentifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PostalAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:StreetAddress" minOccurs="0"/>
+        <xs:element ref="tns:Locality" minOccurs="0"/>
+        <xs:element ref="tns:StateOrProvince" minOccurs="0"/>
+        <xs:element ref="tns:PostalCode" minOccurs="0"/>
+        <xs:element ref="tns:CountryName" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+      <xs:attribute name="language" type="xs:NCName" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PostalAddresses">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:PostalAddress" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="PostalCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="QualificationElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Qualifiers" minOccurs="0"/>
+        <xs:element ref="tns:CriteriaList" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Qualifications">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:QualificationElement" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Qualifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Qualifiers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Qualifier" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Reference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Transforms" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TSLVersionIdentifier" minOccurs="0"/>
+        <xs:element ref="tns:TSLSequenceNumber" minOccurs="0"/>
+        <xs:element ref="tns:TSLType" minOccurs="0"/>
+        <xs:element ref="tns:SchemeTerritory" minOccurs="0"/>
+        <xs:element ref="tns:SchemeOperatorName" minOccurs="0"/>
+        <xs:element ref="tns:SchemeOperatorAddress" minOccurs="0"/>
+        <xs:element ref="tns:SchemeName" minOccurs="0"/>
+        <xs:element ref="tns:SchemeInformationURI" minOccurs="0"/>
+        <xs:element ref="tns:StatusDeterminationApproach" minOccurs="0"/>
+        <xs:element ref="tns:SchemeTypeCommunityRules" minOccurs="0"/>
+        <xs:element ref="tns:PolicyOrLegalNotice" minOccurs="0"/>
+        <xs:element ref="tns:HistoricalInformationPeriod" minOccurs="0"/>
+        <xs:element ref="tns:PointersToOtherTSL" minOccurs="0"/>
+        <xs:element ref="tns:NextUpdate" minOccurs="0"/>
+        <xs:element ref="tns:DistributionPoints" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeInformationURI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Name" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeOperatorAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:PostalAddresses" minOccurs="0"/>
+        <xs:element ref="tns:ElectronicAddress" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeOperatorName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Name" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeServiceDefinitionURI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeTerritory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SchemeTypeCommunityRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceDigitalIdentities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceDigitalIdentity" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceDigitalIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:DigitalId" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceHistoryInstance" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceHistoryInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceTypeIdentifier" minOccurs="0"/>
+        <xs:element ref="tns:ServiceName" minOccurs="0"/>
+        <xs:element ref="tns:ServiceDigitalIdentity" minOccurs="0"/>
+        <xs:element ref="tns:ServiceStatus" minOccurs="0"/>
+        <xs:element ref="tns:StatusStartingTime" minOccurs="0"/>
+        <xs:element ref="tns:ServiceInformationExtensions" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceTypeIdentifier" minOccurs="0"/>
+        <xs:element ref="tns:ServiceName" minOccurs="0"/>
+        <xs:element ref="tns:ServiceDigitalIdentity" minOccurs="0"/>
+        <xs:element ref="tns:ServiceStatus" minOccurs="0"/>
+        <xs:element ref="tns:StatusStartingTime" minOccurs="0"/>
+        <xs:element ref="tns:SchemeServiceDefinitionURI" minOccurs="0"/>
+        <xs:element ref="tns:ServiceSupplyPoints" minOccurs="0"/>
+        <xs:element ref="tns:TSPServiceDefinitionURI" minOccurs="0"/>
+        <xs:element ref="tns:ServiceInformationExtensions" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceInformationExtensions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Extension" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Name" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceSupplyPoint">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceSupplyPoints">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceSupplyPoint" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ServiceTypeIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Signature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:SignedInfo" minOccurs="0"/>
+        <xs:element ref="tns:KeyInfo" minOccurs="0"/>
+        <xs:element ref="tns:SignatureValue" minOccurs="0"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SignatureValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="SignedInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Reference" minOccurs="0"/>
+        <xs:element ref="tns:Canonicalization" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="StateOrProvince">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="StatusDeterminationApproach">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="StatusStartingTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="StreetAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TLCCResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TrustServiceStatusList" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLLegalNotice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+      <xs:attribute name="language" type="xs:NCName" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLSequenceNumber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLTag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSLVersionIdentifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:PostalAddresses" minOccurs="0"/>
+        <xs:element ref="tns:ElectronicAddress" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TSPName" minOccurs="0"/>
+        <xs:element ref="tns:TSPTradeName" minOccurs="0"/>
+        <xs:element ref="tns:TSPAddress" minOccurs="0"/>
+        <xs:element ref="tns:TSPInformationURI" minOccurs="0"/>
+        <xs:element ref="tns:TSPInformationExtensions" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPInformationExtensions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Extension" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPInformationURI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Name" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPService">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:ServiceInformation" minOccurs="0"/>
+        <xs:element ref="tns:ServiceHistory" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPServiceDefinitionURI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:URI" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPServices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TSPService" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TSPTradeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Name" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TakenOverBy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:SchemeTerritory"/>
+        <xs:element ref="tns:TSPName"/>
+        <xs:element ref="tns:URI" maxOccurs="unbounded"/>
+        <xs:element ref="tns:SchemeOperatorName"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Transform">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Transforms">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:Transform" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TrustServiceProvider">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TSPInformation" minOccurs="0"/>
+        <xs:element ref="tns:TSPServices" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TrustServiceProviderList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:TrustServiceProvider" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="TrustServiceStatusList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:TSLTag" minOccurs="0"/>
+        <xs:element ref="tns:SchemeInformation" minOccurs="0"/>
+        <xs:element ref="tns:TrustServiceProviderList" minOccurs="0"/>
+        <xs:element ref="tns:Signature" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="URI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer"/>
+      <xs:attribute name="language" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="X509Certificate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="X509Data">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="tns:X509Certificate" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="index" type="xs:integer" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="X509SKI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="X509SubjectName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:Check" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="otherCriteriaList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="tns:CertSubjectDNAttribute" minOccurs="0"/>
+        <xs:element ref="tns:ExtendedKeyUsage" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+

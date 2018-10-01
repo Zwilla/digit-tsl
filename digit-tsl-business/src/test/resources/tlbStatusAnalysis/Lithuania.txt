@@ -1,0 +1,178 @@
+Lithuania 
+
+    Residents Register Service under the Ministry of the Interior 
+
+        GRT_OCSP Service-1 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-3 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-4 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-5 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-3 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-4 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-5(IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_Qualified certificates for electronic signature-6(IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-6(IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-7(IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-8 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        GRT_OCSP Service-9 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    State Enterprise Centre of Registers 
+
+        RC_OCSP Service-2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-3 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-4 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_Qualified certificates for electronic signature-2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_Qualified certificates for electronic signature-3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_Qualified certificates for electronic signature - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_Qualified certificates for electronic signature-4 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-5 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-6 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-7 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_OCSP Service-8 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        RC_Qualified certificates for electronic signature-5 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    UAB BalTstamp 
+
+        Qualified time stamp service 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+
+        Qualified time stamp service - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+
+        Qualified time stamp service 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+
+    UAB Skaitmeninio sertifikavimo centras 
+
+        SSC_OCSP Service-2 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-1 (SSC Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-2 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-3 (SSC Qualified Class 3 VS) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-4 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-5 (SSC GDL Class 2-4 QCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        SSC_Qualified certificates for electronic signature-6 (SSC GDL VS Class 2-4 QCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+    Identity Documents Personalisation Centre under the Ministry of the Interior 
+
+        ADIC_Qualified certificates for electronic signature-1 (ADIC CA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ADIC_Qualified certificates for electronic signature-2 (ADIC CA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ADIC_OCSP Service-1 (OCSP for ADIC CA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+
+        ADIC_OCSP Service-2 (OCSP for ADIC CA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+
+            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+

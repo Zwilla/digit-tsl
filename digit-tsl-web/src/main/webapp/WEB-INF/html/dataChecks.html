@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<div th:replace="head_fragment :: head_fragment"></div>
+
+<script th:src="@{/js/checkStatus.js}"></script>
+<script th:src="@{/js/checkImpact.js}"></script>
+<script th:src="@{/controllers/dataChecksController.js}"></script>
+<script th:src="@{/controllers/modalController/modalCheckEditController.js}"></script>
+
+<style>
+hr.style-one {
+    display: block;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+</style>
+
+</head>
+<body>
+    <!-- Header -->
+    <div th:replace="header :: header" th:remove="tag"></div>
+
+    <div class="body" ng-controller="dataChecksController">
+
+        <!-- Menu -->
+        <div th:replace="menu :: nav" th:remove="tag"></div>
+
+        <!-- Main Content -->
+        <main ng-show="loadChecks==false">
+        <div align="center">
+            <label>{{loadingStatusChecks}}</label>
+        </div>
+        <div th:replace="spinner :: spinner"></div>
+        </main>
+        <main class="panel panel-primary" style="border-style:none;" ng-show="loadChecks==true">
+        <div class="panel-heading" style="max-height: 35px">
+            <span th:text="#{check.management}"></span>
+        </div>
+        <div class="row">
+            <table class="table" style="float: left; width: 240px; border-style: solid; border-width: 1px; margin-top: 10px;" id="code-list-table">
+                <thead>
+                    <tr class="active">
+                        <th th:text="#{propertie.codeList}"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="filtre in listFilter">
+                        <td ng-click="changefilter(filtre)" ng-class="classFilter(filtre)"><span>{{filtre | labelizeTag}}</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-striped" style="width: 850px; margin-top: 10px; float: left; margin-left: 5px;" id="table-check">
+                <thead>
+                    <tr>
+                        <th th:text="#{check.description}" style="width: 83%;"></th>
+                        <th style="width: 10%;" th:text="#{check.priority}"></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="check in dataChecks" ng-if="filterCode(check)">
+                        <td>{{check.description}}</td>
+                        <td>{{check.status}}</td>
+                        <td><span ng-click="editCheck(check)" tooltip="Edit check" class="fa fa-edit cursor-pointer" style="float: right" tooltip-placement="right"></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </main>
+    </div>
+    <!-- Footer -->
+    <div th:replace="footer :: footer" th:remove="tag"></div>
+</body>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Properties and path to files</comment>
+<entry key="useInternalCodes">no</entry>
+<entry key="ccCodes">BE;BG;CZ;DK;DE;EE;IE;EL;ES;EU;FR;IT;CY;LV;LT;LU;HU;MT;NL;NO;AT;PL;PT;RO;SR;SI;SK;FI;SE;UK;HR;LI;IS</entry>
+<entry key="ccNamesLang">BELGIQUE/BELGIË;БЪЛГАРИЯ;CESKÁ REPUBLIKA;DANMARK;DEUTSCHLAND;EESTI;ÉIRE/IRELAND;ΕΛΛΆΔΑ;ESPAÑA;EUROPEAN UNION;FRANCE;ITALIA;ΚΎΠΡΟΣ/KIBIS;LATVIJA;LIETUVA;LUXEMBOURG;MAGYARORSZÁG;MALTA;NEDERLAND;NORGE;ÖSTERREICH;POLSKA;PORTUGAL;ROMÂNIA;SRBIJA/СPБИJA;SLOVENIJA;SLOVENSKO;SUOMI/FINLAND;SVERIGE;UNITED KINGDOM;HRVATSKA;LIECHTENSTEIN;ÍSLAND</entry>
+<entry key="ccNames">BELGIUM;BULGARIA;CZECH REPUBLIC;DENMARK;GERMANY;ESTONIA;IRELAND;GREECE;SPAIN;EUROPEAN UNION;FRANCE;ITALY;CYPRUS;LATVIA;LITHUANIA;LUXEMBOURG;HUNGARY;MALTA;NETHERLANDS;NORWAY;AUSTRIA;POLAND;PORTUGAL;ROMANIA;SERBIA;SLOVENIA;SLOVAKIA;FINLAND;SWEDEN;UNITED KINGDOM;CROATIA;LIECHTENSTEIN;ICELAND</entry>
+<entry key="imagePath">C:\Users\simon.ghisalberti\git\digit-tsl\digit-tsl-pretty-print-web\src\test\resources\res</entry>
+<entry key="pdfImagePath">C:\Users\simon.ghisalberti\git\digit-tsl\digit-tsl-pretty-print-web\src\test\resources\res</entry>
+<entry key="fontPathAndName">C:\Users\simon.ghisalberti\git\digit-tsl\digit-tsl-pretty-print-web\src\test\resources\res\times.ttf</entry>
+<entry key="srgbPath">C:\Users\simon.ghisalberti\git\digit-tsl\digit-tsl-pretty-print-web\src\test\resources\res\srgb.profile</entry>
+<entry key="definedDescriptionLang">en;it;fr;de;es</entry>
+<entry key="BE">fr;de;nl</entry>
+<entry key="BG">bg</entry>
+<entry key="CZ">cs</entry>
+<entry key="DK">da</entry>
+<entry key="DE">de</entry>
+<entry key="EE">et</entry>
+<entry key="IE">ga</entry>
+<entry key="EL">el</entry>
+<entry key="ES">es</entry>
+<entry key="FR">fr</entry>
+<entry key="HR">hr</entry>
+<entry key="IT">it</entry>
+<entry key="CY">el;tr</entry>
+<entry key="LV">lv</entry>
+<entry key="LT">lt</entry>
+<entry key="LU">fr;de;lb</entry>
+<entry key="HU">hu</entry>
+<entry key="MT">mt</entry>
+<entry key="NL">nl</entry>
+<entry key="AT">de</entry>
+<entry key="PL">pl</entry>
+<entry key="PT">pt</entry>
+<entry key="RO">ro</entry>
+<entry key="SI">sl</entry>
+<entry key="SK">sk</entry>
+<entry key="FI">fi;sv</entry>
+<entry key="IS">is</entry>
+<entry key="LI">de</entry>
+<entry key="SE">se</entry>
+<entry key="NO">no;nb;nn</entry>
+</properties>
