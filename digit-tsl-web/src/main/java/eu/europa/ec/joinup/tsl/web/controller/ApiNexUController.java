@@ -49,6 +49,7 @@ import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
 import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
 import eu.europa.ec.joinup.tsl.web.form.TlSignatureNexUInformation;
+import eu.europa.ec.joinup.tsl.web.form.nexu.SignatureRequest;
 import eu.europa.ec.joinup.tsl.web.util.SignatureUtil;
 import eu.europa.esig.dss.DSSDocument;
 import eu.europa.esig.dss.DSSException;
@@ -60,100 +61,106 @@ import eu.europa.esig.dss.validation.CertificateVerifier;
 import eu.europa.esig.dss.validation.CommonCertificateVerifier;
 import eu.europa.esig.dss.xades.XAdESSignatureParameters;
 import eu.europa.esig.dss.xades.signature.XAdESService;
-import lu.nowina.nexu.object.model.SignatureRequest;
 
 @Controller
 @SessionAttributes(value = "params")
 @RequestMapping(value = "/api/signature/nexU")
 public class ApiNexUController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ApiSignatureController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(ApiSignatureController.class);
 
-    @Autowired
-    private TLService tlService;
+	@Autowired
+	private TLService tlService;
 
-    @Autowired
-    private RulesRunnerService rulesRunnerService;
+	@Autowired
+	private RulesRunnerService rulesRunnerService;
 
-    @Autowired
-    private TLValidator tlValidator;
+	@Autowired
+	private TLValidator tlValidator;
 
-    @Autowired
-    private AuditService auditService;
+	@Autowired
+	private AuditService auditService;
 
-    @Value("${nexu.msi.file}")
-    private String nexuMsiFile;
+	@Value("${nexu.msi.file}")
+	private String nexuMsiFile;
 
-    @RequestMapping(value = "/getTbs", method = RequestMethod.POST)
-    public @ResponseBody ServiceResponse<SignatureRequest> getToBeSigned(@RequestBody TlSignatureNexUInformation signatureObject, Model model) {
-        ServiceResponse<SignatureRequest> response = new ServiceResponse<>();
-        try {
-            CertificateVerifier certificateVerifier = new CommonCertificateVerifier();
-            XAdESService signatureService = new XAdESService(certificateVerifier);
-            // remove signature
-            tlService.createFileWithoutSignature(signatureObject.getTlId());
-            InputStream is = tlService.getXmlStreamToSign(signatureObject.getTlId());
-            DSSDocument doc = new InMemoryDocument(IOUtils.toByteArray(is));
-            doc.setMimeType(MimeType.XML);
-            XAdESSignatureParameters params = SignatureUtil.getSignatureParams(signatureObject.getCertificateResponse(), doc);
+	@RequestMapping(value = "/getTbs", method = RequestMethod.POST)
+	public @ResponseBody ServiceResponse<SignatureRequest> getToBeSigned(
+			@RequestBody TlSignatureNexUInformation signatureObject, Model model) {
+		ServiceResponse<SignatureRequest> response = new ServiceResponse<>();
+		try {
+			CertificateVerifier certificateVerifier = new CommonCertificateVerifier();
+			XAdESService signatureService = new XAdESService(certificateVerifier);
+			// remove signature
+			tlService.createFileWithoutSignature(signatureObject.getTlId());
+			InputStream is = tlService.getXmlStreamToSign(signatureObject.getTlId());
+			DSSDocument doc = new InMemoryDocument(IOUtils.toByteArray(is));
+			doc.setMimeType(MimeType.XML);
+			XAdESSignatureParameters params = SignatureUtil.getSignatureParams(signatureObject.getCertificateResponse(),
+					doc);
 
-            model.addAttribute("params", params);
+			model.addAttribute("params", params);
 
-            SignatureRequest tbs = SignatureUtil.getToBeSigned(signatureObject.getCertificateResponse(), signatureService, doc, params);
+			SignatureRequest tbs = SignatureUtil.getToBeSigned(signatureObject.getCertificateResponse(),
+					signatureService, doc, params);
 
-            response.setContent(tbs);
-            response.setResponseStatus(HttpStatus.OK.toString());
-        } catch (DSSException e) {
-            LOGGER.error("Error during signature : " + e.getMessage(), e);
-            response.setErrorMessage(e.getMessage());
-            response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
-        } catch (Exception e) {
-            LOGGER.error("Error during signature : " + e.getMessage(), e);
-            response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
-        }
-        return response;
-    }
+			response.setContent(tbs);
+			response.setResponseStatus(HttpStatus.OK.toString());
+		} catch (DSSException e) {
+			LOGGER.error("Error during signature : " + e.getMessage(), e);
+			response.setErrorMessage(e.getMessage());
+			response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+		} catch (Exception e) {
+			LOGGER.error("Error during signature : " + e.getMessage(), e);
+			response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+		}
+		return response;
+	}
 
-    @RequestMapping(value = "/sign", method = RequestMethod.POST)
-    public @ResponseBody ServiceResponse<TLSignature> sign(@RequestBody TlSignatureNexUInformation signatureObject, @ModelAttribute("params") XAdESSignatureParameters params) {
-        ServiceResponse<TLSignature> response = new ServiceResponse<>();
-        try {
-            CertificateVerifier certificateVerifier = new CommonCertificateVerifier();
-            XAdESService signatureService = new XAdESService(certificateVerifier);
+	@RequestMapping(value = "/sign", method = RequestMethod.POST)
+	public @ResponseBody ServiceResponse<TLSignature> sign(@RequestBody TlSignatureNexUInformation signatureObject,
+			@ModelAttribute("params") XAdESSignatureParameters params) {
+		ServiceResponse<TLSignature> response = new ServiceResponse<>();
+		try {
+			CertificateVerifier certificateVerifier = new CommonCertificateVerifier();
+			XAdESService signatureService = new XAdESService(certificateVerifier);
 
-            InputStream is = tlService.getXmlStreamToSign(signatureObject.getTlId());
-            DSSDocument doc;
+			InputStream is = tlService.getXmlStreamToSign(signatureObject.getTlId());
+			DSSDocument doc;
 
-            doc = new InMemoryDocument(IOUtils.toByteArray(is));
+			doc = new InMemoryDocument(IOUtils.toByteArray(is));
 
-            SignatureValue signatureValue = new SignatureValue(SignatureAlgorithm.RSA_SHA256, signatureObject.getSignatureValue());
-            DSSDocument signedDoc = signatureService.signDocument(doc, params, signatureValue);
+			SignatureValue signatureValue = new SignatureValue(SignatureAlgorithm.RSA_SHA256,
+					signatureObject.getSignatureValue());
+			DSSDocument signedDoc = signatureService.signDocument(doc, params, signatureValue);
 
-            TL tl = tlService.getTL(signatureObject.getTlId());
-            auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.SIGN, AuditStatus.SUCCES, tl.getSchemeInformation().getTerritory(), 0,
-                    SecurityContextHolder.getContext().getAuthentication().getName(), "TLID:" + signatureObject.getTlId());
-            tlService.updateSignedXMLFile(signedDoc, signatureObject.getTlId());
+			TL tl = tlService.getTL(signatureObject.getTlId());
+			auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.SIGN, AuditStatus.SUCCES,
+					tl.getSchemeInformation().getTerritory(), 0,
+					SecurityContextHolder.getContext().getAuthentication().getName(),
+					"TLID:" + signatureObject.getTlId());
+			tlService.updateSignedXMLFile(signedDoc, signatureObject.getTlId());
 
-            //Check all TL
-            rulesRunnerService.validDraftAfterSignature(signatureObject.getTlId());
-            //Check signature
-            tlValidator.checkAllSignature(tlService.getDbTL(signatureObject.getTlId()));
-            response.setResponseStatus(HttpStatus.OK.toString());
-            TLSignature signature = tlService.getSignatureInfo(signatureObject.getTlId());
-            response.setContent(signature);
-        } catch (Exception e) {
-            LOGGER.error("Error during signature : " + e.getMessage(), e);
-            response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
-        }
-        return response;
+			// Check all TL
+			rulesRunnerService.validDraftAfterSignature(signatureObject.getTlId());
+			// Check signature
+			tlValidator.checkAllSignature(tlService.getDbTL(signatureObject.getTlId()));
+			response.setResponseStatus(HttpStatus.OK.toString());
+			TLSignature signature = tlService.getSignatureInfo(signatureObject.getTlId());
+			response.setContent(signature);
+		} catch (Exception e) {
+			LOGGER.error("Error during signature : " + e.getMessage(), e);
+			response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+		}
+		return response;
 
-    }
+	}
 
-    @RequestMapping(value = "/file_url", method = RequestMethod.GET)
-    public @ResponseBody ServiceResponse<String> getNexuZipUrl() {
-        ServiceResponse<String> response = new ServiceResponse<>();
-        response.setResponseStatus(HttpStatus.OK.toString());
-        response.setContent(nexuMsiFile);
-        return response;
-    }
+	@RequestMapping(value = "/file_url", method = RequestMethod.GET)
+	public @ResponseBody ServiceResponse<String> getNexuZipUrl() {
+		ServiceResponse<String> response = new ServiceResponse<>();
+		response.setResponseStatus(HttpStatus.OK.toString());
+		response.setContent(nexuMsiFile);
+		return response;
+	}
 }

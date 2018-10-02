@@ -20,7 +20,7 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.form;
 
-import lu.nowina.nexu.object.model.GetCertificateResponse;
+import eu.europa.ec.joinup.tsl.web.form.nexu.GetCertificateResponse;
 
 public class TlSignatureNexUInformation {
 
