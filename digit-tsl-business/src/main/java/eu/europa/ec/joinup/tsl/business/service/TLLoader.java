@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -22,15 +22,18 @@ package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.Load;
@@ -80,43 +83,95 @@ public class TLLoader {
     private AuditService auditService;
 
     @Autowired
+    private AbstractAlertingService alertingService;
+
+    @Autowired
     private TLDataLoaderService tlDataLoaderService;
+
+    @Value("${number.of.reload:5}")
+    private int numberOfReload;
+
+    @Value("${timeout.of.reload:500}")
+    private long timeoutOfReload;
 
     @Transactional(value = TxType.REQUIRES_NEW)
     public TrustStatusListType loadTL(String countryCode, String xmlUrl, TLType type, TLStatus status, Load loadObj) {
         TrustStatusListType jaxbTL = null;
 
+        // Get current TL or create a new entry
         DBTrustedLists tl = tlService.getOrCreateTL(countryCode, xmlUrl, type, status);
         loadObj.setTlId(tl.getId());
 
+        // Download XML file from URL and compare current digest with new downloaded digest
         DBFiles xmlFile = tl.getXmlFile();
         byte[] xmlBinaries = loadFile(xmlFile);
-        String digestOfXml = TLUtils.getSHA2(xmlBinaries);
-        boolean isNewXML = (ArrayUtils.isNotEmpty(xmlBinaries) && !StringUtils.equals(digestOfXml, xmlFile.getDigest()));
-        LOGGER.debug("***** isNewXML for " + countryCode + " is : " + isNewXML);
+        String xmlDigest = TLUtils.getSHA2(xmlBinaries);
+        boolean isNewXML = (ArrayUtils.isNotEmpty(xmlBinaries) && !StringUtils.equals(xmlDigest, xmlFile.getDigest()));
+        LOGGER.debug("Digest found for the trusted list from " + countryCode + " is different from current one : " + isNewXML);
         loadObj.setNew(isNewXML);
 
         boolean isNotFirstLoading = xmlFile.getFirstScanDate() != null;
 
-        if (isNewXML && isNotFirstLoading) {
+        // Retrieve PROD trusted lists with a similar XML digest from database
+        List<DBTrustedLists> matchingTL = tlService.findProdSimilarDigest(xmlDigest);
 
-            // Archive TL and recreate a new one
-            LOGGER.info("New version for " + countryCode + " | isNewXml --> " + isNewXML + " | digest --> " + digestOfXml);
-            tlService.archive(tl, true);
-            auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.ARCHIVE, AuditStatus.SUCCES, countryCode, xmlFile.getId(), "SYSTEM",
-                    "CLASS:TLLoader.LOADTL_ARCHIVETL,TLID:" + tl.getId());
-            tl = tlService.getOrCreateTL(countryCode, xmlUrl, type, status);
-            loadObj.setTlId(tl.getId());
+        // Verify if the new version is not the result of cache issue
+        if (isNewXML && isNotFirstLoading) {
+            Boolean cacheIssue = false;
+            if (!CollectionUtils.isEmpty(matchingTL)) {
+                // At least one PROD trusted list has the same digest => newest loaded trusted list is an previous version
+                byte[] tmpFile = null;
+                String tmpDigest = null;
+                for (int i = 1; i <= numberOfReload; i++) {
+                    try {
+                        tmpFile = dataLoader.get(xmlFile.getUrl(), true);
+                        tmpDigest = TLUtils.getSHA2(tmpFile);
+                        if ((ArrayUtils.isNotEmpty(tmpFile) && !StringUtils.equals(tmpDigest, xmlDigest))) {
+                            // Different version found
+                            LOGGER.error("Different version of the newest loaded trusted list from " + countryCode + " found on the " + i + " iteration. False new TL detected.");
+                            LOGGER.error("Newest loaded TL digest --> " + xmlDigest);
+                            LOGGER.error("Last iteration digest --> " + tmpDigest);
+                            cacheIssue = true;
+                            alertingService.sendTLCacheIssue(countryCode, xmlDigest, tmpDigest, i);
+                            break;
+                        }
+                        Thread.sleep(timeoutOfReload);
+                    } catch (InterruptedException e) {
+                        LOGGER.error("Error during trusted list " + countryCode + " reload n°" + i, e);
+                    }
+
+                }
+            }
+
+            if (cacheIssue) {
+                isNewXML = false;
+            } else {
+                // Archive TL and create a new entry
+                LOGGER.info("New trusted list version from " + countryCode + " confirmed. Digest --> " + xmlDigest);
+                tlService.archive(tl, true);
+                auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.ARCHIVE, AuditStatus.SUCCES, countryCode, xmlFile.getId(), "SYSTEM", "CLASS:TLLoader.LOADTL_ARCHIVETL,TLID:" + tl.getId());
+                tl = tlService.getOrCreateTL(countryCode, xmlUrl, type, status);
+                loadObj.setTlId(tl.getId());
+            }
         }
 
         xmlFile = tl.getXmlFile();
         xmlFile.setLastScanDate(new Date());
         if (isNewXML) {
-            xmlFile.setDigest(digestOfXml);
+            xmlFile.setDigest(xmlDigest);
             xmlFile.setFirstScanDate(new Date());
-            xmlFile.setLocalPath(fileService.storeNewTL(xmlFile, xmlBinaries, countryCode));
+
+            // Check if digest match an existing file
+            if (CollectionUtils.isEmpty(matchingTL)) {
+                // No digest match => Store the new file
+                xmlFile.setLocalPath(fileService.storeNewTL(xmlFile, xmlBinaries, countryCode));
+            } else {
+                // Digest match => file already stored on disk
+                xmlFile.setLocalPath(matchingTL.get(0).getXmlFile().getLocalPath());
+            }
+
             auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CREATE, AuditStatus.SUCCES, countryCode, xmlFile.getId(), "SYSTEM",
-                    "CLASS:TLLoader.LOADTL_CREATETL,TLID:" + tl.getId() + ",NEWXML:" + isNewXML + ",XMLDIGEST --> " + digestOfXml);
+                    "CLASS:TLLoader.LOADTL_CREATETL,TLID:" + tl.getId() + ",NEWXML:" + isNewXML + ",XMLDIGEST --> " + xmlDigest);
         }
 
         try {
@@ -125,7 +180,9 @@ public class TLLoader {
                 jaxbTL = jaxbService.unmarshallTSL(tslFile);
                 tl.setIssueDate(TLUtils.toDate(jaxbTL.getSchemeInformation().getListIssueDateTime()));
                 tl.setSequenceNumber(jaxbTL.getSchemeInformation().getTSLSequenceNumber().intValue());
-                tl.setNextUpdateDate(TLUtils.toDate(jaxbTL.getSchemeInformation().getNextUpdate().getDateTime()));
+                if (jaxbTL.getSchemeInformation().getNextUpdate() != null) {
+                    tl.setNextUpdateDate(TLUtils.toDate(jaxbTL.getSchemeInformation().getNextUpdate().getDateTime()));
+                }
                 tl.setVersionIdentifier(tlService.extractVersionFromFile(xmlFile));
             }
         } catch (Exception e) {
@@ -150,7 +207,7 @@ public class TLLoader {
             availibilityService.triggerAlerting(file.getId());
             return null;
         }
-        //TODO(5.4.RC1): TDEV-818
+        // TODO(5.4.RC1): TDEV-818
         if (isTslContent(file, byteArray) || isPdfContent(file.getMimeTypeFile(), byteArray) || isSHA2Content(file.getMimeTypeFile(), byteArray)) {
             availibilityService.setAvailable(file);
         } else {
@@ -196,8 +253,8 @@ public class TLLoader {
             if ((current != null) && (current.getTlId() > 0)) {
                 TL previous = tlService.getPreviousProduction(dbTl.getTerritory());
                 rulesRunner.runAllRules(current, previous);
-                auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, dbTl.getTerritory().getCodeTerritory(), dbTl.getXmlFile().getId(),
-                        "SYSTEM", "CLASS:TLLoader.CHECK,NAME:" + dbTl.getName() + ",XMLFILEID:" + dbTl.getXmlFile().getId() + ",XMLDIGEST:" + dbTl.getXmlFile().getDigest());
+                auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, dbTl.getTerritory().getCodeTerritory(), dbTl.getXmlFile().getId(), "SYSTEM",
+                        "CLASS:TLLoader.CHECK,NAME:" + dbTl.getName() + ",XMLFILEID:" + dbTl.getXmlFile().getId() + ",XMLDIGEST:" + dbTl.getXmlFile().getDigest());
             }
         }
     }

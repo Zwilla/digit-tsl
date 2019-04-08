@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -37,11 +36,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for TSLSchemeInformationType complex type.
+ * <p>
+ * Java class for TSLSchemeInformationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TSLSchemeInformationType"&gt;
@@ -74,28 +74,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TSLSchemeInformationType", propOrder = {
-    "tslVersionIdentifier",
-    "tslSequenceNumber",
-    "tslType",
-    "schemeOperatorName",
-    "schemeOperatorAddress",
-    "schemeName",
-    "schemeInformationURI",
-    "statusDeterminationApproach",
-    "schemeTypeCommunityRules",
-    "schemeTerritory",
-    "policyOrLegalNotice",
-    "historicalInformationPeriod",
-    "pointersToOtherTSL",
-    "listIssueDateTime",
-    "nextUpdate",
-    "distributionPoints",
-    "schemeExtensions"
-})
-public class TSLSchemeInformationTypeV5
-    implements Serializable
-{
+@XmlType(name = "TSLSchemeInformationType", propOrder = { "tslVersionIdentifier", "tslSequenceNumber", "tslType", "schemeOperatorName", "schemeOperatorAddress", "schemeName", "schemeInformationURI",
+        "statusDeterminationApproach", "schemeTypeCommunityRules", "schemeTerritory", "policyOrLegalNotice", "historicalInformationPeriod", "pointersToOtherTSL", "listIssueDateTime", "nextUpdate",
+        "distributionPoints", "schemeExtensions" })
+public class TSLSchemeInformationTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "TSLVersionIdentifier", required = true)
@@ -141,10 +123,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the tslVersionIdentifier property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getTSLVersionIdentifier() {
         return tslVersionIdentifier;
@@ -154,9 +134,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the tslVersionIdentifier property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setTSLVersionIdentifier(BigInteger value) {
         this.tslVersionIdentifier = value;
@@ -165,10 +144,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the tslSequenceNumber property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getTSLSequenceNumber() {
         return tslSequenceNumber;
@@ -178,9 +155,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the tslSequenceNumber property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setTSLSequenceNumber(BigInteger value) {
         this.tslSequenceNumber = value;
@@ -189,10 +165,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the tslType property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getTSLType() {
         return tslType;
@@ -202,9 +176,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the tslType property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setTSLType(String value) {
         this.tslType = value;
@@ -213,10 +186,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeOperatorName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getSchemeOperatorName() {
         return schemeOperatorName;
@@ -226,9 +197,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeOperatorName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setSchemeOperatorName(InternationalNamesTypeV5 value) {
         this.schemeOperatorName = value;
@@ -237,10 +207,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeOperatorAddress property.
      * 
-     * @return
-     *     possible object is
-     *     {@link AddressTypeV5 }
-     *     
+     * @return possible object is {@link AddressTypeV5 }
+     * 
      */
     public AddressTypeV5 getSchemeOperatorAddress() {
         return schemeOperatorAddress;
@@ -250,9 +218,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeOperatorAddress property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link AddressTypeV5 }
-     *     
+     *            allowed object is {@link AddressTypeV5 }
+     * 
      */
     public void setSchemeOperatorAddress(AddressTypeV5 value) {
         this.schemeOperatorAddress = value;
@@ -261,10 +228,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getSchemeName() {
         return schemeName;
@@ -274,9 +239,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setSchemeName(InternationalNamesTypeV5 value) {
         this.schemeName = value;
@@ -285,10 +249,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeInformationURI property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     * @return possible object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public NonEmptyMultiLangURIListTypeV5 getSchemeInformationURI() {
         return schemeInformationURI;
@@ -298,9 +260,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeInformationURI property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     *            allowed object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public void setSchemeInformationURI(NonEmptyMultiLangURIListTypeV5 value) {
         this.schemeInformationURI = value;
@@ -309,10 +270,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the statusDeterminationApproach property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getStatusDeterminationApproach() {
         return statusDeterminationApproach;
@@ -322,9 +281,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the statusDeterminationApproach property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setStatusDeterminationApproach(String value) {
         this.statusDeterminationApproach = value;
@@ -333,10 +291,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeTypeCommunityRules property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     * @return possible object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public NonEmptyMultiLangURIListTypeV5 getSchemeTypeCommunityRules() {
         return schemeTypeCommunityRules;
@@ -346,9 +302,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeTypeCommunityRules property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     *            allowed object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public void setSchemeTypeCommunityRules(NonEmptyMultiLangURIListTypeV5 value) {
         this.schemeTypeCommunityRules = value;
@@ -357,10 +312,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeTerritory property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getSchemeTerritory() {
         return schemeTerritory;
@@ -370,9 +323,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeTerritory property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setSchemeTerritory(String value) {
         this.schemeTerritory = value;
@@ -381,10 +333,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the policyOrLegalNotice property.
      * 
-     * @return
-     *     possible object is
-     *     {@link PolicyOrLegalnoticeTypeV5 }
-     *     
+     * @return possible object is {@link PolicyOrLegalnoticeTypeV5 }
+     * 
      */
     public PolicyOrLegalnoticeTypeV5 getPolicyOrLegalNotice() {
         return policyOrLegalNotice;
@@ -394,9 +344,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the policyOrLegalNotice property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link PolicyOrLegalnoticeTypeV5 }
-     *     
+     *            allowed object is {@link PolicyOrLegalnoticeTypeV5 }
+     * 
      */
     public void setPolicyOrLegalNotice(PolicyOrLegalnoticeTypeV5 value) {
         this.policyOrLegalNotice = value;
@@ -405,10 +354,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the historicalInformationPeriod property.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getHistoricalInformationPeriod() {
         return historicalInformationPeriod;
@@ -418,9 +365,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the historicalInformationPeriod property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setHistoricalInformationPeriod(BigInteger value) {
         this.historicalInformationPeriod = value;
@@ -429,10 +375,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the pointersToOtherTSL property.
      * 
-     * @return
-     *     possible object is
-     *     {@link OtherTSLPointersTypeV5 }
-     *     
+     * @return possible object is {@link OtherTSLPointersTypeV5 }
+     * 
      */
     public OtherTSLPointersTypeV5 getPointersToOtherTSL() {
         return pointersToOtherTSL;
@@ -442,9 +386,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the pointersToOtherTSL property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link OtherTSLPointersTypeV5 }
-     *     
+     *            allowed object is {@link OtherTSLPointersTypeV5 }
+     * 
      */
     public void setPointersToOtherTSL(OtherTSLPointersTypeV5 value) {
         this.pointersToOtherTSL = value;
@@ -453,10 +396,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the listIssueDateTime property.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getListIssueDateTime() {
         return listIssueDateTime;
@@ -466,9 +407,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the listIssueDateTime property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setListIssueDateTime(XMLGregorianCalendar value) {
         this.listIssueDateTime = value;
@@ -477,10 +417,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the nextUpdate property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NextUpdateTypeV5 }
-     *     
+     * @return possible object is {@link NextUpdateTypeV5 }
+     * 
      */
     public NextUpdateTypeV5 getNextUpdate() {
         return nextUpdate;
@@ -490,9 +428,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the nextUpdate property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NextUpdateTypeV5 }
-     *     
+     *            allowed object is {@link NextUpdateTypeV5 }
+     * 
      */
     public void setNextUpdate(NextUpdateTypeV5 value) {
         this.nextUpdate = value;
@@ -501,10 +438,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the distributionPoints property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyURIListTypeV5 }
-     *     
+     * @return possible object is {@link NonEmptyURIListTypeV5 }
+     * 
      */
     public NonEmptyURIListTypeV5 getDistributionPoints() {
         return distributionPoints;
@@ -514,9 +449,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the distributionPoints property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NonEmptyURIListTypeV5 }
-     *     
+     *            allowed object is {@link NonEmptyURIListTypeV5 }
+     * 
      */
     public void setDistributionPoints(NonEmptyURIListTypeV5 value) {
         this.distributionPoints = value;
@@ -525,10 +459,8 @@ public class TSLSchemeInformationTypeV5
     /**
      * Gets the value of the schemeExtensions property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     * @return possible object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public ExtensionsListTypeV5 getSchemeExtensions() {
         return schemeExtensions;
@@ -538,9 +470,8 @@ public class TSLSchemeInformationTypeV5
      * Sets the value of the schemeExtensions property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     *            allowed object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public void setSchemeExtensions(ExtensionsListTypeV5 value) {
         this.schemeExtensions = value;

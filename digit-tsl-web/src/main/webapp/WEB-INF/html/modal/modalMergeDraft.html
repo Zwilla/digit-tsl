@@ -1,0 +1,119 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<span th:text="#{mergeDraft.title}"></span>
+		<span class="fa fa-times cursor-pointer" ng-click="cancel()" style="margin-left: 5px; float: right"></span>
+	</div>
+	<div class="panel-body">
+		<!-- Informations -->
+		<div class="row">
+			<span class="fa fa-info-circle"></span>
+			<span th:text="#{mergeDraft.info}"></span>
+			<span style="display: inline-block" th:text="#{mergeDraft.info2}"></span>
+			<span style="display: inline-block" th:text="#{mergeDraft.info3}"></span>
+		</div>
+		<br />
+		<!-- Country selector -->
+		<div ng-show="countries.length>1" style="margin-bottom: 10px;">
+			<label th:text="#{mergeDraft.multipleCountries}"></label>
+			<select ng-model="country" style="height: 34px !important;" ng-disabled="loadMerge">
+				<option value=""><span th:text="#{tSelectCountry}"></span></option>
+				<option ng-repeat="c in countries" value="{{c.countryCode}}">{{c.countryName}}
+			</select>
+		</div>
+
+		<!-- Drafts table -->
+		<div ng-if="selectedCountry">
+			<div class="row" ng-if="!country">
+				<span style="text-decoration: underline;" th:text=#{tbCountry}></span>
+				:
+				<label> {{selectedCountry.countryName}}</label>
+			</div>
+			<table class="table table-condensed" style="margin-top: 5px;">
+				<thead>
+					<tr>
+						<th style="margin-left: 10px;">Merge</th>
+						<th th:text="#{tFileName}" class="text-center"></th>
+						<th th:text="#{tbSN}" class="text-right"></th>
+						<th th:text="#{tlBrowser.issueDate}" class="text-right"></th>
+						<th th:text="#{tlBrowser.expiryDate}" class="text-right"></th>
+						<th th:text="#{tSignature}" class="text-center"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr align="left" ng-repeat="draft in drafts" ng-if="draft.territoryCode==selectedCountry.countryCode">
+						<td style="margin-left: 5px;">
+							<input type="checkbox" class="form-check-input" ng-model="draft.selectToMerge" ng-click="updateSelectedList()" ng-disabled="loadMerge">
+						</td>
+						<td class="text-center">
+							<span>{{draft.name}}</span>
+						</td>
+						<td style="text-align: right;">
+							<span>{{draft.sequenceNumber}}</span>
+						</td>
+						<td class="text-right">
+							<span>{{draft.issueDate | date:'yyyy-MM-dd'}}</span>
+						</td>
+						<td style="text-align: right;">
+							<span>{{draft.nextUpdateDate| date:'yyyy-MM-dd'}}</span>
+						</td>
+						<td class="text-center">
+							<span>{{draft.sigStatus}}</span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="row" ng-if="!loadMerge">
+				<div ng-if="conflicts.length>0">
+					<h4 class="warnColor" style="text-decoration: underline">
+						{{conflicts.length}}
+						<span th:text="#{mergeDraft.conflictDetected}"></span>
+					</h4>
+					<div ng-repeat="conflict in conflicts" style="margin-bottom: 5px;">
+						<span class="fa fa-arrow-right"></span>
+						<span ng-repeat="draft in conflict.drafts track by $index">
+							<label>{{draft}}</label>
+							<span ng-if="$index+1<conflict.drafts.length">, </span>
+						</span>
+						:
+						<span>{{conflict.location}}</span>
+					</div>
+				</div>
+				<div ng-if="conflicts.length==0 && mergeChanges!=null">
+					<h4 style="color: #337ab7; text-decoration: underline" th:text=#{mergeDraft.elementToMerge}></h4>
+					<div ng-if="getMapLength(mergeChanges.siResult.mergeResult)==0 && getMapLength(mergeChanges.pointerResult.mergeResult)==0 && getMapLength(mergeChanges.tspResult.mergeResult)==0">
+						<label th:text="#{mergeDraft.noElement}"></label>
+					</div>
+					<!-- SI result -->
+					<div ng-if="getMapLength(mergeChanges.siResult.mergeResult)>0" style="margin-top: 5px;">
+						<label th:text="#{schemeInformation}"></label>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.siResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+					</div>
+					<!-- PTOTL result -->
+					<div ng-if="getMapLength(mergeChanges.pointerResult.mergeResult)>0" style="margin-top: 5px;">
+						<label th:text="#{pdf.pointer}"></label>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.pointerResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+					</div>
+					<!-- TSP result -->
+					<div ng-if="getMapLength(mergeChanges.tspResult.mergeResult)>0" style="margin-top: 5px;">
+						<label th:text="#{serviceProvider}"></label>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.tspResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+					</div>
+
+					<div class="alert alert-warning" style="margin-top: 10px;">
+						<label th:text="#{tbCheckWarning}"></label>
+						:
+						<span th:text="#{mergeDraft.disclaimerTLDelete}"></span>
+					</div>
+				</div>
+				<div>
+					<br />
+					<button ng-if="!readyToMerge" ng-click="prepareMerge()" ng-disabled="!isDraftsSelected" type="button" class="btn btn-warning" style="float: right" th:text="#{mergeDraft.prepareMerge}"></button>
+					<button ng-if="readyToMerge" ng-click="merge()" type="button" class="btn btn-primary" style="float: right" th:text="#{mergeDraft.executeMerge}"></button>
+				</div>
+			</div>
+			<div class="row" ng-if="loadMerge">
+				<label style="float: right">{{loadStatus}}</label>
+			</div>
+		</div>
+	</div>
+</div>

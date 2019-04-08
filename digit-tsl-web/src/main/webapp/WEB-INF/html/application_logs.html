@@ -2,37 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 
 <script th:src="@{/controllers/logsController.js}"></script>
 
 </head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="logsController">
+	<div class="body" ng-controller="logsController">
 
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- MAIN CONTENT -->
-        <main ng-if="load==false">
-        <div align="center">
-            <label>{{loadingLogs}}</label>
-        </div>
-        <div th:replace="spinner :: spinner"></div>
-        </main>
-        <main id="content" class="panel panel-primary" ng-show="load==true"> <!-- Table -->
-        <div class="panel-heading" style="max-height: 35px">
-            <span th:text="#{tLogs}"></span>
-        </div>
-        <div>
-            <paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
-        </div>
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+		<!-- MAIN CONTENT -->
+		<main ng-if="load==false">
+		<div align="center">
+			<label>{{loadingLogs}}</label>
+		</div>
+		<th:block th:replace="spinner :: spinner"></th:block> </main>
+		<main id="content" class="panel panel-primary" ng-show="load==true"> <!-- Table -->
+		<div class="panel-heading" style="max-height: 35px">
+			<span th:text="#{tLogs}"></span>
+		</div>
+		<div class="border-tlm">
+			<paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

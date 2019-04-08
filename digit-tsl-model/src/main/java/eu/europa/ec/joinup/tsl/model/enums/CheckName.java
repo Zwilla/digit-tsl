@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -23,10 +23,8 @@ package eu.europa.ec.joinup.tsl.model.enums;
 public enum CheckName {
 
     // GENERICS
-    IS_PRESENT,
-    IS_LIST_NOT_EMPTY,
-    IS_VALUES_NOT_EMPTY,
-    IS_ATTRIBUTE_LANG_PRESENT,
+    IS_PRESENT, IS_LIST_NOT_EMPTY,
+    IS_VALUES_NOT_EMPTY, IS_ATTRIBUTE_LANG_PRESENT,
     IS_ATTRIBUTE_LANG_LOWERCASE,
     IS_ATTRIBUTE_LANG_ALLOWED,
     IS_LIST_CONTAIN_LANG_EN,
@@ -42,7 +40,7 @@ public enum CheckName {
     ALL_X509_CERTS_EXPIRED_GRANT_OR_REC_NAT_LEVEL,
     ONE_X509_CERT_EXPIRED_GRANT_OR_REC_NAT_LEVEL,
 
-    //POINTER
+    // POINTER
     IS_MIME_TYPE_PRESENT,
     IS_LOCATION_PRESENT,
     IS_LOCATION_VALID,
@@ -66,15 +64,25 @@ public enum CheckName {
     IS_X509CERTIFICATE_ORGANIZATION_MATCH,
     IS_SERVICE_DIGITAL_IDENTITIES_CORRECT,
 
-    //COMPARISON CHECK
+    // COMPARISON CHECK
     IS_SEQUENCE_NUMBER_INCREMENTED,
     IS_ALL_PREVIOUS_TSP_SERVICE_PROVIDERS_PRESENT,
     IS_ALL_PREVIOUS_TSP_SERVICES_PRESENT,
     IS_ALL_PREVIOUS_TSP_SERVICE_HISTORIES_PRESENT,
-
     IS_CRITERIA_ASSERTS_NOT_NULL,
     IS_QUALIFICATION_ELEMENT_PRESENT,
     IS_QUALIFIERS_PRESENT,
+
+    // TRANSITION CHECK
+    SERVICE_UPDATE_NO_HISTORY,
+    HISTORY_CHANGE,
+    SERVICE_PUBLICATION_DATE,
+    TSP_DELETE,
+    SERVICE_DELETE,
+    BACK_DATING_ISSUE_DATE,
+    SIGNING_DATE_ULTERIOR,
+    ISSUE_DATE_ULTERIOR,
+    NEW_HISTORY_CHANGE,
 
     //TLCC
     ELADD_MUST_HAVE_SCHEME,

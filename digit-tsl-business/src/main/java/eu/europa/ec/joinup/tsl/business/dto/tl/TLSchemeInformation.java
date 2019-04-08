@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -240,8 +240,7 @@ public class TLSchemeInformation extends AbstractTLDTO {
         List<TLPostalAddress> postalAddresses = new ArrayList<>();
         List<TLElectronicAddress> electronicAddresses = new ArrayList<>();
         if (tslSchemeInfo.getSchemeOperatorAddress() != null) {
-            if ((tslSchemeInfo.getSchemeOperatorAddress().getPostalAddresses() != null)
-                    && (tslSchemeInfo.getSchemeOperatorAddress().getPostalAddresses().getPostalAddress() != null)) {
+            if ((tslSchemeInfo.getSchemeOperatorAddress().getPostalAddresses() != null) && (tslSchemeInfo.getSchemeOperatorAddress().getPostalAddresses().getPostalAddress() != null)) {
                 for (PostalAddressTypeV5 postAdr : tslSchemeInfo.getSchemeOperatorAddress().getPostalAddresses().getPostalAddress()) {
                     i++;
                     postalAddresses.add(new TLPostalAddress(iddb, getId() + "_" + Tag.POSTAL_ADDRESSES + "_" + i, postAdr));
@@ -464,7 +463,7 @@ public class TLSchemeInformation extends AbstractTLDTO {
 
         if ((getNextUpdateDate() == null) && (publishedTl.getNextUpdateDate() != null)) {
             diffList.add(new TLDifference(getId() + "_" + Tag.NEXT_UPDATE, TLUtils.toStringFormat(publishedTl.getNextUpdateDate()), ""));
-        } else if (!getNextUpdateDate().equals(publishedTl.getNextUpdateDate())) {
+        } else if (getNextUpdateDate() != null && !getNextUpdateDate().equals(publishedTl.getNextUpdateDate())) {
             diffList.add(new TLDifference(getId() + "_" + Tag.NEXT_UPDATE, TLUtils.toStringFormat(publishedTl.getNextUpdateDate()), TLUtils.toStringFormat(getNextUpdateDate())));
         }
 
@@ -585,8 +584,7 @@ public class TLSchemeInformation extends AbstractTLDTO {
 
         // SCHEME TYPE COMMUNITY RULE
         if (CollectionUtils.isNotEmpty(getSchemeTypeCommRule())) {
-            List<TLDifference> changeList = ChangeUtils.diffOfTLTypeCommunityList(getSchemeTypeCommRule(), publishedTl.getSchemeTypeCommRule(),
-                    getId() + "_" + Tag.SCHEME_TYPE_COMMUNITY_RULES);
+            List<TLDifference> changeList = ChangeUtils.diffOfTLTypeCommunityList(getSchemeTypeCommRule(), publishedTl.getSchemeTypeCommRule(), getId() + "_" + Tag.SCHEME_TYPE_COMMUNITY_RULES);
             if (changeList.size() > 0) {
                 diffList.addAll(changeList);
             }

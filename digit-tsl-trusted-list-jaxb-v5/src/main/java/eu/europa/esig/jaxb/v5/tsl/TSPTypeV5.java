@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -34,11 +33,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for TSPType complex type.
+ * <p>
+ * Java class for TSPType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TSPType"&gt;
@@ -56,13 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TSPType", propOrder = {
-    "tspInformation",
-    "tspServices"
-})
-public class TSPTypeV5
-    implements Serializable
-{
+@XmlType(name = "TSPType", propOrder = { "tspInformation", "tspServices" })
+public class TSPTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "TSPInformation", required = true)
@@ -73,10 +68,8 @@ public class TSPTypeV5
     /**
      * Gets the value of the tspInformation property.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPInformationTypeV5 }
-     *     
+     * @return possible object is {@link TSPInformationTypeV5 }
+     * 
      */
     public TSPInformationTypeV5 getTSPInformation() {
         return tspInformation;
@@ -86,9 +79,8 @@ public class TSPTypeV5
      * Sets the value of the tspInformation property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPInformationTypeV5 }
-     *     
+     *            allowed object is {@link TSPInformationTypeV5 }
+     * 
      */
     public void setTSPInformation(TSPInformationTypeV5 value) {
         this.tspInformation = value;
@@ -97,10 +89,8 @@ public class TSPTypeV5
     /**
      * Gets the value of the tspServices property.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPServicesListTypeV5 }
-     *     
+     * @return possible object is {@link TSPServicesListTypeV5 }
+     * 
      */
     public TSPServicesListTypeV5 getTSPServices() {
         return tspServices;
@@ -110,9 +100,8 @@ public class TSPTypeV5
      * Sets the value of the tspServices property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPServicesListTypeV5 }
-     *     
+     *            allowed object is {@link TSPServicesListTypeV5 }
+     * 
      */
     public void setTSPServices(TSPServicesListTypeV5 value) {
         this.tspServices = value;

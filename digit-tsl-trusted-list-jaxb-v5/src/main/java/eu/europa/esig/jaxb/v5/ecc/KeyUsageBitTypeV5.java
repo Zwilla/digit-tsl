@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.ecc;
 
 import java.io.Serializable;
@@ -35,11 +34,12 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
-
 /**
- * <p>Java class for KeyUsageBitType complex type.
+ * <p>
+ * Java class for KeyUsageBitType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="KeyUsageBitType"&gt;
@@ -68,12 +68,8 @@ import javax.xml.bind.annotation.XmlValue;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KeyUsageBitType", propOrder = {
-    "value"
-})
-public class KeyUsageBitTypeV5
-    implements Serializable
-{
+@XmlType(name = "KeyUsageBitType", propOrder = { "value" })
+public class KeyUsageBitTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlValue
@@ -100,10 +96,8 @@ public class KeyUsageBitTypeV5
     /**
      * Gets the value of the name property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getName() {
         return name;
@@ -113,9 +107,8 @@ public class KeyUsageBitTypeV5
      * Sets the value of the name property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setName(String value) {
         this.name = value;

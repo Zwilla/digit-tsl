@@ -2,29 +2,29 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="getUserInfo()">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 </head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
-    <div class="body">
-        <main>
-        <div class="row">
-            <div>
-                <h1 th:text="#{tError404}"></h1>
-            </div>
-            <div>
-                <label th:text="#{tNotFound}"></label>
-            </div>
-            <div>
-                <span th:text="#{tReturnHome}"></span>
-                :
-                <a href="/tl-manager/home" th:text="#{tClickHere}"></a>
-            </div>
-        </div>
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
+	<div class="body">
+		<main>
+		<div class="row">
+			<div>
+				<h1 th:text="#{tError404}"></h1>
+			</div>
+			<div>
+				<label th:text="#{tNotFound}"></label>
+			</div>
+			<div>
+				<span th:text="#{tReturnHome}"></span>
+				:
+				<a href="/tl-manager/home" th:text="#{tClickHere}"></a>
+			</div>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

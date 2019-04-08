@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -200,9 +200,7 @@ public class UserService {
     }
 
     /**
-     * Update role by type (Add/Remove)
-     * Error : user is null
-     * Error : role is null
+     * Update role by type (Add/Remove) Error : user is null Error : role is null
      *
      * @param userId
      * @param roleId
@@ -230,9 +228,7 @@ public class UserService {
     }
 
     /**
-     * Update user territory;
-     * Error : user is null;
-     * Error : country is null;
+     * Update user territory; Error : user is null; Error : country is null;
      *
      * @param ecasId
      * @param territory
@@ -314,8 +310,7 @@ public class UserService {
     }
 
     /**
-     * Update user (create & remove) between user in database & tmp list;
-     * Set Authenticated Role by default to all users persisted;
+     * Update user (create & remove) between user in database & tmp list; Set Authenticated Role by default to all users persisted;
      *
      * @param territory
      * @param users
@@ -326,8 +321,7 @@ public class UserService {
         for (DBUser dbUser : userChange.getDbUsers()) {
             if (userChange.getUserRemoved().contains(dbUser.getEcasId())) {
                 userRepository.delete(dbUser);
-                auditService.addAuditLog(AuditTarget.ADMINISTRATION_USER, AuditAction.DELETE, AuditStatus.SUCCES, userChange.getTerritory(), 0, "SYSTEM",
-                        "Delete user: " + dbUser.getEcasId());
+                auditService.addAuditLog(AuditTarget.ADMINISTRATION_USER, AuditAction.DELETE, AuditStatus.SUCCES, userChange.getTerritory(), 0, "SYSTEM", "Delete user: " + dbUser.getEcasId());
             }
         }
 
@@ -351,8 +345,7 @@ public class UserService {
                                     "User " + userAth.getEcasId() + " cannot be updated due to territory NULL");
                         } else if (!userAth.getTerritory().getCodeTerritory().equals(userChange.getTerritory())) {
                             auditService.addAuditLog(AuditTarget.ADMINISTRATION_USER, AuditAction.UPDATE, AuditStatus.ERROR, userChange.getTerritory(), 0, "NOTIFICATION",
-                                    "User " + userAth.getEcasId() + " cannot be updated by " + userChange.getTerritory() + ". Already set for "
-                                            + userAth.getTerritory().getCodeTerritory());
+                                    "User " + userAth.getEcasId() + " cannot be updated by " + userChange.getTerritory() + ". Already set for " + userAth.getTerritory().getCodeTerritory());
 
                         } else {
                             userAth.setName(user.getName());

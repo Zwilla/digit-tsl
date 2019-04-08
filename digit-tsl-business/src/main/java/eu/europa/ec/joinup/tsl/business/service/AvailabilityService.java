@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -126,7 +126,7 @@ public class AvailabilityService {
             throw new IllegalStateException(bundle.getString("error.availability.request.date.undefined"));
         }
         AvailabilityHistory myHistory = new AvailabilityHistory();
-        //Get Availability entries
+        // Get Availability entries
         List<DBFiles> tlFiles = fileService.getProductionTLFilesByTerritoryOrderByFirstScanDate(tl.getTerritory());
         List<DBFilesAvailability> dbFilesAvailability = getAvailabilityEntriesOrderer(tlFiles, dMin, dMax);
 
@@ -146,21 +146,21 @@ public class AvailabilityService {
         List<AvailabilityState> unavailableTiming = new ArrayList<>();
 
         if (!CollectionUtils.isEmpty(availabilityDbList)) {
-            //1st entry
+            // 1st entry
             AvailabilityState tmpEntry = new AvailabilityState();
             tmpEntry.setStatus(availabilityDbList.get(0).getStatus());
             tmpEntry.setStartDate(availabilityDbList.get(0).getCheckDate());
             tmpEntry.setEndDate(dMax);
 
-            //Loop through list
+            // Loop through list
             for (int i = 1; i < availabilityDbList.size(); i++) {
                 if (tmpEntry.getStatus().equals(availabilityDbList.get(i).getStatus())) {
                     tmpEntry.setStartDate(availabilityDbList.get(i).getCheckDate());
                 } else {
-                    //Back-up endDate and add to list
+                    // Back-up endDate and add to list
                     Date endDate = tmpEntry.getStartDate();
                     unavailableTiming.add(tmpEntry);
-                    //Init new entry
+                    // Init new entry
                     tmpEntry = new AvailabilityState();
                     tmpEntry.setStatus(availabilityDbList.get(i).getStatus());
                     tmpEntry.setStartDate(availabilityDbList.get(i).getCheckDate());
@@ -181,12 +181,12 @@ public class AvailabilityService {
         List<Availability> tmpChartList = new ArrayList<>();
         if (!CollectionUtils.isEmpty(availabilityStateList)) {
             for (AvailabilityState state : availabilityStateList) {
-                //Create two points by entry
+                // Create two points by entry
                 Availability entryEnd = new Availability(state.getStatus());
                 entryEnd.setCheckDate(state.getEndDate());
                 Availability entryStart = new Availability(state.getStatus());
                 entryStart.setCheckDate(state.getStartDate());
-                //Add entries
+                // Add entries
                 tmpChartList.add(entryEnd);
                 tmpChartList.add(entryStart);
             }
@@ -230,22 +230,22 @@ public class AvailabilityService {
             availabilityResultList.addAll(availabilityRepository.findBetweenTwoDate(xmlFile.getId(), dMin, dMax));
         }
 
-        //No result at all
+        // No result at all
         if (CollectionUtils.isEmpty(availabilityFullDbList)) {
             return Collections.emptyList();
         }
 
-        //Force sort by check date
+        // Force sort by check date
         Collections.sort(availabilityFullDbList, new AvailabilityComparatorUtils());
         Collections.sort(availabilityResultList, new AvailabilityComparatorUtils());
 
         if (availabilityFullDbList.size() != availabilityResultList.size()) {
-            //Check if there is a gap between oldest entry before dMin and dMin
+            // Check if there is a gap between oldest entry before dMin and dMin
             if (CollectionUtils.isEmpty(availabilityResultList) || (availabilityResultList.get(availabilityResultList.size() - 1).getCheckDate().after(dMin))) {
-                //Find the gap
+                // Find the gap
                 DBFilesAvailability missingGap = getAvailabilityGap(dMin, availabilityFullDbList);
                 if (missingGap != null) {
-                    //Add missing gap at last position
+                    // Add missing gap at last position
                     availabilityResultList.add(missingGap);
                 }
             }
@@ -261,7 +261,7 @@ public class AvailabilityService {
      */
 
     private DBFilesAvailability getAvailabilityGap(Date dMin, List<DBFilesAvailability> availabilityFullDbList) {
-        //Init Params
+        // Init Params
         Boolean valueFind = false;
         int index = 0;
         while (!valueFind && (index < (availabilityFullDbList.size()))) {
@@ -291,14 +291,14 @@ public class AvailabilityService {
         if (CollectionUtils.isEmpty(tmpAvailability)) {
             return null;
         }
-        //Init variables
+        // Init variables
         AvailabilityStatus currentStatus = tmpAvailability.get(0).getStatus();
         AvailabilityState currentStatusTiming = new AvailabilityState();
         currentStatusTiming.setStatus(currentStatus);
         currentStatusTiming.setStartDate(tmpAvailability.get(0).getCheckDate());
         currentStatusTiming.setEndDate(new Date());
         if (tmpAvailability.size() > 1) {
-            //Init n+1 value
+            // Init n+1 value
             int index = 0;
             DBFilesAvailability prevStatus = tmpAvailability.get(index);
             while (prevStatus.getStatus().equals(currentStatus) && (index < tmpAvailability.size())) {
@@ -334,7 +334,8 @@ public class AvailabilityService {
     }
 
     /**
-     * Check availabilities for a specific file and send mail alert if unavailable since more than @availabilityTiming minutes and no alert has been already send
+     * Check availabilities for a specific file and send mail alert if unavailable since more than @availabilityTiming minutes and no alert has been
+     * already send
      *
      * @param fileId
      */
@@ -344,7 +345,7 @@ public class AvailabilityService {
             LOGGER.error("Is Already Alert - file availability null for file id : " + fileId);
         } else if (!lastAvailabilityEntry.getAlerted() && unavailabilityAlertVerification(fileId)) {
             alertingService.sendAvailabilityAlert(tlService.findByXmlFileId(fileId));
-            //Update flag
+            // Update flag
             lastAvailabilityEntry.setAlerted(true);
             availabilityRepository.save(lastAvailabilityEntry);
             return true;

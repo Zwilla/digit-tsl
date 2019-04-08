@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -114,7 +114,11 @@ public class TL extends AbstractTLDTO {
     public TrustStatusListTypeV5 asTSLTypeV5() {
         TrustStatusListTypeV5 tslType = new TrustStatusListTypeV5();
         tslType.setId(getTslId());
-        tslType.setTSLTag(getTslTag());
+        if (StringUtils.isEmpty(getTslTag())) {
+            tslType.setTSLTag(null);
+        } else {
+            tslType.setTSLTag(getTslTag());
+        }
         if (getSchemeInformation() != null) {
             tslType.setSchemeInformation(getSchemeInformation().asTSLTypeV5());
         }
@@ -130,7 +134,9 @@ public class TL extends AbstractTLDTO {
         if ((getServiceProviders() != null) && CollectionUtils.isNotEmpty(getServiceProviders())) {
             TrustServiceProviderListTypeV5 tslServiceProvider = new TrustServiceProviderListTypeV5();
             for (TLServiceProvider serviceP : getServiceProviders()) {
-                tslServiceProvider.getTrustServiceProvider().add(serviceP.asTSLTypeV5());
+                if (serviceP != null) {
+                    tslServiceProvider.getTrustServiceProvider().add(serviceP.asTSLTypeV5());
+                }
             }
             tslType.setTrustServiceProviderList(tslServiceProvider);
         }
@@ -209,8 +215,7 @@ public class TL extends AbstractTLDTO {
                     if (published.getMimeType() != null) {
                         if ((draft.getSchemeTerritory() == null) && (published.getSchemeTerritory() != null)) {
                             diffList.add(new TLDifference(draft.getId() + "_" + Tag.POINTER_SCHEME_TERRITORY, published.getSchemeTerritory(), ""));
-                        } else if (draft.getSchemeTerritory().equalsIgnoreCase(published.getSchemeTerritory())
-                                && draft.getMimeType().toString().equalsIgnoreCase(published.getMimeType().toString())) {
+                        } else if (draft.getSchemeTerritory().equalsIgnoreCase(published.getSchemeTerritory()) && draft.getMimeType().toString().equalsIgnoreCase(published.getMimeType().toString())) {
                             // SAME MIME TYPE
                             List<TLDifference> tmpDifList = draft.asPublishedDiff(published);
                             if ((tmpDifList != null) && !tmpDifList.isEmpty()) {
@@ -269,14 +274,14 @@ public class TL extends AbstractTLDTO {
         tmp.add(newTmp);
     }
 
-    public List<TLDifference> getServiceDiff(List<TLServiceProvider> publishedServicesProvider, String parentId) {
+    public List<TLDifference> getTrustServiceProvidersDiff(List<TLServiceProvider> publishedServicesProvider, String parentId) {
         List<TLDifference> diffList = new ArrayList<>();
 
         // COPY VALUE OF DRAFT DATA
         List<TLServiceProvider> tmp = new ArrayList<>(getServiceProviders());
         List<TLServiceProvider> tmpPublished = new ArrayList<>(publishedServicesProvider);
 
-        // DELETE EQUALS
+        // Delete draft TSPs who match published TSPs
         for (int i = 0; i < getServiceProviders().size(); i++) {
             if (tmpPublished.contains(getServiceProviders().get(i))) {
                 tmp.remove(getServiceProviders().get(i));
@@ -284,35 +289,33 @@ public class TL extends AbstractTLDTO {
             }
         }
 
-        // CHECK OTHERS
+        // Check remaining draft TSPs
         for (TLServiceProvider draft : tmp) {
             boolean find = false;
-            // IF TSP NAME
-            if ((draft.getTSPName() != null) && CollectionUtils.isNotEmpty(draft.getTSPName())) {
-                List<TLDifference> pointersTmpDifList = new ArrayList<>();
+            if (CollectionUtils.isNotEmpty(draft.getTSPName())) {
+                List<TLDifference> tspDiffs = new ArrayList<>();
                 for (TLServiceProvider published : tmpPublished) {
                     if (draft.getTSPName().equals(published.getTSPName())) {
-                        // SAME NAME
                         List<TLDifference> tmpDifList = draft.asPublishedDiff(published, draft.getId());
                         if ((tmpDifList != null) && !tmpDifList.isEmpty()) {
-                            pointersTmpDifList.addAll(tmpDifList);
-                            tmpPublished.remove(published);
-                            find = true;
-                            break;
+                            tspDiffs.addAll(tmpDifList);
                         }
+                        tmpPublished.remove(published);
+                        find = true;
+                        break;
                     }
                 }
 
-                if (!pointersTmpDifList.isEmpty()) {
-                    diffList.addAll(pointersTmpDifList);
+                if (CollectionUtils.isNotEmpty(tspDiffs)) {
+                    diffList.addAll(tspDiffs);
                 }
 
-                // IF NOT FIND LANGUAGE --> NEW LANGUAGE
+                // No published TSPs match current draft TSP
                 if (!find) {
                     diffList.add(new TLDifference(draft.getId(), "", draft.getTSPName().get(0).getLanguage() + " - " + draft.getTSPName().get(0).getValue()));
                 }
             } else {
-                // NO NAME --> NO CHANGEchanges.noTSPName
+                // Draft TSP name undefined
                 diffList.add(new TLDifference(draft.getId(), "", bundle.getString("changes.noTSPName")));
             }
         }

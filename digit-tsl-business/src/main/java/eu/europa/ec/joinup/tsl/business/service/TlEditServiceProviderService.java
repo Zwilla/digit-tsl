@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -75,7 +75,7 @@ public class TlEditServiceProviderService {
         DBTrustedLists tldb = tlRepository.findOne(id);
         if (TLStatus.DRAFT.equals(tldb.getStatus())) {
             boolean newServiceProvider = true;
-            //CHANGES IN XML FILE
+            // CHANGES IN XML FILE
             TL tl = tlService.getTL(id);
             TLServiceProvider serviceProviderUpdated = null;
             for (TLServiceProvider tlServiceProvider : tl.getServiceProviders()) {
@@ -111,7 +111,7 @@ public class TlEditServiceProviderService {
                         tlServiceProvider.setTSPTradeName(new ArrayList<TLName>());
                     }
 
-                    //No update
+                    // No update
                     if (serviceProvider.getTSPExtension() != null) {
                         tlServiceProvider.setTSPExtension(serviceProvider.getTSPExtension());
                     } else {
@@ -133,8 +133,7 @@ public class TlEditServiceProviderService {
                                                 try {
                                                     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                                                     dbf.setNamespaceAware(true);
-                                                    Element newOtherElement = dbf.newDocumentBuilder().parse(new ByteArrayInputStream(((String) obj).getBytes("UTF-16")))
-                                                            .getDocumentElement();
+                                                    Element newOtherElement = dbf.newDocumentBuilder().parse(new ByteArrayInputStream(((String) obj).getBytes("UTF-16"))).getDocumentElement();
                                                     LOGGER.warn("other element is a String, casting to Element");
                                                     obj = newOtherElement;
                                                 } catch (Exception e) {
@@ -172,7 +171,7 @@ public class TlEditServiceProviderService {
             if (ArrayUtils.isNotEmpty(updatedTL)) {
                 DBFiles xmlFile = tldb.getXmlFile();
                 xmlFile.setLocalPath(fileService.storeNewDraftTL(xmlFile.getMimeTypeFile(), updatedTL, tldb.getTerritory().getCodeTerritory(), xmlFile.getLocalPath()));
-                //tldb.setXmlFile(xmlFile);
+                // tldb.setXmlFile(xmlFile);
                 tldb.setLastEditedDate(new Date());
                 tlRepository.save(tldb);
                 return serviceProviderUpdated;
@@ -202,7 +201,7 @@ public class TlEditServiceProviderService {
             if (ArrayUtils.isNotEmpty(updatedTL)) {
                 DBFiles xmlFile = tldb.getXmlFile();
                 xmlFile.setLocalPath(fileService.storeNewDraftTL(xmlFile.getMimeTypeFile(), updatedTL, tldb.getTerritory().getCodeTerritory(), xmlFile.getLocalPath()));
-                //tldb.setXmlFile(xmlFile);
+                // tldb.setXmlFile(xmlFile);
                 tldb.setLastEditedDate(new Date());
                 tlRepository.save(tldb);
             }

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.ecc;
 
 import java.io.Serializable;
@@ -36,11 +35,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for KeyUsageType complex type.
+ * <p>
+ * Java class for KeyUsageType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="KeyUsageType"&gt;
@@ -57,12 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KeyUsageType", propOrder = {
-    "keyUsageBit"
-})
-public class KeyUsageTypeV5
-    implements Serializable
-{
+@XmlType(name = "KeyUsageType", propOrder = { "keyUsageBit" })
+public class KeyUsageTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "KeyUsageBit", required = true)
@@ -72,21 +68,19 @@ public class KeyUsageTypeV5
      * Gets the value of the keyUsageBit property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the keyUsageBit property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the keyUsageBit property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getKeyUsageBit().add(newItem);
+     * getKeyUsageBit().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link KeyUsageBitTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link KeyUsageBitTypeV5 }
      * 
      * 
      */

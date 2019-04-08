@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -77,31 +77,31 @@ public class ApiTlController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiTlController.class);
 
     @Autowired
+    private AuditService auditService;
+
+    @Autowired
+    private AvailabilityService availabilityService;
+
+    @Autowired
+    private CountryService countryService;
+
+    @Autowired
+    private TLDraftService draftService;
+
+    @Autowired
     private TLService tlService;
 
     @Autowired
     private TLValidator tlValidator;
 
     @Autowired
-    private TLDraftService draftService;
-
-    @Autowired
     private RulesRunnerService rulesRunner;
-
-    @Autowired
-    private CountryService countryService;
-
-    @Autowired
-    private AvailabilityService availabilityService;
-
-    @Autowired
-    private AuditService auditService;
-
-    @Value("${draft.edition.check}")
-    private Boolean draftEditionCheck;
 
     @Value("${tl.browser.url}")
     private String browserUrl;
+
+    @Value("${draft.edition.check}")
+    private Boolean draftEditionCheck;
 
     @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -160,7 +160,6 @@ public class ApiTlController {
         StringBuffer metrics = new StringBuffer();
         metrics.append("METRICS - CLONE OF " + obj.getTerritory() + " TL");
         long startTime = System.currentTimeMillis();
-        long executionTime = startTime;
         ServiceResponse<TrustedListsReport> response = new ServiceResponse<>();
         if (StringUtils.isAlpha(obj.getTerritory())) {
             response.setResponseStatus(HttpStatus.OK.toString());
@@ -172,33 +171,7 @@ public class ApiTlController {
             String userName = SecurityContextHolder.getContext().getAuthentication().getName();
             DBTrustedLists draft = draftService.cloneTLtoDraft(obj.getTerritory(), obj.getCookieId(), userName, load);
             if (draft != null) {
-                auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CREATE, AuditStatus.SUCCES, draft.getTerritory().getCodeTerritory(), draft.getXmlFile().getId(),
-                        SecurityContextHolder.getContext().getAuthentication().getName(), "TLID:" + draft.getId());
-
-                long endTime = System.currentTimeMillis();
-                executionTime = endTime - startTime;
-                metrics.append(" | CLONE : " + executionTime + " ms");
-
-                // CHECK SIGNATURE STATUS
-                tlValidator.checkTLorLOTLWithCurrentProdLOTL(draft);
-                long endTime2 = System.currentTimeMillis();
-                executionTime = endTime2 - endTime;
-                metrics.append(" | SIGNATURE : " + executionTime + " ms");
-                // EXECUTE ALL CHECK
-                TL draftTL = tlService.getTL(draft.getId());
-                TL currentProd = tlService.getPublishedTLByCountry(draft.getTerritory());
-                rulesRunner.runAllRules(draftTL, currentProd);
-                long endTime3 = System.currentTimeMillis();
-                executionTime = endTime3 - endTime2;
-                metrics.append(" | RUN ALL RULES : " + executionTime + " ms");
-
-                tlService.setTlCheckStatus(draftTL.getTlId());
-
-                long endTime4 = System.currentTimeMillis();
-                executionTime = endTime4 - endTime3;
-                metrics.append(" | STATUS : " + executionTime + " ms");
-                // RETURN TL REPORT
-                TrustedListsReport report = tlService.getTLInfo(draft.getId());
+                TrustedListsReport report = draftService.finalizeDraftCreation(draft, SecurityContextHolder.getContext().getAuthentication().getName());
                 report.setMigrate(load.isNew());
                 response.setContent(report);
             } else {
@@ -209,8 +182,8 @@ public class ApiTlController {
         } else {
             response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
         }
-        long endTime5 = System.currentTimeMillis();
-        executionTime = endTime5 - startTime;
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
         metrics.append(" --> ALL was executed in " + executionTime + " ms");
         LOGGER.info(metrics.toString());
         return response;
@@ -251,7 +224,7 @@ public class ApiTlController {
     public void download(@PathVariable int id, @PathVariable String cookieId, HttpServletRequest request, HttpServletResponse response) {
         if (tlService.inStoreOrProd(id, cookieId)) {
             try {
-                //TODO : Update method with file utils
+                // TODO : Update method with file utils
                 final int TAILLE_TAMPON = 10240; // 10ko
                 File fichier = tlService.getXmlFile(id);
                 TL tl = tlService.getTL(id);

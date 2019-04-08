@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -169,7 +169,7 @@ public class PDFReportService {
     }
 
     /**
-     * Generate TL PDF report
+     * Generate TL PDF report from TL
      *
      * @param tl
      * @param os
@@ -178,6 +178,54 @@ public class PDFReportService {
     @SuppressWarnings("unchecked")
     public void generateTLReport(TL tl, OutputStream os) throws Exception {
         foUserAgent.getRendererOptions().put("pdf-a-mode", "PDF");
+        PDFChecksChanges toSerial = initPDFToSerial(tl);
+
+        XStream stream = new XStream();
+        stream.setMode(XStream.NO_REFERENCES);
+        stream.processAnnotations(PDFChecksChanges.class);
+        stream.processAnnotations(PDFCheck.class);
+        stream.alias("check", CheckDTO.class);
+        stream.alias("tag", Tag.class);
+        stream.alias("change", TLDifference.class);
+        stream.alias("result", CheckResultDTO.class);
+        String xml = stream.toXML(toSerial);
+
+        Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
+        Result res = new SAXResult(fop.getDefaultHandler());
+        Transformer transformer = templateOrderedCheckResult.newTransformer();
+        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes("UTF-8"))), res);
+
+    }
+
+    /**
+     * Generate TL PDF report from PDFChecksChanges
+     * 
+     * @param toSerial
+     * @param os
+     * @throws Exception
+     */
+    @SuppressWarnings("unchecked")
+    public void generateTLReport(PDFChecksChanges toSerial, OutputStream os) throws Exception {
+        foUserAgent.getRendererOptions().put("pdf-a-mode", "PDF");
+
+        XStream stream = new XStream();
+        stream.setMode(XStream.NO_REFERENCES);
+        stream.processAnnotations(PDFChecksChanges.class);
+        stream.processAnnotations(PDFCheck.class);
+        stream.alias("check", CheckDTO.class);
+        stream.alias("tag", Tag.class);
+        stream.alias("change", TLDifference.class);
+        stream.alias("result", CheckResultDTO.class);
+        String xml = stream.toXML(toSerial);
+
+        Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
+        Result res = new SAXResult(fop.getDefaultHandler());
+        Transformer transformer = templateOrderedCheckResult.newTransformer();
+        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes("UTF-8"))), res);
+
+    }
+
+    public PDFChecksChanges initPDFToSerial(TL tl) {
         PDFChecksChanges toSerial = new PDFChecksChanges();
         String countryName = "";
         if (tl.getDbStatus().equals(TLStatus.PROD)) {
@@ -220,7 +268,7 @@ public class PDFReportService {
             diffPointers.addAll(tl.getPointersDiff(comparedTl.getPointers(), tl.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
 
             if ((tl.getServiceProviders() != null) && (comparedTl.getServiceProviders() != null)) {
-                diffProviders.addAll(tl.getServiceDiff(comparedTl.getServiceProviders(), tl.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
+                diffProviders.addAll(tl.getTrustServiceProvidersDiff(comparedTl.getServiceProviders(), tl.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
             }
             diffSignature = signatureChangeService.getSignatureChanges(tl, comparedTl);
             // schemeChanges
@@ -240,22 +288,7 @@ public class PDFReportService {
         if (tlccActive) {
             toSerial.setChecks(tlccService.getErrorTlccChecks(new TLCCRequestDTO(tl.getTlId()), TLCCTarget.TRUSTED_LIST));
         }
-
-        XStream stream = new XStream();
-        stream.setMode(XStream.NO_REFERENCES);
-        stream.processAnnotations(PDFChecksChanges.class);
-        stream.processAnnotations(PDFCheck.class);
-        stream.alias("check", CheckDTO.class);
-        stream.alias("tag", Tag.class);
-        stream.alias("change", TLDifference.class);
-        stream.alias("result", CheckResultDTO.class);
-        String xml = stream.toXML(toSerial);
-
-        Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
-        Result res = new SAXResult(fop.getDefaultHandler());
-        Transformer transformer = templateOrderedCheckResult.newTransformer();
-        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes("UTF-8"))), res);
-
+        return toSerial;
     }
 
     private ResourceResolver getResourceResolver() {

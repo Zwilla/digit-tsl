@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -26,11 +26,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -51,13 +52,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "tspName",
-    "tspTradeName",
-    "tspAddress",
-    "tspInformationURI",
-    "tspInformationExtensions"
-})
+@XmlType(name = "", propOrder = { "tspName", "tspTradeName", "tspAddress", "tspInformationURI", "tspInformationExtensions" })
 @XmlRootElement(name = "TSPInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class TSPInformation {
 
@@ -75,10 +70,8 @@ public class TSPInformation {
     /**
      * Obtient la valeur de la propriete tspName.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPName }
-     *     
+     * @return possible object is {@link TSPName }
+     * 
      */
     public TSPName getTSPName() {
         return tspName;
@@ -88,9 +81,8 @@ public class TSPInformation {
      * Definit la valeur de la propriete tspName.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPName }
-     *     
+     *            allowed object is {@link TSPName }
+     * 
      */
     public void setTSPName(TSPName value) {
         this.tspName = value;
@@ -99,10 +91,8 @@ public class TSPInformation {
     /**
      * Obtient la valeur de la propriete tspTradeName.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPTradeName }
-     *     
+     * @return possible object is {@link TSPTradeName }
+     * 
      */
     public TSPTradeName getTSPTradeName() {
         return tspTradeName;
@@ -112,9 +102,8 @@ public class TSPInformation {
      * Definit la valeur de la propriete tspTradeName.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPTradeName }
-     *     
+     *            allowed object is {@link TSPTradeName }
+     * 
      */
     public void setTSPTradeName(TSPTradeName value) {
         this.tspTradeName = value;
@@ -123,10 +112,8 @@ public class TSPInformation {
     /**
      * Obtient la valeur de la propriete tspAddress.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPAddress }
-     *     
+     * @return possible object is {@link TSPAddress }
+     * 
      */
     public TSPAddress getTSPAddress() {
         return tspAddress;
@@ -136,9 +123,8 @@ public class TSPInformation {
      * Definit la valeur de la propriete tspAddress.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPAddress }
-     *     
+     *            allowed object is {@link TSPAddress }
+     * 
      */
     public void setTSPAddress(TSPAddress value) {
         this.tspAddress = value;
@@ -147,10 +133,8 @@ public class TSPInformation {
     /**
      * Obtient la valeur de la propriete tspInformationURI.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPInformationURI }
-     *     
+     * @return possible object is {@link TSPInformationURI }
+     * 
      */
     public TSPInformationURI getTSPInformationURI() {
         return tspInformationURI;
@@ -160,9 +144,8 @@ public class TSPInformation {
      * Definit la valeur de la propriete tspInformationURI.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPInformationURI }
-     *     
+     *            allowed object is {@link TSPInformationURI }
+     * 
      */
     public void setTSPInformationURI(TSPInformationURI value) {
         this.tspInformationURI = value;
@@ -171,10 +154,8 @@ public class TSPInformation {
     /**
      * Obtient la valeur de la propriete tspInformationExtensions.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSPInformationExtensions }
-     *     
+     * @return possible object is {@link TSPInformationExtensions }
+     * 
      */
     public TSPInformationExtensions getTSPInformationExtensions() {
         return tspInformationExtensions;
@@ -184,9 +165,8 @@ public class TSPInformation {
      * Definit la valeur de la propriete tspInformationExtensions.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSPInformationExtensions }
-     *     
+     *            allowed object is {@link TSPInformationExtensions }
+     * 
      */
     public void setTSPInformationExtensions(TSPInformationExtensions value) {
         this.tspInformationExtensions = value;

@@ -1,14 +1,14 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <span style="width: 95% !important; display: inline-block;">{{dataChecksController_editCheck}} {{label}} - {{check.name}}</span>
-        <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-        <span style="margin-left: 5px;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
-    </div>
-    <div class="panel-body">
-        <span class="scheme-information col-sm-2 text-right">{{dataChecksController_priority}}</span>
-        <select ng-model="check.status" style="margin-left: 15px;" class="col-sm-5">
-            <option ng-repeat="p in STATUS" value="{{p}}" ng-selected="check.status== p">{{p}}
-        </select>
-    </div>
+	<div class="panel-heading">
+		<span style="width: 95% !important; display: inline-block;">{{dataChecksController_editCheck}} {{label}} - {{check.name}}</span>
+		<span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+		<span style="margin-left: 5px;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
+	</div>
+	<div class="panel-body">
+		<span class="scheme-information col-sm-2 text-right">{{dataChecksController_priority}}</span>
+		<select ng-model="check.status" style="margin-left: 15px;" class="col-sm-5">
+			<option ng-repeat="p in STATUS" value="{{p}}" ng-selected="check.status== p">{{p}}
+		</select>
+	</div>
 </div>
 

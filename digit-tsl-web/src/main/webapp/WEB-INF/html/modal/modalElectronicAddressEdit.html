@@ -1,54 +1,46 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <check disabled="myTLInfo.checkToRun" id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="true"></check>
-        <change id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="true"information="information"></change>
-        <span style="display: inline-block;">{{myTLInfo.dbName}} ({{myTLInfo.schemeInformation.sequenceNumber}}) - {{myTLInfo.label}}</span>
-        <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-        <span style="float: right;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
-        <span style="float: right; margin-right: 5px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-    </div>
-    <div class="panel-body">
-        <div class="dropdown" style="display: inline; float: right;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">
-            <span class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button" data-toggle="dropdown"></span>
-            <ul class="dropdown-menu">
-                <li ng-repeat="lang in languages" class="lang-list"><a ng-click="addTab(lang.label);activeTab(myTabsBIS.length-1,myTabsBIS)" class="cursor-pointer ">{{lang.label}}</a></li>
-            </ul>
-        </div>
-        <!-- Add Distribution List-->
-        <div style="display: inline; float: right;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">
-            <span ng-click="addTab();activeTab(myTabsBIS.length-1)" class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add"
-                style="color: #337ab7;" type="button"></span>
-        </div>
-        <!-- Table -->
-        <tabset>
-            <tab ng-repeat="tab in myTabsBIS" active="tab.isActive">
-                <tab-heading>
-                    <check disabled="myTLInfo.checkToRun" id="tab.id" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="false"></check>
-                    <change id="tab.id" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="false"information="information"></change>
-                    <span style="margin-left: 5px;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">{{tab.language}}</span>
-                    <span style="margin-left: 5px;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">{{$index+1}}</span>
-                </tab-heading>
-                <div class="col-sm-12" style="display: inline-block">
-                    <select class="col-sm-2" ng-model="tab.adrType">
-                        <option ng-repeat="aT in AddressType" value="{{aT.label}}" ng-selected="tab.adrType == aT.label">{{aT.label}}</option>
-                        <option value="" ng-selected="tab.adrType == ''">other:</option>
-                    </select> <input ng-model="tab.adrLink" name="adrlink_{{tab.id}}" style="margin-left: 15px;" class="col-sm-8" required />
-                </div>
-        
-                <div class="row" align="right">
-                    <div style="display: inline;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">
-                        <span th:text="#{tDelete}"></span>
-                        {{tab.language}}
-                        <span th:text="#{tLanguage}" style="margin-right: 5px;"></span>
-                    </div>
-                    <div style="display: inline;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">
-                        <span th:text="#{tDelete}"></span>
-                        <span> Distribution Point {{$index+1}}</span>
-                    </div>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tab.language+' '+myTLInfo.label)}}"  confirmed="deleteTab(tab)" class="fa fa-trash cursor-pointer "
-                        style="margin-right: 10px;"></span>
-                </div>
-            </tab>
-        </tabset>
-    </div>
+	<div class="panel-heading">
+		<check disabled="myTLInfo.checkToRun" id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="true"></check>
+		<change id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="true" information="information"></change>
+		<span style="display: inline-block;">{{myTLInfo.dbName}} ({{myTLInfo.schemeInformation.sequenceNumber}}) - {{myTLInfo.label}}</span>
+		<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+		<span style="float: right;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
+		<span style="float: right; margin-right: 5px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+	</div>
+	<div class="panel-body">
+		<div class="dropdown" style="display: inline; float: right;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">
+			<span class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button" data-toggle="dropdown"></span>
+			<ul class="dropdown-menu">
+				<li ng-repeat="lang in languages" class="lang-list"><a ng-click="addTab(lang.label);activeTab(myTabsBIS.length-1,myTabsBIS)" class="cursor-pointer ">{{lang.label}}</a></li>
+			</ul>
+		</div>
+		<!-- Add Distribution List-->
+		<div style="display: inline; float: right;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">
+			<span ng-click="addTab();activeTab(myTabsBIS.length-1)" class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button"></span>
+		</div>
+		<!-- Table -->
+		<tabset> <tab ng-repeat="tab in myTabsBIS" active="tab.isActive"> <tab-heading> <check disabled="myTLInfo.checkToRun" id="tab.id" listcheck="myTLInfo.listChecks"
+			label="myTLInfo.label" istreeparent="false"></check> <change id="tab.id" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="false" information="information"></change> <span
+			style="margin-left: 5px;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">{{tab.language}}</span> <span style="margin-left: 5px;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">{{$index+1}}</span> </tab-heading>
+		<div class="col-sm-12" style="display: inline-block">
+			<select class="col-sm-2" ng-model="tab.adrType">
+				<option ng-repeat="aT in AddressType" value="{{aT.label}}" ng-selected="tab.adrType == aT.label">{{aT.label}}</option>
+				<option value="" ng-selected="tab.adrType == ''">other:</option>
+			</select> <input ng-model="tab.adrLink" name="adrlink_{{tab.id}}" style="margin-left: 15px;" class="col-sm-8" required />
+		</div>
+
+		<div class="row" align="right">
+			<div style="display: inline;" ng-if="myTLInfo.tag=='ELECTRONIC_ADDRESS'">
+				<span th:text="#{tDelete}"></span>
+				{{tab.language}}
+				<span th:text="#{tLanguage}" style="margin-right: 5px;"></span>
+			</div>
+			<div style="display: inline;" ng-if="myTLInfo.tag=='DISTRIBUTION_LIST'">
+				<span th:text="#{tDelete}"></span>
+				<span> Distribution Point {{$index+1}}</span>
+			</div>
+			<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tab.language+' '+myTLInfo.label)}}" confirmed="deleteTab(tab)" class="fa fa-trash cursor-pointer " style="margin-right: 10px;"></span>
+		</div>
+		</tab> </tabset>
+	</div>
 </div>

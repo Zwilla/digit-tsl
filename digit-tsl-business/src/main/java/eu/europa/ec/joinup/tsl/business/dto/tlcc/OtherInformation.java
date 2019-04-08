@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -62,80 +62,78 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "OtherInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class OtherInformation {
 
-	@XmlElement(name = "SchemeOperatorName", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected SchemeOperatorName schemeOperatorName;
-	@XmlElement(name = "SchemeTerritory", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected SchemeTerritory schemeTerritory;
-	@XmlElement(name = "SchemeTypeCommunityRules", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected SchemeTypeCommunityRules schemeTypeCommunityRules;
-	@XmlElement(name = "TSLType", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected TSLType tslType;
-	@XmlElement(name = "MimeType", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected MimeType mimeType;
-	@XmlAttribute(name = "index", required = true)
-	protected BigInteger index;
-	@XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<Check> check;
+    @XmlElement(name = "SchemeOperatorName", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected SchemeOperatorName schemeOperatorName;
+    @XmlElement(name = "SchemeTerritory", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected SchemeTerritory schemeTerritory;
+    @XmlElement(name = "SchemeTypeCommunityRules", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected SchemeTypeCommunityRules schemeTypeCommunityRules;
+    @XmlElement(name = "TSLType", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected TSLType tslType;
+    @XmlElement(name = "MimeType", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected MimeType mimeType;
+    @XmlAttribute(name = "index", required = true)
+    protected BigInteger index;
+    @XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<Check> check;
 
-	public SchemeOperatorName getSchemeOperatorName() {
-		return schemeOperatorName;
-	}
+    public SchemeOperatorName getSchemeOperatorName() {
+        return schemeOperatorName;
+    }
 
-	public void setSchemeOperatorName(SchemeOperatorName value) {
-		this.schemeOperatorName = value;
-	}
+    public void setSchemeOperatorName(SchemeOperatorName value) {
+        this.schemeOperatorName = value;
+    }
 
-	public SchemeTerritory getSchemeTerritory() {
-		return schemeTerritory;
-	}
+    public SchemeTerritory getSchemeTerritory() {
+        return schemeTerritory;
+    }
 
-	public void setSchemeTerritory(SchemeTerritory value) {
-		this.schemeTerritory = value;
-	}
+    public void setSchemeTerritory(SchemeTerritory value) {
+        this.schemeTerritory = value;
+    }
 
-	public SchemeTypeCommunityRules getSchemeTypeCommunityRules() {
-		return schemeTypeCommunityRules;
-	}
+    public SchemeTypeCommunityRules getSchemeTypeCommunityRules() {
+        return schemeTypeCommunityRules;
+    }
 
-	public void setSchemeTypeCommunityRules(SchemeTypeCommunityRules value) {
-		this.schemeTypeCommunityRules = value;
-	}
+    public void setSchemeTypeCommunityRules(SchemeTypeCommunityRules value) {
+        this.schemeTypeCommunityRules = value;
+    }
 
-	public TSLType getTSLType() {
-		return tslType;
-	}
+    public TSLType getTSLType() {
+        return tslType;
+    }
 
-	public void setTSLType(TSLType value) {
-		this.tslType = value;
-	}
+    public void setTSLType(TSLType value) {
+        this.tslType = value;
+    }
 
-	public MimeType getMimeType() {
-		return mimeType;
-	}
+    public MimeType getMimeType() {
+        return mimeType;
+    }
 
-	public void setMimeType(MimeType value) {
-		this.mimeType = value;
-	}
+    public void setMimeType(MimeType value) {
+        this.mimeType = value;
+    }
 
-	public BigInteger getIndex() {
-		return index;
-	}
+    public BigInteger getIndex() {
+        return index;
+    }
 
-	public void setIndex(BigInteger value) {
-		this.index = value;
-	}
+    public void setIndex(BigInteger value) {
+        this.index = value;
+    }
 
-	public List<Check> getCheck() {
-		if(this.check==null){
-			this.check = new ArrayList<Check>();
-		}
-		return check;
-	}
+    public List<Check> getCheck() {
+        if (this.check == null) {
+            this.check = new ArrayList<Check>();
+        }
+        return check;
+    }
 
-	public void setCheck(List<Check> check) {
-		this.check = check;
-	}
-
-
+    public void setCheck(List<Check> check) {
+        this.check = check;
+    }
 
 }

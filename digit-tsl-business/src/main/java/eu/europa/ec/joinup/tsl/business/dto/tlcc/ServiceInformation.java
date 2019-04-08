@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -29,11 +29,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  *
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  *
  * <pre>
  * &lt;complexType>
@@ -59,119 +60,109 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-		"serviceTypeIdentifier",
-		"serviceName",
-		"serviceDigitalIdentity",
-		"serviceStatus",
-		"statusStartingTime",
-		"schemeServiceDefinitionURI",
-		"serviceSupplyPoints",
-		"tspServiceDefinitionURI",
-		"serviceInformationExtensions",
-		"check"
-})
+@XmlType(name = "", propOrder = { "serviceTypeIdentifier", "serviceName", "serviceDigitalIdentity", "serviceStatus", "statusStartingTime", "schemeServiceDefinitionURI", "serviceSupplyPoints",
+        "tspServiceDefinitionURI", "serviceInformationExtensions", "check" })
 @XmlRootElement(name = "ServiceInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class ServiceInformation {
 
-	@XmlElement(name = "ServiceTypeIdentifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceTypeIdentifier serviceTypeIdentifier;
-	@XmlElement(name = "ServiceName", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceName serviceName;
-	@XmlElement(name = "ServiceDigitalIdentity", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceDigitalIdentity serviceDigitalIdentity;
-	@XmlElement(name = "ServiceStatus", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceStatus serviceStatus;
-	@XmlElement(name = "StatusStartingTime", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected StatusStartingTime statusStartingTime;
-	@XmlElement(name = "SchemeServiceDefinitionURI", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected SchemeServiceDefinitionURI schemeServiceDefinitionURI;
-	@XmlElement(name = "ServiceSupplyPoints", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceSupplyPoints serviceSupplyPoints;
-	@XmlElement(name = "TSPServiceDefinitionURI", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected TSPServiceDefinitionURI tspServiceDefinitionURI;
-	@XmlElement(name = "ServiceInformationExtensions", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected ServiceInformationExtensions serviceInformationExtensions;
-	@XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<Check> check;
+    @XmlElement(name = "ServiceTypeIdentifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceTypeIdentifier serviceTypeIdentifier;
+    @XmlElement(name = "ServiceName", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceName serviceName;
+    @XmlElement(name = "ServiceDigitalIdentity", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceDigitalIdentity serviceDigitalIdentity;
+    @XmlElement(name = "ServiceStatus", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceStatus serviceStatus;
+    @XmlElement(name = "StatusStartingTime", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected StatusStartingTime statusStartingTime;
+    @XmlElement(name = "SchemeServiceDefinitionURI", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected SchemeServiceDefinitionURI schemeServiceDefinitionURI;
+    @XmlElement(name = "ServiceSupplyPoints", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceSupplyPoints serviceSupplyPoints;
+    @XmlElement(name = "TSPServiceDefinitionURI", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected TSPServiceDefinitionURI tspServiceDefinitionURI;
+    @XmlElement(name = "ServiceInformationExtensions", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected ServiceInformationExtensions serviceInformationExtensions;
+    @XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<Check> check;
 
-	public ServiceTypeIdentifier getServiceTypeIdentifier() {
-		return serviceTypeIdentifier;
-	}
+    public ServiceTypeIdentifier getServiceTypeIdentifier() {
+        return serviceTypeIdentifier;
+    }
 
-	public void setServiceTypeIdentifier(ServiceTypeIdentifier value) {
-		this.serviceTypeIdentifier = value;
-	}
+    public void setServiceTypeIdentifier(ServiceTypeIdentifier value) {
+        this.serviceTypeIdentifier = value;
+    }
 
-	public ServiceName getServiceName() {
-		return serviceName;
-	}
+    public ServiceName getServiceName() {
+        return serviceName;
+    }
 
-	public void setServiceName(ServiceName value) {
-		this.serviceName = value;
-	}
+    public void setServiceName(ServiceName value) {
+        this.serviceName = value;
+    }
 
-	public ServiceDigitalIdentity getServiceDigitalIdentity() {
-		return serviceDigitalIdentity;
-	}
+    public ServiceDigitalIdentity getServiceDigitalIdentity() {
+        return serviceDigitalIdentity;
+    }
 
-	public void setServiceDigitalIdentity(ServiceDigitalIdentity value) {
-		this.serviceDigitalIdentity = value;
-	}
+    public void setServiceDigitalIdentity(ServiceDigitalIdentity value) {
+        this.serviceDigitalIdentity = value;
+    }
 
-	public ServiceStatus getServiceStatus() {
-		return serviceStatus;
-	}
+    public ServiceStatus getServiceStatus() {
+        return serviceStatus;
+    }
 
-	public void setServiceStatus(ServiceStatus value) {
-		this.serviceStatus = value;
-	}
+    public void setServiceStatus(ServiceStatus value) {
+        this.serviceStatus = value;
+    }
 
-	public StatusStartingTime getStatusStartingTime() {
-		return statusStartingTime;
-	}
+    public StatusStartingTime getStatusStartingTime() {
+        return statusStartingTime;
+    }
 
-	public void setStatusStartingTime(StatusStartingTime value) {
-		this.statusStartingTime = value;
-	}
+    public void setStatusStartingTime(StatusStartingTime value) {
+        this.statusStartingTime = value;
+    }
 
-	public SchemeServiceDefinitionURI getSchemeServiceDefinitionURI() {
-		return schemeServiceDefinitionURI;
-	}
+    public SchemeServiceDefinitionURI getSchemeServiceDefinitionURI() {
+        return schemeServiceDefinitionURI;
+    }
 
-	public void setSchemeServiceDefinitionURI(SchemeServiceDefinitionURI value) {
-		this.schemeServiceDefinitionURI = value;
-	}
+    public void setSchemeServiceDefinitionURI(SchemeServiceDefinitionURI value) {
+        this.schemeServiceDefinitionURI = value;
+    }
 
-	public ServiceSupplyPoints getServiceSupplyPoints() {
-		return serviceSupplyPoints;
-	}
+    public ServiceSupplyPoints getServiceSupplyPoints() {
+        return serviceSupplyPoints;
+    }
 
-	public void setServiceSupplyPoints(ServiceSupplyPoints value) {
-		this.serviceSupplyPoints = value;
-	}
+    public void setServiceSupplyPoints(ServiceSupplyPoints value) {
+        this.serviceSupplyPoints = value;
+    }
 
-	public TSPServiceDefinitionURI getTSPServiceDefinitionURI() {
-		return tspServiceDefinitionURI;
-	}
+    public TSPServiceDefinitionURI getTSPServiceDefinitionURI() {
+        return tspServiceDefinitionURI;
+    }
 
-	public void setTSPServiceDefinitionURI(TSPServiceDefinitionURI value) {
-		this.tspServiceDefinitionURI = value;
-	}
+    public void setTSPServiceDefinitionURI(TSPServiceDefinitionURI value) {
+        this.tspServiceDefinitionURI = value;
+    }
 
-	public ServiceInformationExtensions getServiceInformationExtensions() {
-		return serviceInformationExtensions;
-	}
+    public ServiceInformationExtensions getServiceInformationExtensions() {
+        return serviceInformationExtensions;
+    }
 
-	public void setServiceInformationExtensions(ServiceInformationExtensions value) {
-		this.serviceInformationExtensions = value;
-	}
+    public void setServiceInformationExtensions(ServiceInformationExtensions value) {
+        this.serviceInformationExtensions = value;
+    }
 
-	public List<Check> getCheck() {
-		if (check == null) {
-			check = new ArrayList<Check>();
-		}
-		return this.check;
-	}
+    public List<Check> getCheck() {
+        if (check == null) {
+            check = new ArrayList<Check>();
+        }
+        return this.check;
+    }
 
 }

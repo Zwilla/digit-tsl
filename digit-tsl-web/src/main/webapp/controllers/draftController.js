@@ -21,8 +21,8 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 		    };
 
 		    /**
-		     * Loading Status update Process
-		     */
+			 * Loading Status update Process
+			 */
 			var loadingStatusProcess = function(){
 				$scope.loadingDrafts = $scope.clone_create;
 				setTimeout(function () {
@@ -38,8 +38,8 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 			};
 
 		    /**
-		     * Create new Draft From EU published version
-		     */
+			 * Create new Draft From EU published version
+			 */
 		    $scope.createFromPublish = function(territory) {
 		    	if($scope.territory!=null || $scope.territory!=""){
 			    	$scope.loadDraft = false;
@@ -83,8 +83,8 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 		    };
 
 		    /**
-		     * Delete a Draft
-		     */
+			 * Delete a Draft
+			 */
 		    $scope.deleteDraft = function(draft) {
 		    	$scope.loadingDrafts = $scope.draftController_deleteProgress;
 		    	$scope.loadDraft = false;
@@ -100,7 +100,9 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 		    	    httpFactory.get("/api/draft/checkNotification/"+draft.id,$scope.draftController_notificationError).then(function(authorized) {
 		    	        if(!authorized){
 		    	            var validDeletion = true;
-		    	            // Has notification in draft for current draft (can't use showModal.confirmation here because of three case OK/CANCEL/DETACH)
+		    	            // Has notification in draft for current draft
+							// (can't use showModal.confirmation here because of
+							// three case OK/CANCEL/DETACH)
 		    	            var modalHtml = '<div class="panel panel-primary" >' +
 		    	            '<div class="panel-heading">' +
 		    	                '<span>'+$scope.notificationInformation+'</span>'+
@@ -161,8 +163,8 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 			  };
 
 			  /**
-			     * Upload file on the server
-			     */
+				 * Upload file on the server
+				 */
 			  $scope.uploadFile = function(myFile,fileInput){
 				  var file = myFile;
 				  $scope.loadDraft = false;
@@ -209,8 +211,8 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 			    };
 
 			  /**
-			     * Check type of file
-			     */
+				 * Check type of file
+				 */
 			  $scope.testFile = function(myFile){
 		        var file = myFile;
 		        angular.element('#uploadFile').val='';
@@ -222,11 +224,27 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 			  };
 			  
 			  /**
-			   * Show warning pop-up when try to download XML/Report/SHA2 when TL check to run is set to false
-			   */
-			  $scope.exportCheckToRunError = function(){
-			      showModal.information($scope.export_check_run);
-			  };
-
-	}]);
-
+				 * Call Merge draft modal
+				 */
+			  $scope.openMergeDraftModal = function(){
+		    	var modalInstance = $modal.open({
+		    		templateUrl: 'modalMergeDraft',
+		    			backdrop : 'static',
+						size : 'lg',
+						controller: modalMergeDraftController,
+						resolve : {
+							drafts : function() {
+								return $scope.drafts;
+							},
+							draftstoreId : function(){
+								return $scope.draftStoreId;
+							}
+						}
+		    	});
+		    	
+		    	 modalInstance.result.then(function(draft) {
+		    		 $window.location.href = '/tl-manager/tl/'+draft.id;
+		         });
+			  }
+			  
+}]);

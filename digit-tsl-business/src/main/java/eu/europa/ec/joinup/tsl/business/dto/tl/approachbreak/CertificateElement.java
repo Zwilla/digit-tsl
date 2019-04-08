@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -68,7 +68,7 @@ public class CertificateElement {
         try {
             token = DSSUtils.loadCertificateFromBase64EncodedString(dbCertificate.getBase64());
         } catch (DSSException e) {
-            //Could not parse certificate
+            // Could not parse certificate
             token = null;
         }
     }
@@ -185,8 +185,8 @@ public class CertificateElement {
 
     @Override
     public String toString() {
-        return "CertificateElement [countryCode=" + countryCode + ", isExpired=" + isExpired() + ", expirationDay=" + expireIn + ", breakDay=" + breakDay + ", notBefore="
-                + notBefore + ", notAfter=" + notAfter + ", tlType=" + tlType + ", subjectName=" + subjectName + "]";
+        return "CertificateElement [countryCode=" + countryCode + ", isExpired=" + isExpired() + ", expirationDay=" + expireIn + ", breakDay=" + breakDay + ", notBefore=" + notBefore + ", notAfter="
+                + notAfter + ", tlType=" + tlType + ", subjectName=" + subjectName + "]";
     }
 
     @Override

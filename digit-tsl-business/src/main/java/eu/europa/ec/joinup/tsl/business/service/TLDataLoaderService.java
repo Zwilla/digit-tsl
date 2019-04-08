@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -87,10 +87,10 @@ public class TLDataLoaderService {
     public void refreshAllTablesValue() {
         for (DBCountries country : countryService.getAll()) {
             if (country.getCodeTerritory().equals(lotlTerritory)) {
-                //LOTL
+                // LOTL
                 updateLOTLCertificates();
             } else {
-                //TrustedList
+                // TrustedList
                 updateTrustedListData(country);
             }
         }
@@ -182,14 +182,14 @@ public class TLDataLoaderService {
                 tlCertificateService.deleteByCountryCode(dbTl.getTerritory().getCodeTerritory(), TLType.TL);
                 if (!CollectionUtils.isEmpty(tl.getServiceProviders())) {
                     for (TLServiceProvider tsp : tl.getServiceProviders()) {
-                        //Persist Trust Service Provider
+                        // Persist Trust Service Provider
                         DBTrustServiceProvider dbTSP = tlDataService.addTSPEntry(tsp, country.getCodeTerritory(), tl.getSchemeInformation().getSequenceNumber());
                         if (!CollectionUtils.isEmpty(tsp.getTSPServices())) {
                             for (TLServiceDto service : tsp.getTSPServices()) {
-                                //Persist Service
+                                // Persist Service
                                 DBService dbService = tlDataService.addServiceEntry(service, dbTSP, country.getCodeTerritory());
                                 dbTSP.getServices().add(dbService);
-                                //Persist service certificate(s)
+                                // Persist service certificate(s)
                                 if (!CollectionUtils.isEmpty(service.getDigitalIdentification())) {
                                     for (TLDigitalIdentification digit : service.getDigitalIdentification()) {
                                         if (!CollectionUtils.isEmpty(digit.getCertificateList())) {
@@ -205,7 +205,7 @@ public class TLDataLoaderService {
                                     }
                                 }
 
-                                //Persist service history
+                                // Persist service history
                                 if (!CollectionUtils.isEmpty(service.getHistory())) {
                                     for (TLServiceHistory history : service.getHistory()) {
                                         tlDataService.addHistoryEntry(history, dbService, country.getCodeTerritory());

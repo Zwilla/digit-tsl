@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -141,29 +141,29 @@ public class ListOfGenericsValidator extends AbstractCheckValidator {
 
     public void runCheckOnGenerics(String location, CheckDTO check, List<? extends TLGeneric> listOfUris, List<CheckResultDTO> results) {
         switch (check.getName()) {
-            case IS_PRESENT:
-                addResult(check, location, genericValidator.isPresent(listOfUris), results);
-                break;
-            case IS_LIST_NOT_EMPTY:
-                addResult(check, location, genericValidator.isCollectionNotEmpty(listOfUris), results);
-                break;
-            case IS_LIST_CONTAIN_LANG_EN:
-                addResult(check, location, languageValidator.isLanguagesContainsEnglish(listOfUris), results);
-                break;
-            case IS_VALUES_NOT_EMPTY:
-                isValuesNotEmpty(check, results, listOfUris);
-                break;
-            case IS_ATTRIBUTE_LANG_PRESENT:
-                isLanguageAttributePresent(check, results, listOfUris);
-                break;
-            case IS_ATTRIBUTE_LANG_LOWERCASE:
-                isLanguageAttributeLowercase(check, results, listOfUris);
-                break;
-            case IS_ATTRIBUTE_LANG_ALLOWED:
-                isLanguageAttributeAllowed(check, results, listOfUris);
-                break;
-            default:
-                LOGGER.warn("Unsupported " + check);
+        case IS_PRESENT:
+            addResult(check, location, genericValidator.isPresent(listOfUris), results);
+            break;
+        case IS_LIST_NOT_EMPTY:
+            addResult(check, location, genericValidator.isCollectionNotEmpty(listOfUris), results);
+            break;
+        case IS_LIST_CONTAIN_LANG_EN:
+            addResult(check, location, languageValidator.isLanguagesContainsEnglish(listOfUris), results);
+            break;
+        case IS_VALUES_NOT_EMPTY:
+            isValuesNotEmpty(check, results, listOfUris);
+            break;
+        case IS_ATTRIBUTE_LANG_PRESENT:
+            isLanguageAttributePresent(check, results, listOfUris);
+            break;
+        case IS_ATTRIBUTE_LANG_LOWERCASE:
+            isLanguageAttributeLowercase(check, results, listOfUris);
+            break;
+        case IS_ATTRIBUTE_LANG_ALLOWED:
+            isLanguageAttributeAllowed(check, results, listOfUris);
+            break;
+        default:
+            LOGGER.warn("Unsupported " + check);
         }
     }
 

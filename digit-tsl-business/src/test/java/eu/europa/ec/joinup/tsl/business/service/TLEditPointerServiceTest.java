@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -52,7 +52,6 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
     @Autowired
     private TlEditPointerService tlEditPointerService;
 
-
     @Before
     public void initialize() {
         Load load = new Load();
@@ -77,13 +76,12 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
         TLPointersToOtherTSL newPointer = detl.getPointers().get(0);
         newPointer.setId("");
         TLPointersToOtherTSL pointerUpdated = tlEditPointerService.edit(lotl.getTlId(), newPointer, Tag.ISSUE_DATE.toString());
-        //CHECK RETURN
+        // CHECK RETURN
         assertTrue(pointerUpdated.getId().equalsIgnoreCase(""));
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size()-1)==nbreLOTL);
+        assertTrue((lotlUpdated.getPointers().size() - 1) == nbreLOTL);
     }
-
 
     @Test
     public void editPointer() {
@@ -105,20 +103,20 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
         edtPointer.setTlLocation(newPointer.getTlLocation());
 
         TLPointersToOtherTSL pointerUpdated = tlEditPointerService.edit(lotl.getTlId(), edtPointer, "");
-        //CHECK RETURN
+        // CHECK RETURN
         assertTrue(pointerUpdated.getId().equalsIgnoreCase(lotl.getPointers().get(0).getId()));
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size())==nbreLOTL);
+        assertTrue((lotlUpdated.getPointers().size()) == nbreLOTL);
         TLPointersToOtherTSL editedPointer = lotl.getPointers().get(0);
         assertTrue(editedPointer.getId().equalsIgnoreCase(edtPointer.getId()));
 
         assertTrue(editedPointer.getMimeType().equals(newPointer.getMimeType()));
         assertTrue(editedPointer.getSchemeTerritory().equals(newPointer.getSchemeTerritory()));
         assertTrue(editedPointer.getTlLocation().equals(newPointer.getTlLocation()));
-        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeOpeName(),newPointer.getSchemeOpeName()));
-        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeTypeCommunity(),newPointer.getSchemeTypeCommunity()));
-        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getServiceDigitalId(),newPointer.getServiceDigitalId()));
+        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeOpeName(), newPointer.getSchemeOpeName()));
+        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeTypeCommunity(), newPointer.getSchemeTypeCommunity()));
+        assertTrue(CollectionUtils.isEqualCollection(editedPointer.getServiceDigitalId(), newPointer.getServiceDigitalId()));
     }
 
     @Test
@@ -130,12 +128,11 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
         int nbreLOTL = lotl.getPointers().size();
 
         int nbre = tlEditPointerService.delete(lotl.getTlId(), lotl.getPointers().get(0), "");
-        //CHECK RETURN
-        assertTrue(nbre==1);
+        // CHECK RETURN
+        assertTrue(nbre == 1);
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size()+1)==nbreLOTL);
+        assertTrue((lotlUpdated.getPointers().size() + 1) == nbreLOTL);
     }
-
 
 }

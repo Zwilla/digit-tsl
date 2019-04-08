@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -30,11 +30,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -56,13 +57,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "additionalServiceInformation",
-    "expiredCertsRevocationInfo",
-    "qualifications",
-    "takenOverBy",
-    "check"
-})
+@XmlType(name = "", propOrder = { "additionalServiceInformation", "expiredCertsRevocationInfo", "qualifications", "takenOverBy", "check" })
 @XmlRootElement(name = "Extension", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class Extension {
 
@@ -82,10 +77,8 @@ public class Extension {
     /**
      * Obtient la valeur de la propriete additionalServiceInformation.
      * 
-     * @return
-     *     possible object is
-     *     {@link AdditionalServiceInformation }
-     *     
+     * @return possible object is {@link AdditionalServiceInformation }
+     * 
      */
     public AdditionalServiceInformation getAdditionalServiceInformation() {
         return additionalServiceInformation;
@@ -95,9 +88,8 @@ public class Extension {
      * Definit la valeur de la propriete additionalServiceInformation.
      * 
      * @param value
-     *     allowed object is
-     *     {@link AdditionalServiceInformation }
-     *     
+     *            allowed object is {@link AdditionalServiceInformation }
+     * 
      */
     public void setAdditionalServiceInformation(AdditionalServiceInformation value) {
         this.additionalServiceInformation = value;
@@ -106,10 +98,8 @@ public class Extension {
     /**
      * Obtient la valeur de la propriete expiredCertsRevocationInfo.
      * 
-     * @return
-     *     possible object is
-     *     {@link ExpiredCertsRevocationInfo }
-     *     
+     * @return possible object is {@link ExpiredCertsRevocationInfo }
+     * 
      */
     public ExpiredCertsRevocationInfo getExpiredCertsRevocationInfo() {
         return expiredCertsRevocationInfo;
@@ -119,9 +109,8 @@ public class Extension {
      * Definit la valeur de la propriete expiredCertsRevocationInfo.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ExpiredCertsRevocationInfo }
-     *     
+     *            allowed object is {@link ExpiredCertsRevocationInfo }
+     * 
      */
     public void setExpiredCertsRevocationInfo(ExpiredCertsRevocationInfo value) {
         this.expiredCertsRevocationInfo = value;
@@ -130,10 +119,8 @@ public class Extension {
     /**
      * Obtient la valeur de la propriete qualifications.
      * 
-     * @return
-     *     possible object is
-     *     {@link Qualifications }
-     *     
+     * @return possible object is {@link Qualifications }
+     * 
      */
     public Qualifications getQualifications() {
         return qualifications;
@@ -143,9 +130,8 @@ public class Extension {
      * Definit la valeur de la propriete qualifications.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Qualifications }
-     *     
+     *            allowed object is {@link Qualifications }
+     * 
      */
     public void setQualifications(Qualifications value) {
         this.qualifications = value;
@@ -154,10 +140,8 @@ public class Extension {
     /**
      * Obtient la valeur de la propriete takenOverBy.
      * 
-     * @return
-     *     possible object is
-     *     {@link TakenOverBy }
-     *     
+     * @return possible object is {@link TakenOverBy }
+     * 
      */
     public TakenOverBy getTakenOverBy() {
         return takenOverBy;
@@ -167,9 +151,8 @@ public class Extension {
      * Definit la valeur de la propriete takenOverBy.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TakenOverBy }
-     *     
+     *            allowed object is {@link TakenOverBy }
+     * 
      */
     public void setTakenOverBy(TakenOverBy value) {
         this.takenOverBy = value;
@@ -179,21 +162,19 @@ public class Extension {
      * Gets the value of the check property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the check property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the check property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getCheck().add(newItem);
+     * getCheck().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Check }
+     * Objects of the following type(s) are allowed in the list {@link Check }
      * 
      * 
      */
@@ -207,10 +188,8 @@ public class Extension {
     /**
      * Obtient la valeur de la propriete index.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getIndex() {
         return index;
@@ -220,9 +199,8 @@ public class Extension {
      * Definit la valeur de la propriete index.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setIndex(BigInteger value) {
         this.index = value;

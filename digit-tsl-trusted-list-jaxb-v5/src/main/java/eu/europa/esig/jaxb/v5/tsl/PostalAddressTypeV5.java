@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -35,11 +34,12 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for PostalAddressType complex type.
+ * <p>
+ * Java class for PostalAddressType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="PostalAddressType"&gt;
@@ -61,16 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "PostalAddressType", propOrder = {
-    "streetAddress",
-    "locality",
-    "stateOrProvince",
-    "postalCode",
-    "countryName"
-})
-public class PostalAddressTypeV5
-    implements Serializable
-{
+@XmlType(name = "PostalAddressType", propOrder = { "streetAddress", "locality", "stateOrProvince", "postalCode", "countryName" })
+public class PostalAddressTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "StreetAddress", required = true)
@@ -89,10 +81,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the streetAddress property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getStreetAddress() {
         return streetAddress;
@@ -102,9 +92,8 @@ public class PostalAddressTypeV5
      * Sets the value of the streetAddress property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setStreetAddress(String value) {
         this.streetAddress = value;
@@ -113,10 +102,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the locality property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getLocality() {
         return locality;
@@ -126,9 +113,8 @@ public class PostalAddressTypeV5
      * Sets the value of the locality property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setLocality(String value) {
         this.locality = value;
@@ -137,10 +123,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the stateOrProvince property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getStateOrProvince() {
         return stateOrProvince;
@@ -150,9 +134,8 @@ public class PostalAddressTypeV5
      * Sets the value of the stateOrProvince property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setStateOrProvince(String value) {
         this.stateOrProvince = value;
@@ -161,10 +144,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the postalCode property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getPostalCode() {
         return postalCode;
@@ -174,9 +155,8 @@ public class PostalAddressTypeV5
      * Sets the value of the postalCode property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setPostalCode(String value) {
         this.postalCode = value;
@@ -185,10 +165,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the countryName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getCountryName() {
         return countryName;
@@ -198,9 +176,8 @@ public class PostalAddressTypeV5
      * Sets the value of the countryName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setCountryName(String value) {
         this.countryName = value;
@@ -209,10 +186,8 @@ public class PostalAddressTypeV5
     /**
      * Gets the value of the lang property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getLang() {
         return lang;
@@ -222,9 +197,8 @@ public class PostalAddressTypeV5
      * Sets the value of the lang property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setLang(String value) {
         this.lang = value;

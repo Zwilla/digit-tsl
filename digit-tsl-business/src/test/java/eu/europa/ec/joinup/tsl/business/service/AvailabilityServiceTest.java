@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -83,7 +83,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         DBFiles f1 = new DBFiles();
         f1.setDigest("");
         f1.setFirstScanDate(new Date(116, 9, 25, 11, 25));
-        f1.setLocalPath("LU"+File.separatorChar+"2016-10-13_12-56-25.xml");
+        f1.setLocalPath("LU" + File.separatorChar + "2016-10-13_12-56-25.xml");
         f1.setMimeTypeFile(MimeType.XML);
         f1.setUrl("");
         f1.setAvailabilityInfos(new ArrayList<DBFilesAvailability>());
@@ -167,7 +167,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
     @Test
     @Transactional
     public void calculAvailability() {
-        //Get DBFiles entires
+        // Get DBFiles entires
         List<DBFiles> tlFiles = fileService.getProductionTLFilesByTerritoryOrderByFirstScanDate(tl.getTerritory());
         List<DBFilesAvailability> dbFilesAvailability = null;
         try {
@@ -183,7 +183,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         Assert.assertNotNull(dbFilesAvailability);
         Assert.assertEquals(3, dbFilesAvailability.size());
 
-        //Calcul unavailable timing
+        // Calcul unavailable timing
         List<AvailabilityState> unavailables = availabilityService.getAvailabilityStates(dbFilesAvailability, dMax);
         Assert.assertNotNull(unavailables);
         Assert.assertEquals(2, unavailables.size());
@@ -191,7 +191,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         long diff = unavailables.get(0).getEndDate().getTime() - unavailables.get(0).getStartDate().getTime();
         Assert.assertEquals(diff, 20460000);
 
-        //Set pie chart info
+        // Set pie chart info
         AvailabilityPieChart pieChart = availabilityService.getAvailabilityPieChart(unavailables);
         Assert.assertEquals(pieChart.getAvailableTiming(), 3482400000L);
         Assert.assertEquals(pieChart.getUnavailableTiming(), 20460000L);

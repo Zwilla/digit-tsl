@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -22,7 +22,6 @@ package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -38,7 +37,6 @@ import org.springframework.stereotype.Service;
 import eu.europa.ec.joinup.tsl.business.dto.data.stats.TLDataTypeCriteriaDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.tl.ServiceDataDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.tl.TSPDataDTO;
-import eu.europa.ec.joinup.tsl.business.dto.tl.TLName;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceDto;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceExtension;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceHistory;
@@ -47,6 +45,7 @@ import eu.europa.ec.joinup.tsl.business.repository.HistoryRepository;
 import eu.europa.ec.joinup.tsl.business.repository.ServiceRepository;
 import eu.europa.ec.joinup.tsl.business.repository.TrustServiceProviderRepository;
 import eu.europa.ec.joinup.tsl.business.util.TLQServiceTypeUtils;
+import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.DBHistory;
 import eu.europa.ec.joinup.tsl.model.DBService;
 import eu.europa.ec.joinup.tsl.model.DBTrustServiceProvider;
@@ -152,12 +151,8 @@ public class TLDataService {
         dbTSP.setCountryCode(countryCode);
         dbTSP.setSequenceNumber(sequenceNumber);
         dbTSP.setTspId(tsp.getId());
-        dbTSP.setTspNames(extractEnglishValues(tsp.getTSPName()));
-        for (String tradeName : extractEnglishValues(tsp.getTSPTradeName())) {
-            if (tradeName.startsWith("VAT") || tradeName.startsWith("NTR")) {
-                dbTSP.getTspTradeNames().add(tradeName);
-            }
-        }
+        dbTSP.setTspNames(TLUtils.extractEnglishValues(tsp.getTSPName()));
+        dbTSP.setTspTradeNames(TLUtils.extractVATorNTR(tsp.getTSPTradeName()));
         return trustServiceRepository.save(dbTSP);
     }
 
@@ -174,7 +169,7 @@ public class TLDataService {
         DBService dbService = new DBService();
         dbService.setCountryCode(countryCode);
         dbService.setServiceId(service.getId());
-        dbService.setServiceNames(extractEnglishValues(service.getServiceName()));
+        dbService.setServiceNames(TLUtils.extractEnglishValues(service.getServiceName()));
         dbService.setStatus(service.getCurrentStatus());
         dbService.setType(service.getTypeIdentifier());
         dbService.setStartingDate(service.getCurrentStatusStartingDate());
@@ -196,7 +191,7 @@ public class TLDataService {
         DBHistory dbHistory = new DBHistory();
         dbHistory.setCountryCode(countryCode);
         dbHistory.setHistoryId(history.getId());
-        dbHistory.setHistoryNames(extractEnglishValues(history.getServiceName()));
+        dbHistory.setHistoryNames(TLUtils.extractEnglishValues(history.getServiceName()));
         dbHistory.setStatus(history.getCurrentStatus());
         dbHistory.setType(history.getTypeIdentifier());
         dbHistory.setStartingDate(history.getCurrentStatusStartingDate());
@@ -225,25 +220,6 @@ public class TLDataService {
         historyRepository.deleteAllByCountryCode(countryCode);
         serviceRepository.deleteAllByCountryCode(countryCode);
         trustServiceRepository.deleteAllByCountryCode(countryCode);
-    }
-
-    // ----- ----- Utils ----- ----- //
-
-    /**
-     * Extract english name of list
-     *
-     * @param names
-     */
-    private Set<String> extractEnglishValues(List<TLName> names) {
-        Set<String> namesList = new HashSet<>();
-        if (!CollectionUtils.isEmpty(names)) {
-            for (TLName name : names) {
-                if (name.getLanguage().equalsIgnoreCase("en")) {
-                    namesList.add(name.getValue());
-                }
-            }
-        }
-        return namesList;
     }
 
 }

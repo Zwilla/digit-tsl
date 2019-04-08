@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -20,34 +20,32 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
-import javax.activation.FileDataSource;
 import javax.mail.Address;
+import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
 import javax.transaction.Transactional;
 
-import org.apache.commons.io.IOUtils;
+import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
-import eu.europa.ec.joinup.tsl.model.DBNotification;
-import eu.europa.esig.dss.DSSDocument;
+import eu.europa.ec.joinup.tsl.business.dto.MailDTO;
+import eu.europa.ec.joinup.tsl.business.dto.MailFileDTO;
 
 /**
  * Mail configurator & MailUtils method
@@ -82,54 +80,81 @@ public class MailService {
     @Value("${mail.smtp.user.password}")
     private String pwd;
 
-    @Autowired
-    private FileService fileService;
-
-    @Autowired
-    private TLService tlService;
-
-    @Autowired
-    private PDFReportService pdfReportService;
+    /**
+     * Send email from mailDTO. Required params: subject - to - content. Opt: cc - files
+     * 
+     * @param mailDTO
+     */
+    public boolean sendMail(MailDTO mailDTO) {
+        try {
+            Session session = Session.getInstance(getProperties());
+            MimeMessage message = new MimeMessage(session);
+            Multipart multipart = new MimeMultipart();
+            // Subject
+            message.setSubject(mailDTO.getSubject());
+            // To
+            message.addRecipients(Message.RecipientType.TO, InternetAddress.parse(mailDTO.getTo()));
+            // CC
+            if (StringUtils.isNotEmpty(mailDTO.getCc())) {
+                message.addRecipients(Message.RecipientType.CC, InternetAddress.parse(mailDTO.getCc()));
+            }
+            // Content
+            MimeBodyPart messageBodyPart = new MimeBodyPart();
+            messageBodyPart.setContent(mailDTO.getTemplate(), "text/html;charset=utf-8");
+            multipart.addBodyPart(messageBodyPart);
+            // File(s) attached
+            if (CollectionUtils.isNotEmpty(mailDTO.getFiles())) {
+                for (MailFileDTO file : mailDTO.getFiles()) {
+                    if (file != null && StringUtils.isNotEmpty(file.getFileName())) {
+                        MimeBodyPart fileBodyPart = new MimeBodyPart();
+                        DataSource dataSource = new ByteArrayDataSource(file.getFile(), file.getFileType());
+                        fileBodyPart.setDataHandler(new DataHandler(dataSource));
+                        fileBodyPart.setFileName(file.getFileName());
+                        multipart.addBodyPart(fileBodyPart);
+                    }
+                }
+            }
+            message.setContent(multipart);
+            return performSend(session, message);
+        } catch (MessagingException e) {
+            LOGGER.error("An error occured during mail sending " + mailDTO.toString(), e);
+            return false;
+        }
+    }
 
     /**
      * Send email
-     *
+     * 
      * @param session
      * @param message
+     * @throws MessagingException
      */
-    public void send(Session session, MimeMessage message) {
+    private boolean performSend(Session session, MimeMessage message) throws MessagingException {
         Transport transport = null;
-        try {
-            transport = session.getTransport(protocol);
-            if (!auth.equalsIgnoreCase("false")) {
-                transport.connect(user, pwd);
-            } else {
-                transport.connect();
-            }
+        transport = session.getTransport(protocol);
+        if (!auth.equalsIgnoreCase("false")) {
+            transport.connect(user, pwd);
+        } else {
+            transport.connect();
+        }
 
-            Address[] addresses = message.getAllRecipients();
-            if ((addresses == null) || (addresses.length == 0)) {
-                LOGGER.error("Mail 'TO' recipients part is null or empty");
-                return;
-            }
+        Address[] addresses = message.getAllRecipients();
+        if ((addresses == null) || (addresses.length == 0)) {
+            LOGGER.error("Mail 'TO' recipients part is null or empty");
+            return false;
+        } else {
             transport.sendMessage(message, message.getAllRecipients());
-        } catch (MessagingException e) {
-            LOGGER.error("Error Send" + e);
-        } finally {
-            try {
-                if (transport != null) {
-                    transport.close();
-                }
-            } catch (MessagingException e) {
-                LOGGER.error("Send Transport MessagingException." + e);
+            if (transport != null) {
+                transport.close();
             }
         }
+        return true;
     }
 
     /**
      * Get mail properties defined in application.properties
      */
-    public Properties getProperties() {
+    private Properties getProperties() {
         Properties properties = new Properties();
         properties.setProperty("mail.transport.protocol", protocol);
         properties.setProperty("mail.smtp.host", host);
@@ -140,73 +165,4 @@ public class MailService {
         properties.setProperty("mail.smtp.auth", auth);
         return properties;
     }
-
-    /**
-     * Init notification mail with notification report & content
-     *
-     * @param dbNotif
-     * @param pdfReport
-     * @param content
-     * @throws MessagingException
-     */
-    public Multipart getMultipartNotificationArt23(DBNotification dbNotif, DSSDocument pdfReport, String content) throws MessagingException {
-
-        MimeBodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setContent(content, "text/html");
-
-        Multipart multipart = new MimeMultipart();
-        multipart.addBodyPart(messageBodyPart);
-
-        // XML FILE
-        messageBodyPart = new MimeBodyPart();
-        DataSource source = new FileDataSource(fileService.getFilePath(dbNotif.getNotificationFile()));
-        messageBodyPart.setDataHandler(new DataHandler(source));
-        messageBodyPart.setFileName(dbNotif.getIdentifier() + ".xml");
-        multipart.addBodyPart(messageBodyPart);
-
-        // PDF REPORT
-        try {
-            byte[] ba = IOUtils.toByteArray(pdfReport.openStream());
-            DataSource dataSource = new ByteArrayDataSource(ba, "application/pdf");
-            MimeBodyPart pdfBodyPart = new MimeBodyPart();
-            pdfBodyPart.setDataHandler(new DataHandler(dataSource));
-            pdfBodyPart.setFileName(dbNotif.getIdentifier() + ".pdf");
-            multipart.addBodyPart(pdfBodyPart);
-        } catch (IOException e) {
-            LOGGER.error("Error getMultipartNotificationArt23" + e);
-        }
-
-        return multipart;
-    }
-
-    /**
-     * Init mail with content and TL report attached
-     *
-     * @param tlId
-     * @param content
-     * @return
-     */
-    public Multipart getMultipartNewTl(int tlId, String content) {
-        TL tl = tlService.getTL(tlId);
-        ByteArrayOutputStream os = new ByteArrayOutputStream();
-        Multipart multipart = new MimeMultipart();
-        try {
-            pdfReportService.generateTLReport(tl, os);
-            MimeBodyPart messageBodyPart = new MimeBodyPart();
-            messageBodyPart.setContent(content, "text/html;charset=utf-8");
-
-            multipart.addBodyPart(messageBodyPart);
-
-            byte[] ba = os.toByteArray();
-            DataSource dataSource = new ByteArrayDataSource(ba, "application/pdf");
-            MimeBodyPart pdfBodyPart = new MimeBodyPart();
-            pdfBodyPart.setDataHandler(new DataHandler(dataSource));
-            pdfBodyPart.setFileName("Report_" + tl.getDbName() + ".pdf");
-            multipart.addBodyPart(pdfBodyPart);
-        } catch (Exception e) {
-            LOGGER.error("Get Multipart new TL" + e);
-        }
-        return multipart;
-    }
-
 }

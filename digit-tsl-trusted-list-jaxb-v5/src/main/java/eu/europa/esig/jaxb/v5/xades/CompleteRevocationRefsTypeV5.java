@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -39,11 +38,12 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for CompleteRevocationRefsType complex type.
+ * <p>
+ * Java class for CompleteRevocationRefsType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="CompleteRevocationRefsType"&gt;
@@ -63,14 +63,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CompleteRevocationRefsType", propOrder = {
-    "crlRefs",
-    "ocspRefs",
-    "otherRefs"
-})
-public class CompleteRevocationRefsTypeV5
-    implements Serializable
-{
+@XmlType(name = "CompleteRevocationRefsType", propOrder = { "crlRefs", "ocspRefs", "otherRefs" })
+public class CompleteRevocationRefsTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "CRLRefs")
@@ -88,10 +82,8 @@ public class CompleteRevocationRefsTypeV5
     /**
      * Gets the value of the crlRefs property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CRLRefsTypeV5 }
-     *     
+     * @return possible object is {@link CRLRefsTypeV5 }
+     * 
      */
     public CRLRefsTypeV5 getCRLRefs() {
         return crlRefs;
@@ -101,9 +93,8 @@ public class CompleteRevocationRefsTypeV5
      * Sets the value of the crlRefs property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CRLRefsTypeV5 }
-     *     
+     *            allowed object is {@link CRLRefsTypeV5 }
+     * 
      */
     public void setCRLRefs(CRLRefsTypeV5 value) {
         this.crlRefs = value;
@@ -112,10 +103,8 @@ public class CompleteRevocationRefsTypeV5
     /**
      * Gets the value of the ocspRefs property.
      * 
-     * @return
-     *     possible object is
-     *     {@link OCSPRefsTypeV5 }
-     *     
+     * @return possible object is {@link OCSPRefsTypeV5 }
+     * 
      */
     public OCSPRefsTypeV5 getOCSPRefs() {
         return ocspRefs;
@@ -125,9 +114,8 @@ public class CompleteRevocationRefsTypeV5
      * Sets the value of the ocspRefs property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link OCSPRefsTypeV5 }
-     *     
+     *            allowed object is {@link OCSPRefsTypeV5 }
+     * 
      */
     public void setOCSPRefs(OCSPRefsTypeV5 value) {
         this.ocspRefs = value;
@@ -136,10 +124,8 @@ public class CompleteRevocationRefsTypeV5
     /**
      * Gets the value of the otherRefs property.
      * 
-     * @return
-     *     possible object is
-     *     {@link OtherCertStatusRefsTypeV5 }
-     *     
+     * @return possible object is {@link OtherCertStatusRefsTypeV5 }
+     * 
      */
     public OtherCertStatusRefsTypeV5 getOtherRefs() {
         return otherRefs;
@@ -149,9 +135,8 @@ public class CompleteRevocationRefsTypeV5
      * Sets the value of the otherRefs property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link OtherCertStatusRefsTypeV5 }
-     *     
+     *            allowed object is {@link OtherCertStatusRefsTypeV5 }
+     * 
      */
     public void setOtherRefs(OtherCertStatusRefsTypeV5 value) {
         this.otherRefs = value;
@@ -160,10 +145,8 @@ public class CompleteRevocationRefsTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -173,9 +156,8 @@ public class CompleteRevocationRefsTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

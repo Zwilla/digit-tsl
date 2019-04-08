@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -36,11 +35,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for DataObjectFormatType complex type.
+ * <p>
+ * Java class for DataObjectFormatType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="DataObjectFormatType"&gt;
@@ -61,15 +61,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DataObjectFormatType", propOrder = {
-    "description",
-    "objectIdentifier",
-    "mimeType",
-    "encoding"
-})
-public class DataObjectFormatTypeV5
-    implements Serializable
-{
+@XmlType(name = "DataObjectFormatType", propOrder = { "description", "objectIdentifier", "mimeType", "encoding" })
+public class DataObjectFormatTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "Description")
@@ -88,10 +81,8 @@ public class DataObjectFormatTypeV5
     /**
      * Gets the value of the description property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getDescription() {
         return description;
@@ -101,9 +92,8 @@ public class DataObjectFormatTypeV5
      * Sets the value of the description property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setDescription(String value) {
         this.description = value;
@@ -112,10 +102,8 @@ public class DataObjectFormatTypeV5
     /**
      * Gets the value of the objectIdentifier property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ObjectIdentifierTypeV5 }
-     *     
+     * @return possible object is {@link ObjectIdentifierTypeV5 }
+     * 
      */
     public ObjectIdentifierTypeV5 getObjectIdentifier() {
         return objectIdentifier;
@@ -125,9 +113,8 @@ public class DataObjectFormatTypeV5
      * Sets the value of the objectIdentifier property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ObjectIdentifierTypeV5 }
-     *     
+     *            allowed object is {@link ObjectIdentifierTypeV5 }
+     * 
      */
     public void setObjectIdentifier(ObjectIdentifierTypeV5 value) {
         this.objectIdentifier = value;
@@ -136,10 +123,8 @@ public class DataObjectFormatTypeV5
     /**
      * Gets the value of the mimeType property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getMimeType() {
         return mimeType;
@@ -149,9 +134,8 @@ public class DataObjectFormatTypeV5
      * Sets the value of the mimeType property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setMimeType(String value) {
         this.mimeType = value;
@@ -160,10 +144,8 @@ public class DataObjectFormatTypeV5
     /**
      * Gets the value of the encoding property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getEncoding() {
         return encoding;
@@ -173,9 +155,8 @@ public class DataObjectFormatTypeV5
      * Sets the value of the encoding property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setEncoding(String value) {
         this.encoding = value;
@@ -184,10 +165,8 @@ public class DataObjectFormatTypeV5
     /**
      * Gets the value of the objectReference property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getObjectReference() {
         return objectReference;
@@ -197,9 +176,8 @@ public class DataObjectFormatTypeV5
      * Sets the value of the objectReference property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setObjectReference(String value) {
         this.objectReference = value;

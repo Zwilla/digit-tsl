@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -83,8 +83,7 @@ public class TLServiceHistory extends AbstractTLDTO {
 
         if (svcHistory.getServiceDigitalIdentity() != null) {
             List<TLDigitalIdentification> digitalId = new ArrayList<>();
-            digitalId.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_1",
-                    svcHistory.getServiceDigitalIdentity()));
+            digitalId.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_1", svcHistory.getServiceDigitalIdentity()));
             setDigitalIdentification(digitalId);
         }
 
@@ -119,8 +118,7 @@ public class TLServiceHistory extends AbstractTLDTO {
 
         List<TLDigitalIdentification> digitalId = new ArrayList<>();
         if (svcHistory.getServiceDigitalIdentity() != null) {
-            digitalId.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_1",
-                    svcHistory.getServiceDigitalIdentity()));
+            digitalId.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_1", svcHistory.getServiceDigitalIdentity()));
         }
         setDigitalIdentification(digitalId);
 
@@ -301,8 +299,7 @@ public class TLServiceHistory extends AbstractTLDTO {
          * List<TLName> serviceName;
          *************************************/
         if (CollectionUtils.isNotEmpty(getServiceName())) {
-            List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getServiceName(), publishedTlHistory.getServiceName(),
-                    getId() + "_" + Tag.SERVICE_NAME);
+            List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getServiceName(), publishedTlHistory.getServiceName(), getId() + "_" + Tag.SERVICE_NAME);
             if (changeList.size() > 0) {
                 diffList.addAll(changeList);
             }
@@ -315,29 +312,27 @@ public class TLServiceHistory extends AbstractTLDTO {
         /*************************************
          * List<TLServiceExtension> extension;
          *************************************/
-        List<TLServiceExtension> tmp = !CollectionUtils.isEmpty(getExtension()) ? new ArrayList<>(getExtension())
-                : new ArrayList<TLServiceExtension>();
-        List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlHistory.getExtension())
-                ? new ArrayList<>(publishedTlHistory.getExtension()) : new ArrayList<TLServiceExtension>();
+        List<TLServiceExtension> tmp = !CollectionUtils.isEmpty(getExtension()) ? new ArrayList<>(getExtension()) : new ArrayList<TLServiceExtension>();
+        List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlHistory.getExtension()) ? new ArrayList<>(publishedTlHistory.getExtension()) : new ArrayList<TLServiceExtension>();
 
-                // DELETE EQUALS EXTENSION
-                if (!CollectionUtils.isEmpty(getExtension())) {
-                    for (int i = 0; i < getExtension().size(); i++) {
-                        if (tmpPublished.contains(getExtension().get(i))) {
-                            tmp.remove(getExtension().get(i));
-                            tmpPublished.remove(getExtension().get(i));
-                        }
-                    }
+        // DELETE EQUALS EXTENSION
+        if (!CollectionUtils.isEmpty(getExtension())) {
+            for (int i = 0; i < getExtension().size(); i++) {
+                if (tmpPublished.contains(getExtension().get(i))) {
+                    tmp.remove(getExtension().get(i));
+                    tmpPublished.remove(getExtension().get(i));
                 }
+            }
+        }
 
-                diffList.addAll(ChangeUtils.diffOfExtension(tmp, tmpPublished, getId()));
+        diffList.addAll(ChangeUtils.diffOfExtension(tmp, tmpPublished, getId()));
 
-                /*************************************
-                 * List<TLDigitalIdentity> digitalIdentification;
-                 *************************************/
-                diffList.addAll(ChangeUtils.diffOfDigitalList(getDigitalIdentification(), publishedTlHistory.getDigitalIdentification(), getId()));
+        /*************************************
+         * List<TLDigitalIdentity> digitalIdentification;
+         *************************************/
+        diffList.addAll(ChangeUtils.diffOfDigitalList(getDigitalIdentification(), publishedTlHistory.getDigitalIdentification(), getId()));
 
-                return diffList;
+        return diffList;
     }
 
     @Override

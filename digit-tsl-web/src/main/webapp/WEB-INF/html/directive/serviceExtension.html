@@ -1,529 +1,509 @@
 <div>
-    <div ng-class="isOpen(extension.show)">
-        <span ng-click="extension.show=true" ng-if="extension.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-        <span ng-click="extension.show=false" ng-if="extension.show==true" class="fa fa-caret-down openTabIcon cursor-pointer" ng-class="carretIsOpen(white)"></span>
+	<div ng-class="isOpen(extension.show)">
+		<span ng-click="extension.show=true" ng-if="extension.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+		<span ng-click="extension.show=false" ng-if="extension.show==true" class="fa fa-caret-down openTabIcon cursor-pointer" ng-class="carretIsOpen(white)"></span>
 
-        <div style="display: inline-block">
-            <check disabled="tl.checkToRun" id="extension.id" listcheck="listcheck" label="digital.name" istreeparent="true"></check>
-            <change id="extension.id" listdiff="listchange" label="digital.name" istreeparent="true" information="information"></change>
-        </div>
-        <span>
-            {{extension.label}}:
-            <span th:text="#{extension.critical}"></span>
-            = {{extension.critical}}
-        </span>
-    </div>
-    <div ng-if="extension.show==true" class="isOpenBorder">
-        <div class="container-fluid isOpenTopBorder">
-            <!-- Additional Service Information -->
-            <div ng-if="extension.additionnalServiceInfo!=null">
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <span th:text="#{extension.additionnalServiceInformation.URI}">:</span>
-                    </div>
-                    <div class="col-sm-10">
-                        <uri value="extension.additionnalServiceInfo.value"></uri>
-                    </div>
-                </div>
-            </div>
-            <!-- Taken Over By -->
-            <div ng-if="extension.takenOverBy!=null">
-                <!-- Territory -->
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information" th:text="#{schemeTerritory}"></div>
-                    <div class="col-sm-10">{{extension.takenOverBy.territory}}</div>
-                </div>
-                <!-- URL -->
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information" th:text="#{extension.additionnalServiceInformation.URI}"></div>
-                    <div class="col-sm-10">
-                        <uri value="extension.takenOverBy.url.value"></uri>
-                    </div>
-                </div>
-                <!-- Tsp Name -->
-                <div class="row" ng-hide="tableVisibility(extension.takenOverBy.tspName)">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <span th:text="#{serviceProvider.name}"></span>
-                    </div>
-                    <div class="col-sm-10">
-                        <div ng-init="extension.takenOverBy.tspNameShow='0'">
-                            <div style="display: inline;" ng-hide="iconTableVisibility(extension.takenOverBy.tspName)">
-                                <span ng-if="extension.takenOverBy.tspNameShow!='1'" ng-click="extension.takenOverBy.tspNameShow='1'"
-                                    class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                <span ng-if="extension.takenOverBy.tspNameShow=='1'" ng-click="extension.takenOverBy.tspNameShow='0'"
-                                    class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                            </div>
-                            <span ng-if="extension.takenOverBy.tspNameShow=='0'">{{extension.takenOverBy.tspName[0].value}}</span>
-                        </div>
-                        <tabset ng-if="extension.takenOverBy.tspNameShow=='1'" class="tabset-takenOverBy"> <tab ng-repeat="info in extension.takenOverBy.tspName"> <tab-heading>
-                        <span style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
-                    </div>
-                </div>
-                <!-- Operator Name -->
-                <div class="row" ng-hide="tableVisibility(extension.takenOverBy.operatorName)">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <span th:text="#{schemeOpeName}"></span>
-                    </div>
-                    <div class="col-sm-10">
-                        <div ng-init="extension.takenOverBy.operatorNameShow='0'">
-                            <div style="display: inline;" ng-hide="iconTableVisibility(extension.takenOverBy.operatorName)">
-                                <span ng-if="extension.takenOverBy.operatorNameShow!='1'" ng-click="extension.takenOverBy.operatorNameShow='1'"
-                                    class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                <span ng-if="extension.takenOverBy.operatorNameShow=='1'" ng-click="extension.takenOverBy.operatorNameShow='0'"
-                                    class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                            </div>
-                            <span ng-if="extension.takenOverBy.operatorNameShow=='0'">{{extension.takenOverBy.operatorName[0].value}}</span>
-                        </div>
-                        <tabset ng-if="extension.takenOverBy.operatorNameShow=='1'" class="tabset-takenOverBy"> <tab ng-repeat="info in extension.takenOverBy.operatorName">
-                        <tab-heading> <span style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
-                    </div>
-                </div>
-                <!-- Other Qualifier -->
-                <div class="row" ng-hide="extension.takenOverBy.otherQualifier==null">
-                    <div class="row" ng-repeat="qualifier in extension.takenOverBy.otherQualifier track by $index">
-                        <div class="col-sm-2 text-right scheme-information" th:text="#{extension.additionnalServiceInformation.otherQualifier}"></div>
-                        <div class="col-sm-10">
-                            <span style="display:block;width:95%">{{qualifier}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		<div style="display: inline-block">
+			<check disabled="tl.checkToRun" id="extension.id" listcheck="listcheck" label="digital.name" istreeparent="true"></check>
+			<change id="extension.id" listdiff="listchange" label="digital.name" istreeparent="true" information="information"></change>
+		</div>
+		<span>
+			{{extension.label}}:
+			<span th:text="#{extension.critical}"></span>
+			= {{extension.critical}}
+		</span>
+	</div>
+	<div ng-if="extension.show==true" class="isOpenBorder">
+		<div class="container-fluid isOpenTopBorder">
+			<!-- Additional Service Information -->
+			<div ng-if="extension.additionnalServiceInfo!=null">
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information">
+						<span th:text="#{extension.additionnalServiceInformation.URI}">:</span>
+					</div>
+					<div class="col-sm-10">
+						<uri value="extension.additionnalServiceInfo.value"></uri>
+					</div>
+				</div>
+			</div>
+			<!-- Taken Over By -->
+			<div ng-if="extension.takenOverBy!=null">
+				<!-- Territory -->
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information" th:text="#{schemeTerritory}"></div>
+					<div class="col-sm-10">{{extension.takenOverBy.territory}}</div>
+				</div>
+				<!-- URL -->
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information" th:text="#{extension.additionnalServiceInformation.URI}"></div>
+					<div class="col-sm-10">
+						<uri value="extension.takenOverBy.url.value"></uri>
+					</div>
+				</div>
+				<!-- Tsp Name -->
+				<div class="row" ng-hide="tableVisibility(extension.takenOverBy.tspName)">
+					<div class="col-sm-2 text-right scheme-information">
+						<span th:text="#{serviceProvider.name}"></span>
+					</div>
+					<div class="col-sm-10">
+						<div ng-init="extension.takenOverBy.tspNameShow='0'">
+							<div style="display: inline;" ng-hide="iconTableVisibility(extension.takenOverBy.tspName)">
+								<span ng-if="extension.takenOverBy.tspNameShow!='1'" ng-click="extension.takenOverBy.tspNameShow='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+								<span ng-if="extension.takenOverBy.tspNameShow=='1'" ng-click="extension.takenOverBy.tspNameShow='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+							</div>
+							<span ng-if="extension.takenOverBy.tspNameShow=='0'">{{extension.takenOverBy.tspName[0].value}}</span>
+						</div>
+						<tabset ng-if="extension.takenOverBy.tspNameShow=='1'" class="tabset-takenOverBy"> <tab ng-repeat="info in extension.takenOverBy.tspName"> <tab-heading> <span
+							style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
+					</div>
+				</div>
+				<!-- Operator Name -->
+				<div class="row" ng-hide="tableVisibility(extension.takenOverBy.operatorName)">
+					<div class="col-sm-2 text-right scheme-information">
+						<span th:text="#{schemeOpeName}"></span>
+					</div>
+					<div class="col-sm-10">
+						<div ng-init="extension.takenOverBy.operatorNameShow='0'">
+							<div style="display: inline;" ng-hide="iconTableVisibility(extension.takenOverBy.operatorName)">
+								<span ng-if="extension.takenOverBy.operatorNameShow!='1'" ng-click="extension.takenOverBy.operatorNameShow='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+								<span ng-if="extension.takenOverBy.operatorNameShow=='1'" ng-click="extension.takenOverBy.operatorNameShow='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+							</div>
+							<span ng-if="extension.takenOverBy.operatorNameShow=='0'">{{extension.takenOverBy.operatorName[0].value}}</span>
+						</div>
+						<tabset ng-if="extension.takenOverBy.operatorNameShow=='1'" class="tabset-takenOverBy"> <tab ng-repeat="info in extension.takenOverBy.operatorName"> <tab-heading> <span
+							style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
+					</div>
+				</div>
+				<!-- Other Qualifier -->
+				<div class="row" ng-hide="extension.takenOverBy.otherQualifier==null">
+					<div class="row" ng-repeat="qualifier in extension.takenOverBy.otherQualifier track by $index">
+						<div class="col-sm-2 text-right scheme-information" th:text="#{extension.additionnalServiceInformation.otherQualifier}"></div>
+						<div class="col-sm-10">
+							<span style="display: block; width: 95%">{{qualifier}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Qualifications Extension -->
-            <div ng-if="extension.qualificationsExtension!=null" ng-repeat="qualif in extension.qualificationsExtension">
-                <div class="row" ng-init="qualif.show='0';extension.qualificationsExtension[0].show='1'">
-                    <span ng-if="qualif.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="qualif.show='1'"></span>
-                    <span ng-if="qualif.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="qualif.show='0'"></span>
-                    <span th:text="#{extension.qualification}"></span>
-                </div>
-                <!-- Qualification Element -->
-                <div ng-if="qualif.show=='1'" style="margin-left: 20px;">
-                    <div>
-                        <div class="row">
-                            <div class="col-sm-2 text-right scheme-information">
-                                <div class="divCheckChange">
-                                    <check disabled="tl.checkToRun" id="qualif.id+'_SERVICE_QUALIFICATION_QUALIFIERS'" listcheck="listcheck" label="digital.name"
-                                        istreeparent="true"></check>
-                                </div>
-                                <span th:text="#{extension.additionnalServiceInformation.qualifiers}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <uri value="qualif.qualifTypeList[0]"></uri>
-                            </div>
-                        </div>
-                        <div ng-repeat="qualifType in qualif.qualifTypeList track by $index" ng-hide="$first">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-10">
-                                <uri value="qualif.qualifTypeList[$index]"></uri>
-                            </div>
-                        </div>
-                    </div>
-                    <!---- Criteria ---->
-                    <div ng-init="qualif.criteria.show='1'">
-                        <div class="row">
-                            <div class="col-sm-2 text-right scheme-information">
-                                <span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <span ng-if="qualif.criteria.show!='1'" ng-click="qualif.criteria.show='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                <span ng-if="qualif.criteria.show=='1'" ng-click="qualif.criteria.show='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
-                                <span>: {{qualif.criteria.asserts}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div ng-if="qualif.criteria.show=='1'" class="isOpenBorder">
-                        <div class="container-fluid isOpenTopBorder">
-                            <!-- Description -->
-                            <div class="row" ng-hide="objVisibility(qualif.criteria.description)">
-                                <div class="col-sm-2 text-right scheme-information">
-                                    <span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{qualif.criteria.description}}</span>
-                                </div>
-                            </div>
-                            <!-- Key Usage -->
-                            <div ng-hide="tableVisibility(qualif.criteria.keyUsage)" ng-if="qualif.criteria.keyUsage==null || qualif.criteria.keyUsage.length==0">
-                                <div class="row">
-                                    <div class="col-sm-2 text-right scheme-information">
-                                        <span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div ng-repeat="keyUsageList in qualif.criteria.keyUsage" class="row">
-                                <div>
-                                    <div class="text-right scheme-information col-sm-2" ng-init="keyUsage.show='0'">
-                                        <span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                        <span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                        <span ng-if="keyUsage.show!='1'">{{keyUsageList.keyUsageBit[0].value}} - {{keyUsageList.keyUsageBit[0].isValue}}</span>
-                                    </div>
-                                </div>
-                                <div ng-if="keyUsage.show=='1'" style="display: block; margin-left: 20px;">
-                                    <div style="display: block; width: 100%;">
-                                        <div class="col-sm-12">
-                                            <span ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-4" style="display: inline-block;">{{bit.value}} - {{bit.isValue}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Policy List -->
-                            <div ng-hide="tableVisibility(qualif.criteria.policyList)" ng-if="qualif.criteria.policyList==null">
-                                <div class="row">
-                                    <div class="col-sm-2 text-right scheme-information">
-                                        <span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div ng-repeat="policyList in qualif.criteria.policyList" class="row">
-                                <div>
-                                    <div class="text-right scheme-information col-sm-2">
-                                        <span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                        <span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                        <span ng-if="policyList.show!='1'">{{policyList.policyBit[0].identifierValue}}</span>
-                                    </div>
-                                </div>
-                                <div ng-if="policyList.show=='1'" ng-repeat="policyIdentifier in policyList.policyBit" ng-init="policyIdentifier.show='0'"
-                                    style="display: block; margin-left: 15px;">
-                                    <div style="display: block; width: 100%;">
-                                        <div class="col-sm-2 text-right">
-                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <div style="display: inline;" ng-if="policyIdentifier.description!=null || policyIdentifier.documentationReferences!=null">
-                                                <span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                <span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                            </div>
-                                            <span>{{policyIdentifier.identifierValue}}</span>
-                                            <span ng-if="policyIdentifier.identifierType!=undefined && policyIdentifier.identifierType!=null && policyIdentifier.identifierType!=''">({{policyIdentifier.identifierType}})</span>
-                                        </div>
-                                    </div>
-                                    <div ng-if="policyIdentifier.show=='1'" style="display: block; width: 100%;">
-                                        <!-- Description -->
-                                        <div class="row">
-                                            <div class="col-sm-2 text-right">
-                                                <span style="margin-left: 20px;" th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{policyIdentifier.description}}</span>
-                                            </div>
-                                        </div>
-                                        <!-- Documentation -->
-                                        <div class="row">
-                                            <div class="col-sm-2 text-right">
-                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span style="display: block" ng-repeat="doc in policyIdentifier.documentationReferences track by $index">{{policyIdentifier.documentationReferences[$index]}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Other Criteria -->
-                            <div class="row" ng-hide="tableVisibility(qualif.criteria.otherList)">
-                                <div class="col-sm-2 text-right scheme-information" ng-hide="!iconTableVisibility(qualif.criteria.otherList)">
-                                    <span th:text="#{extension.other}"></span>
-                                </div>
-                                <div ng-hide="iconTableVisibility(qualif.criteria.otherList)">
-                                    <div class="text-right scheme-information col-sm-2" ng-init="otherList.show='0'">
-                                        <span th:text="#{extension.other}"></span>
-                                    </div>
-                                    <div class="col-sm-10">
-                                        <span ng-click="otherList.show='1'" ng-if="otherList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                        <span ng-click="otherList.show='0'" ng-if="otherList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                        <div style="display: inline-block;" ng-if="otherList.show!='1'">
-                                            <span th:text="#{extension.otherType}"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Cert DNA -->
-                            <div ng-if="otherList.show=='1'">
-                                <div id="certDnaList" ng-hide="tableVisibility(qualif.criteria.otherList.certDnaList)" class="row">
-                                    <div style="margin-left: 20px;">
-                                        <div class="text-right scheme-information col-sm-2">
-                                            <span th:text="#{extension.certDNA}"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <span ng-click="qualif.criteria.otherList.certDnaList.show='1'" ng-if="qualif.criteria.otherList.certDnaList.show!='1'"
-                                                class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                            <span ng-click="qualif.criteria.otherList.certDnaList.show='0'" ng-if="qualif.criteria.otherList.certDnaList.show=='1'"
-                                                class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                            <span ng-if="qualif.criteria.otherList.certDnaList.show!='1'">{{qualif.criteria.otherList.certDnaList[0].identifierValue}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div ng-if="qualif.criteria.otherList.certDnaList.show=='1'" class="row">
-                                    <div ng-repeat="certDna in qualif.criteria.otherList.certDnaList" style="margin-left: 40px;">
-                                        <div class="col-sm-2">
-                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <span style="display: inline-block;">{{certDna.identifierValue}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Extended KeyUSage -->
-                            <div ng-if="otherList.show=='1'">
-                                <div class="row">
-                                    <div style="margin-left: 20px;">
-                                        <div class="text-right scheme-information col-sm-2">
-                                            <span th:text="#{extension.extendedKeyUsage}"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <span ng-click="qualif.criteria.otherList.extendedKeyUsageList.show='1'"
-                                                ng-if="qualif.criteria.otherList.extendedKeyUsageList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                            <span ng-click="qualif.criteria.otherList.extendedKeyUsageList.show='0'"
-                                                ng-if="qualif.criteria.otherList.extendedKeyUsageList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                            <span ng-if="qualif.criteria.otherList.extendedKeyUsageList.show!='1'">{{qualif.criteria.otherList.extendedKeyUsageList[0].identifierValue}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div ng-if="qualif.criteria.otherList.extendedKeyUsageList.show=='1'" class="row">
-                                    <div ng-repeat="keyUsage in qualif.criteria.otherList.extendedKeyUsageList" style="margin-left: 40px;">
-                                        <div class="col-sm-2">
-                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <span>{{keyUsage.identifierValue}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+			<!-- Qualifications Extension -->
+			<div ng-if="extension.qualificationsExtension!=null" ng-repeat="qualif in extension.qualificationsExtension">
+				<div class="row" ng-init="qualif.show='0';extension.qualificationsExtension[0].show='1'">
+					<span ng-if="qualif.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="qualif.show='1'"></span>
+					<span ng-if="qualif.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="qualif.show='0'"></span>
+					<span th:text="#{extension.qualification}"></span>
+				</div>
+				<!-- Qualification Element -->
+				<div ng-if="qualif.show=='1'" style="margin-left: 20px;">
+					<div>
+						<div class="row">
+							<div class="col-sm-2 text-right scheme-information">
+								<div class="divCheckChange">
+									<check disabled="tl.checkToRun" id="qualif.id+'_SERVICE_QUALIFICATION_QUALIFIERS'" listcheck="listcheck" label="digital.name" istreeparent="true"></check>
+								</div>
+								<span th:text="#{extension.additionnalServiceInformation.qualifiers}"></span>
+							</div>
+							<div class="col-sm-10">
+								<uri value="qualif.qualifTypeList[0]"></uri>
+							</div>
+						</div>
+						<div ng-repeat="qualifType in qualif.qualifTypeList track by $index" ng-hide="$first">
+							<div class="col-sm-2"></div>
+							<div class="col-sm-10">
+								<uri value="qualif.qualifTypeList[$index]"></uri>
+							</div>
+						</div>
+					</div>
+					<!-- Criteria -->
+					<div ng-init="qualif.criteria.show='1'">
+						<div class="row">
+							<div class="col-sm-2 text-right scheme-information">
+								<span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
+							</div>
+							<div class="col-sm-10">
+								<span ng-if="qualif.criteria.show!='1'" ng-click="qualif.criteria.show='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+								<span ng-if="qualif.criteria.show=='1'" ng-click="qualif.criteria.show='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+								<span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
+								<span>: {{qualif.criteria.asserts}}</span>
+							</div>
+						</div>
+					</div>
+					<div ng-if="qualif.criteria.show=='1'" class="isOpenBorder">
+						<div class="container-fluid isOpenTopBorder">
+							<!-- Description -->
+							<div class="row" ng-hide="objVisibility(qualif.criteria.description)">
+								<div class="col-sm-2 text-right scheme-information">
+									<span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{qualif.criteria.description}}</span>
+								</div>
+							</div>
+							<!-- Key Usage -->
+							<div ng-hide="tableVisibility(qualif.criteria.keyUsage)" ng-if="qualif.criteria.keyUsage==null || qualif.criteria.keyUsage.length==0">
+								<div class="row">
+									<div class="col-sm-2 text-right scheme-information">
+										<span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
+									</div>
+								</div>
+							</div>
+							<div ng-repeat="keyUsageList in qualif.criteria.keyUsage" class="row">
+								<div>
+									<div class="text-right scheme-information col-sm-2" ng-init="keyUsage.show='0'">
+										<span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
+									</div>
+									<div class="col-sm-10">
+										<span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+										<span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+										<span ng-if="keyUsage.show!='1'">{{keyUsageList.keyUsageBit[0].value}} - {{keyUsageList.keyUsageBit[0].isValue}}</span>
+									</div>
+								</div>
+								<div ng-if="keyUsage.show=='1'" style="display: block; margin-left: 20px;">
+									<div style="display: block; width: 100%;">
+										<div class="col-sm-12">
+											<span ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-4" style="display: inline-block;">{{bit.value}} - {{bit.isValue}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Policy List -->
+							<div ng-hide="tableVisibility(qualif.criteria.policyList)" ng-if="qualif.criteria.policyList==null">
+								<div class="row">
+									<div class="col-sm-2 text-right scheme-information">
+										<span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
+									</div>
+								</div>
+							</div>
+							<div ng-repeat="policyList in qualif.criteria.policyList" class="row">
+								<div>
+									<div class="text-right scheme-information col-sm-2">
+										<span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
+									</div>
+									<div class="col-sm-10">
+										<span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+										<span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+										<span ng-if="policyList.show!='1'">{{policyList.policyBit[0].identifierValue}}</span>
+									</div>
+								</div>
+								<div ng-if="policyList.show=='1'" ng-repeat="policyIdentifier in policyList.policyBit" ng-init="policyIdentifier.show='0'" style="display: block; margin-left: 15px;">
+									<div style="display: block; width: 100%;">
+										<div class="col-sm-2 text-right">
+											<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+										</div>
+										<div class="col-sm-10">
+											<div style="display: inline;" ng-if="policyIdentifier.description!=null || policyIdentifier.documentationReferences!=null">
+												<span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+												<span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+											</div>
+											<span>{{policyIdentifier.identifierValue}}</span>
+											<span ng-if="policyIdentifier.identifierType!=undefined && policyIdentifier.identifierType!=null && policyIdentifier.identifierType!=''">({{policyIdentifier.identifierType}})</span>
+										</div>
+									</div>
+									<div ng-if="policyIdentifier.show=='1'" style="display: block; width: 100%;">
+										<!-- Description -->
+										<div class="row">
+											<div class="col-sm-2 text-right">
+												<span style="margin-left: 20px;" th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{policyIdentifier.description}}</span>
+											</div>
+										</div>
+										<!-- Documentation -->
+										<div class="row">
+											<div class="col-sm-2 text-right">
+												<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span style="display: block" ng-repeat="doc in policyIdentifier.documentationReferences track by $index">{{policyIdentifier.documentationReferences[$index]}}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Other Criteria -->
+							<div class="row" ng-hide="tableVisibility(qualif.criteria.otherList)">
+								<div class="col-sm-2 text-right scheme-information" ng-hide="!iconTableVisibility(qualif.criteria.otherList)">
+									<span th:text="#{extension.other}"></span>
+								</div>
+								<div ng-hide="iconTableVisibility(qualif.criteria.otherList)">
+									<div class="text-right scheme-information col-sm-2" ng-init="otherList.show='0'">
+										<span th:text="#{extension.other}"></span>
+									</div>
+									<div class="col-sm-10">
+										<span ng-click="otherList.show='1'" ng-if="otherList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+										<span ng-click="otherList.show='0'" ng-if="otherList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+										<div style="display: inline-block;" ng-if="otherList.show!='1'">
+											<span th:text="#{extension.otherType}"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Cert DNA -->
+							<div ng-if="otherList.show=='1'">
+								<div id="certDnaList" ng-hide="tableVisibility(qualif.criteria.otherList.certDnaList)" class="row">
+									<div style="margin-left: 20px;">
+										<div class="text-right scheme-information col-sm-2">
+											<span th:text="#{extension.certDNA}"></span>
+										</div>
+										<div class="col-sm-10">
+											<span ng-click="qualif.criteria.otherList.certDnaList.show='1'" ng-if="qualif.criteria.otherList.certDnaList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+											<span ng-click="qualif.criteria.otherList.certDnaList.show='0'" ng-if="qualif.criteria.otherList.certDnaList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+											<span ng-if="qualif.criteria.otherList.certDnaList.show!='1'">{{qualif.criteria.otherList.certDnaList[0].identifierValue}}</span>
+										</div>
+									</div>
+								</div>
+								<div ng-if="qualif.criteria.otherList.certDnaList.show=='1'" class="row">
+									<div ng-repeat="certDna in qualif.criteria.otherList.certDnaList" style="margin-left: 40px;">
+										<div class="col-sm-2">
+											<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+										</div>
+										<div class="col-sm-10">
+											<span style="display: inline-block;">{{certDna.identifierValue}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Extended KeyUSage -->
+							<div ng-if="otherList.show=='1'">
+								<div class="row">
+									<div style="margin-left: 20px;">
+										<div class="text-right scheme-information col-sm-2">
+											<span th:text="#{extension.extendedKeyUsage}"></span>
+										</div>
+										<div class="col-sm-10">
+											<span ng-click="qualif.criteria.otherList.extendedKeyUsageList.show='1'" ng-if="qualif.criteria.otherList.extendedKeyUsageList.show!='1'"
+												class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+											<span ng-click="qualif.criteria.otherList.extendedKeyUsageList.show='0'" ng-if="qualif.criteria.otherList.extendedKeyUsageList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+											<span ng-if="qualif.criteria.otherList.extendedKeyUsageList.show!='1'">{{qualif.criteria.otherList.extendedKeyUsageList[0].identifierValue}}</span>
+										</div>
+									</div>
+								</div>
+								<div ng-if="qualif.criteria.otherList.extendedKeyUsageList.show=='1'" class="row">
+									<div ng-repeat="keyUsage in qualif.criteria.otherList.extendedKeyUsageList" style="margin-left: 40px;">
+										<div class="col-sm-2">
+											<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+										</div>
+										<div class="col-sm-10">
+											<span>{{keyUsage.identifierValue}}</span>
+										</div>
+									</div>
+								</div>
+							</div>
 
 
-                            <!---------------------- Criteria List ---------------------->
-                            <div ng-hide="tableVisibility(qualif.criteria.criteriaList)" ng-repeat="criteriaList in qualif.criteria.criteriaList">
-                                <div class="row" ng-if="qualif.criteria.criteriaList.length==0">
-                                    <div class="col-sm-2 text-right scheme-information">
-                                        <span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
-                                    </div>
-                                </div>
-                                <!---- Criteria ---->
-                                <div ng-init="criteriaList.show='1'">
-                                    <div class="row">
-                                        <div class="col-sm-2 text-right scheme-information">
-                                            <span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
-                                        </div>
-                                        <div class="col-sm-10">
-                                            <span ng-if="criteriaList.show!='1'" ng-click="criteriaList.show='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                            <span ng-if="criteriaList.show=='1'" ng-click="criteriaList.show='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
-                                            <span>: {{criteriaList.asserts}}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div ng-if="criteriaList.show=='1'" class="isOpenBorder">
-                                    <div class="container-fluid isOpenTopBorder">
-                                        <!-- Description -->
-                                        <div class="row" ng-hide="objVisibility(criteriaList.description)">
-                                            <div class="col-sm-2 text-right scheme-information">
-                                                <span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{criteriaList.description}}</span>
-                                            </div>
-                                        </div>
-                                        <!-- Key Usage -->
-                                        <div ng-hide="tableVisibility(criteriaList.keyUsage)" ng-if="criteriaList.keyUsage==null || criteriaList.keyUsage.length==0">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right scheme-information">
-                                                    <span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div ng-repeat="keyUsageList in criteriaList.keyUsage" class="row">
-                                            <div>
-                                                <div class="text-right scheme-information col-sm-2" ng-init="keyUsage.show='0'">
-                                                    <span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                    <span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                    <span ng-if="keyUsage.show!='1'">{{keyUsageList.keyUsageBit[0].value}} - {{keyUsageList.keyUsageBit[0].isValue}}</span>
-                                                </div>
-                                            </div>
-                                            <div ng-if="keyUsage.show=='1'" style="display: block; margin-left: 20px;">
-                                                <div style="display: block; width: 100%;">
-                                                    <div class="col-sm-12">
-                                                        <span ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-4" style="display: inline-block;">{{bit.value}} -
-                                                            {{bit.isValue}}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Policy List -->
-                                        <div ng-hide="tableVisibility(criteriaList.policyList)" ng-if="criteriaList.policyList==null">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right scheme-information">
-                                                    <span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div ng-repeat="policyList in criteriaList.policyList" class="row">
-                                            <div>
-                                                <div class="text-right scheme-information col-sm-2">
-                                                    <span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                    <span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                    <span ng-if="policyList.show!='1'">{{policyList.policyBit[0].identifierValue}}</span>
-                                                </div>
-                                            </div>
-                                            <div ng-if="policyList.show=='1'" ng-repeat="policyIdentifier in policyList.policyBit" ng-init="policyIdentifier.show='0'"
-                                                style="display: block; margin-left: 15px;">
-                                                <div style="display: block; width: 100%;">
-                                                    <div class="col-sm-2 text-right">
-                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <div style="display: inline;" ng-if="policyIdentifier.description!=null || policyIdentifier.documentationReferences!=null">
-                                                            <span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'"
-                                                                class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                            <span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'"
-                                                                class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                        </div>
-                                                        <span>{{policyIdentifier.identifierValue}}</span>
-                                                        <span
-                                                            ng-if="policyIdentifier.identifierType!=undefined && policyIdentifier.identifierType!=null && policyIdentifier.identifierType!=''">({{policyIdentifier.identifierType}})</span>
-                                                    </div>
-                                                </div>
-                                                <div ng-if="policyIdentifier.show=='1'" style="display: block; width: 100%;">
-                                                    <!-- Description -->
-                                                    <div class="row">
-                                                        <div class="col-sm-2 text-right">
-                                                            <span style="margin-left: 20px;" th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
-                                                        </div>
-                                                        <div class="col-sm-10">
-                                                            <span>{{policyIdentifier.description}}</span>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Documentation -->
-                                                    <div class="row">
-                                                        <div class="col-sm-2 text-right">
-                                                            <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
-                                                        </div>
-                                                        <div class="col-sm-10">
-                                                            <span style="display: block" ng-repeat="doc in policyIdentifier.documentationReferences track by $index">{{policyIdentifier.documentationReferences[$index]}}</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Other Criteria -->
-                                        <div class="row" ng-hide="tableVisibility(criteriaList.otherList)">
-                                            <div class="col-sm-2 text-right scheme-information" ng-hide="!iconTableVisibility(criteriaList.otherList)">
-                                                <span th:text="#{extension.other}"></span>
-                                            </div>
-                                            <div ng-hide="iconTableVisibility(criteriaList.otherList)">
-                                                <div class="text-right scheme-information col-sm-2" ng-init="otherCriteriaList.show='0'">
-                                                    <span th:text="#{extension.other}"></span>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <span ng-click="otherCriteriaList.show='1'" ng-if="otherCriteriaList.show!='1'"
-                                                        class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                    <span ng-click="otherCriteriaList.show='0'" ng-if="otherCriteriaList.show=='1'"
-                                                        class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                    <div style="display: inline-block;" ng-if="otherCriteriaList.show!='1'">
-                                                        <span th:text="#{extension.otherType}"></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Cert DNA -->
-                                        <div ng-if="otherCriteriaList.show=='1'">
-                                            <div id="certDnaList" ng-hide="tableVisibility(criteriaList.otherList.certDnaList)" class="row">
-                                                <div style="margin-left: 20px;">
-                                                    <div class="text-right scheme-information col-sm-2">
-                                                        <span th:text="#{extension.certDNA}"></span>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <span ng-click="criteriaList.otherList.certDnaList.show='1'" ng-if="criteriaList.otherList.certDnaList.show!='1'"
-                                                            class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                        <span ng-click="criteriaList.otherList.certDnaList.show='0'" ng-if="criteriaList.otherList.certDnaList.show=='1'"
-                                                            class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                        <span ng-if="criteriaList.otherList.certDnaList.show!='1'">{{criteriaList.otherList.certDnaList[0].identifierValue}}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div ng-if="criteriaList.otherList.certDnaList.show=='1'" class="row">
-                                                <div ng-repeat="certDna in criteriaList.otherList.certDnaList" style="margin-left: 40px;">
-                                                    <div class="col-sm-2">
-                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <span style="display: inline-block;">{{certDna.identifierValue}}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- Extended KeyUSage -->
-                                        <div ng-if="otherCriteriaList.show=='1'">
-                                            <div class="row">
-                                                <div style="margin-left: 20px;">
-                                                    <div class="text-right scheme-information col-sm-2">
-                                                        <span th:text="#{extension.extendedKeyUsage}"></span>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <span ng-click="criteriaList.otherList.extendedKeyUsageList.show='1'"
-                                                            ng-if="criteriaList.otherList.extendedKeyUsageList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                                        <span ng-click="criteriaList.otherList.extendedKeyUsageList.show='0'"
-                                                            ng-if="criteriaList.otherList.extendedKeyUsageList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                                        <span ng-if="criteriaList.otherList.extendedKeyUsageList.show!='1'">{{criteriaList.otherList.extendedKeyUsageList[0].identifierValue}}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div ng-if="criteriaList.otherList.extendedKeyUsageList.show=='1'" class="row">
-                                                <div ng-repeat="keyUsage in criteriaList.otherList.extendedKeyUsageList" style="margin-left: 40px;">
-                                                    <div class="col-sm-2">
-                                                        <span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
-                                                    </div>
-                                                    <div class="col-sm-10">
-                                                        <span>{{keyUsage.identifierValue}}</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+							<!-- Criteria List -->
+							<div ng-hide="tableVisibility(qualif.criteria.criteriaList)" ng-repeat="criteriaList in qualif.criteria.criteriaList">
+								<div class="row" ng-if="qualif.criteria.criteriaList.length==0">
+									<div class="col-sm-2 text-right scheme-information">
+										<span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
+									</div>
+								</div>
+								<!-- Criteria -->
+								<div ng-init="criteriaList.show='1'">
+									<div class="row">
+										<div class="col-sm-2 text-right scheme-information">
+											<span th:text="#{extension.additionnalServiceInformation.criteria }"></span>
+										</div>
+										<div class="col-sm-10">
+											<span ng-if="criteriaList.show!='1'" ng-click="criteriaList.show='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+											<span ng-if="criteriaList.show=='1'" ng-click="criteriaList.show='0'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+											<span th:text="#{extension.additionnalServiceInformation.qualifiers.assert}"></span>
+											<span>: {{criteriaList.asserts}}</span>
+										</div>
+									</div>
+								</div>
+								<div ng-if="criteriaList.show=='1'" class="isOpenBorder">
+									<div class="container-fluid isOpenTopBorder">
+										<!-- Description -->
+										<div class="row" ng-hide="objVisibility(criteriaList.description)">
+											<div class="col-sm-2 text-right scheme-information">
+												<span th:text="#{extension.additionnalServiceInformation.qualifiers.description}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{criteriaList.description}}</span>
+											</div>
+										</div>
+										<!-- Key Usage -->
+										<div ng-hide="tableVisibility(criteriaList.keyUsage)" ng-if="criteriaList.keyUsage==null || criteriaList.keyUsage.length==0">
+											<div class="row">
+												<div class="col-sm-2 text-right scheme-information">
+													<span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
+												</div>
+											</div>
+										</div>
+										<div ng-repeat="keyUsageList in criteriaList.keyUsage" class="row">
+											<div>
+												<div class="text-right scheme-information col-sm-2" ng-init="keyUsage.show='0'">
+													<span>{{extension_additionnalServiceInformation_qualifiers_keyUsage}}</span>
+												</div>
+												<div class="col-sm-10">
+													<span ng-click="keyUsage.show='1'" ng-if="keyUsage.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+													<span ng-click="keyUsage.show='0'" ng-if="keyUsage.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+													<span ng-if="keyUsage.show!='1'">{{keyUsageList.keyUsageBit[0].value}} - {{keyUsageList.keyUsageBit[0].isValue}}</span>
+												</div>
+											</div>
+											<div ng-if="keyUsage.show=='1'" style="display: block; margin-left: 20px;">
+												<div style="display: block; width: 100%;">
+													<div class="col-sm-12">
+														<span ng-repeat="bit in keyUsageList.keyUsageBit" class="col-sm-4" style="display: inline-block;">{{bit.value}} - {{bit.isValue}}</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Policy List -->
+										<div ng-hide="tableVisibility(criteriaList.policyList)" ng-if="criteriaList.policyList==null">
+											<div class="row">
+												<div class="col-sm-2 text-right scheme-information">
+													<span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
+												</div>
+											</div>
+										</div>
+										<div ng-repeat="policyList in criteriaList.policyList" class="row">
+											<div>
+												<div class="text-right scheme-information col-sm-2">
+													<span>{{extension_additionnalServiceInformation_qualifiers_policySet}}</span>
+												</div>
+												<div class="col-sm-10">
+													<span ng-click="policyList.show='1'" ng-if="policyList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+													<span ng-click="policyList.show='0'" ng-if="policyList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+													<span ng-if="policyList.show!='1'">{{policyList.policyBit[0].identifierValue}}</span>
+												</div>
+											</div>
+											<div ng-if="policyList.show=='1'" ng-repeat="policyIdentifier in policyList.policyBit" ng-init="policyIdentifier.show='0'" style="display: block; margin-left: 15px;">
+												<div style="display: block; width: 100%;">
+													<div class="col-sm-2 text-right">
+														<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+													</div>
+													<div class="col-sm-10">
+														<div style="display: inline;" ng-if="policyIdentifier.description!=null || policyIdentifier.documentationReferences!=null">
+															<span ng-click="policyIdentifier.show='1'" ng-if="policyIdentifier.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+															<span ng-click="policyIdentifier.show='0'" ng-if="policyIdentifier.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+														</div>
+														<span>{{policyIdentifier.identifierValue}}</span>
+														<span ng-if="policyIdentifier.identifierType!=undefined && policyIdentifier.identifierType!=null && policyIdentifier.identifierType!=''">({{policyIdentifier.identifierType}})</span>
+													</div>
+												</div>
+												<div ng-if="policyIdentifier.show=='1'" style="display: block; width: 100%;">
+													<!-- Description -->
+													<div class="row">
+														<div class="col-sm-2 text-right">
+															<span style="margin-left: 20px;" th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.description}"></span>
+														</div>
+														<div class="col-sm-10">
+															<span>{{policyIdentifier.description}}</span>
+														</div>
+													</div>
+													<!-- Documentation -->
+													<div class="row">
+														<div class="col-sm-2 text-right">
+															<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.documentationReference}"></span>
+														</div>
+														<div class="col-sm-10">
+															<span style="display: block" ng-repeat="doc in policyIdentifier.documentationReferences track by $index">{{policyIdentifier.documentationReferences[$index]}}</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Other Criteria -->
+										<div class="row" ng-hide="tableVisibility(criteriaList.otherList)">
+											<div class="col-sm-2 text-right scheme-information" ng-hide="!iconTableVisibility(criteriaList.otherList)">
+												<span th:text="#{extension.other}"></span>
+											</div>
+											<div ng-hide="iconTableVisibility(criteriaList.otherList)">
+												<div class="text-right scheme-information col-sm-2" ng-init="otherCriteriaList.show='0'">
+													<span th:text="#{extension.other}"></span>
+												</div>
+												<div class="col-sm-10">
+													<span ng-click="otherCriteriaList.show='1'" ng-if="otherCriteriaList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+													<span ng-click="otherCriteriaList.show='0'" ng-if="otherCriteriaList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+													<div style="display: inline-block;" ng-if="otherCriteriaList.show!='1'">
+														<span th:text="#{extension.otherType}"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Cert DNA -->
+										<div ng-if="otherCriteriaList.show=='1'">
+											<div id="certDnaList" ng-hide="tableVisibility(criteriaList.otherList.certDnaList)" class="row">
+												<div style="margin-left: 20px;">
+													<div class="text-right scheme-information col-sm-2">
+														<span th:text="#{extension.certDNA}"></span>
+													</div>
+													<div class="col-sm-10">
+														<span ng-click="criteriaList.otherList.certDnaList.show='1'" ng-if="criteriaList.otherList.certDnaList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+														<span ng-click="criteriaList.otherList.certDnaList.show='0'" ng-if="criteriaList.otherList.certDnaList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+														<span ng-if="criteriaList.otherList.certDnaList.show!='1'">{{criteriaList.otherList.certDnaList[0].identifierValue}}</span>
+													</div>
+												</div>
+											</div>
+											<div ng-if="criteriaList.otherList.certDnaList.show=='1'" class="row">
+												<div ng-repeat="certDna in criteriaList.otherList.certDnaList" style="margin-left: 40px;">
+													<div class="col-sm-2">
+														<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+													</div>
+													<div class="col-sm-10">
+														<span style="display: inline-block;">{{certDna.identifierValue}}</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- Extended KeyUSage -->
+										<div ng-if="otherCriteriaList.show=='1'">
+											<div class="row">
+												<div style="margin-left: 20px;">
+													<div class="text-right scheme-information col-sm-2">
+														<span th:text="#{extension.extendedKeyUsage}"></span>
+													</div>
+													<div class="col-sm-10">
+														<span ng-click="criteriaList.otherList.extendedKeyUsageList.show='1'" ng-if="criteriaList.otherList.extendedKeyUsageList.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+														<span ng-click="criteriaList.otherList.extendedKeyUsageList.show='0'" ng-if="criteriaList.otherList.extendedKeyUsageList.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+														<span ng-if="criteriaList.otherList.extendedKeyUsageList.show!='1'">{{criteriaList.otherList.extendedKeyUsageList[0].identifierValue}}</span>
+													</div>
+												</div>
+											</div>
+											<div ng-if="criteriaList.otherList.extendedKeyUsageList.show=='1'" class="row">
+												<div ng-repeat="keyUsage in criteriaList.otherList.extendedKeyUsageList" style="margin-left: 40px;">
+													<div class="col-sm-2">
+														<span th:text="#{extension.additionnalServiceInformation.qualifiers.policyList.identifier}"></span>
+													</div>
+													<div class="col-sm-10">
+														<span>{{keyUsage.identifierValue}}</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Expired Certificate Revocation Date -->
-            <div ng-if="extension.expiredCertsRevocationDate!=null">
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <span th:text="#{extension.revocationDate}"></span>
-                    </div>
-                    <div class="col-sm-8">
-                        <span>{{extension.expiredCertsRevocationDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
-                    </div>
-                </div>
-            </div>
+			<!-- Expired Certificate Revocation Date -->
+			<div ng-if="extension.expiredCertsRevocationDate!=null">
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information">
+						<span th:text="#{extension.revocationDate}"></span>
+					</div>
+					<div class="col-sm-8">
+						<span>{{extension.expiredCertsRevocationDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+					</div>
+				</div>
+			</div>
 
-            <!-- Any Type -->
-            <div ng-if="extension.anyType!=null">
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <span th:text="#{extension.anyType}"></span>
-                    </div>
-                    <div class="col-sm-8">
-                        <pre style="word-wrap: break-word; white-space: pre;width:95%">{{extension.anyType}}</pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			<!-- Any Type -->
+			<div ng-if="extension.anyType!=null">
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information">
+						<span th:text="#{extension.anyType}"></span>
+					</div>
+					<div class="col-sm-8">
+						<pre style="word-wrap: break-word; white-space: pre; width: 95%">{{extension.anyType}}</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

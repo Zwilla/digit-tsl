@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -529,6 +529,13 @@ public class TLService {
         return rt;
     }
 
+    /**
+     * Count Draft TL in database
+     */
+    public int countDraftTL() {
+        return Math.toIntExact(tlRepository.countByStatus(TLStatus.DRAFT));
+    }
+
     /* ----- ----- Trusted list XML ----- ----- */
 
     /**
@@ -647,6 +654,15 @@ public class TLService {
         }
 
         return "";
+    }
+
+    /**
+     * Get trusted list with similar XML digest
+     * 
+     * @param xmlDigest
+     */
+    public List<DBTrustedLists> findProdSimilarDigest(String xmlDigest) {
+        return tlRepository.findByXmlFileDigestAndStatusOrderByNameAsc(xmlDigest, TLStatus.PROD);
     }
 
     /* ----- ----- Trusted list informations ----- ----- */
@@ -956,11 +972,8 @@ public class TLService {
     /* ----- ----- Draft LOTL update ----- ----- */
 
     /**
-     * Trigger when new LOTL is loaded. Delete draft found with same digest;
-     * Set notification status from draft LOTL published & Send alert to MS;
-     * Error : TL null;
-     * Error : TL not a LOTL;
-     * Error : File or digest null;
+     * Trigger when new LOTL is loaded. Delete draft found with same digest; Set notification status from draft LOTL published & Send alert to MS;
+     * Error : TL null; Error : TL not a LOTL; Error : File or digest null;
      */
     public void updateDraftLOTL(int dbId) {
         DBTrustedLists dbProd = getDbTL(dbId);

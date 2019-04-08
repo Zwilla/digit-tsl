@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -32,24 +32,31 @@ public class TLNotificationEdition {
     public NotificationDto getNotification() {
         return notification;
     }
+
     public void setNotification(NotificationDto notification) {
         this.notification = notification;
     }
+
     public int getTlId() {
         return tlId;
     }
+
     public void setTlId(int tlId) {
         this.tlId = tlId;
     }
+
     public String getCookie() {
         return cookie;
     }
+
     public void setCookie(String cookie) {
         this.cookie = cookie;
     }
+
     public Boolean getNewDraft() {
         return newDraft;
     }
+
     public void setNewDraft(Boolean newDraft) {
         this.newDraft = newDraft;
     }

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -42,18 +42,18 @@ public class CountryServiceTest extends AbstractSpringTest {
     public void testIsExists() {
         assertTrue(countryService.isExist("BE"));
         assertFalse(countryService.isExist("be"));
-        assertTrue(countryService.isExist("BE")); //Cacheable 2 queries for 3 calls
+        assertTrue(countryService.isExist("BE")); // Cacheable 2 queries for 3 calls
     }
 
     @Test
-    public void getPropertiesCountry(){
+    public void getPropertiesCountry() {
         List<Properties> list = countryService.getPropertiesCountry();
         Assert.assertNotNull(list);
         Assert.assertEquals(32, list.size());
     }
 
     @Test
-    public void add(){
+    public void add() {
         DBCountries c = new DBCountries();
         c.setCodeTerritory("TE");
         c.setCountryName("TEST");

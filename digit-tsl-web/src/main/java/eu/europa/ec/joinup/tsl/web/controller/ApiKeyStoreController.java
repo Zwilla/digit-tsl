@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -106,8 +106,8 @@ public class ApiKeyStoreController {
                 CertificateToken certificateToken = DSSUtils.loadCertificateFromBase64EncodedString(base64);
                 keyStoreCertificateSource.addCertificateToKeyStore(certificateToken);
                 keyStoreCertificateSource.store(fos);
-                auditService.addAuditLog(AuditTarget.ADMINISTRATION_LIST_SIGNING_CERT, AuditAction.CREATE, AuditStatus.SUCCES, "", 0,
-                        SecurityContextHolder.getContext().getAuthentication().getName(), "CERTTOKEN:" + certificateToken.getDSSIdAsString());
+                auditService.addAuditLog(AuditTarget.ADMINISTRATION_LIST_SIGNING_CERT, AuditAction.CREATE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
+                        "CERTTOKEN:" + certificateToken.getDSSIdAsString());
                 response.setResponseStatus(HttpStatus.OK.toString());
                 alertingService.sendNewSigningCertificate();
             } catch (DSSException | IOException e) {
@@ -128,8 +128,8 @@ public class ApiKeyStoreController {
             try (FileOutputStream fos = new FileOutputStream(new File(lotlKeyStoreFilename))) {
                 keyStoreCertificateSource.deleteCertificateFromKeyStore(id);
                 keyStoreCertificateSource.store(fos);
-                auditService.addAuditLog(AuditTarget.ADMINISTRATION_LIST_SIGNING_CERT, AuditAction.DELETE, AuditStatus.SUCCES, "", 0,
-                        SecurityContextHolder.getContext().getAuthentication().getName(), "CERTID:" + id);
+                auditService.addAuditLog(AuditTarget.ADMINISTRATION_LIST_SIGNING_CERT, AuditAction.DELETE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
+                        "CERTID:" + id);
                 response.setResponseStatus(HttpStatus.OK.toString());
                 alertingService.sendNewSigningCertificate();
             } catch (DSSException | IOException e) {

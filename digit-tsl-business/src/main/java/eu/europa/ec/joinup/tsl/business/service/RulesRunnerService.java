@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -42,6 +42,7 @@ import eu.europa.ec.joinup.tsl.business.rules.ListOfGenericsValidator;
 import eu.europa.ec.joinup.tsl.business.rules.NotificationValidator;
 import eu.europa.ec.joinup.tsl.business.rules.PointersToOtherTSLValidator;
 import eu.europa.ec.joinup.tsl.business.rules.ServiceDigitalIdentityValidator;
+import eu.europa.ec.joinup.tsl.business.util.LocationUtils;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
 
 /**
@@ -52,31 +53,34 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
 public class RulesRunnerService {
 
     @Autowired
-    private TLCCService tlccService;
-
-    @Autowired
     private CheckService checkService;
-
-    @Autowired
-    private TLService tlService;
-
-    @Autowired
-    private CheckResultPersistenceService persistenceService;
 
     @Autowired
     private ComparisonCheckValidator comparisonValidator;
 
     @Autowired
-    private PointersToOtherTSLValidator pointerValidator;
+    private ListOfGenericsValidator genericValidator;
+
+    @Autowired
+    private TLCCService tlccService;
+
+    @Autowired
+    private TLService tlService;
+
+    @Autowired
+    private TLTransitionCheckService transitionCheckService;
 
     @Autowired
     private NotificationValidator notificationValidator;
 
     @Autowired
-    private ServiceDigitalIdentityValidator serviceDigitalIdentityValidator;
+    private CheckResultPersistenceService persistenceService;
 
     @Autowired
-    private ListOfGenericsValidator genericValidator;
+    private PointersToOtherTSLValidator pointerValidator;
+
+    @Autowired
+    private ServiceDigitalIdentityValidator serviceDigitalIdentityValidator;
 
     /**
      * Run All rules; perform TLCC and TLM checks
@@ -88,10 +92,12 @@ public class RulesRunnerService {
         if (currentTL != null) {
             List<CheckResultDTO> checkResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(currentTL.getTlId()), TLCCTarget.TRUSTED_LIST);
             if (checkResults == null) {
-                //Case where TLCC unreachable
+                // Case where TLCC unreachable
                 checkResults = new ArrayList<>();
             }
             checkResults.addAll(getComparisonChecks(currentTL, previousTL));
+            checkService.cleanTransitionCheck(currentTL.getTlId());
+            checkResults.addAll(getTransitionChecks(currentTL));
             persistenceService.persistAllResults(currentTL.getTlId(), checkResults);
         }
     }
@@ -127,7 +133,7 @@ public class RulesRunnerService {
     public void validateAllServiceProvider(int tlId, List<TLServiceProvider> serviceProviders) {
         checkService.cleanResultByLocation(tlId + "_" + Tag.TSP_SERVICE_PROVIDER);
         if (!CollectionUtils.isEmpty(serviceProviders)) {
-            //Index start at 1 for TLCC Index result
+            // Index start at 1 for TLCC Index result
             for (int index = 1; index < (serviceProviders.size() + 1); index++) {
                 validateServiceProvider(tlId, index, true);
             }
@@ -178,7 +184,7 @@ public class RulesRunnerService {
             serviceDigitalIdentityValidator.runCheckDigitalIdentifications(checkList, pointer.getServiceDigitalId(), results);
         }
 
-        //Notification checks
+        // Notification checks
         results.addAll(notificationValidator.validateNotification(checkService.getTarget(Tag.NOTIFICATION), pointer));
         return results;
     }
@@ -192,6 +198,30 @@ public class RulesRunnerService {
     public void compareTL(TL current, TL previous) {
         List<CheckResultDTO> results = getComparisonChecks(current, previous);
         persistenceService.persistAllResults(current.getTlId(), results);
+    }
+
+    /**
+     * Run transition check on trusted list and persist in database
+     * 
+     * @param currentTL
+     */
+    public void persistTransitionCheck(TL currentTL) {
+        checkService.cleanTransitionCheck(currentTL.getTlId());
+        List<CheckResultDTO> results = getTransitionChecks(currentTL);
+        persistenceService.persistAllResults(currentTL.getTlId(), results);
+    }
+
+    /**
+     * Get transition checks and calcul HR location
+     * 
+     * @param currentTL
+     */
+    private List<CheckResultDTO> getTransitionChecks(TL currentTL) {
+        List<CheckResultDTO> results = transitionCheckService.getCheckPrevious(currentTL.getTlId());
+        for (CheckResultDTO result : results) {
+            result.setLocation(LocationUtils.idUserReadable(currentTL, result.getId()));
+        }
+        return results;
     }
 
     /**
@@ -215,9 +245,9 @@ public class RulesRunnerService {
     public void validateSignature(int tlId) {
         checkService.cleanResultByLocation(tlId + "_" + Tag.SIGNATURE);
         TL tl = tlService.getTL(tlId);
-        //TODO(5.4.RC1) TDEV-794: Temporary solution. Waiting for a specific TLCC API to check Signature only
-        //In the futur version of TLCC, check should be performed with the following line
-        //tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.SIGNATURE);
+        // TODO(5.4.RC1) TDEV-794: Temporary solution. Waiting for a specific TLCC API to check Signature only
+        // In the futur version of TLCC, check should be performed with the following line
+        // tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.SIGNATURE);
         if ((tl.getSigStatus() != null)) {
             List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.TRUSTED_LIST);
             if (!CollectionUtils.isEmpty(tlccCheckResults)) {

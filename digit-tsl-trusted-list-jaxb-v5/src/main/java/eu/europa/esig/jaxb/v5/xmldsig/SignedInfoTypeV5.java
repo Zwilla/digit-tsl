@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xmldsig;
 
 import java.io.Serializable;
@@ -41,11 +40,12 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for SignedInfoType complex type.
+ * <p>
+ * Java class for SignedInfoType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignedInfoType"&gt;
@@ -65,14 +65,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignedInfoType", propOrder = {
-    "canonicalizationMethod",
-    "signatureMethod",
-    "reference"
-})
-public class SignedInfoTypeV5
-    implements Serializable
-{
+@XmlType(name = "SignedInfoType", propOrder = { "canonicalizationMethod", "signatureMethod", "reference" })
+public class SignedInfoTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "CanonicalizationMethod", required = true)
@@ -90,10 +84,8 @@ public class SignedInfoTypeV5
     /**
      * Gets the value of the canonicalizationMethod property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CanonicalizationMethodTypeV5 }
-     *     
+     * @return possible object is {@link CanonicalizationMethodTypeV5 }
+     * 
      */
     public CanonicalizationMethodTypeV5 getCanonicalizationMethod() {
         return canonicalizationMethod;
@@ -103,9 +95,8 @@ public class SignedInfoTypeV5
      * Sets the value of the canonicalizationMethod property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CanonicalizationMethodTypeV5 }
-     *     
+     *            allowed object is {@link CanonicalizationMethodTypeV5 }
+     * 
      */
     public void setCanonicalizationMethod(CanonicalizationMethodTypeV5 value) {
         this.canonicalizationMethod = value;
@@ -114,10 +105,8 @@ public class SignedInfoTypeV5
     /**
      * Gets the value of the signatureMethod property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignatureMethodTypeV5 }
-     *     
+     * @return possible object is {@link SignatureMethodTypeV5 }
+     * 
      */
     public SignatureMethodTypeV5 getSignatureMethod() {
         return signatureMethod;
@@ -127,9 +116,8 @@ public class SignedInfoTypeV5
      * Sets the value of the signatureMethod property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignatureMethodTypeV5 }
-     *     
+     *            allowed object is {@link SignatureMethodTypeV5 }
+     * 
      */
     public void setSignatureMethod(SignatureMethodTypeV5 value) {
         this.signatureMethod = value;
@@ -139,21 +127,19 @@ public class SignedInfoTypeV5
      * Gets the value of the reference property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the reference property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the reference property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getReference().add(newItem);
+     * getReference().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ReferenceTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link ReferenceTypeV5 }
      * 
      * 
      */
@@ -167,10 +153,8 @@ public class SignedInfoTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -180,9 +164,8 @@ public class SignedInfoTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

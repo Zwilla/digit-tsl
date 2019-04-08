@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -37,11 +36,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for CommitmentTypeIndicationType complex type.
+ * <p>
+ * Java class for CommitmentTypeIndicationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="CommitmentTypeIndicationType"&gt;
@@ -63,15 +63,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CommitmentTypeIndicationType", propOrder = {
-    "commitmentTypeId",
-    "objectReference",
-    "allSignedDataObjects",
-    "commitmentTypeQualifiers"
-})
-public class CommitmentTypeIndicationTypeV5
-    implements Serializable
-{
+@XmlType(name = "CommitmentTypeIndicationType", propOrder = { "commitmentTypeId", "objectReference", "allSignedDataObjects", "commitmentTypeQualifiers" })
+public class CommitmentTypeIndicationTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "CommitmentTypeId", required = true)
@@ -87,10 +80,8 @@ public class CommitmentTypeIndicationTypeV5
     /**
      * Gets the value of the commitmentTypeId property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ObjectIdentifierTypeV5 }
-     *     
+     * @return possible object is {@link ObjectIdentifierTypeV5 }
+     * 
      */
     public ObjectIdentifierTypeV5 getCommitmentTypeId() {
         return commitmentTypeId;
@@ -100,9 +91,8 @@ public class CommitmentTypeIndicationTypeV5
      * Sets the value of the commitmentTypeId property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ObjectIdentifierTypeV5 }
-     *     
+     *            allowed object is {@link ObjectIdentifierTypeV5 }
+     * 
      */
     public void setCommitmentTypeId(ObjectIdentifierTypeV5 value) {
         this.commitmentTypeId = value;
@@ -112,21 +102,19 @@ public class CommitmentTypeIndicationTypeV5
      * Gets the value of the objectReference property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the objectReference property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the objectReference property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getObjectReference().add(newItem);
+     * getObjectReference().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link String }
+     * Objects of the following type(s) are allowed in the list {@link String }
      * 
      * 
      */
@@ -140,10 +128,8 @@ public class CommitmentTypeIndicationTypeV5
     /**
      * Gets the value of the allSignedDataObjects property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Object }
-     *     
+     * @return possible object is {@link Object }
+     * 
      */
     public Object getAllSignedDataObjects() {
         return allSignedDataObjects;
@@ -153,9 +139,8 @@ public class CommitmentTypeIndicationTypeV5
      * Sets the value of the allSignedDataObjects property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link Object }
-     *     
+     *            allowed object is {@link Object }
+     * 
      */
     public void setAllSignedDataObjects(Object value) {
         this.allSignedDataObjects = value;
@@ -164,10 +149,8 @@ public class CommitmentTypeIndicationTypeV5
     /**
      * Gets the value of the commitmentTypeQualifiers property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CommitmentTypeQualifiersListTypeV5 }
-     *     
+     * @return possible object is {@link CommitmentTypeQualifiersListTypeV5 }
+     * 
      */
     public CommitmentTypeQualifiersListTypeV5 getCommitmentTypeQualifiers() {
         return commitmentTypeQualifiers;
@@ -177,9 +160,8 @@ public class CommitmentTypeIndicationTypeV5
      * Sets the value of the commitmentTypeQualifiers property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CommitmentTypeQualifiersListTypeV5 }
-     *     
+     *            allowed object is {@link CommitmentTypeQualifiersListTypeV5 }
+     * 
      */
     public void setCommitmentTypeQualifiers(CommitmentTypeQualifiersListTypeV5 value) {
         this.commitmentTypeQualifiers = value;

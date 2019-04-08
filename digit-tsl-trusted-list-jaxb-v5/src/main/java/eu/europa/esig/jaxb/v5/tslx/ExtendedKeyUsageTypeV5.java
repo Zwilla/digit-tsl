@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tslx;
 
 import java.io.Serializable;
@@ -37,11 +36,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 import eu.europa.esig.jaxb.v5.xades.ObjectIdentifierTypeV5;
 
-
 /**
- * <p>Java class for ExtendedKeyUsageType complex type.
+ * <p>
+ * Java class for ExtendedKeyUsageType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="ExtendedKeyUsageType"&gt;
@@ -58,12 +58,8 @@ import eu.europa.esig.jaxb.v5.xades.ObjectIdentifierTypeV5;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ExtendedKeyUsageType", propOrder = {
-    "keyPurposeId"
-})
-public class ExtendedKeyUsageTypeV5
-    implements Serializable
-{
+@XmlType(name = "ExtendedKeyUsageType", propOrder = { "keyPurposeId" })
+public class ExtendedKeyUsageTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "KeyPurposeId", required = true)
@@ -73,21 +69,19 @@ public class ExtendedKeyUsageTypeV5
      * Gets the value of the keyPurposeId property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the keyPurposeId property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the keyPurposeId property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getKeyPurposeId().add(newItem);
+     * getKeyPurposeId().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ObjectIdentifierTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link ObjectIdentifierTypeV5 }
      * 
      * 
      */

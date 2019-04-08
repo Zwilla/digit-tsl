@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -262,8 +262,7 @@ public class TLServiceDto extends AbstractTLDTO {
          * List<TLServiceExtension> extension;
          *************************************/
         List<TLServiceExtension> tmp = !CollectionUtils.isEmpty(getExtension()) ? new ArrayList<>(getExtension()) : new ArrayList<TLServiceExtension>();
-        List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlService.getExtension()) ? new ArrayList<>(publishedTlService.getExtension())
-                : new ArrayList<TLServiceExtension>();
+        List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlService.getExtension()) ? new ArrayList<>(publishedTlService.getExtension()) : new ArrayList<TLServiceExtension>();
 
         // DELETE EQUALS EXTENSION
         if (!CollectionUtils.isEmpty(getExtension())) {
@@ -281,8 +280,7 @@ public class TLServiceDto extends AbstractTLDTO {
          * List<TLDefinitionUri> schemeDefinitionUri;
          *************************************/
         if (CollectionUtils.isNotEmpty(getSchemeDefinitionUri())) {
-            List<TLDifference> changeList = ChangeUtils.diffOfTLDefUriList(getSchemeDefinitionUri(), publishedTlService.getSchemeDefinitionUri(),
-                    getId() + "_" + Tag.SCHEME_SERVICE_DEFINITION_URI);
+            List<TLDifference> changeList = ChangeUtils.diffOfTLDefUriList(getSchemeDefinitionUri(), publishedTlService.getSchemeDefinitionUri(), getId() + "_" + Tag.SCHEME_SERVICE_DEFINITION_URI);
             if (changeList.size() > 0) {
                 diffList.addAll(changeList);
             }
@@ -375,8 +373,7 @@ public class TLServiceDto extends AbstractTLDTO {
                     List<TLDifference> tmpDifList = new ArrayList<>();
                     List<TLServiceHistory> forTmpPublishedHitso = new ArrayList<>(tmpPublishedHitso);
                     for (TLServiceHistory publishe : forTmpPublishedHitso) {
-                        if (draft.getCurrentStatusStartingDate().equals(publishe.getCurrentStatusStartingDate())
-                                && draft.getTypeIdentifier().equalsIgnoreCase(publishe.getTypeIdentifier())
+                        if (draft.getCurrentStatusStartingDate().equals(publishe.getCurrentStatusStartingDate()) && draft.getTypeIdentifier().equalsIgnoreCase(publishe.getTypeIdentifier())
                                 && draft.getCurrentStatus().equalsIgnoreCase(publishe.getCurrentStatus())) {
                             // SAME
                             List<TLDifference> list = draft.asPublishedDiff(publishe);
@@ -395,7 +392,7 @@ public class TLServiceDto extends AbstractTLDTO {
 
                     // IF NOT FIND LANGUAGE --> NEW LANGUAGE
                     if (!find) {
-                        diffList.add(new TLDifference(draft.getId(), "", draft.getCurrentStatus() + " - " + draft.getCurrentStatusStartingDate()));
+                        diffList.add(new TLDifference(draft.getId(), "", draft.getCurrentStatus() + " - " + TLUtils.toStringFormat(draft.getCurrentStatusStartingDate())));
                     }
 
                 } else {
@@ -406,7 +403,7 @@ public class TLServiceDto extends AbstractTLDTO {
 
             // CHECK OTHERS
             for (TLServiceHistory draft : tmpPublishedHitso) {
-                diffList.add(new TLDifference(getId() + "_" + Tag.SERVICE_HISTORY, draft.getCurrentStatus() + " - " + draft.getCurrentStatusStartingDate(), ""));
+                diffList.add(new TLDifference(getId() + "_" + Tag.SERVICE_HISTORY, draft.getCurrentStatus() + " - " + TLUtils.toStringFormat(draft.getCurrentStatusStartingDate()), ""));
             }
         }
         return diffList;
@@ -545,8 +542,7 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.1.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS/Q")
+            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS/Q")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS/REM")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PSES/Q")) {
@@ -556,15 +552,12 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.2.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/CA/PKC")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA")
+            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/CA/PKC") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PSES")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/AdESValidation")
+                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS")
+                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PSES") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/AdESValidation")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/AdESGeneration")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5521(getCurrentStatus()));
@@ -580,14 +573,10 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.3.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA/nothavingPKIid")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/ACA")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Archiv")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/IdV")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/KEscrow")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PPwd")
+            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA/nothavingPKIid")
+                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/ACA") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC")
+                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Archiv") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/IdV")
+                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/KEscrow") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PPwd")
                     || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/unspecified")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5531(getCurrentStatus()));
@@ -611,7 +600,7 @@ public class TLServiceDto extends AbstractTLDTO {
                 setCurrentStatus(checkServiceStatus5531(getCurrentStatus()));
             }
 
-            //Date UTC format (UTC/GMT+2 -> 2016/07/01)
+            // Date UTC format (UTC/GMT+2 -> 2016/07/01)
             Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
             cal.set(Calendar.YEAR, 2016);
             cal.set(Calendar.MONTH, Calendar.JUNE);
@@ -658,23 +647,23 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
-                break;
-            default:
-                break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
+            break;
+        default:
+            break;
         }
 
         return ret;
@@ -684,23 +673,23 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
-                break;
-            default:
-                break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+            break;
+        default:
+            break;
         }
 
         return ret;
@@ -710,29 +699,29 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
-                break;
-            case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw":
-                ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
-                break;
-            default:
-                break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+            break;
+        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw":
+            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+            break;
+        default:
+            break;
         }
 
         return ret;
@@ -793,6 +782,83 @@ public class TLServiceDto extends AbstractTLDTO {
                 return false;
             }
         } else if (!history.equals(other.history)) {
+            return false;
+        }
+        if (schemeDefinitionUri == null) {
+            if (other.schemeDefinitionUri != null) {
+                return false;
+            }
+        } else if (!schemeDefinitionUri.equals(other.schemeDefinitionUri)) {
+            return false;
+        }
+        if (serviceDigitalIdentification == null) {
+            if (other.serviceDigitalIdentification != null) {
+                return false;
+            }
+        } else if (!serviceDigitalIdentification.equals(other.serviceDigitalIdentification)) {
+            return false;
+        }
+        if (serviceName == null) {
+            if (other.serviceName != null) {
+                return false;
+            }
+        } else if (!serviceName.equals(other.serviceName)) {
+            return false;
+        }
+        if (supplyPoint == null) {
+            if (other.supplyPoint != null) {
+                return false;
+            }
+        } else if (!supplyPoint.equals(other.supplyPoint)) {
+            return false;
+        }
+        if (tspDefinitionUri == null) {
+            if (other.tspDefinitionUri != null) {
+                return false;
+            }
+        } else if (!tspDefinitionUri.equals(other.tspDefinitionUri)) {
+            return false;
+        }
+        if (typeIdentifier == null) {
+            if (other.typeIdentifier != null) {
+                return false;
+            }
+        } else if (!typeIdentifier.equals(other.typeIdentifier)) {
+            return false;
+        }
+        return true;
+    }
+
+    public boolean equalsWithoutHistory(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        TLServiceDto other = (TLServiceDto) obj;
+        if (currentStatus == null) {
+            if (other.currentStatus != null) {
+                return false;
+            }
+        } else if (!currentStatus.equals(other.currentStatus)) {
+            return false;
+        }
+        if (currentStatusStartingDate == null) {
+            if (other.currentStatusStartingDate != null) {
+                return false;
+            }
+        } else if (!currentStatusStartingDate.equals(other.currentStatusStartingDate)) {
+            return false;
+        }
+        if (extension == null) {
+            if (other.extension != null) {
+                return false;
+            }
+        } else if (!extension.equals(other.extension)) {
             return false;
         }
         if (schemeDefinitionUri == null) {

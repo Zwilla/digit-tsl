@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -73,18 +73,18 @@ public class NotificationValidator {
         List<CheckResultDTO> results = new ArrayList<>();
         for (CheckDTO check : checks) {
             switch (check.getName()) {
-                case IS_SIGNING_CERTIFICATE_PRESENT:
-                    isSigningCertificatePresent(check, pointer, results);
-                    break;
-                case AT_LEAST_TWO_CERT_NOT_EXPIRED:
-                    atLeastTwoCertificatesNotExpired(check, pointer, results);
-                    break;
-                case NEW_OLD_CERT_TIME_GAP:
-                    calculNewerOlderCertDateValidity(check, pointer, results);
-                    break;
-                default:
-                    LOGGER.warn("Unsupported check " + check.getName());
-                    break;
+            case IS_SIGNING_CERTIFICATE_PRESENT:
+                isSigningCertificatePresent(check, pointer, results);
+                break;
+            case AT_LEAST_TWO_CERT_NOT_EXPIRED:
+                atLeastTwoCertificatesNotExpired(check, pointer, results);
+                break;
+            case NEW_OLD_CERT_TIME_GAP:
+                calculNewerOlderCertDateValidity(check, pointer, results);
+                break;
+            default:
+                LOGGER.warn("Unsupported check " + check.getName());
+                break;
             }
         }
         return results;

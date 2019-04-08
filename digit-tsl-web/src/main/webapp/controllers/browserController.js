@@ -1,5 +1,7 @@
+//Specific AngularJS version used in browserController, JS file is located in > /digit-tsl-web/src/main/webapp/script/angular/angular-min.js
 digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$location','digitalIdService','trustedListFactory','showModal','httpFactory','extensionFactory','$filter','$q','nexuFactory','cookieFactory','appConstant',
 		function($scope,$modal,$window,$location,digitalIdService,trustedListFactory,showModal,httpFactory,extensionFactory,$filter,$q,nexuFactory,cookieFactory,appConstant) {
+	
 			$scope.load=false;
 			$scope.schemeInformationMenuShow='0';
 			$scope.ptotsMenuShow='0';
@@ -26,10 +28,14 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			$scope.draftEditionCheckVisible = false;
 			$scope.tlChangesProd = null;
 			$scope.tlccIsActive = false;
+			
+			/* TSP/Service filter */
+			$scope.tspFilter = {value:''};
+			$scope.noResultWarning = false;
 
 			/**
-             * Loading Status update Process
-             */
+			 * Loading Status update Process
+			 */
 			var loadingStatusProcess = function(){
 				$scope.loadingStatus = $scope.clone_create;
 				setTimeout(function () {
@@ -64,10 +70,11 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			var selectGeneric = '<select class="col-sm-9"  ng-model="value" required><option ng-repeat="lP in listProperties" value="{{lP.label}}" ng-selected="lP.label == value" >{{lP.label}}</select>';
 
 			/**
-             * Get TrustedList Loading signature / changes / checks
-             */
+			 * Get TrustedList Loading signature / changes / checks
+			 */
 			$scope.tlDetail = function(varId) {
-				if (typeof(varId)==='undefined'){ // varId undefined -> loading page
+				if (typeof(varId)==='undefined'){ // varId undefined ->
+													// loading page
 					var endPath= $location.absUrl().split('tl-manager/tl/')[1];
 					var id = endPath.split("/")[0];
 				}else{ // varId not undefined -> after cloning a new draft
@@ -190,9 +197,13 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Post the modification to do in the XML file typeEdit (schemeInfo / tlPointer / tlServiceProvider / tlService / tlServiceHistory) editionObject : tlId ; tlSchemeInfo;
-             * editAttr ; message : message in error modal fCall :complementary function call at the end of process for some case indexProvider : index of provider for checks
-             */
+			 * Post the modification to do in the XML file typeEdit (schemeInfo /
+			 * tlPointer / tlServiceProvider / tlService / tlServiceHistory)
+			 * editionObject : tlId ; tlSchemeInfo; editAttr ; message : message
+			 * in error modal fCall :complementary function call at the end of
+			 * process for some case indexProvider : index of provider for
+			 * checks
+			 */
 			var postModif = function(typeEdit,editionObject,message, fCall,indexProvider){
 				// Init modification post
 			    var tlCookie = {
@@ -280,8 +291,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Post Modif for a Scheme Info Edition Initialize parameters to PostModif generic function
-             */
+			 * Post Modif for a Scheme Info Edition Initialize parameters to
+			 * PostModif generic function
+			 */
 			var postModifSchemeInfo = function(editAttr , fCall){
 				var tlInformationEdition = {
 						tlId : $scope.tlIdDb ,
@@ -297,8 +309,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Post Modif for a Pointer Edition Initialize parameters to PostModif generic function
-             */
+			 * Post Modif for a Pointer Edition Initialize parameters to
+			 * PostModif generic function
+			 */
             var postModifTlPointer = function(pointer,index,message){
                 var tlPointerEdition = {
                         tlId : $scope.tlIdDb ,
@@ -323,8 +336,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
             };
 
 			/**
-             * Post Modif for a Service Provider Edition Initialize parameters to PostModif generic function
-             */
+			 * Post Modif for a Service Provider Edition Initialize parameters
+			 * to PostModif generic function
+			 */
 			var postModifTlServiceProvider = function(serviceProvider,index,message){
 				var tlServiceProviderEdition = {
 						tlId : $scope.tlIdDb ,
@@ -346,8 +360,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Post Modif for a Service Initialize parameters to PostModif generic function
-             */
+			 * Post Modif for a Service Initialize parameters to PostModif
+			 * generic function
+			 */
 			var postModifTlService = function(service,parentIndex,message){
 				var tlServiceEdition = {
 						tlId : $scope.tlIdDb ,
@@ -373,9 +388,11 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Post Modif for a History Index : array of provider/service & history index to update parentSize : array size of providers/services & history to create new id for new
-             * history Array index (0:provider - 1:service - 2:history)
-             */
+			 * Post Modif for a History Index : array of provider/service &
+			 * history index to update parentSize : array size of
+			 * providers/services & history to create new id for new history
+			 * Array index (0:provider - 1:service - 2:history)
+			 */
 			var postModifTlHistory = function(history,parentIndex,message){
 				var tlServiceHistory = {
 						tlId : $scope.tlIdDb ,
@@ -398,9 +415,11 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Edit TL If no draft exist ask to create a new one Else If more than one Draft already exist ask to create a new methodToCall : edit method to call for update objSub :
-             * object to modify (used for serviceProvider)
-             */
+			 * Edit TL If no draft exist ask to create a new one Else If more
+			 * than one Draft already exist ask to create a new methodToCall :
+			 * edit method to call for update objSub : object to modify (used
+			 * for serviceProvider)
+			 */
 			$scope.editTlDraft= function(methodToCall,index,objSub){
 				$scope.cssMain = "container disabled-click"
 				if($scope.myTl.dbStatus=="PROD"){
@@ -476,7 +495,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 									$scope.drafts.push(data);
 									$scope.dbId = data.id;
 									window.history.pushState("", "", "/tl-manager/tl/"+$scope.dbId );
-									$scope.tlDetail($scope.dbId); // Load new draft
+									$scope.tlDetail($scope.dbId); // Load new
+																	// draft
 								})
 								.finally(function (){
 									unlockView();
@@ -494,7 +514,12 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 					}
 				}else{ // If we're already in a draft
 					$scope.backUpTL = angular.copy($scope.myTl);
-					if($scope.signatureInfo==null || $scope.signatureInfo.indication==null || $scope.signatureInfo.indication=="NOT_SIGNED"){ // Modal Alert if TL Signature is
+					if($scope.signatureInfo==null || $scope.signatureInfo.indication==null || $scope.signatureInfo.indication=="NOT_SIGNED"){ // Modal
+																																				// Alert
+																																				// if
+																																				// TL
+																																				// Signature
+																																				// is
                                                                                                                                                 // Valid
 						$scope[methodToCall](index,objSub);
 					}else{
@@ -507,8 +532,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Invoke Modal TL Info Edit (Generic)
-             */
+			 * Invoke Modal TL Info Edit (Generic)
+			 */
 			$scope.invokeModalSimple= function(modalInstance,templateHtml, value, label,listProperties,tag){
 				if (typeof(listProperties)==='undefined') listProperties = null;
 				var tlInfo = angular.copy($scope.myTl);
@@ -559,8 +584,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			/*--------------------------- SCHEME INFORMATION -------------------------*/
 
 			/**
-             * TSL Id
-             */
+			 * TSL Id
+			 */
             $scope.editTslId = function(){
                 var value = $scope.myTl.tslId;
                 var templateHtml = templateGeneric +'<input class="col-sm-9" ng-model="value" style="margin-left:5px;"></div></div>';
@@ -573,8 +598,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
             };
 
 			/**
-             * Issue Date
-             */
+			 * Issue Date
+			 */
 			$scope.editIssueDate = function(){
 				var value = $scope.myTl.schemeInformation.issueDate;
 				var date = new Date(value);
@@ -593,8 +618,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Next Update
-             */
+			 * Next Update
+			 */
 			$scope.editNextUpdate = function(){
 				var value = $scope.myTl.schemeInformation.nextUpdateDate;
 				var date = new Date(value);
@@ -611,8 +636,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Sequence Number
-             */
+			 * Sequence Number
+			 */
 			$scope.editSequenceNumber = function(){
 				var value = $scope.myTl.schemeInformation.sequenceNumber;
 				var templateHtml = templateGeneric +'<input class="col-sm-9" ng-model="value" style="margin-left:5px;"'+
@@ -626,7 +651,12 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 					postModifSchemeInfo($scope.TAG_SEQUENCE_NUMBER, function () {
 						for(var i=0;i<$scope.drafts.length;i++){
 							if($scope.drafts[i].id==$scope.tlIdDb){
-								$scope.drafts[i].sequenceNumber= myValue; // Change the drafts sequence number value
+								$scope.drafts[i].sequenceNumber= myValue; // Change
+																			// the
+																			// drafts
+																			// sequence
+																			// number
+																			// value
 
 							};
 						};
@@ -635,8 +665,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Tsl Type
-             */
+			 * Tsl Type
+			 */
 			$scope.editTslType = function(){
 				var value = $scope.myTl.schemeInformation.type;
 				var templateHtml = templateGeneric +selectGeneric+'</div></div></div>'
@@ -650,8 +680,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Status Determination
-             */
+			 * Status Determination
+			 */
 			$scope.editStatusDetermination = function(){
 				var value = $scope.myTl.schemeInformation.statusDetermination;
 				var templateHtml = templateGeneric +selectGeneric+'</div></div>'
@@ -665,8 +695,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Postal Address
-             */
+			 * Postal Address
+			 */
 			$scope.editPostalAddress = function (){
 				if(!$scope.myTl.schemeInformation.schemeOpePostal){
 					$scope.myTl.schemeInformation.schemeOpePostal = [];
@@ -683,8 +713,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Distribution List
-             */
+			 * Distribution List
+			 */
 			$scope.editDistributionList= function (){
 				if(!$scope.myTl.schemeInformation.distributionPoint){
 					$scope.myTl.schemeInformation.distributionPoint = [];
@@ -700,8 +730,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Information URI
-             */
+			 * Information URI
+			 */
 			$scope.editInformationURI = function(){
 				if(!$scope.myTl.schemeInformation.schemeInfoUri){
 					$scope.myTl.schemeInformation.schemeInfoUri = [];
@@ -717,8 +747,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Electronic Address
-             */
+			 * Electronic Address
+			 */
 			$scope.editElectronicAddress = function(){
 				if(!$scope.myTl.schemeInformation.schemeOpeElectronic){
 					$scope.myTl.schemeInformation.schemeOpeElectronic = [];
@@ -734,8 +764,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Community Rule
-             */
+			 * Community Rule
+			 */
 			$scope.editCommunityRule = function(){
 				if(!$scope.myTl.schemeInformation.schemeTypeCommRule){
 					$scope.myTl.schemeInformation.schemeTypeCommRule = [];
@@ -752,8 +782,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Scheme Operator Name
-             */
+			 * Scheme Operator Name
+			 */
 			$scope.editSchemeOpeName = function(){
 				if(!$scope.myTl.schemeInformation.schemeOpeName){
 					$scope.myTl.schemeInformation.schemeOpeName = [];
@@ -769,8 +799,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Scheme Name
-             */
+			 * Scheme Name
+			 */
 			$scope.editSchemeName = function(){
 				if(!$scope.myTl.schemeInformation.schemeName){
 					$scope.myTl.schemeInformation.schemeName = [];
@@ -786,8 +816,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Legal Notice
-             */
+			 * Legal Notice
+			 */
 			$scope.editLegalNotice = function(){
 				if(!$scope.myTl.schemeInformation.schemePolicy){
 					$scope.myTl.schemeInformation.schemePolicy = [];
@@ -805,15 +835,12 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 
 
 			/**
-             * Modal : Scheme information edit Tabset value Parameter: 
-             * - modalInstance 
-             * - myTabs : tl object to edit 
-             * - label : modal head title 
-             * - templateUrl / controller : param to call modal 
-             * - tag : used tag parent for change/checks 
-             * - index: index of active tab in tabset
-             * - sortable : enable/disable manual sort in modal
-             */
+			 * Modal : Scheme information edit Tabset value Parameter: -
+			 * modalInstance - myTabs : tl object to edit - label : modal head
+			 * title - templateUrl / controller : param to call modal - tag :
+			 * used tag parent for change/checks - index: index of active tab in
+			 * tabset - sortable : enable/disable manual sort in modal
+			 */
 			$scope.invokeModalTabs = function (modalInstance,myTabs,label,templateUrl,controller,tag,index,sortable){
 				var tlInfo = $scope.myTl;
 				tlInfo.label=label;
@@ -847,8 +874,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			/*----------------------------- Pointer -----------------------------*/
 
 			/**
-             * Create new empty Pointer
-             */
+			 * Create new empty Pointer
+			 */
 			$scope.addPtot = function(){
 				var pointer = {};
 				pointer.head = "New Pointer";
@@ -867,8 +894,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Edit Pointer
-             */
+			 * Edit Pointer
+			 */
 			$scope.editPtots = function(index) {
 			    pointer = $scope.myTl.pointers[index];
 			    if(($scope.myTl.schemeInformation.territory=="EU") && ($scope.notifiedPointer.length>0) ){
@@ -921,8 +948,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Delete Pointer
-             */
+			 * Delete Pointer
+			 */
 			$scope.deletePtot = function(pointer){
 				var tlPointerEdition = {
 						tlId : $scope.tlIdDb ,
@@ -938,8 +965,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Invoke modal Pointer
-             */
+			 * Invoke modal Pointer
+			 */
 			var invokeModalPtot = function(pointer){
 			    pointer.checkToRun = $scope.myTl.checkToRun;
 				var modalInstance = $modal.open({
@@ -969,8 +996,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			}
 
 			/**
-             * Set the TL pointer in edition mode
-             */
+			 * Set the TL pointer in edition mode
+			 */
 			$scope.editPointerMode = function(){
 				if($scope.ptotsEdit){
 					$scope.ptotsEdit=false;
@@ -983,8 +1010,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			/*---------------------- Service Provider ----------------------*/
 
 			/**
-             * Create new empty serviceProvider
-             */
+			 * Create new empty serviceProvider
+			 */
 			$scope.addProvider = function(){
 				var provider = {};
 				provider.head="New Trust Service Provider";
@@ -1046,8 +1073,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Delete Provider
-             */
+			 * Delete Provider
+			 */
 			$scope.deleteProvider = function(serviceProvider,index){
 				var tlServiceProviderEdition = {
 						tlId : $scope.tlIdDb ,
@@ -1063,8 +1090,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Invoke modal Service Provider
-             */
+			 * Invoke modal Service Provider
+			 */
 			var invokeModalmodalServiceProvider = function(serviceProvider){
 				if(serviceProvider.tspExtension==undefined || serviceProvider.tspExtension==null){
 					serviceProvider.tspExtension = [];
@@ -1094,8 +1121,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Set the TL Providers in edition mode
-             */
+			 * Set the TL Providers in edition mode
+			 */
 			$scope.editProviderMode = function(){
 				if($scope.providerEdit){
 					$scope.providerEdit=false;
@@ -1108,8 +1135,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			/*---------------------- Service ----------------------*/
 
 			/**
-             * Create new empty service
-             */
+			 * Create new empty service
+			 */
 			$scope.addService = function(indexProvider){
 				var parentIndex = [indexProvider,null]
 				var provider = $scope.myTl.serviceProviders[indexProvider];
@@ -1380,8 +1407,10 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 
 			/*--------------------------------- DELETE GENERIC ---------------------------------*/
 			/**
-             * Delete Generic Pointer/ServiceProvider/Service/History index : index to re-initialize current tab open [1:providerIndex,2:serviceIndex,3:historyIndex]
-             */
+			 * Delete Generic Pointer/ServiceProvider/Service/History index :
+			 * index to re-initialize current tab open
+			 * [1:providerIndex,2:serviceIndex,3:historyIndex]
+			 */
 			var genericDeleteObject = function(labelMessage,labelApi,deleteObject,labelChangeApi,index){
 			    var tlCookie = {
 		            tlId : $scope.myTl.tlId,
@@ -1514,8 +1543,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			/*--------------------------------- DOM MANAGEMENT ---------------------------------*/
 
 			/**
-             * Show/hide tabset Hide if table is empty in prod
-             */
+			 * Show/hide tabset Hide if table is empty in prod
+			 */
 			$scope.tableVisibility = function(table){
 				if($scope.myTl.dbStatus=="PROD"){
 					if($scope.iconTableVisibility(table)){
@@ -1526,8 +1555,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Show/hide tabset open-close icon Hide if table is empty
-             */
+			 * Show/hide tabset open-close icon Hide if table is empty
+			 */
 			$scope.iconTableVisibility = function(table){
 				if(table==undefined || table==null || table.length==0){
 					return true;
@@ -1537,8 +1566,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Tooltip Edit icon
-             */
+			 * Tooltip Edit icon
+			 */
 			$scope.EditTooltip=function(label){
 				if($scope.myTl.dbStatus=="PROD"){
 				    return $scope.browserController_createDraft;
@@ -1557,8 +1586,8 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Return active index of a tabset
-             */
+			 * Return active index of a tabset
+			 */
 			var indexActive = function(tab){
 				if(tab!=undefined && tab!=null && tab.length>0){
 					var index = tab.indexOf(true);
@@ -1642,8 +1671,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			/**
-             * Switch checkToRun on/off Run check/change if switch on Disable & hide check/change if switch off
-             */
+			 * Switch checkToRun on/off Run check/change if switch on Disable &
+			 * hide check/change if switch off
+			 */
 			$scope.switchCheckToRun = function(){
 			    var tlCookie = {
                         tlId : $scope.myTl.id,
@@ -1712,5 +1742,101 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 				};
 
 			};
-
+			
+			/*--------------------------- Signature -------------------------*/
+			
+			$scope.filterNodes = function(){
+				var key = angular.copy($scope.tspFilter.value).trim();
+				$scope.splitFilter = "";
+								
+				var displayWarning = true;
+				if(key){
+					var splitKey = key.match(/([\w]|[\u00C0-\u00FF]|[,?:;.!&'\-/\\@*+=()]|[[U+0400–U+04FF]])+|"[^"]*"/g);
+					for(var i=0;i<splitKey.length;i++){
+						$scope.splitFilter = $scope.splitFilter + splitKey[i];
+						if(i<(splitKey.length-1)){
+							$scope.splitFilter = $scope.splitFilter + " - ";	
+						}
+						splitKey[i] = splitKey[i].replace(/"/g, '').toLowerCase();
+					}
+										
+					for(var i=0;i<$scope.myTl.serviceProviders.length;i++){
+						var tmpTSP = angular.copy($scope.myTl.serviceProviders[i]);
+						tmpTSP.tspservices=[];
+						var servicesFound = false;
+													
+						if($scope.myTl.serviceProviders[i].tspservices!=null){
+							for(var j=0;j<$scope.myTl.serviceProviders[i].tspservices.length;j++){
+								tmpTSP.tspservices=[];
+															
+								// Clean service history & certificates
+								// (base64/ASN1/CertInfo)
+								var tmpService =
+								angular.copy($scope.myTl.serviceProviders[i].tspservices[j]);
+								tmpService.history=null;
+								if(tmpService.digitalIdentification!=null){
+									for(var di=0;di<tmpService.digitalIdentification.length;di++){
+										for(var ci=0;ci<tmpService.digitalIdentification[di].certificateList.length;ci++){
+											tmpService.digitalIdentification[di].certificateList[ci].certB64 = null;
+											tmpService.digitalIdentification[di].certificateList[ci].certEncoded = null;
+											tmpService.digitalIdentification[di].certificateList[ci].certificateInfo = null;
+											tmpService.digitalIdentification[di].certificateList[ci].asn1 = null;
+										}
+									}
+								}
+								tmpTSP.tspservices.push(tmpService);
+															
+								if(keyMatchJSON(splitKey, tmpTSP)){
+									$scope.myTl.serviceProviders[i].tspservices[j].filter=false;
+									servicesFound = true;
+								}else{
+									$scope.myTl.serviceProviders[i].tspservices[j].filter=true;
+								}
+							}
+						}
+												
+						if(servicesFound){
+							displayWarning=false;
+							$scope.myTl.serviceProviders[i].filter=false;
+						}else{
+							$scope.myTl.serviceProviders[i].filter=true;
+						}
+						
+					}
+				}else{
+					// Key empty => No filter
+					for(var i=0;i<$scope.myTl.serviceProviders.length;i++){
+						$scope.myTl.serviceProviders[i].filter=false;
+						for(var j=0;j<$scope.myTl.serviceProviders[i].tspservices.length;j++){
+							$scope.myTl.serviceProviders[i].tspservices[j].filter=false;
+						}
+					}
+										
+					// Update tmp warning value
+					displayWarning = false;
+				}
+								
+				if(displayWarning){
+					$scope.noResultWarning = true;
+				}else{
+					$scope.noResultWarning = false;
+				}
+			}
+			
+			$scope.filterReset = function(){
+				$scope.tspFilter = {value:''};
+				$scope.filterNodes();
+			}
+			
+			
+			var keyMatchJSON = function(splitKey, obj){
+				var tmpJson = JSON.stringify(obj).toLowerCase();
+				for(var i=0;i<splitKey.length;i++){
+					if(tmpJson.indexOf(splitKey[i])==-1){
+						return false;
+					}
+				}
+				return true;
+			}
+			
 } ]);

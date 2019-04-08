@@ -2,90 +2,87 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 
 <script th:src="@{/controllers/newsController.js}"></script>
 
-</head>
 <style>
 .a-link:hover {
-    color: #33CC33;
+	color: #33CC33;
 }
 </style>
+</head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="newsController">
+	<div class="body" ng-controller="newsController">
 
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- MAIN CONTENT -->
-        <main ng-if="load==false">
-        <div align="center">
-            <label>{{loadingNews}}</label>
-        </div>
-        <div th:replace="spinner :: spinner"></div>
-        </main>
-        <main id="content" ng-show="load==true">
-        <div class="panel panel-primary" style="margin-bottom: 5px;">
-            <div class="panel-heading" style="max-height: 35px" ng-init="searchOpen=true">
-                <span class="cursor-pointer" data-toggle="collapse" data-target="#search" ng-click="searchOpen=!searchOpen">
-                    <span th:text="#{tSearchCriteria}"></span>
+		<!-- MAIN CONTENT -->
+		<main ng-if="load==false">
+		<div align="center">
+			<label>{{loadingNews}}</label>
+		</div>
+		<th:block th:replace="spinner :: spinner"></th:block> </main>
+		<main id="content" ng-show="load==true">
+		<div class="panel panel-primary" style="margin-bottom: 5px;">
+			<div class="panel-heading" style="max-height: 35px" ng-init="searchOpen=true">
+				<span class="cursor-pointer" data-toggle="collapse" data-target="#search" ng-click="searchOpen=!searchOpen">
+					<span th:text="#{tSearchCriteria}"></span>
 
-                    <span ng-show="searchOpen" class="fa fa-chevron-circle-down" tooltip="{{tHide}}" tooltip-placement="bottom" style="float: right;"></span>
-                    <span ng-show="!searchOpen" class="fa fa-chevron-circle-up" tooltip="{{tShow}}" tooltip-placement="bottom" style="float: right;"></span>
-                </span>
-            </div>
-            <div id="search" class="collapse in">
-                <div class="row" style="padding: 5px; margin-top: 5px;">
-                    <div style="margin-left: 15px; width: 250px; display: inline-block">
-                        <span th:text="#{tbCountry}"></span>
-                        <select ng-model="auditSearch.countryCode">
-                            <option selected="true" value="">ALL</option>
-                            <option ng-repeat="country in criterias.countries" ng-value="country" ng-selected="auditSearch.countryCode == country">{{country}}</option>
-                        </select>
-                    </div>
-                    <div style="width: 350px; display: inline-block">
-                        <span th:text="#{tStartDate}"></span>
-                        <div style="display: inline">
-                            <input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.startDate" is-open="opened" datepicker-options="dateOptions"
-                                date-disabled="disabled(date, mode)" close-text="Close" />
-                            <button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0px 12px !important;">
-                                <span class="fa fa-calendar"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div style="width: 350px; display: inline-block">
-                        <span th:text="#{tEndDate}"></span>
-                        <div style="display: inline">
-                            <input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.endDate" is-open="openedEnd" datepicker-options="dateOptions"
-                                date-disabled="disabled(date, mode)" close-text="Close" />
-                            <button type="button" class="btn btn-default" ng-click="openEnd($event)" style="height: 26px; padding: 0px 12px !important;">
-                                <span class="fa fa-calendar"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="padding: 5px;">
-                    <button class="btn btn-primary" ng-click="getNews()" th:text="#{tSearch}" style="float: right; margin-right: 10px;"></button>
-                    <button class="btn btn-default" ng-click="resetSearch()" th:text="#{tReset}" style="float: right; margin-right: 15px;"></button>
-                </div>
-            </div>
-        </div>
-        <!-- Table -->
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="max-height: 35px">
-                <span th:text="#{last_publication}"></span>
-            </div>
-            <div>
-                <paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
-            </div>
-        </div>
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+					<span ng-show="searchOpen" class="fa fa-chevron-circle-down" tooltip="{{tHide}}" tooltip-placement="bottom" style="float: right;"></span>
+					<span ng-show="!searchOpen" class="fa fa-chevron-circle-up" tooltip="{{tShow}}" tooltip-placement="bottom" style="float: right;"></span>
+				</span>
+			</div>
+			<div id="search" class="collapse in">
+				<div class="row" style="padding: 5px; margin-top: 5px;">
+					<div style="margin-left: 15px; width: 250px; display: inline-block">
+						<span th:text="#{tbCountry}"></span>
+						<select ng-model="auditSearch.countryCode">
+							<option selected="true" value="">ALL</option>
+							<option ng-repeat="country in criterias.countries" ng-value="country" ng-selected="auditSearch.countryCode == country">{{country}}</option>
+						</select>
+					</div>
+					<div style="width: 350px; display: inline-block">
+						<span th:text="#{tStartDate}"></span>
+						<div style="display: inline">
+							<input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.startDate" is-open="opened" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+							<button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0px 12px !important;">
+								<span class="fa fa-calendar"></span>
+							</button>
+						</div>
+					</div>
+					<div style="width: 350px; display: inline-block">
+						<span th:text="#{tEndDate}"></span>
+						<div style="display: inline">
+							<input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.endDate" is-open="openedEnd" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+							<button type="button" class="btn btn-default" ng-click="openEnd($event)" style="height: 26px; padding: 0px 12px !important;">
+								<span class="fa fa-calendar"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="padding: 5px;">
+					<button class="btn btn-primary" ng-click="getNews()" th:text="#{tSearch}" style="float: right; margin-right: 10px;"></button>
+					<button class="btn btn-default" ng-click="resetSearch()" th:text="#{tReset}" style="float: right; margin-right: 15px;"></button>
+				</div>
+			</div>
+		</div>
+		<!-- Table -->
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{last_publication}"></span>
+			</div>
+			<div>
+				<paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
+			</div>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

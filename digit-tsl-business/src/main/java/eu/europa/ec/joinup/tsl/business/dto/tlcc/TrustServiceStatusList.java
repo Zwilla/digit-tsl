@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -58,58 +58,58 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "TrustServiceStatusList", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class TrustServiceStatusList {
 
-	@XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<Check> check;
-	@XmlElement(name = "TSLTag", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected TSLTag tslTag;
-	@XmlElement(name = "SchemeInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected SchemeInformation schemeInformation;
-	@XmlElement(name = "TrustServiceProviderList", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected TrustServiceProviderList trustServiceProviderList;
-	@XmlElement(name = "Signature", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected Signature signature;
+    @XmlElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<Check> check;
+    @XmlElement(name = "TSLTag", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected TSLTag tslTag;
+    @XmlElement(name = "SchemeInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected SchemeInformation schemeInformation;
+    @XmlElement(name = "TrustServiceProviderList", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected TrustServiceProviderList trustServiceProviderList;
+    @XmlElement(name = "Signature", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected Signature signature;
 
-	public List<Check> getCheck() {
-		if (this.check == null) {
-			this.check = new ArrayList<Check>();
-		}
-		return check;
-	}
+    public List<Check> getCheck() {
+        if (this.check == null) {
+            this.check = new ArrayList<Check>();
+        }
+        return check;
+    }
 
-	public void setCheck(List<Check> check) {
-		this.check = check;
-	}
+    public void setCheck(List<Check> check) {
+        this.check = check;
+    }
 
-	public TSLTag getTSLTag() {
-		return tslTag;
-	}
+    public TSLTag getTSLTag() {
+        return tslTag;
+    }
 
-	public void setTSLTag(TSLTag tslTag) {
-		this.tslTag = tslTag;
-	}
+    public void setTSLTag(TSLTag tslTag) {
+        this.tslTag = tslTag;
+    }
 
-	public SchemeInformation getSchemeInformation() {
-		return schemeInformation;
-	}
+    public SchemeInformation getSchemeInformation() {
+        return schemeInformation;
+    }
 
-	public void setSchemeInformation(SchemeInformation schemeInformation) {
-		this.schemeInformation = schemeInformation;
-	}
+    public void setSchemeInformation(SchemeInformation schemeInformation) {
+        this.schemeInformation = schemeInformation;
+    }
 
-	public TrustServiceProviderList getTrustServiceProviderList() {
-		return trustServiceProviderList;
-	}
+    public TrustServiceProviderList getTrustServiceProviderList() {
+        return trustServiceProviderList;
+    }
 
-	public void setTrustServiceProviderList(TrustServiceProviderList trustServiceProviderList) {
-		this.trustServiceProviderList = trustServiceProviderList;
-	}
+    public void setTrustServiceProviderList(TrustServiceProviderList trustServiceProviderList) {
+        this.trustServiceProviderList = trustServiceProviderList;
+    }
 
-	public Signature getSignature() {
-		return signature;
-	}
+    public Signature getSignature() {
+        return signature;
+    }
 
-	public void setSignature(Signature signature) {
-		this.signature = signature;
-	}
+    public void setSignature(Signature signature) {
+        this.signature = signature;
+    }
 
 }

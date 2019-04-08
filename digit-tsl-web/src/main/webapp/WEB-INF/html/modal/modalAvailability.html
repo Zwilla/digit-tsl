@@ -1,95 +1,95 @@
 <style>
 .chart-container, .chart {
-    height: 500px;
+	height: 500px;
 }
 </style>
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <span th:text="#{availability.xml}"></span>
-        <span>: {{tl.countryName}}</span>
-        <span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-    </div>
-    <div class="panel-body" ng-init="showTab='line'">
-        <div class="row">
-            <span>{{availability_info_top | replaceIn:'%CC%':country}}</span>
-        </div>
-        <div id="mainSpinner" ng-show="!loadAvailability">
-            <div align="center">
-                <label th:text="#{availability.load}"></label>
-            </div>
-            <div th:replace="spinner :: spinner"></div>
-        </div>
-        <div ng-show="loadAvailability">
-            <br />
-            <div class="row">
-                <div style="margin-bottom: -10px;">
-                    <div style="display: inline-block; width: 202px;">
-                        <span th:text="#{tStatus}" style="font-weight: bold;"></span>
-                    </div>
-                    <div style="display: inline-block; width: 432px;">
-                        <span th:text="#{tStartDate}" style="font-weight: bold;"></span>
-                        <input type="text" class="calendar-display" datepicker-popup="{{format}}" ng-model="dMin" is-open="openedMin" datepicker-options="dateOptions"
-                            date-disabled="disabled(date, mode)" close-text="Close" onkeydown="return false;" style="margin-left: 15px;" required="required" />
-                        <span class="fa fa-calendar btn btn-default calendar-button" ng-click="openMin($event)"></span>
-                    </div>
-                    <div style="display: inline-block; width: 432px;">
-                        <span th:text="#{tEndDate}" style="font-weight: bold;"></span>
-                        <input type="text" class="calendar-display" datepicker-popup="{{format}}" ng-model="dMax" is-open="openedMax" datepicker-options="dateOptions"
-                            date-disabled="disabled(date, mode)" close-text="Close" onkeydown="return false;" style="margin-left: 15px;" required="required" />
-                        <span class="fa fa-calendar btn btn-default calendar-button" ng-click="openMax($event)"></span>
-                    </div>
-                    <div style="display: inline-block;">
-                        <span th:text="#{tDuration}" style="font-weight: bold;"></span>
-                    </div>
-                </div>
-                <div ng-if="tableOptions.listObj.length==0" class="no-unavailability-info">
-                    <span th:text="#{availability.neverUnavailable}"></span>
-                </div>
-                <div ng-show="tableOptions.listObj.length>0">
-                    <paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
-                </div>
-            </div>
-        </div>
-        <div id="mainSpinner" ng-if="loadAvailability">
-            <hr class="light-hr" />
-            <div class="row" style="text-align: center; color: red;">
-                <span th:text="#{availability.from}"></span>
-                <span>{{dMin | date:'yyyy-MM-dd'}} to {{dMax | date:'yyyy-MM-dd' }}</span>
-            </div>
-            <div class="row" style="margin-top: 10px;" >
-                <div class="col-sm-9" style="z-index: 10">
-                    <nvd3 options='lineOption' data='lineData'></nvd3>
-                </div>
-                <div class="col-sm-3" style="z-index: 5">
-                    <div class="row">
-                        <!-- Available -->
-                        <div class="col-lg-4 legend-div">
-                            <div class="legend-circle lengend-available-color"></div>
-                            <span>{{pieData[0].key}}</span>
-                            <span>({{pieData[0].y}}%)</span>
-                        </div>
-                        <!-- Unavailable -->
-                        <div class="col-lg-4 legend-div">
-                            <div class="legend-circle lengend-unavailable-color"></div>
-                            <span>{{pieData[1].key}}</span>
-                            <span>({{pieData[1].y}}%)</span>
-                        </div>
-                        <!-- Unsupported -->
-                        <div class="col-lg-4 legend-div">
-                            <div class="legend-circle lengend-unsupported-color"></div>
-                            <span>{{pieData[2].key}}</span>
-                            <span>({{pieData[2].y}}%)</span>
-                        </div>
-                    </div>
-                    <div style="margin-left: -50px;">
-                        <nvd3 options='pieOption' data='pieData'></nvd3>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<div class="panel-heading">
+		<span th:text="#{availability.xml}"></span>
+		<span>: {{tl.countryName}}</span>
+		<span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+	</div>
+	<div class="panel-body" ng-init="showTab='line'">
+		<div class="row">
+			<span>{{availability_info_top | replaceIn:'%CC%':country}}</span>
+		</div>
+		<div id="mainSpinner" ng-show="!loadAvailability">
+			<div align="center">
+				<label th:text="#{availability.load}"></label>
+			</div>
+			<th:block th:replace="spinner :: spinner"></th:block>
+		</div>
+		<div ng-show="loadAvailability">
+			<br />
+			<div class="row">
+				<div style="margin-bottom: -10px;">
+					<div style="display: inline-block; width: 202px;">
+						<span th:text="#{tStatus}" style="font-weight: bold;"></span>
+					</div>
+					<div style="display: inline-block; width: 432px;">
+						<span th:text="#{tStartDate}" style="font-weight: bold;"></span>
+						<input type="text" class="calendar-display" datepicker-popup="{{format}}" ng-model="dMin" is-open="openedMin" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"
+							close-text="Close" onkeydown="return false;" style="margin-left: 15px;" required="required" />
+						<span class="fa fa-calendar btn btn-default calendar-button" ng-click="openMin($event)"></span>
+					</div>
+					<div style="display: inline-block; width: 432px;">
+						<span th:text="#{tEndDate}" style="font-weight: bold;"></span>
+						<input type="text" class="calendar-display" datepicker-popup="{{format}}" ng-model="dMax" is-open="openedMax" datepicker-options="dateOptions" date-disabled="disabled(date, mode)"
+							close-text="Close" onkeydown="return false;" style="margin-left: 15px;" required="required" />
+						<span class="fa fa-calendar btn btn-default calendar-button" ng-click="openMax($event)"></span>
+					</div>
+					<div style="display: inline-block;">
+						<span th:text="#{tDuration}" style="font-weight: bold;"></span>
+					</div>
+				</div>
+				<div ng-if="tableOptions.listObj.length==0" class="no-unavailability-info">
+					<span th:text="#{availability.neverUnavailable}"></span>
+				</div>
+				<div ng-show="tableOptions.listObj.length>0">
+					<paginator options="tableOptions" ng-if="tableOptions.listObj.length>0"></paginator>
+				</div>
+			</div>
+		</div>
+		<div id="mainSpinner" ng-if="loadAvailability">
+			<hr class="light-hr" />
+			<div class="row" style="text-align: center; color: red;">
+				<span th:text="#{availability.from}"></span>
+				<span>{{dMin | date:'yyyy-MM-dd'}} to {{dMax | date:'yyyy-MM-dd' }}</span>
+			</div>
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-sm-9" style="z-index: 10">
+					<nvd3 options='lineOption' data='lineData'></nvd3>
+				</div>
+				<div class="col-sm-3" style="z-index: 5">
+					<div class="row">
+						<!-- Available -->
+						<div class="col-lg-4 legend-div">
+							<div class="legend-circle lengend-available-color"></div>
+							<span>{{pieData[0].key}}</span>
+							<span>({{pieData[0].y}}%)</span>
+						</div>
+						<!-- Unavailable -->
+						<div class="col-lg-4 legend-div">
+							<div class="legend-circle lengend-unavailable-color"></div>
+							<span>{{pieData[1].key}}</span>
+							<span>({{pieData[1].y}}%)</span>
+						</div>
+						<!-- Unsupported -->
+						<div class="col-lg-4 legend-div">
+							<div class="legend-circle lengend-unsupported-color"></div>
+							<span>{{pieData[2].key}}</span>
+							<span>({{pieData[2].y}}%)</span>
+						</div>
+					</div>
+					<div style="margin-left: -50px;">
+						<nvd3 options='pieOption' data='pieData'></nvd3>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <div class="row" style="padding: 10px; border: solid black 2px;">
-            <span th:text="#{availability.info.bottom}" style="font-style: oblique"></span>
-        </div>
-    </div>
+		<div class="row" style="padding: 10px; border: solid black 2px;">
+			<span th:text="#{availability.info.bottom}" style="font-style: oblique"></span>
+		</div>
+	</div>
 </div>

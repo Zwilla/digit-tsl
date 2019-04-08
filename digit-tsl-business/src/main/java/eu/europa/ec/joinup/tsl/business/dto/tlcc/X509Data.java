@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -30,11 +30,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -53,10 +54,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "check",
-    "x509Certificate"
-})
+@XmlType(name = "", propOrder = { "check", "x509Certificate" })
 @XmlRootElement(name = "X509Data", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class X509Data {
 
@@ -71,21 +69,19 @@ public class X509Data {
      * Gets the value of the check property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the check property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the check property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getCheck().add(newItem);
+     * getCheck().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link Check }
+     * Objects of the following type(s) are allowed in the list {@link Check }
      * 
      * 
      */
@@ -99,10 +95,8 @@ public class X509Data {
     /**
      * Obtient la valeur de la propriete x509Certificate.
      * 
-     * @return
-     *     possible object is
-     *     {@link X509Certificate }
-     *     
+     * @return possible object is {@link X509Certificate }
+     * 
      */
     public X509Certificate getX509Certificate() {
         return x509Certificate;
@@ -112,9 +106,8 @@ public class X509Data {
      * Definit la valeur de la propriete x509Certificate.
      * 
      * @param value
-     *     allowed object is
-     *     {@link X509Certificate }
-     *     
+     *            allowed object is {@link X509Certificate }
+     * 
      */
     public void setX509Certificate(X509Certificate value) {
         this.x509Certificate = value;
@@ -123,10 +116,8 @@ public class X509Data {
     /**
      * Obtient la valeur de la propriete index.
      * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
+     * @return possible object is {@link BigInteger }
+     * 
      */
     public BigInteger getIndex() {
         return index;
@@ -136,9 +127,8 @@ public class X509Data {
      * Definit la valeur de la propriete index.
      * 
      * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
+     *            allowed object is {@link BigInteger }
+     * 
      */
     public void setIndex(BigInteger value) {
         this.index = value;

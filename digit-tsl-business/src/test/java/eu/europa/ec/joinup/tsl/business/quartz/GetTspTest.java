@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -36,7 +36,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import eu.europa.ec.joinup.tsl.business.AbstractSpringTest;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLElectronicAddress;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLKeyUsage;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLKeyUsageBit;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLName;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLPolicies;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLPoliciesBit;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLPostalAddress;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLQualificationExtension;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceDto;
@@ -47,6 +51,7 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLSupplyPoint;
 import eu.europa.ec.joinup.tsl.business.repository.TLRepository;
 import eu.europa.ec.joinup.tsl.business.service.LoadingJobService;
 import eu.europa.ec.joinup.tsl.business.service.TLService;
+import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 
 public class GetTspTest extends AbstractSpringTest {
@@ -237,8 +242,7 @@ public class GetTspTest extends AbstractSpringTest {
                             if (tsp.getTSPPostal() != null) {
                                 for (TLPostalAddress adr : tsp.getTSPPostal()) {
                                     if (adr.getLanguage().equalsIgnoreCase("EN")) {
-                                        adresse = adr.getStreet() + " - " + adr.getLocality() + " - " + adr.getPostalCode() + " - " + adr.getStateOrProvince() + " - "
-                                                + adr.getCountryCode();
+                                        adresse = adr.getStreet() + " - " + adr.getLocality() + " - " + adr.getPostalCode() + " - " + adr.getStateOrProvince() + " - " + adr.getCountryCode();
                                     }
                                 }
                             }
@@ -436,4 +440,79 @@ public class GetTspTest extends AbstractSpringTest {
 
         FileUtils.writeByteArrayToFile(new File("src/test/resources/managed_on_behalf.csv"), sb.toString().getBytes());
     }
+
+    public void getSieQ() throws Exception {
+        loadingJobService.start();
+        List<DBTrustedLists> tls = (List<DBTrustedLists>) tlRepo.findAll();
+        StringBuilder sb = new StringBuilder();
+        for (DBTrustedLists dbtl : tls) {
+            TL tl = tlService.getTL(dbtl.getId());
+            if (tl != null) {
+                String cc = tl.getDbCountryName();
+                if (tl.getServiceProviders() != null) {
+                    for (TLServiceProvider tsp : tl.getServiceProviders()) {
+                        if (tsp != null) {
+                            String name = tsp.getName();
+                            for (TLServiceDto service : tsp.getTSPServices()) {
+                                if (service != null) {
+                                    String sName = service.getServiceName().get(0).getValue() + " - " + service.getCurrentStatus().replace("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/", "")
+                                            + " : " + DateUtils.getToFormatYMDHMS(service.getCurrentStatusStartingDate());
+                                    if (!CollectionUtils.isEmpty(service.getExtension())) {
+                                        for (TLServiceExtension extension : service.getExtension()) {
+                                            if (extension.getQualificationsExtension() != null) {
+                                                sb.append(cc + "\n" + name + "\n" + sName + "\n");
+
+                                                String qualif = "";
+                                                String criteria = "";
+                                                String critAssert = "";
+                                                for (TLQualificationExtension tlQualificationExtension : extension.getQualificationsExtension()) {
+                                                    qualif = qualif + tlQualificationExtension.getQualifTypeList().toString();
+                                                    if (tlQualificationExtension.getCriteria() != null) {
+                                                        critAssert = tlQualificationExtension.getCriteria().getAsserts();
+                                                        if (!CollectionUtils.isEmpty(tlQualificationExtension.getCriteria().getKeyUsage())) {
+                                                            int i = 0;
+                                                            for (TLKeyUsage tlKeyUsage : tlQualificationExtension.getCriteria().getKeyUsage()) {
+                                                                criteria = criteria + "\tKey usages " + i + ":\n";
+                                                                for (TLKeyUsageBit tlKeyUsageBit : tlKeyUsage.getKeyUsageBit()) {
+                                                                    criteria = criteria + "\t\t" + tlKeyUsageBit.getValue() + "(" + tlKeyUsageBit.getIsValue() + ")\n";
+                                                                }
+                                                                i = i + 1;
+                                                            }
+                                                        }
+
+                                                        if (!CollectionUtils.isEmpty(tlQualificationExtension.getCriteria().getPolicyList())) {
+                                                            int i = 0;
+                                                            for (TLPolicies tlPolicy : tlQualificationExtension.getCriteria().getPolicyList()) {
+                                                                criteria = criteria + "\tPolicy list " + i + ":\n";
+                                                                for (TLPoliciesBit tlPoliciesBit : tlPolicy.getPolicyBit()) {
+                                                                    criteria = criteria + "\t\t" + tlPoliciesBit.getIdentifierValue() + "\n";
+                                                                }
+                                                                i = i + 1;
+                                                            }
+                                                        }
+
+                                                        if (!CollectionUtils.isEmpty(tlQualificationExtension.getCriteria().getCriteriaList())) {
+                                                            criteria = criteria + tlQualificationExtension.getCriteria().getCriteriaList().size() + " criteria list\n";
+                                                        }
+                                                    } else {
+                                                        critAssert = "No Criteria";
+                                                        criteria = "No criteria";
+                                                    }
+
+                                                    sb.append(qualif + "\nAssert:" + critAssert + "\nCriterias:\n" + criteria + "\n\n\n");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        FileUtils.writeByteArrayToFile(new File("src/test/resources/trust_services_sieQ.txt"), sb.toString().getBytes());
+    }
+
 }

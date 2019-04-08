@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -21,6 +21,7 @@
 package eu.europa.ec.joinup.tsl.web.config;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +52,13 @@ import org.springframework.security.web.header.writers.XXssProtectionHeaderWrite
 import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter;
 import org.springframework.security.web.header.writers.frameoptions.XFrameOptionsHeaderWriter.XFrameOptionsMode;
 
+import eu.europa.ec.joinup.tsl.business.repository.AuditRepository;
 import eu.europa.ec.joinup.tsl.business.repository.UserRepository;
+import eu.europa.ec.joinup.tsl.model.DBAudit;
+import eu.europa.ec.joinup.tsl.model.DBUser;
+import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
+import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
+import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 
 @Configuration
 @EnableWebMvcSecurity
@@ -71,12 +78,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private AuditRepository auditRepository;
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests().antMatchers("/notification**", "/notification/**").authenticated().antMatchers("/modalAvailabilityChart").authenticated().antMatchers("/tl**", "/tl/**").authenticated()
-        .antMatchers("/").authenticated().antMatchers("/home").authenticated().antMatchers("/management**", "/management/**").authenticated().antMatchers("/drafts**", "/drafts/**").authenticated()
-        .antMatchers("/news").authenticated();
+        http.authorizeRequests().antMatchers("/notification**", "/notification/**").authenticated().antMatchers("/modalAvailabilityChart").authenticated().antMatchers("/tl**", "/tl/**")
+                .authenticated().antMatchers("/").authenticated().antMatchers("/home").authenticated().antMatchers("/management**", "/management/**").authenticated()
+                .antMatchers("/drafts**", "/drafts/**").authenticated().antMatchers("/news").authenticated().antMatchers("/wizard**", "/wizard/**").authenticated();
 
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS).maximumSessions(1);
 
@@ -86,7 +96,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling().authenticationEntryPoint(casAuthenticationEntryPoint());
 
         http.headers().addHeaderWriter(new XFrameOptionsHeaderWriter(XFrameOptionsMode.SAMEORIGIN)).addHeaderWriter(new XContentTypeOptionsHeaderWriter())
-        .addHeaderWriter(new XXssProtectionHeaderWriter()).addHeaderWriter(new CacheControlHeadersWriter()).addHeaderWriter(new HstsHeaderWriter());
+                .addHeaderWriter(new XXssProtectionHeaderWriter()).addHeaderWriter(new CacheControlHeadersWriter()).addHeaderWriter(new HstsHeaderWriter());
     }
 
     @Override
@@ -123,11 +133,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             if (token.getName() == null) {
                 throw new UsernameNotFoundException(bundle.getString("user.id.null"));
             }
-            User user = new User(token.getName(), "NOT_USED", new ArrayList<GrantedAuthority>());
-            if (userRepository.findByEcasIdAndRoleNotNull(token.getName()) == null) {
+
+            DBAudit dbAudit = new DBAudit();
+            dbAudit.setTarget(AuditTarget.USER);
+            dbAudit.setAction(AuditAction.LOGIN);
+            dbAudit.setDate(new Date());
+            dbAudit.setUsername(token.getName());
+            dbAudit.setFileId(0);
+
+            DBUser dbUser = userRepository.findByEcasIdAndRoleNotNull(token.getName());
+            if (dbUser == null) {
+                dbAudit.setStatus(AuditStatus.ERROR);
+                dbAudit.setCountryCode("EU");
+                dbAudit.setInfos("Authentication error");
+                auditRepository.save(dbAudit);
+
                 throw new UsernameNotFoundException(bundle.getString("user.id.not.authorized").replace("%ID%", token.getName()));
+            } else {
+                dbAudit.setStatus(AuditStatus.SUCCES);
+                dbAudit.setCountryCode(dbUser.getTerritory().getCodeTerritory());
+                dbAudit.setInfos("Authentication success");
+                auditRepository.save(dbAudit);
+
+                return new User(token.getName(), "NOT_USED", new ArrayList<GrantedAuthority>());
             }
-            return user;
         }
     };
 

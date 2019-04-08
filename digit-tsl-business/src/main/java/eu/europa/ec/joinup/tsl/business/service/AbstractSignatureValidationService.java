@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -40,6 +40,8 @@ import eu.europa.ec.joinup.tsl.model.DBFiles;
 import eu.europa.ec.joinup.tsl.model.DBSignatureInformation;
 import eu.europa.ec.joinup.tsl.model.enums.SignatureStatus;
 import eu.europa.esig.dss.SignatureLevel;
+import eu.europa.esig.dss.jaxb.diagnostic.XmlSignatureScope;
+import eu.europa.esig.dss.utils.Utils;
 import eu.europa.esig.dss.validation.policy.rules.Indication;
 import eu.europa.esig.dss.validation.policy.rules.SubIndication;
 import eu.europa.esig.dss.validation.reports.Reports;
@@ -50,6 +52,7 @@ import eu.europa.esig.dss.validation.reports.wrapper.SignatureWrapper;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.CommonTrustedCertificateSource;
 import eu.europa.esig.dss.x509.KeyStoreCertificateSource;
+import eu.europa.esig.dss.xades.validation.XmlRootSignatureScope;
 
 @Transactional(value = TxType.REQUIRED)
 public abstract class AbstractSignatureValidationService {
@@ -106,7 +109,9 @@ public abstract class AbstractSignatureValidationService {
         }
         try {
             Reports reports = getReports(file, potentialSigners);
-            //                        reports.print();
+            // TODO improve with DSS-1487
+            boolean acceptableScope = false;
+            // reports.print();
             SimpleReport simpleReport = reports.getSimpleReport();
             List<String> signatureIdList = simpleReport.getSignatureIdList();
             if (CollectionUtils.isEmpty(signatureIdList)) {
@@ -116,22 +121,29 @@ public abstract class AbstractSignatureValidationService {
                 cleanSignatureInfo(signatureInfo);
                 signatureInfo.setIndication(SignatureStatus.MORE_THAN_ONE_SIGNATURE);
             } else {
+                DiagnosticData diagnosticData = reports.getDiagnosticData();
+                SignatureWrapper signatureWrapper = diagnosticData.getSignatureById(diagnosticData.getFirstSignatureId());
+                List<XmlSignatureScope> signatureScopes = signatureWrapper.getSignatureScopes();
+                if (Utils.collectionSize(signatureScopes) == 1) {
+                    XmlSignatureScope xmlSignatureScope = signatureScopes.get(0);
+                    acceptableScope = XmlRootSignatureScope.class.getSimpleName().equals(xmlSignatureScope.getScope());
+                }
                 String signatureId = simpleReport.getFirstSignatureId();
                 Indication indication = simpleReport.getIndication(signatureId);
                 SignatureStatus status = null;
                 switch (indication) {
-                    case TOTAL_PASSED:
-                        status = SignatureStatus.VALID;
-                        break;
-                    case INDETERMINATE:
-                        status = SignatureStatus.INDETERMINATE;
-                        break;
-                    case TOTAL_FAILED:
-                        status = SignatureStatus.INVALID;
-                        break;
-                    default:
-                        status = SignatureStatus.CANNOT_BE_VALIDATED;
-                        break;
+                case TOTAL_PASSED:
+                    status = SignatureStatus.VALID;
+                    break;
+                case INDETERMINATE:
+                    status = SignatureStatus.INDETERMINATE;
+                    break;
+                case TOTAL_FAILED:
+                    status = SignatureStatus.INVALID;
+                    break;
+                default:
+                    status = SignatureStatus.CANNOT_BE_VALIDATED;
+                    break;
                 }
 
                 // VALID, INDETERMINATE or INVALID
@@ -139,8 +151,10 @@ public abstract class AbstractSignatureValidationService {
                 String signatureFormat = simpleReport.getSignatureFormat(signatureId);
                 if (SignatureStatus.VALID.equals(status) && !isBaselineB(signatureFormat)) {
                     signatureInfo.setIndication(SignatureStatus.NOT_BASELINE_B);
+                } else if (SignatureStatus.VALID.equals(status) && !acceptableScope) {
+                    signatureInfo.setIndication(SignatureStatus.FILE_NOT_FOUND);
+                    signatureInfo.setSignatureFormat(signatureFormat);
                 }
-                signatureInfo.setSignatureFormat(signatureFormat);
 
                 SubIndication subIndication = simpleReport.getSubIndication(signatureId);
                 if (subIndication != null) {
@@ -149,11 +163,9 @@ public abstract class AbstractSignatureValidationService {
                 signatureInfo.setSignedBy(simpleReport.getSignedBy(signatureId));
 
                 signatureInfo.setSigningDate(simpleReport.getSigningTime(signatureId));
-                DiagnosticData diagnosticData = reports.getDiagnosticData();
-                signatureInfo.setDigestAlgo(diagnosticData.getSignatureDigestAlgorithm().toString());
-                signatureInfo.setEncryptionAlgo(diagnosticData.getSignatureEncryptionAlgorithm().toString());
 
-                SignatureWrapper signatureWrapper = diagnosticData.getSignatureById(signatureId);
+                signatureInfo.setDigestAlgo(diagnosticData.getFirstSignatureDigestAlgorithm().toString());
+                signatureInfo.setEncryptionAlgo(diagnosticData.getFirstSignatureEncryptionAlgorithm().toString());
 
                 String keyLengthUsedToSignThisToken = signatureWrapper.getKeyLengthUsedToSignThisToken();
 
@@ -215,5 +227,3 @@ public abstract class AbstractSignatureValidationService {
     public abstract Reports getReports(File tslFile, List<CertificateToken> potentialSigners);
 
 }
-
-

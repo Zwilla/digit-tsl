@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -562,23 +562,17 @@ public class ChangeUtils {
     public static List<TLDifference> diffOfExtension(List<TLServiceExtension> tmp, List<TLServiceExtension> tmpPublished, String parent) {
         List<TLDifference> diffList = new ArrayList<>();
 
+        List<TLServiceExtension> publishedQE = new ArrayList<>();
+        List<TLServiceExtension> draftQE = new ArrayList<>();
+
         // CHECK OTHERS tspServices
         for (TLServiceExtension draft : tmp) {
             if (draft.getAdditionnalServiceInfo() != null) {
                 // Additionnal Service Info : value
-                String current = !StringUtils.isEmpty(draft.getAdditionnalServiceInfo().getValue()) ? draft.getAdditionnalServiceInfo().getValue()
-                        : bundle.getString("change.newAddExt");
+                String current = !StringUtils.isEmpty(draft.getAdditionnalServiceInfo().getValue()) ? draft.getAdditionnalServiceInfo().getValue() : bundle.getString("change.newAddExt");
                 diffList.add(new TLDifference(draft.getId() + "_" + Tag.SERVICE_ADDITIONNAL_EXT, "", current));
-            } else if ((draft.getQualificationsExtension() != null) && CollectionUtils.isNotEmpty(draft.getQualificationsExtension())) {
-                // Qualification Extension
-                String current = "";
-                if (!CollectionUtils.isEmpty(draft.getQualificationsExtension().get(0).getQualifTypeList())
-                        && !StringUtils.isEmpty(draft.getQualificationsExtension().get(0).getQualifTypeList().get(0))) {
-                    current = draft.getQualificationsExtension().get(0).getQualifTypeList().get(0);
-                } else {
-                    current = bundle.getString("changes.newQualExt");
-                }
-                diffList.add(new TLDifference(draft.getId() + "_" + Tag.SERVICE_QUALIFICATION_EXT, "", current));
+            } else if (CollectionUtils.isNotEmpty(draft.getQualificationsExtension())) {
+                draftQE.add(draft);
             } else if (draft.getExpiredCertsRevocationDate() != null) {
                 // Expired Cert Revocation
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -611,29 +605,54 @@ public class ChangeUtils {
                 value = published.getAdditionnalServiceInfo().getValue() != null ? published.getAdditionnalServiceInfo().getValue() : bundle.getString("tUndefined");
 
                 diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION + "_" + Tag.SERVICE_ADDITIONNAL_EXT, language + " - " + value, ""));
-            } else if ((published.getQualificationsExtension() != null) && CollectionUtils.isNotEmpty(published.getQualificationsExtension())) {
-                // Qualification Extension
-                diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION + "_" + Tag.SERVICE_QUALIFICATION_EXT,
-                        published.getQualificationsExtension().get(0).getQualifTypeList().get(0), ""));
+            } else if (CollectionUtils.isNotEmpty(published.getQualificationsExtension())) {
+                publishedQE.add(published);
             } else if (published.getTakenOverBy() != null) {
                 // Taken over by
                 if (!CollectionUtils.isEmpty(published.getTakenOverBy().getOperatorName())) {
                     language = published.getTakenOverBy().getOperatorName().get(0).getLanguage() != null ? published.getTakenOverBy().getOperatorName().get(0).getLanguage()
                             : bundle.getString("tUndefined");
 
-                    value = published.getTakenOverBy().getOperatorName().get(0).getValue() != null ? published.getTakenOverBy().getOperatorName().get(0).getValue()
-                            : bundle.getString("tUndefined");
+                    value = published.getTakenOverBy().getOperatorName().get(0).getValue() != null ? published.getTakenOverBy().getOperatorName().get(0).getValue() : bundle.getString("tUndefined");
                 }
                 diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION + "_" + Tag.SERVICE_TAKEN_OVER_BY, language + " - " + value, ""));
             } else if (published.getExpiredCertsRevocationDate() != null) {
                 // Expired Cert Revocation
-                diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION + "_" + Tag.SERVICE_EXPIRED_CERT_REVOCATION,
-                        published.getExpiredCertsRevocationDate().toString(), ""));
+                diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION + "_" + Tag.SERVICE_EXPIRED_CERT_REVOCATION, published.getExpiredCertsRevocationDate().toString(), ""));
             } else {
                 // Undefined
                 diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION, bundle.getString("tUndefined"), ""));
             }
         }
+
+        if (!CollectionUtils.isEmpty(draftQE) || !CollectionUtils.isEmpty(publishedQE)) {
+            for (TLServiceExtension published : publishedQE) {
+                Boolean publishedMatch = false;
+                for (TLServiceExtension draft : draftQE) {
+                    if (published.equals(draft)) {
+                        publishedMatch = true;
+                        break;
+                    }
+                }
+                if (!publishedMatch) {
+                    diffList.add(new TLDifference(parent + "_" + Tag.SERVICE_EXTENSION, "Previous entry deleted or updated", ""));
+                }
+            }
+
+            for (TLServiceExtension draft : draftQE) {
+                Boolean draftMatch = false;
+                for (TLServiceExtension published : publishedQE) {
+                    if (draft.equals(published)) {
+                        draftMatch = true;
+                        break;
+                    }
+                }
+                if (!draftMatch) {
+                    diffList.add(new TLDifference(draft.getId() + "_" + Tag.SERVICE_QUALIFICATION_EXT, "", "New entry or previous entry updated"));
+                }
+            }
+        }
+
         return diffList;
     }
 

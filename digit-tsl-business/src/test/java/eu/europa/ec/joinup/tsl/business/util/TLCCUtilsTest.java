@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -216,10 +216,10 @@ public class TLCCUtilsTest extends AbstractSpringTest {
         Assert.assertEquals(1093, parseTLCC("UK"));
     }
 
-    //    @Test
-    //    public void parseLOTL() throws Exception {
-    //        Assert.assertEquals(1662, parseTLCC("LOTL"));
-    //    }
+    // @Test
+    // public void parseLOTL() throws Exception {
+    // Assert.assertEquals(1662, parseTLCC("LOTL"));
+    // }
 
     private int parseTLCC(String cc) throws Exception {
         String str = org.apache.commons.io.FileUtils.readFileToString(new File("src/test/resources/TLCC/result" + cc + ".xml"), StandardCharsets.UTF_8);

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -138,107 +138,107 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
 
     private void validatePointerList(int tlId, CheckDTO check, List<CheckResultDTO> results, boolean isLOTL, List<TLPointersToOtherTSL> pointers) {
         switch (check.getName()) {
-            case IS_PRESENT:
-                addResult(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, genericValidator.isPresent(pointers), results);
-                break;
-            case IS_LIST_NOT_EMPTY:
-                addResult(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, genericValidator.isCollectionNotEmpty(pointers), results);
-                break;
-            case IS_LOCATION_PRESENT:
-                checkAllLocationsPresent(check, pointers, results);
-                break;
-            case IS_LOCATION_VALID:
-                checkAllLocationsValid(check, pointers, results);
-                break;
-            case IS_LOCATION_ACCESSIBLE:
-                checkAllLocationsAccessible(check, pointers, results);
-                break;
-            case IS_LOCATION_CORRECT_VALUES:
-                checkAllLocationsCorrectValue(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
-                break;
-            case IS_LOCATION_PUBLISHED_LOTL:
-                if (!isLOTL) {
-                    checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
-                }
-                break;
-            case IS_LOCATION_PUBLISHED_TL:
-                if (isLOTL) {
-                    checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
-                }
-                break;
-            case IS_SCHEME_TERRITORY_PRESENT:
-                checkAllSchemeTerritoryPresent(check, pointers, results);
-                break;
-            case IS_SCHEME_TERRITORY_CORRECT_VALUE:
-                checkAllSchemeTerritoryCorrectValue(check, pointers, isLOTL, results);
-                break;
+        case IS_PRESENT:
+            addResult(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, genericValidator.isPresent(pointers), results);
+            break;
+        case IS_LIST_NOT_EMPTY:
+            addResult(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, genericValidator.isCollectionNotEmpty(pointers), results);
+            break;
+        case IS_LOCATION_PRESENT:
+            checkAllLocationsPresent(check, pointers, results);
+            break;
+        case IS_LOCATION_VALID:
+            checkAllLocationsValid(check, pointers, results);
+            break;
+        case IS_LOCATION_ACCESSIBLE:
+            checkAllLocationsAccessible(check, pointers, results);
+            break;
+        case IS_LOCATION_CORRECT_VALUES:
+            checkAllLocationsCorrectValue(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
+            break;
+        case IS_LOCATION_PUBLISHED_LOTL:
+            if (!isLOTL) {
+                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
+            }
+            break;
+        case IS_LOCATION_PUBLISHED_TL:
+            if (isLOTL) {
+                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
+            }
+            break;
+        case IS_SCHEME_TERRITORY_PRESENT:
+            checkAllSchemeTerritoryPresent(check, pointers, results);
+            break;
+        case IS_SCHEME_TERRITORY_CORRECT_VALUE:
+            checkAllSchemeTerritoryCorrectValue(check, pointers, isLOTL, results);
+            break;
 
-            case IS_MIME_TYPE_PRESENT:
-                checkAllMimeTypePresent(check, pointers, results);
-                break;
+        case IS_MIME_TYPE_PRESENT:
+            checkAllMimeTypePresent(check, pointers, results);
+            break;
 
-            case IS_TLS_TYPE_PRESENT:
-                checkAllSchemeTSLTypePresent(check, pointers, results);
-                break;
-            case IS_TLS_TYPE_CORRECT_VALUE:
-                checkAllSchemeTSLTypeCorrectValue(check, pointers, isLOTL, results);
-                break;
+        case IS_TLS_TYPE_PRESENT:
+            checkAllSchemeTSLTypePresent(check, pointers, results);
+            break;
+        case IS_TLS_TYPE_CORRECT_VALUE:
+            checkAllSchemeTSLTypeCorrectValue(check, pointers, isLOTL, results);
+            break;
 
-            case IS_SCHEME_TYPE_COMMUNITY_RULES_CORRECT_VALUES:
-                checkAllSchemeCommunityRulesCorrectValue(check, pointers, isLOTL, results);
-                break;
+        case IS_SCHEME_TYPE_COMMUNITY_RULES_CORRECT_VALUES:
+            checkAllSchemeCommunityRulesCorrectValue(check, pointers, isLOTL, results);
+            break;
 
-            case IS_SERVICE_DIGITAL_IDENTITIES_PRESENT:
-                checkAllServicesDigitalIdentitiesPresent(check, pointers, results);
-                break;
-            case IS_DIGITAL_IDS_ALLOWED:
-                checkAllDigitalIdsAllowed(check, pointers, isLOTL, results);
-                break;
-            case IS_DIGITAL_IDS_FROM_OJ_PRESENT:
-                checkAllDigitalIdsFromOJPresent(check, pointers, isLOTL, results);
-                break;
-            case IS_X509CERTIFICATE_CONTAINS_CORRECT_KEY_USAGES:
-                if (isLOTL) {
-                    checkAllDigitalIdsKeyUsages(check, pointers, results);
-                }
-                break;
-            case IS_X509CERTIFICATE_CONTAINS_BASIC_CONSTRAINT_CA_FALSE:
-                if (isLOTL) {
-                    checkAllDigitalIdsBasicConstraintCaFalse(check, pointers, results);
-                }
-                break;
-            case IS_X509CERTIFICATE_CONTAINS_TSLSIGNING_EXT_KEY_USAGE:
-                if (isLOTL) {
-                    checkAllDigitalIdsExtendedKeyUsage(check, pointers, results);
-                }
-                break;
-            case IS_X509CERTIFICATE_CONTAINS_SUBJECT_KEY_IDENTIFIER:
-                if (isLOTL) {
-                    checkAllDigitalIdsSubjectKeyIdentifier(check, pointers, results);
-                }
-                break;
-            case IS_X509CERTIFICATE_COUNTRY_CODE_MATCH:
-                if (isLOTL) {
-                    checkAllDigitalIdsCountryCodeMatch(check, pointers, isLOTL, results);
-                }
-                break;
-            case IS_X509CERTIFICATE_ORGANIZATION_MATCH:
-                if (isLOTL) {
-                    checkAllDigitalIdsOrganizationMatch(check, pointers, results);
-                }
-                break;
-            case IS_SERVICE_DIGITAL_IDENTITIES_CORRECT:
-                checkAllServicesDigitalIdentitiesCorrect(check, pointers, results);
-                break;
+        case IS_SERVICE_DIGITAL_IDENTITIES_PRESENT:
+            checkAllServicesDigitalIdentitiesPresent(check, pointers, results);
+            break;
+        case IS_DIGITAL_IDS_ALLOWED:
+            checkAllDigitalIdsAllowed(check, pointers, isLOTL, results);
+            break;
+        case IS_DIGITAL_IDS_FROM_OJ_PRESENT:
+            checkAllDigitalIdsFromOJPresent(check, pointers, isLOTL, results);
+            break;
+        case IS_X509CERTIFICATE_CONTAINS_CORRECT_KEY_USAGES:
+            if (isLOTL) {
+                checkAllDigitalIdsKeyUsages(check, pointers, results);
+            }
+            break;
+        case IS_X509CERTIFICATE_CONTAINS_BASIC_CONSTRAINT_CA_FALSE:
+            if (isLOTL) {
+                checkAllDigitalIdsBasicConstraintCaFalse(check, pointers, results);
+            }
+            break;
+        case IS_X509CERTIFICATE_CONTAINS_TSLSIGNING_EXT_KEY_USAGE:
+            if (isLOTL) {
+                checkAllDigitalIdsExtendedKeyUsage(check, pointers, results);
+            }
+            break;
+        case IS_X509CERTIFICATE_CONTAINS_SUBJECT_KEY_IDENTIFIER:
+            if (isLOTL) {
+                checkAllDigitalIdsSubjectKeyIdentifier(check, pointers, results);
+            }
+            break;
+        case IS_X509CERTIFICATE_COUNTRY_CODE_MATCH:
+            if (isLOTL) {
+                checkAllDigitalIdsCountryCodeMatch(check, pointers, isLOTL, results);
+            }
+            break;
+        case IS_X509CERTIFICATE_ORGANIZATION_MATCH:
+            if (isLOTL) {
+                checkAllDigitalIdsOrganizationMatch(check, pointers, results);
+            }
+            break;
+        case IS_SERVICE_DIGITAL_IDENTITIES_CORRECT:
+            checkAllServicesDigitalIdentitiesCorrect(check, pointers, results);
+            break;
 
-            default:
-                LOGGER.warn("Unsupported check " + check.getName());
-                break;
+        default:
+            LOGGER.warn("Unsupported check " + check.getName());
+            break;
         }
     }
 
     public void runValidation(TLPointersToOtherTSL pointer, List<CheckDTO> checkList, List<CheckResultDTO> results) {
-        //METHOD USE FOR EDITION
+        // METHOD USE FOR EDITION
         boolean isLOTL = tlService.isLOTL(pointer.getTlId());
         if (CollectionUtils.isNotEmpty(checkList)) {
             for (CheckDTO check : checkList) {
@@ -246,7 +246,7 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
                     if (pointer.getMimeType().equals(MimeType.XML)) {
                         results.addAll(validatePointer(pointer, check));
                     } else {
-                        //PDF
+                        // PDF
                         if (!check.getName().equals(CheckName.IS_LOCATION_CORRECT_VALUES)) {
                             results.addAll(validatePointer(pointer, check));
                         } else {
@@ -407,8 +407,8 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
             for (TLPointersToOtherTSL pointer : pointers) {
                 List<TLSchemeTypeCommunityRule> schemeTypeCommunityRules = pointer.getSchemeTypeCommunity();
                 if (isLOTL && !pointer.getSchemeTerritory().equals(lotlTerritory)) {
-                    //	http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon
-                    //	http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR
+                    // http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon
+                    // http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR
                     if (CollectionUtils.size(schemeTypeCommunityRules) == 2) {
                         List<String> schemeCommunityRulesValues = propertiesService.getTLSchemeCommunityRulesValues();
                         boolean findAllInDB = true;
@@ -428,8 +428,8 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
                     // TL must points to http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists
                     if (CollectionUtils.size(schemeTypeCommunityRules) == 1) {
                         TLSchemeTypeCommunityRule communityRule = schemeTypeCommunityRules.get(0);
-                        addResult(check, pointer.getId() + "_" + Tag.POINTER_COMMUNITY_RULE,
-                                genericValidator.isEquals(propertiesService.getLOTLSchemeCommunityRulesValue(), communityRule.getValue()), results);
+                        addResult(check, pointer.getId() + "_" + Tag.POINTER_COMMUNITY_RULE, genericValidator.isEquals(propertiesService.getLOTLSchemeCommunityRulesValue(), communityRule.getValue()),
+                                results);
                     } else {
                         addResult(check, pointer.getId() + "_" + Tag.POINTER_COMMUNITY_RULE, false, results);
                     }
@@ -451,30 +451,30 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
                 List<TLDigitalIdentification> serviceDigitalId = pointer.getServiceDigitalId();
                 if (pointer.getMimeType() != null) {
                     switch (pointer.getMimeType()) {
-                        case XML:
-                        case PDF:
-                            if (CollectionUtils.isNotEmpty(serviceDigitalId)) {
-                                List<CertificateToken> lotlCertificates = signersService.getCertificatesFromKeyStore();
-                                for (TLDigitalIdentification digitalIdentification : serviceDigitalId) {
-                                    if (CollectionUtils.isNotEmpty(digitalIdentification.getCertificateList())) {
-                                        for (TLCertificate cert : digitalIdentification.getCertificateList()) {
-                                            if (cert.getToken() == null) {
-                                                cert.setTokenFromEncoded();
-                                            }
-                                            if (!lotlCertificates.contains(cert.getToken())) {
-                                                addResult(check, digitalIdentification.getId(), false, results);
-                                                LOGGER.debug("Not allowed certificate " + digitalIdentification.getId() + " / " + cert.getToken());
-                                            } else {
-                                                addResult(check, digitalIdentification.getId(), true, results);
-                                            }
+                    case XML:
+                    case PDF:
+                        if (CollectionUtils.isNotEmpty(serviceDigitalId)) {
+                            List<CertificateToken> lotlCertificates = signersService.getCertificatesFromKeyStore();
+                            for (TLDigitalIdentification digitalIdentification : serviceDigitalId) {
+                                if (CollectionUtils.isNotEmpty(digitalIdentification.getCertificateList())) {
+                                    for (TLCertificate cert : digitalIdentification.getCertificateList()) {
+                                        if (cert.getToken() == null) {
+                                            cert.setTokenFromEncoded();
+                                        }
+                                        if (!lotlCertificates.contains(cert.getToken())) {
+                                            addResult(check, digitalIdentification.getId(), false, results);
+                                            LOGGER.debug("Not allowed certificate " + digitalIdentification.getId() + " / " + cert.getToken());
+                                        } else {
+                                            addResult(check, digitalIdentification.getId(), true, results);
                                         }
                                     }
                                 }
                             }
-                            break;
-                        default:
-                            LOGGER.debug("Unsupported type " + pointer.getMimeType());
-                            break;
+                        }
+                        break;
+                    default:
+                        LOGGER.debug("Unsupported type " + pointer.getMimeType());
+                        break;
                     }
                 }
             }

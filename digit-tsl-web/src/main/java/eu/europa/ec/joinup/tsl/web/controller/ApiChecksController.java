@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -122,8 +122,8 @@ public class ApiChecksController {
             if (updatedCheck.getPriority().equals(CheckStatus.IGNORE)) {
                 checkService.deleteCheckResult(updatedCheck);
             }
-            auditService.addAuditLog(AuditTarget.ADMINISTRATION_CHECKS, AuditAction.UPDATE, AuditStatus.SUCCES, "", 0,
-                    SecurityContextHolder.getContext().getAuthentication().getName(), "UPDATE CHECK:" + updatedCheck.getId() + "IMPACT:" + updatedCheck.getImpact());
+            auditService.addAuditLog(AuditTarget.ADMINISTRATION_CHECKS, AuditAction.UPDATE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
+                    "UPDATE CHECK:" + updatedCheck.getId() + "IMPACT:" + updatedCheck.getImpact());
             cacheService.evictCheckCache();
             response.setResponseStatus(HttpStatus.OK.toString());
             response.setContent(new CheckDTO(updatedCheck));
@@ -141,8 +141,8 @@ public class ApiChecksController {
                     TL tl = tlService.getTL(tlId);
                     if (tl != null) {
                         response.setContentType(eu.europa.esig.dss.MimeType.PDF.getMimeTypeString());
-                        response.setHeader("Content-Disposition", "attachment; filename=\"" + tl.getSchemeInformation().getTerritory() + "(Sn"
-                                + tl.getSchemeInformation().getSequenceNumber() + ") - " + bundle.getString("tReportFileTitle") + ".pdf\"");
+                        response.setHeader("Content-Disposition", "attachment; filename=\"" + tl.getSchemeInformation().getTerritory() + "(Sn" + tl.getSchemeInformation().getSequenceNumber() + ") - "
+                                + bundle.getString("tReportFileTitle") + ".pdf\"");
                         reportService.generateTLReport(tl, response.getOutputStream());
                     } else {
                         response.setStatus(HttpStatus.NOT_FOUND.value());

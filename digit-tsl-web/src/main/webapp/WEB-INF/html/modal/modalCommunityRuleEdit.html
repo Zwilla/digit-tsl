@@ -1,41 +1,35 @@
 <!-- Browse Tl information in a tabset in a modal for edit (Generic for all tabset) -->
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <check disabled="myTLInfo.checkToRun" id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="true"></check>
-        <change id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="true"information="information"></change>
-        <span style="display: inline-block;">{{myTLInfo.dbName}} ({{myTLInfo.schemeInformation.sequenceNumber}}) - {{myTLInfo.label}}</span>
-        <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-        <span style="float: right;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
-        <span style="float: right; margin-right: 5px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-    </div>
-    <div class="panel-body">
-        <div class="dropdown" style="float: right;">
-            <span class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button" data-toggle="dropdown"></span>
-            <ul class="dropdown-menu">
-                <li ng-repeat="lang in languages" class="lang-list"><a ng-click="addTab(lang.label);activeTab(myTabs.length-1)" class="cursor-pointer ">{{lang.label}}</a></li>
-            </ul>
-        </div>
-        <!-- Table -->
-        <tabset>
-            <tab ng-repeat="tab in myTabs" active="tab.isActive">
-                <tab-heading>
-                    <check disabled="myTLInfo.checkToRun" id="tab.id" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="false"></check>
-                    <change id="tab.id" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="false"information="information"></change>
-                    <span style="margin-left: 5px;">{{tab.language}}</span>
-                </tab-heading>
-                <div class="row">
-                    <select ng-model="tab.value" required name="value_{{tab.id}}" class="col-sm-11">
-                        <option ng-repeat="lP in myTLInfo.listProperties" value="{{lP.label}}" ng-selected="tab.value == lP.label">{{lP.label}}
-                    </select>
-                </div>
-                <div class="row" align="right">
-                    <span th:text="#{tDelete}"></span>
-                    {{tab.language}}
-                    <span th:text="#{tLanguage}" style="margin-right: 5px;"></span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tab.language+' '+myTLInfo.label)}}" confirmed="deleteTab(tab)" class="fa fa-trash cursor-pointer "
-                        style="margin-right: 10px;"></span>
-                </div>
-            </tab>
-        </tabset>
-    </div>
+	<div class="panel-heading">
+		<check disabled="myTLInfo.checkToRun" id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listcheck="myTLInfo.listChecks" label="myTLInfo.label" istreeparent="true"></check>
+		<change id="myTLInfo.schemeInformation.id+'_'+myTLInfo.tag" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="true" information="information"></change>
+		<span style="display: inline-block;">{{myTLInfo.dbName}} ({{myTLInfo.schemeInformation.sequenceNumber}}) - {{myTLInfo.label}}</span>
+		<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+		<span style="float: right;" class="fa fa-check cursor-pointer" ng-click="ok()"></span>
+		<span style="float: right; margin-right: 5px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+	</div>
+	<div class="panel-body">
+		<div class="dropdown" style="float: right;">
+			<span class="fa fa-plus-circle dropdown-toggle cursor-pointer " tooltip-placement="bottom" tooltip="Add" style="color: #337ab7;" type="button" data-toggle="dropdown"></span>
+			<ul class="dropdown-menu">
+				<li ng-repeat="lang in languages" class="lang-list"><a ng-click="addTab(lang.label);activeTab(myTabs.length-1)" class="cursor-pointer ">{{lang.label}}</a></li>
+			</ul>
+		</div>
+		<!-- Table -->
+		<tabset> <tab ng-repeat="tab in myTabs" active="tab.isActive"> <tab-heading> <check disabled="myTLInfo.checkToRun" id="tab.id" listcheck="myTLInfo.listChecks"
+			label="myTLInfo.label" istreeparent="false"></check> <change id="tab.id" listdiff="myTLInfo.listdiff" label="myTLInfo.label" istreeparent="false" information="information"></change> <span
+			style="margin-left: 5px;">{{tab.language}}</span> </tab-heading>
+		<div class="row">
+			<select ng-model="tab.value" required name="value_{{tab.id}}" class="col-sm-11">
+				<option ng-repeat="lP in myTLInfo.listProperties" value="{{lP.label}}" ng-selected="tab.value == lP.label">{{lP.label}}
+			</select>
+		</div>
+		<div class="row" align="right">
+			<span th:text="#{tDelete}"></span>
+			{{tab.language}}
+			<span th:text="#{tLanguage}" style="margin-right: 5px;"></span>
+			<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(tab.language+' '+myTLInfo.label)}}" confirmed="deleteTab(tab)" class="fa fa-trash cursor-pointer " style="margin-right: 10px;"></span>
+		</div>
+		</tab> </tabset>
+	</div>
 </div>

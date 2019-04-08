@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -28,15 +28,15 @@ import org.apache.commons.lang3.StringUtils;
 
 public class StatisticExtractionCriterias {
 
-    //Extraction
+    // Extraction
     private StatisticExtractionType type;
     private String specificCountry;
     private Date extractDate;
 
-    //Countries
+    // Countries
     private List<String> countries;
 
-    //Show/hide fields
+    // Show/hide fields
     private Boolean showTOB;
     private Boolean showSequenceNumber;
     private Boolean showTradeName;
@@ -78,22 +78,22 @@ public class StatisticExtractionCriterias {
 
     public String getDynamicName() {
         StringBuilder fileName = new StringBuilder();
-        //Country
+        // Country
         if (StringUtils.isEmpty(specificCountry)) {
             fileName.append("ALL - ");
         } else {
             fileName.append(specificCountry + " - ");
         }
-        //Type
+        // Type
         fileName.append(type.name() + " - ");
-        //Date
+        // Date
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY");
         fileName.append(dateFormat.format(extractDate));
-        //TOB
+        // TOB
         if (showTOB) {
             fileName.append(" - TOB");
         }
-        //Options (qualified/non qualified)
+        // Options (qualified/non qualified)
         if (showQualified && showUnqualified) {
             fileName.append(" - Q & NQ");
         } else if (showQualified && !showUnqualified) {

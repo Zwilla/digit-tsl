@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -310,8 +310,7 @@ public class LocationUtils {
                                 if (str6.contains("_")) {
                                     String historyToCheck = str6.substring(0, str6.indexOf('_'));
                                     if (isInt(historyToCheck)) {
-                                        hrLocation.append(addHistoryServiceNameHr(tl, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck),
-                                                Integer.valueOf(historyToCheck)));
+                                        hrLocation.append(addHistoryServiceNameHr(tl, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck), Integer.valueOf(historyToCheck)));
                                         String str7 = str6.substring(str6.indexOf('_') + 1);
                                         if (str7.startsWith(Tag.SERVICE_TYPE_IDENTIFIER.toString())) {
                                             hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.type"));
@@ -454,16 +453,16 @@ public class LocationUtils {
         if (CollectionUtils.isNotEmpty(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices())) {
             if (tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1) != null) {
                 if (tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory().get(historyToCheck - 1) != null) {
-                    if (CollectionUtils.isNotEmpty(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory()
-                            .get(historyToCheck - 1).getServiceName())) {
+                    if (CollectionUtils
+                            .isNotEmpty(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory().get(historyToCheck - 1).getServiceName())) {
                         String date = "";
                         if (tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory().get(historyToCheck - 1)
                                 .getCurrentStatusStartingDate() != null) {
                             date = " - " + TLUtils.toDateFormatYMD(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory()
                                     .get(historyToCheck - 1).getCurrentStatusStartingDate());
                         }
-                        return " : " + tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory().get(historyToCheck - 1)
-                                .getServiceName().get(0).getValue() + date;
+                        return " : " + tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPServices().get(tSPServiceToCheck - 1).getHistory().get(historyToCheck - 1).getServiceName().get(0)
+                                .getValue() + date;
                     }
                 }
             }
@@ -502,12 +501,9 @@ public class LocationUtils {
     private static String addPointerDigitalIdNameHr(TL myTl, int pointerToCheck, int pointerDigitalToCheck) {
         if ((myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList() != null)
                 && (myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0) != null)) {
-            return " : " + myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertSubjectShortName()
-                    + " || "
-                    + TLUtils.toStringFormat(
-                            myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertNotBefore())
-                    + " - " + TLUtils.toStringFormat(
-                            myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertAfter());
+            return " : " + myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertSubjectShortName() + " || "
+                    + TLUtils.toStringFormat(myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertNotBefore()) + " - "
+                    + TLUtils.toStringFormat(myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getCertificateList().get(0).getCertAfter());
         } else {
             if (myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getSubjectName() != null) {
                 return " : " + myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getSubjectName();
@@ -557,19 +553,18 @@ public class LocationUtils {
 
     private static String addServiceDigitalIdNameHr(TL tl, int serviceProvider, int tspServiceToCheck, int digitalToCheck) {
         String ret = "";
-        if ((tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification() != null) && (tl.getServiceProviders()
-                .get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1).getCertificateList() != null)) {
+        if ((tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification() != null)
+                && (tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1).getCertificateList() != null)) {
             ret = " : "
-                    + tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1)
-                    .getCertificateList().get(0).getCertSubjectShortName()
+                    + tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1).getCertificateList().get(0)
+                            .getCertSubjectShortName()
                     + " || "
-                    + TLUtils.toStringFormat(tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification()
-                            .get(digitalToCheck - 1).getCertificateList().get(0).getCertNotBefore())
-                    + " - " + TLUtils.toStringFormat(tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification()
-                            .get(digitalToCheck - 1).getCertificateList().get(0).getCertAfter());
+                    + TLUtils.toStringFormat(tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1)
+                            .getCertificateList().get(0).getCertNotBefore())
+                    + " - " + TLUtils.toStringFormat(tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1)
+                            .getCertificateList().get(0).getCertAfter());
         } else {
-            ret = " : " + tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1)
-                    .getSubjectName();
+            ret = " : " + tl.getServiceProviders().get(serviceProvider - 1).getTSPServices().get(tspServiceToCheck - 1).getDigitalIdentification().get(digitalToCheck - 1).getSubjectName();
         }
         return ret;
     }

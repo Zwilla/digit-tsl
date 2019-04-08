@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -51,7 +51,6 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
     @Autowired
     private TlEditServiceProviderService tlEditServiceProviderService;
 
-
     @Before
     public void initialize() {
         Load load = new Load();
@@ -74,14 +73,13 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
         int nbreSvc = detl.getServiceProviders().size();
         TLServiceProvider svc = detl.getServiceProviders().get(0);
         svc.setId("");
-        TLServiceProvider svcUpdated = tlEditServiceProviderService.edit(detl.getTlId(), svc );
-        //CHECK RETURN
+        TLServiceProvider svcUpdated = tlEditServiceProviderService.edit(detl.getTlId(), svc);
+        // CHECK RETURN
         assertTrue(svcUpdated.getId().equalsIgnoreCase(""));
 
         TL tlUpdated = tlService.getTL(1);
-        assertTrue((tlUpdated.getServiceProviders().size()-1)==nbreSvc);
+        assertTrue((tlUpdated.getServiceProviders().size() - 1) == nbreSvc);
     }
-
 
     @Test
     public void editSvc() {
@@ -102,13 +100,10 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
 
         assertTrue(svcUpdated.getId().equalsIgnoreCase(svcDe.getId()));
 
-
         TL tlUpdated = tlService.getTL(1);
-        assertTrue(tlUpdated.getServiceProviders().size()==nbreSvc);
-        assertTrue(CollectionUtils.isEqualCollection(tlUpdated.getServiceProviders().get(0).getTSPName(),svcBe.getTSPName()));
+        assertTrue(tlUpdated.getServiceProviders().size() == nbreSvc);
+        assertTrue(CollectionUtils.isEqualCollection(tlUpdated.getServiceProviders().get(0).getTSPName(), svcBe.getTSPName()));
     }
-
-
 
     @Test
     public void deleteSvc() {
@@ -119,13 +114,12 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
         int nbreSvc = detl.getServiceProviders().size();
 
         int nbre = tlEditServiceProviderService.delete(detl.getTlId(), detl.getServiceProviders().get(0));
-        //CHECK RETURN
-        assertTrue(nbre==1);
+        // CHECK RETURN
+        assertTrue(nbre == 1);
 
         TL tlUpdated = tlService.getTL(1);
-        assertTrue((tlUpdated.getServiceProviders().size()+1)==nbreSvc);
+        assertTrue((tlUpdated.getServiceProviders().size() + 1) == nbreSvc);
 
     }
-
 
 }

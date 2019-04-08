@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -20,33 +20,52 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
+import eu.europa.ec.joinup.tsl.business.dto.TrustedListsReport;
+import eu.europa.ec.joinup.tsl.business.dto.merge.TLMergeResultDTO;
 import eu.europa.ec.joinup.tsl.business.service.DraftStoreService;
+import eu.europa.ec.joinup.tsl.business.service.MergeDraftService;
+import eu.europa.ec.joinup.tsl.business.service.TLDraftService;
 import eu.europa.ec.joinup.tsl.business.service.TLService;
 import eu.europa.ec.joinup.tsl.business.service.UserService;
+import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
+import eu.europa.ec.joinup.tsl.web.form.PerformMergeDTO;
+import eu.europa.ec.joinup.tsl.web.form.PrepareMergeDTO;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
 //import eu.europa.ec.joinup.tsl.web.form.TLDraftDelete;
 import eu.europa.ec.joinup.tsl.web.form.TLDraftDelete;
 
 @Controller
+@SessionAttributes(value = { "mergeChanges" })
 @RequestMapping(value = "/api/draft")
 public class ApiDraftController {
+
+    @Autowired
+    private TLDraftService draftService;
+
+    @Autowired
+    private DraftStoreService draftStoreService;
 
     @Autowired
     private TLService tlService;
 
     @Autowired
-    private DraftStoreService draftStoreService;
+    private MergeDraftService mergeDraftService;
 
     @Autowired
     private UserService userService;
@@ -109,6 +128,28 @@ public class ApiDraftController {
         } else {
             response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
         }
+        return response;
+    }
+
+    @RequestMapping(value = "/merge/changes", method = RequestMethod.POST)
+    public @ResponseBody ServiceResponse<TLMergeResultDTO> getMergeChanges(@RequestBody PrepareMergeDTO mergeDTO, Model model, HttpSession session) {
+        session.removeAttribute("mergeChanges");
+        ServiceResponse<TLMergeResultDTO> response = new ServiceResponse<>();
+        response.setResponseStatus(HttpStatus.OK.toString());
+        TLMergeResultDTO mergeChanges = mergeDraftService.getTLMergeResult(mergeDTO.getCountryCode(), mergeDTO.getDrafts());
+        model.addAttribute("mergeChanges", mergeChanges);
+        response.setContent(mergeChanges);
+        return response;
+    }
+
+    @RequestMapping(value = "/merge/perform", method = RequestMethod.POST)
+    public @ResponseBody ServiceResponse<TrustedListsReport> performMerge(@RequestBody PerformMergeDTO performMergeDTO, HttpSession session,
+            @ModelAttribute("mergeChanges") TLMergeResultDTO mergeChanges) {
+        ServiceResponse<TrustedListsReport> response = new ServiceResponse<>();
+        DBTrustedLists mergedDraft = mergeDraftService.mergeDrafts(performMergeDTO.getCountryCode(), performMergeDTO.getCookie(), mergeChanges);
+        response.setContent(draftService.finalizeDraftCreation(mergedDraft, SecurityContextHolder.getContext().getAuthentication().getName()));
+        response.setResponseStatus(HttpStatus.OK.toString());
+        session.removeAttribute("mergeChanges");
         return response;
     }
 }

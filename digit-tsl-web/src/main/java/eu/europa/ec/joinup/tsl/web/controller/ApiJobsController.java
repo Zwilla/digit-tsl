@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -67,8 +67,7 @@ public class ApiJobsController {
         logger.info("Loading job");
         ServiceResponse<String> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
-                    "RUN LOADING");
+            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(), "RUN LOADING");
             asyncJobs.launchLoading();
             response.setResponseStatus(HttpStatus.OK.toString());
         } else {
@@ -83,8 +82,7 @@ public class ApiJobsController {
         logger.info("Rules Validation job");
         ServiceResponse<String> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
-                    "RUN RULES VALIDATION");
+            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(), "RUN RULES VALIDATION");
             asyncJobs.launchRulesValidation();
             response.setResponseStatus(HttpStatus.OK.toString());
         } else {
@@ -99,8 +97,7 @@ public class ApiJobsController {
         logger.info("Signature validation job");
         ServiceResponse<String> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
-                    "RUN SIGNATURE VALIDATION");
+            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(), "RUN SIGNATURE VALIDATION");
             asyncJobs.launchSignatureValidation();
             response.setResponseStatus(HttpStatus.OK.toString());
         } else {
@@ -115,8 +112,7 @@ public class ApiJobsController {
         logger.info("Retention validation job");
         ServiceResponse<String> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
-                    "RUN RETENTION POLICY");
+            auditService.addAuditLog(AuditTarget.JOBS, AuditAction.EXECUTE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(), "RUN RETENTION POLICY");
             asyncJobs.launchRetentionPolicy();
             response.setResponseStatus(HttpStatus.OK.toString());
         } else {

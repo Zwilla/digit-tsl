@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -63,9 +63,9 @@ public class NotificationJaxbService {
     }
 
     private JAXBContext createJaxbContext() throws JAXBException {
-        return JAXBContext.newInstance(MemberStateNotificationV5.class, ContactList.class, eu.europa.esig.jaxb.v5.tsl.ObjectFactory.class,
-                eu.europa.esig.jaxb.v5.tslx.ObjectFactory.class, eu.europa.esig.jaxb.v5.ecc.ObjectFactory.class, eu.europa.esig.jaxb.v5.xades.ObjectFactory.class,
-                eu.europa.esig.jaxb.v5.xades141.ObjectFactory.class, eu.europa.esig.jaxb.v5.xmldsig.ObjectFactory.class);
+        return JAXBContext.newInstance(MemberStateNotificationV5.class, ContactList.class, eu.europa.esig.jaxb.v5.tsl.ObjectFactory.class, eu.europa.esig.jaxb.v5.tslx.ObjectFactory.class,
+                eu.europa.esig.jaxb.v5.ecc.ObjectFactory.class, eu.europa.esig.jaxb.v5.xades.ObjectFactory.class, eu.europa.esig.jaxb.v5.xades141.ObjectFactory.class,
+                eu.europa.esig.jaxb.v5.xmldsig.ObjectFactory.class);
     }
 
     public MemberStateNotificationV5 unmarshallNotification(byte[] content) throws Exception {

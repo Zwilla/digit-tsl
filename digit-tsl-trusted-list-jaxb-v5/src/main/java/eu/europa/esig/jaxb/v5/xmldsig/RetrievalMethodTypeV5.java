@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xmldsig;
 
 import java.io.Serializable;
@@ -36,11 +35,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for RetrievalMethodType complex type.
+ * <p>
+ * Java class for RetrievalMethodType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="RetrievalMethodType"&gt;
@@ -59,12 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "RetrievalMethodType", propOrder = {
-    "transforms"
-})
-public class RetrievalMethodTypeV5
-    implements Serializable
-{
+@XmlType(name = "RetrievalMethodType", propOrder = { "transforms" })
+public class RetrievalMethodTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "Transforms")
@@ -79,10 +75,8 @@ public class RetrievalMethodTypeV5
     /**
      * Gets the value of the transforms property.
      * 
-     * @return
-     *     possible object is
-     *     {@link TransformsTypeV5 }
-     *     
+     * @return possible object is {@link TransformsTypeV5 }
+     * 
      */
     public TransformsTypeV5 getTransforms() {
         return transforms;
@@ -92,9 +86,8 @@ public class RetrievalMethodTypeV5
      * Sets the value of the transforms property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TransformsTypeV5 }
-     *     
+     *            allowed object is {@link TransformsTypeV5 }
+     * 
      */
     public void setTransforms(TransformsTypeV5 value) {
         this.transforms = value;
@@ -103,10 +96,8 @@ public class RetrievalMethodTypeV5
     /**
      * Gets the value of the uri property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getURI() {
         return uri;
@@ -116,9 +107,8 @@ public class RetrievalMethodTypeV5
      * Sets the value of the uri property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setURI(String value) {
         this.uri = value;
@@ -127,10 +117,8 @@ public class RetrievalMethodTypeV5
     /**
      * Gets the value of the type property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getType() {
         return type;
@@ -140,9 +128,8 @@ public class RetrievalMethodTypeV5
      * Sets the value of the type property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setType(String value) {
         this.type = value;

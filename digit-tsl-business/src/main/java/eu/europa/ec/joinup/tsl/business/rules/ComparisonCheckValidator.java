@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -46,20 +46,20 @@ public class ComparisonCheckValidator {
     public Set<CheckResultDTO> validate(CheckDTO check, TL previousVersion, TL currentVersion) {
         Set<CheckResultDTO> results = new HashSet<>();
         switch (check.getName()) {
-            case IS_SEQUENCE_NUMBER_INCREMENTED:
-                runCheckOnSequenceNumber(check, previousVersion, currentVersion, results);
-                break;
-            case IS_ALL_PREVIOUS_TSP_SERVICE_PROVIDERS_PRESENT:
-                runCheckOnTspServiceProviders(check, previousVersion, currentVersion, results);
-                break;
-            case IS_ALL_PREVIOUS_TSP_SERVICES_PRESENT:
-                runCheckOnTspServices(check, previousVersion, currentVersion, results);
-                break;
-            case IS_ALL_PREVIOUS_TSP_SERVICE_HISTORIES_PRESENT:
-                runCheckOnTspServiceHistories(check, previousVersion, currentVersion, results);
-                break;
-            default:
-                LOGGER.warn("Unsupported " + check.getName());
+        case IS_SEQUENCE_NUMBER_INCREMENTED:
+            runCheckOnSequenceNumber(check, previousVersion, currentVersion, results);
+            break;
+        case IS_ALL_PREVIOUS_TSP_SERVICE_PROVIDERS_PRESENT:
+            runCheckOnTspServiceProviders(check, previousVersion, currentVersion, results);
+            break;
+        case IS_ALL_PREVIOUS_TSP_SERVICES_PRESENT:
+            runCheckOnTspServices(check, previousVersion, currentVersion, results);
+            break;
+        case IS_ALL_PREVIOUS_TSP_SERVICE_HISTORIES_PRESENT:
+            runCheckOnTspServiceHistories(check, previousVersion, currentVersion, results);
+            break;
+        default:
+            LOGGER.warn("Unsupported " + check.getName());
         }
         for (CheckResultDTO result : results) {
             result.setLocation(LocationUtils.idUserReadable(currentVersion, result.getId()));

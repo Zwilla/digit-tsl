@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -31,8 +31,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,6 +63,8 @@ import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLName;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
 import eu.europa.ec.joinup.tsl.model.DBCheckResult;
 import eu.europa.ec.joinup.tsl.model.DBFiles;
 import eu.europa.ec.joinup.tsl.model.DBFilesAvailability;
@@ -246,6 +250,9 @@ public final class TLUtils {
     // Use for "Changes" - Use LOCAL DATETIME
     public static String toStringFormat(Date date) {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        if(date==null) {
+            return "";
+        }
         return df.format(date);
     }
 
@@ -380,5 +387,95 @@ public final class TLUtils {
 
     public static String getStringDigest(String str) {
         return Base64.encodeBase64String(DSSUtils.digest(DigestAlgorithm.SHA1, str.getBytes()));
+    }
+
+    /**
+     * Extract english name of list
+     *
+     * @param names
+     */
+    public static Set<String> extractEnglishValues(List<TLName> names) {
+        Set<String> namesList = new HashSet<>();
+        if (!CollectionUtils.isEmpty(names)) {
+            for (TLName name : names) {
+                if (name.getLanguage().equalsIgnoreCase("en")) {
+                    namesList.add(name.getValue());
+                }
+            }
+        }
+        return namesList;
+    }
+
+    /**
+     * Compare TSP Trade names and names 'en' value and return true if an entry match
+     * 
+     * @param currentTSP
+     * @param previousTSP
+     */
+    public static boolean isTSPMatch(TLServiceProvider currentTSP, TLServiceProvider previousTSP) {
+        if (isTradeNameMatch(currentTSP.getTSPTradeName(), previousTSP.getTSPTradeName()) || isNameMatch(currentTSP.getTSPName(), previousTSP.getTSPName())) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Compare 'en' tsp names values and return true if an entry match
+     * 
+     * @param currentNames
+     * @param comparedNames
+     */
+    public static boolean isNameMatch(List<TLName> currentNames, List<TLName> comparedNames) {
+        for (String currentName : extractEnglishValues(currentNames)) {
+            for (String comparedName : extractEnglishValues(comparedNames)) {
+                if (currentName.equalsIgnoreCase(comparedName)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Compare 'en' tsp trade names values and return true if a entry match
+     * 
+     * @param currentTradeNames
+     * @param comparedTradeNames
+     */
+    public static boolean isTradeNameMatch(List<TLName> currentTradeNames, List<TLName> comparedTradeNames) {
+        for (String currentName : extractVATorNTR(currentTradeNames)) {
+            for (String comparedName : extractVATorNTR(comparedTradeNames)) {
+                if (currentName.equalsIgnoreCase(comparedName)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Extract english VAT/NTR values from TSP trade names. Return "undefined" in the list if no VAR/NTR found
+     * 
+     * @param tradeNames
+     */
+    public static Set<String> extractVATorNTR(List<TLName> tradeNames) {
+        Set<String> setVATorNTR = new HashSet<>();
+        if (CollectionUtils.isNotEmpty(tradeNames)) {
+            for (String tradeName : extractEnglishValues(tradeNames)) {
+                if (TLUtils.isVATorNTR(tradeName)) {
+                    setVATorNTR.add(tradeName);
+                }
+            }
+        }
+        return setVATorNTR;
+    }
+
+    /**
+     * Return if TradeName match VAT/NTR pattern
+     * 
+     * @param tradeName
+     */
+    public static boolean isVATorNTR(String tradeName) {
+        return (tradeName.startsWith("VAT") || tradeName.startsWith("NTR"));
     }
 }

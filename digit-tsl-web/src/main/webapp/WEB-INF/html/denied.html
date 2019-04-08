@@ -2,25 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace== "head_fragment ::head_fragment"></th:block>
 
 <script th:src="@{/controllers/homeController.js}"></script>
 
 </head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace== "header :: header" th:remove="tag"></th:block>
 
-    <div class="body">
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+	<div class="body">
+		<!-- Menu -->
+		<th:block th:replace== "menu :: nav" th:remove="tag"></th:block>
 
-        <main>
-        <div class="alert alert-warning alert-dismissible" style="margin-top: 15px;">
-            <strong th:text="#{denied}"></strong> <br /> <br />
-            <label th:text="#{deniedSubText}"></label>
-        </div>
-        </main>
-    </div>
+		<main>
+		<div class="alert alert-warning alert-dismissible" style="margin-top: 15px;">
+			<strong th:text="#{denied}"></strong> <br /> <br />
+			<label th:text="#{deniedSubText}"></label>
+		</div>
+		</main>
+	</div>
 </body>
 </html>

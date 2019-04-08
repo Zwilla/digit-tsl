@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import javax.xml.bind.JAXBElement;
@@ -34,19 +33,13 @@ import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 
-
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the eu.europa.esig.jaxb.v5.tsl package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
- * provided in this class.
+ * This object contains factory methods for each Java content interface and Java element interface generated in the eu.europa.esig.jaxb.v5.tsl
+ * package.
+ * <p>
+ * An ObjectFactory allows you to programatically construct new instances of the Java representation for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces and classes representing the binding of schema type definitions, element declarations and model
+ * groups. Factory methods for each of these are provided in this class.
  * 
  */
 @XmlRegistry
@@ -363,7 +356,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "PostalAddresses")
     public JAXBElement<PostalAddressListTypeV5> createPostalAddresses(PostalAddressListTypeV5 value) {
-        return new JAXBElement<PostalAddressListTypeV5>(_PostalAddresses_QNAME, PostalAddressListTypeV5 .class, null, value);
+        return new JAXBElement<PostalAddressListTypeV5>(_PostalAddresses_QNAME, PostalAddressListTypeV5.class, null, value);
     }
 
     /**
@@ -372,7 +365,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "PostalAddress")
     public JAXBElement<PostalAddressTypeV5> createPostalAddress(PostalAddressTypeV5 value) {
-        return new JAXBElement<PostalAddressTypeV5>(_PostalAddress_QNAME, PostalAddressTypeV5 .class, null, value);
+        return new JAXBElement<PostalAddressTypeV5>(_PostalAddress_QNAME, PostalAddressTypeV5.class, null, value);
     }
 
     /**
@@ -381,7 +374,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ElectronicAddress")
     public JAXBElement<ElectronicAddressTypeV5> createElectronicAddress(ElectronicAddressTypeV5 value) {
-        return new JAXBElement<ElectronicAddressTypeV5>(_ElectronicAddress_QNAME, ElectronicAddressTypeV5 .class, null, value);
+        return new JAXBElement<ElectronicAddressTypeV5>(_ElectronicAddress_QNAME, ElectronicAddressTypeV5.class, null, value);
     }
 
     /**
@@ -390,7 +383,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "Extension")
     public JAXBElement<ExtensionTypeV5> createExtension(ExtensionTypeV5 value) {
-        return new JAXBElement<ExtensionTypeV5>(_Extension_QNAME, ExtensionTypeV5 .class, null, value);
+        return new JAXBElement<ExtensionTypeV5>(_Extension_QNAME, ExtensionTypeV5.class, null, value);
     }
 
     /**
@@ -399,7 +392,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TrustServiceStatusList")
     public JAXBElement<TrustStatusListTypeV5> createTrustServiceStatusList(TrustStatusListTypeV5 value) {
-        return new JAXBElement<TrustStatusListTypeV5>(_TrustServiceStatusList_QNAME, TrustStatusListTypeV5 .class, null, value);
+        return new JAXBElement<TrustStatusListTypeV5>(_TrustServiceStatusList_QNAME, TrustStatusListTypeV5.class, null, value);
     }
 
     /**
@@ -408,7 +401,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TrustServiceProviderList")
     public JAXBElement<TrustServiceProviderListTypeV5> createTrustServiceProviderList(TrustServiceProviderListTypeV5 value) {
-        return new JAXBElement<TrustServiceProviderListTypeV5>(_TrustServiceProviderList_QNAME, TrustServiceProviderListTypeV5 .class, null, value);
+        return new JAXBElement<TrustServiceProviderListTypeV5>(_TrustServiceProviderList_QNAME, TrustServiceProviderListTypeV5.class, null, value);
     }
 
     /**
@@ -417,7 +410,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "SchemeInformation")
     public JAXBElement<TSLSchemeInformationTypeV5> createSchemeInformation(TSLSchemeInformationTypeV5 value) {
-        return new JAXBElement<TSLSchemeInformationTypeV5>(_SchemeInformation_QNAME, TSLSchemeInformationTypeV5 .class, null, value);
+        return new JAXBElement<TSLSchemeInformationTypeV5>(_SchemeInformation_QNAME, TSLSchemeInformationTypeV5.class, null, value);
     }
 
     /**
@@ -435,7 +428,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "SchemeOperatorName")
     public JAXBElement<InternationalNamesTypeV5> createSchemeOperatorName(InternationalNamesTypeV5 value) {
-        return new JAXBElement<InternationalNamesTypeV5>(_SchemeOperatorName_QNAME, InternationalNamesTypeV5 .class, null, value);
+        return new JAXBElement<InternationalNamesTypeV5>(_SchemeOperatorName_QNAME, InternationalNamesTypeV5.class, null, value);
     }
 
     /**
@@ -444,7 +437,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "SchemeName")
     public JAXBElement<InternationalNamesTypeV5> createSchemeName(InternationalNamesTypeV5 value) {
-        return new JAXBElement<InternationalNamesTypeV5>(_SchemeName_QNAME, InternationalNamesTypeV5 .class, null, value);
+        return new JAXBElement<InternationalNamesTypeV5>(_SchemeName_QNAME, InternationalNamesTypeV5.class, null, value);
     }
 
     /**
@@ -453,7 +446,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "SchemeInformationURI")
     public JAXBElement<NonEmptyMultiLangURIListTypeV5> createSchemeInformationURI(NonEmptyMultiLangURIListTypeV5 value) {
-        return new JAXBElement<NonEmptyMultiLangURIListTypeV5>(_SchemeInformationURI_QNAME, NonEmptyMultiLangURIListTypeV5 .class, null, value);
+        return new JAXBElement<NonEmptyMultiLangURIListTypeV5>(_SchemeInformationURI_QNAME, NonEmptyMultiLangURIListTypeV5.class, null, value);
     }
 
     /**
@@ -462,7 +455,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "SchemeTypeCommunityRules")
     public JAXBElement<NonEmptyMultiLangURIListTypeV5> createSchemeTypeCommunityRules(NonEmptyMultiLangURIListTypeV5 value) {
-        return new JAXBElement<NonEmptyMultiLangURIListTypeV5>(_SchemeTypeCommunityRules_QNAME, NonEmptyMultiLangURIListTypeV5 .class, null, value);
+        return new JAXBElement<NonEmptyMultiLangURIListTypeV5>(_SchemeTypeCommunityRules_QNAME, NonEmptyMultiLangURIListTypeV5.class, null, value);
     }
 
     /**
@@ -480,7 +473,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "PolicyOrLegalNotice")
     public JAXBElement<PolicyOrLegalnoticeTypeV5> createPolicyOrLegalNotice(PolicyOrLegalnoticeTypeV5 value) {
-        return new JAXBElement<PolicyOrLegalnoticeTypeV5>(_PolicyOrLegalNotice_QNAME, PolicyOrLegalnoticeTypeV5 .class, null, value);
+        return new JAXBElement<PolicyOrLegalnoticeTypeV5>(_PolicyOrLegalNotice_QNAME, PolicyOrLegalnoticeTypeV5.class, null, value);
     }
 
     /**
@@ -489,7 +482,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "NextUpdate")
     public JAXBElement<NextUpdateTypeV5> createNextUpdate(NextUpdateTypeV5 value) {
-        return new JAXBElement<NextUpdateTypeV5>(_NextUpdate_QNAME, NextUpdateTypeV5 .class, null, value);
+        return new JAXBElement<NextUpdateTypeV5>(_NextUpdate_QNAME, NextUpdateTypeV5.class, null, value);
     }
 
     /**
@@ -498,7 +491,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "PointersToOtherTSL")
     public JAXBElement<OtherTSLPointersTypeV5> createPointersToOtherTSL(OtherTSLPointersTypeV5 value) {
-        return new JAXBElement<OtherTSLPointersTypeV5>(_PointersToOtherTSL_QNAME, OtherTSLPointersTypeV5 .class, null, value);
+        return new JAXBElement<OtherTSLPointersTypeV5>(_PointersToOtherTSL_QNAME, OtherTSLPointersTypeV5.class, null, value);
     }
 
     /**
@@ -507,7 +500,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "OtherTSLPointer")
     public JAXBElement<OtherTSLPointerTypeV5> createOtherTSLPointer(OtherTSLPointerTypeV5 value) {
-        return new JAXBElement<OtherTSLPointerTypeV5>(_OtherTSLPointer_QNAME, OtherTSLPointerTypeV5 .class, null, value);
+        return new JAXBElement<OtherTSLPointerTypeV5>(_OtherTSLPointer_QNAME, OtherTSLPointerTypeV5.class, null, value);
     }
 
     /**
@@ -516,7 +509,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceDigitalIdentities")
     public JAXBElement<ServiceDigitalIdentityListTypeV5> createServiceDigitalIdentities(ServiceDigitalIdentityListTypeV5 value) {
-        return new JAXBElement<ServiceDigitalIdentityListTypeV5>(_ServiceDigitalIdentities_QNAME, ServiceDigitalIdentityListTypeV5 .class, null, value);
+        return new JAXBElement<ServiceDigitalIdentityListTypeV5>(_ServiceDigitalIdentities_QNAME, ServiceDigitalIdentityListTypeV5.class, null, value);
     }
 
     /**
@@ -525,7 +518,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "AdditionalInformation")
     public JAXBElement<AdditionalInformationTypeV5> createAdditionalInformation(AdditionalInformationTypeV5 value) {
-        return new JAXBElement<AdditionalInformationTypeV5>(_AdditionalInformation_QNAME, AdditionalInformationTypeV5 .class, null, value);
+        return new JAXBElement<AdditionalInformationTypeV5>(_AdditionalInformation_QNAME, AdditionalInformationTypeV5.class, null, value);
     }
 
     /**
@@ -534,7 +527,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "DistributionPoints")
     public JAXBElement<NonEmptyURIListTypeV5> createDistributionPoints(NonEmptyURIListTypeV5 value) {
-        return new JAXBElement<NonEmptyURIListTypeV5>(_DistributionPoints_QNAME, NonEmptyURIListTypeV5 .class, null, value);
+        return new JAXBElement<NonEmptyURIListTypeV5>(_DistributionPoints_QNAME, NonEmptyURIListTypeV5.class, null, value);
     }
 
     /**
@@ -543,7 +536,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TrustServiceProvider")
     public JAXBElement<TSPTypeV5> createTrustServiceProvider(TSPTypeV5 value) {
-        return new JAXBElement<TSPTypeV5>(_TrustServiceProvider_QNAME, TSPTypeV5 .class, null, value);
+        return new JAXBElement<TSPTypeV5>(_TrustServiceProvider_QNAME, TSPTypeV5.class, null, value);
     }
 
     /**
@@ -552,7 +545,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TSPInformation")
     public JAXBElement<TSPInformationTypeV5> createTSPInformation(TSPInformationTypeV5 value) {
-        return new JAXBElement<TSPInformationTypeV5>(_TSPInformation_QNAME, TSPInformationTypeV5 .class, null, value);
+        return new JAXBElement<TSPInformationTypeV5>(_TSPInformation_QNAME, TSPInformationTypeV5.class, null, value);
     }
 
     /**
@@ -561,7 +554,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TSPServices")
     public JAXBElement<TSPServicesListTypeV5> createTSPServices(TSPServicesListTypeV5 value) {
-        return new JAXBElement<TSPServicesListTypeV5>(_TSPServices_QNAME, TSPServicesListTypeV5 .class, null, value);
+        return new JAXBElement<TSPServicesListTypeV5>(_TSPServices_QNAME, TSPServicesListTypeV5.class, null, value);
     }
 
     /**
@@ -570,7 +563,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "TSPService")
     public JAXBElement<TSPServiceTypeV5> createTSPService(TSPServiceTypeV5 value) {
-        return new JAXBElement<TSPServiceTypeV5>(_TSPService_QNAME, TSPServiceTypeV5 .class, null, value);
+        return new JAXBElement<TSPServiceTypeV5>(_TSPService_QNAME, TSPServiceTypeV5.class, null, value);
     }
 
     /**
@@ -579,7 +572,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceInformation")
     public JAXBElement<TSPServiceInformationTypeV5> createServiceInformation(TSPServiceInformationTypeV5 value) {
-        return new JAXBElement<TSPServiceInformationTypeV5>(_ServiceInformation_QNAME, TSPServiceInformationTypeV5 .class, null, value);
+        return new JAXBElement<TSPServiceInformationTypeV5>(_ServiceInformation_QNAME, TSPServiceInformationTypeV5.class, null, value);
     }
 
     /**
@@ -597,7 +590,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceSupplyPoints")
     public JAXBElement<ServiceSupplyPointsTypeV5> createServiceSupplyPoints(ServiceSupplyPointsTypeV5 value) {
-        return new JAXBElement<ServiceSupplyPointsTypeV5>(_ServiceSupplyPoints_QNAME, ServiceSupplyPointsTypeV5 .class, null, value);
+        return new JAXBElement<ServiceSupplyPointsTypeV5>(_ServiceSupplyPoints_QNAME, ServiceSupplyPointsTypeV5.class, null, value);
     }
 
     /**
@@ -615,7 +608,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceDigitalIdentity")
     public JAXBElement<DigitalIdentityListTypeV5> createServiceDigitalIdentity(DigitalIdentityListTypeV5 value) {
-        return new JAXBElement<DigitalIdentityListTypeV5>(_ServiceDigitalIdentity_QNAME, DigitalIdentityListTypeV5 .class, null, value);
+        return new JAXBElement<DigitalIdentityListTypeV5>(_ServiceDigitalIdentity_QNAME, DigitalIdentityListTypeV5.class, null, value);
     }
 
     /**
@@ -624,7 +617,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceHistory")
     public JAXBElement<ServiceHistoryTypeV5> createServiceHistory(ServiceHistoryTypeV5 value) {
-        return new JAXBElement<ServiceHistoryTypeV5>(_ServiceHistory_QNAME, ServiceHistoryTypeV5 .class, null, value);
+        return new JAXBElement<ServiceHistoryTypeV5>(_ServiceHistory_QNAME, ServiceHistoryTypeV5.class, null, value);
     }
 
     /**
@@ -633,33 +626,34 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ServiceHistoryInstance")
     public JAXBElement<ServiceHistoryInstanceTypeV5> createServiceHistoryInstance(ServiceHistoryInstanceTypeV5 value) {
-        return new JAXBElement<ServiceHistoryInstanceTypeV5>(_ServiceHistoryInstance_QNAME, ServiceHistoryInstanceTypeV5 .class, null, value);
+        return new JAXBElement<ServiceHistoryInstanceTypeV5>(_ServiceHistoryInstance_QNAME, ServiceHistoryInstanceTypeV5.class, null, value);
     }
 
-//    /**
-//     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-//     * 
-//     */
-//    @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ExpiredCertsRevocationInfo")
-//    public JAXBElement<XMLGregorianCalendar> createExpiredCertsRevocationInfo(XMLGregorianCalendar value) {
-//        return new JAXBElement<XMLGregorianCalendar>(_ExpiredCertsRevocationInfo_QNAME, XMLGregorianCalendar.class, null, value);
-//    }
+    // /**
+    // * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+    // *
+    // */
+    // @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ExpiredCertsRevocationInfo")
+    // public JAXBElement<XMLGregorianCalendar> createExpiredCertsRevocationInfo(XMLGregorianCalendar value) {
+    // return new JAXBElement<XMLGregorianCalendar>(_ExpiredCertsRevocationInfo_QNAME, XMLGregorianCalendar.class, null, value);
+    // }
 
-	  /**
-	  * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
-	  * 
-	  */
-	 @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ExpiredCertsRevocationInfo")
-	 public JAXBElement<String> createExpiredCertsRevocationInfo(String value) {
-	     return new JAXBElement<String>(_ExpiredCertsRevocationInfo_QNAME, String.class, null, value);
-	 }
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "ExpiredCertsRevocationInfo")
+    public JAXBElement<String> createExpiredCertsRevocationInfo(String value) {
+        return new JAXBElement<String>(_ExpiredCertsRevocationInfo_QNAME, String.class, null, value);
+    }
+
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AdditionalServiceInformationTypeV5 }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2#", name = "AdditionalServiceInformation")
     public JAXBElement<AdditionalServiceInformationTypeV5> createAdditionalServiceInformation(AdditionalServiceInformationTypeV5 value) {
-        return new JAXBElement<AdditionalServiceInformationTypeV5>(_AdditionalServiceInformation_QNAME, AdditionalServiceInformationTypeV5 .class, null, value);
+        return new JAXBElement<AdditionalServiceInformationTypeV5>(_AdditionalServiceInformation_QNAME, AdditionalServiceInformationTypeV5.class, null, value);
     }
 
 }

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -26,11 +26,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -61,23 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "tslVersionIdentifier",
-    "tslSequenceNumber",
-    "tslType",
-    "schemeTerritory",
-    "schemeOperatorName",
-    "schemeOperatorAddress",
-    "schemeName",
-    "schemeInformationURI",
-    "statusDeterminationApproach",
-    "schemeTypeCommunityRules",
-    "policyOrLegalNotice",
-    "historicalInformationPeriod",
-    "pointersToOtherTSL",
-    "nextUpdate",
-    "distributionPoints"
-})
+@XmlType(name = "", propOrder = { "tslVersionIdentifier", "tslSequenceNumber", "tslType", "schemeTerritory", "schemeOperatorName", "schemeOperatorAddress", "schemeName", "schemeInformationURI",
+        "statusDeterminationApproach", "schemeTypeCommunityRules", "policyOrLegalNotice", "historicalInformationPeriod", "pointersToOtherTSL", "nextUpdate", "distributionPoints" })
 @XmlRootElement(name = "SchemeInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class SchemeInformation {
 
@@ -115,10 +101,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete tslVersionIdentifier.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSLVersionIdentifier }
-     *     
+     * @return possible object is {@link TSLVersionIdentifier }
+     * 
      */
     public TSLVersionIdentifier getTSLVersionIdentifier() {
         return tslVersionIdentifier;
@@ -128,9 +112,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete tslVersionIdentifier.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSLVersionIdentifier }
-     *     
+     *            allowed object is {@link TSLVersionIdentifier }
+     * 
      */
     public void setTSLVersionIdentifier(TSLVersionIdentifier value) {
         this.tslVersionIdentifier = value;
@@ -139,10 +122,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete tslSequenceNumber.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSLSequenceNumber }
-     *     
+     * @return possible object is {@link TSLSequenceNumber }
+     * 
      */
     public TSLSequenceNumber getTSLSequenceNumber() {
         return tslSequenceNumber;
@@ -152,9 +133,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete tslSequenceNumber.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSLSequenceNumber }
-     *     
+     *            allowed object is {@link TSLSequenceNumber }
+     * 
      */
     public void setTSLSequenceNumber(TSLSequenceNumber value) {
         this.tslSequenceNumber = value;
@@ -163,10 +143,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete tslType.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSLType }
-     *     
+     * @return possible object is {@link TSLType }
+     * 
      */
     public TSLType getTSLType() {
         return tslType;
@@ -176,9 +154,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete tslType.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSLType }
-     *     
+     *            allowed object is {@link TSLType }
+     * 
      */
     public void setTSLType(TSLType value) {
         this.tslType = value;
@@ -187,10 +164,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeTerritory.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeTerritory }
-     *     
+     * @return possible object is {@link SchemeTerritory }
+     * 
      */
     public SchemeTerritory getSchemeTerritory() {
         return schemeTerritory;
@@ -200,9 +175,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeTerritory.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeTerritory }
-     *     
+     *            allowed object is {@link SchemeTerritory }
+     * 
      */
     public void setSchemeTerritory(SchemeTerritory value) {
         this.schemeTerritory = value;
@@ -211,10 +185,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeOperatorName.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeOperatorName }
-     *     
+     * @return possible object is {@link SchemeOperatorName }
+     * 
      */
     public SchemeOperatorName getSchemeOperatorName() {
         return schemeOperatorName;
@@ -224,9 +196,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeOperatorName.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeOperatorName }
-     *     
+     *            allowed object is {@link SchemeOperatorName }
+     * 
      */
     public void setSchemeOperatorName(SchemeOperatorName value) {
         this.schemeOperatorName = value;
@@ -235,10 +206,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeOperatorAddress.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeOperatorAddress }
-     *     
+     * @return possible object is {@link SchemeOperatorAddress }
+     * 
      */
     public SchemeOperatorAddress getSchemeOperatorAddress() {
         return schemeOperatorAddress;
@@ -248,9 +217,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeOperatorAddress.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeOperatorAddress }
-     *     
+     *            allowed object is {@link SchemeOperatorAddress }
+     * 
      */
     public void setSchemeOperatorAddress(SchemeOperatorAddress value) {
         this.schemeOperatorAddress = value;
@@ -259,10 +227,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeName.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeName }
-     *     
+     * @return possible object is {@link SchemeName }
+     * 
      */
     public SchemeName getSchemeName() {
         return schemeName;
@@ -272,9 +238,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeName.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeName }
-     *     
+     *            allowed object is {@link SchemeName }
+     * 
      */
     public void setSchemeName(SchemeName value) {
         this.schemeName = value;
@@ -283,10 +248,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeInformationURI.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeInformationURI }
-     *     
+     * @return possible object is {@link SchemeInformationURI }
+     * 
      */
     public SchemeInformationURI getSchemeInformationURI() {
         return schemeInformationURI;
@@ -296,9 +259,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeInformationURI.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeInformationURI }
-     *     
+     *            allowed object is {@link SchemeInformationURI }
+     * 
      */
     public void setSchemeInformationURI(SchemeInformationURI value) {
         this.schemeInformationURI = value;
@@ -307,10 +269,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete statusDeterminationApproach.
      * 
-     * @return
-     *     possible object is
-     *     {@link StatusDeterminationApproach }
-     *     
+     * @return possible object is {@link StatusDeterminationApproach }
+     * 
      */
     public StatusDeterminationApproach getStatusDeterminationApproach() {
         return statusDeterminationApproach;
@@ -320,9 +280,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete statusDeterminationApproach.
      * 
      * @param value
-     *     allowed object is
-     *     {@link StatusDeterminationApproach }
-     *     
+     *            allowed object is {@link StatusDeterminationApproach }
+     * 
      */
     public void setStatusDeterminationApproach(StatusDeterminationApproach value) {
         this.statusDeterminationApproach = value;
@@ -331,10 +290,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete schemeTypeCommunityRules.
      * 
-     * @return
-     *     possible object is
-     *     {@link SchemeTypeCommunityRules }
-     *     
+     * @return possible object is {@link SchemeTypeCommunityRules }
+     * 
      */
     public SchemeTypeCommunityRules getSchemeTypeCommunityRules() {
         return schemeTypeCommunityRules;
@@ -344,9 +301,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete schemeTypeCommunityRules.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SchemeTypeCommunityRules }
-     *     
+     *            allowed object is {@link SchemeTypeCommunityRules }
+     * 
      */
     public void setSchemeTypeCommunityRules(SchemeTypeCommunityRules value) {
         this.schemeTypeCommunityRules = value;
@@ -355,10 +311,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete policyOrLegalNotice.
      * 
-     * @return
-     *     possible object is
-     *     {@link PolicyOrLegalNotice }
-     *     
+     * @return possible object is {@link PolicyOrLegalNotice }
+     * 
      */
     public PolicyOrLegalNotice getPolicyOrLegalNotice() {
         return policyOrLegalNotice;
@@ -368,9 +322,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete policyOrLegalNotice.
      * 
      * @param value
-     *     allowed object is
-     *     {@link PolicyOrLegalNotice }
-     *     
+     *            allowed object is {@link PolicyOrLegalNotice }
+     * 
      */
     public void setPolicyOrLegalNotice(PolicyOrLegalNotice value) {
         this.policyOrLegalNotice = value;
@@ -379,10 +332,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete historicalInformationPeriod.
      * 
-     * @return
-     *     possible object is
-     *     {@link HistoricalInformationPeriod }
-     *     
+     * @return possible object is {@link HistoricalInformationPeriod }
+     * 
      */
     public HistoricalInformationPeriod getHistoricalInformationPeriod() {
         return historicalInformationPeriod;
@@ -392,9 +343,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete historicalInformationPeriod.
      * 
      * @param value
-     *     allowed object is
-     *     {@link HistoricalInformationPeriod }
-     *     
+     *            allowed object is {@link HistoricalInformationPeriod }
+     * 
      */
     public void setHistoricalInformationPeriod(HistoricalInformationPeriod value) {
         this.historicalInformationPeriod = value;
@@ -403,10 +353,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete pointersToOtherTSL.
      * 
-     * @return
-     *     possible object is
-     *     {@link PointersToOtherTSL }
-     *     
+     * @return possible object is {@link PointersToOtherTSL }
+     * 
      */
     public PointersToOtherTSL getPointersToOtherTSL() {
         return pointersToOtherTSL;
@@ -416,9 +364,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete pointersToOtherTSL.
      * 
      * @param value
-     *     allowed object is
-     *     {@link PointersToOtherTSL }
-     *     
+     *            allowed object is {@link PointersToOtherTSL }
+     * 
      */
     public void setPointersToOtherTSL(PointersToOtherTSL value) {
         this.pointersToOtherTSL = value;
@@ -427,10 +374,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete nextUpdate.
      * 
-     * @return
-     *     possible object is
-     *     {@link NextUpdate }
-     *     
+     * @return possible object is {@link NextUpdate }
+     * 
      */
     public NextUpdate getNextUpdate() {
         return nextUpdate;
@@ -440,9 +385,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete nextUpdate.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NextUpdate }
-     *     
+     *            allowed object is {@link NextUpdate }
+     * 
      */
     public void setNextUpdate(NextUpdate value) {
         this.nextUpdate = value;
@@ -451,10 +395,8 @@ public class SchemeInformation {
     /**
      * Obtient la valeur de la propriete distributionPoints.
      * 
-     * @return
-     *     possible object is
-     *     {@link DistributionPoints }
-     *     
+     * @return possible object is {@link DistributionPoints }
+     * 
      */
     public DistributionPoints getDistributionPoints() {
         return distributionPoints;
@@ -464,9 +406,8 @@ public class SchemeInformation {
      * Definit la valeur de la propriete distributionPoints.
      * 
      * @param value
-     *     allowed object is
-     *     {@link DistributionPoints }
-     *     
+     *            allowed object is {@link DistributionPoints }
+     * 
      */
     public void setDistributionPoints(DistributionPoints value) {
         this.distributionPoints = value;

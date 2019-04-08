@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -58,41 +58,41 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "PolicyIdentifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class PolicyIdentifier {
 
-	@XmlElement(name = "Identifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<Identifier> identifier;
-	@XmlElement(name = "DocumentationReferences", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<DocumentationReferences> documentationReferences;
-	@XmlAttribute(name = "index", required = true)
-	protected BigInteger index;
+    @XmlElement(name = "Identifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<Identifier> identifier;
+    @XmlElement(name = "DocumentationReferences", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<DocumentationReferences> documentationReferences;
+    @XmlAttribute(name = "index", required = true)
+    protected BigInteger index;
 
-	public List<Identifier> getIdentifier() {
-		if (this.identifier == null) {
-			this.identifier = new ArrayList<Identifier>();
-		}
-		return identifier;
-	}
+    public List<Identifier> getIdentifier() {
+        if (this.identifier == null) {
+            this.identifier = new ArrayList<Identifier>();
+        }
+        return identifier;
+    }
 
-	public void setIdentifier(List<Identifier> identifier) {
-		this.identifier = identifier;
-	}
+    public void setIdentifier(List<Identifier> identifier) {
+        this.identifier = identifier;
+    }
 
-	public void setDocumentationReferences(List<DocumentationReferences> documentationReferences) {
-		this.documentationReferences = documentationReferences;
-	}
+    public void setDocumentationReferences(List<DocumentationReferences> documentationReferences) {
+        this.documentationReferences = documentationReferences;
+    }
 
-	public List<DocumentationReferences> getDocumentationReferences() {
-		if (documentationReferences == null) {
-			documentationReferences = new ArrayList<DocumentationReferences>();
-		}
-		return this.documentationReferences;
-	}
+    public List<DocumentationReferences> getDocumentationReferences() {
+        if (documentationReferences == null) {
+            documentationReferences = new ArrayList<DocumentationReferences>();
+        }
+        return this.documentationReferences;
+    }
 
-	public BigInteger getIndex() {
-		return index;
-	}
+    public BigInteger getIndex() {
+        return index;
+    }
 
-	public void setIndex(BigInteger value) {
-		this.index = value;
-	}
+    public void setIndex(BigInteger value) {
+        this.index = value;
+    }
 
 }

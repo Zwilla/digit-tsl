@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -55,10 +55,10 @@ public class StatisticCSVWriter {
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(baos));
                 CSVPrinter csvPrinter = new CSVPrinter(writer, csvFileFormat)) {
 
-            //Dynamic header
+            // Dynamic header
             csvPrinter.printRecord(generateHeader(criteria));
 
-            //Dynamic records
+            // Dynamic records
             for (StatisticGeneric statisticGeneric : genericStats) {
                 csvPrinter.printRecord(extractRecord(statisticGeneric, criteria));
             }
@@ -78,29 +78,29 @@ public class StatisticCSVWriter {
     private static Object[] generateHeader(StatisticExtractionCriterias criteria) {
         List<String> header = new ArrayList<>();
 
-        //Country Code
+        // Country Code
         header.add(bundle.getString("tCC"));
-        //SequenceNumber
+        // SequenceNumber
         if (criteria.getShowSequenceNumber()) {
             header.add(bundle.getString("tlBrowser.sequenceNumber"));
         }
         if (criteria.getType().equals(StatisticExtractionType.COUNTRY)) {
-            //TSP;QTSP;QTSP TOB
+            // TSP;QTSP;QTSP TOB
             header.add(bundle.getString("type.nb.tsp"));
             header.add(bundle.getString("type.nb.tsp.q.actif"));
             if (criteria.getShowTOB()) {
                 header.add(bundle.getString("type.nb.tsp.q.tob"));
             }
         } else if (criteria.getType().equals(StatisticExtractionType.TSP)) {
-            //Name
+            // Name
             header.add(bundle.getString("serviceProvider.name"));
-            //TradeName
+            // TradeName
             if (criteria.getShowTradeName()) {
                 header.add(bundle.getString("serviceProvider.tradeName"));
             }
         }
 
-        //Legal types header
+        // Legal types header
         for (ServiceLegalType serviceLegalType : ServiceLegalType.values()) {
             if (serviceLegalType.isQualified() && criteria.getShowQualified()) {
                 header.addAll(generateLegalTypeHeader(serviceLegalType, criteria.getShowTOB()));
@@ -120,13 +120,13 @@ public class StatisticCSVWriter {
      */
     private static List<String> generateLegalTypeHeader(ServiceLegalType serviceLegalType, Boolean showTOB) {
         List<String> legalTypeHeader = new ArrayList<>();
-        //Active
+        // Active
         legalTypeHeader.add(bundle.getString("type.active").replace("%TYPE%", serviceLegalType.getCode()));
         if (showTOB) {
             legalTypeHeader.add(bundle.getString("type.active.tob").replace("%TYPE%", serviceLegalType.getCode()));
         }
 
-        //Inactive
+        // Inactive
         legalTypeHeader.add(bundle.getString("type.inactive").replace("%TYPE%", serviceLegalType.getCode()));
         if (showTOB) {
             legalTypeHeader.add(bundle.getString("type.inactive.tob").replace("%TYPE%", serviceLegalType.getCode()));
@@ -136,9 +136,9 @@ public class StatisticCSVWriter {
 
     private static <T extends StatisticGeneric> Object[] extractRecord(T statisticGeneric, StatisticExtractionCriterias criteria) {
         List<Object> record = new ArrayList<>();
-        //Country Code
+        // Country Code
         record.add(statisticGeneric.getCountryCode());
-        //Sequence Number
+        // Sequence Number
         if (criteria.getShowSequenceNumber()) {
             record.add(statisticGeneric.getSequenceNumber());
         }
@@ -146,17 +146,17 @@ public class StatisticCSVWriter {
         if (statisticGeneric instanceof StatisticCountry) {
             record.add(((StatisticCountry) statisticGeneric).getNbTSP());
             if (criteria.getShowTOB()) {
-                //Add Active and Active TOB in two differents columns
+                // Add Active and Active TOB in two differents columns
                 record.add(((StatisticCountry) statisticGeneric).getNbQActive());
                 record.add(((StatisticCountry) statisticGeneric).getNbQTOB());
             } else {
-                //Sum of Active and Active TOB in same column
+                // Sum of Active and Active TOB in same column
                 record.add(((StatisticCountry) statisticGeneric).getNbQActive() + ((StatisticCountry) statisticGeneric).getNbQTOB());
             }
         } else if (statisticGeneric instanceof StatisticTSP) {
-            //Name
+            // Name
             record.add(((StatisticTSP) statisticGeneric).getName());
-            //Trade Name
+            // Trade Name
             if (criteria.getShowTradeName()) {
                 record.add(((StatisticTSP) statisticGeneric).getTradeName());
             }

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tslx;
 
 import java.io.Serializable;
@@ -39,11 +38,12 @@ import eu.europa.esig.jaxb.v5.tsl.AnyTypeV5;
 import eu.europa.esig.jaxb.v5.tsl.InternationalNamesTypeV5;
 import eu.europa.esig.jaxb.v5.tsl.NonEmptyMultiLangURITypeV5;
 
-
 /**
- * <p>Java class for TakenOverByType complex type.
+ * <p>
+ * Java class for TakenOverByType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TakenOverByType"&gt;
@@ -64,16 +64,8 @@ import eu.europa.esig.jaxb.v5.tsl.NonEmptyMultiLangURITypeV5;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TakenOverByType", propOrder = {
-    "uri",
-    "tspName",
-    "schemeOperatorName",
-    "schemeTerritory",
-    "otherQualifier"
-})
-public class TakenOverByTypeV5
-    implements Serializable
-{
+@XmlType(name = "TakenOverByType", propOrder = { "uri", "tspName", "schemeOperatorName", "schemeTerritory", "otherQualifier" })
+public class TakenOverByTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "URI", required = true)
@@ -90,10 +82,8 @@ public class TakenOverByTypeV5
     /**
      * Gets the value of the uri property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyMultiLangURITypeV5 }
-     *     
+     * @return possible object is {@link NonEmptyMultiLangURITypeV5 }
+     * 
      */
     public NonEmptyMultiLangURITypeV5 getURI() {
         return uri;
@@ -103,9 +93,8 @@ public class TakenOverByTypeV5
      * Sets the value of the uri property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NonEmptyMultiLangURITypeV5 }
-     *     
+     *            allowed object is {@link NonEmptyMultiLangURITypeV5 }
+     * 
      */
     public void setURI(NonEmptyMultiLangURITypeV5 value) {
         this.uri = value;
@@ -114,10 +103,8 @@ public class TakenOverByTypeV5
     /**
      * Gets the value of the tspName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getTSPName() {
         return tspName;
@@ -127,9 +114,8 @@ public class TakenOverByTypeV5
      * Sets the value of the tspName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setTSPName(InternationalNamesTypeV5 value) {
         this.tspName = value;
@@ -138,10 +124,8 @@ public class TakenOverByTypeV5
     /**
      * Gets the value of the schemeOperatorName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getSchemeOperatorName() {
         return schemeOperatorName;
@@ -151,9 +135,8 @@ public class TakenOverByTypeV5
      * Sets the value of the schemeOperatorName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setSchemeOperatorName(InternationalNamesTypeV5 value) {
         this.schemeOperatorName = value;
@@ -162,10 +145,8 @@ public class TakenOverByTypeV5
     /**
      * Gets the value of the schemeTerritory property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getSchemeTerritory() {
         return schemeTerritory;
@@ -175,9 +156,8 @@ public class TakenOverByTypeV5
      * Sets the value of the schemeTerritory property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setSchemeTerritory(String value) {
         this.schemeTerritory = value;
@@ -187,21 +167,19 @@ public class TakenOverByTypeV5
      * Gets the value of the otherQualifier property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the otherQualifier property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the otherQualifier property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getOtherQualifier().add(newItem);
+     * getOtherQualifier().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link AnyTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link AnyTypeV5 }
      * 
      * 
      */

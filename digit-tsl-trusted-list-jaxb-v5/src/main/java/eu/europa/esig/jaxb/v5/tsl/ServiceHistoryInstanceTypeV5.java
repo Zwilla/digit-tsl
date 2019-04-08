@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -36,11 +35,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for ServiceHistoryInstanceType complex type.
+ * <p>
+ * Java class for ServiceHistoryInstanceType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="ServiceHistoryInstanceType"&gt;
@@ -62,17 +62,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "ServiceHistoryInstanceType", propOrder = {
-    "serviceTypeIdentifier",
-    "serviceName",
-    "serviceDigitalIdentity",
-    "serviceStatus",
-    "statusStartingTime",
-    "serviceInformationExtensions"
-})
-public class ServiceHistoryInstanceTypeV5
-    implements Serializable
-{
+@XmlType(name = "ServiceHistoryInstanceType", propOrder = { "serviceTypeIdentifier", "serviceName", "serviceDigitalIdentity", "serviceStatus", "statusStartingTime", "serviceInformationExtensions" })
+public class ServiceHistoryInstanceTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "ServiceTypeIdentifier", required = true)
@@ -94,10 +85,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the serviceTypeIdentifier property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getServiceTypeIdentifier() {
         return serviceTypeIdentifier;
@@ -107,9 +96,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the serviceTypeIdentifier property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setServiceTypeIdentifier(String value) {
         this.serviceTypeIdentifier = value;
@@ -118,10 +106,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the serviceName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getServiceName() {
         return serviceName;
@@ -131,9 +117,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the serviceName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setServiceName(InternationalNamesTypeV5 value) {
         this.serviceName = value;
@@ -142,10 +127,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the serviceDigitalIdentity property.
      * 
-     * @return
-     *     possible object is
-     *     {@link DigitalIdentityListTypeV5 }
-     *     
+     * @return possible object is {@link DigitalIdentityListTypeV5 }
+     * 
      */
     public DigitalIdentityListTypeV5 getServiceDigitalIdentity() {
         return serviceDigitalIdentity;
@@ -155,9 +138,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the serviceDigitalIdentity property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link DigitalIdentityListTypeV5 }
-     *     
+     *            allowed object is {@link DigitalIdentityListTypeV5 }
+     * 
      */
     public void setServiceDigitalIdentity(DigitalIdentityListTypeV5 value) {
         this.serviceDigitalIdentity = value;
@@ -166,10 +148,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the serviceStatus property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getServiceStatus() {
         return serviceStatus;
@@ -179,9 +159,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the serviceStatus property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setServiceStatus(String value) {
         this.serviceStatus = value;
@@ -190,10 +169,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the statusStartingTime property.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getStatusStartingTime() {
         return statusStartingTime;
@@ -203,9 +180,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the statusStartingTime property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setStatusStartingTime(XMLGregorianCalendar value) {
         this.statusStartingTime = value;
@@ -214,10 +190,8 @@ public class ServiceHistoryInstanceTypeV5
     /**
      * Gets the value of the serviceInformationExtensions property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     * @return possible object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public ExtensionsListTypeV5 getServiceInformationExtensions() {
         return serviceInformationExtensions;
@@ -227,9 +201,8 @@ public class ServiceHistoryInstanceTypeV5
      * Sets the value of the serviceInformationExtensions property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     *            allowed object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public void setServiceInformationExtensions(ExtensionsListTypeV5 value) {
         this.serviceInformationExtensions = value;

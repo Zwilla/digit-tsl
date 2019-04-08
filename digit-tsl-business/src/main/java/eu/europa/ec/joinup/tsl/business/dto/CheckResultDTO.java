@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -21,6 +21,7 @@
 package eu.europa.ec.joinup.tsl.business.dto;
 
 import eu.europa.ec.joinup.tsl.business.dto.tlcc.Check;
+import eu.europa.ec.joinup.tsl.model.DBCheck;
 import eu.europa.ec.joinup.tsl.model.enums.CheckStatus;
 
 public class CheckResultDTO {
@@ -46,6 +47,20 @@ public class CheckResultDTO {
         description = check.getDescription();
     }
 
+    public CheckResultDTO(DBCheck dbCheck) {
+        id = "";
+        checkId = dbCheck.getId();
+        description = dbCheck.getDescription();
+        status = dbCheck.getPriority();
+    }
+
+    public CheckResultDTO(String id, DBCheck dbCheck) {
+        this.id = id;
+        this.checkId = dbCheck.getId();
+        this.description = dbCheck.getDescription();
+        this.status = dbCheck.getPriority();
+    }
+
     public CheckResultDTO(String id, Check tlccCheck) {
         super();
         this.id = id;
@@ -53,24 +68,24 @@ public class CheckResultDTO {
         location = "";
 
         switch (tlccCheck.getStatus()) {
-            case "SUCCESS":
-                status = CheckStatus.SUCCESS;
-                break;
-            case "ERROR":
-                status = CheckStatus.ERROR;
-                break;
-            case "WARNING":
-                status = CheckStatus.WARNING;
-                break;
-            case "INFO":
-                status = CheckStatus.INFO;
-                break;
-            case "IGNORE":
-                status = CheckStatus.IGNORE;
-                break;
-            default:
-                status = CheckStatus.IGNORE;
-                break;
+        case "SUCCESS":
+            status = CheckStatus.SUCCESS;
+            break;
+        case "ERROR":
+            status = CheckStatus.ERROR;
+            break;
+        case "WARNING":
+            status = CheckStatus.WARNING;
+            break;
+        case "INFO":
+            status = CheckStatus.INFO;
+            break;
+        case "IGNORE":
+            status = CheckStatus.IGNORE;
+            break;
+        default:
+            status = CheckStatus.IGNORE;
+            break;
         }
         description = tlccCheck.getContent();
     }

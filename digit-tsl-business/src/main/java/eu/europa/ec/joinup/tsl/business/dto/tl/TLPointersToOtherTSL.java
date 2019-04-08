@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -81,9 +81,9 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
 
         setSchemeTerritory(st.toString());
         Object tlt = properties.get("{http://uri.etsi.org/02231/v2#}TSLType");
-        if(tlt==null){
+        if (tlt == null) {
             setTlType("");
-        }else{
+        } else {
             setTlType(tlt.toString());
         }
 
@@ -209,8 +209,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
                 intSchemeOperatorName.getName().add(tlName.asTSLTypeV5());
             }
         }
-        JAXBElement<InternationalNamesTypeV5> el2 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeOperatorName"), InternationalNamesTypeV5.class,
-                intSchemeOperatorName);
+        JAXBElement<InternationalNamesTypeV5> el2 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeOperatorName"), InternationalNamesTypeV5.class, intSchemeOperatorName);
         AnyTypeV5 anySchemeOpe = new AnyTypeV5();
         anySchemeOpe.getContent().add(el2);
         additional.getTextualInformationOrOtherInformation().add(anySchemeOpe);
@@ -221,8 +220,8 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
                 typeCommunity.getURI().add(tlTypeComm.asTSLTypeV5());
             }
         }
-        JAXBElement<NonEmptyMultiLangURIListTypeV5> el3 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeTypeCommunityRules"),
-                NonEmptyMultiLangURIListTypeV5.class, typeCommunity);
+        JAXBElement<NonEmptyMultiLangURIListTypeV5> el3 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeTypeCommunityRules"), NonEmptyMultiLangURIListTypeV5.class,
+                typeCommunity);
         AnyTypeV5 anyComm = new AnyTypeV5();
         anyComm.getContent().add(el3);
         additional.getTextualInformationOrOtherInformation().add(anyComm);
@@ -273,8 +272,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
 
         // SCHEME TYPE COMMUNITY RULE
         if (CollectionUtils.isNotEmpty(schemeTypeCommunity)) {
-            List<TLDifference> changeList = ChangeUtils.diffOfTLTypeCommunityList(schemeTypeCommunity, publishedTl.getSchemeTypeCommunity(),
-                    getId() + "_" + Tag.POINTER_COMMUNITY_RULE);
+            List<TLDifference> changeList = ChangeUtils.diffOfTLTypeCommunityList(schemeTypeCommunity, publishedTl.getSchemeTypeCommunity(), getId() + "_" + Tag.POINTER_COMMUNITY_RULE);
             if (changeList.size() > 0) {
                 diffList.addAll(changeList);
             }

@@ -2,132 +2,133 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 
 <script th:src="@{/controllers/systemController.js}"></script>
 
 <style>
 .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="systemController">
+	<div class="body" ng-controller="systemController">
 
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- MAIN CONTENT -->
-        <main id="content" class="panel panel-primary" style="border-style: none;">
-        <div class="panel-heading" style="max-height: 35px">
-            <span th:text="#{propertie.system}"></span>
-        </div>
-        <!-- Jobs -->
-        <table id="trustBackboneTable" class="table table-condensed">
-            <thead text-align="right">
-                <tr>
-                    <th th:text="#{jobs.name}" style="width: 25%;"></th>
-                    <th th:text="#{jobs.description}" style="width: 65%;"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Loading -->
-                <tr>
-                    <td th:text="#{jobs.loading}"></td>
-                    <td th:text="#{jobs.loading.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_loading}}" confirmed="callLoading()" class="btn btn-primary" th:text="#{tRun}"></button>
-                    </td>
-                </tr>
-                <!-- Rules -->
-                <tr>
-                    <td th:text="#{jobs.rules}"></td>
-                    <td th:text="#{jobs.rules.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_rules}}" confirmed="callRules()" class="btn btn-primary" th:text="#{tRun}"></button>
-                    </td>
-                </tr>
-                <!-- Signature -->
-                <tr>
-                    <td th:text="#{jobs.signature}"></td>
-                    <td th:text="#{jobs.signature.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_signature}}" confirmed="callSignature()" class="btn btn-primary" th:text="#{tRun}"></button>
-                    </td>
-                </tr>
-                <!-- LOTL Validation job -->
-                <tr>
-                    <td th:text="#{job.lotl.validation}"></td>
-                    <td th:text="#{job.lotl.validation.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_lotlValidation}}" confirmed="callLOTLValidation()" class="btn btn-primary" th:text="#{tRun}"></button>
-                    </td>
-                </tr>
-                <!-- Retention Policy -->
-                <tr>
-                    <td th:text="#{jobs.retention}"></td>
-                    <td th:text="#{jobs.retention.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_retention}}" confirmed="callRetention()" class="btn btn-primary" th:text="#{tRun}"></button>
-                </tr>
-                <!-- Service Data -->
-                <tr>
-                    <td th:text="#{jobs.service.data.load}"></td>
-                    <td th:text="#{jobs.service.data.load.description}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_runJob_service_data}}" confirmed="callServiceData()" class="btn btn-primary" th:text="#{tRun}"></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+		<!-- MAIN CONTENT -->
+		<main id="content" class="panel panel-primary" style="border-style: none;">
+		<div class="panel-heading" style="max-height: 35px">
+			<span th:text="#{propertie.system}"></span>
+		</div>
+		<!-- Jobs -->
+		<table id="trustBackboneTable" class="table table-condensed">
+			<thead text-align="right">
+				<tr>
+					<th th:text="#{jobs.name}" style="width: 25%;"></th>
+					<th th:text="#{jobs.description}" style="width: 65%;"></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Loading -->
+				<tr>
+					<td th:text="#{jobs.loading}"></td>
+					<td th:text="#{jobs.loading.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_loading}}" confirmed="callLoading()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+				<!-- Rules -->
+				<tr>
+					<td th:text="#{jobs.rules}"></td>
+					<td th:text="#{jobs.rules.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_rules}}" confirmed="callRules()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+				<!-- Signature -->
+				<tr>
+					<td th:text="#{jobs.signature}"></td>
+					<td th:text="#{jobs.signature.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_signature}}" confirmed="callSignature()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+				<!-- LOTL Validation job -->
+				<tr>
+					<td th:text="#{job.lotl.validation}"></td>
+					<td th:text="#{job.lotl.validation.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_lotlValidation}}" confirmed="callLOTLValidation()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+				<!-- Retention Policy -->
+				<tr>
+					<td th:text="#{jobs.retention}"></td>
+					<td th:text="#{jobs.retention.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_retention}}" confirmed="callRetention()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+				<!-- Service Data -->
+				<tr>
+					<td th:text="#{jobs.service.data.load}"></td>
+					<td th:text="#{jobs.service.data.load.description}"></td>
+					<td>
+						<button ng-confirm="{{confirm_runJob_service_data}}" confirmed="callServiceData()" class="btn btn-primary" th:text="#{tRun}"></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-        <hr />
+		<hr />
 
-        <!-- Cache -->
-        <table class="table table-condensed">
-            <thead text-align="right">
-                <tr>
-                    <th th:text="#{cache.name}" style="width: 90%;"></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Loading -->
-                <tr>
-                    <td th:text="#{cache.countries}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_cleanCache_countries}}" confirmed="cacheCountries()" class="btn btn-primary" th:text="#{tClean}"></button>
-                    </td>
-                </tr>
-                <!-- Rules -->
-                <tr>
-                    <td th:text="#{cache.properties}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_cleanCache_properties}}" confirmed="cacheProperties()" class="btn btn-primary" th:text="#{tClean}"></button>
-                    </td>
-                </tr>
-                <!-- Checks -->
-                <tr>
-                    <td th:text="#{cache.checks}"></td>
-                    <td>
-                        <button ng-confirm="{{confirm_cleanCache_checks}}" confirmed="cacheChecks()" class="btn btn-primary" th:text="#{tClean}"></button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+		<!-- Cache -->
+		<table class="table table-condensed">
+			<thead text-align="right">
+				<tr>
+					<th th:text="#{cache.name}" style="width: 90%;"></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Loading -->
+				<tr>
+					<td th:text="#{cache.countries}"></td>
+					<td>
+						<button ng-confirm="{{confirm_cleanCache_countries}}" confirmed="cacheCountries()" class="btn btn-primary" th:text="#{tClean}"></button>
+					</td>
+				</tr>
+				<!-- Rules -->
+				<tr>
+					<td th:text="#{cache.properties}"></td>
+					<td>
+						<button ng-confirm="{{confirm_cleanCache_properties}}" confirmed="cacheProperties()" class="btn btn-primary" th:text="#{tClean}"></button>
+					</td>
+				</tr>
+				<!-- Checks -->
+				<tr>
+					<td th:text="#{cache.checks}"></td>
+					<td>
+						<button ng-confirm="{{confirm_cleanCache_checks}}" confirmed="cacheChecks()" class="btn btn-primary" th:text="#{tClean}"></button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
 
 
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

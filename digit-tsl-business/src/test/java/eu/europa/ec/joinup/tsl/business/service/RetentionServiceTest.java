@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -169,7 +169,7 @@ public class RetentionServiceTest extends AbstractSpringTest {
         Assert.assertFalse(dsRetention.isEmpty());
         Assert.assertEquals(1, dsRetention.get(0).getTls().size());
 
-        //New draft
+        // New draft
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH, -2);
         cal.add(Calendar.DAY_OF_MONTH, -1);

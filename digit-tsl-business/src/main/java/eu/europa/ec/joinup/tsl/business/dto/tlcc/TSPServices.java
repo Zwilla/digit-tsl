@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -55,34 +55,31 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "TSPServices", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class TSPServices {
 
-	@XmlElement(name = "TSPService", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<TSPService> tspService;
+    @XmlElement(name = "TSPService", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<TSPService> tspService;
 
-	/**
-	 * Obtient la valeur de la propriete tspService.
-	 *
-	 * @return
-	 * 		possible object is
-	 *         {@link TSPService }
-	 *
-	 */
-	public List<TSPService> getTSPService() {
-		if (tspService == null) {
-			this.tspService = new ArrayList<TSPService>();
-		}
-		return tspService;
-	}
+    /**
+     * Obtient la valeur de la propriete tspService.
+     *
+     * @return possible object is {@link TSPService }
+     *
+     */
+    public List<TSPService> getTSPService() {
+        if (tspService == null) {
+            this.tspService = new ArrayList<TSPService>();
+        }
+        return tspService;
+    }
 
-	/**
-	 * Definit la valeur de la propriete tspService.
-	 *
-	 * @param value
-	 *            allowed object is
-	 *            {@link TSPService }
-	 *
-	 */
-	public void setTSPService(List<TSPService> value) {
-		this.tspService = value;
-	}
+    /**
+     * Definit la valeur de la propriete tspService.
+     *
+     * @param value
+     *            allowed object is {@link TSPService }
+     *
+     */
+    public void setTSPService(List<TSPService> value) {
+        this.tspService = value;
+    }
 
 }

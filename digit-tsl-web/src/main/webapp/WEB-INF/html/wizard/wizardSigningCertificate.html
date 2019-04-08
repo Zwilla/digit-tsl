@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
+<script th:src="@{/controllers/wizard/signingCertificateController.js}"></script>
+</head>
+<body>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
+
+	<div class="body" ng-controller="signingCertificateController">
+
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
+
+		<!-- MAIN CONTENT -->
+		<main>
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{wizard.signingCertificate.menu}"></span>
+			</div>
+			<!-- Informations -->
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-lg-12">
+					<span class="fa fa-info-circle"></span>
+					<span th:text="#{wizard.signingCertificate.info}"></span>
+				</div>
+			</div>
+			<br />
+			<!-- Loading  -->
+			<div ng-show="!load">
+				<div align="center">
+					<label th:text="#{wizard.signingCertificate.in.progress}"></label>
+				</div>
+				<th:block th:replace="spinner :: spinner"></th:block>
+			</div>
+			<!-- Criterias -->
+			<div ng-show="!searchInit && load" class="row">
+				<div class="row">
+					<div class="wizard-tlsigning-row">
+						<span th:text="#{tbCountry}"></span>
+					</div>
+					<div class="wizard-tlsigning-radio">
+						<select ng-model="requestForm.countryCode">
+							<option selected="true" value=""></option>
+							<option ng-repeat="t in countryCodeNameProperties" ng-value="t.label">{{t.description}}</option>
+						</select>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 15px;">
+					<div class="wizard-tlsigning-row">
+						<span th:text="#{tCertificate}"></span>
+					</div>
+					<div class="wizard-tlsigning-radio">
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="certificateType" value="FILE" class="radio-alignement">
+							<span th:text="#{tFile}"></span>
+						</label>
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="certificateType" value="B64" class="radio-alignement">
+							<span th:text="#{tB64}"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Input file -->
+				<div class="row" style="margin-top: 15px;" ng-if="certificateType=='FILE'">
+					<div class="wizard-tlsigning-row">
+						<span th:text="#{wizard.signingCertificate.certFile}"></span>
+					</div>
+					<input id="fileInput" type="file" class="wizard-tlsigning-certinpute" onchange="angular.element(this).scope().uploadFile(this.files[0])" />
+				</div>
+				<!-- Input B64 -->
+				<div class="row" style="margin-top: 15px;" ng-show="certificateType=='B64'">
+					<div class="wizard-tlsigning-row" style="vertical-align: top;">
+						<span th:text="#{wizard.signingCertificate.certB64}"></span>
+					</div>
+					<div class="wizard-tlsigning-certinpute">
+						<textarea ng-model="requestForm.certificateB64" rows="5" cols="100" style="margin-left: 0px; resize: none;"></textarea>
+					</div>
+				</div>
+				<!-- Submit -->
+				<div class="row">
+					<button class="btn btn-primary" ng-click="submitCertificate()" ng-disabled="updateSubmitState()" th:text="#{wizard.signingCertificate.runValidation}" style="float: right; margin-right: 10px;"></button>
+				</div>
+				<br />
+			</div>
+			<!-- Results -->
+			<div ng-show="searchInit" class="row">
+				<!-- Country -->
+				<div class="row col-lg-12">
+					<label th:text="#{tbCountry}"></label>
+					<span>{{getCountry(requestForm.countryCode)}}</span>
+				</div>
+				<!-- Certificate -->
+				<div class="row col-lg-12" ng-if="tCertificate!=null">
+					<div>
+						<label th:text="#{tCertificate}"></label>
+						<div class="wizard-certificate-carret">
+							<span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+							<span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+						</div>
+						<span>{{tCertificate.certSubjectShortName}} ({{ tCertificate.certNotBefore | date:'yyyy-MM-dd'}} - {{ tCertificate.certAfter | date:'yyyy-MM-dd'}})</span>
+					</div>
+					<th:block th:replace="certificat :: certificat" th:remove="tag"></th:block>
+				</div>
+				<!-- Checks -->
+				<div class="row col-lg-12" ng-if="results.length==0" style="margin-top: 15px;">
+					<span class="fa fa-check-circle successColor"></span>
+					<label th:text="#{wizard.signingCertificate.success}"></label>
+				</div>
+				<div class="row" ng-if="results.length>0">
+					<div class="row col-lg-12" style="margin-top: 15px;">
+						<label th:text="#{wizard.signingCertificate.errors}"></label>
+					</div>
+					<div class="row col-lg-12" ng-repeat="check in results">
+						<!-- Error -->
+						<span class="fa-stack cursor-pointer marginL-1" ng-if="check.status=='ERROR'">
+							<i class="fa fa-circle fa-stack-1x white"></i>
+							<span class="fa fa-exclamation-circle fa-stack-1x errorColor"></span>
+						</span>
+						<!-- Warning -->
+						<span class="fa-stack cursor-pointer marginL-1" ng-if="check.status=='WARNING'">
+							<i class="fa fa-circle fa-stack-1x white"></i>
+							<span class="fa fa-question-circle fa-stack-1x infoColor"></span>
+						</span>
+						<span>{{check.description}}</span>
+					</div>
+				</div>
+				<!-- Reset -->
+				<div class="row" style="margin-top: 15px;">
+					<button class="btn btn-primary" ng-click="resetSearch()" th:text="#{wizard.signingCertificate.reset.search}" style="float: right; margin-right: 10px;"></button>
+				</div>
+				<br />
+			</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
+</body>
+</html>

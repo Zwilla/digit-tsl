@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import javax.xml.bind.JAXBElement;
@@ -34,19 +33,13 @@ import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.QName;
 
-
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the eu.europa.esig.jaxb.v5.xades package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
- * provided in this class.
+ * This object contains factory methods for each Java content interface and Java element interface generated in the eu.europa.esig.jaxb.v5.xades
+ * package.
+ * <p>
+ * An ObjectFactory allows you to programatically construct new instances of the Java representation for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces and classes representing the binding of schema type definitions, element declarations and model
+ * groups. Factory methods for each of these are provided in this class.
  * 
  */
 @XmlRegistry
@@ -497,7 +490,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "Any")
     public JAXBElement<AnyTypeV5> createAny(AnyTypeV5 value) {
-        return new JAXBElement<AnyTypeV5>(_Any_QNAME, AnyTypeV5 .class, null, value);
+        return new JAXBElement<AnyTypeV5>(_Any_QNAME, AnyTypeV5.class, null, value);
     }
 
     /**
@@ -506,7 +499,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "ObjectIdentifier")
     public JAXBElement<ObjectIdentifierTypeV5> createObjectIdentifier(ObjectIdentifierTypeV5 value) {
-        return new JAXBElement<ObjectIdentifierTypeV5>(_ObjectIdentifier_QNAME, ObjectIdentifierTypeV5 .class, null, value);
+        return new JAXBElement<ObjectIdentifierTypeV5>(_ObjectIdentifier_QNAME, ObjectIdentifierTypeV5.class, null, value);
     }
 
     /**
@@ -515,7 +508,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "EncapsulatedPKIData")
     public JAXBElement<EncapsulatedPKIDataTypeV5> createEncapsulatedPKIData(EncapsulatedPKIDataTypeV5 value) {
-        return new JAXBElement<EncapsulatedPKIDataTypeV5>(_EncapsulatedPKIData_QNAME, EncapsulatedPKIDataTypeV5 .class, null, value);
+        return new JAXBElement<EncapsulatedPKIDataTypeV5>(_EncapsulatedPKIData_QNAME, EncapsulatedPKIDataTypeV5.class, null, value);
     }
 
     /**
@@ -524,7 +517,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "Include")
     public JAXBElement<IncludeTypeV5> createInclude(IncludeTypeV5 value) {
-        return new JAXBElement<IncludeTypeV5>(_Include_QNAME, IncludeTypeV5 .class, null, value);
+        return new JAXBElement<IncludeTypeV5>(_Include_QNAME, IncludeTypeV5.class, null, value);
     }
 
     /**
@@ -533,7 +526,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "ReferenceInfo")
     public JAXBElement<ReferenceInfoTypeV5> createReferenceInfo(ReferenceInfoTypeV5 value) {
-        return new JAXBElement<ReferenceInfoTypeV5>(_ReferenceInfo_QNAME, ReferenceInfoTypeV5 .class, null, value);
+        return new JAXBElement<ReferenceInfoTypeV5>(_ReferenceInfo_QNAME, ReferenceInfoTypeV5.class, null, value);
     }
 
     /**
@@ -542,7 +535,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "XAdESTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createXAdESTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_XAdESTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_XAdESTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -551,7 +544,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "OtherTimeStamp")
     public JAXBElement<OtherTimeStampTypeV5> createOtherTimeStamp(OtherTimeStampTypeV5 value) {
-        return new JAXBElement<OtherTimeStampTypeV5>(_OtherTimeStamp_QNAME, OtherTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<OtherTimeStampTypeV5>(_OtherTimeStamp_QNAME, OtherTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -560,7 +553,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "QualifyingProperties")
     public JAXBElement<QualifyingPropertiesTypeV5> createQualifyingProperties(QualifyingPropertiesTypeV5 value) {
-        return new JAXBElement<QualifyingPropertiesTypeV5>(_QualifyingProperties_QNAME, QualifyingPropertiesTypeV5 .class, null, value);
+        return new JAXBElement<QualifyingPropertiesTypeV5>(_QualifyingProperties_QNAME, QualifyingPropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -569,7 +562,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignedProperties")
     public JAXBElement<SignedPropertiesTypeV5> createSignedProperties(SignedPropertiesTypeV5 value) {
-        return new JAXBElement<SignedPropertiesTypeV5>(_SignedProperties_QNAME, SignedPropertiesTypeV5 .class, null, value);
+        return new JAXBElement<SignedPropertiesTypeV5>(_SignedProperties_QNAME, SignedPropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -578,7 +571,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "UnsignedProperties")
     public JAXBElement<UnsignedPropertiesTypeV5> createUnsignedProperties(UnsignedPropertiesTypeV5 value) {
-        return new JAXBElement<UnsignedPropertiesTypeV5>(_UnsignedProperties_QNAME, UnsignedPropertiesTypeV5 .class, null, value);
+        return new JAXBElement<UnsignedPropertiesTypeV5>(_UnsignedProperties_QNAME, UnsignedPropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -587,7 +580,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignedSignatureProperties")
     public JAXBElement<SignedSignaturePropertiesTypeV5> createSignedSignatureProperties(SignedSignaturePropertiesTypeV5 value) {
-        return new JAXBElement<SignedSignaturePropertiesTypeV5>(_SignedSignatureProperties_QNAME, SignedSignaturePropertiesTypeV5 .class, null, value);
+        return new JAXBElement<SignedSignaturePropertiesTypeV5>(_SignedSignatureProperties_QNAME, SignedSignaturePropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -596,7 +589,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignedDataObjectProperties")
     public JAXBElement<SignedDataObjectPropertiesTypeV5> createSignedDataObjectProperties(SignedDataObjectPropertiesTypeV5 value) {
-        return new JAXBElement<SignedDataObjectPropertiesTypeV5>(_SignedDataObjectProperties_QNAME, SignedDataObjectPropertiesTypeV5 .class, null, value);
+        return new JAXBElement<SignedDataObjectPropertiesTypeV5>(_SignedDataObjectProperties_QNAME, SignedDataObjectPropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -605,7 +598,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "UnsignedSignatureProperties")
     public JAXBElement<UnsignedSignaturePropertiesTypeV5> createUnsignedSignatureProperties(UnsignedSignaturePropertiesTypeV5 value) {
-        return new JAXBElement<UnsignedSignaturePropertiesTypeV5>(_UnsignedSignatureProperties_QNAME, UnsignedSignaturePropertiesTypeV5 .class, null, value);
+        return new JAXBElement<UnsignedSignaturePropertiesTypeV5>(_UnsignedSignatureProperties_QNAME, UnsignedSignaturePropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -614,7 +607,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "UnsignedDataObjectProperties")
     public JAXBElement<UnsignedDataObjectPropertiesTypeV5> createUnsignedDataObjectProperties(UnsignedDataObjectPropertiesTypeV5 value) {
-        return new JAXBElement<UnsignedDataObjectPropertiesTypeV5>(_UnsignedDataObjectProperties_QNAME, UnsignedDataObjectPropertiesTypeV5 .class, null, value);
+        return new JAXBElement<UnsignedDataObjectPropertiesTypeV5>(_UnsignedDataObjectProperties_QNAME, UnsignedDataObjectPropertiesTypeV5.class, null, value);
     }
 
     /**
@@ -623,7 +616,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "QualifyingPropertiesReference")
     public JAXBElement<QualifyingPropertiesReferenceTypeV5> createQualifyingPropertiesReference(QualifyingPropertiesReferenceTypeV5 value) {
-        return new JAXBElement<QualifyingPropertiesReferenceTypeV5>(_QualifyingPropertiesReference_QNAME, QualifyingPropertiesReferenceTypeV5 .class, null, value);
+        return new JAXBElement<QualifyingPropertiesReferenceTypeV5>(_QualifyingPropertiesReference_QNAME, QualifyingPropertiesReferenceTypeV5.class, null, value);
     }
 
     /**
@@ -641,7 +634,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SigningCertificate")
     public JAXBElement<CertIDListTypeV5> createSigningCertificate(CertIDListTypeV5 value) {
-        return new JAXBElement<CertIDListTypeV5>(_SigningCertificate_QNAME, CertIDListTypeV5 .class, null, value);
+        return new JAXBElement<CertIDListTypeV5>(_SigningCertificate_QNAME, CertIDListTypeV5.class, null, value);
     }
 
     /**
@@ -650,7 +643,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignaturePolicyIdentifier")
     public JAXBElement<SignaturePolicyIdentifierTypeV5> createSignaturePolicyIdentifier(SignaturePolicyIdentifierTypeV5 value) {
-        return new JAXBElement<SignaturePolicyIdentifierTypeV5>(_SignaturePolicyIdentifier_QNAME, SignaturePolicyIdentifierTypeV5 .class, null, value);
+        return new JAXBElement<SignaturePolicyIdentifierTypeV5>(_SignaturePolicyIdentifier_QNAME, SignaturePolicyIdentifierTypeV5.class, null, value);
     }
 
     /**
@@ -668,7 +661,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SPUserNotice")
     public JAXBElement<SPUserNoticeTypeV5> createSPUserNotice(SPUserNoticeTypeV5 value) {
-        return new JAXBElement<SPUserNoticeTypeV5>(_SPUserNotice_QNAME, SPUserNoticeTypeV5 .class, null, value);
+        return new JAXBElement<SPUserNoticeTypeV5>(_SPUserNotice_QNAME, SPUserNoticeTypeV5.class, null, value);
     }
 
     /**
@@ -677,7 +670,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CounterSignature")
     public JAXBElement<CounterSignatureTypeV5> createCounterSignature(CounterSignatureTypeV5 value) {
-        return new JAXBElement<CounterSignatureTypeV5>(_CounterSignature_QNAME, CounterSignatureTypeV5 .class, null, value);
+        return new JAXBElement<CounterSignatureTypeV5>(_CounterSignature_QNAME, CounterSignatureTypeV5.class, null, value);
     }
 
     /**
@@ -686,7 +679,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "DataObjectFormat")
     public JAXBElement<DataObjectFormatTypeV5> createDataObjectFormat(DataObjectFormatTypeV5 value) {
-        return new JAXBElement<DataObjectFormatTypeV5>(_DataObjectFormat_QNAME, DataObjectFormatTypeV5 .class, null, value);
+        return new JAXBElement<DataObjectFormatTypeV5>(_DataObjectFormat_QNAME, DataObjectFormatTypeV5.class, null, value);
     }
 
     /**
@@ -695,7 +688,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CommitmentTypeIndication")
     public JAXBElement<CommitmentTypeIndicationTypeV5> createCommitmentTypeIndication(CommitmentTypeIndicationTypeV5 value) {
-        return new JAXBElement<CommitmentTypeIndicationTypeV5>(_CommitmentTypeIndication_QNAME, CommitmentTypeIndicationTypeV5 .class, null, value);
+        return new JAXBElement<CommitmentTypeIndicationTypeV5>(_CommitmentTypeIndication_QNAME, CommitmentTypeIndicationTypeV5.class, null, value);
     }
 
     /**
@@ -704,7 +697,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignatureProductionPlace")
     public JAXBElement<SignatureProductionPlaceTypeV5> createSignatureProductionPlace(SignatureProductionPlaceTypeV5 value) {
-        return new JAXBElement<SignatureProductionPlaceTypeV5>(_SignatureProductionPlace_QNAME, SignatureProductionPlaceTypeV5 .class, null, value);
+        return new JAXBElement<SignatureProductionPlaceTypeV5>(_SignatureProductionPlace_QNAME, SignatureProductionPlaceTypeV5.class, null, value);
     }
 
     /**
@@ -713,7 +706,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignerRole")
     public JAXBElement<SignerRoleTypeV5> createSignerRole(SignerRoleTypeV5 value) {
-        return new JAXBElement<SignerRoleTypeV5>(_SignerRole_QNAME, SignerRoleTypeV5 .class, null, value);
+        return new JAXBElement<SignerRoleTypeV5>(_SignerRole_QNAME, SignerRoleTypeV5.class, null, value);
     }
 
     /**
@@ -722,7 +715,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AllDataObjectsTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createAllDataObjectsTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_AllDataObjectsTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_AllDataObjectsTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -731,7 +724,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "IndividualDataObjectsTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createIndividualDataObjectsTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_IndividualDataObjectsTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_IndividualDataObjectsTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -740,7 +733,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignatureTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createSignatureTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_SignatureTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_SignatureTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -749,7 +742,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteCertificateRefs")
     public JAXBElement<CompleteCertificateRefsTypeV5> createCompleteCertificateRefs(CompleteCertificateRefsTypeV5 value) {
-        return new JAXBElement<CompleteCertificateRefsTypeV5>(_CompleteCertificateRefs_QNAME, CompleteCertificateRefsTypeV5 .class, null, value);
+        return new JAXBElement<CompleteCertificateRefsTypeV5>(_CompleteCertificateRefs_QNAME, CompleteCertificateRefsTypeV5.class, null, value);
     }
 
     /**
@@ -758,7 +751,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteRevocationRefs")
     public JAXBElement<CompleteRevocationRefsTypeV5> createCompleteRevocationRefs(CompleteRevocationRefsTypeV5 value) {
-        return new JAXBElement<CompleteRevocationRefsTypeV5>(_CompleteRevocationRefs_QNAME, CompleteRevocationRefsTypeV5 .class, null, value);
+        return new JAXBElement<CompleteRevocationRefsTypeV5>(_CompleteRevocationRefs_QNAME, CompleteRevocationRefsTypeV5.class, null, value);
     }
 
     /**
@@ -767,7 +760,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeCertificateRefs")
     public JAXBElement<CompleteCertificateRefsTypeV5> createAttributeCertificateRefs(CompleteCertificateRefsTypeV5 value) {
-        return new JAXBElement<CompleteCertificateRefsTypeV5>(_AttributeCertificateRefs_QNAME, CompleteCertificateRefsTypeV5 .class, null, value);
+        return new JAXBElement<CompleteCertificateRefsTypeV5>(_AttributeCertificateRefs_QNAME, CompleteCertificateRefsTypeV5.class, null, value);
     }
 
     /**
@@ -776,7 +769,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationRefs")
     public JAXBElement<CompleteRevocationRefsTypeV5> createAttributeRevocationRefs(CompleteRevocationRefsTypeV5 value) {
-        return new JAXBElement<CompleteRevocationRefsTypeV5>(_AttributeRevocationRefs_QNAME, CompleteRevocationRefsTypeV5 .class, null, value);
+        return new JAXBElement<CompleteRevocationRefsTypeV5>(_AttributeRevocationRefs_QNAME, CompleteRevocationRefsTypeV5.class, null, value);
     }
 
     /**
@@ -785,7 +778,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SigAndRefsTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createSigAndRefsTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_SigAndRefsTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_SigAndRefsTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -794,7 +787,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RefsOnlyTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createRefsOnlyTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_RefsOnlyTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_RefsOnlyTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
@@ -803,7 +796,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CertificateValues")
     public JAXBElement<CertificateValuesTypeV5> createCertificateValues(CertificateValuesTypeV5 value) {
-        return new JAXBElement<CertificateValuesTypeV5>(_CertificateValues_QNAME, CertificateValuesTypeV5 .class, null, value);
+        return new JAXBElement<CertificateValuesTypeV5>(_CertificateValues_QNAME, CertificateValuesTypeV5.class, null, value);
     }
 
     /**
@@ -812,7 +805,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RevocationValues")
     public JAXBElement<RevocationValuesTypeV5> createRevocationValues(RevocationValuesTypeV5 value) {
-        return new JAXBElement<RevocationValuesTypeV5>(_RevocationValues_QNAME, RevocationValuesTypeV5 .class, null, value);
+        return new JAXBElement<RevocationValuesTypeV5>(_RevocationValues_QNAME, RevocationValuesTypeV5.class, null, value);
     }
 
     /**
@@ -821,7 +814,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttrAuthoritiesCertValues")
     public JAXBElement<CertificateValuesTypeV5> createAttrAuthoritiesCertValues(CertificateValuesTypeV5 value) {
-        return new JAXBElement<CertificateValuesTypeV5>(_AttrAuthoritiesCertValues_QNAME, CertificateValuesTypeV5 .class, null, value);
+        return new JAXBElement<CertificateValuesTypeV5>(_AttrAuthoritiesCertValues_QNAME, CertificateValuesTypeV5.class, null, value);
     }
 
     /**
@@ -830,7 +823,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationValues")
     public JAXBElement<RevocationValuesTypeV5> createAttributeRevocationValues(RevocationValuesTypeV5 value) {
-        return new JAXBElement<RevocationValuesTypeV5>(_AttributeRevocationValues_QNAME, RevocationValuesTypeV5 .class, null, value);
+        return new JAXBElement<RevocationValuesTypeV5>(_AttributeRevocationValues_QNAME, RevocationValuesTypeV5.class, null, value);
     }
 
     /**
@@ -839,124 +832,124 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "ArchiveTimeStamp")
     public JAXBElement<XAdESTimeStampTypeV5> createArchiveTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_ArchiveTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, null, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_ArchiveTimeStamp_QNAME, XAdESTimeStampTypeV5.class, null, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CounterSignatureTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CounterSignature", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CounterSignature", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CounterSignatureTypeV5> createUnsignedSignaturePropertiesTypeV5CounterSignature(CounterSignatureTypeV5 value) {
-        return new JAXBElement<CounterSignatureTypeV5>(_CounterSignature_QNAME, CounterSignatureTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CounterSignatureTypeV5>(_CounterSignature_QNAME, CounterSignatureTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignatureTimeStamp", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SignatureTimeStamp", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<XAdESTimeStampTypeV5> createUnsignedSignaturePropertiesTypeV5SignatureTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_SignatureTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_SignatureTimeStamp_QNAME, XAdESTimeStampTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteCertificateRefs", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteCertificateRefs", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CompleteCertificateRefsTypeV5> createUnsignedSignaturePropertiesTypeV5CompleteCertificateRefs(CompleteCertificateRefsTypeV5 value) {
-        return new JAXBElement<CompleteCertificateRefsTypeV5>(_CompleteCertificateRefs_QNAME, CompleteCertificateRefsTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CompleteCertificateRefsTypeV5>(_CompleteCertificateRefs_QNAME, CompleteCertificateRefsTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompleteRevocationRefsTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteRevocationRefs", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CompleteRevocationRefs", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CompleteRevocationRefsTypeV5> createUnsignedSignaturePropertiesTypeV5CompleteRevocationRefs(CompleteRevocationRefsTypeV5 value) {
-        return new JAXBElement<CompleteRevocationRefsTypeV5>(_CompleteRevocationRefs_QNAME, CompleteRevocationRefsTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CompleteRevocationRefsTypeV5>(_CompleteRevocationRefs_QNAME, CompleteRevocationRefsTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeCertificateRefs", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeCertificateRefs", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CompleteCertificateRefsTypeV5> createUnsignedSignaturePropertiesTypeV5AttributeCertificateRefs(CompleteCertificateRefsTypeV5 value) {
-        return new JAXBElement<CompleteCertificateRefsTypeV5>(_AttributeCertificateRefs_QNAME, CompleteCertificateRefsTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CompleteCertificateRefsTypeV5>(_AttributeCertificateRefs_QNAME, CompleteCertificateRefsTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CompleteRevocationRefsTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationRefs", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationRefs", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CompleteRevocationRefsTypeV5> createUnsignedSignaturePropertiesTypeV5AttributeRevocationRefs(CompleteRevocationRefsTypeV5 value) {
-        return new JAXBElement<CompleteRevocationRefsTypeV5>(_AttributeRevocationRefs_QNAME, CompleteRevocationRefsTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CompleteRevocationRefsTypeV5>(_AttributeRevocationRefs_QNAME, CompleteRevocationRefsTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SigAndRefsTimeStamp", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "SigAndRefsTimeStamp", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<XAdESTimeStampTypeV5> createUnsignedSignaturePropertiesTypeV5SigAndRefsTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_SigAndRefsTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_SigAndRefsTimeStamp_QNAME, XAdESTimeStampTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RefsOnlyTimeStamp", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RefsOnlyTimeStamp", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<XAdESTimeStampTypeV5> createUnsignedSignaturePropertiesTypeV5RefsOnlyTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_RefsOnlyTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_RefsOnlyTimeStamp_QNAME, XAdESTimeStampTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CertificateValues", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "CertificateValues", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CertificateValuesTypeV5> createUnsignedSignaturePropertiesTypeV5CertificateValues(CertificateValuesTypeV5 value) {
-        return new JAXBElement<CertificateValuesTypeV5>(_CertificateValues_QNAME, CertificateValuesTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CertificateValuesTypeV5>(_CertificateValues_QNAME, CertificateValuesTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RevocationValuesTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RevocationValues", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "RevocationValues", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<RevocationValuesTypeV5> createUnsignedSignaturePropertiesTypeV5RevocationValues(RevocationValuesTypeV5 value) {
-        return new JAXBElement<RevocationValuesTypeV5>(_RevocationValues_QNAME, RevocationValuesTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<RevocationValuesTypeV5>(_RevocationValues_QNAME, RevocationValuesTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttrAuthoritiesCertValues", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttrAuthoritiesCertValues", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<CertificateValuesTypeV5> createUnsignedSignaturePropertiesTypeV5AttrAuthoritiesCertValues(CertificateValuesTypeV5 value) {
-        return new JAXBElement<CertificateValuesTypeV5>(_AttrAuthoritiesCertValues_QNAME, CertificateValuesTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<CertificateValuesTypeV5>(_AttrAuthoritiesCertValues_QNAME, CertificateValuesTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RevocationValuesTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationValues", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "AttributeRevocationValues", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<RevocationValuesTypeV5> createUnsignedSignaturePropertiesTypeV5AttributeRevocationValues(RevocationValuesTypeV5 value) {
-        return new JAXBElement<RevocationValuesTypeV5>(_AttributeRevocationValues_QNAME, RevocationValuesTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<RevocationValuesTypeV5>(_AttributeRevocationValues_QNAME, RevocationValuesTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "ArchiveTimeStamp", scope = UnsignedSignaturePropertiesTypeV5 .class)
+    @XmlElementDecl(namespace = "http://uri.etsi.org/01903/v1.3.2#", name = "ArchiveTimeStamp", scope = UnsignedSignaturePropertiesTypeV5.class)
     public JAXBElement<XAdESTimeStampTypeV5> createUnsignedSignaturePropertiesTypeV5ArchiveTimeStamp(XAdESTimeStampTypeV5 value) {
-        return new JAXBElement<XAdESTimeStampTypeV5>(_ArchiveTimeStamp_QNAME, XAdESTimeStampTypeV5 .class, UnsignedSignaturePropertiesTypeV5 .class, value);
+        return new JAXBElement<XAdESTimeStampTypeV5>(_ArchiveTimeStamp_QNAME, XAdESTimeStampTypeV5.class, UnsignedSignaturePropertiesTypeV5.class, value);
     }
 
 }

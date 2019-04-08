@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
 <head>
-<base href="/tl-manager/">
+<base href="/tl-manager/" />
 <title th:text="#{title}"></title>
 <link rel="icon" th:href="@{/style/favico.ico}" />
 
@@ -84,1169 +84,1106 @@
 
 <style>
 .tab-content {
-    padding-left: 5px;
+	padding-left: 5px;
 }
 
 .noMargin {
-    margin-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 </style>
 
 </head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="browserController">
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+	<div class="body" ng-controller="browserController">
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- Main Content -->
-        <main ng-if="load==false">
-        <div align="center">
-            <label>{{loadingStatus}}</label>
-        </div>
-        <div th:replace="spinner :: spinner"></div>
-        </main>
-        <main class="panel panel-primary" style="border-style:none;" ng-if="load==true && myTl==undefined">
-        <div style="text-align: center; margin-top: 10px;">
-            <label th:text="#{browserController.tlNotFound}"></label>
-        </div>
-        </main>
-        <main class="panel panel-primary" style="border-style:none;" ng-if="load==true && myTl!=undefined">
-        <div class="col-sm-12 heading-information">
-            <div ng-bind-html="styleTbStatus(myTl.checkStatus)" class="inline-block" style="padding: 0px 5px 0px 5px;"></div>
-            <span>{{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}})</span>
+		<!-- Main Content -->
+		<main ng-if="load==false">
+		<div align="center">
+			<label>{{loadingStatus}}</label>
+		</div>
+		<th:block th:replace="spinner :: spinner"></th:block> </main>
+		<main class="panel panel-primary" style="border-style:none;" ng-if="load==true && myTl==undefined">
+		<div style="text-align: center; margin-top: 10px;">
+			<label th:text="#{browserController.tlNotFound}"></label>
+		</div>
+		</main>
+		<main class="panel panel-primary" style="border-style:none;" ng-if="load==true && myTl!=undefined">
+		<div class="col-sm-12 heading-information">
+			<div ng-bind-html="styleTbStatus(myTl.checkStatus)" class="inline-block" style="padding: 0px 5px 0px 5px;"></div>
+			<span>{{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}})</span>
 
-            <!-- Export -->
-            <div class="cursor-pointer" style="display: inline; float: right;" ng-if="myTl.checkToRun">
-                <span class="cursor-pointer dropdown-toggle" type="button" data-toggle="dropdown">
-                    <span class="fa fa-download"></span>
-                    <span th:text="#{tExport}" style="margin-left: 5px;"></span>
-                </span>
-                <ul class="dropdown-menu pull-right">
-                    <li><a ng-href="/tl-manager/api/tl/download/{{myTl.id}}/{{draftStoreId}}" th:text="#{tXML}"></a></li>
-                    <li><a ng-href="/tl-manager/api/pretty/download/{{myTl.id}}" th:text="#{tPDF}"></a></li>
-                    <li><a ng-href="/tl-manager/api/tl/download/sha2/{{myTl.id}}/{{draftStoreId}}" th:text="#{tSHA2}"></a></li>
-                    <li><a ng-href="/tl-manager/api/checks/download/{{myTl.id}}/{{draftStoreId}}" th:text="#{tReportFileTitle}"></a></li>
-                </ul>
-            </div>
-            <div class="cursor-pointer" style="display: inline; float: right;" ng-if="!myTl.checkToRun" ng-click="exportCheckToRunError()">
-                <span class="fa fa-download"></span>
-                <span th:text="#{tExport}" style="margin-left: 5px;"></span>
-            </div>
+			<!-- Export -->
+			<div class="cursor-pointer" style="display: inline; float: right;" ng-if="myTl.checkToRun">
+				<span class="cursor-pointer dropdown-toggle" type="button" data-toggle="dropdown">
+					<span class="fa fa-download"></span>
+					<span th:text="#{tExport}" style="margin-left: 5px;"></span>
+				</span>
+				<ul class="dropdown-menu pull-right">
+					<li><a ng-href="/tl-manager/api/tl/download/{{myTl.id}}/{{draftStoreId}}" th:text="#{tXML}"></a></li>
+					<li><a ng-href="/tl-manager/api/pretty/download/{{myTl.id}}" th:text="#{tPDF}"></a></li>
+					<li><a ng-href="/tl-manager/api/tl/download/sha2/{{myTl.id}}/{{draftStoreId}}" th:text="#{tSHA2}"></a></li>
+					<li><a ng-href="/tl-manager/api/checks/download/{{myTl.id}}/{{draftStoreId}}" th:text="#{tReportFileTitle}"></a></li>
+				</ul>
+			</div>
+			<div class="cursor-pointer" style="display: inline; float: right;" ng-if="!myTl.checkToRun" ng-click="exportCheckToRunError()">
+				<span class="fa fa-download"></span>
+				<span th:text="#{tExport}" style="margin-left: 5px;"></span>
+			</div>
 
-            <!-- Sign -->
-            <div ng-if="myTl.dbStatus!='PROD'" style="display: inline; float: right; margin-right: 15px;" class="cursor-pointer" ng-click="signTl(myTl,false,signatureInfo)">
-                <span class="fa fa-key"></span>
-                <span th:text="#{tSign}" style="margin-left: 3px;"></span>
-            </div>
+			<!-- Sign -->
+			<div ng-if="myTl.dbStatus!='PROD'" style="display: inline; float: right; margin-right: 15px;" class="cursor-pointer" ng-click="signTl(myTl,false,signatureInfo)">
+				<span class="fa fa-key"></span>
+				<span th:text="#{tSign}" style="margin-left: 3px;"></span>
+			</div>
 
-            <div ng-if="myTl.dbStatus!='DRAFT' && myTl.userEditable" ng-click="editTlDraft('')" tooltip-placement="bottom" tooltip="Create" class="cursor-pointer"
-                style="display: inline; float: right; margin-right: 15px;">
-                <span class="fa fa-edit"></span>
-                <span th:text="#{draft.createNew}" style="margin-left: 3px;"></span>
-            </div>
+			<div ng-if="myTl.dbStatus!='DRAFT' && myTl.userEditable" ng-click="editTlDraft('')" tooltip-placement="bottom" tooltip="Create" class="cursor-pointer"
+				style="display: inline; float: right; margin-right: 15px;">
+				<span class="fa fa-edit"></span>
+				<span th:text="#{draft.createNew}" style="margin-left: 3px;"></span>
+			</div>
 
-            <!-- Check to Run -->
-            <div ng-init="tmpCheckToRun=myTl.checkToRun" ng-if="draftEditionCheckVisible && myTl.dbStatus=='DRAFT'" style="display: inline; float: right; margin-right: 15px;">
-                <!-- ON -->
-                <div ng-if="myTl.checkToRun" ng-confirm="{{browserController_disableChecks}}" confirmed="switchCheckToRun()" class="cursor-pointer">
-                    <span class="fa fa-eye"></span>
-                    <span th:text="#{tlBrowser.performCheck}"></span>
-                </div>
-                <!-- OFF -->
-                <div ng-if="!myTl.checkToRun" ng-confirm="{{browserController_enableChecks}}" confirmed="switchCheckToRun()" class="cursor-pointer">
-                    <span class="fa fa-eye-slash"></span>
-                    <span th:text="#{tlBrowser.performCheck}"></span>
-                </div>
-            </div>
+			<!-- Check to Run -->
+			<div ng-init="tmpCheckToRun=myTl.checkToRun" ng-if="draftEditionCheckVisible && myTl.dbStatus=='DRAFT'" style="display: inline; float: right; margin-right: 15px;">
+				<!-- ON -->
+				<div ng-if="myTl.checkToRun" ng-confirm="{{browserController_disableChecks}}" confirmed="switchCheckToRun()" class="cursor-pointer">
+					<span class="fa fa-eye"></span>
+					<span th:text="#{tlBrowser.performCheck}"></span>
+				</div>
+				<!-- OFF -->
+				<div ng-if="!myTl.checkToRun" ng-confirm="{{browserController_enableChecks}}" confirmed="switchCheckToRun()" class="cursor-pointer">
+					<span class="fa fa-eye-slash"></span>
+					<span th:text="#{tlBrowser.performCheck}"></span>
+				</div>
+			</div>
 
-            <!-- Prod Changes -->
-            <div ng-click="changesProd(myTl.schemeInformation.territory)" tooltip="{{tlBrowser_changes_prod}}" ng-if="myTl.dbStatus=='PROD'" class="cursor-pointer"
-                tooltip-placement="bottom" style="display: inline; float: right; margin-right: 15px;">
-                <span class="fa fa-exchange"></span>
-                <span ng-init="initProdArchived(myTl.schemeInformation.territory)">Changes</span>
-            </div>
-        </div>
-        <br />
-        <div ng-if="!myTl.checkToRun" class="alert alert-warning" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
-            <div>
-                <span th:text="#{browserController.checkToRunWarning}"></span>
-            </div>
-            <div>
-                <span th:text="#{browserController.lastExecutionDate}"></span>
-                <span>{{myTl.checkEdited | date:'yyyy-MM-dd HH:mm:ss'}}</span>
-            </div>
-        </div>
+			<!-- Prod Changes -->
+			<div ng-click="changesProd(myTl.schemeInformation.territory)" tooltip="{{tlBrowser_changes_prod}}" ng-if="myTl.dbStatus=='PROD'" class="cursor-pointer" tooltip-placement="bottom"
+				style="display: inline; float: right; margin-right: 15px;">
+				<span class="fa fa-exchange"></span>
+				<span ng-init="initProdArchived(myTl.schemeInformation.territory)">Changes</span>
+			</div>
+		</div>
+		<br />
+		<!-- Warning - Check disabled -->
+		<div ng-if="!myTl.checkToRun" class="alert alert-warning" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+			<div>
+				<span th:text="#{browserController.checkToRunWarning}"></span>
+			</div>
+			<div>
+				<span th:text="#{browserController.lastExecutionDate}"></span>
+				<span>{{myTl.checkEdited | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+			</div>
+		</div>
+		<!-- Info - TL filtered -->
+		<div ng-if="tspFilter.value" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+			<div>
+				<span th:text="#{tlBrowser.filterInfo}"></span>
+				<label> {{splitFilter}}</label>
+			</div>
+			<div>
+				<span th:text="#{tlBrowser.filterInfo2}"></span>
+			</div>
+		</div>
 
-        <div ng-if="tlChangesProd!=null" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
-            <span th:text="#{tl.changes.prod.to}"></span>
-            <span> ({{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}}) </span>
-            <span th:text="#{tl.changes.prod.to3}"></span>
-            <span> {{myTl.firstScanDate | date:'yyyy-MM-dd HH:mm:ss' }}) </span>
-            <span th:text="#{tl.changes.prod.to2}"></span>
-            <span> ({{tlChangesProd.name}} (Sn{{tlChangesProd.sequenceNumber}}) </span>
-            <span th:text="#{tl.changes.prod.to3}"></span>
-            <span> {{tlChangesProd.firstScanDate | date:'yyyy-MM-dd HH:mm:ss' }})).</span>
-        </div>
+		<div ng-if="tlChangesProd!=null" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+			<span th:text="#{tl.changes.prod.to}"></span>
+			<span> ({{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}}) </span>
+			<span th:text="#{tl.changes.prod.to3}"></span>
+			<span> {{myTl.firstScanDate | date:'yyyy-MM-dd HH:mm:ss' }}) </span>
+			<span th:text="#{tl.changes.prod.to2}"></span>
+			<span> ({{tlChangesProd.name}} (Sn{{tlChangesProd.sequenceNumber}}) </span>
+			<span th:text="#{tl.changes.prod.to3}"></span>
+			<span> {{tlChangesProd.firstScanDate | date:'yyyy-MM-dd HH:mm:ss' }})).</span>
+		</div>
 
-        <!-- Availability -->
-        <div id="availability-bloc" style="margin-top: 5px">
-            <div class="divNodeTitle">
-                <div class="openClose"></div>
-                <div class="divCheckChange"></div>
-                <label style="margin-left: 10px;" class="noMargin" th:text="#{tbAvailability}"></label>
-            </div>
-            <div style="display: inline-block">
-                <span ng-class="styleAvailable(myTl.availabilityStatus)">{{myTl.availabilityStatus | capitalize}}</span>
-            </div>
-        </div>
-        <hr class="style-one" />
-        <!-- Signature -->
-        <div id="signature-bloc" ng-init="myTl.signatureShow='0'" class="row">
-            <div class="divNodeTitle">
-                <div class="openClose">
-                    <span ng-click="myTl.signatureShow='1'" ng-if="myTl.signatureShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                    <span ng-click="myTl.signatureShow='0'" ng-if="myTl.signatureShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                </div>
-                <div class="divCheckChange">
-                    <check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_SIGNATURE" listcheck="listChecks" label="tSignature" istreeparent="true"></check>
-                    <change id="myTl.id+'_'+TAG_SIGNATURE" listdiff="listDiffSignature" label="tSignature" istreeparent="true" information="information"></change>
-                </div>
-                <label class="noMargin" th:text="#{tSignature}"></label>
-            </div>
-            <div style="display: inline-block">
-                <div style="display: inline;" ng-if="(signatureInfo.indication==null)">
-                    <span th:text="#{tSignNull}"></span>
-                </div>
-                <div style="display: inline;" ng-if="signatureInfo.indication=='VALID'">
-                    <span th:text="#{tSignValide}"></span>
-                </div>
-                <div style="display: inline;" ng-if="signatureInfo.indication=='INVALID'">
-                    <span th:text="#{tSignInvalid}"></span>
-                    <span ng-if="signatureInfo.subIndication!=null && signatureInfo.subIndication!=''">({{signatureInfo.subIndication}})</span>
-                </div>
-                <div style="display: inline;" ng-if="(signatureInfo.indication=='INDETERMINATE')">
-                    <span th:text="#{tSignIndeterminate}"></span>
-                    <span ng-if="signatureInfo.subIndication!=null && signatureInfo.subIndication!=''">({{signatureInfo.subIndication}})</span>
-                </div>
-                <div style="display: inline;" ng-if="(signatureInfo.indication=='MORE_THAN_ONE_SIGNATURE')">
-                    <span th:text="#{tSignMTO}"></span>
-                </div>
-                <div style="display: inline;" style="display:inline;" ng-if="(signatureInfo.indication=='NOT_SIGNED')">
-                    <span th:text="#{tSignNotSigned}"></span>
-                </div>
-                <div style="display: inline;" ng-if="(signatureInfo.indication=='FILE_NOT_FOUND')">
-                    <span th:text="#{tSignFNF}"></span>
-                </div>
-            </div>
-        </div>
-        <div ng-if="myTl.signatureShow=='1'" class="container-fluid">
-            <!-- Signed By -->
-            <div class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divChange">
-                        <change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNED_BY" listdiff="listDiffSignature" label="signature.signBy" value="signatureInfo.signedBy"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{signature.signBy}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{signatureInfo.signedBy}}</span>
-                </div>
-            </div>
-            <!-- Signing Date -->
-            <div class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divChange">
-                        <change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNING_DATE" listdiff="listDiffSignature" label="signature.signingDate"
-                            value="signatureInfo.signingDate | date:'yyyy-MM-dd HH:mm:ss'" information="information"></change>
-                    </div>
-                    <span th:text="#{signature.signingDate}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{signatureInfo.signingDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
-                </div>
-            </div>
-            <!-- Format -->
-            <div class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divChange">
-                        <change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNATURE_FORMAT" listdiff="listDiffSignature" label="signature.format"
-                            value="signatureInfo.signatureFormat" information="information"></change>
-                    </div>
-                    <span th:text="#{signature.format}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{signatureInfo.signatureFormat}}</span>
-                </div>
-            </div>
-            <!-- Digest Algo -->
-            <div class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divChange">
-                        <change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_DIGEST_ALGORITHM" listdiff="listDiffSignature" label="signature.digestAlgo" value="signatureInfo.digestAlgo"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{signature.digestAlgo}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{signatureInfo.digestAlgo}}</span>
-                </div>
-            </div>
-            <!-- Encryption Algo -->
-            <div class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divChange">
-                        <change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_ENCRYPTION_ALGORITHM" listdiff="listDiffSignature" label="signature.encryptionAlgo"
-                            value="signatureInfo.encryptionAlgo" information="information"></change>
-                    </div>
-                    <span th:text="#{signature.encryptionAlgo}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{signatureInfo.encryptionAlgo}}</span>
-                </div>
-            </div>
-        </div>
+		<!-- Availability -->
+		<div id="availability-bloc" style="margin-top: 5px">
+			<div class="divNodeTitle">
+				<div class="openClose"></div>
+				<div class="divCheckChange"></div>
+				<label style="margin-left: 10px;" class="noMargin" th:text="#{tbAvailability}"></label>
+			</div>
+			<div style="display: inline-block">
+				<span ng-class="styleAvailable(myTl.availabilityStatus)">{{myTl.availabilityStatus | capitalize}}</span>
+			</div>
+		</div>
+		<hr class="style-one" />
+		<!-- Signature -->
+		<div id="signature-bloc" ng-init="myTl.signatureShow='0'" class="row">
+			<div class="divNodeTitle">
+				<div class="openClose">
+					<span ng-click="myTl.signatureShow='1'" ng-if="myTl.signatureShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+					<span ng-click="myTl.signatureShow='0'" ng-if="myTl.signatureShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+				</div>
+				<div class="divCheckChange">
+					<check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_SIGNATURE" listcheck="listChecks" label="tSignature" istreeparent="true"></check>
+					<change id="myTl.id+'_'+TAG_SIGNATURE" listdiff="listDiffSignature" label="tSignature" istreeparent="true" information="information"></change>
+				</div>
+				<label class="noMargin" th:text="#{tSignature}"></label>
+			</div>
+			<div style="display: inline-block">
+				<div style="display: inline;" ng-if="(signatureInfo.indication==null)">
+					<span th:text="#{tSignNull}"></span>
+				</div>
+				<div style="display: inline;" ng-if="signatureInfo.indication=='VALID'">
+					<span th:text="#{tSignValide}"></span>
+				</div>
+				<div style="display: inline;" ng-if="signatureInfo.indication=='INVALID'">
+					<span th:text="#{tSignInvalid}"></span>
+					<span ng-if="signatureInfo.subIndication!=null && signatureInfo.subIndication!=''">({{signatureInfo.subIndication}})</span>
+				</div>
+				<div style="display: inline;" ng-if="(signatureInfo.indication=='INDETERMINATE')">
+					<span th:text="#{tSignIndeterminate}"></span>
+					<span ng-if="signatureInfo.subIndication!=null && signatureInfo.subIndication!=''">({{signatureInfo.subIndication}})</span>
+				</div>
+				<div style="display: inline;" ng-if="(signatureInfo.indication=='MORE_THAN_ONE_SIGNATURE')">
+					<span th:text="#{tSignMTO}"></span>
+				</div>
+				<div style="display: inline;" ng-if="(signatureInfo.indication=='NOT_SIGNED')">
+					<span th:text="#{tSignNotSigned}"></span>
+				</div>
+				<div style="display: inline;" ng-if="(signatureInfo.indication=='FILE_NOT_FOUND')">
+					<span th:text="#{tSignFNF}"></span>
+				</div>
+			</div>
+		</div>
+		<div ng-if="myTl.signatureShow=='1'" class="container-fluid">
+			<!-- Signed By -->
+			<div class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divChange">
+						<change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNED_BY" listdiff="listDiffSignature" label="signature.signBy" value="signatureInfo.signedBy" information="information"></change>
+					</div>
+					<span th:text="#{signature.signBy}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{signatureInfo.signedBy}}</span>
+				</div>
+			</div>
+			<!-- Signing Date -->
+			<div class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divChange">
+						<change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNING_DATE" listdiff="listDiffSignature" label="signature.signingDate" value="signatureInfo.signingDate | date:'yyyy-MM-dd HH:mm:ss'"
+							information="information"></change>
+					</div>
+					<span th:text="#{signature.signingDate}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{signatureInfo.signingDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+				</div>
+			</div>
+			<!-- Format -->
+			<div class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divChange">
+						<change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_SIGNATURE_FORMAT" listdiff="listDiffSignature" label="signature.format" value="signatureInfo.signatureFormat" information="information"></change>
+					</div>
+					<span th:text="#{signature.format}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{signatureInfo.signatureFormat}}</span>
+				</div>
+			</div>
+			<!-- Digest Algo -->
+			<div class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divChange">
+						<change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_DIGEST_ALGORITHM" listdiff="listDiffSignature" label="signature.digestAlgo" value="signatureInfo.digestAlgo" information="information"></change>
+					</div>
+					<span th:text="#{signature.digestAlgo}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{signatureInfo.digestAlgo}}</span>
+				</div>
+			</div>
+			<!-- Encryption Algo -->
+			<div class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divChange">
+						<change id="myTl.tlId+'_'+TAG_SIGNATURE+'_'+TAG_ENCRYPTION_ALGORITHM" listdiff="listDiffSignature" label="signature.encryptionAlgo" value="signatureInfo.encryptionAlgo" information="information"></change>
+					</div>
+					<span th:text="#{signature.encryptionAlgo}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{signatureInfo.encryptionAlgo}}</span>
+				</div>
+			</div>
+		</div>
 
-        <hr class="style-one" />
+		<hr class="style-one" />
 
-        <!-- **************************
+		<!-- **************************
 					TSL INFORMATION
 			************************** -->
-        <div class="row">
-            <div class="divNodeTitle">
-                <div class="openClose" id="tlInfoOpenClose">
-                    <span ng-click="schemeInfoMenuOpen()" ng-if="schemeInformationMenuShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" id="tlInfoOpen"></span>
-                    <span ng-click="schemeInfoMenuClose()" ng-if="schemeInformationMenuShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" id="tlInfoClose"></span>
-                </div>
-                <div class="divCheckChange">
-                    <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id" listcheck="listChecks" label="myTl.dbName" istreeparent="true"></check>
-                    <change id="myTl.schemeInformation.id" listdiff="listDiffSchemeInfo" label="myTl.dbName" istreeparent="true" information="information"></change>
-                </div>
-                <label class="noMargin" th:text="#{tlBrowser.tlInformationMenu}"></label>
-            </div>
-            <div style="display: inline-block">
-                <span ng-if="schemeInformationMenuShow!='1'">{{myTl.dbCountryName}} (Sn{{myTl.schemeInformation.sequenceNumber}}) : {{myTl.schemeInformation.issueDate |
-                    date:'yyyy-MM-dd HH:mm:ss' }} - </span>
-                <span ng-if="schemeInformationMenuShow!='1'" ng-class="styleDate(myTl.schemeInformation.nextUpdateDate)"> {{myTl.schemeInformation.nextUpdateDate |
-                    date:'yyyy-MM-dd HH:mm:ss' }}</span>
-            </div>
-        </div>
+		<div class="row">
+			<div class="divNodeTitle">
+				<div class="openClose" id="tlInfoOpenClose">
+					<span ng-click="schemeInfoMenuOpen()" ng-if="schemeInformationMenuShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" id="tlInfoOpen"></span>
+					<span ng-click="schemeInfoMenuClose()" ng-if="schemeInformationMenuShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" id="tlInfoClose"></span>
+				</div>
+				<div class="divCheckChange">
+					<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id" listcheck="listChecks" label="myTl.dbName" istreeparent="true"></check>
+					<change id="myTl.schemeInformation.id" listdiff="listDiffSchemeInfo" label="myTl.dbName" istreeparent="true" information="information"></change>
+				</div>
+				<label class="noMargin" th:text="#{tlBrowser.tlInformationMenu}"></label>
+			</div>
+			<div style="display: inline-block">
+				<span ng-if="schemeInformationMenuShow!='1'">{{myTl.dbCountryName}} (Sn{{myTl.schemeInformation.sequenceNumber}}) : {{myTl.schemeInformation.issueDate | date:'yyyy-MM-dd HH:mm:ss' }} - </span>
+				<span ng-if="schemeInformationMenuShow!='1'" ng-class="styleDate(myTl.schemeInformation.nextUpdateDate)"> {{myTl.schemeInformation.nextUpdateDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+			</div>
+		</div>
 
-        <div class="container-fluid" ng-if="schemeInformationMenuShow=='1'" id="schemeInfo">
-            <!-- TSL Tag -->
-            <div id="tl-tslTag" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_TSL_TAG" listcheck="listChecks" label="tlBrowser_tslTag " istreeparent="false"></check>
-                    </div>
-                    <span th:text="#{tlBrowser.tslTag}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <uri value="myTl.tslTag"></uri>
-                </div>
-            </div>
-            <!-- TSL Identifier -->
-            <div id="tl-tslTag" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_VERSION_IDENTIFER" listcheck="listChecks" label="tlBrowser_tslIdentifier"
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_VERSION_IDENTIFER" listdiff="listDiffSchemeInfo" label="tlBrowser_tslIdentifier " istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.tslIdentifier}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span>{{myTl.schemeInformation.tlIdentifier}}</span>
-                </div>
-            </div>
-            <!-- Territory -->
-            <div id="tl-territory" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange"></div>
-                    <span th:text="#{schemeTerritory}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{myTl.schemeInformation.territory }}</span>
-                </div>
-            </div>
-            <!-- TSL Issuer -->
-            <div id="tl-issuer" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange"></div>
-                    <span th:text="#{tlBrowser.tslIssuer}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span>{{myTl.dbCountryName}}</span>
-                </div>
-            </div>
-            <!-- Sequence Number -->
-            <div id="tl-sequence" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SEQUENCE_NUMBER" listcheck="listChecks" label="tlBrowser_sequenceNumber "
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_SEQUENCE_NUMBER" listdiff="listDiffSchemeInfo" label="tlBrowser_sequenceNumber " istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.sequenceNumber}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{myTl.schemeInformation.sequenceNumber }}</span>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.sequenceNumberTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.sequenceNumberTooltip=EditTooltip(tlBrowser_sequenceNumber )" ng-click="editTlDraft('editSequenceNumber')"></span>
-                </div>
-            </div>
-            <!-- TSL Type -->
-            <div id="tl-tslType" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_TSL_TYPE" listcheck="listChecks" label="schemeInfo_type" istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_TSL_TYPE" listdiff="listDiffSchemeInfo" label="schemeInfo_type" istreeparent="false" information="information"></change>
-                    </div>
-                    <span th:text="#{schemeInfo.type}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <uri value="myTl.schemeInformation.type"></uri>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.tslTypeTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.tslTypeTooltip=EditTooltip(schemeInfo_type )" ng-click="editTlDraft('editTslType')"></span>
-                </div>
-            </div>
-            <!-- Scheme Operator Name-->
-            <div id="tl-schemeOpName" class="row">
-                <div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listDiffSchemeInfo" label="schemeOpeName" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{schemeOpeName}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div class="openClose" ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpeName)">
-                        <span ng-if="myTL.schemeOpshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.schemeOpshow='1'"></span>
-                        <span ng-if="myTL.schemeOpshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.schemeOpshow='0'"></span>
-                    </div>
-                    <div ng-if="myTL.schemeOpshow=='0'" class="tabInformationClose">
-                        <span>{{myTl.schemeInformation.schemeOpeName[0].value}}</span>
-                    </div>
-                    <div ng-if="myTL.schemeOpshow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeOpeName" active="operatorNameActivity[$index]"> <tab-heading> <check
-                            disabled="myTl.checkToRun" id="info.id" listcheck="listChecks" label="schemeOpeName" istreeparent="false"></check> <change id="info.id"
-                            listdiff="listDiffSchemeInfo" label="schemeOpeName" istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading> <span
-                            style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
-                    </div>
-                    <span ng-click="editTlDraft('editSchemeOpeName')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon"
-                        ng-init="myTl.schemeInformation.opNameTooltip=EditTooltip(schemeOpeName)" tooltip="{{myTl.schemeInformation.opNameTooltip}}" tooltip-placement="right"></span>
-                </div>
-            </div>
-            <!-- Postal Address -->
-            <div id="tl-address" class="row">
-                <div class="col-sm-2 text-right scheme-information" ng-init="myTL.addressshow='0'">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_POSTAL_ADDRESSES" listcheck="listChecks" label="tlBrowser_postalAddress"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_POSTAL_ADDRESSES" listdiff="listDiffSchemeInfo" label="tlBrowser_postalAddress" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.postalAddress}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpePostal)" class="openClose">
-                        <span ng-if="myTL.addressshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.addressshow='1'"></span>
-                        <span ng-if="myTL.addressshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.addressshow='0'"></span>
-                    </div>
-                    <div class="tabInformationClose">
-                        <span ng-if="myTL.addressshow=='0' && myTl.schemeInformation.schemeOpePostal[0]!=null"> {{myTl.schemeInformation.schemeOpePostal[0].street}} /
-                            {{myTl.schemeInformation.schemeOpePostal[0].locality}} - {{myTl.schemeInformation.schemeOpePostal[0].postalCode}} /
-                            {{myTl.schemeInformation.schemeOpePostal[0].countryCode}} </span>
-                    </div>
-                    <div ng-if="myTL.addressshow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeOpePostal" active="postalAddressActivity[$index]"> <tab-heading>
-                        <check disabled="myTl.checkToRun" id="info.id" listcheck="listChecks" label="tlBrowser_postalAddress" istreeparent="false"></check> <change id="info.id"
-                            listdiff="listDiffSchemeInfo" label="tlBrowser_postalAddress" istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading>
-                        <div>
-                            <div class="row">
-                                <div class="col-sm-2 ">
-                                    <span th:text="#{address.street}">:</span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{info.street}}</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-2 ">
-                                    <span th:text="#{address.locality}"></span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{info.locality}} - </span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-2 ">
-                                    <span th:text="#{address.postalcode}"></span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{info.postalCode}}</span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-2 ">
-                                    <span th:text="#{address.state}"></span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{info.stateOrProvince}} </span>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-2 ">
-                                    <span th:text="#{address.country}"></span>
-                                </div>
-                                <div class="col-sm-10">
-                                    <span>{{info.countryCode}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        </tab> </tabset>
-                    </div>
-                    <span ng-click="editTlDraft('editPostalAddress')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon"
-                        ng-init="myTl.schemeInformation.postalAddressTooltip=EditTooltip(tlBrowser_postalAddress)" tooltip="{{myTl.schemeInformation.postalAddressTooltip}}"
-                        tooltip-placement="right"></span>
-                </div>
-            </div>
-            <!-- Electronic Address -->
-            <div id="tl-main" class="row">
-                <div class="col-sm-2 text-right scheme-information" ng-init="myTL.emailshow='0'">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_ELECTRONIC_ADDRESS" listcheck="listChecks" label="tlBrowser_electronicAddress"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_ELECTRONIC_ADDRESS" listdiff="listDiffSchemeInfo" label="tlBrowser_electronicAddress" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.electronicAddress}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpeElectronic)" class="openClose">
-                        <span ng-if="myTL.emailshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.emailshow='1'"></span>
-                        <span ng-if="myTL.emailshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.emailshow='0'"></span>
-                    </div>
-                    <div class="tabInformationClose">
-                        <uri ng-if="myTL.emailshow=='0'" value="myTl.schemeInformation.schemeOpeElectronic[0].value"></uri>
-                    </div>
-                    <div ng-if="myTL.emailshow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="elec in myTl.schemeInformation.schemeOpeElectronic" active="electronicAddressActivity[$index]"> <tab-heading>
-                        <check disabled="myTl.checkToRun" id="elec.id" listcheck="listChecks" label="tlBrowser_electronicAddress" istreeparent="false"></check> <change id="elec.id"
-                            listdiff="listDiffSchemeInfo" label="tlBrowser_electronicAddress" istreeparent="false" information="information"></change> <span>{{elec.language}}</span>
-                        </tab-heading> <uri value="elec.value"></uri> </tab> </tabset>
-                    </div>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.electronicAddressTooltip}}"
-                        tooltip-placement="right" ng-init="myTl.schemeInformation.electronicAddressTooltip=EditTooltip(tlBrowser_electronicAddress)"
-                        ng-click="editTlDraft('editElectronicAddress')"></span>
-                </div>
-            </div>
-            <!-- Scheme Name -->
-            <div id="tl-schemeName" class="row">
-                <div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeNameShow='0'">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_NAME" listcheck="listChecks" label="schemeInfo_schemeName"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_NAME" listdiff="listDiffSchemeInfo" label="schemeInfo_schemeName" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{schemeInfo.schemeName}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeName)" class="openClose">
-                        <span ng-if="myTL.schemeNameShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.schemeNameShow='1'"></span>
-                        <span ng-if="myTL.schemeNameShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.schemeNameShow='0'"></span>
-                    </div>
-                    <div ng-if="myTL.schemeNameShow=='0'" class="tabInformationClose">
-                        <span>{{myTl.schemeInformation.schemeName[0].value | cut:false:115:'...'}}</span>
-                    </div>
-                    <div ng-if="myTL.schemeNameShow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="name in myTl.schemeInformation.schemeName" active="schemeNameActivity[$index]"> <tab-heading> <check
-                            disabled="myTl.checkToRun" id="name.id" listcheck="listChecks" label="schemeInfo_schemeName" istreeparent="false"></check> <change id="name.id"
-                            listdiff="listDiffSchemeInfo" label="schemeInfo_schemeName" istreeparent="false" information="information"></change> <span>{{name.language}}</span> </tab-heading> <span>{{name.value}}</span>
-                        </tab> </tabset>
-                    </div>
-                    <span ng-show="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.schemeNameTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.schemeNameTooltip=EditTooltip(schemeInfo_schemeName)" ng-click="editTlDraft('editSchemeName')"></span>
-                </div>
-            </div>
-            <!-- Information URI -->
-            <div id="tl-informationUri" class="row">
-                <div class="col-sm-2 text-right scheme-information" ng-init="myTL.infoURIshow='0'">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_INFORMATION_URI" listcheck="listChecks" label="tlBrowser_informationURI"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_INFORMATION_URI" listdiff="listDiffSchemeInfo" label="tlBrowser_informationURI" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.informationURI}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeInfoUri)" class="openClose">
-                        <span ng-if="myTL.infoURIshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.infoURIshow='1'"></span>
-                        <span ng-if="myTL.infoURIshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.infoURIshow='0'"></span>
-                    </div>
-                    <div ng-if="myTL.infoURIshow=='0'" class="tabInformationClose">
-                        <uri value="myTl.schemeInformation.schemeInfoUri[0].value" cutvalue="myTl.schemeInformation.schemeInfoUri[0].value | cut:true:115:'...'"></uri>
-                    </div>
-                    <div ng-if="myTL.infoURIshow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeInfoUri" active="informationURIActivity[$index]"> <tab-heading> <check
-                            disabled="myTl.checkToRun" id="info.id" listcheck="listChecks" label="tlBrowser_informationURI" istreeparent="false"></check> <change id="info.id"
-                            listdiff="listDiffSchemeInfo" label="tlBrowser_informationURI" istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading>
-                        <uri value="info.value"></uri> </tab> </tabset>
-                    </div>
-                    <span ng-click="editTlDraft('editInformationURI')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon"
-                        ng-init="myTl.schemeInformation.informationUriTooltip=EditTooltip(tlBrowser_informationURI)" tooltip="{{myTl.schemeInformation.informationUriTooltip}}"
-                        tooltip-placement="right"></span>
-                </div>
-            </div>
-            <!-- Status Determination -->
-            <div id="tl-status" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_STATUS_DETERMINATION" listcheck="listChecks" label="schemeInfo_statusDetermination"
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_STATUS_DETERMINATION" listdiff="listDiffSchemeInfo" label="schemeInfo_statusDetermination"
-                            istreeparent="false" information="information"></change>
-                    </div>
-                    <span th:text="#{schemeInfo.statusDetermination}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <uri value="myTl.schemeInformation.statusDetermination"></uri>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.statusDeterminationTooltip}}"
-                        tooltip-placement="right" ng-init="myTl.schemeInformation.statusDeterminationTooltip=EditTooltip(schemeInfo_statusDetermination)"
-                        ng-click="editTlDraft('editStatusDetermination')"></span>
-                </div>
-            </div>
-            <!-- Community Rule -->
-            <div id="tl-communityRule" class="row" ng-init="myTL.communityRuleShow='0'">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_TYPE_COMMUNITY_RULES" listcheck="listChecks" label="schemeInfo_communityRule"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_TYPE_COMMUNITY_RULES" listdiff="listDiffSchemeInfo" label="schemeInfo_communityRule"
-                            istreeparent="true" information="information"></change>
-                    </div>
-                    <span th:text="#{schemeInfo.communityRule}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeTypeCommRule)" class="openClose">
-                        <span ng-if="myTL.communityRuleShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.communityRuleShow='1'"></span>
-                        <span ng-if="myTL.communityRuleShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.communityRuleShow='0'"></span>
-                    </div>
-                    <div ng-if="myTL.communityRuleShow=='0'" class="tabInformationClose">
-                        <uri value="myTl.schemeInformation.schemeTypeCommRule[0].value" cutValue="myTl.schemeInformation.schemeTypeCommRule[0].value | cut:false:115:' ...'"></uri>
-                    </div>
-                    <div ng-if="myTL.communityRuleShow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="comm in myTl.schemeInformation.schemeTypeCommRule" active="communityRuleActivity[$index]"> <tab-heading>
-                        <check disabled="myTl.checkToRun" id="comm.id" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check> <change id="comm.id"
-                            listdiff="listDiffSchemeInfo" label="schemeInfo_communityRule" istreeparent="false" information="information"></change> <span>{{comm.language}}</span> </tab-heading>
-                        <uri value="comm.value"></uri> </tab> </tabset>
-                    </div>
-                    <span ng-if="myTl.userEditable " style="display: inline;" class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.communityRuleTooltip}}"
-                        tooltip-placement="right" ng-init="myTl.schemeInformation.communityRuleTooltip=EditTooltip(schemeInfo_communityRule)"
-                        ng-click="editTlDraft('editCommunityRule')"></span>
-                </div>
-            </div>
-            <!-- Legal Notice -->
-            <div id="tl-legalNotice" class="row" ng-init="myTL.legalNoticeShow='0'">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_POLICY_OR_LEGAL_NOTICE" listcheck="listChecks" label="schemeInfo_legalNotice"
-                            istreeparent="true"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_POLICY_OR_LEGAL_NOTICE" listdiff="listDiffSchemeInfo" label="schemeInfo_legalNotice" istreeparent="true"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{schemeInfo.legalNotice}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <div ng-hide="iconTableVisibility(myTl.schemeInformation.schemePolicy)" class="openClose">
-                        <span ng-if="myTL.legalNoticeShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.legalNoticeShow='1'"></span>
-                        <span ng-if="myTL.legalNoticeShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.legalNoticeShow='0'"></span>
-                    </div>
-                    <div ng-if="myTL.legalNoticeShow=='0'" class="tabInformationClose">
-                        <span>{{myTl.schemeInformation.schemePolicy[0].value | cut:false:115:'...'}}</span>
-                    </div>
-                    <div ng-if="myTL.legalNoticeShow=='1'" class="tabInformationOpen">
-                        <tabset> <tab ng-repeat="policy in myTl.schemeInformation.schemePolicy" active="legalNoticeActivity[$index]"> <tab-heading> <check
-                            disabled="myTl.checkToRun" id="policy.id" listcheck="listChecks" label="schemeInfo_legalNotice" istreeparent="false"></check> <change id="policy.id"
-                            listdiff="listDiffSchemeInfo" label="schemeInfo_legalNotice" istreeparent="false" information="information"></change> <span>{{policy.language}}</span> </tab-heading>
-                        <span>{{policy.value}}</span> </tab> </tabset>
-                    </div>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.legalNoticeTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.legalNoticeTooltip=EditTooltip(schemeInfo_legalNotice)" ng-click="editTlDraft('editLegalNotice')"></span>
-                </div>
-            </div>
-            <!-- Issue Date -->
-            <div id="tl-issueDate" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_ISSUE_DATE" listcheck="listChecks" label="tlBrowser_issueDate" istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_ISSUE_DATE" listdiff="listDiffSchemeInfo" label="tlBrowser_issueDate" istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.issueDate}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span> {{myTl.schemeInformation.issueDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.issueDateTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.issueDateTooltip=EditTooltip(tlBrowser_issueDate)" ng-click="editTlDraft('editIssueDate')"></span>
-                </div>
-            </div>
-            <!-- Expiry Date -->
-            <div id="tl-expiryDate" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_NEXT_UPDATE" listcheck="listChecks" label="tlBrowser_expiryDate"
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_NEXT_UPDATE" listdiff="listDiffSchemeInfo" label="tlBrowser_expiryDate" istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.expiryDate}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span ng-class="styleDate(myTl.schemeInformation.nextUpdateDate)"> {{myTl.schemeInformation.nextUpdateDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.expiryDateTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.schemeInformation.expiryDateTooltip=EditTooltip(tlBrowser_expiryDate)" ng-click="editTlDraft('editNextUpdate')"></span>
-                </div>
-            </div>
-            <!-- Distribution List -->
-            <div id="tl-distributionList" ng-hide="tableVisibility(myTl.schemeInformation.distributionPoint)">
-                <div class="row">
-                    <div class="col-sm-2 text-right scheme-information">
-                        <div class="divCheckChange">
-                            <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_DISTRIBUTION_LIST" listcheck="listChecks" label="schemeInfo_distributionList"
-                                istreeparent="true"></check>
-                            <change id="myTl.schemeInformation.id+'_'+TAG_DISTRIBUTION_LIST" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="true"
-                                information="information"></change>
-                        </div>
-                        <span th:text="#{schemeInfo.distributionList}"></span>
-                    </div>
-                    <div class="col-sm-10">
-                        <div>
-                            <check disabled="myTl.checkToRun" id="myTl.schemeInformation.distributionPoint[0].id" listcheck="listChecks" label="schemeInfo_distributionList"
-                                istreeparent="false"></check>
-                            <change id="myTl.schemeInformation.distributionPoint[0].id" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="false"
-                                information="information"></change>
-                            <uri value="myTl.schemeInformation.distributionPoint[0].value" cutvalue="myTl.schemeInformation.distributionPoint[0].value | cut:true:110:'...'"></uri>
-                            <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.distributionList}}"
-                                tooltip-placement="right" ng-init="myTl.schemeInformation.distributionList=EditTooltip(schemeInfo_distributionList)"
-                                ng-click="editTlDraft('editDistributionList')"></span>
-                        </div>
-                        <div ng-repeat="distri in myTl.schemeInformation.distributionPoint" ng-hide="$first">
-                            <check disabled="myTl.checkToRun" id="distri.id" listcheck="listChecks" label="schemeInfo_distributionList" istreeparent="false"></check>
-                            <change id="distri.id" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="false" information="information"></change>
-                            <uri value="distri.value"></uri>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- TSL Identifier -->
-            <div id="tl-tslTag" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_TSL_IDENTIFIER" listcheck="listChecks" label="tlBrowser_tslIdentifier"
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_TSL_IDENTIFIER" listdiff="listDiffSchemeInfo" label="tlBrowser_tslIdentifier " istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.tslId}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span>{{myTl.tslId}}</span>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.tslIdTooltip}}" tooltip-placement="right"
-                        ng-init="myTl.tslIdTooltip=EditTooltip(tlBrowser_tslId)" ng-click="editTlDraft('editTslId')"></span>
-                </div>
-            </div>
-            <!-- Historical Period -->
-            <div id="tl-historicalPeriod" class="row">
-                <div class="col-sm-2 text-right scheme-information">
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_HISTORICAL_PERIOD" listcheck="listChecks" label="tlBrowser_historicalPeriod"
-                            istreeparent="false"></check>
-                        <change id="myTl.schemeInformation.id+'_'+TAG_HISTORICAL_PERIOD" listdiff="listDiffSchemeInfo" label="tlBrowser_historicalPeriod" istreeparent="false"
-                            information="information"></change>
-                    </div>
-                    <span th:text="#{tlBrowser.historicalPeriod}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <span>{{myTl.schemeInformation.historicalPeriod}}</span>
-                </div>
-            </div>
-        </div>
+		<div class="container-fluid" ng-if="schemeInformationMenuShow=='1'" id="schemeInfo">
+			<!-- TSL Tag -->
+			<div id="tl-tslTag" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_TSL_TAG" listcheck="listChecks" label="tlBrowser_tslTag " istreeparent="false"></check>
+					</div>
+					<span th:text="#{tlBrowser.tslTag}"></span>
+				</div>
+				<div class="col-sm-10">
+					<uri value="myTl.tslTag"></uri>
+				</div>
+			</div>
+			<!-- TSL Identifier -->
+			<div id="tl-tslTag" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_VERSION_IDENTIFER" listcheck="listChecks" label="tlBrowser_tslIdentifier" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_VERSION_IDENTIFER" listdiff="listDiffSchemeInfo" label="tlBrowser_tslIdentifier " istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.tslIdentifier}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span>{{myTl.schemeInformation.tlIdentifier}}</span>
+				</div>
+			</div>
+			<!-- Territory -->
+			<div id="tl-territory" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange"></div>
+					<span th:text="#{schemeTerritory}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{myTl.schemeInformation.territory }}</span>
+				</div>
+			</div>
+			<!-- TSL Issuer -->
+			<div id="tl-issuer" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange"></div>
+					<span th:text="#{tlBrowser.tslIssuer}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span>{{myTl.dbCountryName}}</span>
+				</div>
+			</div>
+			<!-- Sequence Number -->
+			<div id="tl-sequence" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SEQUENCE_NUMBER" listcheck="listChecks" label="tlBrowser_sequenceNumber " istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_SEQUENCE_NUMBER" listdiff="listDiffSchemeInfo" label="tlBrowser_sequenceNumber " istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.sequenceNumber}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{myTl.schemeInformation.sequenceNumber }}</span>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.sequenceNumberTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.sequenceNumberTooltip=EditTooltip(tlBrowser_sequenceNumber )" ng-click="editTlDraft('editSequenceNumber')"></span>
+				</div>
+			</div>
+			<!-- TSL Type -->
+			<div id="tl-tslType" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_TSL_TYPE" listcheck="listChecks" label="schemeInfo_type" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_TSL_TYPE" listdiff="listDiffSchemeInfo" label="schemeInfo_type" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{schemeInfo.type}"></span>
+				</div>
+				<div class="col-sm-10">
+					<uri value="myTl.schemeInformation.type"></uri>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.tslTypeTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.tslTypeTooltip=EditTooltip(schemeInfo_type )" ng-click="editTlDraft('editTslType')"></span>
+				</div>
+			</div>
+			<!-- Scheme Operator Name-->
+			<div id="tl-schemeOpName" class="row">
+				<div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listDiffSchemeInfo" label="schemeOpeName" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{schemeOpeName}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div class="openClose" ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpeName)">
+						<span ng-if="myTL.schemeOpshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.schemeOpshow='1'"></span>
+						<span ng-if="myTL.schemeOpshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.schemeOpshow='0'"></span>
+					</div>
+					<div ng-if="myTL.schemeOpshow=='0'" class="tabInformationClose">
+						<span>{{myTl.schemeInformation.schemeOpeName[0].value}}</span>
+					</div>
+					<div ng-if="myTL.schemeOpshow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeOpeName" active="operatorNameActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun"
+							id="info.id" listcheck="listChecks" label="schemeOpeName" istreeparent="false"></check> <change id="info.id" listdiff="listDiffSchemeInfo" label="schemeOpeName" istreeparent="false"
+							information="information"></change> <span>{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
+					</div>
+					<span ng-click="editTlDraft('editSchemeOpeName')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" ng-init="myTl.schemeInformation.opNameTooltip=EditTooltip(schemeOpeName)"
+						tooltip="{{myTl.schemeInformation.opNameTooltip}}" tooltip-placement="right"></span>
+				</div>
+			</div>
+			<!-- Postal Address -->
+			<div id="tl-address" class="row">
+				<div class="col-sm-2 text-right scheme-information" ng-init="myTL.addressshow='0'">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_POSTAL_ADDRESSES" listcheck="listChecks" label="tlBrowser_postalAddress" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_POSTAL_ADDRESSES" listdiff="listDiffSchemeInfo" label="tlBrowser_postalAddress" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.postalAddress}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpePostal)" class="openClose">
+						<span ng-if="myTL.addressshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.addressshow='1'"></span>
+						<span ng-if="myTL.addressshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.addressshow='0'"></span>
+					</div>
+					<div class="tabInformationClose">
+						<span ng-if="myTL.addressshow=='0' && myTl.schemeInformation.schemeOpePostal[0]!=null"> {{myTl.schemeInformation.schemeOpePostal[0].street}} /
+							{{myTl.schemeInformation.schemeOpePostal[0].locality}} - {{myTl.schemeInformation.schemeOpePostal[0].postalCode}} / {{myTl.schemeInformation.schemeOpePostal[0].countryCode}} </span>
+					</div>
+					<div ng-if="myTL.addressshow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeOpePostal" active="postalAddressActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun"
+							id="info.id" listcheck="listChecks" label="tlBrowser_postalAddress" istreeparent="false"></check> <change id="info.id" listdiff="listDiffSchemeInfo" label="tlBrowser_postalAddress"
+							istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading>
+						<div>
+							<div class="row">
+								<div class="col-sm-2 ">
+									<span th:text="#{address.street}">:</span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{info.street}}</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 ">
+									<span th:text="#{address.locality}"></span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{info.locality}} - </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 ">
+									<span th:text="#{address.postalcode}"></span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{info.postalCode}}</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 ">
+									<span th:text="#{address.state}"></span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{info.stateOrProvince}} </span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-2 ">
+									<span th:text="#{address.country}"></span>
+								</div>
+								<div class="col-sm-10">
+									<span>{{info.countryCode}}</span>
+								</div>
+							</div>
+						</div>
+						</tab> </tabset>
+					</div>
+					<span ng-click="editTlDraft('editPostalAddress')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon"
+						ng-init="myTl.schemeInformation.postalAddressTooltip=EditTooltip(tlBrowser_postalAddress)" tooltip="{{myTl.schemeInformation.postalAddressTooltip}}" tooltip-placement="right"></span>
+				</div>
+			</div>
+			<!-- Electronic Address -->
+			<div id="tl-main" class="row">
+				<div class="col-sm-2 text-right scheme-information" ng-init="myTL.emailshow='0'">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_ELECTRONIC_ADDRESS" listcheck="listChecks" label="tlBrowser_electronicAddress" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_ELECTRONIC_ADDRESS" listdiff="listDiffSchemeInfo" label="tlBrowser_electronicAddress" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.electronicAddress}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeOpeElectronic)" class="openClose">
+						<span ng-if="myTL.emailshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.emailshow='1'"></span>
+						<span ng-if="myTL.emailshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.emailshow='0'"></span>
+					</div>
+					<div class="tabInformationClose">
+						<uri ng-if="myTL.emailshow=='0'" value="myTl.schemeInformation.schemeOpeElectronic[0].value"></uri>
+					</div>
+					<div ng-if="myTL.emailshow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="elec in myTl.schemeInformation.schemeOpeElectronic" active="electronicAddressActivity[$index]"> <tab-heading> <check
+							disabled="myTl.checkToRun" id="elec.id" listcheck="listChecks" label="tlBrowser_electronicAddress" istreeparent="false"></check> <change id="elec.id" listdiff="listDiffSchemeInfo"
+							label="tlBrowser_electronicAddress" istreeparent="false" information="information"></change> <span>{{elec.language}}</span> </tab-heading> <uri value="elec.value"></uri> </tab> </tabset>
+					</div>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.electronicAddressTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.electronicAddressTooltip=EditTooltip(tlBrowser_electronicAddress)" ng-click="editTlDraft('editElectronicAddress')"></span>
+				</div>
+			</div>
+			<!-- Scheme Name -->
+			<div id="tl-schemeName" class="row">
+				<div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeNameShow='0'">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_NAME" listcheck="listChecks" label="schemeInfo_schemeName" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_NAME" listdiff="listDiffSchemeInfo" label="schemeInfo_schemeName" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{schemeInfo.schemeName}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeName)" class="openClose">
+						<span ng-if="myTL.schemeNameShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.schemeNameShow='1'"></span>
+						<span ng-if="myTL.schemeNameShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.schemeNameShow='0'"></span>
+					</div>
+					<div ng-if="myTL.schemeNameShow=='0'" class="tabInformationClose">
+						<span>{{myTl.schemeInformation.schemeName[0].value | cut:false:115:'...'}}</span>
+					</div>
+					<div ng-if="myTL.schemeNameShow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="name in myTl.schemeInformation.schemeName" active="schemeNameActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun" id="name.id"
+							listcheck="listChecks" label="schemeInfo_schemeName" istreeparent="false"></check> <change id="name.id" listdiff="listDiffSchemeInfo" label="schemeInfo_schemeName" istreeparent="false"
+							information="information"></change> <span>{{name.language}}</span> </tab-heading> <span>{{name.value}}</span> </tab> </tabset>
+					</div>
+					<span ng-show="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.schemeNameTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.schemeNameTooltip=EditTooltip(schemeInfo_schemeName)" ng-click="editTlDraft('editSchemeName')"></span>
+				</div>
+			</div>
+			<!-- Information URI -->
+			<div id="tl-informationUri" class="row">
+				<div class="col-sm-2 text-right scheme-information" ng-init="myTL.infoURIshow='0'">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_INFORMATION_URI" listcheck="listChecks" label="tlBrowser_informationURI" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_INFORMATION_URI" listdiff="listDiffSchemeInfo" label="tlBrowser_informationURI" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.informationURI}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeInfoUri)" class="openClose">
+						<span ng-if="myTL.infoURIshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.infoURIshow='1'"></span>
+						<span ng-if="myTL.infoURIshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.infoURIshow='0'"></span>
+					</div>
+					<div ng-if="myTL.infoURIshow=='0'" class="tabInformationClose">
+						<uri value="myTl.schemeInformation.schemeInfoUri[0].value" cutvalue="myTl.schemeInformation.schemeInfoUri[0].value | cut:true:115:'...'"></uri>
+					</div>
+					<div ng-if="myTL.infoURIshow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="info in myTl.schemeInformation.schemeInfoUri" active="informationURIActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun"
+							id="info.id" listcheck="listChecks" label="tlBrowser_informationURI" istreeparent="false"></check> <change id="info.id" listdiff="listDiffSchemeInfo" label="tlBrowser_informationURI"
+							istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading> <uri value="info.value"></uri> </tab> </tabset>
+					</div>
+					<span ng-click="editTlDraft('editInformationURI')" ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon"
+						ng-init="myTl.schemeInformation.informationUriTooltip=EditTooltip(tlBrowser_informationURI)" tooltip="{{myTl.schemeInformation.informationUriTooltip}}" tooltip-placement="right"></span>
+				</div>
+			</div>
+			<!-- Status Determination -->
+			<div id="tl-status" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_STATUS_DETERMINATION" listcheck="listChecks" label="schemeInfo_statusDetermination" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_STATUS_DETERMINATION" listdiff="listDiffSchemeInfo" label="schemeInfo_statusDetermination" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{schemeInfo.statusDetermination}"></span>
+				</div>
+				<div class="col-sm-10">
+					<uri value="myTl.schemeInformation.statusDetermination"></uri>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.statusDeterminationTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.statusDeterminationTooltip=EditTooltip(schemeInfo_statusDetermination)" ng-click="editTlDraft('editStatusDetermination')"></span>
+				</div>
+			</div>
+			<!-- Community Rule -->
+			<div id="tl-communityRule" class="row" ng-init="myTL.communityRuleShow='0'">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_SCHEME_TYPE_COMMUNITY_RULES" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_SCHEME_TYPE_COMMUNITY_RULES" listdiff="listDiffSchemeInfo" label="schemeInfo_communityRule" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{schemeInfo.communityRule}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemeTypeCommRule)" class="openClose">
+						<span ng-if="myTL.communityRuleShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.communityRuleShow='1'"></span>
+						<span ng-if="myTL.communityRuleShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.communityRuleShow='0'"></span>
+					</div>
+					<div ng-if="myTL.communityRuleShow=='0'" class="tabInformationClose">
+						<uri value="myTl.schemeInformation.schemeTypeCommRule[0].value" cutValue="myTl.schemeInformation.schemeTypeCommRule[0].value | cut:false:115:' ...'"></uri>
+					</div>
+					<div ng-if="myTL.communityRuleShow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="comm in myTl.schemeInformation.schemeTypeCommRule" active="communityRuleActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun"
+							id="comm.id" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check> <change id="comm.id" listdiff="listDiffSchemeInfo" label="schemeInfo_communityRule"
+							istreeparent="false" information="information"></change> <span>{{comm.language}}</span> </tab-heading> <uri value="comm.value"></uri> </tab> </tabset>
+					</div>
+					<span ng-if="myTl.userEditable " style="display: inline;" class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.communityRuleTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.communityRuleTooltip=EditTooltip(schemeInfo_communityRule)" ng-click="editTlDraft('editCommunityRule')"></span>
+				</div>
+			</div>
+			<!-- Legal Notice -->
+			<div id="tl-legalNotice" class="row" ng-init="myTL.legalNoticeShow='0'">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_POLICY_OR_LEGAL_NOTICE" listcheck="listChecks" label="schemeInfo_legalNotice" istreeparent="true"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_POLICY_OR_LEGAL_NOTICE" listdiff="listDiffSchemeInfo" label="schemeInfo_legalNotice" istreeparent="true" information="information"></change>
+					</div>
+					<span th:text="#{schemeInfo.legalNotice}"></span>
+				</div>
+				<div class="col-sm-10">
+					<div ng-hide="iconTableVisibility(myTl.schemeInformation.schemePolicy)" class="openClose">
+						<span ng-if="myTL.legalNoticeShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="myTL.legalNoticeShow='1'"></span>
+						<span ng-if="myTL.legalNoticeShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="myTL.legalNoticeShow='0'"></span>
+					</div>
+					<div ng-if="myTL.legalNoticeShow=='0'" class="tabInformationClose">
+						<span>{{myTl.schemeInformation.schemePolicy[0].value | cut:false:115:'...'}}</span>
+					</div>
+					<div ng-if="myTL.legalNoticeShow=='1'" class="tabInformationOpen">
+						<tabset> <tab ng-repeat="policy in myTl.schemeInformation.schemePolicy" active="legalNoticeActivity[$index]"> <tab-heading> <check disabled="myTl.checkToRun"
+							id="policy.id" listcheck="listChecks" label="schemeInfo_legalNotice" istreeparent="false"></check> <change id="policy.id" listdiff="listDiffSchemeInfo" label="schemeInfo_legalNotice"
+							istreeparent="false" information="information"></change> <span>{{policy.language}}</span> </tab-heading> <span>{{policy.value}}</span> </tab> </tabset>
+					</div>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.legalNoticeTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.legalNoticeTooltip=EditTooltip(schemeInfo_legalNotice)" ng-click="editTlDraft('editLegalNotice')"></span>
+				</div>
+			</div>
+			<!-- Issue Date -->
+			<div id="tl-issueDate" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_ISSUE_DATE" listcheck="listChecks" label="tlBrowser_issueDate" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_ISSUE_DATE" listdiff="listDiffSchemeInfo" label="tlBrowser_issueDate" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.issueDate}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span> {{myTl.schemeInformation.issueDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.issueDateTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.issueDateTooltip=EditTooltip(tlBrowser_issueDate)" ng-click="editTlDraft('editIssueDate')"></span>
+				</div>
+			</div>
+			<!-- Expiry Date -->
+			<div id="tl-expiryDate" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_NEXT_UPDATE" listcheck="listChecks" label="tlBrowser_expiryDate" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_NEXT_UPDATE" listdiff="listDiffSchemeInfo" label="tlBrowser_expiryDate" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.expiryDate}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span ng-class="styleDate(myTl.schemeInformation.nextUpdateDate)"> {{myTl.schemeInformation.nextUpdateDate | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.expiryDateTooltip}}" tooltip-placement="right"
+						ng-init="myTl.schemeInformation.expiryDateTooltip=EditTooltip(tlBrowser_expiryDate)" ng-click="editTlDraft('editNextUpdate')"></span>
+				</div>
+			</div>
+			<!-- Distribution List -->
+			<div id="tl-distributionList" ng-hide="tableVisibility(myTl.schemeInformation.distributionPoint)">
+				<div class="row">
+					<div class="col-sm-2 text-right scheme-information">
+						<div class="divCheckChange">
+							<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_DISTRIBUTION_LIST" listcheck="listChecks" label="schemeInfo_distributionList" istreeparent="true"></check>
+							<change id="myTl.schemeInformation.id+'_'+TAG_DISTRIBUTION_LIST" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="true" information="information"></change>
+						</div>
+						<span th:text="#{schemeInfo.distributionList}"></span>
+					</div>
+					<div class="col-sm-10">
+						<div>
+							<check disabled="myTl.checkToRun" id="myTl.schemeInformation.distributionPoint[0].id" listcheck="listChecks" label="schemeInfo_distributionList" istreeparent="false"></check>
+							<change id="myTl.schemeInformation.distributionPoint[0].id" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="false" information="information"></change>
+							<uri value="myTl.schemeInformation.distributionPoint[0].value" cutvalue="myTl.schemeInformation.distributionPoint[0].value | cut:true:110:'...'"></uri>
+							<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.schemeInformation.distributionList}}" tooltip-placement="right"
+								ng-init="myTl.schemeInformation.distributionList=EditTooltip(schemeInfo_distributionList)" ng-click="editTlDraft('editDistributionList')"></span>
+						</div>
+						<div ng-repeat="distri in myTl.schemeInformation.distributionPoint" ng-hide="$first">
+							<check disabled="myTl.checkToRun" id="distri.id" listcheck="listChecks" label="schemeInfo_distributionList" istreeparent="false"></check>
+							<change id="distri.id" listdiff="listDiffSchemeInfo" label="schemeInfo_distributionList" istreeparent="false" information="information"></change>
+							<uri value="distri.value"></uri>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- TSL Identifier -->
+			<div id="tl-tslTag" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_TSL_IDENTIFIER" listcheck="listChecks" label="tlBrowser_tslIdentifier" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_TSL_IDENTIFIER" listdiff="listDiffSchemeInfo" label="tlBrowser_tslIdentifier " istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.tslId}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span>{{myTl.tslId}}</span>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" tooltip="{{myTl.tslIdTooltip}}" tooltip-placement="right" ng-init="myTl.tslIdTooltip=EditTooltip(tlBrowser_tslId)"
+						ng-click="editTlDraft('editTslId')"></span>
+				</div>
+			</div>
+			<!-- Historical Period -->
+			<div id="tl-historicalPeriod" class="row">
+				<div class="col-sm-2 text-right scheme-information">
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.schemeInformation.id+'_'+TAG_HISTORICAL_PERIOD" listcheck="listChecks" label="tlBrowser_historicalPeriod" istreeparent="false"></check>
+						<change id="myTl.schemeInformation.id+'_'+TAG_HISTORICAL_PERIOD" listdiff="listDiffSchemeInfo" label="tlBrowser_historicalPeriod" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlBrowser.historicalPeriod}"></span>
+				</div>
+				<div class="col-sm-10">
+					<span>{{myTl.schemeInformation.historicalPeriod}}</span>
+				</div>
+			</div>
+		</div>
 
-        <hr class="style-one" />
+		<hr class="style-one" />
 
-        <!-- **************************
+		<!-- **************************
 						Pointers to Other TSL
 					 ************************** -->
-        <div id="tl-pointersTitle" class="row divNodeTitle">
-            <div class="openClose">
-                <span ng-if="ptotsMenuShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="ptotsMenuOpen()"></span>
-                <span ng-if="ptotsMenuShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="ptotsMenuClose()"></span>
-            </div>
-            <div class="divCheckChange">
-                <check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_POINTERS_TO_OTHER_TSL" listcheck="listChecks" label="ptotslMenu" istreeparent="true"></check>
-                <change id="myTl.id+'_'+TAG_POINTERS_TO_OTHER_TSL" listdiff="listDiffPointer" label="myTl.dbName" istreeparent="true" information="information"></change>
-            </div>
-            <label class="noMargin" th:text="#{ptotslMenu}"></label>
-        </div>
-        <div style="display: inline-block">
-            <span ng-click="editTlDraft('editPointerMode',null)" ng-if="myTl.userEditable && ptotsEdit==false " class="fa fa-edit cursor-pointer"
-                ng-init="myTl.pointerEdition.tooltip=EditTooltip(ptotslMenu)" tooltip="{{myTl.pointerEdition.tooltip}}" tooltip-placement="right"></span>
-            <span class="fa fa-remove cursor-pointer" ng-click="editPointerMode()" ng-show="ptotsEdit==true" tooltip-placement="bottom" tooltip="Cancel"></span>
-            <span class="fa fa-plus cursor-pointer" ng-click="addPtot()" ng-if="ptotsEdit==true" tooltip-placement="bottom" tooltip="Add"></span>
-        </div>
+		<div id="tl-pointersTitle" class="row divNodeTitle">
+			<div class="openClose">
+				<span ng-if="ptotsMenuShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="ptotsMenuOpen()"></span>
+				<span ng-if="ptotsMenuShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="ptotsMenuClose()"></span>
+			</div>
+			<div class="divCheckChange">
+				<check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_POINTERS_TO_OTHER_TSL" listcheck="listChecks" label="ptotslMenu" istreeparent="true"></check>
+				<change id="myTl.id+'_'+TAG_POINTERS_TO_OTHER_TSL" listdiff="listDiffPointer" label="myTl.dbName" istreeparent="true" information="information"></change>
+			</div>
+			<label class="noMargin" th:text="#{ptotslMenu}"></label>
+		</div>
+		<div style="display: inline-block">
+			<span ng-click="editTlDraft('editPointerMode',null)" ng-if="myTl.userEditable && ptotsEdit==false " class="fa fa-edit cursor-pointer" ng-init="myTl.pointerEdition.tooltip=EditTooltip(ptotslMenu)"
+				tooltip="{{myTl.pointerEdition.tooltip}}" tooltip-placement="right"></span>
+			<span class="fa fa-remove cursor-pointer" ng-click="editPointerMode()" ng-show="ptotsEdit==true" tooltip-placement="bottom" tooltip="Cancel"></span>
+			<span class="fa fa-plus cursor-pointer" ng-click="addPtot()" ng-if="ptotsEdit==true" tooltip-placement="bottom" tooltip="Add"></span>
+		</div>
 
-        <div ng-repeat="pointer in myTl.pointers" ng-if="ptotsMenuShow=='1'" class="container-fluid">
-            <div ng-class="isOpen(pointer.open)">
-                <div class="openClose">
-                    <span ng-if="pointer.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.open='1'"></span>
-                    <span ng-if="pointer.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer white" ng-click="pointer.open='0'"></span>
-                </div>
-                <div class="divCheckChange">
-                    <check disabled="myTl.checkToRun" id="pointer.id" listcheck="listChecks" label="pointer.tlLocation" istreeparent="true"></check>
-                    <change id="pointer.id" listdiff="listDiffPointer" label="pointer.tlLocation" istreeparent="true" information="information"></change>
-                </div>
+		<div ng-repeat="pointer in myTl.pointers" ng-if="ptotsMenuShow=='1'" class="container-fluid">
+			<div ng-class="isOpen(pointer.open)">
+				<div class="openClose">
+					<span ng-if="pointer.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.open='1'"></span>
+					<span ng-if="pointer.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer white" ng-click="pointer.open='0'"></span>
+				</div>
+				<div class="divCheckChange">
+					<check disabled="myTl.checkToRun" id="pointer.id" listcheck="listChecks" label="pointer.tlLocation" istreeparent="true"></check>
+					<change id="pointer.id" listdiff="listDiffPointer" label="pointer.tlLocation" istreeparent="true" information="information"></change>
+				</div>
 
-                <div style="width: 75px; display: inline-block;">{{ pointer.schemeTerritory }} ({{ pointer.mimeType }}) :</div>
-                <uri value="pointer.tlLocation" cutvalue="pointer.tlLocation | cut:true:130:'...'"></uri>
-                <span ng-if="myTl.userEditable && ptotsEdit==false " class="fa fa-edit cursor-pointer editIcon" ng-init="pointer.tooltip=pointerTooltip(pointer)"
-                    ng-click="editTlDraft('editPtots',$index)" tooltip-placement="right" tooltip="{{pointer.tooltip}}"></span>
-                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(pointer.schemeTerritory+' ('+pointer.mimeType+') : '+pointer.tlLocation+')')}}"
-                    confirmed="deletePtot(pointer)" ng-show="ptotsEdit==true" tooltip-placement="right" style="margin-right: 10px" class="fa fa-trash cursor-pointer"
-                    tooltip="{{tDelete}} {{ pointer.schemeTerritory }} ({{ pointer.mimeType }})"></span>
-            </div>
+				<div style="width: 75px; display: inline-block;">{{ pointer.schemeTerritory }} ({{ pointer.mimeType }}) :</div>
+				<uri value="pointer.tlLocation" cutvalue="pointer.tlLocation | cut:true:130:'...'"></uri>
+				<span ng-if="myTl.userEditable && ptotsEdit==false " class="fa fa-edit cursor-pointer editIcon" ng-init="pointer.tooltip=pointerTooltip(pointer)" ng-click="editTlDraft('editPtots',$index)"
+					tooltip-placement="right" tooltip="{{pointer.tooltip}}"></span>
+				<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(pointer.schemeTerritory+' ('+pointer.mimeType+') : '+pointer.tlLocation+')')}}" confirmed="deletePtot(pointer)" ng-show="ptotsEdit==true"
+					tooltip-placement="right" style="margin-right: 10px" class="fa fa-trash cursor-pointer" tooltip="{{tDelete}} {{ pointer.schemeTerritory }} ({{ pointer.mimeType }})"></span>
+			</div>
 
-            <div ng-if="pointer.open=='1'" ng-attr-id="{{ pointer.id }}" class="isOpenBorder">
-                <div class="container-fluid isOpenTopBorder">
-                    <!-- POINTERS - Type -->
-                    <div id="tl-pointerType" class="row">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_TYPE" listcheck="listChecks" label="tlType" istreeparent="false"></check>
-                                <change id="pointer.id+'_'+TAG_POINTER_TYPE" listdiff="listDiffPointer" label="tlType" istreeparent="false" information="information"></change>
-                            </div>
-                            <span th:text="#{tlType}"></span>
-                        </div>
-                        <div class="col-sm-10">
-                            <uri value="pointer.tlType"></uri>
-                        </div>
-                    </div>
-                    <!-- POINTERS - Location -->
-                    <div id="tl-pointerLocation" class="row">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_LOCATION" listcheck="listChecks" label="tlLocation" istreeparent="false"></check>
-                                <change id="pointer.id+'_'+TAG_POINTER_LOCATION" listdiff="listDiffPointer" label="tlLocation" istreeparent="false" information="information"></change>
-                            </div>
-                            <span th:text="#{tlLocation}"></span>
-                        </div>
-                        <div class="col-sm-10 ">
-                            <uri value="pointer.tlLocation"></uri>
-                        </div>
-                    </div>
-                    <!-- POINTERS - Scheme Operator Name -->
-                    <div id="tl-pointerSchemeOpName" class="row" ng-init="pointer.schemeOpshow='0'" ng-hide="tableVisibility(pointer.schemeOpeName)">
-                        <div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName" istreeparent="true"></check>
-                                <change id="pointer.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listDiffPointer" label="schemeOpeName" istreeparent="true" information="information"></change>
-                            </div>
-                            <span th:text="#{schemeOpeName}"></span>
-                        </div>
-                        <div class="col-sm-10">
-                            <div ng-hide="iconTableVisibility(pointer.schemeOpeName)" class="openClose">
-                                <span ng-if="pointer.schemeOpshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.schemeOpshow='1'"></span>
-                                <span ng-if="pointer.schemeOpshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="pointer.schemeOpshow='0'"></span>
-                            </div>
-                            <div class="tabInformationClose">
-                                <span ng-if="pointer.schemeOpshow=='0'">{{pointer.schemeOpeName[0].value}}</span>
-                            </div>
-                            <div ng-if="pointer.schemeOpshow=='1'" class="tabInformationOpen">
-                                <tabset> <tab ng-repeat="info in pointer.schemeOpeName"> <tab-heading> <check disabled="myTl.checkToRun" id="info.id"
-                                    listcheck="listChecks" label="schemeOpeName" istreeparent="false"></check> <change id="info.id" listdiff="listDiffPointer" label="schemeOpeName"
-                                    istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- POINTERS - Community Rule -->
-                    <div id="tl-pointerCommunityRule" class="row" ng-init="pointer.communityRule='0'" ng-hide="tableVisibility(pointer.schemeTypeCommunity)">
-                        <div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_COMMUNITY_RULE" listcheck="listChecks" label="schemeInfo_communityRule"
-                                    istreeparent="true"></check>
-                                <change id="pointer.id+'_'+TAG_POINTER_COMMUNITY_RULE" listdiff="listDiffPointer" label="schemeInfo_communityRule" istreeparent="true"
-                                    information="information"></change>
-                            </div>
-                            <span th:text="#{schemeInfo.communityRule}"></span>
-                        </div>
-                        <div class="col-sm-10">
-                            <div ng-hide="iconTableVisibility(pointer.schemeTypeCommunity)" class="openClose">
-                                <span ng-if="pointer.communityRule!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.communityRule='1'"></span>
-                                <span ng-if="pointer.communityRule=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="pointer.communityRule='0'"></span>
-                            </div>
-                            <div ng-if="pointer.communityRule=='0'" class="tabInformationClose">
-                                <uri value="pointer.schemeTypeCommunity[0].value"></uri>
-                            </div>
-                            <div ng-if="pointer.communityRule=='1'" class="tabInformationOpen">
-                                <tabset> <tab ng-repeat="info in pointer.schemeTypeCommunity"> <tab-heading> <check disabled="myTl.checkToRun"
-                                    id="info.id" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check> <change id="info.id"
-                                    listdiff="listDiffPointer" label="schemeInfo_communityRule" value="info.value" istreeparent="false" information="information"></change> <span>{{info.language}}</span>
-                                </tab-heading> <uri value="info.value"></uri> </tab> </tabset>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- POINTERS - Territory -->
-                    <div id="tl-pointerTerritory" class="row">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.schemeTerritory" listcheck="listChecks" label="schemeTerritory" istreeparent="false"></check>
-                                <change id="pointer.id+'_'+TAG_POINTER_SCHEME_TERRITORY" listdiff="listDiffPointer" label="schemeTerritory" istreeparent="false"
-                                    information="information"></change>
-                            </div>
-                            <span th:text="#{schemeTerritory}"></span>
-                        </div>
-                        <div class="col-sm-10">{{pointer.schemeTerritory}}</div>
-                    </div>
-                    <!-- POINTERS - Mime Type -->
-                    <div id="tl-pointerMimeType" class="row">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="myTl.checkToRun" id="pointer.mimeType" listcheck="listChecks" label="mimeType" istreeparent="false"></check>
-                                <change id="pointer.id+'_'+TAG_POINTER_MIME_TYPE" listdiff="listDiffPointer" label="mimeType" istreeparent="false" information="information"></change>
-                            </div>
-                            <span th:text="#{mimeType}"></span>
-                        </div>
-                        <div class="col-sm-10">{{pointer.mimeType}}</div>
-                    </div>
-                    <!-- POINTERS - Digital Identities -->
-                    <div id="tl-pointerDigitalIdentities" ng-hide="tableVisibility(pointer.serviceDigitalId)">
-                        <div class="row">
-                            <div class="col-sm-2 text-right scheme-information">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="schemeInfo_digitalIdentities"
-                                        istreeparent="true"></check>
-                                    <change id="pointer.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listDiffPointer" label="schemeInfo_digitalIdentities" istreeparent="true"
-                                        information="information"></change>
-                                </div>
+			<div ng-if="pointer.open=='1'" ng-attr-id="{{ pointer.id }}" class="isOpenBorder">
+				<div class="container-fluid isOpenTopBorder">
+					<!-- POINTERS - Type -->
+					<div id="tl-pointerType" class="row">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_TYPE" listcheck="listChecks" label="tlType" istreeparent="false"></check>
+								<change id="pointer.id+'_'+TAG_POINTER_TYPE" listdiff="listDiffPointer" label="tlType" istreeparent="false" information="information"></change>
+							</div>
+							<span th:text="#{tlType}"></span>
+						</div>
+						<div class="col-sm-10">
+							<uri value="pointer.tlType"></uri>
+						</div>
+					</div>
+					<!-- POINTERS - Location -->
+					<div id="tl-pointerLocation" class="row">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_LOCATION" listcheck="listChecks" label="tlLocation" istreeparent="false"></check>
+								<change id="pointer.id+'_'+TAG_POINTER_LOCATION" listdiff="listDiffPointer" label="tlLocation" istreeparent="false" information="information"></change>
+							</div>
+							<span th:text="#{tlLocation}"></span>
+						</div>
+						<div class="col-sm-10 ">
+							<uri value="pointer.tlLocation"></uri>
+						</div>
+					</div>
+					<!-- POINTERS - Scheme Operator Name -->
+					<div id="tl-pointerSchemeOpName" class="row" ng-init="pointer.schemeOpshow='0'" ng-hide="tableVisibility(pointer.schemeOpeName)">
+						<div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName" istreeparent="true"></check>
+								<change id="pointer.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listDiffPointer" label="schemeOpeName" istreeparent="true" information="information"></change>
+							</div>
+							<span th:text="#{schemeOpeName}"></span>
+						</div>
+						<div class="col-sm-10">
+							<div ng-hide="iconTableVisibility(pointer.schemeOpeName)" class="openClose">
+								<span ng-if="pointer.schemeOpshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.schemeOpshow='1'"></span>
+								<span ng-if="pointer.schemeOpshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="pointer.schemeOpshow='0'"></span>
+							</div>
+							<div class="tabInformationClose">
+								<span ng-if="pointer.schemeOpshow=='0'">{{pointer.schemeOpeName[0].value}}</span>
+							</div>
+							<div ng-if="pointer.schemeOpshow=='1'" class="tabInformationOpen">
+								<tabset> <tab ng-repeat="info in pointer.schemeOpeName"> <tab-heading> <check disabled="myTl.checkToRun" id="info.id" listcheck="listChecks" label="schemeOpeName"
+									istreeparent="false"></check> <change id="info.id" listdiff="listDiffPointer" label="schemeOpeName" istreeparent="false" information="information"></change> <span>{{info.language}}</span> </tab-heading> <span
+									style="margin-top: 3px;">{{info.value}}</span> </tab> </tabset>
+							</div>
+						</div>
+					</div>
+					<!-- POINTERS - Community Rule -->
+					<div id="tl-pointerCommunityRule" class="row" ng-init="pointer.communityRule='0'" ng-hide="tableVisibility(pointer.schemeTypeCommunity)">
+						<div class="col-sm-2 text-right scheme-information" ng-init="myTL.schemeOpshow='0'">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_POINTER_COMMUNITY_RULE" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="true"></check>
+								<change id="pointer.id+'_'+TAG_POINTER_COMMUNITY_RULE" listdiff="listDiffPointer" label="schemeInfo_communityRule" istreeparent="true" information="information"></change>
+							</div>
+							<span th:text="#{schemeInfo.communityRule}"></span>
+						</div>
+						<div class="col-sm-10">
+							<div ng-hide="iconTableVisibility(pointer.schemeTypeCommunity)" class="openClose">
+								<span ng-if="pointer.communityRule!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="pointer.communityRule='1'"></span>
+								<span ng-if="pointer.communityRule=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="pointer.communityRule='0'"></span>
+							</div>
+							<div ng-if="pointer.communityRule=='0'" class="tabInformationClose">
+								<uri value="pointer.schemeTypeCommunity[0].value"></uri>
+							</div>
+							<div ng-if="pointer.communityRule=='1'" class="tabInformationOpen">
+								<tabset> <tab ng-repeat="info in pointer.schemeTypeCommunity"> <tab-heading> <check disabled="myTl.checkToRun" id="info.id" listcheck="listChecks"
+									label="schemeInfo_communityRule" istreeparent="false"></check> <change id="info.id" listdiff="listDiffPointer" label="schemeInfo_communityRule" value="info.value" istreeparent="false"
+									information="information"></change> <span>{{info.language}}</span> </tab-heading> <uri value="info.value"></uri> </tab> </tabset>
+							</div>
+						</div>
+					</div>
+					<!-- POINTERS - Territory -->
+					<div id="tl-pointerTerritory" class="row">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.schemeTerritory" listcheck="listChecks" label="schemeTerritory" istreeparent="false"></check>
+								<change id="pointer.id+'_'+TAG_POINTER_SCHEME_TERRITORY" listdiff="listDiffPointer" label="schemeTerritory" istreeparent="false" information="information"></change>
+							</div>
+							<span th:text="#{schemeTerritory}"></span>
+						</div>
+						<div class="col-sm-10">{{pointer.schemeTerritory}}</div>
+					</div>
+					<!-- POINTERS - Mime Type -->
+					<div id="tl-pointerMimeType" class="row">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="myTl.checkToRun" id="pointer.mimeType" listcheck="listChecks" label="mimeType" istreeparent="false"></check>
+								<change id="pointer.id+'_'+TAG_POINTER_MIME_TYPE" listdiff="listDiffPointer" label="mimeType" istreeparent="false" information="information"></change>
+							</div>
+							<span th:text="#{mimeType}"></span>
+						</div>
+						<div class="col-sm-10">{{pointer.mimeType}}</div>
+					</div>
+					<!-- POINTERS - Digital Identities -->
+					<div id="tl-pointerDigitalIdentities" ng-hide="tableVisibility(pointer.serviceDigitalId)">
+						<div class="row">
+							<div class="col-sm-2 text-right scheme-information">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="pointer.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="schemeInfo_digitalIdentities" istreeparent="true"></check>
+									<change id="pointer.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listDiffPointer" label="schemeInfo_digitalIdentities" istreeparent="true" information="information"></change>
+								</div>
 
-                                <span th:text="#{schemeInfo.digitalIdentities}" style="margin-left: 2px;"></span>
-                            </div>
-                            <div class="col-sm-10" style="padding-right: 0">
-                                <digitalidentity digital="pointer.serviceDigitalId[0]" listcheck="listChecks" listchange="listDiffPointer" tl="myTl" checktorun="myTl.checkToRun"></digitalidentity>
-                            </div>
-                        </div>
-                        <div class="row" ng-repeat="digitalId in pointer.serviceDigitalId" ng-hide="$first">
-                            <div class="col-sm-2"></div>
-                            <div style="display: inline-block; padding-right: 0" class="col-sm-10">
-                                <digitalidentity digital="digitalId" listcheck="listChecks" listchange="listDiffPointer" tl="myTl" checktorun="myTl.checkToRun"></digitalidentity>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+								<span th:text="#{schemeInfo.digitalIdentities}" style="margin-left: 2px;"></span>
+							</div>
+							<div class="col-sm-10" style="padding-right: 0">
+								<digitalidentity digital="pointer.serviceDigitalId[0]" listcheck="listChecks" listchange="listDiffPointer" tl="myTl" checktorun="myTl.checkToRun"></digitalidentity>
+							</div>
+						</div>
+						<div class="row" ng-repeat="digitalId in pointer.serviceDigitalId" ng-hide="$first">
+							<div class="col-sm-2"></div>
+							<div style="display: inline-block; padding-right: 0" class="col-sm-10">
+								<digitalidentity digital="digitalId" listcheck="listChecks" listchange="listDiffPointer" tl="myTl" checktorun="myTl.checkToRun"></digitalidentity>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- **************************
+		<!-- **************************
 						Service Providers
 					 ************************** -->
-        <div ng-hide="tableVisibility(myTl.serviceProviders)" ng-if="isTl()==true" ng-init="initOpenTab()">
-            <hr class="style-one" />
-            <div id="providerHead">
-                <div class="divNodeTitle">
-                    <div class="openClose">
-                        <span ng-if="serviceProviderShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProviderOpen()"></span>
-                        <span ng-if="serviceProviderShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProviderClose()"></span>
-                    </div>
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_TSP_SERVICE_PROVIDER" listcheck="listChecks" label="serviceProvider" istreeparent="true"></check>
-                        <change id="myTl.id+'_'+TAG_TSP_SERVICE_PROVIDER" listdiff="listDiffProviders" label="serviceProvider" istreeparent="true" information="information"></change>
-                    </div>
-                    <label class="noMargin" th:text="#{serviceProvider}"></label>
-                </div>
-                <div style="display: inline-block;">
-                    <span ng-if="myTl.userEditable && providerEdit==false " class="fa fa-edit cursor-pointer" ng-init="myTl.providerEdition.tooltip=EditTooltip(serviceProvider)"
-                        ng-click="editTlDraft('editProviderMode',null)" tooltip-placement="right" tooltip="{{myTl.providerEdition.tooltip}}"></span>
-                    <span ng-click="editProviderMode()" ng-show="providerEdit==true" class="fa fa-remove cursor-pointer" tooltip-placement="bottom" tooltip="Cancel"></span>
-                    <span ng-click="addProvider()" ng-if="providerEdit==true" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
-                </div>
-            </div>
-            <div ng-repeat="serviceProvider in myTl.serviceProviders" ng-if="serviceProviderShow=='1'" class="container-fluid" ng-init="serviceProvider.index = $index">
-                <div ng-class="isOpen(serviceProvider.open)">
-                    <div class="openClose">
-                        <span ng-if="serviceProvider.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.open='1'"></span>
-                        <span ng-if="serviceProvider.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer white" ng-click="serviceProvider.open='0'"></span>
-                    </div>
-                    <div class="divCheckChange">
-                        <check disabled="myTl.checkToRun" id="serviceProvider.id" listcheck="listChecks" label="serviceProvider.tspname[0].value" istreeparent="true"></check>
-                        <change id="serviceProvider.id" listdiff="listDiffProviders" label="serviceProvider.tspname[0].value" istreeparent="true" information="information"></change>
-                    </div>
-                    <span>{{ serviceProvider.tspname[0].value | cut:true:100:'...' }} : </span>
-                    <uri value="serviceProvider.tspinfoUri[0].value" cutvalue="serviceProvider.tspinfoUri[0].value | cut:true:100:'...'"></uri>
-                    <span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" ng-click="editTlDraft('editServiceProvider',$index)" ng-show="providerEdit==false"
-                        tooltip="{{serviceProvider.editTooltip}}" ng-init="serviceProvider.editTooltip=EditTooltip(serviceProvider.tspname[0].value)" tooltip-placement="right"></span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':serviceProvider.tspname[0].value}}" confirmed="deleteProvider(serviceProvider,[null,null,null]);"
-                        ng-show="providerEdit==true" style="margin-right: 10px" class="fa fa-trash cursor-pointer" tooltip-placement="right"
-                        tooltip="Delete {{ serviceProvider.tspname[0].value | cut:true:50:'...' }}"></span>
-                </div>
-                <!-- ******** Service Provider Detail ******** -->
-                <div ng-if="serviceProvider.open=='1'" class="isOpenBorder">
-                    <!---------------
-							 Legal Information
-						----------------->
-                    <div class="container-fluid isOpenTopBorder">
-                        <!-- Name -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tspname)">
-                            <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.nameOpen='0'">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_NAME" listcheck="listChecks" label="serviceProvider_name"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_TSP_NAME" listdiff="listDiffProviders" label="serviceProvider_name" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <span th:text="#{serviceProvider.name}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div ng-hide="iconTableVisibility(serviceProvider.tspname)" class="openClose">
-                                    <span ng-if="serviceProvider.nameOpen!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.nameOpen='1'"></span>
-                                    <span ng-if="serviceProvider.nameOpen=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.nameOpen='0'"></span>
-                                </div>
-                                <div ng-if="serviceProvider.nameOpen=='0'" class="tabInformationClose">
-                                    <span>{{serviceProvider.tspname[0].value}}</span>
-                                </div>
-                                <div ng-if="serviceProvider.nameOpen=='1'" class="tabInformationOpen">
-                                    <tabset> <tab ng-repeat="tspname in serviceProvider.tspname"> <tab-heading> <check disabled="myTl.checkToRun"
-                                        id="tspname.id" listcheck="listChecks" label="serviceProvider_name" istreeparent="false"></check> <change id="tspname.id"
-                                        listdiff="listDiffProviders" label="serviceProvider_name" istreeparent="false" information="information"></change> <span>{{tspname.language}}</span>
-                                    </tab-heading> <span>{{tspname.value}}</span> </tab> </tabset>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Trade Name -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tsptradeName)">
-                            <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.tradeName.open='0'">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_TRADE_NAME" listcheck="listChecks" label="serviceProvider_tradeName"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_TSP_TRADE_NAME" listdiff="listDiffProviders" label="serviceProvider_tradeName" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <span th:text="#{serviceProvider.tradeName}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div ng-hide="iconTableVisibility(serviceProvider.tsptradeName)" class="openClose">
-                                    <span ng-if="serviceProvider.tradeName.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"
-                                        ng-click="serviceProvider.tradeName.open='1'"></span>
-                                    <span ng-if="serviceProvider.tradeName.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"
-                                        ng-click="serviceProvider.tradeName.open='0'"></span>
-                                </div>
-                                <div ng-if="serviceProvider.tradeName.open=='0'" class="tabInformationClose">
-                                    <span>{{serviceProvider.tsptradeName[0].value}}</span>
-                                </div>
-                                <div ng-if="serviceProvider.tradeName.open=='1'" class="tabInformationOpen">
-                                    <tabset> <tab ng-repeat="tsptradeName in serviceProvider.tsptradeName"> <tab-heading> <check
-                                        disabled="myTl.checkToRun" id="tsptradeName.id" listcheck="listChecks" label="serviceProvider_tradeName" istreeparent="false"></check> <change
-                                        id="tsptradeName.id" listdiff="listDiffProviders" label="serviceProvider_tradeName" istreeparent="false" information="information"></change>
-                                    <span>{{tsptradeName.language}}</span> </tab-heading> <span>{{tsptradeName.value}}</span> </tab> </tabset>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Postal Address -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tsppostal)">
-                            <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.addressshow='0'">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_POSTAL_ADDRESSES" listcheck="listChecks" label="tlBrowser_postalAddress"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_POSTAL_ADDRESSES" listdiff="listDiffProviders" label="tlBrowser_postalAddress" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <span th:text="#{tlBrowser.postalAddress}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div ng-hide="iconTableVisibility(serviceProvider.tsppostal)" class="openClose">
-                                    <span ng-if="serviceProvider.addressshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.addressshow='1'"></span>
-                                    <span ng-if="serviceProvider.addressshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.addressshow='0'"></span>
-                                </div>
-                                <div ng-if="serviceProvider.addressshow=='0' && serviceProvider.tsppostal[0]!=null" class="tabInformationClose">
-                                    <span> {{serviceProvider.tsppostal[0].street}} / {{serviceProvider.tsppostal[0].locality}} - {{serviceProvider.tsppostal[0].postalCode}}
-                                        / {{serviceProvider.tsppostal[0].countryCode}} </span>
-                                </div>
-                                <div ng-if="serviceProvider.addressshow=='1'" class="tabInformationOpen">
-                                    <tabset> <tab ng-repeat="info in serviceProvider.tsppostal"> <tab-heading> <check disabled="myTl.checkToRun"
-                                        id="info.id" listcheck="listChecks" label="tlBrowser_postalAddress" istreeparent="false"></check> <change id="info.id"
-                                        listdiff="listDiffProviders" label="tlBrowser_postalAddress" istreeparent="false" information="information"></change> <span>{{info.language}}</span>
-                                    </tab-heading>
-                                    <div>
-                                        <div class="row">
-                                            <div class="col-sm-2 ">
-                                                <span th:text="#{address.street}">:</span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{info.street}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-2 ">
-                                                <span th:text="#{address.locality}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{info.locality}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-2 ">
-                                                <span th:text="#{address.postalcode}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{info.postalCode}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-2 ">
-                                                <span th:text="#{address.state}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{info.stateOrProvince}} </span>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-2 ">
-                                                <span th:text="#{address.country}"></span>
-                                            </div>
-                                            <div class="col-sm-10">
-                                                <span>{{info.countryCode}}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </tab> </tabset>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Electronic Address -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tspelectronic)">
-                            <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.emailshow='0'">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_ELECTRONIC_ADDRESS" listcheck="listChecks" label="tlBrowser_electronicAddress"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_ELECTRONIC_ADDRESS" listdiff="listDiffProviders" label="tlBrowser_electronicAddress" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <span th:text="#{tlBrowser.electronicAddress}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div ng-hide="iconTableVisibility(serviceProvider.tspelectronic)" class="openClose">
-                                    <span ng-if="serviceProvider.emailshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.emailshow='1'"></span>
-                                    <span ng-if="serviceProvider.emailshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.emailshow='0'"></span>
-                                </div>
-                                <div ng-if="serviceProvider.emailshow=='0'" class="tabInformationClose">
-                                    <uri value="serviceProvider.tspelectronic[0].value"></uri>
-                                </div>
-                                <div ng-if="serviceProvider.emailshow=='1'" class="tabInformationOpen">
-                                    <tabset> <tab ng-repeat="elec in serviceProvider.tspelectronic"> <tab-heading> <check disabled="myTl.checkToRun"
-                                        id="elec.id" listcheck="listChecks" label="tlBrowser_electronicAddress" istreeparent="false"></check> <change id="elec.id"
-                                        listdiff="listDiffProviders" label="tlBrowser_electronicAddress" istreeparent="false" information="information"></change> <span>{{elec.language}}</span>
-                                    </tab-heading> <uri value="elec.value"></uri> </tab> </tabset>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Information URI -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tspinfoUri)">
-                            <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.infoURIshow='0'">
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_INFORMATION_URI" listcheck="listChecks" label="tlBrowser_informationURI"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_TSP_INFORMATION_URI" listdiff="listDiffProviders" label="tlBrowser_informationURI" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <span th:text="#{tlBrowser.informationURI}"></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div ng-hide="iconTableVisibility(serviceProvider.tspinfoUri)" class="openClose">
-                                    <span ng-if="serviceProvider.infoURIshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.infoURIshow='1'"></span>
-                                    <span ng-if="serviceProvider.infoURIshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.infoURIshow='0'"></span>
-                                </div>
-                                <div ng-if="serviceProvider.infoURIshow=='0'" class="tabInformationClose">
-                                    <uri value="serviceProvider.tspinfoUri[0].value"></uri>
-                                </div>
-                                <div ng-if="serviceProvider.infoURIshow=='1'" class="tabInformationOpen">
-                                    <tabset> <tab ng-repeat="info in serviceProvider.tspinfoUri"> <tab-heading> <check disabled="myTl.checkToRun"
-                                        id="info.id" listcheck="listChecks" label="tlBrowser_informationURI" istreeparent="false"></check> <change id="info.id"
-                                        listdiff="listDiffProviders" label="tlBrowser_informationURI" istreeparent="false" information="information"></change> <span>{{info.language}}</span>
-                                    </tab-heading> <uri value="info.value"></uri> </tab> </tabset>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Extension -->
-                        <div class="row" ng-hide="tableVisibility(serviceProvider.tspextension)">
-                            <div>
-                                <div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.extension='0'">
-                                    <div class="divCheckChange">
-                                        <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_SERVICE_EXTENSION" listcheck="listChecks" label="serviceProvider_extension"
-                                            istreeparent="true"></check>
-                                        <change id="serviceProvider.id+'_'+TAG_SERVICE_EXTENSION" listdiff="listDiffProviders" label="serviceProvider_extension" istreeparent="true"
-                                            information="information"></change>
-                                    </div>
-                                    <span th:text="#{serviceProvider.extension}"></span>
-                                </div>
-                                <div class="col-sm-10" ng-if="serviceProvider.tspextension[0]!=null">
-                                    <span>{{serviceProvider.tspextension[0].critical}}</span>
-                                    -
-                                    <span>{{serviceProvider.tspextension[0].value}}</span>
-                                </div>
-                            </div>
-                            <div class="row" ng-repeat="tspextension in serviceProvider.tspextension" ng-hide="$first">
-                                <div class="col-sm-2"></div>
-                                <div class="col-sm-10">
-                                    <span>{{tspextension.critical}}</span>
-                                    -
-                                    <span>{{tspextension.value}}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!---------------
-								 Services 
-							----------------->
-                        <div ng-init="serviceProvider.edit=false;serviceProvider.show='1'" style="margin-top: 10px;">
-                            <div>
-                                <div ng-hide="iconTableVisibility(serviceProvider.tspservices)" class="openClose">
-                                    <span ng-if="serviceProvider.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.show='1'"></span>
-                                    <span ng-if="serviceProvider.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.show='0'"></span>
-                                </div>
-                                <div class="divCheckChange">
-                                    <check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_SERVICE" listcheck="listChecks" label="serviceProvider_trustService"
-                                        istreeparent="true"></check>
-                                    <change id="serviceProvider.id+'_'+TAG_TSP_SERVICE" listdiff="listDiffProviders" label="serviceProvider_trustService" istreeparent="true"
-                                        information="information"></change>
-                                </div>
-                                <label class="noMargin" th:text="#{serviceProvider.trustService}"></label>
-                                <span ng-class="iconExpandService(serviceProvider)" ng-click="expandAllService(serviceProvider)" tooltip="{{serviceProvider.expandTooltip}}"
-                                    tooltip-placement="right" class="editIcon cursor-pointer"></span>
-                                <span ng-if="myTl.userEditable && serviceProvider.edit==false " class="fa fa-edit cursor-pointer editIcon"
-                                    ng-init="myTl.serviceEdition.tooltip=EditTooltip(serviceProvider_trustService)" ng-click="editTlDraft('editServiceMode',serviceProvider)"
-                                    tooltip-placement="right" tooltip="{{myTl.serviceEdition.tooltip}}"></span>
-                                <span ng-click="editServiceMode(serviceProvider)" ng-show="serviceProvider.edit==true" tooltip-placement="bottom" tooltip="Cancel"
-                                    style="margin-left: 10px" class="fa fa-remove cursor-pointer"></span>
-                                <span ng-click="addService($index)" ng-if="serviceProvider.edit==true" tooltip-placement="bottom" tooltip="Add" style="margin-left: 10px"
-                                    class="fa fa-plus cursor-pointer "></span>
-                            </div>
-                            <div th:replace="service :: service" th:remove="tag"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </main>
+		<div ng-hide="tableVisibility(myTl.serviceProviders)" ng-if="isTl()==true" ng-init="initOpenTab()">
+			<hr class="style-one" />
+			<div id="providerHead" style="margin-bottom: 10px;">
+				<div class="divNodeTitle">
+					<div class="openClose">
+						<span ng-if="serviceProviderShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProviderOpen()"></span>
+						<span ng-if="serviceProviderShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProviderClose()"></span>
+					</div>
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="myTl.id+'_'+TAG_TSP_SERVICE_PROVIDER" listcheck="listChecks" label="serviceProvider" istreeparent="true"></check>
+						<change id="myTl.id+'_'+TAG_TSP_SERVICE_PROVIDER" listdiff="listDiffProviders" label="serviceProvider" istreeparent="true" information="information"></change>
+					</div>
+					<label class="noMargin" th:text="#{serviceProvider}"></label>
+				</div>
+				<div style="display: inline-block;">
+					<span ng-if="myTl.userEditable && providerEdit==false " class="fa fa-edit cursor-pointer" ng-init="myTl.providerEdition.tooltip=EditTooltip(serviceProvider)"
+						ng-click="editTlDraft('editProviderMode',null)" tooltip-placement="right" tooltip="{{myTl.providerEdition.tooltip}}"></span>
+					<span ng-click="editProviderMode()" ng-show="providerEdit==true" class="fa fa-remove cursor-pointer" tooltip-placement="bottom" tooltip="Cancel"></span>
+					<span ng-click="addProvider()" ng-if="providerEdit==true" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
+				</div>
+				<div class="browserfilter">
+					<div class="btn-group">
+						<input type="text" th:placeholder="#{tlBrowser.tspFilter}" ng-model="tspFilter.value" ng-model-options='{ debounce: 150 }' ng-change="filterNodes()" class="form-control browserfilter-input">
+						<span class="glyphicon glyphicon-remove-circle browserfilter-icon" ng-click="filterReset()" ng-show="tspFilter.value"></span>
+					</div>
+					<span class="fa fa-info-circle browserfilter-tooltip" tooltip-placement="bottom" tooltip="{{tlBrowser_filterTooltip}}"></span>
+				</div>
+			</div>
+			<div class="row" ng-if="noResultWarning">
+				<div style="padding-left: 15px;">
+					<span class="fa fa-info-circle"></span>
+					<span th:text="#{tlBrowser.noResult}"></span>
+				</div>
+			</div>
+			<div ng-repeat="serviceProvider in myTl.serviceProviders" ng-hide="serviceProvider.filter==true" ng-if="serviceProviderShow=='1'" class="container-fluid" ng-init="serviceProvider.index = $index">
+				<div ng-class="isOpen(serviceProvider.open)">
+					<div class="openClose">
+						<span ng-if="serviceProvider.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.open='1'"></span>
+						<span ng-if="serviceProvider.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer white" ng-click="serviceProvider.open='0'"></span>
+					</div>
+					<div class="divCheckChange">
+						<check disabled="myTl.checkToRun" id="serviceProvider.id" listcheck="listChecks" label="serviceProvider.tspname[0].value" istreeparent="true"></check>
+						<change id="serviceProvider.id" listdiff="listDiffProviders" label="serviceProvider.tspname[0].value" istreeparent="true" information="information"></change>
+					</div>
+					<span>{{ serviceProvider.tspname[0].value | cut:true:100:'...' }} : </span>
+					<uri value="serviceProvider.tspinfoUri[0].value" cutvalue="serviceProvider.tspinfoUri[0].value | cut:true:100:'...'"></uri>
+					<span ng-if="myTl.userEditable " class="fa fa-edit cursor-pointer editIcon" ng-click="editTlDraft('editServiceProvider',$index)" ng-show="providerEdit==false"
+						tooltip="{{serviceProvider.editTooltip}}" ng-init="serviceProvider.editTooltip=EditTooltip(serviceProvider.tspname[0].value)" tooltip-placement="right"></span>
+					<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':serviceProvider.tspname[0].value}}" confirmed="deleteProvider(serviceProvider,[null,null,null]);" ng-show="providerEdit==true"
+						style="margin-right: 10px" class="fa fa-trash cursor-pointer" tooltip-placement="right" tooltip="Delete {{ serviceProvider.tspname[0].value | cut:true:50:'...' }}"></span>
+				</div>
+				<!-- ******** Service Provider Detail ******** -->
+				<div ng-if="serviceProvider.open=='1'" class="isOpenBorder">
+					<!-- Legal Information -->
+					<div class="container-fluid isOpenTopBorder">
+						<!-- Name -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tspname)">
+							<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.nameOpen='0'">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_NAME" listcheck="listChecks" label="serviceProvider_name" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_TSP_NAME" listdiff="listDiffProviders" label="serviceProvider_name" istreeparent="true" information="information"></change>
+								</div>
+								<span th:text="#{serviceProvider.name}"></span>
+							</div>
+							<div class="col-sm-10">
+								<div ng-hide="iconTableVisibility(serviceProvider.tspname)" class="openClose">
+									<span ng-if="serviceProvider.nameOpen!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.nameOpen='1'"></span>
+									<span ng-if="serviceProvider.nameOpen=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.nameOpen='0'"></span>
+								</div>
+								<div ng-if="serviceProvider.nameOpen=='0'" class="tabInformationClose">
+									<span>{{serviceProvider.tspname[0].value}}</span>
+								</div>
+								<div ng-if="serviceProvider.nameOpen=='1'" class="tabInformationOpen">
+									<tabset> <tab ng-repeat="tspname in serviceProvider.tspname"> <tab-heading> <check disabled="myTl.checkToRun" id="tspname.id" listcheck="listChecks"
+										label="serviceProvider_name" istreeparent="false"></check> <change id="tspname.id" listdiff="listDiffProviders" label="serviceProvider_name" istreeparent="false" information="information"></change>
+									<span>{{tspname.language}}</span> </tab-heading> <span>{{tspname.value}}</span> </tab> </tabset>
+								</div>
+							</div>
+						</div>
+						<!-- Trade Name -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tsptradeName)">
+							<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.tradeName.open='0'">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_TRADE_NAME" listcheck="listChecks" label="serviceProvider_tradeName" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_TSP_TRADE_NAME" listdiff="listDiffProviders" label="serviceProvider_tradeName" istreeparent="true" information="information"></change>
+								</div>
+								<span th:text="#{serviceProvider.tradeName}"></span>
+							</div>
+							<div class="col-sm-10">
+								<div ng-hide="iconTableVisibility(serviceProvider.tsptradeName)" class="openClose">
+									<span ng-if="serviceProvider.tradeName.open!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.tradeName.open='1'"></span>
+									<span ng-if="serviceProvider.tradeName.open=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.tradeName.open='0'"></span>
+								</div>
+								<div ng-if="serviceProvider.tradeName.open=='0'" class="tabInformationClose">
+									<span>{{serviceProvider.tsptradeName[0].value}}</span>
+								</div>
+								<div ng-if="serviceProvider.tradeName.open=='1'" class="tabInformationOpen">
+									<tabset> <tab ng-repeat="tsptradeName in serviceProvider.tsptradeName"> <tab-heading> <check disabled="myTl.checkToRun" id="tsptradeName.id"
+										listcheck="listChecks" label="serviceProvider_tradeName" istreeparent="false"></check> <change id="tsptradeName.id" listdiff="listDiffProviders" label="serviceProvider_tradeName"
+										istreeparent="false" information="information"></change> <span>{{tsptradeName.language}}</span> </tab-heading> <span>{{tsptradeName.value}}</span> </tab> </tabset>
+								</div>
+							</div>
+						</div>
+						<!-- Postal Address -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tsppostal)">
+							<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.addressshow='0'">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_POSTAL_ADDRESSES" listcheck="listChecks" label="tlBrowser_postalAddress" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_POSTAL_ADDRESSES" listdiff="listDiffProviders" label="tlBrowser_postalAddress" istreeparent="true" information="information"></change>
+								</div>
+								<span th:text="#{tlBrowser.postalAddress}"></span>
+							</div>
+							<div class="col-sm-10">
+								<div ng-hide="iconTableVisibility(serviceProvider.tsppostal)" class="openClose">
+									<span ng-if="serviceProvider.addressshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.addressshow='1'"></span>
+									<span ng-if="serviceProvider.addressshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.addressshow='0'"></span>
+								</div>
+								<div ng-if="serviceProvider.addressshow=='0' && serviceProvider.tsppostal[0]!=null" class="tabInformationClose">
+									<span> {{serviceProvider.tsppostal[0].street}} / {{serviceProvider.tsppostal[0].locality}} - {{serviceProvider.tsppostal[0].postalCode}} / {{serviceProvider.tsppostal[0].countryCode}}
+									</span>
+								</div>
+								<div ng-if="serviceProvider.addressshow=='1'" class="tabInformationOpen">
+									<tabset> <tab ng-repeat="info in serviceProvider.tsppostal"> <tab-heading> <check disabled="myTl.checkToRun" id="info.id" listcheck="listChecks"
+										label="tlBrowser_postalAddress" istreeparent="false"></check> <change id="info.id" listdiff="listDiffProviders" label="tlBrowser_postalAddress" istreeparent="false" information="information"></change>
+									<span>{{info.language}}</span> </tab-heading>
+									<div>
+										<div class="row">
+											<div class="col-sm-2 ">
+												<span th:text="#{address.street}">:</span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{info.street}}</span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2 ">
+												<span th:text="#{address.locality}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{info.locality}}</span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2 ">
+												<span th:text="#{address.postalcode}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{info.postalCode}}</span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2 ">
+												<span th:text="#{address.state}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{info.stateOrProvince}} </span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2 ">
+												<span th:text="#{address.country}"></span>
+											</div>
+											<div class="col-sm-10">
+												<span>{{info.countryCode}}</span>
+											</div>
+										</div>
+									</div>
+									</tab> </tabset>
+								</div>
+							</div>
+						</div>
+						<!-- Electronic Address -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tspelectronic)">
+							<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.emailshow='0'">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_ELECTRONIC_ADDRESS" listcheck="listChecks" label="tlBrowser_electronicAddress" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_ELECTRONIC_ADDRESS" listdiff="listDiffProviders" label="tlBrowser_electronicAddress" istreeparent="true" information="information"></change>
+								</div>
+								<span th:text="#{tlBrowser.electronicAddress}"></span>
+							</div>
+							<div class="col-sm-10">
+								<div ng-hide="iconTableVisibility(serviceProvider.tspelectronic)" class="openClose">
+									<span ng-if="serviceProvider.emailshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.emailshow='1'"></span>
+									<span ng-if="serviceProvider.emailshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.emailshow='0'"></span>
+								</div>
+								<div ng-if="serviceProvider.emailshow=='0'" class="tabInformationClose">
+									<uri value="serviceProvider.tspelectronic[0].value"></uri>
+								</div>
+								<div ng-if="serviceProvider.emailshow=='1'" class="tabInformationOpen">
+									<tabset> <tab ng-repeat="elec in serviceProvider.tspelectronic"> <tab-heading> <check disabled="myTl.checkToRun" id="elec.id" listcheck="listChecks"
+										label="tlBrowser_electronicAddress" istreeparent="false"></check> <change id="elec.id" listdiff="listDiffProviders" label="tlBrowser_electronicAddress" istreeparent="false"
+										information="information"></change> <span>{{elec.language}}</span> </tab-heading> <uri value="elec.value"></uri> </tab> </tabset>
+								</div>
+							</div>
+						</div>
+						<!-- Information URI -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tspinfoUri)">
+							<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.infoURIshow='0'">
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_INFORMATION_URI" listcheck="listChecks" label="tlBrowser_informationURI" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_TSP_INFORMATION_URI" listdiff="listDiffProviders" label="tlBrowser_informationURI" istreeparent="true" information="information"></change>
+								</div>
+								<span th:text="#{tlBrowser.informationURI}"></span>
+							</div>
+							<div class="col-sm-10">
+								<div ng-hide="iconTableVisibility(serviceProvider.tspinfoUri)" class="openClose">
+									<span ng-if="serviceProvider.infoURIshow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.infoURIshow='1'"></span>
+									<span ng-if="serviceProvider.infoURIshow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.infoURIshow='0'"></span>
+								</div>
+								<div ng-if="serviceProvider.infoURIshow=='0'" class="tabInformationClose">
+									<uri value="serviceProvider.tspinfoUri[0].value"></uri>
+								</div>
+								<div ng-if="serviceProvider.infoURIshow=='1'" class="tabInformationOpen">
+									<tabset> <tab ng-repeat="info in serviceProvider.tspinfoUri"> <tab-heading> <check disabled="myTl.checkToRun" id="info.id" listcheck="listChecks"
+										label="tlBrowser_informationURI" istreeparent="false"></check> <change id="info.id" listdiff="listDiffProviders" label="tlBrowser_informationURI" istreeparent="false"
+										information="information"></change> <span>{{info.language}}</span> </tab-heading> <uri value="info.value"></uri> </tab> </tabset>
+								</div>
+							</div>
+						</div>
+						<!-- Extension -->
+						<div class="row" ng-hide="tableVisibility(serviceProvider.tspextension)">
+							<div>
+								<div class="col-sm-2 text-right scheme-information" ng-init="serviceProvider.extension='0'">
+									<div class="divCheckChange">
+										<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_SERVICE_EXTENSION" listcheck="listChecks" label="serviceProvider_extension" istreeparent="true"></check>
+										<change id="serviceProvider.id+'_'+TAG_SERVICE_EXTENSION" listdiff="listDiffProviders" label="serviceProvider_extension" istreeparent="true" information="information"></change>
+									</div>
+									<span th:text="#{serviceProvider.extension}"></span>
+								</div>
+								<div class="col-sm-10" ng-if="serviceProvider.tspextension[0]!=null">
+									<span>{{serviceProvider.tspextension[0].critical}}</span>
+									-
+									<span>{{serviceProvider.tspextension[0].value}}</span>
+								</div>
+							</div>
+							<div class="row" ng-repeat="tspextension in serviceProvider.tspextension" ng-hide="$first">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-10">
+									<span>{{tspextension.critical}}</span>
+									-
+									<span>{{tspextension.value}}</span>
+								</div>
+							</div>
+						</div>
+						<!-- Services -->
+						<div ng-init="serviceProvider.edit=false;serviceProvider.show='1'" style="margin-top: 10px;">
+							<div>
+								<div ng-hide="iconTableVisibility(serviceProvider.tspservices)" class="openClose">
+									<span ng-if="serviceProvider.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="serviceProvider.show='1'"></span>
+									<span ng-if="serviceProvider.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="serviceProvider.show='0'"></span>
+								</div>
+								<div class="divCheckChange">
+									<check disabled="myTl.checkToRun" id="serviceProvider.id+'_'+TAG_TSP_SERVICE" listcheck="listChecks" label="serviceProvider_trustService" istreeparent="true"></check>
+									<change id="serviceProvider.id+'_'+TAG_TSP_SERVICE" listdiff="listDiffProviders" label="serviceProvider_trustService" istreeparent="true" information="information"></change>
+								</div>
+								<label class="noMargin" th:text="#{serviceProvider.trustService}"></label>
+								<span ng-class="iconExpandService(serviceProvider)" ng-click="expandAllService(serviceProvider)" tooltip="{{serviceProvider.expandTooltip}}" tooltip-placement="right"
+									class="editIcon cursor-pointer"></span>
+								<span ng-if="myTl.userEditable && serviceProvider.edit==false " class="fa fa-edit cursor-pointer editIcon" ng-init="myTl.serviceEdition.tooltip=EditTooltip(serviceProvider_trustService)"
+									ng-click="editTlDraft('editServiceMode',serviceProvider)" tooltip-placement="right" tooltip="{{myTl.serviceEdition.tooltip}}"></span>
+								<span ng-click="editServiceMode(serviceProvider)" ng-show="serviceProvider.edit==true" tooltip-placement="bottom" tooltip="Cancel" style="margin-left: 10px" class="fa fa-remove cursor-pointer"></span>
+								<span ng-click="addService($index)" ng-if="serviceProvider.edit==true" tooltip-placement="bottom" tooltip="Add" style="margin-left: 10px" class="fa fa-plus cursor-pointer "></span>
+							</div>
+							<th:block th:replace="service :: service" th:remove="tag"></th:block>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</main>
 
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

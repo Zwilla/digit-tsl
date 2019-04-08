@@ -1,95 +1,95 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <div style="display: inline-block; width: 94% !important">
-            <check disabled="myTl.checkToRun" id="extension.id" listcheck="listChecks" label="extension_takenOverBy" istreeparent="true"></check>
-            <change id="extension.id" listdiff="listDiff" label="extension_takenOverBy" istreeparent="true" information="information"></change>
-            <span th:text="#{extension.takenOverBy}"></span>
-        </div>
-        <div style="display: inline">
-            <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-            <span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
-        </div>
-    </div>
-    <div class="panel-body">
-        <!-- Informations -->
-        <div class="row paddingB-10">
-            <!-- Critical -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <span th:text="#{extension.critical}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <select ng-model="extension.critical" required name="critical">
-                        <option value="true" ng-selected="extension.critical == true">true</option>
-                        <option value="false" ng-selected="extension.critical == false">false</option>
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-            <!-- Territory -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <span th:text="#{schemeTerritory}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <select ng-model="extension.takenOverBy.territory" required name="territory" style="width: 95%">
-                        <option ng-repeat="cN in countryName" value="{{cN.label}}" ng-selected="extension.takenOverBy.territory == cN.label">{{cN.description}}
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-            <!-- URL -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <span th:text="#{extension.additionnalServiceInformation.URI}"></span>
-                </div>
-                <div class="col-sm-10">
-                    <input ng-model="extension.takenOverBy.url.value" required name="url" style="width: 95%">
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-        </div>
-        <!-- TSP Name -->
-        <div class="row paddingB-10">
-            <div class="col-sm-12 scheme-information" style="padding-right: 8px;">
-                <span th:text="#{serviceProvider.name}"></span>
-                <span ng-click="addTable(extension.takenOverBy.tspName)" style="float: right; color: #337ab7;" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
-            </div>
-            <br />
-            <div class="row" ng-repeat="name in extension.takenOverBy.tspName">
-                <div class="col-sm-2 text-right">
-                    <select ng-model="name.language" required name="uri.language_{{defURI.id}}" style="width: 70%;">
-                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="name.language== l.label">{{l.label}}</option>
-                    </select>
-                </div>
-                <div class="col-sm-10">
-                    <input ng-model="name.value" required name="tspName.value_{{name.id}}" style="width: 95%;" />
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(name.value+' '+tName)}}" confirmed="deleteTab(extension.takenOverBy.tspName,name)" tooltip="{{tDelete}}"
-                        tooltip-placement="right" style="margin-right: -10px;" class="fa fa-trash cursor-pointer"></span>
-                </div>
-            </div>
-        </div>
-        <!-- Operator Name -->
-        <div class="row paddingB-10">
-            <div class="col-sm-12 scheme-information" style="padding-right: 8px;">
-                <span th:text="#{schemeOpeName}"></span>
-                <span ng-click="addTable(extension.takenOverBy.operatorName)" style="float: right; color: #337ab7;" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
-            </div>
-            <br />
-            <div class="row" ng-repeat="name in extension.takenOverBy.operatorName">
-                <div class="col-sm-2 text-right">
-                    <select ng-model="name.language" required name="operatorName.language_{{name.id}}" style="width: 70%;">
-                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="name.language== l.label">{{l.label}}</option>
-                    </select>
-                </div>
-                <div class="col-sm-10">
-                    <input ng-model="name.value" required name="operatorName.value_{{name.id}}" style="width: 95%;" />
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(name.value+' '+schemeOpeName)}}" confirmed="deleteTab(extension.takenOverBy.operatorName,name)" tooltip="{{tDelete}}"
-                        tooltip-placement="right" style="margin-right: -10px;" class="fa fa-trash cursor-pointer"></span>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="panel-heading">
+		<div style="display: inline-block; width: 94% !important">
+			<check disabled="myTl.checkToRun" id="extension.id" listcheck="listChecks" label="extension_takenOverBy" istreeparent="true"></check>
+			<change id="extension.id" listdiff="listDiff" label="extension_takenOverBy" istreeparent="true" information="information"></change>
+			<span th:text="#{extension.takenOverBy}"></span>
+		</div>
+		<div style="display: inline">
+			<span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+			<span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
+		</div>
+	</div>
+	<div class="panel-body">
+		<!-- Informations -->
+		<div class="row paddingB-10">
+			<!-- Critical -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<span th:text="#{extension.critical}"></span>
+				</div>
+				<div class="col-sm-10">
+					<select ng-model="extension.critical" required name="critical">
+						<option value="true" ng-selected="extension.critical == true">true</option>
+						<option value="false" ng-selected="extension.critical == false">false</option>
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+			<!-- Territory -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<span th:text="#{schemeTerritory}"></span>
+				</div>
+				<div class="col-sm-10">
+					<select ng-model="extension.takenOverBy.territory" required name="territory" style="width: 95%">
+						<option ng-repeat="cN in countryName" value="{{cN.label}}" ng-selected="extension.takenOverBy.territory == cN.label">{{cN.description}}
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+			<!-- URL -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<span th:text="#{extension.additionnalServiceInformation.URI}"></span>
+				</div>
+				<div class="col-sm-10">
+					<input ng-model="extension.takenOverBy.url.value" required name="url" style="width: 95%">
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+		</div>
+		<!-- TSP Name -->
+		<div class="row paddingB-10">
+			<div class="col-sm-12 scheme-information" style="padding-right: 8px;">
+				<span th:text="#{serviceProvider.name}"></span>
+				<span ng-click="addTable(extension.takenOverBy.tspName)" style="float: right; color: #337ab7;" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
+			</div>
+			<br />
+			<div class="row" ng-repeat="name in extension.takenOverBy.tspName">
+				<div class="col-sm-2 text-right">
+					<select ng-model="name.language" required name="uri.language_{{defURI.id}}" style="width: 70%;">
+						<option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="name.language== l.label">{{l.label}}</option>
+					</select>
+				</div>
+				<div class="col-sm-10">
+					<input ng-model="name.value" required name="tspName.value_{{name.id}}" style="width: 95%;" />
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+					<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(name.value+' '+tName)}}" confirmed="deleteTab(extension.takenOverBy.tspName,name)" tooltip="{{tDelete}}" tooltip-placement="right"
+						style="margin-right: -10px;" class="fa fa-trash cursor-pointer"></span>
+				</div>
+			</div>
+		</div>
+		<!-- Operator Name -->
+		<div class="row paddingB-10">
+			<div class="col-sm-12 scheme-information" style="padding-right: 8px;">
+				<span th:text="#{schemeOpeName}"></span>
+				<span ng-click="addTable(extension.takenOverBy.operatorName)" style="float: right; color: #337ab7;" class="fa fa-plus cursor-pointer" tooltip-placement="bottom" tooltip="Add"></span>
+			</div>
+			<br />
+			<div class="row" ng-repeat="name in extension.takenOverBy.operatorName">
+				<div class="col-sm-2 text-right">
+					<select ng-model="name.language" required name="operatorName.language_{{name.id}}" style="width: 70%;">
+						<option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="name.language== l.label">{{l.label}}</option>
+					</select>
+				</div>
+				<div class="col-sm-10">
+					<input ng-model="name.value" required name="operatorName.value_{{name.id}}" style="width: 95%;" />
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+					<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(name.value+' '+schemeOpeName)}}" confirmed="deleteTab(extension.takenOverBy.operatorName,name)" tooltip="{{tDelete}}"
+						tooltip-placement="right" style="margin-right: -10px;" class="fa fa-trash cursor-pointer"></span>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -34,11 +33,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for OCSPRefType complex type.
+ * <p>
+ * Java class for OCSPRefType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="OCSPRefType"&gt;
@@ -56,13 +56,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "OCSPRefType", propOrder = {
-    "ocspIdentifier",
-    "digestAlgAndValue"
-})
-public class OCSPRefTypeV5
-    implements Serializable
-{
+@XmlType(name = "OCSPRefType", propOrder = { "ocspIdentifier", "digestAlgAndValue" })
+public class OCSPRefTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "OCSPIdentifier", required = true)
@@ -73,10 +68,8 @@ public class OCSPRefTypeV5
     /**
      * Gets the value of the ocspIdentifier property.
      * 
-     * @return
-     *     possible object is
-     *     {@link OCSPIdentifierTypeV5 }
-     *     
+     * @return possible object is {@link OCSPIdentifierTypeV5 }
+     * 
      */
     public OCSPIdentifierTypeV5 getOCSPIdentifier() {
         return ocspIdentifier;
@@ -86,9 +79,8 @@ public class OCSPRefTypeV5
      * Sets the value of the ocspIdentifier property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link OCSPIdentifierTypeV5 }
-     *     
+     *            allowed object is {@link OCSPIdentifierTypeV5 }
+     * 
      */
     public void setOCSPIdentifier(OCSPIdentifierTypeV5 value) {
         this.ocspIdentifier = value;
@@ -97,10 +89,8 @@ public class OCSPRefTypeV5
     /**
      * Gets the value of the digestAlgAndValue property.
      * 
-     * @return
-     *     possible object is
-     *     {@link DigestAlgAndValueTypeV5 }
-     *     
+     * @return possible object is {@link DigestAlgAndValueTypeV5 }
+     * 
      */
     public DigestAlgAndValueTypeV5 getDigestAlgAndValue() {
         return digestAlgAndValue;
@@ -110,9 +100,8 @@ public class OCSPRefTypeV5
      * Sets the value of the digestAlgAndValue property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link DigestAlgAndValueTypeV5 }
-     *     
+     *            allowed object is {@link DigestAlgAndValueTypeV5 }
+     * 
      */
     public void setDigestAlgAndValue(DigestAlgAndValueTypeV5 value) {
         this.digestAlgAndValue = value;

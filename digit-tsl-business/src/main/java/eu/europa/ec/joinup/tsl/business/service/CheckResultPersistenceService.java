@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -70,7 +70,7 @@ public class CheckResultPersistenceService {
         Date now = new Date();
         DBTrustedLists tl = tlService.getDbTL(tlId);
 
-        //get existing CHECK RESULT
+        // get existing CHECK RESULT
         List<DBCheckResult> dbChecks = tl.getCheckResults();
 
         if (dbChecks == null) {
@@ -79,14 +79,16 @@ public class CheckResultPersistenceService {
 
         List<CheckResultDTO> newChecks = new ArrayList<>();
         List<CheckResultDTO> tmpChecks = new ArrayList<>();
-        if (!CollectionUtils.isEmpty(currentChecks)) {
+        if (CollectionUtils.isNotEmpty(currentChecks)) {
             tmpChecks.addAll(currentChecks);
+        } else {
+            currentChecks = new ArrayList<>();
         }
 
         if (CollectionUtils.isNotEmpty(dbChecks)) {
             LOGGER.debug("To persist = " + currentChecks.size() + " <---> Existing = " + dbChecks.size());
 
-            //FOR EACH EXISTING RESULT SEE HOW IT EVOLVE
+            // FOR EACH EXISTING RESULT SEE HOW IT EVOLVE
             for (DBCheckResult dbCheck : dbChecks) {
                 if (dbCheck.getEndDate() == null) {
                     boolean found = false;
@@ -103,7 +105,7 @@ public class CheckResultPersistenceService {
                                 nbreUpdated++;
                                 break;
                             } else {
-                                //ERROR TO SUCCESS
+                                // ERROR TO SUCCESS
                                 dbCheck.setEndDate(now);
                                 currentChecks.remove(tmpCurrentCheck);
                                 break;
@@ -168,7 +170,11 @@ public class CheckResultPersistenceService {
             DBCheckResult dbResult = new DBCheckResult();
             dbResult.setCheck(dbCheck);
             dbResult.setTrustedList(tl);
-            dbResult.setStatus(resultStatus);
+            if (resultStatus.equals(CheckStatus.SUCCESS)) {
+                dbResult.setStatus(resultStatus);
+            } else {
+                dbResult.setStatus(dbCheck.getPriority());
+            }
             dbResult.setLocation(result.getId());
             dbResult.setHrLocation(result.getLocation());
             dbResult.setStartDate(startDate);

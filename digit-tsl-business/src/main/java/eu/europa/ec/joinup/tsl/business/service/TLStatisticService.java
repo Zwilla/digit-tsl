@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -64,7 +64,7 @@ public class TLStatisticService {
     private static final List<String> activeStatus = Arrays.asList("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
             "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel");
 
-    /* ----- ----- CSV Generation ----- -----*/
+    /* ----- ----- CSV Generation ----- ----- */
 
     public StatisticExtractionCriterias initCriteria() {
         return new StatisticExtractionCriterias(countryService.getAllCountryCode());
@@ -94,7 +94,7 @@ public class TLStatisticService {
         return StatisticCSVWriter.generateStatsCSV(genericStats, criteria);
     }
 
-    /* ----- ----- Search group by COUNTRY ----- -----*/
+    /* ----- ----- Search group by COUNTRY ----- ----- */
 
     /**
      * Get TL statistic for <b>ALL COUNTRIES</b> group by <b>COUNTRY</b>
@@ -118,31 +118,31 @@ public class TLStatisticService {
      * @param extractDate
      */
     public StatisticCountry getCountryStatisticByCountry(String countryCode, Date extractDate) {
-        //Init result
+        // Init result
         StatisticCountry countryStat = new StatisticCountry(countryCode, tlService.getProdSequenceNumberByTerritory(countryCode), extractDate);
 
         List<StatisticTSP> tspStatList = getCountryStatisticByTSP(countryCode, extractDate);
 
-        //Loop through TSP entry
+        // Loop through TSP entry
         for (StatisticTSP tspStat : tspStatList) {
-            //At least one service
-            if(tspStat.getNbService()>0){
+            // At least one service
+            if (tspStat.getNbService() > 0) {
                 countryStat.incrementNbTSP();
             }
-            //Init counter & params
+            // Init counter & params
             int nbActive = 0;
             int nbActiveTOB = 0;
             boolean isQualified = false;
             boolean isTOB = false;
 
-            //Loop through TSP types
+            // Loop through TSP types
             for (StatisticType statisticType : tspStat.getTypes().values()) {
                 if (statisticType.hasService() && statisticType.getType().isQualified()) {
-                    //At least one service is qualified
+                    // At least one service is qualified
                     isQualified = true;
                 }
 
-                //Increment StatisticType counter
+                // Increment StatisticType counter
                 if (statisticType.getNbActive() > 0) {
                     nbActive = nbActive + 1;
                     countryStat.getTypes().get(statisticType.getType()).incrementCounter(true, false);
@@ -160,12 +160,12 @@ public class TLStatisticService {
 
             }
 
-            //All the active services are TOB
+            // All the active services are TOB
             if ((nbActive == 0) && (nbActiveTOB > 0)) {
                 isTOB = true;
             }
 
-            //At least one service is active and qualified
+            // At least one service is active and qualified
             if (((nbActive + nbActiveTOB) > 0) && isQualified) {
                 if (isTOB) {
                     countryStat.incrementQTOB();
@@ -178,7 +178,7 @@ public class TLStatisticService {
         return countryStat;
     }
 
-    /* ----- ----- Search group by TSP ----- -----*/
+    /* ----- ----- Search group by TSP ----- ----- */
 
     /**
      * Get TL static for <b>ALL COUNTRIES</b> group by <b>TSP</b>
@@ -186,10 +186,10 @@ public class TLStatisticService {
      * @param extractDate
      */
     public List<StatisticTSP> getAllStatisticByTSP(Date extractDate) {
-        //Init result
+        // Init result
         List<StatisticTSP> tspStatList = new ArrayList<>();
 
-        //Loop through all countries
+        // Loop through all countries
         for (String countryCode : countryService.getAllCountryCode()) {
             dataService.findAllByCountry(countryCode);
             tspStatList.addAll(getCountryStatisticByTSP(countryCode, extractDate));
@@ -204,10 +204,10 @@ public class TLStatisticService {
      * @param extractDate
      */
     public List<StatisticTSP> getCountryStatisticByTSP(String countryCode, Date extractDate) {
-        //Init result
+        // Init result
         List<StatisticTSP> tspStatList = new ArrayList<>();
 
-        //Loop through TSP list
+        // Loop through TSP list
         for (TSPDataDTO tsp : dataService.findAllByCountry(countryCode)) {
             tspStatList.add(getTSPStatistic(tsp, extractDate));
         }
@@ -215,7 +215,7 @@ public class TLStatisticService {
         return sortStatisticTSP(tspStatList);
     }
 
-    /* ----- ----- Private methods ----- -----*/
+    /* ----- ----- Private methods ----- ----- */
 
     /**
      * Get TL statistic by <b>TSP</b> for <b>A GIVEN TSP</b>
@@ -224,19 +224,19 @@ public class TLStatisticService {
      * @param extractDate
      */
     private StatisticTSP getTSPStatistic(TSPDataDTO tsp, Date extractDate) {
-        //Init result
+        // Init result
         StatisticTSP statTSP = new StatisticTSP(tsp.getCountryCode(), tsp.getSequenceNumber(), tsp.getMName(), tsp.getMTradeName(), extractDate);
 
         if (!CollectionUtils.isEmpty(tsp.getServices())) {
 
-            //Loop through Service list
+            // Loop through Service list
             for (ServiceDataDTO service : tsp.getServices()) {
                 ServiceHistoryAbstractDataDTO shAbstract = null;
                 if (service.getStartingDate().before(extractDate)) {
-                    //Current service already started before extract date
+                    // Current service already started before extract date
                     shAbstract = service;
-                } else if(!CollectionUtils.isEmpty(service.getHistory())) {
-                    //Current service not started before extract date. Loop through historic required
+                } else if (!CollectionUtils.isEmpty(service.getHistory())) {
+                    // Current service not started before extract date. Loop through historic required
                     Boolean historyFound = false;
                     int index = 0;
                     while (!historyFound && (index < service.getHistory().size())) {
@@ -249,18 +249,18 @@ public class TLStatisticService {
                 }
 
                 if (shAbstract == null) {
-                    //No service or history found
+                    // No service or history found
                 } else {
-                    //Increment Nb of existing service
+                    // Increment Nb of existing service
                     statTSP.incrementNbService();
 
-                    //Verify is service is active
+                    // Verify is service is active
                     Boolean isActive = activeStatus.contains(shAbstract.getStatus());
 
-                    //Verify if service is TakenOverBy
+                    // Verify if service is TakenOverBy
                     Boolean isTOB = !StringUtils.isEmpty(shAbstract.getTakenOverBy());
 
-                    //Calcul legal types
+                    // Calcul legal types
                     for (String qType : shAbstract.getQTypes()) {
                         ServiceLegalType legalType = ServiceLegalType.getFromCode(qType);
                         statTSP.incrementType(legalType, isActive, isTOB);
@@ -272,7 +272,7 @@ public class TLStatisticService {
         return statTSP;
     }
 
-    /* ----- ----- Sort ----- -----*/
+    /* ----- ----- Sort ----- ----- */
 
     public List<StatisticTSP> sortStatisticTSP(List<StatisticTSP> tspList) {
         Collections.sort(tspList, new Comparator<StatisticTSP>() {

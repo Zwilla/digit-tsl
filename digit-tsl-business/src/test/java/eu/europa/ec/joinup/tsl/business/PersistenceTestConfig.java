@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -41,9 +41,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableJpaRepositories
 @EnableTransactionManagement
-@TestExecutionListeners({
-    DirtiesContextTestExecutionListener.class
-})
+@TestExecutionListeners({ DirtiesContextTestExecutionListener.class })
 public class PersistenceTestConfig {
 
     @Bean
@@ -65,7 +63,7 @@ public class PersistenceTestConfig {
     public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter jpaVendorAdapter = new HibernateJpaVendorAdapter();
         jpaVendorAdapter.setDatabase(Database.HSQL);
-        //		jpaVendorAdapter.setGenerateDdl(true);
+        // jpaVendorAdapter.setGenerateDdl(true);
         jpaVendorAdapter.setShowSql(false);
         return jpaVendorAdapter;
     }
@@ -76,9 +74,7 @@ public class PersistenceTestConfig {
         lemfb.setDataSource(dataSource());
         lemfb.setJpaVendorAdapter(jpaVendorAdapter());
         lemfb.setJpaProperties(jpaProperties());
-        lemfb.setPackagesToScan(new String[] {
-                "eu.europa.ec.joinup.tsl.business", "eu.europa.ec.joinup.tsl.model"
-        });
+        lemfb.setPackagesToScan(new String[] { "eu.europa.ec.joinup.tsl.business", "eu.europa.ec.joinup.tsl.model" });
         return lemfb;
     }
 

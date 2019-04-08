@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -54,9 +54,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-        "x509Certificate", "other", "x509SKI", "x509SubjectName", "check"
-})
+@XmlType(name = "", propOrder = { "x509Certificate", "other", "x509SKI", "x509SubjectName", "check" })
 @XmlRootElement(name = "DigitalId", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class DigitalId {
 
@@ -76,9 +74,7 @@ public class DigitalId {
     /**
      * Obtient la valeur de la propriete x509Certificate.
      *
-     * @return
-     *         possible object is
-     *         {@link X509Certificate }
+     * @return possible object is {@link X509Certificate }
      */
     public X509Certificate getX509Certificate() {
         return x509Certificate;
@@ -88,8 +84,7 @@ public class DigitalId {
      * Definit la valeur de la propriete x509Certificate.
      *
      * @param value
-     *            allowed object is
-     *            {@link X509Certificate }
+     *            allowed object is {@link X509Certificate }
      */
     public void setX509Certificate(X509Certificate value) {
         x509Certificate = value;
@@ -98,9 +93,7 @@ public class DigitalId {
     /**
      * Obtient la valeur de la propriete other.
      *
-     * @return
-     *         possible object is
-     *         {@link Other }
+     * @return possible object is {@link Other }
      */
     public Other getOther() {
         return other;
@@ -110,8 +103,7 @@ public class DigitalId {
      * Definit la valeur de la propriete other.
      *
      * @param value
-     *            allowed object is
-     *            {@link Other }
+     *            allowed object is {@link Other }
      */
     public void setOther(Other value) {
         other = value;
@@ -120,9 +112,7 @@ public class DigitalId {
     /**
      * Obtient la valeur de la propriete x509SKI.
      *
-     * @return
-     *         possible object is
-     *         {@link X509SKI }
+     * @return possible object is {@link X509SKI }
      */
     public X509SKI getX509SKI() {
         return x509SKI;
@@ -132,8 +122,7 @@ public class DigitalId {
      * Definit la valeur de la propriete x509SKI.
      *
      * @param value
-     *            allowed object is
-     *            {@link X509SKI }
+     *            allowed object is {@link X509SKI }
      */
     public void setX509SKI(X509SKI value) {
         x509SKI = value;
@@ -142,9 +131,7 @@ public class DigitalId {
     /**
      * Obtient la valeur de la propriete x509SubjectName.
      *
-     * @return
-     *         possible object is
-     *         {@link X509SubjectName }
+     * @return possible object is {@link X509SubjectName }
      */
     public X509SubjectName getX509SubjectName() {
         return x509SubjectName;
@@ -154,8 +141,7 @@ public class DigitalId {
      * Definit la valeur de la propriete x509SubjectName.
      *
      * @param value
-     *            allowed object is
-     *            {@link X509SubjectName }
+     *            allowed object is {@link X509SubjectName }
      */
     public void setX509SubjectName(X509SubjectName value) {
         x509SubjectName = value;
@@ -164,9 +150,7 @@ public class DigitalId {
     /**
      * Obtient la valeur de la propriete index.
      *
-     * @return
-     *         possible object is
-     *         {@link BigInteger }
+     * @return possible object is {@link BigInteger }
      */
     public BigInteger getIndex() {
         return index;
@@ -176,8 +160,7 @@ public class DigitalId {
      * Definit la valeur de la propriete index.
      *
      * @param value
-     *            allowed object is
-     *            {@link BigInteger }
+     *            allowed object is {@link BigInteger }
      */
     public void setIndex(BigInteger value) {
         index = value;

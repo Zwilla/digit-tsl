@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -132,6 +132,7 @@ public class ApiTlEditionController {
 
                             rulesRunner.validateSchemeInformation(tlInformationEdition.getTlId());
                             rulesRunner.compareTL(draft, published);
+                            rulesRunner.persistTransitionCheck(draft);
                             tlService.setTlCheckStatus(tlInformationEdition.getTlId());
                         }
 
@@ -169,8 +170,7 @@ public class ApiTlEditionController {
             }
             if (tlService.inStoreOrProd(tlPointerEdition.getTlId(), tlPointerEdition.getCookie())) {
                 if (TLUtils.checkDate(tlService.getEdt(tlPointerEdition.getTlId()), tlPointerEdition.getLastEditedDate())) {
-                    TLPointersToOtherTSL pointerUpdated = tlEditPointerService.edit(tlPointerEdition.getTlId(), tlPointerEdition.getTlPointerObj(),
-                            tlPointerEdition.getEditAttribute());
+                    TLPointersToOtherTSL pointerUpdated = tlEditPointerService.edit(tlPointerEdition.getTlId(), tlPointerEdition.getTlPointerObj(), tlPointerEdition.getEditAttribute());
                     TLPointersToOtherTSL pointerUpdatedWithId = null;
                     if (pointerUpdated != null) {
                         String id = pointerUpdated.getId();
@@ -182,8 +182,8 @@ public class ApiTlEditionController {
                             // CREATION OF NEW POINTER
                             // GET "i" of NEXT POINTER
 
-                            pointerUpdatedWithId = new TLPointersToOtherTSL(tlPointerEdition.getTlId(),
-                                    tlPointerEdition.getTlId() + "_" + Tag.POINTERS_TO_OTHER_TSL + "_" + tl.getPointers().size(), pointerUpdated.asTSLTypeV5());
+                            pointerUpdatedWithId = new TLPointersToOtherTSL(tlPointerEdition.getTlId(), tlPointerEdition.getTlId() + "_" + Tag.POINTERS_TO_OTHER_TSL + "_" + tl.getPointers().size(),
+                                    pointerUpdated.asTSLTypeV5());
                         }
 
                         if (!tlService.getSignatureInfo(tlPointerEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
@@ -262,8 +262,7 @@ public class ApiTlEditionController {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             if (tlService.inStoreOrProd(tlServiceProviderEdition.getTlId(), tlServiceProviderEdition.getCookie())) {
                 if (TLUtils.checkDate(tlService.getEdt(tlServiceProviderEdition.getTlId()), tlServiceProviderEdition.getLastEditedDate())) {
-                    TLServiceProvider serviceProviderUpdated = tlEditServiceProviderService.edit(tlServiceProviderEdition.getTlId(),
-                            tlServiceProviderEdition.getTlServiceProviderObj());
+                    TLServiceProvider serviceProviderUpdated = tlEditServiceProviderService.edit(tlServiceProviderEdition.getTlId(), tlServiceProviderEdition.getTlServiceProviderObj());
                     TLServiceProvider serviceProviderUpdatedWithId = null;
                     if (serviceProviderUpdated != null) {
                         TL tl = tlService.getTL(tlServiceProviderEdition.getTlId());
@@ -275,8 +274,7 @@ public class ApiTlEditionController {
                             // CREATION OF NEW PROVIDER
                             // GET "i" of NEXT PROVIDER
                             serviceProviderUpdatedWithId = new TLServiceProvider(tlServiceProviderEdition.getTlId(),
-                                    tlServiceProviderEdition.getTlId() + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + tl.getServiceProviders().size(),
-                                    serviceProviderUpdated.asTSLTypeV5());
+                                    tlServiceProviderEdition.getTlId() + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + tl.getServiceProviders().size(), serviceProviderUpdated.asTSLTypeV5());
                         }
 
                         if (!tlService.getSignatureInfo(tlServiceProviderEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
@@ -286,6 +284,7 @@ public class ApiTlEditionController {
                         // CHECK PROVIDER ONLY
                         if (tlServiceProviderEdition.isCheckToRun()) {
                             rulesRunner.validateServiceProvider(tlServiceProviderEdition.getTlId(), getTSPId(serviceProviderUpdatedWithId), false);
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceProviderEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -329,6 +328,7 @@ public class ApiTlEditionController {
 
                             rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
                             rulesRunner.compareTL(tl, published);
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceProviderEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -370,8 +370,8 @@ public class ApiTlEditionController {
                         } else {
                             // CREATION OF NEW SERVICE
                             // GET "i" of NEXT SERVICE
-                            String newId = tlServiceEdition.getTlId() + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + (tlServiceEdition.getParentIndex().get(0) + 1) + "_"
-                                    + Tag.TSP_SERVICE + "_" + tl.getServiceProviders().get(tlServiceEdition.getParentIndex().get(0)).getTSPServices().size();
+                            String newId = tlServiceEdition.getTlId() + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + (tlServiceEdition.getParentIndex().get(0) + 1) + "_" + Tag.TSP_SERVICE + "_"
+                                    + tl.getServiceProviders().get(tlServiceEdition.getParentIndex().get(0)).getTSPServices().size();
                             serviceUpdatedWithId = new TLServiceDto(tlServiceEdition.getTlId(), newId, serviceUpdated.asTSLTypeV5());
 
                         }
@@ -383,6 +383,7 @@ public class ApiTlEditionController {
                         if (tlServiceEdition.isCheckToRun()) {
                             int parentId = tlServiceEdition.getParentIndex().get(0) + 1;
                             rulesRunner.validateService(tlServiceEdition.getTlId(), parentId, getServiceId(parentId, serviceUpdatedWithId));
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceEdition.getTlId());
                         }
 
@@ -427,6 +428,7 @@ public class ApiTlEditionController {
 
                             rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
                             rulesRunner.compareTL(tl, published);
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -461,14 +463,14 @@ public class ApiTlEditionController {
                         TL tl = tlService.getTL(tlServiceHistory.getTlId());
                         // ParentIndex is list of the parent index of current history
                         // parentIndex[0] -> provider; parentIndex[1] -> service;
-                        response.setContent(
-                                tl.getServiceProviders().get(tlServiceHistory.getParentIndex().get(0)).getTSPServices().get(tlServiceHistory.getParentIndex().get(1)).getHistory());
+                        response.setContent(tl.getServiceProviders().get(tlServiceHistory.getParentIndex().get(0)).getTSPServices().get(tlServiceHistory.getParentIndex().get(1)).getHistory());
                         if (!tlService.getSignatureInfo(tlServiceHistory.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
                             tlValidator.checkAllSignature(tlService.getDbTL(tlServiceHistory.getTlId()));
                         }
 
                         if (tlServiceHistory.isCheckToRun()) {
                             rulesRunner.validateService(tlServiceHistory.getTlId(), (tlServiceHistory.getParentIndex().get(0) + 1), (tlServiceHistory.getParentIndex().get(1) + 1));
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceHistory.getTlId());
                         }
 
@@ -510,6 +512,7 @@ public class ApiTlEditionController {
 
                             rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
                             rulesRunner.compareTL(tl, published);
+                            rulesRunner.persistTransitionCheck(tl);
                             tlService.setTlCheckStatus(tlServiceHistory.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -537,7 +540,7 @@ public class ApiTlEditionController {
      * @param editionObject
      * @return
      */
-    //TODO(TBD) : refactoring !
+    // TODO(TBD) : refactoring !
     @RequestMapping(value = "/tlNotification", method = RequestMethod.POST)
     public @ResponseBody ServiceResponse<String> editNotifPointer(@RequestBody TLNotificationEdition editionObject) {
         ServiceResponse<String> response = new ServiceResponse<>();

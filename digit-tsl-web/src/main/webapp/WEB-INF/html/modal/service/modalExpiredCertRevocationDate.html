@@ -1,32 +1,32 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <div style="display: inline-block; width: 94% !important">
-            <check disabled="myTl.checkToRun"  id="extension.id" listcheck="listChecks" label="extension_revocationDate" istreeparent="true"></check>
-            <change id="extension.id" listdiff="listDiff" label="extension_revocationDate" istreeparent="true"information="information"></change>
-            <span th:text="#{extension.revocationDate}"></span>
-        </div>
-        <div style="display: inline">
-            <span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-            <span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
-        </div>
-    </div>
-    <div class="panel-body">
-        <div ng-init="extension.critical=false">
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <span th:text="#{extension.revocationDate}">:</span>
-                </div>
-                <div class="col-sm-6" style="display: inline">
-                    <div style="display: inline">
-                        <input required name="startingDate" type="text" datepicker-popup="{{format}}" ng-model="extension.expiredCertsRevocationDate" is-open="opened" datepicker-options="dateOptions"
-                            date-disabled="disabled(date, mode)" close-text="Close"/>
-                        <button type="button" class="btn btn-default" ng-click="open($event)">
-                            <i class="fa fa-calendar"></i>
-                        </button>
-                    </div>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="panel-heading">
+		<div style="display: inline-block; width: 94% !important">
+			<check disabled="myTl.checkToRun" id="extension.id" listcheck="listChecks" label="extension_revocationDate" istreeparent="true"></check>
+			<change id="extension.id" listdiff="listDiff" label="extension_revocationDate" istreeparent="true" information="information"></change>
+			<span th:text="#{extension.revocationDate}"></span>
+		</div>
+		<div style="display: inline">
+			<span class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+			<span ng-click="ok()" style="margin-left: 5px;" class="fa fa-check cursor-pointer"></span>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div ng-init="extension.critical=false">
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<span th:text="#{extension.revocationDate}">:</span>
+				</div>
+				<div class="col-sm-6" style="display: inline">
+					<div style="display: inline">
+						<input required name="startingDate" type="text" datepicker-popup="{{format}}" ng-model="extension.expiredCertsRevocationDate" is-open="opened" datepicker-options="dateOptions"
+							date-disabled="disabled(date, mode)" close-text="Close" />
+						<button type="button" class="btn btn-default" ng-click="open($event)">
+							<i class="fa fa-calendar"></i>
+						</button>
+					</div>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

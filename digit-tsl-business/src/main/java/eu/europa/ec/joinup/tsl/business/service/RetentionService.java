@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -40,12 +40,16 @@ import javax.transaction.Transactional;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import eu.europa.ec.joinup.tsl.business.dto.data.retention.CronRetention;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.DraftStoreRetentionDTO;
+import eu.europa.ec.joinup.tsl.business.dto.data.retention.RetentionAlertDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.RetentionCriteriaDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.RetentionTarget;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.TrustedListRetentionDTO;
+import eu.europa.ec.joinup.tsl.business.util.CronUtils;
 import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBDraftStore;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
@@ -77,6 +81,9 @@ public class RetentionService {
 
     @PersistenceContext
     private EntityManager em;
+
+    @Value("${cron.retention.job}")
+    private String cronRetentionJob;
 
     /**
      * Delete a draftStore with all the TL linked
@@ -118,10 +125,36 @@ public class RetentionService {
     }
 
     /**
-     * Search for specific data by @RetentionType and/or @Date; if date is null get current date.
-     * DraftStore : based on lastVerificationDate;
-     * Production TL : based on XML file firstScanDate;
-     * Draft TL : based on lastAccessDate
+     * Search for data that will be deleted on the next retention cron iteration (Draftstores + Draft TLs)
+     */
+    public CronRetention searchNextCronRetention() {
+        CronRetention cronRetentionDTO = new CronRetention();
+        // Next execution
+        Date nextCron = CronUtils.getDateFromExpression(new Date(), cronRetentionJob);
+
+        // Last access date
+        Calendar c = Calendar.getInstance();
+        c.setTime(nextCron);
+        c.add(Calendar.MONTH, -2);
+        Date lastAccessDate = c.getTime();
+
+        cronRetentionDTO.setLastAccessDate(lastAccessDate);
+        cronRetentionDTO.setNextCron(nextCron);
+
+        cronRetentionDTO.setDraftstores(getDraftStoreRetentionSince(lastAccessDate));
+
+        RetentionCriteriaDTO draftTLCriteria = new RetentionCriteriaDTO(RetentionTarget.DRAFT, lastAccessDate);
+        List<DraftStoreRetentionDTO> draftTL = mapDBTLinDTO(draftTLCriteria, findCriteriaBuilder(draftTLCriteria));
+        if (!CollectionUtils.isEmpty(draftTL)) {
+            cronRetentionDTO.setDraftTL(draftTL.get(0));
+        }
+
+        return cronRetentionDTO;
+    }
+
+    /**
+     * Search for specific data by @RetentionType and/or @Date; if date is null get current date. DraftStore : based on lastVerificationDate;
+     * Production TL : based on XML file firstScanDate; Draft TL : based on lastAccessDate
      *
      * @param retentionCriteria
      */
@@ -130,20 +163,20 @@ public class RetentionService {
             throw new IllegalArgumentException(bundle.getString("error.retention.param.missing"));
         }
         switch (retentionCriteria.getTarget()) {
-            case DRAFTSTORE:
-                if (retentionCriteria.getDate() == null) {
-                    Calendar cal = Calendar.getInstance();
-                    cal.add(Calendar.MONTH, -2);
-                    Date twoMonthAgo = cal.getTime();
-                    return getDraftStoreRetentionSince(DateUtils.getEndOfDay(twoMonthAgo));
-                } else {
-                    return getDraftStoreRetentionSince(DateUtils.getEndOfDay(retentionCriteria.getDate()));
-                }
-            case DRAFT:
-            case PRODUCTION:
-                return mapDBTLinDTO(retentionCriteria, findCriteriaBuilder(retentionCriteria));
-            default:
-                throw new IllegalStateException(bundle.getString("error.retention.type.default"));
+        case DRAFTSTORE:
+            if (retentionCriteria.getDate() == null) {
+                Calendar cal = Calendar.getInstance();
+                cal.add(Calendar.MONTH, -2);
+                Date twoMonthAgo = cal.getTime();
+                return getDraftStoreRetentionSince(DateUtils.getEndOfDay(twoMonthAgo));
+            } else {
+                return getDraftStoreRetentionSince(DateUtils.getEndOfDay(retentionCriteria.getDate()));
+            }
+        case DRAFT:
+        case PRODUCTION:
+            return mapDBTLinDTO(retentionCriteria, findCriteriaBuilder(retentionCriteria));
+        default:
+            throw new IllegalStateException(bundle.getString("error.retention.type.default"));
         }
     }
 
@@ -186,25 +219,25 @@ public class RetentionService {
                 throw new IllegalStateException(bundle.getString("error.retention.type.default"));
             }
 
-            //Target
+            // Target
             if (criteriaDTO.getTarget().equals(RetentionTarget.DRAFT)) {
                 predicates.add(builder.equal(root.get("status"), TLStatus.DRAFT));
             } else if (criteriaDTO.getTarget().equals(RetentionTarget.PRODUCTION)) {
                 predicates.add(builder.equal(root.get("status"), TLStatus.PROD));
             }
-            //Date
+            // Date
             if (criteriaDTO.getDate() != null) {
                 predicates.add(builder.lessThanOrEqualTo(criteriaDate, DateUtils.getEndOfDay(criteriaDTO.getDate())));
             }
-            //Territory Code
+            // Territory Code
             if (!StringUtils.isEmpty(criteriaDTO.getTerritoryCode())) {
                 predicates.add(builder.equal(root.get("territory").get("codeTerritory"), criteriaDTO.getTerritoryCode()));
             }
-            //Order By
+            // Order By
             List<Order> orderList = new ArrayList<>();
             orderList.add(builder.desc(criteriaDate));
 
-            //Select where @predicates order by @criteriaDate
+            // Select where @predicates order by @criteriaDate
             query.select(root).where(predicates.toArray(new Predicate[] {})).orderBy(orderList);
             return em.createQuery(query).getResultList();
         }
@@ -215,26 +248,26 @@ public class RetentionService {
      * Clean Draftstore not accessed since two months with all TL attached & clean trustedList older than 2 months even if draftstore still accessed
      */
     public void retentionClean() {
-        //Init params
+        // Init params
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.MONTH, -2);
         Date twoMonthAgo = cal.getTime();
 
-        int nbDraftStore = 0;
-        int nbTrustedList = 0;
+        int nbDraftStoreDeleted = 0;
+        int nbTrustedListDeleted = 0;
 
-        //Get draftstore(s) older than 2 months and delete
+        // Get draftstore(s) older than 2 months and delete
         List<DraftStoreRetentionDTO> draftStoreRetention = getDraftStoreRetentionSince(twoMonthAgo);
-        //Clean
+        // Clean
         if (!CollectionUtils.isEmpty(draftStoreRetention)) {
             for (DraftStoreRetentionDTO dsRetention : draftStoreRetention) {
-                nbTrustedList = nbTrustedList + dsRetention.getTls().size();
+                nbTrustedListDeleted = nbTrustedListDeleted + dsRetention.getTls().size();
                 cleanDraftStore(dsRetention);
-                nbDraftStore = nbDraftStore + 1;
+                nbDraftStoreDeleted = nbDraftStoreDeleted + 1;
             }
         }
 
-        //Get trustedlist(s) older than 2 months and delete
+        // Get trustedlist(s) older than 2 months and delete
         RetentionCriteriaDTO retentionCriteria = new RetentionCriteriaDTO();
         retentionCriteria.setTarget(RetentionTarget.DRAFT);
         retentionCriteria.setDate(twoMonthAgo);
@@ -242,15 +275,17 @@ public class RetentionService {
         if ((trustedListRetention != null) && !CollectionUtils.isEmpty(trustedListRetention.get(0).getTls())) {
             for (TrustedListRetentionDTO tlRetention : trustedListRetention.get(0).getTls()) {
                 cleanTrustedlist(tlRetention);
-                nbTrustedList = nbTrustedList + 1;
+                nbTrustedListDeleted = nbTrustedListDeleted + 1;
             }
 
         }
 
-        alertingService.sendRetentionJobReport(nbDraftStore, nbTrustedList);
+        RetentionAlertDTO retentionAlert = new RetentionAlertDTO(draftStoreService.countDraftStore(), tlService.countDraftTL(), nbDraftStoreDeleted, nbTrustedListDeleted);
+
+        alertingService.sendRetentionJobReport(retentionAlert);
 
         auditService.addAuditLog(AuditTarget.JOBS, AuditAction.UPDATE, AuditStatus.SUCCES, "", 0, "SYSTEM",
-                "Retention service clean " + nbDraftStore + " draftstore and " + nbTrustedList + " trusted list.");
+                "Retention service clean " + nbDraftStoreDeleted + " draftstore and " + nbTrustedListDeleted + " trusted list.");
 
     }
 

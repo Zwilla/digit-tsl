@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -26,11 +26,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Classe Java pour anonymous complex type.
+ * <p>
+ * Classe Java pour anonymous complex type.
  * 
- * <p>Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
+ * <p>
+ * Le fragment de schema suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
  * &lt;complexType>
@@ -48,10 +49,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "postalAddresses",
-    "electronicAddress"
-})
+@XmlType(name = "", propOrder = { "postalAddresses", "electronicAddress" })
 @XmlRootElement(name = "TSPAddress", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class TSPAddress {
 
@@ -63,10 +61,8 @@ public class TSPAddress {
     /**
      * Obtient la valeur de la propriete postalAddresses.
      * 
-     * @return
-     *     possible object is
-     *     {@link PostalAddresses }
-     *     
+     * @return possible object is {@link PostalAddresses }
+     * 
      */
     public PostalAddresses getPostalAddresses() {
         return postalAddresses;
@@ -76,9 +72,8 @@ public class TSPAddress {
      * Definit la valeur de la propriete postalAddresses.
      * 
      * @param value
-     *     allowed object is
-     *     {@link PostalAddresses }
-     *     
+     *            allowed object is {@link PostalAddresses }
+     * 
      */
     public void setPostalAddresses(PostalAddresses value) {
         this.postalAddresses = value;
@@ -87,10 +82,8 @@ public class TSPAddress {
     /**
      * Obtient la valeur de la propriete electronicAddress.
      * 
-     * @return
-     *     possible object is
-     *     {@link ElectronicAddress }
-     *     
+     * @return possible object is {@link ElectronicAddress }
+     * 
      */
     public ElectronicAddress getElectronicAddress() {
         return electronicAddress;
@@ -100,9 +93,8 @@ public class TSPAddress {
      * Definit la valeur de la propriete electronicAddress.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ElectronicAddress }
-     *     
+     *            allowed object is {@link ElectronicAddress }
+     * 
      */
     public void setElectronicAddress(ElectronicAddress value) {
         this.electronicAddress = value;

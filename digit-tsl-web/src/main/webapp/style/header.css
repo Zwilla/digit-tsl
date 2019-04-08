@@ -3,313 +3,318 @@
 /* HEADER EC
 -------------------------------------------------- */
 #header_ec {
-    /*     margin:10px 0px; */
-    /*     text-align:center; */
-    background: none repeat scroll 0 0 #FFFFFF !important;
+	/*     margin:10px 0px; */
+	/*     text-align:center; */
+	background: none repeat scroll 0 0 #FFFFFF !important;
 }
 
 .ie7 #header_ec {
-    min-height: 58px;
+	min-height: 58px;
 }
 
 #header_ec a {
-    color: #027AC6;
-    text-decoration: underline;
+	color: #027AC6;
+	text-decoration: underline;
 }
 
 #header_ec a:visited {
-    color: #551A8B;
+	color: #551A8B;
 }
 
 #header_ec a:hover, #header_ec a:focus, #header_ec a:active {
-    color: #036;
+	color: #036;
 }
 /* Use for full screen content */
-#header_ec.full .top, #header_ec.full .title .content, #header_ec.full .sub-title .content, .path.full .content {
-    margin: 0 auto;
-    max-width: 1170px;
+#header_ec.full .top, #header_ec.full .title .content, #header_ec.full .sub-title .content,
+	.path.full .content {
+	margin: 0 auto;
+	max-width: 1170px;
 }
 
-#header_ec .top, #header_ec .title .content, #header_ec .sub-title .content, .path .content {
-    margin: 0 auto;
-    max-width: 100%;
+#header_ec .top, #header_ec .title .content, #header_ec .sub-title .content,
+	.path .content {
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 #header_ec .top {
-    position: relative;
-    z-index: 1000;
+	position: relative;
+	z-index: 1000;
 }
 
 #header_ec .top .content {
-    float: right;
-    font-size: 10.8px;
-    text-align: right;
-    width: 100%;
+	float: right;
+	font-size: 10.8px;
+	text-align: right;
+	width: 100%;
 }
 
 #header_ec .top .content form select {
-    margin: 0;
-    padding: 0;
-    float: none;
-    font-size: 12px;
-    border-radius: 0px;
-    width: 130px;
+	margin: 0;
+	padding: 0;
+	float: none;
+	font-size: 12px;
+	border-radius: 0px;
+	width: 130px;
 }
 
 #services {
-    position: absolute;
-    left: 0;
-    top: 2px;
-    right: 0;
-    z-index: 18;
-    padding: 1px 5px 1px 0;
-    font-weight: normal;
-    text-align: right;
+	position: absolute;
+	left: 0;
+	top: 2px;
+	right: 0;
+	z-index: 18;
+	padding: 1px 5px 1px 0;
+	font-weight: normal;
+	text-align: right;
 }
 
 #services li {
-    display: inline;
-    padding: 3px 0;
+	display: inline;
+	padding: 3px 0;
 }
 
 #services a, #services a:visited {
-    display: inline-block;
-    margin: 0;
-    padding: 0 0 3px 5px;
-    background: url("header/services-separator.gif") transparent 0px 3px no-repeat;
-    color: #396ea2;
-    text-decoration: none;
-    border: 0;
-    font-weight: normal;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 3px 5px;
+	background: url("header/services-separator.gif") transparent 0px 3px
+		no-repeat;
+	color: #396ea2;
+	text-decoration: none;
+	border: 0;
+	font-weight: normal;
 }
 
 #services a:focus, #services a:hover, #services a:active {
-    color: #396ea2;
-    text-decoration: underline;
-    border: 0;
+	color: #396ea2;
+	text-decoration: underline;
+	border: 0;
 }
 
 #services a.first {
-    background-image: none;
-    border: 0;
+	background-image: none;
+	border: 0;
 }
 
 ul#services li.first a {
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 ul#services li a:hover {
-    text-decoration: underline !important;
+	text-decoration: underline !important;
 }
 
 .js ul#services, ul#services {
-    display: inline;
-    position: relative;
-    top: 3px;
-    /*float: left;*/
-    padding: 0;
+	display: inline;
+	position: relative;
+	top: 3px;
+	/*float: left;*/
+	padding: 0;
 }
 
 #languageForm {
-    margin: 0 0 0px 10px;
-    padding: 0;
-    position: relative;
-    display: inline;
-    line-height: 0px;
+	margin: 0 0 0px 10px;
+	padding: 0;
+	position: relative;
+	display: inline;
+	line-height: 0px;
 }
 
 .ie7 #languageForm {
-    margin: 1px -2px 0 0px;
+	margin: 1px -2px 0 0px;
 }
 
 #languageForm select option {
-    background: #fff;
+	background: #fff;
 }
 
 #languageForm input[type="submit"] {
-    display: inline;
-    margin: 0 1px 0 0;
-    padding: 0 5px;
-    height: 18px;
-    color: #396EA2;
-    font-size: 0.75em;
-    line-height: 0.75em;
-    background: #FFF;
-    border: 1px solid #99AABB;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
-    -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	display: inline;
+	margin: 0 1px 0 0;
+	padding: 0 5px;
+	height: 18px;
+	color: #396EA2;
+	font-size: 0.75em;
+	line-height: 0.75em;
+	background: #FFF;
+	border: 1px solid #99AABB;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+	text-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .ie7 #languageForm input[type="submit"], x:-moz-any-link, x:default {
-    padding: 1px 0px;
+	padding: 1px 0px;
 }
 
 #header_ec .title {
-    position: relative;
-    z-index: 999;
+	position: relative;
+	z-index: 999;
 }
 
 #header_ec .title .content {
-    position: relative;
-    padding-top: 69px;
+	position: relative;
+	padding-top: 69px;
 }
 
 #header_ec .title .content span {
-    display: block;
-    margin: 0;
-    padding: 0 10px 2px 248px;
-    color: #0065A2;
-    font-size: 24px;
-    line-height: 1.2em !important;
-    text-transform: uppercase;
+	display: block;
+	margin: 0;
+	padding: 0 10px 2px 248px;
+	color: #0065A2;
+	font-size: 24px;
+	line-height: 1.2em !important;
+	text-transform: uppercase;
 }
 
 #header_ec .sub-title {
-    background: none repeat scroll 0 0 #0065A2;
-    color: #FFF;
+	background: none repeat scroll 0 0 #0065A2;
+	color: #FFF;
 }
 
 #header_ec .sub-title .content {
-    min-height: 45px;
-    position: relative;
+	min-height: 45px;
+	position: relative;
 }
 
 #header_ec .sub-title .content span {
-    margin-left: 249px;
-    font-size: 15px;
+	margin-left: 249px;
+	font-size: 15px;
 }
 
 #header_ec .sub-title .content .logo {
-    position: absolute;
-    left: 40px;
-    top: -85px;
-    width: 172px;
+	position: absolute;
+	left: 40px;
+	top: -85px;
+	width: 172px;
 }
 
 .path {
-    background-color: #074A8B;
+	background-color: #074A8B;
 }
 
 .path .content {
-    padding: 1px 0 0 10px;
-    overflow: hidden;
-    color: #FFFFFF;
-    font-size: 10.8px;
-    min-height: 19px;
+	padding: 1px 0 0 10px;
+	overflow: hidden;
+	color: #FFFFFF;
+	font-size: 10.8px;
+	min-height: 19px;
 }
 
 .path .content ul {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 .path .content ul li:first-child {
-    padding: 0;
-    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	padding: 0;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 
 .path .content ul li {
-    display: inline;
-    padding: 0 0 0 12px;
-    float: left;
-    background: url("header/breadcrumb.gif") no-repeat scroll left center rgba(0, 0, 0, 0);
+	display: inline;
+	padding: 0 0 0 12px;
+	float: left;
+	background: url("header/breadcrumb.gif") no-repeat scroll left center
+		rgba(0, 0, 0, 0);
 }
 
-.path .content ul li a, .path .content ul li a:link, .path .content ul li a:active, .path .content ul li a:visited {
-    color: #FFFFFF;
-    font-weight: lighter;
+.path .content ul li a, .path .content ul li a:link, .path .content ul li a:active,
+	.path .content ul li a:visited {
+	color: #FFFFFF;
+	font-weight: lighter;
 }
 
 .path .content ul li a:hover {
-    text-decoration: underline !important;
+	text-decoration: underline !important;
 }
 
 @media all and (max-width:768px) /* TABLET */ {
-    /* EC HEADER
+	/* EC HEADER
 -------------------------------------------------- */
-    ul#services {
-        display: none;
-    }
-    #header_ec .top .content form select {
-        margin: 15px 15px 0 0;
-        padding: 3px;
-        font-size: 14px;
-        border: 1px solid #003366;
-    }
-    #header_ec .content {
-        padding: 0;
-    }
-    #header_ec .top .content {
-        width: auto;
-    }
-    #header_ec .title .content {
-        padding-top: 10px;
-    }
-    #header_ec .sub-title .content {
-        position: static;
-    }
-    #header_ec .sub-title .content .logo {
-        top: 10px;
-        left: 10px;
-        width: 90px;
-    }
-    #header_ec .sub-title {
-        background: none;
-        padding-bottom: 13px;
-    }
-    #header_ec .sub-title .content {
-        min-height: 0px;
-    }
-    #header_ec .title .content span {
-        padding: 5px 10px 0 110px;
-        font-size: 26px;
-        text-transform: none;
-    }
-    #header_ec .sub-title .content span {
-        display: block;
-        margin-left: 110px;
-        font-size: 18px;
-        color: #036;
-        line-height: 22px;
-    }
-    .path .content {
-        font-size: 90%;
-    }
-    .path .content {
-        padding-top: 8px;
-        padding-bottom: 8px;
-    }
-    .path .content ul li:first-child {
-        padding: 0 7px 0 7px;
-    }
-    .path .content ul li {
-        padding: 0 7px 0 19px;
-    }
+	ul#services {
+		display: none;
+	}
+	#header_ec .top .content form select {
+		margin: 15px 15px 0 0;
+		padding: 3px;
+		font-size: 14px;
+		border: 1px solid #003366;
+	}
+	#header_ec .content {
+		padding: 0;
+	}
+	#header_ec .top .content {
+		width: auto;
+	}
+	#header_ec .title .content {
+		padding-top: 10px;
+	}
+	#header_ec .sub-title .content {
+		position: static;
+	}
+	#header_ec .sub-title .content .logo {
+		top: 10px;
+		left: 10px;
+		width: 90px;
+	}
+	#header_ec .sub-title {
+		background: none;
+		padding-bottom: 13px;
+	}
+	#header_ec .sub-title .content {
+		min-height: 0px;
+	}
+	#header_ec .title .content span {
+		padding: 5px 10px 0 110px;
+		font-size: 26px;
+		text-transform: none;
+	}
+	#header_ec .sub-title .content span {
+		display: block;
+		margin-left: 110px;
+		font-size: 18px;
+		color: #036;
+		line-height: 22px;
+	}
+	.path .content {
+		font-size: 90%;
+	}
+	.path .content {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+	.path .content ul li:first-child {
+		padding: 0 7px 0 7px;
+	}
+	.path .content ul li {
+		padding: 0 7px 0 19px;
+	}
 }
 
 @media all and (max-width:600px) {
-    /*-------------------------------------------------- EC HEADER-------------------------------------------------- */
-    #header_ec .top .content form select {
-        font-size: 98%;
-        right: 3px;
-        top: 2px;
-        padding: 1px 0 0 0;
-        margin: 0px;
-        position: absolute;
-        left: auto;
-        float: none;
-    }
-    .path {
-        display: none;
-    }
-    #header_ec .title .content span {
-        font-size: 22px;
-    }
-    #header_ec .title .content {
-        padding-top: 25px;
-    }
+	/*-------------------------------------------------- EC HEADER-------------------------------------------------- */
+	#header_ec .top .content form select {
+		font-size: 98%;
+		right: 3px;
+		top: 2px;
+		padding: 1px 0 0 0;
+		margin: 0px;
+		position: absolute;
+		left: auto;
+		float: none;
+	}
+	.path {
+		display: none;
+	}
+	#header_ec .title .content span {
+		font-size: 22px;
+	}
+	#header_ec .title .content {
+		padding-top: 25px;
+	}
 }

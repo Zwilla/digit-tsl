@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -40,11 +39,12 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import eu.europa.esig.jaxb.v5.xmldsig.SignatureTypeV5;
 
-
 /**
- * <p>Java class for TrustStatusListType complex type.
+ * <p>
+ * Java class for TrustStatusListType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TrustStatusListType"&gt;
@@ -65,14 +65,8 @@ import eu.europa.esig.jaxb.v5.xmldsig.SignatureTypeV5;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TrustStatusListType", propOrder = {
-    "schemeInformation",
-    "trustServiceProviderList",
-    "signature"
-})
-public class TrustStatusListTypeV5
-    implements Serializable
-{
+@XmlType(name = "TrustStatusListType", propOrder = { "schemeInformation", "trustServiceProviderList", "signature" })
+public class TrustStatusListTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "SchemeInformation", required = true)
@@ -93,10 +87,8 @@ public class TrustStatusListTypeV5
     /**
      * Gets the value of the schemeInformation property.
      * 
-     * @return
-     *     possible object is
-     *     {@link TSLSchemeInformationTypeV5 }
-     *     
+     * @return possible object is {@link TSLSchemeInformationTypeV5 }
+     * 
      */
     public TSLSchemeInformationTypeV5 getSchemeInformation() {
         return schemeInformation;
@@ -106,9 +98,8 @@ public class TrustStatusListTypeV5
      * Sets the value of the schemeInformation property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TSLSchemeInformationTypeV5 }
-     *     
+     *            allowed object is {@link TSLSchemeInformationTypeV5 }
+     * 
      */
     public void setSchemeInformation(TSLSchemeInformationTypeV5 value) {
         this.schemeInformation = value;
@@ -117,10 +108,8 @@ public class TrustStatusListTypeV5
     /**
      * Gets the value of the trustServiceProviderList property.
      * 
-     * @return
-     *     possible object is
-     *     {@link TrustServiceProviderListTypeV5 }
-     *     
+     * @return possible object is {@link TrustServiceProviderListTypeV5 }
+     * 
      */
     public TrustServiceProviderListTypeV5 getTrustServiceProviderList() {
         return trustServiceProviderList;
@@ -130,9 +119,8 @@ public class TrustStatusListTypeV5
      * Sets the value of the trustServiceProviderList property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link TrustServiceProviderListTypeV5 }
-     *     
+     *            allowed object is {@link TrustServiceProviderListTypeV5 }
+     * 
      */
     public void setTrustServiceProviderList(TrustServiceProviderListTypeV5 value) {
         this.trustServiceProviderList = value;
@@ -141,10 +129,8 @@ public class TrustStatusListTypeV5
     /**
      * Gets the value of the signature property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignatureTypeV5 }
-     *     
+     * @return possible object is {@link SignatureTypeV5 }
+     * 
      */
     public SignatureTypeV5 getSignature() {
         return signature;
@@ -154,9 +140,8 @@ public class TrustStatusListTypeV5
      * Sets the value of the signature property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignatureTypeV5 }
-     *     
+     *            allowed object is {@link SignatureTypeV5 }
+     * 
      */
     public void setSignature(SignatureTypeV5 value) {
         this.signature = value;
@@ -165,10 +150,8 @@ public class TrustStatusListTypeV5
     /**
      * Gets the value of the tslTag property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getTSLTag() {
         return tslTag;
@@ -178,9 +161,8 @@ public class TrustStatusListTypeV5
      * Sets the value of the tslTag property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setTSLTag(String value) {
         this.tslTag = value;
@@ -189,10 +171,8 @@ public class TrustStatusListTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -202,9 +182,8 @@ public class TrustStatusListTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

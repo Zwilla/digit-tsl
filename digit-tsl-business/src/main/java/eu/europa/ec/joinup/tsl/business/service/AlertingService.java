@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -28,6 +28,7 @@ import java.util.Set;
 import javax.transaction.Transactional;
 
 import eu.europa.ec.joinup.tsl.business.dto.TLSignature;
+import eu.europa.ec.joinup.tsl.business.dto.data.retention.RetentionAlertDTO;
 import eu.europa.ec.joinup.tsl.business.dto.tl.approachbreak.TLBreakStatus;
 import eu.europa.ec.joinup.tsl.model.DBCountries;
 import eu.europa.ec.joinup.tsl.model.DBNotification;
@@ -39,65 +40,68 @@ import eu.europa.esig.dss.DSSDocument;
 public class AlertingService extends AbstractAlertingService {
 
     @Override
-    public void sendNotificationToTLSO(NotificationStatus status, DBNotification dbNotif, DSSDocument pdfDoc, List<String> contactListDeleted) {
+    public boolean sendNotificationToTLSO(NotificationStatus status, DBNotification dbNotif, DSSDocument pdfDoc, List<String> contactListDeleted) {
+        return false;
     }
 
     @Override
-    public void sendNotificationToLOTLSO(NotificationStatus status, DBNotification dbNotif, DSSDocument pdfDoc) {
+    public boolean sendNotificationToLOTLSO(NotificationStatus status, DBNotification dbNotif, DSSDocument pdfDoc) {
+        return false;
     }
 
     @Override
-    public void sendNewTLReport(int tlId) {
+    public boolean sendNewTLReport(int tlId) {
+        return false;
     }
 
     @Override
-    public void sendNotificationPublished(DBTrustedLists lotl, DBCountries country, Set<DBNotification> notifications) {
+    public boolean sendNotificationPublished(DBTrustedLists lotl, DBCountries country, Set<DBNotification> notifications) {
+        return false;
     }
 
     @Override
-    public void sendNewSigningCertificate() {
+    public boolean sendNewSigningCertificate() {
+        return false;
     }
 
     @Override
-    public void sendRetentionJobReport(int nbDraftStore, int nbTrustedList) {
+    public boolean sendRetentionJobReport(RetentionAlertDTO retentionAlert) {
+        return false;
     }
 
     @Override
-    public void sendSignatureAlert(DBTrustedLists dbTL, TLSignature tmpSignature) {
+    public boolean sendSignatureAlert(DBTrustedLists dbTL, TLSignature tmpSignature) {
+        return false;
     }
 
     @Override
-    public void sendAvailabilityAlert(DBTrustedLists dbTL) {
+    public boolean sendAvailabilityAlert(DBTrustedLists dbTL) {
+        return false;
     }
 
     @Override
-    public void sendBreakAlert(TLBreakStatus breakStatus) {
+    public boolean sendBreakAlert(TLBreakStatus breakStatus) {
+        return false;
     }
 
     @Override
-    public void sendDailyUnavailabilityAlert(Date today, ByteArrayOutputStream unavailabilityReportOS) {
+    public boolean sendDailyUnavailabilityAlert(Date today, ByteArrayOutputStream unavailabilityReportOS) {
+        return false;
     }
 
     @Override
-    public String getContactListForContent(String cc) {
-        return null;
+    public boolean sendAccessListAlert() {
+        return false;
     }
 
     @Override
-    public List<String> getNotificationContact(DBNotification dbNotif, List<String> contactDeleted) {
-        return null;
+    public boolean sendNewUserAlert(List<String> ecasIDs) {
+        return false;
     }
 
     @Override
-    public void sendAccessListAlert() {
-    }
-
-    @Override
-    public void sendNewUserAlert(List<String> ecasIDs) {
-    }
-
-    @Override
-    public void sendTLCacheIssue(String country, String currentDigest, String otherDigest, int index) {
+    public boolean sendTLCacheIssue(String country, String currentDigest, String otherDigest, int index) {
+        return false;
     }
 
 }

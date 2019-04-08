@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -37,11 +36,12 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import eu.europa.esig.jaxb.v5.xmldsig.X509IssuerSerialTypeV5;
 
-
 /**
- * <p>Java class for CertIDType complex type.
+ * <p>
+ * Java class for CertIDType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="CertIDType"&gt;
@@ -60,13 +60,8 @@ import eu.europa.esig.jaxb.v5.xmldsig.X509IssuerSerialTypeV5;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CertIDType", propOrder = {
-    "certDigest",
-    "issuerSerial"
-})
-public class CertIDTypeV5
-    implements Serializable
-{
+@XmlType(name = "CertIDType", propOrder = { "certDigest", "issuerSerial" })
+public class CertIDTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "CertDigest", required = true)
@@ -80,10 +75,8 @@ public class CertIDTypeV5
     /**
      * Gets the value of the certDigest property.
      * 
-     * @return
-     *     possible object is
-     *     {@link DigestAlgAndValueTypeV5 }
-     *     
+     * @return possible object is {@link DigestAlgAndValueTypeV5 }
+     * 
      */
     public DigestAlgAndValueTypeV5 getCertDigest() {
         return certDigest;
@@ -93,9 +86,8 @@ public class CertIDTypeV5
      * Sets the value of the certDigest property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link DigestAlgAndValueTypeV5 }
-     *     
+     *            allowed object is {@link DigestAlgAndValueTypeV5 }
+     * 
      */
     public void setCertDigest(DigestAlgAndValueTypeV5 value) {
         this.certDigest = value;
@@ -104,10 +96,8 @@ public class CertIDTypeV5
     /**
      * Gets the value of the issuerSerial property.
      * 
-     * @return
-     *     possible object is
-     *     {@link X509IssuerSerialTypeV5 }
-     *     
+     * @return possible object is {@link X509IssuerSerialTypeV5 }
+     * 
      */
     public X509IssuerSerialTypeV5 getIssuerSerial() {
         return issuerSerial;
@@ -117,9 +107,8 @@ public class CertIDTypeV5
      * Sets the value of the issuerSerial property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link X509IssuerSerialTypeV5 }
-     *     
+     *            allowed object is {@link X509IssuerSerialTypeV5 }
+     * 
      */
     public void setIssuerSerial(X509IssuerSerialTypeV5 value) {
         this.issuerSerial = value;
@@ -128,10 +117,8 @@ public class CertIDTypeV5
     /**
      * Gets the value of the uri property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getURI() {
         return uri;
@@ -141,9 +128,8 @@ public class CertIDTypeV5
      * Sets the value of the uri property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setURI(String value) {
         this.uri = value;

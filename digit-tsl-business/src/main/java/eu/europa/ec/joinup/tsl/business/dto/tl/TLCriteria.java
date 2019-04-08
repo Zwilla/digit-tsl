@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -164,8 +164,8 @@ public class TLCriteria extends AbstractTLDTO {
                 if (clt.getOtherCriteriaList() == null) {
                     clt.setOtherCriteriaList(new eu.europa.esig.jaxb.v5.xades.AnyTypeV5());
                 }
-                clt.getOtherCriteriaList().getContent().add(new JAXBElement<>(
-                        new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "CertSubjectDNAttribute"), CertSubjectDNAttributeTypeV5.class, csDNAt));
+                clt.getOtherCriteriaList().getContent()
+                        .add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "CertSubjectDNAttribute"), CertSubjectDNAttributeTypeV5.class, csDNAt));
             }
 
             if (CollectionUtils.isNotEmpty(getOtherList().getExtendedKeyUsageList())) {
@@ -176,8 +176,7 @@ public class TLCriteria extends AbstractTLDTO {
                 if (clt.getOtherCriteriaList() == null) {
                     clt.setOtherCriteriaList(new eu.europa.esig.jaxb.v5.xades.AnyTypeV5());
                 }
-                clt.getOtherCriteriaList().getContent().add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "ExtendedKeyUsage"),
-                        ExtendedKeyUsageTypeV5.class, ekut));
+                clt.getOtherCriteriaList().getContent().add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "ExtendedKeyUsage"), ExtendedKeyUsageTypeV5.class, ekut));
             }
         }
         return clt;

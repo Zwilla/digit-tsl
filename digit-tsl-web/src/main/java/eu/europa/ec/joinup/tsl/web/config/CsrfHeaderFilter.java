@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -34,15 +34,12 @@ import org.springframework.web.util.WebUtils;
 
 public class CsrfHeaderFilter extends OncePerRequestFilter {
     @Override
-    protected void doFilterInternal(HttpServletRequest request,
-            HttpServletResponse response, FilterChain filterChain)
-                    throws ServletException, IOException {
-        CsrfToken csrf = (CsrfToken) request.getAttribute(CsrfToken.class
-                .getName());
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
+        CsrfToken csrf = (CsrfToken) request.getAttribute(CsrfToken.class.getName());
         if (csrf != null) {
             Cookie cookie = WebUtils.getCookie(request, "XSRF-TOKEN");
             String token = csrf.getToken();
-            if ((cookie==null) || ((token!=null) && !token.equals(cookie.getValue()))) {
+            if ((cookie == null) || ((token != null) && !token.equals(cookie.getValue()))) {
                 cookie = new Cookie("XSRF-TOKEN", token);
                 cookie.setPath("/");
                 response.addCookie(cookie);

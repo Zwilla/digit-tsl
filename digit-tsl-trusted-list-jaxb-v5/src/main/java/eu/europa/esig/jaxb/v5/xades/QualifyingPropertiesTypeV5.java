@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -39,11 +38,12 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for QualifyingPropertiesType complex type.
+ * <p>
+ * Java class for QualifyingPropertiesType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="QualifyingPropertiesType"&gt;
@@ -63,13 +63,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "QualifyingPropertiesType", propOrder = {
-    "signedProperties",
-    "unsignedProperties"
-})
-public class QualifyingPropertiesTypeV5
-    implements Serializable
-{
+@XmlType(name = "QualifyingPropertiesType", propOrder = { "signedProperties", "unsignedProperties" })
+public class QualifyingPropertiesTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "SignedProperties")
@@ -88,10 +83,8 @@ public class QualifyingPropertiesTypeV5
     /**
      * Gets the value of the signedProperties property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignedPropertiesTypeV5 }
-     *     
+     * @return possible object is {@link SignedPropertiesTypeV5 }
+     * 
      */
     public SignedPropertiesTypeV5 getSignedProperties() {
         return signedProperties;
@@ -101,9 +94,8 @@ public class QualifyingPropertiesTypeV5
      * Sets the value of the signedProperties property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignedPropertiesTypeV5 }
-     *     
+     *            allowed object is {@link SignedPropertiesTypeV5 }
+     * 
      */
     public void setSignedProperties(SignedPropertiesTypeV5 value) {
         this.signedProperties = value;
@@ -112,10 +104,8 @@ public class QualifyingPropertiesTypeV5
     /**
      * Gets the value of the unsignedProperties property.
      * 
-     * @return
-     *     possible object is
-     *     {@link UnsignedPropertiesTypeV5 }
-     *     
+     * @return possible object is {@link UnsignedPropertiesTypeV5 }
+     * 
      */
     public UnsignedPropertiesTypeV5 getUnsignedProperties() {
         return unsignedProperties;
@@ -125,9 +115,8 @@ public class QualifyingPropertiesTypeV5
      * Sets the value of the unsignedProperties property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link UnsignedPropertiesTypeV5 }
-     *     
+     *            allowed object is {@link UnsignedPropertiesTypeV5 }
+     * 
      */
     public void setUnsignedProperties(UnsignedPropertiesTypeV5 value) {
         this.unsignedProperties = value;
@@ -136,10 +125,8 @@ public class QualifyingPropertiesTypeV5
     /**
      * Gets the value of the target property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getTarget() {
         return target;
@@ -149,9 +136,8 @@ public class QualifyingPropertiesTypeV5
      * Sets the value of the target property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setTarget(String value) {
         this.target = value;
@@ -160,10 +146,8 @@ public class QualifyingPropertiesTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -173,9 +157,8 @@ public class QualifyingPropertiesTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

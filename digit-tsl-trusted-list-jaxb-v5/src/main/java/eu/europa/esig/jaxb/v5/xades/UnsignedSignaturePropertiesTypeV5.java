@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -24,7 +24,6 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
-
 
 package eu.europa.esig.jaxb.v5.xades;
 
@@ -44,11 +43,12 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
-
 /**
- * <p>Java class for UnsignedSignaturePropertiesType complex type.
+ * <p>
+ * Java class for UnsignedSignaturePropertiesType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="UnsignedSignaturePropertiesType"&gt;
@@ -79,29 +79,23 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UnsignedSignaturePropertiesType", propOrder = {
-    "counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs"
-})
-public class UnsignedSignaturePropertiesTypeV5
-    implements Serializable
-{
+@XmlType(name = "UnsignedSignaturePropertiesType", propOrder = { "counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs" })
+public class UnsignedSignaturePropertiesTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
-    @XmlElementRefs({
-        @XmlElementRef(name = "CounterSignature", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "AttrAuthoritiesCertValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "SignatureTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "CompleteCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "AttributeRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "AttributeCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "ArchiveTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "CertificateValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "CompleteRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "RefsOnlyTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "SigAndRefsTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "RevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
-        @XmlElementRef(name = "AttributeRevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class)
-    })
+    @XmlElementRefs({ @XmlElementRef(name = "CounterSignature", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "AttrAuthoritiesCertValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "SignatureTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "CompleteCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "AttributeRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "AttributeCertificateRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "ArchiveTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "CertificateValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "CompleteRevocationRefs", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "RefsOnlyTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "SigAndRefsTimeStamp", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "RevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class),
+            @XmlElementRef(name = "AttributeRevocationValues", namespace = "http://uri.etsi.org/01903/v1.3.2#", type = JAXBElement.class) })
     @XmlAnyElement(lax = true)
     protected List<Object> counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs;
     @XmlAttribute(name = "Id")
@@ -114,34 +108,27 @@ public class UnsignedSignaturePropertiesTypeV5
      * Gets the value of the counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the
+     * counterSignatureOrSignatureTimeStampOrCompleteCertificateRefs property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs().add(newItem);
+     * getCounterSignatureOrSignatureTimeStampOrCompleteCertificateRefs().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link CounterSignatureTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteRevocationRefsTypeV5 }{@code >}
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link CompleteRevocationRefsTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link RevocationValuesTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link RevocationValuesTypeV5 }{@code >}
+     * Objects of the following type(s) are allowed in the list {@link JAXBElement }{@code <}{@link CounterSignatureTypeV5 }{@code >}
+     * {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >}
+     * {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link CompleteRevocationRefsTypeV5
+     * }{@code >} {@link Object } {@link JAXBElement }{@code <}{@link CompleteCertificateRefsTypeV5 }{@code >} {@link JAXBElement
+     * }{@code <}{@link XAdESTimeStampTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link CertificateValuesTypeV5 }{@code >} {@link JAXBElement
+     * }{@code <}{@link CompleteRevocationRefsTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link XAdESTimeStampTypeV5 }{@code >} {@link JAXBElement
+     * }{@code <}{@link XAdESTimeStampTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link RevocationValuesTypeV5 }{@code >} {@link JAXBElement
+     * }{@code <}{@link RevocationValuesTypeV5 }{@code >}
      * 
      * 
      */
@@ -155,10 +142,8 @@ public class UnsignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -168,9 +153,8 @@ public class UnsignedSignaturePropertiesTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -75,7 +75,7 @@ public class TLValidator {
             if ((xmlFile != null) && StringUtils.isNotEmpty(xmlFile.getLocalPath())) {
                 DBSignatureInformation signatureInfo = xmlSignatureValidationService.validateLOTL(xmlFile);
                 xmlFile.setSignatureInformation(signatureInfo);
-                //Get signature status
+                // Get signature status
                 String status = "";
                 if ((signatureInfo != null) && (signatureInfo.getIndication() != null)) {
                     status = "INDICATION:" + signatureInfo.getIndication() + ";";
@@ -83,14 +83,14 @@ public class TLValidator {
                         status += "SUB-INDICATION:" + signatureInfo.getSubIndication() + ";";
                     }
                 }
-                //Log audit
+                // Log audit
                 if (lotl.getStatus().equals(TLStatus.DRAFT)) {
-                    auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, lotl.getTerritory().getCodeTerritory(),
-                            lotl.getXmlFile().getId(), "SYSTEM", "CLASS:TLVALIDATOR.CHECKLOTL,TLID:" + lotl.getId() + ",XMLFILEID:" + lotl.getXmlFile().getId() + status);
+                    auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, lotl.getTerritory().getCodeTerritory(), lotl.getXmlFile().getId(), "SYSTEM",
+                            "CLASS:TLVALIDATOR.CHECKLOTL,TLID:" + lotl.getId() + ",XMLFILEID:" + lotl.getXmlFile().getId() + status);
                 } else {
 
-                    auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, lotl.getTerritory().getCodeTerritory(), lotl.getXmlFile().getId(),
-                            "SYSTEM", "CLASS:TLVALIDATOR.CHECKLOTL,TLID:" + lotl.getId() + ",XMLFILEID:" + lotl.getXmlFile().getId() + status);
+                    auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, lotl.getTerritory().getCodeTerritory(), lotl.getXmlFile().getId(), "SYSTEM",
+                            "CLASS:TLVALIDATOR.CHECKLOTL,TLID:" + lotl.getId() + ",XMLFILEID:" + lotl.getXmlFile().getId() + status);
                 }
             }
         }
@@ -108,11 +108,11 @@ public class TLValidator {
         if ((xmlFile != null) && StringUtils.isNotEmpty(xmlFile.getLocalPath())) {
             DBSignatureInformation signatureInfo = xmlSignatureValidationService.validateTL(xmlFile, potentialSignersForTL);
             if (tl.getStatus().equals(TLStatus.DRAFT)) {
-                auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, tl.getTerritory().getCodeTerritory(), tl.getXmlFile().getId(),
-                        "SYSTEM", "CLASS:TLVALIDATOR.CHECKTL,TLID:" + tl.getId() + ",XMLFILEID:" + tl.getXmlFile().getId());
+                auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, tl.getTerritory().getCodeTerritory(), tl.getXmlFile().getId(), "SYSTEM",
+                        "CLASS:TLVALIDATOR.CHECKTL,TLID:" + tl.getId() + ",XMLFILEID:" + tl.getXmlFile().getId());
             } else {
-                auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, tl.getTerritory().getCodeTerritory(), tl.getXmlFile().getId(),
-                        "SYSTEM", "CLASS:TLVALIDATOR.CHECKTL,TLID:" + tl.getId() + ",XMLFILEID:" + tl.getXmlFile().getId());
+                auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, tl.getTerritory().getCodeTerritory(), tl.getXmlFile().getId(), "SYSTEM",
+                        "CLASS:TLVALIDATOR.CHECKTL,TLID:" + tl.getId() + ",XMLFILEID:" + tl.getXmlFile().getId());
             }
             xmlFile.setSignatureInformation(signatureInfo);
         }

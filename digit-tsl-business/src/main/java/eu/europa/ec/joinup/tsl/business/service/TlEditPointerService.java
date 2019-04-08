@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -64,7 +64,7 @@ public class TlEditPointerService {
         DBTrustedLists tldb = tlRepository.findOne(id);
         if (TLStatus.DRAFT.equals(tldb.getStatus())) {
             boolean newPointer = true;
-            //CHANGE IN XML FILE
+            // CHANGE IN XML FILE
             TL tl = tlService.getTL(id);
             TLPointersToOtherTSL pointerUpdated = null;
             for (TLPointersToOtherTSL tlPointer : tl.getPointers()) {
@@ -123,7 +123,7 @@ public class TlEditPointerService {
             if (ArrayUtils.isNotEmpty(updatedTL)) {
                 DBFiles xmlFile = tldb.getXmlFile();
                 xmlFile.setLocalPath(fileService.storeNewDraftTL(xmlFile.getMimeTypeFile(), updatedTL, tldb.getTerritory().getCodeTerritory(), xmlFile.getLocalPath()));
-                //tldb.setXmlFile(xmlFile);
+                // tldb.setXmlFile(xmlFile);
                 tldb.setLastEditedDate(new Date());
                 tlRepository.save(tldb);
                 return pointerUpdated;
@@ -153,7 +153,7 @@ public class TlEditPointerService {
             if (ArrayUtils.isNotEmpty(updatedTL)) {
                 DBFiles xmlFile = tldb.getXmlFile();
                 xmlFile.setLocalPath(fileService.storeNewDraftTL(xmlFile.getMimeTypeFile(), updatedTL, tldb.getTerritory().getCodeTerritory(), xmlFile.getLocalPath()));
-                //tldb.setXmlFile(xmlFile);
+                // tldb.setXmlFile(xmlFile);
                 tldb.setLastEditedDate(new Date());
                 tlRepository.save(tldb);
             }

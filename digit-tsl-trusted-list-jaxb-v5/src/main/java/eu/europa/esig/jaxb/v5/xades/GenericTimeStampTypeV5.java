@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -24,7 +24,6 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
-
 
 package eu.europa.esig.jaxb.v5.xades;
 
@@ -44,11 +43,12 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import eu.europa.esig.jaxb.v5.xmldsig.CanonicalizationMethodTypeV5;
 
-
 /**
- * <p>Java class for GenericTimeStampType complex type.
+ * <p>
+ * Java class for GenericTimeStampType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="GenericTimeStampType"&gt;
@@ -74,19 +74,9 @@ import eu.europa.esig.jaxb.v5.xmldsig.CanonicalizationMethodTypeV5;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "GenericTimeStampType", propOrder = {
-    "include",
-    "referenceInfo",
-    "canonicalizationMethod",
-    "encapsulatedTimeStampOrXMLTimeStamp"
-})
-@XmlSeeAlso({
-    XAdESTimeStampTypeV5 .class,
-    OtherTimeStampTypeV5 .class
-})
-public abstract class GenericTimeStampTypeV5
-    implements Serializable
-{
+@XmlType(name = "GenericTimeStampType", propOrder = { "include", "referenceInfo", "canonicalizationMethod", "encapsulatedTimeStampOrXMLTimeStamp" })
+@XmlSeeAlso({ XAdESTimeStampTypeV5.class, OtherTimeStampTypeV5.class })
+public abstract class GenericTimeStampTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "Include")
@@ -95,10 +85,7 @@ public abstract class GenericTimeStampTypeV5
     protected List<ReferenceInfoTypeV5> referenceInfo;
     @XmlElement(name = "CanonicalizationMethod", namespace = "http://www.w3.org/2000/09/xmldsig#")
     protected CanonicalizationMethodTypeV5 canonicalizationMethod;
-    @XmlElements({
-        @XmlElement(name = "EncapsulatedTimeStamp", type = EncapsulatedPKIDataTypeV5 .class),
-        @XmlElement(name = "XMLTimeStamp", type = AnyTypeV5 .class)
-    })
+    @XmlElements({ @XmlElement(name = "EncapsulatedTimeStamp", type = EncapsulatedPKIDataTypeV5.class), @XmlElement(name = "XMLTimeStamp", type = AnyTypeV5.class) })
     protected List<Serializable> encapsulatedTimeStampOrXMLTimeStamp;
     @XmlAttribute(name = "Id")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
@@ -110,21 +97,19 @@ public abstract class GenericTimeStampTypeV5
      * Gets the value of the include property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the include property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the include property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getInclude().add(newItem);
+     * getInclude().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link IncludeTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link IncludeTypeV5 }
      * 
      * 
      */
@@ -139,21 +124,19 @@ public abstract class GenericTimeStampTypeV5
      * Gets the value of the referenceInfo property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the referenceInfo property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the referenceInfo property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getReferenceInfo().add(newItem);
+     * getReferenceInfo().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link ReferenceInfoTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link ReferenceInfoTypeV5 }
      * 
      * 
      */
@@ -167,10 +150,8 @@ public abstract class GenericTimeStampTypeV5
     /**
      * Gets the value of the canonicalizationMethod property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CanonicalizationMethodTypeV5 }
-     *     
+     * @return possible object is {@link CanonicalizationMethodTypeV5 }
+     * 
      */
     public CanonicalizationMethodTypeV5 getCanonicalizationMethod() {
         return canonicalizationMethod;
@@ -180,9 +161,8 @@ public abstract class GenericTimeStampTypeV5
      * Sets the value of the canonicalizationMethod property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CanonicalizationMethodTypeV5 }
-     *     
+     *            allowed object is {@link CanonicalizationMethodTypeV5 }
+     * 
      */
     public void setCanonicalizationMethod(CanonicalizationMethodTypeV5 value) {
         this.canonicalizationMethod = value;
@@ -192,22 +172,19 @@ public abstract class GenericTimeStampTypeV5
      * Gets the value of the encapsulatedTimeStampOrXMLTimeStamp property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the encapsulatedTimeStampOrXMLTimeStamp property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the encapsulatedTimeStampOrXMLTimeStamp property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getEncapsulatedTimeStampOrXMLTimeStamp().add(newItem);
+     * getEncapsulatedTimeStampOrXMLTimeStamp().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link EncapsulatedPKIDataTypeV5 }
-     * {@link AnyTypeV5 }
+     * Objects of the following type(s) are allowed in the list {@link EncapsulatedPKIDataTypeV5 } {@link AnyTypeV5 }
      * 
      * 
      */
@@ -221,10 +198,8 @@ public abstract class GenericTimeStampTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -234,9 +209,8 @@ public abstract class GenericTimeStampTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

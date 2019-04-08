@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -34,11 +33,12 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for TSPInformationType complex type.
+ * <p>
+ * Java class for TSPInformationType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="TSPInformationType"&gt;
@@ -59,16 +59,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "TSPInformationType", propOrder = {
-    "tspName",
-    "tspTradeName",
-    "tspAddress",
-    "tspInformationURI",
-    "tspInformationExtensions"
-})
-public class TSPInformationTypeV5
-    implements Serializable
-{
+@XmlType(name = "TSPInformationType", propOrder = { "tspName", "tspTradeName", "tspAddress", "tspInformationURI", "tspInformationExtensions" })
+public class TSPInformationTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "TSPName", required = true)
@@ -85,10 +77,8 @@ public class TSPInformationTypeV5
     /**
      * Gets the value of the tspName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getTSPName() {
         return tspName;
@@ -98,9 +88,8 @@ public class TSPInformationTypeV5
      * Sets the value of the tspName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setTSPName(InternationalNamesTypeV5 value) {
         this.tspName = value;
@@ -109,10 +98,8 @@ public class TSPInformationTypeV5
     /**
      * Gets the value of the tspTradeName property.
      * 
-     * @return
-     *     possible object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     * @return possible object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public InternationalNamesTypeV5 getTSPTradeName() {
         return tspTradeName;
@@ -122,9 +109,8 @@ public class TSPInformationTypeV5
      * Sets the value of the tspTradeName property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link InternationalNamesTypeV5 }
-     *     
+     *            allowed object is {@link InternationalNamesTypeV5 }
+     * 
      */
     public void setTSPTradeName(InternationalNamesTypeV5 value) {
         this.tspTradeName = value;
@@ -133,10 +119,8 @@ public class TSPInformationTypeV5
     /**
      * Gets the value of the tspAddress property.
      * 
-     * @return
-     *     possible object is
-     *     {@link AddressTypeV5 }
-     *     
+     * @return possible object is {@link AddressTypeV5 }
+     * 
      */
     public AddressTypeV5 getTSPAddress() {
         return tspAddress;
@@ -146,9 +130,8 @@ public class TSPInformationTypeV5
      * Sets the value of the tspAddress property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link AddressTypeV5 }
-     *     
+     *            allowed object is {@link AddressTypeV5 }
+     * 
      */
     public void setTSPAddress(AddressTypeV5 value) {
         this.tspAddress = value;
@@ -157,10 +140,8 @@ public class TSPInformationTypeV5
     /**
      * Gets the value of the tspInformationURI property.
      * 
-     * @return
-     *     possible object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     * @return possible object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public NonEmptyMultiLangURIListTypeV5 getTSPInformationURI() {
         return tspInformationURI;
@@ -170,9 +151,8 @@ public class TSPInformationTypeV5
      * Sets the value of the tspInformationURI property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link NonEmptyMultiLangURIListTypeV5 }
-     *     
+     *            allowed object is {@link NonEmptyMultiLangURIListTypeV5 }
+     * 
      */
     public void setTSPInformationURI(NonEmptyMultiLangURIListTypeV5 value) {
         this.tspInformationURI = value;
@@ -181,10 +161,8 @@ public class TSPInformationTypeV5
     /**
      * Gets the value of the tspInformationExtensions property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     * @return possible object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public ExtensionsListTypeV5 getTSPInformationExtensions() {
         return tspInformationExtensions;
@@ -194,9 +172,8 @@ public class TSPInformationTypeV5
      * Sets the value of the tspInformationExtensions property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link ExtensionsListTypeV5 }
-     *     
+     *            allowed object is {@link ExtensionsListTypeV5 }
+     * 
      */
     public void setTSPInformationExtensions(ExtensionsListTypeV5 value) {
         this.tspInformationExtensions = value;

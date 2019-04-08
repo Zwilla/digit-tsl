@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -22,11 +22,9 @@ package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 import org.apache.commons.lang3.StringUtils;
 
-import eu.europa.ec.joinup.tsl.business.dto.TLDifference;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
 import eu.europa.esig.jaxb.ecc.CriteriaListType;
 import eu.europa.esig.jaxb.ecc.QualificationElementType;
@@ -40,8 +38,6 @@ public class TLQualificationExtension extends AbstractTLDTO {
 
     private List<String> qualifTypeList;
     private TLCriteria criteria;
-
-    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     public TLQualificationExtension() {
     }
@@ -97,45 +93,32 @@ public class TLQualificationExtension extends AbstractTLDTO {
         return qet;
     }
 
-    public List<TLDifference> asPublishedDiff(TLQualificationExtension publishedQualExt) {
-        List<TLDifference> difList = new ArrayList<>();
-        if (!getCriteria().equals(publishedQualExt.getCriteria())) {
-            difList.add(new TLDifference(getId(), "", bundle.getString("changes.toIdentify")));
-        }
-
-        if (!getQualifTypeList().equals(publishedQualExt.getQualifTypeList())) {
-            difList.add(new TLDifference(getId(), "", bundle.getString("changes.toIdentify")));
-        }
-
-        return difList;
-    }
-
     public void toV5FromV4() {
         if (getQualifTypeList() != null) {
             List<String> migratedQualifType = new ArrayList<>();
             for (int i = 0; i < getQualifTypeList().size(); i++) {
                 String tmpType = StringUtils.trimToEmpty(getQualifTypeList().get(i));
                 switch (tmpType) {
-                    case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD":
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD");
-                        break;
-                    case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD":
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD");
-                        break;
-                    case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert":
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert");
-                        break;
-                    case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement":
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement");
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig");
-                        break;
-                    case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson":
-                        migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified");
-                        break;
+                case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD":
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD");
+                    break;
+                case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD":
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD");
+                    break;
+                case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert":
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert");
+                    break;
+                case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement":
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement");
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig");
+                    break;
+                case "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson":
+                    migratedQualifType.add("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified");
+                    break;
 
-                    default:
-                        migratedQualifType.add(tmpType);
-                        break;
+                default:
+                    migratedQualifType.add(tmpType);
+                    break;
                 }
             }
             setQualifTypeList(migratedQualifType);
@@ -195,6 +178,5 @@ public class TLQualificationExtension extends AbstractTLDTO {
     public void setCriteria(TLCriteria criteria) {
         this.criteria = criteria;
     }
-
 
 }

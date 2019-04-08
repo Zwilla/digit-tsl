@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -36,9 +36,7 @@ import javax.persistence.Table;
 import eu.europa.ec.joinup.tsl.model.enums.AvailabilityStatus;
 
 @Entity
-@Table(name = "TL_FILES_AVAILABILITY", indexes = {
-        @Index(columnList = "FILE_ID", name = "file_idx"), @Index(columnList = "CHECK_DATE", name = "check_date_idx")
-})
+@Table(name = "TL_FILES_AVAILABILITY", indexes = { @Index(columnList = "FILE_ID", name = "file_idx"), @Index(columnList = "CHECK_DATE", name = "check_date_idx") })
 public class DBFilesAvailability {
 
     @Id

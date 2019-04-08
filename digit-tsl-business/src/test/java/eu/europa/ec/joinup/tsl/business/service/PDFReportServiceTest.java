@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -161,7 +161,7 @@ public class PDFReportServiceTest extends AbstractSpringTest {
         }
 
         int id = createTLinDB(TLType.TL);
-        TrustStatusListType tsl = jaxbService.unmarshallTSL(new File("src/test/resources/tsl/BE/2016-10-13_12-55-38.xml"));
+        TrustStatusListType tsl = jaxbService.unmarshallTSL(new File("src/test/resources/tsl/BE-TEST/2016-10-13_12-55-38.xml"));
         TL tl = tlBuilder.buildTLV4(id, tsl);
         tl.setDbCountryName("Belgium");
         tl.setDbName("DRAFT_BE");
@@ -179,6 +179,7 @@ public class PDFReportServiceTest extends AbstractSpringTest {
         xmlFile.setId(1000);
         dbTL.setXmlFile(xmlFile);
         dbTL.setType(TLType.TL);
+        dbTL.setStatus(TLStatus.DRAFT);
         tlRepository.save(dbTL);
         rulesRunnerService.runAllRules(tl, null);
 

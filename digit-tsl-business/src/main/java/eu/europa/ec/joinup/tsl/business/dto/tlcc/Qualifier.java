@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -58,28 +58,28 @@ import javax.xml.bind.annotation.XmlType;
 @XmlRootElement(name = "Qualifier", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class Qualifier {
 
-	@XmlElement(name = "URI", namespace = "http://www.etsi.org/19162/conformanceChecker")
-	protected List<URI> uri;
-	@XmlAttribute(name = "index", required = true)
-	protected BigInteger index;
+    @XmlElement(name = "URI", namespace = "http://www.etsi.org/19162/conformanceChecker")
+    protected List<URI> uri;
+    @XmlAttribute(name = "index", required = true)
+    protected BigInteger index;
 
-	public List<URI> getURI() {
-		if (this.uri == null) {
-			this.uri = new ArrayList<URI>();
-		}
-		return uri;
-	}
+    public List<URI> getURI() {
+        if (this.uri == null) {
+            this.uri = new ArrayList<URI>();
+        }
+        return uri;
+    }
 
-	public void setURI(List<URI> uri) {
-		this.uri = uri;
-	}
+    public void setURI(List<URI> uri) {
+        this.uri = uri;
+    }
 
-	public BigInteger getIndex() {
-		return index;
-	}
+    public BigInteger getIndex() {
+        return index;
+    }
 
-	public void setIndex(BigInteger index) {
-		this.index = index;
-	}
+    public void setIndex(BigInteger index) {
+        this.index = index;
+    }
 
 }

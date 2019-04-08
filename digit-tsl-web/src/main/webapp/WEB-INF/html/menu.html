@@ -1,39 +1,49 @@
 <nav class="panel panel-primary" th:fragment="nav" id="menu">
-    <!-- Management -->
-    <div ng-if="authorized('MAN')" id="managementMenuDiv">
-        <div class="panel-heading menu-panel-heading" style="max-height: 35px; background-color: #337ab7">
-            <span th:text="#{tManagement}" class="white no-cursor"></span>
-        </div>
-        <div ng-if="authorized('MAN')">
-            <a ng-href="/tl-manager/management/userManagement" target="_self" class="menu-link" th:text="#{tUsers}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/signingCertificate" target="_self" class="menu-link" th:text="#{keyStore.menu}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/dataChecks" target="_self" class="menu-link" th:text="#{check.management}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/dataProperties" target="_self" class="menu-link" th:text="#{propertie.management}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/system" target="_self" class="menu-link" th:text="#{propertie.system}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/audit" target="_self" class="menu-link" th:text="#{tAudit}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/logs" target="_self" class="menu-link" th:text="#{application.logs}" style="display: block;"></a>
-            <a ng-href="/tl-manager/management/dataRetention" target="_self" class="menu-link" th:text="#{retention.data}" style="display: block;"></a>
-        </div>
-    </div>
-    <div class="panel-heading menu-panel-heading">
-        <a ng-href="/tl-manager/tl/stats" th:text="#{tl.stats}" class="menu-title" target="_self"></a>
-    </div>
-    <!-- My Drafts -->
-    <div class="panel-heading menu-panel-heading" id="draftMenuDiv">
-        <a ng-href="/tl-manager/drafts/{{draftStoreId}}" th:text="#{draftMenuTitle}" class="menu-title" target="_self"></a>
-    </div>
-    <div ng-if="menuDraft==true">
-        <div ng-repeat="draft in drafts" style="display: block;">
-            <a ng-href="/tl-manager/tl/{{draft.id}}" target="_self" class="menu-link">{{draft.name}} (Sn{{ draft.sequenceNumber}})</a>
-            <div ng-bind-html="styleTbStatus(draft.checkStatus)" style="float: right; padding-right: 5px;" class="inline-block"></div>
-        </div>
-    </div>
-    <!-- Trust Backbone -->
-    <div class="panel-heading menu-panel-heading" id="trustBackboneMenuDiv">
-        <a ng-href="/tl-manager/home" th:text="#{tbMenuTitle}" class="menu-title" target="_self" th:text="#{tTB}"></a>
-    </div>
-    <!-- News -->
-    <div class="panel-heading menu-panel-heading" id="newsMenuDiv">
-        <a href="/tl-manager/news" th:text="#{news}" class="menu-title" target="_self" th:text="#{news}"></a>
-    </div>
+	<!-- Management -->
+	<div ng-if="authorized('MAN')" id="managementMenuDiv">
+		<div class="panel-heading menu-panel-heading" style="max-height: 35px; background-color: #337ab7">
+			<span th:text="#{tManagement}" class="white no-cursor"></span>
+		</div>
+		<div ng-if="authorized('MAN')">
+			<a ng-href="/tl-manager/management/userManagement" target="_self" class="menu-link" th:text="#{tUsers}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/signingCertificate" target="_self" class="menu-link" th:text="#{keyStore.menu}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/dataChecks" target="_self" class="menu-link" th:text="#{check.management}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/dataProperties" target="_self" class="menu-link" th:text="#{propertie.management}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/system" target="_self" class="menu-link" th:text="#{propertie.system}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/audit" target="_self" class="menu-link" th:text="#{tAudit}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/logs" target="_self" class="menu-link" th:text="#{application.logs}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/dataRetention" target="_self" class="menu-link" th:text="#{retention.data}" style="display: block;"></a>
+			<a ng-href="/tl-manager/management/cronRetention" target="_self" class="menu-link" th:text="#{retention.cron}" style="display: block;"></a>
+		</div>
+	</div>
+	<div class="panel-heading menu-panel-heading">
+		<a ng-href="/tl-manager/tl/stats" th:text="#{tl.stats}" class="menu-title" target="_self"></a>
+	</div>
+	<!-- Wizards -->
+	<div id="wizardMenuDiv">
+		<div class="panel-heading menu-panel-heading" style="max-height: 35px; background-color: #337ab7">
+			<span th:text="#{wizardMenuTitle}" class="white no-cursor"></span>
+		</div>
+		<div>
+			<a ng-href="/tl-manager/wizard/signingCertificate" target="_self" class="menu-link" th:text="#{wizard.signingCertificate.menu}" style="display: block;"></a>
+		</div>
+	</div>
+	<!-- My Drafts -->
+	<div class="panel-heading menu-panel-heading" id="draftMenuDiv">
+		<a ng-href="/tl-manager/drafts/{{draftStoreId}}" th:text="#{draftMenuTitle}" class="menu-title" target="_self"></a>
+	</div>
+	<div ng-if="menuDraft==true">
+		<div ng-repeat="draft in drafts" style="display: block;">
+			<a ng-href="/tl-manager/tl/{{draft.id}}" target="_self" class="menu-link">{{draft.name}} (Sn{{ draft.sequenceNumber}})</a>
+			<div ng-bind-html="styleTbStatus(draft.checkStatus)" style="float: right; padding-right: 5px;" class="inline-block"></div>
+		</div>
+	</div>
+	<!-- Trust Backbone -->
+	<div class="panel-heading menu-panel-heading" id="trustBackboneMenuDiv">
+		<a ng-href="/tl-manager/home" th:text="#{tbMenuTitle}" class="menu-title" target="_self"></a>
+	</div>
+	<!-- News -->
+	<div class="panel-heading menu-panel-heading" id="newsMenuDiv">
+		<a href="/tl-manager/news" th:text="#{news}" class="menu-title" target="_self"></a>
+	</div>
 </nav>

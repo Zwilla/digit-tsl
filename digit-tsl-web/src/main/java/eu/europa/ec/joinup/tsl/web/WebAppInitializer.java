@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -22,6 +22,9 @@ package eu.europa.ec.joinup.tsl.web;
 
 import java.net.Authenticator;
 import java.net.PasswordAuthentication;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.Filter;
 import javax.servlet.ServletContext;
@@ -61,24 +64,30 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
     }
 
     @Override
+    @SuppressWarnings({ "rawtypes" })
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {
-                ApplicationConfig.class, OverrideConfig.class, PersistenceConfig.class, DataLoaderConfig.class, WebSecurityConfig.class, ProxyConfiguration.class
-        };
+        Class config = null;
+        try {
+            config = Class.forName("eu.europa.ec.joinup.tsl.business.config.FreemarkerConfig");
+        } catch (ClassNotFoundException e) {
+            // Additional freemarker config not found
+        }
+        List<Class> configs = new ArrayList<>();
+        configs.addAll(Arrays.asList(ApplicationConfig.class, OverrideConfig.class, PersistenceConfig.class, DataLoaderConfig.class, WebSecurityConfig.class, ProxyConfiguration.class));
+        if (config != null) {
+            configs.add(config);
+        }
+        return configs.toArray(new Class[configs.size()]);
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {
-                WebConfig.class
-        };
+        return new Class[] { WebConfig.class };
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[] {
-                "/"
-        };
+        return new String[] { "/" };
     }
 
     @Override
@@ -86,9 +95,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
         characterEncodingFilter.setEncoding("UTF-8");
         characterEncodingFilter.setForceEncoding(true);
-        return new Filter[] {
-                characterEncodingFilter
-        };
+        return new Filter[] { characterEncodingFilter };
     }
 
 }

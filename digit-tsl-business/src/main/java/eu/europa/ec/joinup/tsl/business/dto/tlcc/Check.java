@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -48,9 +48,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-        "content"
-})
+@XmlType(name = "", propOrder = { "content" })
 @XmlRootElement(name = "Check", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class Check {
 
@@ -68,9 +66,7 @@ public class Check {
     /**
      * Obtient la valeur de la propriete content.
      *
-     * @return
-     *         possible object is
-     *         {@link String }
+     * @return possible object is {@link String }
      */
     public String getContent() {
         return content;
@@ -80,8 +76,7 @@ public class Check {
      * Definit la valeur de la propriete content.
      *
      * @param value
-     *            allowed object is
-     *            {@link String }
+     *            allowed object is {@link String }
      */
     public void setContent(String value) {
         content = value;
@@ -90,9 +85,7 @@ public class Check {
     /**
      * Obtient la valeur de la propriete checkId.
      *
-     * @return
-     *         possible object is
-     *         {@link String }
+     * @return possible object is {@link String }
      */
     public String getCheckId() {
         return checkId;
@@ -102,8 +95,7 @@ public class Check {
      * Definit la valeur de la propriete checkId.
      *
      * @param value
-     *            allowed object is
-     *            {@link String }
+     *            allowed object is {@link String }
      */
     public void setCheckId(String value) {
         checkId = value;
@@ -112,9 +104,7 @@ public class Check {
     /**
      * Obtient la valeur de la propriete status.
      *
-     * @return
-     *         possible object is
-     *         {@link String }
+     * @return possible object is {@link String }
      */
     public String getStatus() {
         return status;
@@ -124,8 +114,7 @@ public class Check {
      * Definit la valeur de la propriete status.
      *
      * @param value
-     *            allowed object is
-     *            {@link String }
+     *            allowed object is {@link String }
      */
     public void setStatus(String value) {
         status = value;

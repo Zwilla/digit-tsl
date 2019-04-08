@@ -1,74 +1,75 @@
 <div>
-    <div ng-class="isOpen(digital.show)">
-        <check disabled="checktorun" id="digital.id" listcheck="listcheck" label="digital.name" istreeparent="true"></check>
-        <change id="digital.id" listdiff="listchange" label="digital.name" istreeparent="true"information="information"></change>
-        <div class="openClose">
-            <span ng-click="digital.show=true" ng-if="digital.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-            <span ng-click="digital.show=false" ng-if="digital.show==true" class="fa fa-caret-down openTabIcon cursor-pointer" ng-class="carretIsOpen(white)"></span>
-        </div>
-        <span style="word-wrap: break-word;">{{digital.name}}</span>
-    </div>
-    <div ng-if="digital.show==true" class="isOpenBorder">
-        <div class="container-fluid isOpenTopBorder">
-            <div>
-                <!-- Certificate List -->
-                <div id="divCertificate" ng-show="digital.certificateList[0]!=null">
-                    <div ng-repeat="tCertificate in digital.certificateList">
-                        <div class="row" ng-init="tCertificate.show=false;">
-                            <div class="col-sm-2 scheme-information">
-                                <check disabled="checktorun" id="tCertificate.id" listcheck="listcheck" label="digital.subjectName" istreeparent="true"></check>
-                                <change id="tCertificate.id" listdiff="listchange" label="digital.subjectName" istreeparent="true"information="information"></change>
-                                <span style="float: right;"><span th:text="#{digitalIdentification.certificate}"></span></span>
-                            </div>
-                            <div class="col-sm-10">
-                                <div class="openClose">
-                                    <span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
-                                    <span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
-                                </div>
-                                <span ng-if="tCertificate.show==false">{{tCertificate.certSubjectShortName}} ({{ tCertificate.certNotBefore | date:'yyyy-MM-dd'}} - {{ tCertificate.certAfter |
-                                    date:'yyyy-MM-dd'}})</span>
-                            </div>
-                        </div>
-                        <div th:replace="certificat :: certificat" th:remove="tag"></div>
-                    </div>
-                </div>
-                <div ng-if="!isNotPointer(digital.id)">
-                    <div class="row" ng-hide="objVisibility(digital.subjectName)">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="checktorun" id="digital.id+'_X509_SUBJECT_NAME'" listcheck="listcheck" label="digital.subjectName" istreeparent="false"></check>
-                                <change id="digital.id+'_X509_SUBJECT_NAME'" listdiff="listchange" label="digital.subjectName" istreeparent="false"information="information"></change>
-                            </div>
-                            <span th:text="#{digitalIdentification.subjectName}"></span>
-                        </div>
-                        <div class="col-sm-10">
-                            <span>{{ digital.subjectName}}</span>
-                        </div>
-                    </div>
-                    <div class="row" ng-hide="objVisibility(digital.x509ski)">
-                        <div class="col-sm-2 text-right scheme-information">
-                            <div class="divCheckChange">
-                                <check disabled="checktorun" id="digital.id+'_X509_SKI'" listcheck="listcheck" label="digital.subjectName" istreeparent="false"></check>
-                                <change id="digital.id+'_X509_SKI'" listdiff="listchange" label="digital.subjectName" istreeparent="true"information="information"></change>
-                            </div>
-                            <span th:text="#{digitalIdentification.x509ski}"></span>
-                        </div>
-                        <div class="col-sm-10">
-                            <span>{{ digital.x509ski}}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div ng-if="digital.other!=null && digital.other.length>0">
-                <div class="row" ng-repeat="other in digital.other track by $index" ng-if="digital.other[$index]!=null">
-                    <div class="col-sm-2 scheme-information text-right">
-                        <span th:text="#{digitalIdentification.other}"></span>
-                    </div>
-                    <div class="col-sm-10">
-                        <span>{{digital.other[$index]}}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div ng-class="isOpen(digital.show)">
+		<check disabled="checktorun" id="digital.id" listcheck="listcheck" label="digital.name" istreeparent="true"></check>
+		<change id="digital.id" listdiff="listchange" label="digital.name" istreeparent="true" information="information"></change>
+		<div class="openClose">
+			<span ng-click="digital.show=true" ng-if="digital.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+			<span ng-click="digital.show=false" ng-if="digital.show==true" class="fa fa-caret-down openTabIcon cursor-pointer" ng-class="carretIsOpen(white)"></span>
+		</div>
+		<span style="word-wrap: break-word;">{{digital.name}}</span>
+	</div>
+	<div ng-if="digital.show==true" class="isOpenBorder">
+		<div class="container-fluid isOpenTopBorder">
+			<div>
+				<!-- Certificate List -->
+				<div id="divCertificate" ng-show="digital.certificateList[0]!=null">
+					<div ng-repeat="tCertificate in digital.certificateList">
+						<div class="row" ng-init="tCertificate.show=false;">
+							<div class="col-sm-2 scheme-information">
+								<check disabled="checktorun" id="tCertificate.id" listcheck="listcheck" label="digital.subjectName" istreeparent="true"></check>
+								<change id="tCertificate.id" listdiff="listchange" label="digital.subjectName" istreeparent="true" information="information"></change>
+								<span style="float: right;">
+									<span th:text="#{digitalIdentification.certificate}"></span>
+								</span>
+							</div>
+							<div class="col-sm-10">
+								<div class="openClose">
+									<span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+									<span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+								</div>
+								<span ng-if="tCertificate.show==false">{{tCertificate.certSubjectShortName}} ({{ tCertificate.certNotBefore | date:'yyyy-MM-dd'}} - {{ tCertificate.certAfter | date:'yyyy-MM-dd'}})</span>
+							</div>
+						</div>
+						<th:block th:replace="certificat :: certificat" th:remove="tag"></th:block>
+					</div>
+				</div>
+				<div ng-if="!isNotPointer(digital.id)">
+					<div class="row" ng-hide="objVisibility(digital.subjectName)">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="checktorun" id="digital.id+'_X509_SUBJECT_NAME'" listcheck="listcheck" label="digital.subjectName" istreeparent="false"></check>
+								<change id="digital.id+'_X509_SUBJECT_NAME'" listdiff="listchange" label="digital.subjectName" istreeparent="false" information="information"></change>
+							</div>
+							<span th:text="#{digitalIdentification.subjectName}"></span>
+						</div>
+						<div class="col-sm-10">
+							<span>{{ digital.subjectName}}</span>
+						</div>
+					</div>
+					<div class="row" ng-hide="objVisibility(digital.x509ski)">
+						<div class="col-sm-2 text-right scheme-information">
+							<div class="divCheckChange">
+								<check disabled="checktorun" id="digital.id+'_X509_SKI'" listcheck="listcheck" label="digital.subjectName" istreeparent="false"></check>
+								<change id="digital.id+'_X509_SKI'" listdiff="listchange" label="digital.subjectName" istreeparent="true" information="information"></change>
+							</div>
+							<span th:text="#{digitalIdentification.x509ski}"></span>
+						</div>
+						<div class="col-sm-10">
+							<span>{{ digital.x509ski}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div ng-if="digital.other!=null && digital.other.length>0">
+				<div class="row" ng-repeat="other in digital.other track by $index" ng-if="digital.other[$index]!=null">
+					<div class="col-sm-2 scheme-information text-right">
+						<span th:text="#{digitalIdentification.other}"></span>
+					</div>
+					<div class="col-sm-10">
+						<span>{{digital.other[$index]}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

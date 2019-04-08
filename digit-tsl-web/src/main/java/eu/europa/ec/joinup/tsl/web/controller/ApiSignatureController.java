@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -123,9 +123,9 @@ public class ApiSignatureController {
                 auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.SEAL, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
                         "SEAL:" + tlSignatureInformation.getSealName() + ";TLID:" + tlSignatureInformation.getTlId());
                 tlService.updateSignedXMLFile(new InMemoryDocument(signFile), tlSignatureInformation.getTlId());
-                //Check all TL
+                // Check all TL
                 rulesRunner.validDraftAfterSignature(tlSignatureInformation.getTlId());
-                //Check signature
+                // Check signature
                 tlValidator.checkAllSignature(tlService.getDbTL(tlSignatureInformation.getTlId()));
                 response.setResponseStatus(HttpStatus.OK.toString());
                 response.setContent(tlService.getSignatureInfo(tlSignatureInformation.getTlId()));

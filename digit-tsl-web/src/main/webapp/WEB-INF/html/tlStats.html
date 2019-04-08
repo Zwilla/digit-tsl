@@ -2,138 +2,136 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 
 <script th:src="@{/controllers/tlStatsController.js}"></script>
 
 <style>
 .row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="tlStatsController">
+	<div class="body" ng-controller="tlStatsController">
 
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- MAIN CONTENT -->
-        <main ng-show="loadStats==false">
-        <div align="center">
-            <label>{{loadingStatsMessage}}</label>
-        </div>
-        <div th:replace="spinner :: spinner"></div>
-        </main>
+		<!-- MAIN CONTENT -->
+		<main ng-show="loadStats==false">
+		<div align="center">
+			<label>{{loadingStatsMessage}}</label>
+		</div>
+		<th:block th:replace="spinner :: spinner"></th:block> </main>
 
 
-        <main id="content" ng-show="loadStats==true">
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="max-height: 35px">
-                <span th:text="#{tl.stats.title}"></span>
-            </div>
-            <div class="row tlm-border">
-                <div class="row" style="margin-top: 15px;">
-                    <!-- Countries -->
-                    <div class="col-lg-6">
-                        <label th:text="#{tbCountry}" style="margin-right: 10px;"></label>
-                        <select ng-model="criteria.specificCountry">
-                            <option selected="true" value="">ALL</option>
-                            <option ng-repeat="country in criteria.countries" ng-value="country" ng-selected="criteria.specificCountry == country">{{country}}</option>
-                        </select>
-                    </div>
-                    <!-- Extraction date -->
-                    <div class="col-lg-6">
-                        <label th:text="#{tl.stats.extract.date}" style="margin-right: 10px;"></label>
-                        <div style="display: inline">
-                            <input type="text" datepicker-popup="yyyy-dd-MM" ng-model="criteria.extractDate" is-open="opened" datepicker-options="dateOptions"
-                                date-disabled="disabled(date, mode)" close-text="Close" />
-                            <button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0px 12px !important;">
-                                <span class="fa fa-calendar"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Aggregate -->
-                <div class="row col-lg-12" style="margin-top: 15px;">
-                    <label th:text="#{tl.stats.extract.type}"></label>
-                </div>
-                <div class="row col-lg-12">
-                    <div class="col-lg-3">
-                        <label class="checkbox-inline">
-                            <input type="radio" name="type" ng-model="criteria.type" value="COUNTRY" class="radio-alignement">
-                            <span th:text="#{tbCountry}"></span>
-                        </label>
-                    </div>
-                    <div class="col-lg-3">
-                        <label class="checkbox-inline">
-                            <input type="radio" name="type" ng-model="criteria.type" value="TSP" class="radio-alignement">
-                            <span th:text="#{serviceProvider}"></span>
-                        </label>
-                    </div>
-                </div>
-                <!-- Taken Over By -->
-                <div class="row col-lg-12" style="margin-top: 15px;">
-                    <label th:text="#{tl.stats.tob.distinct.title}"></label>
-                    <toggle ng-model="criteria.showTOB" on="{{tYes}}" off="{{tNo}}" size="btn-sm"></toggle>
-                </div>
-                <!-- Show types of services -->
-                <div class="row col-lg-12" style="margin-top: 15px;">
-                    <label th:text="#{tl.stats.extract.show.services}"></label>
-                </div>
-                <div class="row col-lg-12">
-                    <div class="col-lg-3">
-                        <label class="checkbox-inline">
-                            <input type="radio" name="qType" ng-model="displayType" value="ALL" class="radio-alignement">
-                            <span th:text="#{tl.stats.all.types}"></span>
-                        </label>
-                    </div>
-                    <div class="col-lg-3">
-                        <label class="checkbox-inline">
-                            <input type="radio" name="qType" ng-model="displayType" value="QUALIFIED" class="radio-alignement">
-                            <span th:text="#{tl.stats.qualified.types}"></span>
-                        </label>
-                    </div>
-                    <div class="col-lg-3">
-                        <label class="checkbox-inline">
-                            <input type="radio" name="qType" ng-model="displayType" value="UNQUALIFIED" class="radio-alignement">
-                            <span th:text="#{tl.stats.unqualified.types}"></span>
-                        </label>
-                    </div>
-                </div>
-                <!-- Columns options -->
-                <div class="row col-lg-12" style="margin-top: 15px;">
-                    <label th:text="#{tl.stats.columns.option}"></label>
-                </div>
-                <div class="row col-lg-12">
-                    <div class="col-lg-3">
-                        <toggle ng-model="criteria.showSequenceNumber" on="{{tShow}}" off="{{tHide}}" size="btn-sm"></toggle>
-                        <span th:text="#{tlBrowser.sequenceNumber}" class="unselectable"></span>
-                    </div>
-                    <div class="col-lg-3" ng-show="criteria.type=='TSP'">
-                        <label>
-                            <toggle ng-model="criteria.showTradeName" on="{{tShow}}" off="{{tHide}}" size="btn-sm"></toggle>
-                            <span th:text="#{serviceProvider.tradeName}" class="unselectable"></span>
-                        </label>
-                    </div>
-                </div>
-                <!-- Buttons -->
-                <br />
-                <div class="row" style="padding: 5px; padding-bottom: 15px;">
-                    <button class="btn btn-primary" ng-click="performExtract()" th:text="#{tGenerate}" style="float: right; margin-right: 10px;"></button>
-                    <button class="btn btn-default" ng-click="resetCriteria()" th:text="#{tReset}" style="float: right; margin-right: 15px;"></button>
-                    <a ng-href="/tl-manager/api/stats/download" id="download_csv" name="download_csv" style="visible: hidden"></a>
-                </div>
-            </div>
-        </div>
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+		<main id="content" ng-show="loadStats==true">
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{tl.stats.title}"></span>
+			</div>
+			<div class="row tlm-border">
+				<div class="row" style="margin-top: 15px;">
+					<!-- Countries -->
+					<div class="col-lg-6">
+						<label th:text="#{tbCountry}" style="margin-right: 10px;"></label>
+						<select ng-model="criteria.specificCountry">
+							<option selected="true" value="">ALL</option>
+							<option ng-repeat="country in criteria.countries" ng-value="country" ng-selected="criteria.specificCountry == country">{{country}}</option>
+						</select>
+					</div>
+					<!-- Extraction date -->
+					<div class="col-lg-6">
+						<label th:text="#{tl.stats.extract.date}" style="margin-right: 10px;"></label>
+						<div style="display: inline">
+							<input type="text" datepicker-popup="yyyy-dd-MM" ng-model="criteria.extractDate" is-open="opened" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
+							<button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0px 12px !important;">
+								<span class="fa fa-calendar"></span>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- Aggregate -->
+				<div class="row col-lg-12" style="margin-top: 15px;">
+					<label th:text="#{tl.stats.extract.type}"></label>
+				</div>
+				<div class="row col-lg-12">
+					<div class="col-lg-3">
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="criteria.type" value="COUNTRY" class="radio-alignement">
+							<span th:text="#{tbCountry}"></span>
+						</label>
+					</div>
+					<div class="col-lg-3">
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="criteria.type" value="TSP" class="radio-alignement">
+							<span th:text="#{serviceProvider}"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Taken Over By -->
+				<div class="row col-lg-12" style="margin-top: 15px;">
+					<label th:text="#{tl.stats.tob.distinct.title}"></label>
+					<toggle ng-model="criteria.showTOB" on="{{tYes}}" off="{{tNo}}" size="btn-sm"></toggle>
+				</div>
+				<!-- Show types of services -->
+				<div class="row col-lg-12" style="margin-top: 15px;">
+					<label th:text="#{tl.stats.extract.show.services}"></label>
+				</div>
+				<div class="row col-lg-12">
+					<div class="col-lg-3">
+						<label class="checkbox-inline">
+							<input type="radio" name="qType" ng-model="displayType" value="ALL" class="radio-alignement">
+							<span th:text="#{tl.stats.all.types}"></span>
+						</label>
+					</div>
+					<div class="col-lg-3">
+						<label class="checkbox-inline">
+							<input type="radio" name="qType" ng-model="displayType" value="QUALIFIED" class="radio-alignement">
+							<span th:text="#{tl.stats.qualified.types}"></span>
+						</label>
+					</div>
+					<div class="col-lg-3">
+						<label class="checkbox-inline">
+							<input type="radio" name="qType" ng-model="displayType" value="UNQUALIFIED" class="radio-alignement">
+							<span th:text="#{tl.stats.unqualified.types}"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Columns options -->
+				<div class="row col-lg-12" style="margin-top: 15px;">
+					<label th:text="#{tl.stats.columns.option}"></label>
+				</div>
+				<div class="row col-lg-12">
+					<div class="col-lg-3">
+						<toggle ng-model="criteria.showSequenceNumber" on="{{tShow}}" off="{{tHide}}" size="btn-sm"></toggle>
+						<span th:text="#{tlBrowser.sequenceNumber}" class="unselectable"></span>
+					</div>
+					<div class="col-lg-3" ng-show="criteria.type=='TSP'">
+						<label>
+							<toggle ng-model="criteria.showTradeName" on="{{tShow}}" off="{{tHide}}" size="btn-sm"></toggle>
+							<span th:text="#{serviceProvider.tradeName}" class="unselectable"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Buttons -->
+				<br />
+				<div class="row" style="padding: 5px; padding-bottom: 15px;">
+					<button class="btn btn-primary" ng-click="performExtract()" th:text="#{tGenerate}" style="float: right; margin-right: 10px;"></button>
+					<button class="btn btn-default" ng-click="resetCriteria()" th:text="#{tReset}" style="float: right; margin-right: 15px;"></button>
+					<a ng-href="/tl-manager/api/stats/download" id="download_csv" name="download_csv" style="visible: hidden"></a>
+				</div>
+			</div>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 </body>
 </html>

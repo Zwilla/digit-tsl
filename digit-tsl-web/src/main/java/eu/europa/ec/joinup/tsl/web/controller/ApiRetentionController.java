@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -32,6 +32,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import eu.europa.ec.joinup.tsl.business.dto.data.retention.CronRetention;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.DraftStoreRetentionDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.RetentionCriteriaDTO;
 import eu.europa.ec.joinup.tsl.business.dto.data.retention.TrustedListRetentionDTO;
@@ -84,6 +85,23 @@ public class ApiRetentionController {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
             retentionService.cleanTrustedlist(trustedList);
             response.setResponseStatus(HttpStatus.OK.toString());
+        } else {
+            response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
+        }
+        return response;
+    }
+
+    @RequestMapping(value = "/get_cron_retention", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    public @ResponseBody ServiceResponse<CronRetention> getCronRetention() {
+        ServiceResponse<CronRetention> response = new ServiceResponse<>();
+        if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
+            try {
+                response.setContent(retentionService.searchNextCronRetention());
+                response.setResponseStatus(HttpStatus.OK.toString());
+            } catch (IllegalStateException e) {
+                response.setErrorMessage(e.getMessage());
+                response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+            }
         } else {
             response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
         }

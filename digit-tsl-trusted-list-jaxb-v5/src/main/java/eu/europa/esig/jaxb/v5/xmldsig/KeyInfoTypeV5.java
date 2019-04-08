@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -24,7 +24,6 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
-
 
 package eu.europa.esig.jaxb.v5.xmldsig;
 
@@ -46,11 +45,12 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3c.dom.Element;
 
-
 /**
- * <p>Java class for KeyInfoType complex type.
+ * <p>
+ * Java class for KeyInfoType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="KeyInfoType"&gt;
@@ -75,23 +75,17 @@ import org.w3c.dom.Element;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "KeyInfoType", propOrder = {
-    "content"
-})
-public class KeyInfoTypeV5
-    implements Serializable
-{
+@XmlType(name = "KeyInfoType", propOrder = { "content" })
+public class KeyInfoTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
-    @XmlElementRefs({
-        @XmlElementRef(name = "RetrievalMethod", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "KeyName", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "MgmtData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "KeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "SPKIData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "PGPData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
-        @XmlElementRef(name = "X509Data", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class)
-    })
+    @XmlElementRefs({ @XmlElementRef(name = "RetrievalMethod", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "KeyName", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "MgmtData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "KeyValue", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "SPKIData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "PGPData", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class),
+            @XmlElementRef(name = "X509Data", namespace = "http://www.w3.org/2000/09/xmldsig#", type = JAXBElement.class) })
     @XmlMixed
     @XmlAnyElement(lax = true)
     protected List<Object> content;
@@ -105,30 +99,22 @@ public class KeyInfoTypeV5
      * Gets the value of the content property.
      * 
      * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the content property.
+     * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification you make to the returned list will be
+     * present inside the JAXB object. This is why there is not a <CODE>set</CODE> method for the content property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * 
      * <pre>
-     *    getContent().add(newItem);
+     * getContent().add(newItem);
      * </pre>
      * 
      * 
      * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link RetrievalMethodTypeV5 }{@code >}
-     * {@link String }
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
-     * {@link Element }
-     * {@link JAXBElement }{@code <}{@link KeyValueTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link SPKIDataTypeV5 }{@code >}
-     * {@link JAXBElement }{@code <}{@link PGPDataTypeV5 }{@code >}
-     * {@link Object }
-     * {@link JAXBElement }{@code <}{@link X509DataTypeV5 }{@code >}
+     * Objects of the following type(s) are allowed in the list {@link JAXBElement }{@code <}{@link RetrievalMethodTypeV5 }{@code >} {@link String }
+     * {@link JAXBElement }{@code <}{@link String }{@code >} {@link JAXBElement }{@code <}{@link String }{@code >} {@link Element } {@link JAXBElement
+     * }{@code <}{@link KeyValueTypeV5 }{@code >} {@link JAXBElement }{@code <}{@link SPKIDataTypeV5 }{@code >} {@link JAXBElement
+     * }{@code <}{@link PGPDataTypeV5 }{@code >} {@link Object } {@link JAXBElement }{@code <}{@link X509DataTypeV5 }{@code >}
      * 
      * 
      */
@@ -142,10 +128,8 @@ public class KeyInfoTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -155,9 +139,8 @@ public class KeyInfoTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

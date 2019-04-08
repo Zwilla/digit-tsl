@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -48,9 +48,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/dataProperties"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/dataProperties" }, method = RequestMethod.GET)
     public String dataProperties(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -61,9 +59,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/dataChecks"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/dataChecks" }, method = RequestMethod.GET)
     public String dataChecks(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -74,9 +70,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/signingCertificate"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/signingCertificate" }, method = RequestMethod.GET)
     public String keyStore(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -87,9 +81,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/system"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/system" }, method = RequestMethod.GET)
     public String system(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -100,9 +92,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/audit"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/audit" }, method = RequestMethod.GET)
     public String audit(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -113,9 +103,7 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/dataRetention"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/dataRetention" }, method = RequestMethod.GET)
     public String dataRetention(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -126,9 +114,18 @@ public class ManagementController {
         return "denied";
     }
 
-    @RequestMapping(value = {
-            "/logs"
-    }, method = RequestMethod.GET)
+    @RequestMapping(value = { "/cronRetention" }, method = RequestMethod.GET)
+    public String retentionView(Model model) {
+        if (SecurityContextHolder.getContext().getAuthentication() != null) {
+            DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());
+            if ((userConnected != null) && userService.isManagement(userConnected.getEcasId())) {
+                return "cronRetention";
+            }
+        }
+        return "denied";
+    }
+
+    @RequestMapping(value = { "/logs" }, method = RequestMethod.GET)
     public String logs(Model model) {
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             DBUser userConnected = userService.getDBUser(SecurityContextHolder.getContext().getAuthentication().getName());

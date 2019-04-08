@@ -1,11 +1,14 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <span style="display: inline-block;"><span th:text="#{tNotification.changes}"></span>: {{ label| cut:false:110:'...'}}</span>
-        <span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
-    </div>
-    <div class="panel-body">
-        <paginator options="tableOptions"></paginator>
-    </div>
+	<div class="panel-heading">
+		<span style="display: inline-block;">
+			<span th:text="#{tNotification.changes}"></span>
+			: {{ label| cut:false:110:'...'}}
+		</span>
+		<span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
+	</div>
+	<div class="panel-body">
+		<paginator options="tableOptions"></paginator>
+	</div>
 </div>
 
 

@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.tslx;
 
 import javax.xml.bind.JAXBElement;
@@ -33,19 +32,13 @@ import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
 import javax.xml.namespace.QName;
 
-
 /**
- * This object contains factory methods for each 
- * Java content interface and Java element interface 
- * generated in the eu.europa.esig.jaxb.v5.tslx package. 
- * <p>An ObjectFactory allows you to programatically 
- * construct new instances of the Java representation 
- * for XML content. The Java representation of XML 
- * content can consist of schema derived interfaces 
- * and classes representing the binding of schema 
- * type definitions, element declarations and model 
- * groups.  Factory methods for each of these are 
- * provided in this class.
+ * This object contains factory methods for each Java content interface and Java element interface generated in the eu.europa.esig.jaxb.v5.tslx
+ * package.
+ * <p>
+ * An ObjectFactory allows you to programatically construct new instances of the Java representation for XML content. The Java representation of XML
+ * content can consist of schema derived interfaces and classes representing the binding of schema type definitions, element declarations and model
+ * groups. Factory methods for each of these are provided in this class.
  * 
  */
 @XmlRegistry
@@ -122,7 +115,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2/additionaltypes#", name = "ExtendedKeyUsage")
     public JAXBElement<ExtendedKeyUsageTypeV5> createExtendedKeyUsage(ExtendedKeyUsageTypeV5 value) {
-        return new JAXBElement<ExtendedKeyUsageTypeV5>(_ExtendedKeyUsage_QNAME, ExtendedKeyUsageTypeV5 .class, null, value);
+        return new JAXBElement<ExtendedKeyUsageTypeV5>(_ExtendedKeyUsage_QNAME, ExtendedKeyUsageTypeV5.class, null, value);
     }
 
     /**
@@ -131,7 +124,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2/additionaltypes#", name = "TakenOverBy")
     public JAXBElement<TakenOverByTypeV5> createTakenOverBy(TakenOverByTypeV5 value) {
-        return new JAXBElement<TakenOverByTypeV5>(_TakenOverBy_QNAME, TakenOverByTypeV5 .class, null, value);
+        return new JAXBElement<TakenOverByTypeV5>(_TakenOverBy_QNAME, TakenOverByTypeV5.class, null, value);
     }
 
     /**
@@ -140,7 +133,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://uri.etsi.org/02231/v2/additionaltypes#", name = "CertSubjectDNAttribute")
     public JAXBElement<CertSubjectDNAttributeTypeV5> createCertSubjectDNAttribute(CertSubjectDNAttributeTypeV5 value) {
-        return new JAXBElement<CertSubjectDNAttributeTypeV5>(_CertSubjectDNAttribute_QNAME, CertSubjectDNAttributeTypeV5 .class, null, value);
+        return new JAXBElement<CertSubjectDNAttributeTypeV5>(_CertSubjectDNAttribute_QNAME, CertSubjectDNAttributeTypeV5.class, null, value);
     }
 
 }

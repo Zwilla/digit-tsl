@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -47,9 +47,7 @@ import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {
-        AsyncConfig.class, ExecutorServiceConfig.class, BusinessConfig.class, AlertingTestConfig.class, PersistenceTestConfig.class, ServiceTestConfig.class
-})
+@ContextConfiguration(classes = { AsyncConfig.class, ExecutorServiceConfig.class, BusinessConfig.class, AlertingTestConfig.class, PersistenceTestConfig.class, ServiceTestConfig.class })
 @DirtiesContext(classMode = ClassMode.AFTER_CLASS)
 public abstract class AbstractSpringTest {
 

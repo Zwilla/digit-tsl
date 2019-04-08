@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -72,7 +72,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
 
     @Before
     public void init() {
-        //LOTL
+        // LOTL
         DBCountries lotlCountry = countryService.getCountryByTerritory("EU");
         DBTrustedLists dbLOTL = new DBTrustedLists();
         dbLOTL.setArchive(false);
@@ -88,7 +88,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbLOTL.setNextUpdateDate(new Date(117, 11, 10, 10, 10));
         tlRepo.save(dbLOTL);
 
-        //TL
+        // TL
         DBCountries country = countryService.getCountryByTerritory("BE");
         dbTL = new DBTrustedLists();
         dbTL.setArchive(false);
@@ -99,7 +99,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbTL.setName("TEST - BE TL");
         DBFiles xmlFile = new DBFiles();
         xmlFile.setMimeTypeFile(MimeType.XML);
-        xmlFile.setLocalPath("BE" + File.separatorChar + "BE_Sn32.xml");
+        xmlFile.setLocalPath("BE-TEST" + File.separatorChar + "BE_Sn32.xml");
         dbTL.setXmlFile(xmlFile);
         dbTL.setNextUpdateDate(new Date(117, 10, 10, 10, 10));
         tlRepo.save(dbTL);
@@ -118,25 +118,25 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
     @Test
     public void nextUpdateDateElement() {
         TLBreakStatus breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(116, 10, 10, 10, 10));
-        //Next Update in 1 year
+        // Next Update in 1 year
         Assert.assertEquals(365, breakStatus.getNextUpdateDateElement().getExpireIn());
         Assert.assertEquals(false, breakStatus.getNextUpdateDateElement().isAlert());
         Assert.assertEquals(false, breakStatus.getNextUpdateDateElement().isBreakDay());
         Assert.assertEquals(BreakType.NONE, breakStatus.getBreakType());
-        //Next Update in 8 days
+        // Next Update in 8 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(117, 10, 2, 10, 10));
         Assert.assertEquals(8, breakStatus.getNextUpdateDateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getNextUpdateDateElement().isAlert());
         Assert.assertEquals(false, breakStatus.getNextUpdateDateElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
-        //Next Update in 7 days
+        // Next Update in 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(117, 10, 3, 10, 10));
         Assert.assertEquals(7, breakStatus.getNextUpdateDateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getNextUpdateDateElement().isAlert());
         Assert.assertEquals(true, breakStatus.getNextUpdateDateElement().isBreakDay());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
         Assert.assertTrue(breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(117, 10, 3, 10, 10)));
-        //Next Update since 7 days
+        // Next Update since 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(117, 10, 17, 10, 10));
         Assert.assertEquals(-7, breakStatus.getNextUpdateDateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getNextUpdateDateElement().isAlert());
@@ -150,31 +150,31 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         tlRepo.save(dbTL);
 
         TLBreakStatus breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(123, 01, 17, 10, 10));
-        //Signing cert expire in 1 year
+        // Signing cert expire in 1 year
         Assert.assertEquals(365, breakStatus.getSigningCertificateElement().getExpireIn());
         Assert.assertEquals(false, breakStatus.getSigningCertificateElement().isAlert());
         Assert.assertEquals(false, breakStatus.getSigningCertificateElement().isBreakDay());
         Assert.assertEquals(BreakType.NONE, breakStatus.getBreakType());
-        //Signing cert expire in 8 days
+        // Signing cert expire in 8 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 01, 9, 10, 10));
         Assert.assertEquals(8, breakStatus.getSigningCertificateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getSigningCertificateElement().isAlert());
         Assert.assertEquals(false, breakStatus.getSigningCertificateElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
-        //Signing cert expire in 7 days
+        // Signing cert expire in 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 01, 10, 15, 10));
         Assert.assertEquals(7, breakStatus.getSigningCertificateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getSigningCertificateElement().isAlert());
         Assert.assertEquals(true, breakStatus.getSigningCertificateElement().isBreakDay());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
-        //Signing cert expired since 7 days
+        // Signing cert expired since 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 01, 24, 18, 10));
         Assert.assertEquals(-7, breakStatus.getSigningCertificateElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getSigningCertificateElement().isAlert());
         Assert.assertEquals(false, breakStatus.getSigningCertificateElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Gloabl status ALERT due to next update date expire in 7 days & signing cert expire in 8 days
+        // Gloabl status ALERT due to next update date expire in 7 days & signing cert expire in 8 days
         dbTL.setNextUpdateDate(new Date(124, 01, 16, 10, 10));
         tlRepo.save(dbTL);
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 01, 9, 10, 10));
@@ -195,40 +195,40 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         tlRepo.save(dbTL);
 
         TLBreakStatus breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(123, 01, 11, 10, 10));
-        //Two cert condition expire in 2 year
+        // Two cert condition expire in 2 year
         Assert.assertEquals(731, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(BreakType.NONE, breakStatus.getBreakType());
-        //Two cert condition expire in 60 days
+        // Two cert condition expire in 60 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 11, 13, 10, 10));
         Assert.assertEquals(60, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(1, breakStatus.getTwoCertificatesElement().getCertificatesAffected().size());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
-        //Two cert condition expire in 8 days
+        // Two cert condition expire in 8 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 3, 10, 10));
         Assert.assertEquals(8, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(1, breakStatus.getTwoCertificatesElement().getCertificatesAffected().size());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
-        //Two cert condition expire in 7 days
+        // Two cert condition expire in 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 4, 10, 10));
         Assert.assertEquals(7, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(1, breakStatus.getTwoCertificatesElement().getCertificatesAffected().size());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
-        //Two cert condition NOK
+        // Two cert condition NOK
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 18, 18, 10));
         Assert.assertEquals(0, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Gloabl status ALERT due to next update date expire in 7 days & signing cert expire in 8 days
+        // Gloabl status ALERT due to next update date expire in 7 days & signing cert expire in 8 days
         dbTL.setNextUpdateDate(new Date(125, 01, 10, 10, 10));
         tlRepo.save(dbTL);
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 3, 10, 10));
@@ -246,9 +246,9 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbTL.setNextUpdateDate(new Date(199, 10, 10, 10, 10));
         tlRepo.save(dbTL);
         List<DBCertificate> certs = certificateRepository.getAllByCountryCodeAndTlType("BE", TLType.LOTL);
-        //Two certs start the day of the expiration of the "current last one"
+        // Two certs start the day of the expiration of the "current last one"
 
-        //Add one certificate 02/11/2025 - 02/03/2025.As TL will not break the 02/11/2025
+        // Add one certificate 02/11/2025 - 02/03/2025.As TL will not break the 02/11/2025
         DBCertificate dbc1 = new DBCertificate();
         dbc1.setBase64("azer");
         dbc1.setCountryCode("BE");
@@ -259,15 +259,15 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbc1.setTlType(TLType.LOTL);
         certificateRepository.save(dbc1);
 
-        //Due to new cert, no break
+        // Due to new cert, no break
         TLBreakStatus breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 00, 11, 18, 10));
         Assert.assertEquals(150, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isBreakDay());
-        //Warning due to signing certificate expiration
+        // Warning due to signing certificate expiration
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Second last expire in 90 days, status will break
+        // Second last expire in 90 days, status will break
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 02, 12, 18, 10));
         Assert.assertEquals(90, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
@@ -275,7 +275,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
         breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 02, 12, 18, 10));
 
-        //Add one certificate 06/11/2025 - 02/03/2025.As TL will not break the 06/11/2025
+        // Add one certificate 06/11/2025 - 02/03/2025.As TL will not break the 06/11/2025
         DBCertificate dbc2 = new DBCertificate();
         dbc2.setBase64("azer");
         dbc2.setCountryCode("BE");
@@ -285,7 +285,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbc2.setTlType(TLType.LOTL);
         certificateRepository.save(dbc2);
 
-        //Check 7 days before expiration of those 2 new certs
+        // Check 7 days before expiration of those 2 new certs
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(128, 00, 27, 01, 10));
         Assert.assertEquals(7, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
@@ -308,7 +308,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         cloneOfCert3.setTlType(certs.get(3).getTlType());
         cloneOfCert3 = certificateRepository.save(cloneOfCert3);
 
-        //Two cert condition expire in 60 days. Two certs concerned
+        // Two cert condition expire in 60 days. Two certs concerned
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(124, 11, 13, 10, 10));
         Assert.assertEquals(60, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
@@ -316,18 +316,18 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         Assert.assertEquals(2, breakStatus.getTwoCertificatesElement().getCertificatesAffected().size());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
 
-        //Remove  cert 3 (2025/02/11) + clone
+        // Remove cert 3 (2025/02/11) + clone
         certificateRepository.delete(certs.get(3));
         certificateRepository.delete(cloneOfCert3);
 
-        //Two cert condition NOK.
+        // Two cert condition NOK.
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 05, 16, 18, 10));
         Assert.assertEquals(0, breakStatus.getTwoCertificatesElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getTwoCertificatesElement().isAlert());
         Assert.assertEquals(false, breakStatus.getTwoCertificatesElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Two cert condition NOK
+        // Two cert condition NOK
         certificateRepository.delete(certs.get(2));
         certificateRepository.delete(certs.get(1));
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 05, 16, 18, 10));
@@ -337,7 +337,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
         Assert.assertTrue(breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 06, 1, 18, 10)));
 
-        //Only one cert, condition never respected
+        // Only one cert, condition never respected
         certificateRepository.delete(certs.get(0));
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 05, 16, 18, 10));
         Assert.assertEquals(0, breakStatus.getTwoCertificatesElement().getExpireIn());
@@ -357,31 +357,31 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         tlRepo.save(dbTL);
 
         TLBreakStatus breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(123, 01, 11, 10, 10));
-        //Shifted validity period expire in 2 year
+        // Shifted validity period expire in 2 year
         Assert.assertEquals(731, breakStatus.getShiftedPeriodElement().getExpireIn());
         Assert.assertEquals(false, breakStatus.getShiftedPeriodElement().isAlert());
         Assert.assertEquals(false, breakStatus.getShiftedPeriodElement().isBreakDay());
         Assert.assertEquals(BreakType.NONE, breakStatus.getBreakType());
-        //Shifted validity period expire  in 8 days
+        // Shifted validity period expire in 8 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 3, 10, 10));
         Assert.assertEquals(8, breakStatus.getShiftedPeriodElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getShiftedPeriodElement().isAlert());
         Assert.assertEquals(false, breakStatus.getShiftedPeriodElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
-        //Shifted validity period expire  in 7 days
+        // Shifted validity period expire in 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 4, 10, 10));
         Assert.assertEquals(7, breakStatus.getShiftedPeriodElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getShiftedPeriodElement().isAlert());
         Assert.assertEquals(true, breakStatus.getShiftedPeriodElement().isBreakDay());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
-        //Shifted validity period expired since 7 days
+        // Shifted validity period expired since 7 days
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 18, 18, 10));
         Assert.assertEquals(-7, breakStatus.getShiftedPeriodElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getShiftedPeriodElement().isAlert());
         Assert.assertEquals(false, breakStatus.getShiftedPeriodElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Gloabl status ALERT due to next update date expire in 7 days & shifted validity period expire in 8 days
+        // Gloabl status ALERT due to next update date expire in 7 days & shifted validity period expire in 8 days
         dbTL.setNextUpdateDate(new Date(125, 01, 10, 10, 10));
         tlRepo.save(dbTL);
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 3, 10, 10));
@@ -393,7 +393,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         Assert.assertEquals(true, breakStatus.getNextUpdateDateElement().isBreakDay());
         Assert.assertEquals(BreakType.DAY_OF_BREAK, breakStatus.getBreakType());
 
-        //Add a new certificate that expire 1 month after the last one
+        // Add a new certificate that expire 1 month after the last one
         DBCertificate certificate = new DBCertificate();
         certificate.setCountryCode("BE");
         certificate.setNotBefore(new Date(110, 1, 1, 1, 1));
@@ -405,24 +405,24 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbTL.setNextUpdateDate(new Date(128, 01, 10, 10, 10));
         tlRepo.save(dbTL);
 
-        //Shifted validity period expired since 7 days even with 2 certificate not expired
+        // Shifted validity period expired since 7 days even with 2 certificate not expired
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 18, 18, 10));
         Assert.assertEquals(-7, breakStatus.getShiftedPeriodElement().getExpireIn());
         Assert.assertEquals(true, breakStatus.getShiftedPeriodElement().isAlert());
         Assert.assertEquals(false, breakStatus.getShiftedPeriodElement().isBreakDay());
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
 
-        //Mail
+        // Mail
         dbTL.setNextUpdateDate(new Date(130, 01, 10, 10, 10));
-        //None
+        // None
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(123, 01, 18, 18, 10));
         Assert.assertEquals(BreakType.NONE, breakStatus.getBreakType());
         Assert.assertFalse(breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(123, 01, 18, 18, 10)));
-        //Warning but not 1st of the month
+        // Warning but not 1st of the month
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 01, 18, 18, 10));
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
         Assert.assertFalse(breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 01, 18, 18, 10)));
-        //Warning and 1st of the month
+        // Warning and 1st of the month
         breakStatus = tlBreakValidationService.initTLBreakStatus(dbTL, new Date(125, 02, 1, 18, 10));
         Assert.assertEquals(BreakType.WARNING, breakStatus.getBreakType());
         Assert.assertTrue(breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 02, 1, 18, 10)));
@@ -432,9 +432,9 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
     public void alertMail() {
         dbTL.setNextUpdateDate(new Date(125, 01, 20, 10, 10));
         tlRepo.save(dbTL);
-        //DayBreak
-        //        breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 01, 10, 10, 10));
-        //First of the month
+        // DayBreak
+        // breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(125, 01, 10, 10, 10));
+        // First of the month
         breakAlertingJobService.tlStatusBreakAlert(dbTL, new Date(126, 01, 1, 10, 10));
     }
 

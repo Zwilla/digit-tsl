@@ -1,12 +1,12 @@
-digitTslWeb.controller('homeController',['$scope','$modal','httpFactory','$q','showModal',
-	   function ($scope,$modal,httpFactory,$q,showModal){
+digitTslWeb.controller('homeController',['$scope','$modal','$q','$location','$timeout','httpFactory','showModal',
+	   function ($scope,$modal,$q,$location,$timeout,httpFactory,showModal){
 
 			$scope.load=false;
 			$scope.loadingTrustBackbone= $scope.homeController_loadingBackbone;
 
 			/**
-             * GET TrustBackbone Report
-             */
+			 * GET TrustBackbone Report
+			 */
 			$scope.tlReport = function() {
 				httpFactory.get("/api/list/tlReport",$scope.homeController_backboneLoadingFailure).then(function(data) {
 					$scope.messages = data;
@@ -15,6 +15,16 @@ digitTslWeb.controller('homeController',['$scope','$modal','httpFactory','$q','s
 	                })
 	                .finally(function(){
 	                    $scope.load=true;
+	                    var cc = $location.search().cc;
+	                    if(cc){
+	                    	for(var i=0;i<data.length;i++){
+	                    		if(data[i].territoryCode==cc){
+	                    			$timeout(function(tl) {
+	                    				$scope.availabilityModal(tl);
+	                    			}, 500, true, data[i]);
+	                    		}
+	                    	}
+	                    }
 	                });
 				}, function(){
 				    $scope.load=true;
@@ -24,8 +34,8 @@ digitTslWeb.controller('homeController',['$scope','$modal','httpFactory','$q','s
 		    /*----------------- Dynamic Columns Management -----------------*/
 
 		    /**
-             * Get TrustBB dynamic columns
-             */
+			 * Get TrustBB dynamic columns
+			 */
 		    var getDynamicColumns = function(){
 		    	httpFactory.get("/api/system/columns/",$scope.homeController_errorColumnsFailure).then(function(data) {
 		    		$scope.dynamicColumns = data;

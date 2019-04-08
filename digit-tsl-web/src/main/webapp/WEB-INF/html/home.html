@@ -2,135 +2,141 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<div th:replace="head_fragment :: head_fragment"></div>
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
 
 <script th:src="@{/controllers/homeController.js}"></script>
 <script th:src="@{/controllers/modalController/modalTlsoContactController.js}"></script>
 <script th:src="@{/controllers/modalController/modalAvailabilityChartController.js}"></script>
 
-</head>
 <style>
 .a-link:hover {
-    color: #33CC33;
+	color: #33CC33;
 }
 </style>
+</head>
 <body>
-    <!-- Header -->
-    <div th:replace="header :: header" th:remove="tag"></div>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
 
-    <div class="body" ng-controller="homeController" ng-init="tlReport()">
+	<div class="body" ng-controller="homeController" ng-init="tlReport()">
 
-        <!-- Menu -->
-        <div th:replace="menu :: nav" th:remove="tag"></div>
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
 
-        <!-- MAIN CONTENT -->
-        <main ng-if="load==false">
-        <div align="center">
-            <label>{{loadingTrustBackbone}}</label>
-        </div>
-        <div th:replace="spinner :: spinner"></div>
-        </main>
-        <main ng-if="load==true"> <!-- News -->
-        <div class="panel panel-primary" style="margin-bottom: 5px;">
-            <div class="panel-heading" style="max-height: 35px" ng-init="newsOpen=true">
-                <div class="cursor-pointer" data-toggle="collapse" data-target="#news" ng-click="newsOpen=!newsOpen">
+		<!-- MAIN CONTENT -->
+		<main ng-if="load==false">
+		<div align="center">
+			<label>{{loadingTrustBackbone}}</label>
+		</div>
+		<th:block th:replace="spinner :: spinner"></th:block> </main>
+		<main ng-if="load==true"> <!-- News -->
+		<div class="panel panel-primary" style="margin-bottom: 5px;">
+			<div class="panel-heading" style="max-height: 35px" ng-init="newsOpen=true">
+				<div class="cursor-pointer" data-toggle="collapse" data-target="#news" ng-click="newsOpen=!newsOpen">
 
-                    <span class="fa fa-newspaper-o"></span>
-                    <span th:text="#{news}"></span>
-                    :
-                    <span th:text="#{last_publication}"></span>
+					<span class="fa fa-newspaper-o"></span>
+					<span th:text="#{news}"></span>
+					:
+					<span th:text="#{last_publication}"></span>
 
-                    <span ng-show="newsOpen" class="fa fa-chevron-circle-down" tooltip="{{tHide}}" tooltip-placement="bottom" style="float: right;"></span>
-                    <span ng-show="!newsOpen" class="fa fa-chevron-circle-up" tooltip="{{tShow}}" tooltip-placement="bottom" style="float: right;"></span>
-                </div>
-            </div>
-            <div id="news" class="collapse in">
-                <div class="row" ng-repeat="new in news">
-                    <span class="col-lg-2">{{new.date | date:'yyyy-MM-dd'}}</span>
-                    <span class="col-lg-1">{{new.date | date:'HH:mm:ss'}}</span>
-                    <span class="col-lg-8">
-                        {{new.infos}}:
-                        <a ng-href='/tl-manager/tl/{{new.tlId}}' class="cursor-link">{{new.tlInfo}}</a>
-                        .
-                    </span>
-                </div>
-            </div>
-        </div>
+					<span ng-show="newsOpen" class="fa fa-chevron-circle-down" tooltip="{{tHide}}" tooltip-placement="bottom" style="float: right;"></span>
+					<span ng-show="!newsOpen" class="fa fa-chevron-circle-up" tooltip="{{tShow}}" tooltip-placement="bottom" style="float: right;"></span>
+				</div>
+			</div>
+			<div id="news" class="collapse in">
+				<div class="row" ng-repeat="new in news">
+					<span class="col-lg-2">{{new.date | date:'yyyy-MM-dd'}}</span>
+					<span class="col-lg-1">{{new.date | date:'HH:mm:ss'}}</span>
+					<span class="col-lg-8">
+						{{new.infos}}:
+						<a ng-href='/tl-manager/tl/{{new.tlId}}' class="cursor-link">{{new.tlInfo}}</a>
+						.
+					</span>
+				</div>
+			</div>
+		</div>
 
-        <!-- Trust Backbone -->
-        <div class="panel panel-primary">
-            <div class="panel-heading" style="max-height: 35px">
-                <span th:text="#{tbTitle}"></span>
-                <div style="float: right;">
-                    <span th:text=#{lastScan}></span>
-                    <span>: {{messages[0].lastScanDate | date:'yyyy-MM-dd H:mm'}}</span>
-                </div>
-            </div>
-            <table id="trustBackboneTable" class="table table-condensed">
-                <thead text-align="right">
-                    <tr>
-                        <th th:text="#{tbCountry}"></th>
-                        <th th:text="#{tbSN}" class="text-right"></th>
-                        <th th:text="#{tlBrowser.issueDate}" class="text-right"></th>
-                        <th th:text="#{tlBrowser.expiryDate}" class="text-right"></th>
-                        <th th:text="#{tbStatus}" class="text-center"></th>
-                        <th th:text="#{tSignature}" ng-hide="!sigStatusShow"></th>
-                        <th th:text="#{tbAvailability}" ng-hide="!availabilityShow"></th>
-                        <th ng-hide="!contactsShow" style="min-width: 300px;"><span th:text="#{tbContact}"></span> <span ng-click="detailAllContact()"
-                                class="fa fa-external-link cursor-pointer" style="float: right; padding-top: 5px;" ng-if="message.contactAddress!=''" tooltip="Details"
-                                tooltip-placement="right"></span></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr align="left" ng-repeat="message in messages" ng-if="message.tlStatus=='PROD'" ng-id="tr{{message.territoryCode}}">
-                        <td id="country"><a ng-href="/tl-manager/tl/{{message.id}}" class="cursor-link" style="min-width: 35px; display: inline-block">{{message.territoryCode
-                                }}</a> <a ng-href="/tl-manager/tl/{{message.id}}" class="cursor-link">{{ message.countryName }}</a></td>
-                        <td id="sequenceNumber" class="text-right">{{ message.sequenceNumber}}</td>
-                        <td id="issueDate" class="text-right">{{ message.issueDate | date:'yyyy-MM-dd' }}</td>
-                        <td id="nextUpdateDate" ng-class="styleDate(message.nextUpdateDate)" style="text-align: right;">{{ message.nextUpdateDate| date:'yyyy-MM-dd' }}</td>
-                        <td id="checkStatus" class="text-center">
-                            <div ng-bind-html="styleTbStatus(message.checkStatus)" class="inline-block" style="padding-left: 5px;"></div> <a
-                                ng-href="/tl-manager/api/checks/download/{{message.id}}/{{draftStoreId}}" style="color: black; margin-left: 5px;" tooltip-placement="right"
-                                tooltip="Download status report">
-                                <span class="fa fa-download cursor-pointer"></span>
-                            </a>
-                        </td>
-                        <td id="sigStatus" ng-hide="!sigStatusShow">{{message.sigStatus | capitalize}}</td>
-                        <td id="availability" ng-hide="!availabilityShow"><span>{{message.availability | capitalize}}</span> <span ng-click="availabilityModal(message)"
-                                class="fa fa-area-chart cursor-pointer"></span></td>
-                        <td id="contact" ng-hide="!contactsShow" ng-init="initContact(message)"><span class="ellipsis" style="max-width: 350px; display: inline-block;">{{message.contactAddress}}</span>
-                            <span ng-click="detailContact(message)" class="fa fa-external-link cursor-pointer" style="float: right; padding-top: 5px;"
-                                ng-if="message.contactAddress && message.territoryCode!='EU'" tooltip="Details" tooltip-placement="right"></span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        </main>
-    </div>
-    <!-- Footer -->
-    <div th:replace="footer :: footer" th:remove="tag"></div>
+		<!-- Trust Backbone -->
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{tbTitle}"></span>
+				<div style="float: right;">
+					<span th:text=#{lastScan}></span>
+					<span>: {{messages[0].lastScanDate | date:'yyyy-MM-dd H:mm'}}</span>
+				</div>
+			</div>
+			<table id="trustBackboneTable" class="table table-condensed">
+				<thead text-align="right">
+					<tr>
+						<th th:text="#{tbCountry}"></th>
+						<th th:text="#{tbSN}" class="text-right"></th>
+						<th th:text="#{tlBrowser.issueDate}" class="text-right"></th>
+						<th th:text="#{tlBrowser.expiryDate}" class="text-right"></th>
+						<th th:text="#{tbStatus}" class="text-center"></th>
+						<th th:text="#{tSignature}" ng-hide="!sigStatusShow"></th>
+						<th th:text="#{tbAvailability}" ng-hide="!availabilityShow"></th>
+						<th ng-hide="!contactsShow" style="min-width: 300px;">
+							<span th:text="#{tbContact}"></span>
+							<span ng-click="detailAllContact()" class="fa fa-external-link cursor-pointer" style="float: right; padding-top: 5px;" ng-if="message.contactAddress!=''" tooltip="Details"
+								tooltip-placement="right"></span>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr align="left" ng-repeat="message in messages" ng-if="message.tlStatus=='PROD'" ng-id="tr{{message.territoryCode}}">
+						<td id="country">
+							<a ng-href="/tl-manager/tl/{{message.id}}" class="cursor-link" style="min-width: 35px; display: inline-block">{{message.territoryCode }}</a>
+							<a ng-href="/tl-manager/tl/{{message.id}}" class="cursor-link">{{ message.countryName }}</a>
+						</td>
+						<td id="sequenceNumber" class="text-right">{{ message.sequenceNumber}}</td>
+						<td id="issueDate" class="text-right">{{ message.issueDate | date:'yyyy-MM-dd' }}</td>
+						<td id="nextUpdateDate" ng-class="styleDate(message.nextUpdateDate)" style="text-align: right;">{{ message.nextUpdateDate| date:'yyyy-MM-dd' }}</td>
+						<td id="checkStatus" class="text-center">
+							<div ng-bind-html="styleTbStatus(message.checkStatus)" class="inline-block" style="padding-left: 5px;"></div>
+							<a ng-href="/tl-manager/api/checks/download/{{message.id}}/{{draftStoreId}}" style="color: black; margin-left: 5px;" tooltip-placement="right" tooltip="Download status report">
+								<span class="fa fa-download cursor-pointer"></span>
+							</a>
+						</td>
+						<td id="sigStatus" ng-hide="!sigStatusShow">{{message.sigStatus | capitalize}}</td>
+						<td id="availability" ng-hide="!availabilityShow">
+							<span>{{message.availability | capitalize}}</span>
+							<span ng-click="availabilityModal(message)" class="fa fa-area-chart cursor-pointer"></span>
+						</td>
+						<td id="contact" ng-hide="!contactsShow" ng-init="initContact(message)">
+							<span class="ellipsis" style="max-width: 350px; display: inline-block;">{{message.contactAddress}}</span>
+							<span ng-click="detailContact(message)" class="fa fa-external-link cursor-pointer" style="float: right; padding-top: 5px;" ng-if="message.contactAddress && message.territoryCode!='EU'"
+								tooltip="Details" tooltip-placement="right"></span>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
 
-    <script>
-                    //Reload trustbackbone after 10 minutes inactivity
-                    var time = new Date().getTime();
-                    $(document.body).bind("click keypress", function(e) {
-                        time = new Date().getTime();
-                    });
+	<script>
+		//Reload trustbackbone after 10 minutes inactivity
+		var time = new Date().getTime();
+		$(document.body).bind("click keypress", function(e) {
+			time = new Date().getTime();
+		});
 
-                    function refresh() {
-                        if (new Date().getTime() - time >= 600000) {
-                            window.location.reload(true);
-                        } else {
-                            setTimeout(refresh, 10000);
-                        }
-                    }
+		function refresh() {
+			if (new Date().getTime() - time >= 600000) {
+				window.location.reload(true);
+			} else {
+				setTimeout(refresh, 10000);
+			}
+		}
 
-                    setTimeout(refresh, 10000);
+		setTimeout(refresh, 10000);
 
-                    $('#accordiontoggle').click(function(e) {
-                        var chevState = $(e.target).siblings("i.indicator").toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
-                        $("i.indicator").not(chevState).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
-                    });
-                </script>
+		$('#accordiontoggle').click(function(e) {
+			var chevState = $(e.target).siblings("i.indicator").toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+			$("i.indicator").not(chevState).removeClass("glyphicon-chevron-down").addClass("glyphicon-chevron-up");
+		});
+	</script>
 </body>
 </html>

@@ -1,21 +1,21 @@
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <span th:text="#{userManagement.add}"></span>
-        <span class="fa fa-check cursor-pointer" ng-click="ok()" style="margin-left: 5px; float: right"></span>
-        <span class="fa fa-times cursor-pointer" ng-click="cancel()" style="margin-left: 5px; float: right"></span>
-    </div>
-    <div class="panel-body">
-        <div class="row">
-            <span class="col-lg-4">
-                <span th:text="#{ecas.name}"></span>
-            </span>
-            <input ng-model="ecasId" required="required" class="col-lg-8"/>
-        </div>
-        <div class="row" style="margin-top:5px;">
-            <span class="col-lg-4" th:text="#{tbCountry}"></span>
-            <select ng-model="territory" class="col-lg-8">
-                <option ng-repeat="t in countryCodeNameProperties" ng-value="t.label" ng-selected="t.label==user.codeTerritory">{{t.label}}</option>
-            </select>
-        </div>
-    </div>
+	<div class="panel-heading">
+		<span th:text="#{userManagement.add}"></span>
+		<span class="fa fa-check cursor-pointer" ng-click="ok()" style="margin-left: 5px; float: right"></span>
+		<span class="fa fa-times cursor-pointer" ng-click="cancel()" style="margin-left: 5px; float: right"></span>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<span class="col-lg-4">
+				<span th:text="#{ecas.name}"></span>
+			</span>
+			<input ng-model="ecasId" required="required" class="col-lg-8" />
+		</div>
+		<div class="row" style="margin-top: 5px;">
+			<span class="col-lg-4" th:text="#{tbCountry}"></span>
+			<select ng-model="territory" class="col-lg-8">
+				<option ng-repeat="t in countryCodeNameProperties" ng-value="t.label" ng-selected="t.label==user.codeTerritory">{{t.label}}</option>
+			</select>
+		</div>
+	</div>
 </div>

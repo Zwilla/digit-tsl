@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -38,6 +38,7 @@ import org.springframework.oxm.XmlMappingException;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.Load;
+import eu.europa.ec.joinup.tsl.business.dto.TrustedListsReport;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
 import eu.europa.ec.joinup.tsl.business.repository.TLRepository;
 import eu.europa.ec.joinup.tsl.business.util.FileUtils;
@@ -45,6 +46,9 @@ import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.DBCountries;
 import eu.europa.ec.joinup.tsl.model.DBFiles;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
+import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
+import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
+import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 import eu.europa.ec.joinup.tsl.model.enums.MimeType;
 import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
@@ -60,29 +64,37 @@ public class TLDraftService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TLDraftService.class);
 
-    @Value("${tsl.folder}")
-    private String folderPath;
-
-    @Value("${tmpPrefixFile}")
-    private String prefixTmpFile;
-
     @Autowired
-    private TrustedListJaxbService jaxbService;
-
-    @Autowired
-    private TLBuilder tlBuilder;
-
-    @Autowired
-    private FileService fileService;
+    private AuditService auditService;
 
     @Autowired
     private CountryService countryService;
 
     @Autowired
-    private TLRepository tlRepository;
+    private TrustedListJaxbService jaxbService;
 
     @Autowired
+    private FileService fileService;
+
+    @Autowired
+    private TLBuilder tlBuilder;
+
+    @Autowired
+    private TLRepository tlRepository;
+    @Autowired
     private TLService tlService;
+
+    @Autowired
+    private TLValidator tlValidator;
+
+    @Autowired
+    private RulesRunnerService rulesRunner;
+
+    @Value("${tsl.folder}")
+    private String folderPath;
+
+    @Value("${tmpPrefixFile}")
+    private String prefixTmpFile;
 
     /**
      * Clone @territory production trusted list
@@ -138,6 +150,28 @@ public class TLDraftService {
         }
 
         return null;
+    }
+
+    /**
+     * Verify draft (comparison/tlcc checks), set TL status, add audit entry and return TrustedListsReport
+     * 
+     * @param draft
+     * @param name
+     *            User ID
+     */
+    public TrustedListsReport finalizeDraftCreation(DBTrustedLists draft, String name) {
+        auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CREATE, AuditStatus.SUCCES, draft.getTerritory().getCodeTerritory(), draft.getXmlFile().getId(), name, "TLID:" + draft.getId());
+        // CHECK SIGNATURE STATUS
+        tlValidator.checkTLorLOTLWithCurrentProdLOTL(draft);
+        // EXECUTE ALL CHECK
+        TL draftTL = tlService.getTL(draft.getId());
+        TL currentProd = tlService.getPublishedTLByCountry(draft.getTerritory());
+        rulesRunner.runAllRules(draftTL, currentProd);
+
+        tlService.setTlCheckStatus(draftTL.getTlId());
+        // RETURN TL REPORT
+        TrustedListsReport report = tlService.getTLInfo(draft.getId());
+        return report;
     }
 
     /**

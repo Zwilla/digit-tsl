@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -45,9 +45,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-        "uri"
-})
+@XmlType(name = "", propOrder = { "uri" })
 @XmlRootElement(name = "AdditionalServiceInformation", namespace = "http://www.etsi.org/19162/conformanceChecker")
 public class AdditionalServiceInformation {
 
@@ -57,9 +55,7 @@ public class AdditionalServiceInformation {
     /**
      * Obtient la valeur de la propriete uri.
      *
-     * @return
-     *         possible object is
-     *         {@link URI }
+     * @return possible object is {@link URI }
      */
     public URI getURI() {
         if (uri == null) {
@@ -72,8 +68,7 @@ public class AdditionalServiceInformation {
      * Definit la valeur de la propriete uri.
      *
      * @param value
-     *            allowed object is
-     *            {@link URI }
+     *            allowed object is {@link URI }
      */
     public void setURI(URI value) {
         uri = value;

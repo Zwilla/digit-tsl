@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET
 //
 
-
 package eu.europa.esig.jaxb.v5.tsl;
 
 import java.io.Serializable;
@@ -37,11 +36,12 @@ import javax.xml.bind.annotation.XmlType;
 
 import eu.europa.esig.jaxb.v5.xmldsig.KeyValueTypeV5;
 
-
 /**
- * <p>Java class for DigitalIdentityType complex type.
+ * <p>
+ * Java class for DigitalIdentityType complex type.
  *
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  *
  * <pre>
  * &lt;complexType name="DigitalIdentityType"&gt;
@@ -62,16 +62,8 @@ import eu.europa.esig.jaxb.v5.xmldsig.KeyValueTypeV5;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "DigitalIdentityType", propOrder = {
-        "x509Certificate",
-        "x509SubjectName",
-        "keyValue",
-        "x509SKI",
-        "other"
-})
-public class DigitalIdentityTypeV5
-implements Serializable
-{
+@XmlType(name = "DigitalIdentityType", propOrder = { "x509Certificate", "x509SubjectName", "keyValue", "x509SKI", "other" })
+public class DigitalIdentityTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "X509Certificate")
@@ -88,9 +80,7 @@ implements Serializable
     /**
      * Gets the value of the x509Certificate property.
      *
-     * @return
-     *     possible object is
-     *     byte[]
+     * @return possible object is byte[]
      */
     public byte[] getX509Certificate() {
         return x509Certificate;
@@ -100,8 +90,7 @@ implements Serializable
      * Sets the value of the x509Certificate property.
      *
      * @param value
-     *     allowed object is
-     *     byte[]
+     *            allowed object is byte[]
      */
     public void setX509Certificate(byte[] value) {
         this.x509Certificate = value;
@@ -110,9 +99,7 @@ implements Serializable
     /**
      * Gets the value of the x509SubjectName property.
      *
-     * @return
-     *     possible object is
-     *     {@link String }
+     * @return possible object is {@link String }
      *
      */
     public String getX509SubjectName() {
@@ -123,8 +110,7 @@ implements Serializable
      * Sets the value of the x509SubjectName property.
      *
      * @param value
-     *     allowed object is
-     *     {@link String }
+     *            allowed object is {@link String }
      *
      */
     public void setX509SubjectName(String value) {
@@ -134,9 +120,7 @@ implements Serializable
     /**
      * Gets the value of the keyValue property.
      *
-     * @return
-     *     possible object is
-     *     {@link KeyValueTypeV5 }
+     * @return possible object is {@link KeyValueTypeV5 }
      *
      */
     public KeyValueTypeV5 getKeyValue() {
@@ -147,8 +131,7 @@ implements Serializable
      * Sets the value of the keyValue property.
      *
      * @param value
-     *     allowed object is
-     *     {@link KeyValueTypeV5 }
+     *            allowed object is {@link KeyValueTypeV5 }
      *
      */
     public void setKeyValue(KeyValueTypeV5 value) {
@@ -158,9 +141,7 @@ implements Serializable
     /**
      * Gets the value of the x509SKI property.
      *
-     * @return
-     *     possible object is
-     *     byte[]
+     * @return possible object is byte[]
      */
     public byte[] getX509SKI() {
         return x509SKI;
@@ -170,8 +151,7 @@ implements Serializable
      * Sets the value of the x509SKI property.
      *
      * @param value
-     *     allowed object is
-     *     byte[]
+     *            allowed object is byte[]
      */
     public void setX509SKI(byte[] value) {
         this.x509SKI = value;
@@ -180,9 +160,7 @@ implements Serializable
     /**
      * Gets the value of the other property.
      *
-     * @return
-     *     possible object is
-     *     {@link AnyTypeV5 }
+     * @return possible object is {@link AnyTypeV5 }
      *
      */
     public AnyTypeV5 getOther() {
@@ -193,8 +171,7 @@ implements Serializable
      * Sets the value of the other property.
      *
      * @param value
-     *     allowed object is
-     *     {@link AnyTypeV5 }
+     *            allowed object is {@link AnyTypeV5 }
      *
      */
     public void setOther(AnyTypeV5 value) {

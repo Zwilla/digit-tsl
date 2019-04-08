@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -20,6 +20,7 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -34,6 +35,16 @@ public class DateUtils {
      */
     public static String getToFormatYMDHMS(Date date) {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        return df.format(date);
+    }
+
+    /**
+     * Format date to YYYY-MM-DD HH:mm:ss
+     *
+     * @param date
+     */
+    public static String getToFormatYMDH(Date date) {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         return df.format(date);
     }
 
@@ -75,15 +86,45 @@ public class DateUtils {
 
         int differenceDays = 0;
         if (d1.before(d2)) {
-            //D1 is expired
+            // D1 is expired
             long differenceMS = d2.getTime() - d1.getTime();
             differenceDays = (int) TimeUnit.DAYS.convert(differenceMS, TimeUnit.MILLISECONDS) * (-1);
         } else {
-            //D1 is not expired yet
+            // D1 is not expired yet
             long differenceMS = d1.getTime() - d2.getTime();
             differenceDays = (int) TimeUnit.DAYS.convert(differenceMS, TimeUnit.MILLISECONDS);
         }
         return differenceDays;
     }
 
+    /**
+     * Return true if d1 is after d2 (compare date without time)
+     */
+    public static boolean compareDateByDay(Date d1, Date d2) {
+        if (d1 == null) {
+            return false;
+        } else {
+            try {
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                Date dayOfSigning = formatter.parse(formatter.format(d1));
+                Date dayOfPublication = formatter.parse(formatter.format(d2));
+                return dayOfSigning.after(dayOfPublication);
+            } catch (ParseException e) {
+                return false;
+            }
+        }
+    }
+
+    /**
+     * Return true if date equals (false if not or null)
+     * 
+     * @param d1
+     * @param d2
+     */
+    public static boolean compareDateNotNull(Date d1, Date d2) {
+        if (d1 != null && d2 != null && d1.equals(d2)) {
+            return true;
+        }
+        return false;
+    }
 }

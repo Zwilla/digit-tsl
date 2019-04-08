@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -25,7 +25,6 @@
 // Generated on: 2016.01.06 at 08:00:20 AM CET 
 //
 
-
 package eu.europa.esig.jaxb.v5.xades;
 
 import java.io.Serializable;
@@ -40,11 +39,12 @@ import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-
 /**
- * <p>Java class for SignedSignaturePropertiesType complex type.
+ * <p>
+ * Java class for SignedSignaturePropertiesType complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="SignedSignaturePropertiesType"&gt;
@@ -66,16 +66,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "SignedSignaturePropertiesType", propOrder = {
-    "signingTime",
-    "signingCertificate",
-    "signaturePolicyIdentifier",
-    "signatureProductionPlace",
-    "signerRole"
-})
-public class SignedSignaturePropertiesTypeV5
-    implements Serializable
-{
+@XmlType(name = "SignedSignaturePropertiesType", propOrder = { "signingTime", "signingCertificate", "signaturePolicyIdentifier", "signatureProductionPlace", "signerRole" })
+public class SignedSignaturePropertiesTypeV5 implements Serializable {
 
     private final static long serialVersionUID = 1L;
     @XmlElement(name = "SigningTime")
@@ -98,10 +90,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the signingTime property.
      * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     * @return possible object is {@link XMLGregorianCalendar }
+     * 
      */
     public XMLGregorianCalendar getSigningTime() {
         return signingTime;
@@ -111,9 +101,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the signingTime property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
+     *            allowed object is {@link XMLGregorianCalendar }
+     * 
      */
     public void setSigningTime(XMLGregorianCalendar value) {
         this.signingTime = value;
@@ -122,10 +111,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the signingCertificate property.
      * 
-     * @return
-     *     possible object is
-     *     {@link CertIDListTypeV5 }
-     *     
+     * @return possible object is {@link CertIDListTypeV5 }
+     * 
      */
     public CertIDListTypeV5 getSigningCertificate() {
         return signingCertificate;
@@ -135,9 +122,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the signingCertificate property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link CertIDListTypeV5 }
-     *     
+     *            allowed object is {@link CertIDListTypeV5 }
+     * 
      */
     public void setSigningCertificate(CertIDListTypeV5 value) {
         this.signingCertificate = value;
@@ -146,10 +132,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the signaturePolicyIdentifier property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignaturePolicyIdentifierTypeV5 }
-     *     
+     * @return possible object is {@link SignaturePolicyIdentifierTypeV5 }
+     * 
      */
     public SignaturePolicyIdentifierTypeV5 getSignaturePolicyIdentifier() {
         return signaturePolicyIdentifier;
@@ -159,9 +143,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the signaturePolicyIdentifier property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignaturePolicyIdentifierTypeV5 }
-     *     
+     *            allowed object is {@link SignaturePolicyIdentifierTypeV5 }
+     * 
      */
     public void setSignaturePolicyIdentifier(SignaturePolicyIdentifierTypeV5 value) {
         this.signaturePolicyIdentifier = value;
@@ -170,10 +153,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the signatureProductionPlace property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignatureProductionPlaceTypeV5 }
-     *     
+     * @return possible object is {@link SignatureProductionPlaceTypeV5 }
+     * 
      */
     public SignatureProductionPlaceTypeV5 getSignatureProductionPlace() {
         return signatureProductionPlace;
@@ -183,9 +164,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the signatureProductionPlace property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignatureProductionPlaceTypeV5 }
-     *     
+     *            allowed object is {@link SignatureProductionPlaceTypeV5 }
+     * 
      */
     public void setSignatureProductionPlace(SignatureProductionPlaceTypeV5 value) {
         this.signatureProductionPlace = value;
@@ -194,10 +174,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the signerRole property.
      * 
-     * @return
-     *     possible object is
-     *     {@link SignerRoleTypeV5 }
-     *     
+     * @return possible object is {@link SignerRoleTypeV5 }
+     * 
      */
     public SignerRoleTypeV5 getSignerRole() {
         return signerRole;
@@ -207,9 +185,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the signerRole property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link SignerRoleTypeV5 }
-     *     
+     *            allowed object is {@link SignerRoleTypeV5 }
+     * 
      */
     public void setSignerRole(SignerRoleTypeV5 value) {
         this.signerRole = value;
@@ -218,10 +195,8 @@ public class SignedSignaturePropertiesTypeV5
     /**
      * Gets the value of the id property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     * @return possible object is {@link String }
+     * 
      */
     public String getId() {
         return id;
@@ -231,9 +206,8 @@ public class SignedSignaturePropertiesTypeV5
      * Sets the value of the id property.
      * 
      * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *            allowed object is {@link String }
+     * 
      */
     public void setId(String value) {
         this.id = value;

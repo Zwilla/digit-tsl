@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -33,35 +33,31 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
-import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
+import org.thymeleaf.templatemode.TemplateMode;
 
 @Configuration
-@ComponentScan(basePackages = {
-        "eu.europa.ec.joinup.tsl"
-}, includeFilters = {
-        @Filter(value = Controller.class)
-})
-@ImportResource({"classpath:alerting-context.xml", "classpath:signature-context.xml"})
+@ComponentScan(basePackages = { "eu.europa.ec.joinup.tsl" }, includeFilters = { @Filter(value = Controller.class) })
+@ImportResource({ "classpath:alerting-context.xml", "classpath:signature-context.xml" })
 public class WebConfig extends WebMvcConfigurationSupport {
 
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();
-        String[] resources = {
-                "classpath:messages", "classpath:build"
-        };
+        String[] resources = { "classpath:messages", "classpath:build" };
         messageSource.setBasenames(resources);
         messageSource.setFallbackToSystemLocale(false);
         return messageSource;
     }
 
     @Bean
-    public ServletContextTemplateResolver defaultTemplateResolver() {
-        ServletContextTemplateResolver templateResolver = new ServletContextTemplateResolver();
+    @SuppressWarnings("deprecation")
+    public SpringResourceTemplateResolver defaultTemplateResolver() {
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setPrefix("/WEB-INF/html/");
         templateResolver.setSuffix(".html");
-        templateResolver.setTemplateMode("LEGACYHTML5");
+        templateResolver.setTemplateMode(TemplateMode.LEGACYHTML5);
         templateResolver.setCacheable(false);
         return templateResolver;
     }

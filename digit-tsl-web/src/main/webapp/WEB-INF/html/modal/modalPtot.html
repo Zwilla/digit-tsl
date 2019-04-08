@@ -1,169 +1,170 @@
 <!-- Override open border in modal -->
 <style>
 .isOpenBorder {
-    border-left-style: none !important;
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
+	border-left-style: none !important;
+	margin-bottom: 0px !important;
+	margin-top: 0px !important;
 }
 </style>
 
 <div class="panel panel-primary">
-    <div class="panel-heading">
-        <div style="display: inline-block; width: 96% !important;">
-            <check disabled="tPtot.checkToRun" id="tPtot.id" listcheck="listChecks" label="ptotslMenu" istreeparent="true"></check>
-            <change id="tPtot.id" listdiff="listdiff" label="ptotslMenu" istreeparent="true"information="information"></change>
-            <span>{{tPtot.head}}</span>
-            <span ng-show="form.$invalid" class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-        </div>
-        <div style="display: inline;">
-            <span class="fa fa-times cursor-pointer" ng-click="cancel()" style="margin-left: 5px;"></span>
-            <span ng-click="ok()" class="fa fa-check cursor-pointer" style="margin-left: 5px;"></span>
-        </div>
-    </div>
-    <div class="panel-body">
-        <!-- Scheme Information -->
-        <div class="col-sm-12 scheme-information">
-            <span th:text="#{schemeInformation}"></span>
-        </div>
-        <br />
-        <div class="paddingB-10">
-            <!-- Type -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <div class="divCheckChange">
-                        <check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_TYPE" listcheck="listChecks" label="tlType" istreeparent="false" ></check>
-                        <change id="tPtot.id+'_'+TAG_POINTER_TYPE" listdiff="listdiff" label="tlType" istreeparent="false"information="information"></change>
-                    </div>
-                    <span th:text="#{tlType}"></span>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <select ng-model="tPtot.tlType" required name="type" style="width: 94%;">
-                        <option ng-repeat="l in tlTypePointer" value="{{l.label}}" ng-selected="tPtot.tlType == l.label" ng-show="filterEUProperties(l)">{{l.label}}
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-            <!-- Location -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <div class="divCheckChange">
-                        <check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_LOCATION" listcheck="listChecks" label="tlLocation" istreeparent="false"></check>
-                        <change id="tPtot.id+'_'+TAG_POINTER_LOCATION" listdiff="listdiff" label="tlLocation" istreeparent="false"information="information"></change>
-                    </div>
-                    <span th:text="#{tlLocation}"></span>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <input ng-model="tPtot.tlLocation" required name="location" style="width: 94%;" />
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-            <!-- Territory -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <div class="divCheckChange">
-                        <check disabled="tPtot.checkToRun" id="tPtot.schemeTerritory" listcheck="listChecks" label="schemeTerritory" istreeparent="false"></check>
-                        <change id="tPtot.id+'_'+TAG_POINTER_SCHEME_TERRITORY" listdiff="listdiff" label="schemeTerritory" istreeparent="false"information="information"></change>
-                    </div>
-                    <span th:text="#{schemeTerritory}"></span>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <select ng-model="tPtot.schemeTerritory" required name="territory" style="width: 94%;">
-                        <option ng-repeat="cN in countryName" value="{{cN.label}}" ng-selected="tPtot.schemeTerritory == cN.label">{{cN.description}}
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-            <!-- Mime Type -->
-            <div class="row">
-                <div class="col-sm-2 text-right">
-                    <div class="divCheckChange">
-                        <check disabled="tPtot.checkToRun" id="tPtot.mimeType" listcheck="listChecks" label="mimeType" istreeparent="false"></check>
-                        <change id="tPtot.id+'_'+TAG_POINTER_MIME_TYPE" listdiff="listdiff" label="mimeType" istreeparent="false"information="information"></change>
-                    </div>
-                    <span th:text="#{mimeType}"></span>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <select ng-model="tPtot.mimeType" required name="mimetype" style="width: 94%;">
-                        <option ng-repeat="mT in mimeType" value="{{mT.label}}" ng-selected="tPtot.mimeType ==  mT.label">{{mT.description}}
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                </div>
-            </div>
-        </div>
-        <!-- Scheme Operator Name -->
-        <div class="row">
-            <div class="col-sm-12 scheme-information">
-                <check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName" istreeparent="true"></check>
-                <change id="tPtot.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listdiff" label="schemeOpeName" istreeparent="true"information="information"></change>
-                <span th:text="#{schemeOpeName}"></span>
-                <span ng-click="addSchemeOperator()" class="fa fa-plus cursor-pointer addIcon" tooltip-placement="right" tooltip="Add"></span>
-            </div>
-            <br />
-            <div class="row" ng-repeat="schemeName in tPtot.schemeOpeName">
-                <div class="col-sm-2 text-right">
-                    <div class="divCheckChange">
-                        <check disabled="tPtot.checkToRun" id="schemeName.id" listcheck="listChecks" label="schemeOpeName" istreeparent="false"></check>
-                        <change id="schemeName.id" listdiff="listdiff" label="schemeOpeName" istreeparent="false"information="information"></change>
-                    </div>
-                    <select ng-model="schemeName.language" required name="operator.language_{{schemeName.id}}" style="width: 70%;">
-                        <option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="schemeName.language== l.label">{{l.label}}</option>
-                    </select>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <input ng-model="schemeName.value" required name="operator.value_{{schemeName.id}}" style="width: 94%;" />
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(schemeName.language+' '+schemeOpeName)}}"  confirmed="deleteSchemeOperator(schemeName)" class="fa fa-trash cursor-pointer trashIcon"
-                        tooltip="{{tDelete}}" tooltip-placement="right"></span>
-                </div>
-            </div>
-        </div>
-        <!-- Community Rule -->
-        <div class="row">
-            <div class="col-sm-12 scheme-information">
-                <check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_COMMUNITY_RULE" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check>
-                <change id="tPtot.id+'_'+TAG_POINTER_COMMUNITY_RULE" listdiff="listdiff" label="schemeInfo_communityRule" istreeparent="true"information="information"></change>
-                <span th:text="#{schemeInfo.communityRule}"></span>
-                <span ng-click="addCommunityRule()" class="fa fa-plus cursor-pointer cursor-pointer addIcon" tooltip-placement="right" tooltip="Add"></span>
-            </div>
-            <br />
-            <div class="row" ng-repeat="comm in tPtot.schemeTypeCommunity">
-                <div class="col-sm-2 text-right">
-                    <check disabled="tPtot.checkToRun" id="comm.id" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check>
-                    <change id="comm.id" listdiff="listdiff" label="schemeInfo_communityRule" istreeparent="false"information="information"></change>
-                    <select ng-model="comm.language" required name="community.language_{{comm.id}}" style="width: 70%;">
-                        <option ng-repeat="l in languages" value="{{l.label}}" ng-selected="comm.language== l.label" style="text-align: right;">{{l.label}}
-                    </select>
-                </div>
-                <div class="col-sm-10 remove-padding">
-                    <select ng-model="comm.value" required name="community.value_{{comm.id}}" style="width: 94%;">
-                        <option ng-repeat="tcr in tlCommunityRule" value="{{tcr.label}}" ng-selected="comm.value== tcr.label" ng-show="filterEUProperties(tcr)">{{tcr.label}}
-                    </select>
-                    <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                    <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(comm.language+' '+schemeInfo_communityRule)}}"  confirmed="deleteCommunityRule(comm)" class="fa fa-trash cursor-pointer trashIcon"
-                        tooltip-placement="right" tooltip="{{tDelete}}"></span>
-                </div>
-            </div>
-        </div>
-        <!-- Digital Identities -->
-        <div class="row">
-            <div class="col-sm-12 scheme-information">
-                <check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="schemeInfo_digitalIdentities" istreeparent="true"></check>
-                <change id="tPtot.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listdiff" label="schemeInfo_digitalIdentities" istreeparent="true"information="information"></change>
-                <span th:text="#{schemeInfo.digitalIdentities}"></span>
-                <span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
-                <div style="display: inline-block; width: 35px;" class="addIcon">
-                    <span ng-if="showMagicWand()" ng-click="getLOTLKeyStore()" class="fa fa-magic cursor-pointer" style="margin-right: 5px;" tooltip-placement="right" tooltip="Load Digital Identities from the EU PTOTSL of the current LOTL." style="float:right"></span>
-                    <span ng-click="addDigitalIdentitie()" class="fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add" style="float:right"></span>
-                </div>
-            </div>
-            <!-- Table -->
-            <div class="row" ng-repeat="digitalId in tPtot.serviceDigitalId">
-                <digitalidentity digital="digitalId" listcheck="listChecks" listchange="listdiff" edit="true" style="width:92%;display:inline-block" checktorun="tPtot.checkToRun"></digitalidentity>
+	<div class="panel-heading">
+		<div style="display: inline-block; width: 96% !important;">
+			<check disabled="tPtot.checkToRun" id="tPtot.id" listcheck="listChecks" label="ptotslMenu" istreeparent="true"></check>
+			<change id="tPtot.id" listdiff="listdiff" label="ptotslMenu" istreeparent="true" information="information"></change>
+			<span>{{tPtot.head}}</span>
+			<span ng-show="form.$invalid" class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+		</div>
+		<div style="display: inline;">
+			<span class="fa fa-times cursor-pointer" ng-click="cancel()" style="margin-left: 5px;"></span>
+			<span ng-click="ok()" class="fa fa-check cursor-pointer" style="margin-left: 5px;"></span>
+		</div>
+	</div>
+	<div class="panel-body">
+		<!-- Scheme Information -->
+		<div class="col-sm-12 scheme-information">
+			<span th:text="#{schemeInformation}"></span>
+		</div>
+		<br />
+		<div class="paddingB-10">
+			<!-- Type -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<div class="divCheckChange">
+						<check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_TYPE" listcheck="listChecks" label="tlType" istreeparent="false"></check>
+						<change id="tPtot.id+'_'+TAG_POINTER_TYPE" listdiff="listdiff" label="tlType" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlType}"></span>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<select ng-model="tPtot.tlType" required name="type" style="width: 94%;">
+						<option ng-repeat="l in tlTypePointer" value="{{l.label}}" ng-selected="tPtot.tlType == l.label" ng-show="filterEUProperties(l)">{{l.label}}
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+			<!-- Location -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<div class="divCheckChange">
+						<check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_LOCATION" listcheck="listChecks" label="tlLocation" istreeparent="false"></check>
+						<change id="tPtot.id+'_'+TAG_POINTER_LOCATION" listdiff="listdiff" label="tlLocation" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{tlLocation}"></span>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<input ng-model="tPtot.tlLocation" required name="location" style="width: 94%;" />
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+			<!-- Territory -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<div class="divCheckChange">
+						<check disabled="tPtot.checkToRun" id="tPtot.schemeTerritory" listcheck="listChecks" label="schemeTerritory" istreeparent="false"></check>
+						<change id="tPtot.id+'_'+TAG_POINTER_SCHEME_TERRITORY" listdiff="listdiff" label="schemeTerritory" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{schemeTerritory}"></span>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<select ng-model="tPtot.schemeTerritory" required name="territory" style="width: 94%;">
+						<option ng-repeat="cN in countryName" value="{{cN.label}}" ng-selected="tPtot.schemeTerritory == cN.label">{{cN.description}}
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+			<!-- Mime Type -->
+			<div class="row">
+				<div class="col-sm-2 text-right">
+					<div class="divCheckChange">
+						<check disabled="tPtot.checkToRun" id="tPtot.mimeType" listcheck="listChecks" label="mimeType" istreeparent="false"></check>
+						<change id="tPtot.id+'_'+TAG_POINTER_MIME_TYPE" listdiff="listdiff" label="mimeType" istreeparent="false" information="information"></change>
+					</div>
+					<span th:text="#{mimeType}"></span>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<select ng-model="tPtot.mimeType" required name="mimetype" style="width: 94%;">
+						<option ng-repeat="mT in mimeType" value="{{mT.label}}" ng-selected="tPtot.mimeType ==  mT.label">{{mT.description}}
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				</div>
+			</div>
+		</div>
+		<!-- Scheme Operator Name -->
+		<div class="row">
+			<div class="col-sm-12 scheme-information">
+				<check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_SCHEME_OPERATOR_NAME" listcheck="listChecks" label="schemeOpeName" istreeparent="true"></check>
+				<change id="tPtot.id+'_'+TAG_SCHEME_OPERATOR_NAME" listdiff="listdiff" label="schemeOpeName" istreeparent="true" information="information"></change>
+				<span th:text="#{schemeOpeName}"></span>
+				<span ng-click="addSchemeOperator()" class="fa fa-plus cursor-pointer addIcon" tooltip-placement="right" tooltip="Add"></span>
+			</div>
+			<br />
+			<div class="row" ng-repeat="schemeName in tPtot.schemeOpeName">
+				<div class="col-sm-2 text-right">
+					<div class="divCheckChange">
+						<check disabled="tPtot.checkToRun" id="schemeName.id" listcheck="listChecks" label="schemeOpeName" istreeparent="false"></check>
+						<change id="schemeName.id" listdiff="listdiff" label="schemeOpeName" istreeparent="false" information="information"></change>
+					</div>
+					<select ng-model="schemeName.language" required name="operator.language_{{schemeName.id}}" style="width: 70%;">
+						<option style="text-align: right;" ng-repeat="l in languages" value="{{l.label}}" ng-selected="schemeName.language== l.label">{{l.label}}</option>
+					</select>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<input ng-model="schemeName.value" required name="operator.value_{{schemeName.id}}" style="width: 94%;" />
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+					<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(schemeName.language+' '+schemeOpeName)}}" confirmed="deleteSchemeOperator(schemeName)" class="fa fa-trash cursor-pointer trashIcon"
+						tooltip="{{tDelete}}" tooltip-placement="right"></span>
+				</div>
+			</div>
+		</div>
+		<!-- Community Rule -->
+		<div class="row">
+			<div class="col-sm-12 scheme-information">
+				<check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_POINTER_COMMUNITY_RULE" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check>
+				<change id="tPtot.id+'_'+TAG_POINTER_COMMUNITY_RULE" listdiff="listdiff" label="schemeInfo_communityRule" istreeparent="true" information="information"></change>
+				<span th:text="#{schemeInfo.communityRule}"></span>
+				<span ng-click="addCommunityRule()" class="fa fa-plus cursor-pointer cursor-pointer addIcon" tooltip-placement="right" tooltip="Add"></span>
+			</div>
+			<br />
+			<div class="row" ng-repeat="comm in tPtot.schemeTypeCommunity">
+				<div class="col-sm-2 text-right">
+					<check disabled="tPtot.checkToRun" id="comm.id" listcheck="listChecks" label="schemeInfo_communityRule" istreeparent="false"></check>
+					<change id="comm.id" listdiff="listdiff" label="schemeInfo_communityRule" istreeparent="false" information="information"></change>
+					<select ng-model="comm.language" required name="community.language_{{comm.id}}" style="width: 70%;">
+						<option ng-repeat="l in languages" value="{{l.label}}" ng-selected="comm.language== l.label" style="text-align: right;">{{l.label}}
+					</select>
+				</div>
+				<div class="col-sm-10 remove-padding">
+					<select ng-model="comm.value" required name="community.value_{{comm.id}}" style="width: 94%;">
+						<option ng-repeat="tcr in tlCommunityRule" value="{{tcr.label}}" ng-selected="comm.value== tcr.label" ng-show="filterEUProperties(tcr)">{{tcr.label}}
+					</select>
+					<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+					<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':(comm.language+' '+schemeInfo_communityRule)}}" confirmed="deleteCommunityRule(comm)" class="fa fa-trash cursor-pointer trashIcon"
+						tooltip-placement="right" tooltip="{{tDelete}}"></span>
+				</div>
+			</div>
+		</div>
+		<!-- Digital Identities -->
+		<div class="row">
+			<div class="col-sm-12 scheme-information">
+				<check disabled="tPtot.checkToRun" id="tPtot.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listcheck="listChecks" label="schemeInfo_digitalIdentities" istreeparent="true"></check>
+				<change id="tPtot.id+'_'+TAG_SERVICE_DIGITAL_IDENTITY" listdiff="listdiff" label="schemeInfo_digitalIdentities" istreeparent="true" information="information"></change>
+				<span th:text="#{schemeInfo.digitalIdentities}"></span>
+				<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right">(*)</span>
+				<div style="display: inline-block; width: 35px;" class="addIcon">
+					<span ng-if="showMagicWand()" ng-click="getLOTLKeyStore()" class="fa fa-magic cursor-pointer" style="margin-right: 5px;" tooltip-placement="right"
+						tooltip="Load Digital Identities from the EU PTOTSL of the current LOTL."></span>
+					<span ng-click="addDigitalIdentitie()" class="fa fa-plus cursor-pointer" tooltip-placement="right" tooltip="Add" style="float: right"></span>
+				</div>
+			</div>
+			<!-- Table -->
+			<div class="row" ng-repeat="digitalId in tPtot.serviceDigitalId">
+				<digitalidentity digital="digitalId" listcheck="listChecks" listchange="listdiff" edit="true" style="width:92%;display:inline-block" checktorun="tPtot.checkToRun"></digitalidentity>
 
-                <span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':confirm_deleteDigital}}" confirmed="deleteDigitalIdentitie(digitalId)" class="fa fa-trash cursor-pointer trashDirectiveIcon"
-                    tooltip-placement="right" tooltip="{{tDelete}}"></span>
-                <span ng-click="editDigitalIdentitie(digitalId,$index)" class="editDirectiveIcon fa fa-edit cursor-pointer" tooltip-placement="left" tooltip="Edit"></span>
-            </div>
-        </div>
-    </div>
+				<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':confirm_deleteDigital}}" confirmed="deleteDigitalIdentitie(digitalId)" class="fa fa-trash cursor-pointer trashDirectiveIcon"
+					tooltip-placement="right" tooltip="{{tDelete}}"></span>
+				<span ng-click="editDigitalIdentitie(digitalId,$index)" class="editDirectiveIcon fa fa-edit cursor-pointer" tooltip-placement="left" tooltip="Edit"></span>
+			</div>
+		</div>
+	</div>
 </div>

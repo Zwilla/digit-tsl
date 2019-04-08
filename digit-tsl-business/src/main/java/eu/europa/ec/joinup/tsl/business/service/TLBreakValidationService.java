@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -74,20 +74,19 @@ public class TLBreakValidationService {
      * @param checkDate
      */
     public TLBreakStatus initTLBreakStatus(DBTrustedLists dbTL, Date checkDate) {
-        //Init certificates break days
+        // Init certificates break days
         List<Integer> certificateBreakDays = propertyToIntegerList(certificateBreakDayProperty);
 
-        //Init Status
-        TLBreakStatus tlStatus = new TLBreakStatus(dbTL, checkDate, certificateBreakDays,
-                certificateService.getByCountryCode(dbTL.getTerritory().getCodeTerritory(), TLType.LOTL, checkDate));
+        // Init Status
+        TLBreakStatus tlStatus = new TLBreakStatus(dbTL, checkDate, certificateBreakDays, certificateService.getByCountryCode(dbTL.getTerritory().getCodeTerritory(), TLType.LOTL, checkDate));
 
-        //Verify element
+        // Verify element
         tlStatus.setNextUpdateDateElement(verifyNextUpdateDateBreakStatus(dbTL, checkDate));
         tlStatus.setSigningCertificateElement(verifySigningCertificateBreakStatus(tlStatus));
         tlStatus.setTwoCertificatesElement(verifyTwoCertificatesElement(tlStatus));
         tlStatus.setShiftedPeriodElement(verifyShiftedPeriodBreakStatus(tlStatus));
 
-        //Set alert status
+        // Set alert status
         tlStatus.setBreakType(determineBreakStatus(tlStatus));
         return tlStatus;
     }
@@ -139,7 +138,7 @@ public class TLBreakValidationService {
                     }
                 }
 
-                //Signing certificate is not active or not notified in the LOTL
+                // Signing certificate is not active or not notified in the LOTL
                 if (!certificateFind) {
                     return initUnverifiedCertificateElement();
                 }
@@ -151,26 +150,26 @@ public class TLBreakValidationService {
     }
 
     /**
-     * Check certificates to find the one that break two certificates requirement
-     * NOTE: If there is only one certificate, alert set 'true' , expireIn set to 0 and certificatesAffected null
+     * Check certificates to find the one that break two certificates requirement NOTE: If there is only one certificate, alert set 'true' , expireIn
+     * set to 0 and certificatesAffected null
      *
      * @param tlStatus
      */
     private CertificateBreakElement verifyTwoCertificatesElement(TLBreakStatus tlStatus) {
         if (!CollectionUtils.isEmpty(tlStatus.getCertificates()) || (tlStatus.getCertificates().size() >= 2)) {
-            //Get certificates active and sort from nearest to farthest expiration date
+            // Get certificates active and sort from nearest to farthest expiration date
             List<CertificateElement> certificatesActive = tlStatus.retrieveCurrentCertificates();
             if (certificatesActive.size() < 2) {
                 return initUnverifiedCertificateElement();
             } else {
                 certificateService.sortCertificateByExpiration(certificatesActive);
-                //Loop through certificates and determine if a certificate break the requirement
-                //NOTE: if requirement has break more than once, retrieve the nearest break
+                // Loop through certificates and determine if a certificate break the requirement
+                // NOTE: if requirement has break more than once, retrieve the nearest break
                 for (CertificateElement certificateAct : certificatesActive) {
-                    List<CertificateElement> certificatesUpToDate = certificateService.getByCountryCodeBeforeDate(tlStatus.getTl().getTerritory().getCodeTerritory(),
-                            certificateAct.getNotAfter(), TLType.LOTL);
+                    List<CertificateElement> certificatesUpToDate = certificateService.getByCountryCodeBeforeDate(tlStatus.getTl().getTerritory().getCodeTerritory(), certificateAct.getNotAfter(),
+                            TLType.LOTL);
 
-                    //Check validity period
+                    // Check validity period
                     if (!isTwoCertificatesValid(certificatesUpToDate)) {
                         return initCertificateBreakElement(tlStatus, certificateAct);
                     }
@@ -179,13 +178,13 @@ public class TLBreakValidationService {
                 return new CertificateBreakElement();
             }
         }
-        //Requirement never verified
+        // Requirement never verified
         return initUnverifiedCertificateElement();
     }
 
     /**
-     * Check certificates to find the one that break shifted validity period requirement
-     * NOTE: If there is only one certificate, alert set 'true' , expireIn set to 0 and certificatesAffected null
+     * Check certificates to find the one that break shifted validity period requirement NOTE: If there is only one certificate, alert set 'true' ,
+     * expireIn set to 0 and certificatesAffected null
      *
      * @param tlStatus
      */
@@ -193,45 +192,44 @@ public class TLBreakValidationService {
         CertificateElement breakElement = null;
 
         if (!CollectionUtils.isEmpty(tlStatus.getCertificates()) || (tlStatus.getCertificates().size() >= 2)) {
-            //Get certificates active and sort from nearest to farthest expiration date
+            // Get certificates active and sort from nearest to farthest expiration date
             List<CertificateElement> certificatesActive = tlStatus.getCertificatesNotBeforePast();
             certificateService.sortCertificateByExpiration(certificatesActive);
             certificatesActive = Lists.reverse(certificatesActive);
 
-            //Loop through certificates and determine which certificate break the requirement
-            //NOTE: if requirement has break more than once, retrieve the nearest break
+            // Loop through certificates and determine which certificate break the requirement
+            // NOTE: if requirement has break more than once, retrieve the nearest break
             for (CertificateElement certificateLR : certificatesActive) {
-                //Get active certificate chain when certificateLR will expire
-                List<CertificateElement> certificateChain = certificateService.getCertificateChain(new CertificateElement(certificateLR),
-                        new ArrayList<>(tlStatus.getCertificates()));
+                // Get active certificate chain when certificateLR will expire
+                List<CertificateElement> certificateChain = certificateService.getCertificateChain(new CertificateElement(certificateLR), new ArrayList<>(tlStatus.getCertificates()));
 
-                //Check validity period
+                // Check validity period
                 if (isShiftedValidityPeriodValid(certificateChain)) {
                     if (breakElement == null) {
-                        //Condition is currently valid
+                        // Condition is currently valid
                         return initCertificateBreakElement(tlStatus, certificateLR);
                     } else {
                         return initCertificateBreakElement(tlStatus, breakElement);
                     }
                 } else {
-                    //Update break element last occurence
+                    // Update break element last occurence
                     breakElement = certificateLR;
                 }
             }
         }
 
         if (breakElement != null) {
-            //Verify condition with the last certificate one day before expiration
+            // Verify condition with the last certificate one day before expiration
             List<CertificateElement> certificateChain = certificateService.getCertificateChain(new CertificateElement(breakElement), new ArrayList<>(tlStatus.getCertificates()));
             certificateChain.add(breakElement);
 
             if (isShiftedValidityPeriodValid(certificateChain)) {
-                //Requirement has been correct once
+                // Requirement has been correct once
                 return initCertificateBreakElement(tlStatus, breakElement);
             }
         }
 
-        //Requirement never verified
+        // Requirement never verified
         return initUnverifiedCertificateElement();
     }
 
@@ -262,7 +260,7 @@ public class TLBreakValidationService {
         if (!CollectionUtils.isEmpty(certificateChain) && (certificateChain.size() >= 2)) {
             certificateService.sortCertificateByExpiration(certificateChain);
 
-            //Add 3 months to the furthest expiration date
+            // Add 3 months to the furthest expiration date
             Calendar cal = Calendar.getInstance();
             cal.setTime(certificateChain.get(0).getNotAfter());
             cal.add(Calendar.MONTH, 3);
@@ -277,18 +275,18 @@ public class TLBreakValidationService {
      * Determine trusted list break status
      */
     private BreakType determineBreakStatus(TLBreakStatus tlStatus) {
-        //Certificate trigger
+        // Certificate trigger
         for (CertificateElement certificate : tlStatus.getCertificates()) {
             if (certificate.isBreakDay()) {
                 return BreakType.DAY_OF_BREAK;
             }
         }
-        //Next update date trigger
+        // Next update date trigger
         if (tlStatus.getNextUpdateDateElement().isBreakDay()) {
             return BreakType.DAY_OF_BREAK;
         }
 
-        //'Alert' only
+        // 'Alert' only
         if (tlStatus.getNextUpdateDateElement().isAlert() || tlStatus.getSigningCertificateElement().isAlert() || tlStatus.getTwoCertificatesElement().isAlert()
                 || tlStatus.getShiftedPeriodElement().isAlert()) {
             return BreakType.WARNING;
@@ -307,7 +305,7 @@ public class TLBreakValidationService {
      */
     private CertificateBreakElement initCertificateBreakElement(TLBreakStatus tlStatus, CertificateElement requirementVerifierCertificate) {
         CertificateBreakElement certificateBreakElement = new CertificateBreakElement();
-        //Init element
+        // Init element
         certificateBreakElement.setBreakDay(requirementVerifierCertificate.isBreakDay());
         certificateBreakElement.setExpireIn(requirementVerifierCertificate.getExpirationIn());
         if (tlStatus.getCertificateLimitMax() > requirementVerifierCertificate.getExpirationIn()) {
@@ -315,8 +313,8 @@ public class TLBreakValidationService {
         } else {
             certificateBreakElement.setAlert(false);
         }
-        //Set certificates impacted
-        //NOTE: required when two certificates expire the same day
+        // Set certificates impacted
+        // NOTE: required when two certificates expire the same day
         certificateBreakElement.setCertificatesAffected(certificateService.getExpiredCertificateByCountryCode(tlStatus.getTl().getTerritory().getCodeTerritory(),
                 requirementVerifierCertificate.getNotAfter(), TLType.LOTL, tlStatus.getCheckDate()));
         return certificateBreakElement;

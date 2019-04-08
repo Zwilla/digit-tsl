@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -208,20 +208,18 @@ public class TLServiceExtension extends AbstractTLDTO {
             for (TLQualificationExtension tlqe : getQualificationsExtension()) {
                 qt.getQualificationElement().add(tlqe.asTSLTypeV5());
             }
-            e.getContent()
-            .add(new JAXBElement<>(new QName("http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#", "Qualifications"), QualificationsTypeV5.class, qt));
+            e.getContent().add(new JAXBElement<>(new QName("http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#", "Qualifications"), QualificationsTypeV5.class, qt));
         }
 
         // AdditionalServiceInformationType
         if (getAdditionnalServiceInfo() != null) {
-            e.getContent().add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "AdditionalServiceInformation"), AdditionalServiceInformationTypeV5.class,
-                    getAdditionnalServiceInfo().asTSLTypeV5()));
+            e.getContent().add(
+                    new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "AdditionalServiceInformation"), AdditionalServiceInformationTypeV5.class, getAdditionnalServiceInfo().asTSLTypeV5()));
 
         }
 
         if (getTakenOverBy() != null) {
-            e.getContent()
-            .add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "TakenOverBy"), TakenOverByTypeV5.class, getTakenOverBy().asTSLTypeV5()));
+            e.getContent().add(new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "TakenOverBy"), TakenOverByTypeV5.class, getTakenOverBy().asTSLTypeV5()));
         }
 
         if (getExpiredCertsRevocationDate() != null) {

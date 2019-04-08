@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -79,30 +79,27 @@ public class PDFUtils {
                 if ((pointers.getHrPointer() != null) && difference.getId().equals(pointers.getHrPointer().getId() + '_' + Tag.POINTER_LOCATION)) {
                     if (pointers.getHrPointer().getTlLocation() == "") {
                         change.addChange(bundle.getString("notificationController.urlPdfRemoved"));
-                        String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfRemovedMeasure"), isPDF)
-                                .replace("%ST%", pointers.getHrPointer().getSchemeTerritory()).replace("%PBL%", difference.getPublishedValue());
+                        String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfRemovedMeasure"), isPDF).replace("%ST%", pointers.getHrPointer().getSchemeTerritory())
+                                .replace("%PBL%", difference.getPublishedValue());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     } else {
                         change.addChange(removeHtmlTag(bundle.getString("notificationController.urlPdfChanged").replace("%LOC%", pointers.getHrPointer().getTlLocation()), isPDF));
-                        String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfChangedMeasure"), isPDF)
-                                .replace("%ST%", pointers.getHrPointer().getSchemeTerritory()).replace("%PBL%", difference.getPublishedValue())
-                                .replace("%LOC%", pointers.getHrPointer().getTlLocation());
+                        String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfChangedMeasure"), isPDF).replace("%ST%", pointers.getHrPointer().getSchemeTerritory())
+                                .replace("%PBL%", difference.getPublishedValue()).replace("%LOC%", pointers.getHrPointer().getTlLocation());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     }
                 } else if ((pointers.getMpPointer() != null) && difference.getId().equals(pointers.getMpPointer().getId() + '_' + Tag.POINTER_LOCATION)) {
                     if (pointers.getMpPointer().getTlLocation() == "") {
                         change.addChange(bundle.getString("notificationController.urlXmlRemoved"));
-                        String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlRemovedMeasure"), isPDF).replaceAll("%ST%",
-                                pointers.getMpPointer().getSchemeTerritory());
+                        String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlRemovedMeasure"), isPDF).replaceAll("%ST%", pointers.getMpPointer().getSchemeTerritory());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     } else {
                         change.addChange(removeHtmlTag(bundle.getString("notificationController.urlXmlChanged").replace("%LOC%", pointers.getMpPointer().getTlLocation()), isPDF));
-                        String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlChangedMeasure"), isPDF)
-                                .replace("%ST%", pointers.getMpPointer().getSchemeTerritory()).replace("%PBL%", difference.getPublishedValue())
-                                .replace("%LOC%", pointers.getMpPointer().getTlLocation());
+                        String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlChangedMeasure"), isPDF).replace("%ST%", pointers.getMpPointer().getSchemeTerritory())
+                                .replace("%PBL%", difference.getPublishedValue()).replace("%LOC%", pointers.getMpPointer().getTlLocation());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     }

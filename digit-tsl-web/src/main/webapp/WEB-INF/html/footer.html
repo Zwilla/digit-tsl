@@ -1,24 +1,25 @@
 <footer th:fragment="footer">
-    <div class="footerMessage">
-        <ul id="services">
-            <div style="display: inline-block; float: left;">
-                <label th:text="#{footer.name}"></label> (
-                <span th:text="#{application.version}"></span>
-                )
-                <span> - </span>
-                <span th:text="#{footer.based}"></span>
-                <span> - </span>
-                <span th:text="#{footer.lastUpdate}"></span>
-                <!--                 : -->
-                <span th:text="#{build.time}"></span>
-            </div>
+	<div class="footerMessage">
+		<ul id="services">
+			<div style="display: inline-block; float: left;">
+				<label th:text="#{footer.name}"></label>
+				(
+				<span th:text="#{application.version}"></span>
+				)
+				<span> - </span>
+				<span th:text="#{footer.based}"></span>
+				<span> - </span>
+				<span th:text="#{footer.lastUpdate}"></span>
+				<!--                 : -->
+				<span th:text="#{build.time}"></span>
+			</div>
 
-            <div style="display: inline-block; float: right;">
+			<div style="display: inline-block; float: right;">
 
-                <li class="first"><a href="http://ec.europa.eu/geninfo/legal_notices_en.htm" class="service" target="_blank">Legal Notice</a></li>
-                <li><a ng-click="getContact()" class="service cursor-pointer">Contact</a></li>
-                <li><a ng-click="goToTop()" th:text="#{footer.toTop}" class="service cursor-pointer"></a></li>
-            </div>
-        </ul>
-    </div>
+				<li class="first"><a href="http://ec.europa.eu/geninfo/legal_notices_en.htm" class="service" target="_blank">Legal Notice</a></li>
+				<li><a ng-click="getContact()" class="service cursor-pointer">Contact</a></li>
+				<li><a ng-click="goToTop()" th:text="#{footer.toTop}" class="service cursor-pointer"></a></li>
+			</div>
+		</ul>
+	</div>
 </footer>

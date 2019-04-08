@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -41,14 +41,14 @@ public class TLStatusBreakMailUtils {
 
         builder.append("<div>" + bundle.getString("mail.approach.break.alert.disclaimer") + "</div><br/>");
 
-        //Certificates expiration
+        // Certificates expiration
         List<CertificateElement> certLimitReach = tlStatus.retrieveCertificatesLimitReach();
         if (!CollectionUtils.isEmpty(certLimitReach)) {
             builder.append("<div>" + bundle.getString("mail.approach.break.cert.list").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()) + "</div>");
             for (CertificateElement certificate : certLimitReach) {
                 builder.append("<div>");
-                builder.append(dash + "<b>C" + certificate.getIndex() + "</b>: " + certificate.getSubjectShortName() + ": "
-                        + DateUtils.getToFormatYMDHMS(certificate.getNotBefore()) + " - " + DateUtils.getToFormatYMDHMS(certificate.getNotAfter()) + " ");
+                builder.append(dash + "<b>C" + certificate.getIndex() + "</b>: " + certificate.getSubjectShortName() + ": " + DateUtils.getToFormatYMDHMS(certificate.getNotBefore()) + " - "
+                        + DateUtils.getToFormatYMDHMS(certificate.getNotAfter()) + " ");
                 if (certificate.getExpirationIn() == 0) {
                     builder.append(bundle.getString("mail.approach.break.cert.today.expire"));
                 } else if (certificate.isExpired()) {
@@ -61,10 +61,10 @@ public class TLStatusBreakMailUtils {
             builder.append("<br/>");
         }
 
-        //Certificate break
+        // Certificate break
         if (certificateAlert(tlStatus)) {
 
-            //Two Certificates
+            // Two Certificates
             if (tlStatus.getSigningCertificateElement().isAlert()) {
                 builder.append("<div>" + dash);
                 if (!tlStatus.getSigningCertificateElement().isVerifiable()) {
@@ -77,14 +77,14 @@ public class TLStatusBreakMailUtils {
                         builder.append(bundle.getString("mail.approach.break.alert.signing.cert.has.expired").replace("%NB_DAYS%",
                                 Integer.toString(tlStatus.getSigningCertificateElement().getExpireIn() * -1)));
                     } else {
-                        builder.append(bundle.getString("mail.approach.break.alert.signing.cert.will.expire").replace("%NB_DAYS%",
-                                Integer.toString(tlStatus.getSigningCertificateElement().getExpireIn())));
+                        builder.append(
+                                bundle.getString("mail.approach.break.alert.signing.cert.will.expire").replace("%NB_DAYS%", Integer.toString(tlStatus.getSigningCertificateElement().getExpireIn())));
                     }
                 }
                 builder.append("</div>");
             }
 
-            //Two Certificates
+            // Two Certificates
             if (tlStatus.getTwoCertificatesElement().isAlert()) {
                 builder.append("<div>" + dash);
                 if (!tlStatus.getTwoCertificatesElement().isVerifiable()) {
@@ -92,8 +92,7 @@ public class TLStatusBreakMailUtils {
                 } else {
                     builder.append(listCertificates(tlStatus.getCertificates(), tlStatus.getTwoCertificatesElement().getCertificatesAffected()));
                     if (tlStatus.getTwoCertificatesElement().getExpireIn() > 0) {
-                        builder.append(bundle.getString("mail.approach.break.alert.two.certs.will.expire").replace("%NB_DAYS%",
-                                Integer.toString(tlStatus.getTwoCertificatesElement().getExpireIn())));
+                        builder.append(bundle.getString("mail.approach.break.alert.two.certs.will.expire").replace("%NB_DAYS%", Integer.toString(tlStatus.getTwoCertificatesElement().getExpireIn())));
                     } else if (tlStatus.getTwoCertificatesElement().getExpireIn() == 0) {
                         builder.append(bundle.getString("mail.approach.break.alert.two.certs.today.expire"));
                     }
@@ -101,7 +100,7 @@ public class TLStatusBreakMailUtils {
                 builder.append("</div>");
             }
 
-            //ShiftedValidityPeriod
+            // ShiftedValidityPeriod
             if (tlStatus.getShiftedPeriodElement().isAlert()) {
                 builder.append("<div>" + dash);
                 if (!tlStatus.getShiftedPeriodElement().isVerifiable()) {
@@ -111,30 +110,28 @@ public class TLStatusBreakMailUtils {
                     if (tlStatus.getShiftedPeriodElement().getExpireIn() == 0) {
                         builder.append(bundle.getString("mail.approach.break.alert.shift.period.today.expire"));
                     } else if (tlStatus.getShiftedPeriodElement().isExpired()) {
-                        builder.append(bundle.getString("mail.approach.break.alert.shift.period.has.expired").replace("%NB_DAYS%",
-                                Integer.toString(tlStatus.getShiftedPeriodElement().getExpireIn() * -1)));
+                        builder.append(
+                                bundle.getString("mail.approach.break.alert.shift.period.has.expired").replace("%NB_DAYS%", Integer.toString(tlStatus.getShiftedPeriodElement().getExpireIn() * -1)));
                     } else {
-                        builder.append(bundle.getString("mail.approach.break.alert.shift.period.will.expire").replace("%NB_DAYS%",
-                                Integer.toString(tlStatus.getShiftedPeriodElement().getExpireIn())));
+                        builder.append(bundle.getString("mail.approach.break.alert.shift.period.will.expire").replace("%NB_DAYS%", Integer.toString(tlStatus.getShiftedPeriodElement().getExpireIn())));
                     }
                 }
+                builder.append(bundle.getString("mail.approach.break.alert.shift.period.info"));
                 builder.append("</div>");
             }
 
             builder.append("<br/>");
         }
 
-        //Next Update Date
+        // Next Update Date
         if (tlStatus.getNextUpdateDateElement().isAlert()) {
             builder.append("<div>" + bundle.getString("mail.approach.break.consequences.next.update").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()));
             if (tlStatus.getNextUpdateDateElement().getExpireIn() == 0) {
                 builder.append(bundle.getString("mail.approach.break.alert.next.update.today.expire"));
             } else if (tlStatus.getNextUpdateDateElement().isExpired()) {
-                builder.append(bundle.getString("mail.approach.break.alert.next.update.has.expired").replace("%NB_DAYS%",
-                        Integer.toString(tlStatus.getNextUpdateDateElement().getExpireIn() * -1)));
+                builder.append(bundle.getString("mail.approach.break.alert.next.update.has.expired").replace("%NB_DAYS%", Integer.toString(tlStatus.getNextUpdateDateElement().getExpireIn() * -1)));
             } else {
-                builder.append(bundle.getString("mail.approach.break.alert.next.update.will.expire").replace("%NB_DAYS%",
-                        Integer.toString(tlStatus.getNextUpdateDateElement().getExpireIn())));
+                builder.append(bundle.getString("mail.approach.break.alert.next.update.will.expire").replace("%NB_DAYS%", Integer.toString(tlStatus.getNextUpdateDateElement().getExpireIn())));
             }
             builder.append("</div><br/>");
 

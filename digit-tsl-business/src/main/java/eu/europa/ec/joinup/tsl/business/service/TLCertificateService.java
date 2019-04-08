@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -222,11 +222,11 @@ public class TLCertificateService {
         DSSDocument signedDocument = new FileDocument(file);
         Set<CertificateToken> signingCertificates = new HashSet<>();
         SignedDocumentValidator sdv = SignedDocumentValidator.fromDocument(signedDocument);
-        //Init certificateVerifier with LOTL/TLs certificates
+        // Init certificateVerifier with LOTL/TLs certificates
         sdv.setCertificateVerifier(initCommonCertificateVerifier());
         sdv.validateDocument();
 
-        //Retrieve signature(s)
+        // Retrieve signature(s)
         for (AdvancedSignature signature : sdv.getSignatures()) {
             signingCertificates.add(signature.getSigningCertificateToken());
         }
@@ -250,7 +250,7 @@ public class TLCertificateService {
         } else {
             rootCA = certificate.getTrustAnchor();
         }
-        //RootCA has been found
+        // RootCA has been found
         if (rootCA != null) {
             List<DBCertificate> dbRootCertificates = findByB64(rootCA);
             if (!CollectionUtils.isEmpty(dbRootCertificates)) {
@@ -272,11 +272,11 @@ public class TLCertificateService {
     public CertificateToken getRootCertificate(CertificateToken certificateToken) {
         SignatureValidationContext svc = new SignatureValidationContext();
         svc.initialize(initCommonCertificateVerifier());
-        //Set certificate to track
+        // Set certificate to track
         svc.addCertificateTokenForVerification(certificateToken);
         svc.validate();
 
-        //Loop through certificates and retrieve the trust one
+        // Loop through certificates and retrieve the trust one
         for (CertificateToken token : svc.getProcessedCertificates()) {
             if (token.isTrusted()) {
                 return token;
@@ -297,7 +297,7 @@ public class TLCertificateService {
         certificateVerifier.setCrlSource(crlSource);
         certificateVerifier.setOcspSource(ocspSource);
 
-        //Load TLs services and LOTL pointers certificates
+        // Load TLs services and LOTL pointers certificates
         for (DBCertificate certificate : getTLCertificateDistinctByB64()) {
             certSource.addCertificate(DSSUtils.loadCertificateFromBase64EncodedString(certificate.getBase64()));
         }

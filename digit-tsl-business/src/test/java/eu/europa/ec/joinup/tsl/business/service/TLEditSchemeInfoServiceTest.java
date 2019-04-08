@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -55,11 +55,10 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
     @Autowired
     private TlEditSchemeInfoService tlEditSchemeInfoService;
 
-
     @Before
     public void initialize() {
         Load load = new Load();
-        tlLoader.loadTL(EU_COUNTRY_CODE, getLOTLUrl(),TLType.LOTL, TLStatus.DRAFT, load);
+        tlLoader.loadTL(EU_COUNTRY_CODE, getLOTLUrl(), TLType.LOTL, TLStatus.DRAFT, load);
         tlLoader.loadTL(BE_COUNTRY_CODE, "https://tsl.belgium.be/tsl-be.xml", TLType.TL, TLStatus.PROD, load);
 
         TL lotl = tlService.getTL(1);
@@ -75,16 +74,16 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         TLSchemeInformation tlScheme = new TLSchemeInformation();
         tlScheme.setTerritory(BE_COUNTRY_CODE);
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), tlScheme, Tag.TERRITORY.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), tlScheme, Tag.TERRITORY.toString(), "");
+        // CHECK RETURN
         assertTrue(schemeInfoUpdated.getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
-        //CHECK DB
+        // CHECK DB
         assertTrue(dbLOTL.getTerritory().getCodeTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(lotlUpdated.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
     }
 
@@ -96,17 +95,17 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         TLSchemeInformation tlScheme = new TLSchemeInformation();
         tlScheme.setSequenceNumber(SN);
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), tlScheme, Tag.SEQUENCE_NUMBER.toString(),"");
-        //CHECK RETURN
-        assertTrue(schemeInfoUpdated.getSequenceNumber()==SN);
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), tlScheme, Tag.SEQUENCE_NUMBER.toString(), "");
+        // CHECK RETURN
+        assertTrue(schemeInfoUpdated.getSequenceNumber() == SN);
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
-        //CHECK DB
-        assertTrue(dbLOTL.getSequenceNumber()==SN);
+        // CHECK DB
+        assertTrue(dbLOTL.getSequenceNumber() == SN);
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
-        assertTrue(lotlUpdated.getSchemeInformation().getSequenceNumber()==SN);
+        // CHECK XML FILE
+        assertTrue(lotlUpdated.getSchemeInformation().getSequenceNumber() == SN);
     }
 
     @Test
@@ -116,17 +115,17 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.ISSUE_DATE.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.ISSUE_DATE.toString(), "");
+        // CHECK RETURN
         assertTrue(schemeInfoUpdated.getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
         DBTrustedLists dbDE = tlService.getDbTL(2);
-        //CHECK DB
+        // CHECK DB
         assertTrue(dbLOTL.getIssueDate().equals(dbDE.getIssueDate()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(lotlUpdated.getSchemeInformation().getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
     }
 
@@ -137,19 +136,19 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.NEXT_UPDATE.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.NEXT_UPDATE.toString(), "");
+        // CHECK RETURN
         assertTrue(schemeInfoUpdated.getNextUpdateDate().equals(detl.getSchemeInformation().getNextUpdateDate()));
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
         DBTrustedLists dbDE = tlService.getDbTL(2);
-        //CHECK DB
+        // CHECK DB
         assertTrue(dbLOTL.getNextUpdateDate().equals(dbDE.getNextUpdateDate()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(lotlUpdated.getSchemeInformation().getNextUpdateDate().equals(detl.getSchemeInformation().getNextUpdateDate()));
-        //assertFalse(lotlUpdated.getSchemeInformation().getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
+        // assertFalse(lotlUpdated.getSchemeInformation().getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
     }
 
     @Test
@@ -159,12 +158,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_OPERATOR_NAME.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_OPERATOR_NAME.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeOpeName(), detl.getSchemeInformation().getSchemeOpeName()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeOpeName(), detl.getSchemeInformation().getSchemeOpeName()));
     }
 
@@ -175,12 +174,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.POSTAL_ADDRESSES.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.POSTAL_ADDRESSES.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeOpePostal(), detl.getSchemeInformation().getSchemeOpePostal()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeOpePostal(), detl.getSchemeInformation().getSchemeOpePostal()));
     }
 
@@ -191,16 +190,15 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.ELECTRONIC_ADDRESS.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.ELECTRONIC_ADDRESS.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeOpeElectronic(), detl.getSchemeInformation().getSchemeOpeElectronic()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeOpeElectronic(), detl.getSchemeInformation().getSchemeOpeElectronic()));
         assertFalse(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeOpeElectronic(), lotl.getSchemeInformation().getSchemeOpeElectronic()));
     }
-
 
     @Test
     public void editTslType() {
@@ -209,12 +207,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.TSL_TYPE.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.TSL_TYPE.toString(), "");
+        // CHECK RETURN
         assertTrue(schemeInfoUpdated.getType().equalsIgnoreCase(detl.getSchemeInformation().getType()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(lotlUpdated.getSchemeInformation().getType().equalsIgnoreCase(detl.getSchemeInformation().getType()));
     }
 
@@ -225,12 +223,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.STATUS_DETERMINATION.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.STATUS_DETERMINATION.toString(), "");
+        // CHECK RETURN
         assertTrue(schemeInfoUpdated.getStatusDetermination().equalsIgnoreCase(detl.getSchemeInformation().getStatusDetermination()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(lotlUpdated.getSchemeInformation().getStatusDetermination().equalsIgnoreCase(detl.getSchemeInformation().getStatusDetermination()));
     }
 
@@ -241,12 +239,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_TYPE_COMMUNITY_RULES.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_TYPE_COMMUNITY_RULES.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeTypeCommRule(), detl.getSchemeInformation().getSchemeTypeCommRule()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeTypeCommRule(), detl.getSchemeInformation().getSchemeTypeCommRule()));
     }
 
@@ -257,12 +255,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_NAME.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_NAME.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeName(), detl.getSchemeInformation().getSchemeName()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeName(), detl.getSchemeInformation().getSchemeName()));
     }
 
@@ -273,12 +271,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.POLICY_OR_LEGAL_NOTICE.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.POLICY_OR_LEGAL_NOTICE.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemePolicy(), detl.getSchemeInformation().getSchemePolicy()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemePolicy(), detl.getSchemeInformation().getSchemePolicy()));
     }
 
@@ -289,12 +287,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.DISTRIBUTION_LIST.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.DISTRIBUTION_LIST.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getDistributionPoint(), detl.getSchemeInformation().getDistributionPoint()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getDistributionPoint(), detl.getSchemeInformation().getDistributionPoint()));
     }
 
@@ -305,12 +303,12 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
         assertTrue(lotl.getSchemeInformation().getTerritory().equalsIgnoreCase(EU_COUNTRY_CODE));
         assertTrue(detl.getSchemeInformation().getTerritory().equalsIgnoreCase(BE_COUNTRY_CODE));
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_INFORMATION_URI.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.SCHEME_INFORMATION_URI.toString(), "");
+        // CHECK RETURN
         assertTrue(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeInfoUri(), detl.getSchemeInformation().getSchemeInfoUri()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertTrue(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeInfoUri(), detl.getSchemeInformation().getSchemeInfoUri()));
     }
 
@@ -323,15 +321,13 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
 
         detl.getSchemeInformation().getSchemeInfoUri().get(0).setLanguage("CZ");
 
-        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.KEY_USAGE_BIT.toString(),"");
-        //CHECK RETURN
+        TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.KEY_USAGE_BIT.toString(), "");
+        // CHECK RETURN
         assertFalse(CollectionUtils.isEqualCollection(schemeInfoUpdated.getSchemeInfoUri(), detl.getSchemeInformation().getSchemeInfoUri()));
 
         TL lotlUpdated = tlService.getTL(1);
-        //CHECK XML FILE
+        // CHECK XML FILE
         assertFalse(CollectionUtils.isEqualCollection(lotlUpdated.getSchemeInformation().getSchemeInfoUri(), detl.getSchemeInformation().getSchemeInfoUri()));
     }
-
-
 
 }

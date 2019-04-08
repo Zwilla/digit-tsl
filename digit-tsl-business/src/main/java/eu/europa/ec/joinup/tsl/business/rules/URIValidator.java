@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -43,9 +43,7 @@ public class URIValidator extends GenericValidator {
 
     @Cacheable(value = "externalResourcesCache", key = "#url")
     public boolean isCorrectUrl(String url) {
-        String[] schemes = {
-                "http", "https"
-        }; // DEFAULT schemes = "http", "https", "ftp"
+        String[] schemes = { "http", "https" }; // DEFAULT schemes = "http", "https", "ftp"
         UrlValidator urlValidator = new UrlValidator(schemes);
         boolean valid = urlValidator.isValid(url);
         if (!valid) {

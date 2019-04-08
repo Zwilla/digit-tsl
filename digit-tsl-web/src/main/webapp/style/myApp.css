@@ -1,641 +1,706 @@
 /******** Application Layout ********/
 nav {
-    left: 0px;
-    position: absolute;
-    top: 0px;
-    width: 13%;
+	left: 0px;
+	position: absolute;
+	top: 0px;
+	width: 13%;
 }
 
 .body {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    position: relative;
-    width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	position: relative;
+	width: 1280px;
 }
 
 main {
-    margin-left: 13.5%;
-    min-height: 700px;
-    width: 86.5%;
+	margin-left: 13.5%;
+	min-height: 700px;
+	width: 86.5%;
 }
 
 footer {
-    bottom: 0;
-    border-top: thick double #2F70A8;
-    height: 30px;
-    margin: 10px 0px;
-    position: relative;
-    right: 0;
-    width: 100%;
-    content: "";
-    clear: both;
+	bottom: 0;
+	border-top: thick double #2F70A8;
+	height: 30px;
+	margin: 10px 0px;
+	position: relative;
+	right: 0;
+	width: 100%;
+	content: "";
+	clear: both;
 }
 
 /******** Application ********/
 .heading-information {
-    background-color: #337ab7;
-    color: #FFFFFF;
-    border-radius: 3px;
+	background-color: #337ab7;
+	color: #FFFFFF;
+	border-radius: 3px;
 }
 
 .disabled-click {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 .disabled-span {
-    color: #dddddd;
-    cursor: not-allowed
+	color: #dddddd;
+	cursor: not-allowed
 }
 
 .unselectable {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 /******** FOOTER ********/
 .footerMessage {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5px;
-    position: relative;
-    width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	position: relative;
+	width: 1280px;
 }
 
 /******** Browsing ********/
 .tabInformationOpen {
-    float: left;
-    width: 94%;
+	float: left;
+	width: 94%;
 }
 
 .tabInformationClose {
-    float: left;
-    width: auto;
-    max-width: 94%;
+	float: left;
+	width: auto;
+	max-width: 94%;
+}
+
+.browserfilter {
+	display: inline-block;
+	float: right;
+}
+
+.browserfilter-input {
+	padding-right: 20px;
+}
+
+.browserfilter-icon {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	bottom: 0;
+	height: 14px;
+	margin: auto;
+	font-size: 14px;
+	cursor: pointer;
+	color: #ccc;
+}
+
+.browserfilter-tooltip {
+	float: right;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 6px;
+}
+
+.browserfilter>.tooltip>.tooltip-inner {
+	min-width: 400px;
+	max-width: 400px;
 }
 
 /* <hr> tag in notif/availability */
 .light-hr {
-    height: 1px;
-    background-color: #888;
-    padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+	height: 1px;
+	background-color: #888;
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 
 /* <hr> tag in browsing */
 .style-one {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    height: 0;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    display: block;
-    width: 98.5%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	height: 0;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	display: block;
+	width: 98.5%;
 }
 
 /* DIV check/change */
 .divChange {
-    width: 25px;
-    height: 10px;
-    display: inline-block;
-    float: left;
-    text-align: left;
+	width: 25px;
+	height: 10px;
+	display: inline-block;
+	float: left;
+	text-align: left;
 }
 
 .divCheckChange {
-    width: 50px;
-    height: 10px;
-    display: inline-block;
-    float: left;
-    text-align: left;
+	width: 50px;
+	height: 10px;
+	display: inline-block;
+	float: left;
+	text-align: left;
 }
 
 /* DIV rubric title */
 .divNodeTitle {
-    width: 220px;
-    display: inline-block;
+	width: 220px;
+	display: inline-block;
 }
 
 /* DIV Carret open/close icon */
 .openClose {
-    width: 5px;
-    display: inline-block;
-    margin-right: 5px;
-    float: left;
+	width: 5px;
+	display: inline-block;
+	margin-right: 5px;
+	float: left;
 }
 
 .isOpen {
-    background-color: #337ab7;
-    border-radius: 3px;
-    color: white;
-    padding-left: 4px;
-    border-bottom-left-radius: 0px;
+	background-color: #337ab7;
+	border-radius: 3px;
+	color: white;
+	padding-left: 4px;
+	border-bottom-left-radius: 0px;
 }
 
 /* /!\ Override in modal pointer/service/history */
 .isOpenBorder {
-    border-left-style: solid;
-    border-width: 1px;
-    border-color: #337ab7;
-    margin-bottom: 5px;
-    margin-top: -2px;
+	border-left-style: solid;
+	border-width: 1px;
+	border-color: #337ab7;
+	margin-bottom: 5px;
+	margin-top: -2px;
 }
 
 .isOpenTopBorder {
-    margin-top: 2px;
+	margin-top: 2px;
 }
 
 .emptySpan {
-    width: 20px;
-    display: inline-block;
+	width: 20px;
+	display: inline-block;
 }
 
 .boldNode {
-    display: inline;
-    font-weight: bold;
+	display: inline;
+	font-weight: bold;
+}
+
+.border-tlm {
+	border: 1px solid #074A8B !important
 }
 
 /** Extension **/
 .tabset-takenOverBy {
-    margin-left: -18%;
-    margin-top: 5px;
+	margin-left: -18%;
+	margin-top: 5px;
 }
 
 /**Disclaimer **/
 .disclaimerTableLeft {
-    width: 35%;
+	width: 35%;
 }
 
 .disclaimerTableRight {
-    width: 65%;
+	width: 65%;
 }
 
 /******** Management *********/
 .isSelect {
-    font-color: white;
-    font-weight: bold;
-    background-color: #5A98CF;
+	font-color: white;
+	font-weight: bold;
+	background-color: #5A98CF;
 }
 
 .statusNotificationSelector {
-    background-color: #ebebeb;
-    padding-top: 5px;
-    padding-bottom: 2px;
-    border-radius: 5px;
+	background-color: #ebebeb;
+	padding-top: 5px;
+	padding-bottom: 2px;
+	border-radius: 5px;
+}
+
+/***** ***** Wizard (TL signing certificate) ***** *****/
+.wizard-tlsigning-row {
+	display: inline-block;
+	margin-left: 20px;
+	width: 10%;
+}
+
+.wizard-tlsigning-radio {
+	display: inline-block;
+	width: 80%;
+}
+
+.wizard-tlsigning-radio>.checkbox-inline {
+	padding-left: 0px;
+}
+
+.wizard-tlsigning-certinpute {
+	display: inline-block !important;
+	padding-left: 0px !important;
+}
+
+.wizard-certificate-carret {
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 5px;
 }
 
 /******** Notification ********/
 .divNotifBlank {
-    display: inline-block;
-    width: 15px;
+	display: inline-block;
+	width: 15px;
 }
 
 .detailPadding {
-    width: 20px;
-    display: inline-block;
+	width: 20px;
+	display: inline-block;
 }
 
 .ccDiv {
-    background-color: #3072AB;
-    color: white;
-    padding: 5px;
+	background-color: #3072AB;
+	color: white;
+	padding: 5px;
 }
 
 /******** Availability ********/
 .calendar-display {
-    width: 110px !important;
-    height: 28px !important;
-    border: 1px solid #ccc;
+	width: 110px !important;
+	height: 28px !important;
+	border: 1px solid #ccc;
 }
 
 .calendar-button {
-    margin-top: -3px;
-    margin-left: -4px;
-    border-radius: 0px !important;
+	margin-top: -3px;
+	margin-left: -4px;
+	border-radius: 0px !important;
 }
 
 .no-unavailability-info {
-    border-top: 2px solid #ddd;
-    margin-top: 16px;
-    padding: 8px;
+	border-top: 2px solid #ddd;
+	margin-top: 16px;
+	padding: 8px;
 }
 
 .legend-div {
-    font-size: 90%;
-    padding: 0 !important;
-    text-align: center;
+	font-size: 90%;
+	padding: 0 !important;
+	text-align: center;
 }
 
 .legend-circle {
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    display: inline-block;
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
 }
 
 .lengend-unavailable-color {
-    background-color: rgb(174, 199, 232);
+	background-color: rgb(174, 199, 232);
 }
 
 .lengend-unsupported-color {
-    background-color: rgb(255, 127, 14);
+	background-color: rgb(255, 127, 14);
 }
 
 .lengend-available-color {
-    background-color: rgb(31, 119, 180);
+	background-color: rgb(31, 119, 180);
 }
 
 /******** Directive ********/
 .display-none {
-    /*     visibility: hidden */
-    display: none;
+	/*     visibility: hidden */
+	display: none;
 }
 
 /* 90 icon rotation */
 .gly-rotate-90 {
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 
 .gly-rotate-180 {
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 /** URI **/
 .uri {
-    text-decoration: none !important;
-    cursor: pointer;
+	text-decoration: none !important;
+	cursor: pointer;
 }
 
 .uri:hover {
-    color: #5BC0DE;
+	color: #5BC0DE;
 }
 
 /** Check **/
 .check-label {
-    display: block;
-    font-weight: bold;
+	display: block;
+	font-weight: bold;
 }
 
 .check-margin {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 
 .check-icon {
-    transform: rotateX(180deg);
+	transform: rotateX(180deg);
 }
 
 .check-directive {
-    display: inline-block;
+	display: inline-block;
 }
 
 .check-directive-disabled {
-    display: inline-block;
-    pointer-events: none;
-    cursor: not-allowed;
-    color: #b8b8b8 !important;
+	display: inline-block;
+	pointer-events: none;
+	cursor: not-allowed;
+	color: #b8b8b8 !important;
 }
 
 .check-directive-disabled>span, .check-directive-disabled>span>span {
-    color: #b8b8b8 !important;
-    cursor: not-allowed;
-    pointer-events: none;
+	color: #b8b8b8 !important;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 .invisible {
-    display: none;
+	display: none;
 }
 
 .modal-check>.modal-dialog {
-    width: 1300px;
+	width: 1300px;
 }
 
 /** Change **/
 .modal-change>.modal-dialog {
-    width: 1300px;
+	width: 1300px;
 }
 
 /******** Icon ********/
 .disabled-icon {
-    color: #CCC;
-    pointer-events: none;
-    opacity: 0.9;
+	color: #CCC;
+	pointer-events: none;
+	opacity: 0.9;
 }
 
 .editIcon {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 .requiredIcon {
-    color: #b30000;
-    cursor: pointer;
-    margin-left: 3px;
+	color: #b30000;
+	cursor: pointer;
+	margin-left: 3px;
 }
 
 /* Modal Add icon : Pointer/Provider/Service/History */
 .addIcon {
-    float: right;
-    color: #337ab7;
-    margin-right: -10px;
+	float: right;
+	color: #337ab7;
+	margin-right: -10px;
 }
 
 .trashIcon {
-    float: right;
-    margin-right: -5px;
-    padding-top: 6px;
+	float: right;
+	margin-right: -5px;
+	padding-top: 6px;
 }
 
 /* Modal Edit icon : Pointer/Service/History (Digital Identity/Extension) */
 .editDirectiveIcon {
-    float: right;
-    margin-top: 4px;
-    margin-right: 10px;
+	float: right;
+	margin-top: 4px;
+	margin-right: 10px;
 }
 
 /* Modal Trash icon : Pointer/Service/History (Digital Identity/Extension) */
 .trashDirectiveIcon {
-    float: right;
-    margin-top: 3px;
-    margin-right: 5px;
+	float: right;
+	margin-top: 3px;
+	margin-right: 5px;
 }
 
 .openTabIcon {
-    color: #494949;
-    margin-left: -3px;
+	color: #494949;
+	margin-left: -3px;
 }
 
 .closeTabIcon {
-    color: #777;
+	color: #777;
 }
 
 .invisible-icon {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
 }
 
 /******** Color ********/
 .white {
-    color: white;
+	color: white;
 }
 
 .changeColor {
-    color: #5bc0de;
+	color: #5bc0de;
 }
 
 .errorColor {
-    color: #d04437;
+	color: #d04437;
 }
 
 .infoColor {
-    color: #808080;
+	color: #808080;
 }
 
 .warnColor {
-    color: #f0ad4e;
+	color: #f0ad4e;
 }
 
 .successColor {
-    color: #33CC33;
+	color: #33CC33;
 }
 
 .logIconColor {
-    color: #396ea2;
+	color: #396ea2;
 }
 
 .scheme-information {
-    background-color: #F0F0F4;
+	background-color: #F0F0F4;
 }
 
 .blackColor {
-    color: black;
+	color: black;
 }
 
 /******** Cursor ********/
 .cursor-pointer, .cursor-link, .select-pointer, .menu-link {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .no-cursor:hover {
-    cursor: default;
+	cursor: default;
 }
 
 .cursor-link:hover, .menu-link:hover {
-    color: #002EB8;
-    text-decoration: none;
+	color: #002EB8;
+	text-decoration: none;
 }
 
 .menu-title {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .menu-title:hover {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 .menu-link {
-    font-size: 12px;
-    margin-left: 3px;
+	font-size: 12px;
+	margin-left: 3px;
 }
 
 .menu-link-smaller {
-    font-size: 11px;
-    margin-left: 3px;
+	font-size: 11px;
+	margin-left: 3px;
 }
 
 .menu-panel-heading {
-    border-radius: 0;
-    max-height: 35px;
-    padding: 10px 10px !important;
+	border-radius: 0;
+	max-height: 35px;
+	padding: 10px 10px !important;
 }
 
 .select-pointer:hover {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 /******** Margin && Display ********/
 
 /* Use to align stacked check icon */
 .marginL-1 {
-    margin-left: 1px;
-    padding-right: 13px;
+	margin-left: 1px;
+	padding-right: 13px;
 }
 
 .inline-block {
-    display: inline-block
+	display: inline-block
 }
 
 .block {
-    display: block;
+	display: block;
 }
 
 .paddingR-5 {
-    padding-right: 5px;
+	padding-right: 5px;
 }
 
 .paddingB-10 {
-    padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 .alinea {
-    text-indent: 15px
+	text-indent: 15px
 }
 
 .remove-padding {
-    padding-left: 0px !important;
+	padding-left: 0px !important;
 }
 
 .underline {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .no-underline {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 .no-underline : hover {
-    text-decoration: none !important;
+	text-decoration: none !important;
 }
 
 .ellipsis {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 .menu-ellipsis {
-    width: 135px !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: inline-block;
+	width: 135px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
 }
 
 .lang-list {
-    display: inline-block;
-    width: 50%;
+	display: inline-block;
+	width: 50%;
 }
 
 .radio-alignement {
-    margin-top: -1px;
-    vertical-align: middle;
-    margin-right: 5px;
+	margin-top: -1px;
+	vertical-align: middle;
+	margin-right: 5px;
 }
 
 .tlm-border {
-    border: #337ab7 1px solid transparent;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+	border: #337ab7 1px solid transparent;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
 }
 
 /******** OVERRIDE BOOTSTRAP/FONT AWESOME ********/
 input {
-    height: 26px !important;
-    padding-left: 7px !important;
+	height: 26px !important;
+	padding-left: 7px !important;
 }
 
 select {
-    height: 26px !important;
-    padding-left: 4px !important;
+	height: 26px !important;
+	padding-left: 4px !important;
 }
 
 .modal-fit .modal-dialog {
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    padding: 10px;
-    width: 1200px;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 10px;
+	width: 1200px;
 }
 
 .tab-content {
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
 }
 
 .table {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .panel-body {
-    padding: 10px 15px 10px 15px;
+	padding: 10px 15px 10px 15px;
 }
 
 .modal-content {
-    border: 0px;
+	border: 0px;
 }
 
 .container-fluid {
-    padding-right: 0px;
+	padding-right: 0px;
 }
 
 .nav>li>a {
-    padding: 0px 5px;
+	padding: 0px 5px;
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    color: #FFF;
-    cursor: default;
-    background-color: #337ab7;
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	{
+	color: #FFF;
+	cursor: default;
+	background-color: #337ab7;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
 }
 
 .col-sm-2 {
-    padding-right: 5px;
-    padding-left: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 .col-sm-10, .col-sm-6, .col-sm-8, .col-sm-5 {
-    padding-right: 10px;
-    padding-left: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .col-sm-12 {
-    padding-left: 5px;
+	padding-left: 5px;
 }
 
 .row {
-    margin-top: 2px;
-    margin-left: 0;
-    margin-right: 0;
+	margin-top: 2px;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .fa-stack {
-    position: relative !important;
-    display: inline-block !important;
-    width: 10px !important;
-    height: 10px !important;
-    line-height: 0.6 !important;
-    vertical-align: middle !important;
+	position: relative !important;
+	display: inline-block !important;
+	width: 10px !important;
+	height: 10px !important;
+	line-height: 0.6 !important;
+	vertical-align: middle !important;
 }
 
 .table-border {
-    border: 1px solid #337ab7;
+	border: 1px solid #337ab7;
 }
 
 /******** OVERRIDE ANGULAR UI ********/
 button[ng-click^="select(null)"] {
-    display: none;
+	display: none;
 }
 
 .nv-legend-text {
-    cursor: default !important;
+	cursor: default !important;
 }
 }

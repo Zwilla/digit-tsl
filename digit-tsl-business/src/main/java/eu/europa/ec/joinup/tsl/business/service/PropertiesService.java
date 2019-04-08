@@ -1,14 +1,14 @@
 /*******************************************************************************
  * DIGIT-TSL - Trusted List Manager
  * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- * 
+ *  
  * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- * 
+ *  
  * This library is free software; you can redistribute it and/or modify it
  * under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation; either version 2.1 of the License, or (at
  * your option) any later version.
- * 
+ *  
  * This library is distributed in the hope that it will be useful, but
  * WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
@@ -272,8 +272,8 @@ public class PropertiesService {
         if (CollectionUtils.isNotEmpty(serviceTypeIdentifiers)) {
             for (String typeIdentifier : serviceTypeIdentifiers) {
                 if (StringUtils.endsWith(typeIdentifier, "CA/PKC") || StringUtils.endsWith(typeIdentifier, "OCSP") || StringUtils.endsWith(typeIdentifier, "CRL")
-                        || StringUtils.endsWith(typeIdentifier, "CA/QC") || StringUtils.endsWith(typeIdentifier, "NationalRootCA-QC")
-                        || StringUtils.endsWith(typeIdentifier, "Certstatus/OCSP/QC") || StringUtils.endsWith(typeIdentifier, "Certstatus/CRL/QC")) {
+                        || StringUtils.endsWith(typeIdentifier, "CA/QC") || StringUtils.endsWith(typeIdentifier, "NationalRootCA-QC") || StringUtils.endsWith(typeIdentifier, "Certstatus/OCSP/QC")
+                        || StringUtils.endsWith(typeIdentifier, "Certstatus/CRL/QC")) {
                     results.add(typeIdentifier);
                 }
             }
@@ -288,8 +288,7 @@ public class PropertiesService {
         if (CollectionUtils.isNotEmpty(serviceTypeIdentifiers)) {
             for (String typeIdentifier : serviceTypeIdentifiers) {
                 if (StringUtils.endsWith(typeIdentifier, "CA/PKC") || StringUtils.endsWith(typeIdentifier, "OCSP") || StringUtils.endsWith(typeIdentifier, "CRL")
-                        || StringUtils.endsWith(typeIdentifier, "PSES") || StringUtils.endsWith(typeIdentifier, "AdESValidation")
-                        || StringUtils.endsWith(typeIdentifier, "AdESGeneration")) {
+                        || StringUtils.endsWith(typeIdentifier, "PSES") || StringUtils.endsWith(typeIdentifier, "AdESValidation") || StringUtils.endsWith(typeIdentifier, "AdESGeneration")) {
                     results.add(typeIdentifier);
                 }
             }
