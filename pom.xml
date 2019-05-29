@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 	<artifactId>digit-tsl</artifactId>
@@ -51,11 +53,6 @@
 		<module>digit-tsl-pretty-print-client</module>
 		<module>digit-tsl-pretty-print-web</module>
 	</modules>
-
-	<scm>
-		<developerConnection>scm:git:https://bitbucket.org/nowina-esig/digit-tsl.git</developerConnection>
-		<tag>5.5</tag>
-	</scm>
 
 	<build>
 		<plugins>
@@ -353,33 +350,10 @@
 
 	<repositories>
 		<repository>
-			<id>forge.nowina.lu.release</id>
-			<name>Internal repository</name>
-			<url>http://forge.nowina.local/nexus/content/repositories/releases/</url>
-		</repository>
-		<repository>
-			<id>forge.nowina.lu.snapshot</id>
-			<name>Snapshot repository</name>
-			<url>http://forge.nowina.local/nexus/content/repositories/snapshots/</url>
-		</repository>
-		<repository>
 			<id>cefdigital</id>
 			<name>cefdigital</name>
 			<url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/</url>
 		</repository>
 	</repositories>
-
-	<distributionManagement>
-		<repository>
-			<id>forge.nowina.local</id>
-			<name>Internal repository</name>
-			<url>http://forge.nowina.local/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-			<id>forge.nowina.local</id>
-			<name>Internal repository</name>
-			<url>http://forge.nowina.local/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 
 </project>
