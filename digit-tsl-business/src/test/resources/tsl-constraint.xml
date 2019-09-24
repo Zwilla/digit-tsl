@@ -4,6 +4,7 @@
 		<AcceptableFormats Level="FAIL">
 			<Id>XAdES-BASELINE-B</Id>
 		</AcceptableFormats>
+		<FullScope Level="FAIL" />
 		<BasicSignatureConstraints>
 			<ReferenceDataExistence Level="FAIL" />
 			<ReferenceDataIntact Level="FAIL" />
@@ -31,7 +32,6 @@
 		</BasicSignatureConstraints>
 		<SignedAttributes>
 			<SigningCertificatePresent Level="FAIL" />
-			<SigningCertificateSigned Level="FAIL" />
 			<CertDigestPresent Level="FAIL" />
 			<CertDigestMatch Level="FAIL" />
 			<SigningTime Level="FAIL" />

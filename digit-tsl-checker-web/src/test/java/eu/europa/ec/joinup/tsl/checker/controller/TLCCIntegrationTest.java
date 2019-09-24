@@ -32,6 +32,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import eu.europa.ec.joinup.tsl.checker.config.TLCheckerSpringTest;
+import eu.europa.ec.joinup.tsl.checker.dto.TLCCFileRequestDTO;
 import eu.europa.ec.joinup.tsl.checker.dto.TLCCRequestDTO;
 
 public class TLCCIntegrationTest extends TLCheckerSpringTest {
@@ -50,6 +51,14 @@ public class TLCCIntegrationTest extends TLCheckerSpringTest {
     }
 
     @Test
+    public void getResultsFile() throws IOException {
+        byte[] lotlFile = FileUtils.readFileToByteArray(new File("src/test/resources/tsl/LOTL.xml"));
+        for (String country : countries) {
+            getTlccResultFile(lotlFile, country);
+        }
+    }
+
+    @Test
     public void getFakeEU() throws IOException {
         getTlccResult("FAKE_EU");
     }
@@ -62,7 +71,15 @@ public class TLCCIntegrationTest extends TLCheckerSpringTest {
 
         String resultTlcc = runTLCC.executeAllChecks(requestDTO, "TRUSTED_LIST");
         Assert.assertNotNull(resultTlcc);
-        FileUtils.writeStringToFile(new File("src/test/resources/resultTlcc/result" + countryCode + ".xml"), resultTlcc, StandardCharsets.UTF_8);
+        FileUtils.writeStringToFile(new File("src/test/resources/resultTlcc/path/result" + countryCode + "_path.xml"), resultTlcc, StandardCharsets.UTF_8);
+    }
+
+    private void getTlccResultFile(byte[] lotlFile, String countryCode) throws IOException {
+        byte[] file = FileUtils.readFileToByteArray(new File("src/test/resources/tsl/" + countryCode + ".xml"));
+        TLCCFileRequestDTO fileRequest = new TLCCFileRequestDTO(lotlFile, file);
+        String resultTlcc = runTLCC.executeAllChecksFromFile(fileRequest);
+        Assert.assertNotNull(resultTlcc);
+        FileUtils.writeStringToFile(new File("src/test/resources/resultTlcc/file/result" + countryCode + "_file.xml"), resultTlcc, StandardCharsets.UTF_8);
     }
 
 }

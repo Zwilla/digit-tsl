@@ -32,9 +32,9 @@ import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLPointersToOtherTSL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.jaxb.tsl.AdditionalInformationType;
 import eu.europa.esig.jaxb.tsl.DigitalIdentityListType;
@@ -162,7 +162,7 @@ public class TSLExtractor {
         for (DigitalIdentityType digitalId : digitalIds) {
             if (digitalId.getX509Certificate() != null) {
                 try {
-                    CertificateToken certificate = DSSUtils.loadCertificate(digitalId.getX509Certificate());
+                    CertificateToken certificate = CertificateTokenUtils.loadCertificate(digitalId.getX509Certificate());
                     certificates.add(certificate);
                 } catch (Exception e) {
                     LOGGER.warn("Unable to load certificate : " + e.getMessage(), e);

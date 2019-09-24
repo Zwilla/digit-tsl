@@ -121,6 +121,9 @@ public class TLService {
     private AuditService auditService;
 
     @Autowired
+    private AvailabilityService availabilityService;
+
+    @Autowired
     private AbstractAlertingService alertingService;
 
     @Value("${lotl.territory}")
@@ -498,12 +501,37 @@ public class TLService {
      *
      * @param territory
      */
-    public TL getPreviousProduction(DBCountries territory) {
+    public TL getPreviousProductionByCountry(DBCountries territory) {
         List<DBTrustedLists> archiveds = tlRepository.findByTerritoryAndStatusAndArchiveTrueOrderByIdDesc(territory, TLStatus.PROD);
         if (CollectionUtils.isNotEmpty(archiveds)) {
             return getDtoTL(archiveds.get(0));
         }
         return null;
+    }
+
+    /**
+     * Get previous production trusted list by given country code as TL dto format
+     *
+     * @param territory
+     */
+    public TL getPreviousProductionByCountryCode(String countryCode) {
+        DBCountries country = countryService.getCountryByTerritory(countryCode);
+        return getPreviousProductionByCountry(country);
+    }
+
+    /**
+     * Get baseline TL. Previous production if current is PROD or published production if current is DRAFT
+     * 
+     * @param currentTL
+     */
+    public TL getBaselineTL(final TL currentTL) {
+        TL previousTL = null;
+        if (currentTL.getDbStatus().equals(TLStatus.PROD)) {
+            previousTL = getPreviousProductionByCountryCode(currentTL.getSchemeInformation().getTerritory());
+        } else {
+            previousTL = getPublishedTLByCountryCode(currentTL.getSchemeInformation().getTerritory());
+        }
+        return previousTL;
     }
 
     /**
@@ -732,6 +760,7 @@ public class TLService {
 
         tl.setLastEditedDate(new Date());
         tlRepository.save(tl);
+        availabilityService.setAvailable(xmlFile);
         return tl;
     }
 

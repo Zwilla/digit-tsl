@@ -44,12 +44,13 @@ import org.springframework.stereotype.Service;
 import eu.europa.ec.joinup.tsl.business.dto.data.tl.ServiceDataDTO;
 import eu.europa.ec.joinup.tsl.business.dto.tl.approachbreak.CertificateElement;
 import eu.europa.ec.joinup.tsl.business.repository.TLCertificateRepository;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBCertificate;
 import eu.europa.ec.joinup.tsl.model.DBService;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
+import eu.europa.esig.dss.DSSASN1Utils;
 import eu.europa.esig.dss.DSSDocument;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.FileDocument;
 import eu.europa.esig.dss.client.http.DataLoader;
 import eu.europa.esig.dss.utils.Utils;
@@ -58,10 +59,10 @@ import eu.europa.esig.dss.validation.CertificateVerifier;
 import eu.europa.esig.dss.validation.CommonCertificateVerifier;
 import eu.europa.esig.dss.validation.SignatureValidationContext;
 import eu.europa.esig.dss.validation.SignedDocumentValidator;
+import eu.europa.esig.dss.x509.CertificateSourceType;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.CommonTrustedCertificateSource;
-import eu.europa.esig.dss.x509.crl.CRLSource;
-import eu.europa.esig.dss.x509.ocsp.OCSPSource;
+import eu.europa.esig.dss.x509.RevocationToken;
 
 @Service
 public class TLCertificateService {
@@ -73,12 +74,6 @@ public class TLCertificateService {
 
     @Autowired
     private DataLoader dataLoader;
-
-    @Autowired
-    private CRLSource crlSource;
-
-    @Autowired
-    private OCSPSource ocspSource;
 
     /**
      * Get all certificates by @countryCode, @type. @checkDate used to initialize CertificateElement expiration
@@ -160,6 +155,7 @@ public class TLCertificateService {
         dbCertificate.setSubjectName(Base64.encodeBase64String(certificate.getSubjectX500Principal().toString().getBytes()));
         dbCertificate.setBase64(Utils.toBase64(certificate.getEncoded()));
         dbCertificate.setTlType(tlType);
+        dbCertificate.setSki(DSSASN1Utils.computeSkiFromCert(certificate));
         dbCertificate.setService(service);
         try {
             certificateRepository.save(dbCertificate);
@@ -192,7 +188,7 @@ public class TLCertificateService {
     /**
      * Get a list of TLs certificate distinct by Base64
      */
-    private List<DBCertificate> getTLCertificateDistinctByB64() {
+    public List<DBCertificate> getTLCertificateDistinctByB64() {
         List<DBCertificate> dbCertificates = certificateRepository.findByTlType(TLType.TL);
 
         Map<String, DBCertificate> distinctDbCertificates = new HashMap<>();
@@ -205,10 +201,10 @@ public class TLCertificateService {
     }
 
     /**
-     * Get a list of certificate by Base64
+     * Get a list of certificate by SKI
      */
-    public List<DBCertificate> findByB64(CertificateToken certificate) {
-        return certificateRepository.findByBase64(Utils.toBase64(certificate.getEncoded()));
+    public List<DBCertificate> findBySKI(CertificateToken certificate) {
+        return certificateRepository.findBySki(DSSASN1Utils.computeSkiFromCert(certificate));
     }
 
     /* ----- ----- Retrieve Signing Certificates ----- ----- */
@@ -236,29 +232,38 @@ public class TLCertificateService {
     /* ----- ----- Retrieve ROOT-CA ----- ----- */
 
     /**
-     * Get list of trustAnchor services based on certificate
+     * Get list of trustAnchor services based on certificate trust anchor
      *
      * @param certificate
      */
     @Transactional(value = TxType.REQUIRED)
-    public Set<ServiceDataDTO> getServicesByRootCA(CertificateToken certificate) {
+    public Set<ServiceDataDTO> getServicesByCertificate(CertificateToken certificate, SignatureValidationContext svc) {
+        Set<CertificateToken> rootCAs = getRootCertificate(certificate, svc);
         Set<ServiceDataDTO> rootServices = new HashSet<>();
-
-        CertificateToken rootCA;
-        if (certificate.getTrustAnchor() == null) {
-            rootCA = getRootCertificate(certificate);
-        } else {
-            rootCA = certificate.getTrustAnchor();
+        if (!CollectionUtils.isEmpty(rootCAs)) {
+            for (CertificateToken rootCA : rootCAs) {
+                rootServices.addAll(getServicesFromRootCA(rootCA));
+            }
         }
-        // RootCA has been found
+        return rootServices;
+    }
+
+    /**
+     * Get list of trustAnchor services based on certificate trust anchor
+     *
+     * @param certificate
+     */
+    public Set<ServiceDataDTO> getServicesFromRootCA(CertificateToken rootCA) {
+        Set<ServiceDataDTO> rootServices = new HashSet<>();
         if (rootCA != null) {
-            List<DBCertificate> dbRootCertificates = findByB64(rootCA);
+            List<DBCertificate> dbRootCertificates = findBySKI(rootCA);
             if (!CollectionUtils.isEmpty(dbRootCertificates)) {
                 for (DBCertificate dbCertificate : dbRootCertificates) {
                     if (dbCertificate.getTlType().equals(TLType.TL)) {
                         rootServices.add(new ServiceDataDTO(dbCertificate.getService(), true));
                     }
                 }
+
             }
         }
         return rootServices;
@@ -269,21 +274,33 @@ public class TLCertificateService {
      *
      * @param certificateB64
      */
-    public CertificateToken getRootCertificate(CertificateToken certificateToken) {
-        SignatureValidationContext svc = new SignatureValidationContext();
-        svc.initialize(initCommonCertificateVerifier());
-        // Set certificate to track
-        svc.addCertificateTokenForVerification(certificateToken);
-        svc.validate();
-
+    public Set<CertificateToken> getRootCertificate(CertificateToken certificateToken, SignatureValidationContext svc) {
+        Set<CertificateToken> rootCertificates = new HashSet<>();
+        Map<CertificateToken, Set<CertificateSourceType>> certificateSourceTypes = svc.getCertificateSourceTypes();
         // Loop through certificates and retrieve the trust one
         for (CertificateToken token : svc.getProcessedCertificates()) {
-            if (token.isTrusted()) {
-                return token;
+            Set<CertificateSourceType> sources = certificateSourceTypes.get(token);
+            if (sources.contains(CertificateSourceType.TRUSTED_STORE)) {
+                rootCertificates.add(token);
             }
         }
 
-        return null;
+        return rootCertificates;
+    }
+
+    /**
+     * Return if certificate is revoked
+     * 
+     * @param certificateToken
+     */
+    public boolean isCertificateRevoked(CertificateToken certificateToken, SignatureValidationContext svc) {
+        Set<RevocationToken> processedRevocations = svc.getProcessedRevocations();
+        for (RevocationToken revocationToken : processedRevocations) {
+            if (certificateToken.getDSSIdAsString().equals(revocationToken.getRelatedCertificateID())) {
+                return Utils.isTrue(revocationToken.getStatus());
+            }
+        }
+        return false;
     }
 
     /**
@@ -294,15 +311,30 @@ public class TLCertificateService {
         CommonTrustedCertificateSource certSource = new CommonTrustedCertificateSource();
 
         certificateVerifier.setDataLoader(dataLoader);
-        certificateVerifier.setCrlSource(crlSource);
-        certificateVerifier.setOcspSource(ocspSource);
 
         // Load TLs services and LOTL pointers certificates
         for (DBCertificate certificate : getTLCertificateDistinctByB64()) {
-            certSource.addCertificate(DSSUtils.loadCertificateFromBase64EncodedString(certificate.getBase64()));
+            CertificateToken certificateToken = CertificateTokenUtils.loadCertificate(certificate.getBase64());
+            if (certificateToken != null) {
+                certSource.addCertificate(certificateToken);
+            }
         }
         certificateVerifier.setTrustedCertSource(certSource);
         return certificateVerifier;
+    }
+
+    /**
+     * Init signature validation context with certificate token
+     * 
+     * @param certificateToken
+     */
+    public SignatureValidationContext initSVC(CertificateToken certificateToken) {
+        SignatureValidationContext svc = new SignatureValidationContext();
+        svc.initialize(initCommonCertificateVerifier());
+        // Set certificate to track
+        svc.addCertificateTokenForVerification(certificateToken);
+        svc.validate();
+        return svc;
     }
 
     /* ----- ----- Sort ----- ----- */

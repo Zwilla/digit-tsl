@@ -129,7 +129,7 @@ public class MergeDraftServiceTest extends AbstractSpringTest {
         List<TrustedListsReport> drafts = new ArrayList<>();
 
         Load loadTL = new Load();
-        tlLoader.loadTL("BE", "https://www.signatur.rtr.at/currenttl.xml", TLType.TL, TLStatus.PROD, loadTL);
+        tlLoader.loadTL("BE", "https://tsl.belgium.be/tsl-be.xml", TLType.TL, TLStatus.PROD, loadTL);
 
         Load loadDraft = new Load();
         loadDraft.setNew(false);

@@ -24,9 +24,6 @@ import java.io.File;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamReader;
-import javax.xml.transform.stream.StreamSource;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -38,7 +35,7 @@ public class ContactJaxbTest {
     @Test
     public void testMarshal() throws Exception {
 
-        File file = new File("src/test/resources/contact.xml");
+        File file = new File("src/test/resources/contact-marshal.xml");
         JAXBContext jaxbContext = JAXBContext.newInstance(ContactList.class);
 
         Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
@@ -47,25 +44,6 @@ public class ContactJaxbTest {
             Assert.assertNotNull(tlso);
             System.out.println(tlso);
         }
-        Assert.assertEquals(2, contactList.getTLSOContact().size());
-    }
-
-    @Test
-    public void testXXEMarshal() throws Exception {
-        File file = new File("src/test/resources/contact.xml");
-
-        JAXBContext jc = JAXBContext.newInstance(ContactList.class);
-        Unmarshaller unmarshaller = jc.createUnmarshaller();
-        XMLInputFactory xif = XMLInputFactory.newInstance();
-        xif.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false);
-        XMLStreamReader xsr = xif.createXMLStreamReader(new StreamSource(file));
-        ContactList contactListXXE = (ContactList) unmarshaller.unmarshal(xsr);
-
-        for (TLSOContact tlso : contactListXXE.getTLSOContact()) {
-            Assert.assertNotNull(tlso);
-            System.out.println(tlso);
-        }
-        Assert.assertEquals(2, contactListXXE.getTLSOContact().size());
-
+        Assert.assertEquals(32, contactList.getTLSOContact().size());
     }
 }

@@ -22,7 +22,6 @@ package eu.europa.ec.joinup.tsl.business.util;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.text.DateFormat;
@@ -38,7 +37,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.xml.bind.DatatypeConverter;
 import javax.xml.bind.JAXBElement;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
@@ -57,7 +55,7 @@ import org.bouncycastle.asn1.DERSequence;
 import org.bouncycastle.asn1.DLSequence;
 import org.bouncycastle.asn1.x509.Extension;
 import org.bouncycastle.asn1.x509.SubjectKeyIdentifier;
-import org.bouncycastle.x509.extension.X509ExtensionUtil;
+import org.bouncycastle.cert.jcajce.JcaX509ExtensionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -250,7 +248,7 @@ public final class TLUtils {
     // Use for "Changes" - Use LOCAL DATETIME
     public static String toStringFormat(Date date) {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if(date==null) {
+        if (date == null) {
             return "";
         }
         return df.format(date);
@@ -291,12 +289,10 @@ public final class TLUtils {
         CheckStatus tmp = CheckStatus.SUCCESS;
         if (CollectionUtils.isNotEmpty(checkResList)) {
             for (DBCheckResult checkRes : checkResList) {
-                if (checkRes.getEndDate() == null) {
-                    if (CheckStatus.ERROR.equals(checkRes.getStatus())) {
-                        return CheckStatus.ERROR;
-                    } else if (CheckStatus.WARNING.equals(checkRes.getStatus())) {
-                        tmp = CheckStatus.WARNING;
-                    }
+                if (CheckStatus.ERROR.equals(checkRes.getStatus())) {
+                    return CheckStatus.ERROR;
+                } else if (CheckStatus.WARNING.equals(checkRes.getStatus())) {
+                    tmp = CheckStatus.WARNING;
                 }
             }
         }
@@ -344,7 +340,7 @@ public final class TLUtils {
         try {
             byte[] sKI = certificateToken.getCertificate().getExtensionValue(Extension.subjectKeyIdentifier.getId());
             if (ArrayUtils.isNotEmpty(sKI)) {
-                ASN1Primitive extension = X509ExtensionUtil.fromExtensionValue(sKI);
+                ASN1Primitive extension = JcaX509ExtensionUtils.parseExtensionValue(sKI);
                 SubjectKeyIdentifier skiBC = SubjectKeyIdentifier.getInstance(extension);
                 return skiBC.getKeyIdentifier();
             } else {
@@ -375,14 +371,7 @@ public final class TLUtils {
     }
 
     public static String getStringSKIfromBytes(byte[] sKI) {
-        try {
-            ASN1Primitive extension = X509ExtensionUtil.fromExtensionValue(sKI);
-            SubjectKeyIdentifier skiBC = SubjectKeyIdentifier.getInstance(extension);
-            return Base64.encodeBase64String(skiBC.getKeyIdentifier());
-
-        } catch (IOException e) {
-            return DatatypeConverter.printBase64Binary(sKI);
-        }
+        return Base64.encodeBase64String(sKI);
     }
 
     public static String getStringDigest(String str) {

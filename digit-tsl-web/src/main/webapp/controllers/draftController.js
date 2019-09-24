@@ -172,34 +172,22 @@ digitTslWeb.controller('draftController',[ '$scope','$http','$modal','$timeout',
 			      if($scope.testFile(file)){
 					var fd = new FormData();
 					fd.append('file', file);
-					$http.post('/tl-manager/fileUpload/'+$scope.draftStoreId , fd, {
-					    transformRequest: angular.identity,
-					    headers: {'Content-Type': undefined}
-					})
-					.success(function(data, status, headers, config) {
-						if(serviceResponseHandler(data)){
-							$scope.drafts.push(data.content);
-							// If migrated -> invoke
-							// disclaimer
-							if(data.content.migrate){
-								var modalInstance = disclaimer();
-								$scope.disclaimerLoading = false;
-					    		$scope.loadingDrafts=$scope.draftController_redirection;
-					    		modalInstance.result.then(function(status) {
-									$window.location.href = '/tl-manager/tl/'+data.content.id;
-				    			});
-							}else{
-							    $window.location.href = '/tl-manager/tl/'+data.content.id;
-							};
+					httpFactory.postFile('/fileUpload/'+$scope.draftStoreId , fd).then(function(data){
+						$scope.drafts.push(data);
+						// If migrated -> invoke disclaimer
+						if(data.migrate){
+							var modalInstance = disclaimer();
+							$scope.disclaimerLoading = false;
+				    		$scope.loadingDrafts=$scope.draftController_redirection;
+				    		modalInstance.result.then(function(status) {
+								$window.location.href = '/tl-manager/tl/'+data.id;
+			    			});
 						}else{
-						    showModal.httpStatusHandler(data.responseStatus,$scope.draft_importError);
-							$scope.loadingDrafts = "";
-							$scope.loadDraft = true;
+						    $window.location.href = '/tl-manager/tl/'+data.id;
 						};
-					})
-					.error(function(data, status, headers, config) {
-					    showModal.httpStatusHandler(status,$scope.draft_importError);
-						$scope.loadingDrafts = "";
+					}, function(){
+						 showModal.httpStatusHandler(data.responseStatus,$scope.draft_importError);
+						 $scope.loadingDrafts = "";
 						$scope.loadDraft = true;
 					});
 			      }else{

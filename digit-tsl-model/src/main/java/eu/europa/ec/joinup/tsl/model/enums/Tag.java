@@ -55,6 +55,8 @@ public enum Tag {
     COMPARISON_CHECK,
     // TRANSITION
     TRANSITION_CHECK,
+    // SieQ
+    SIEQ_CHECK,
 
     // TLCC
     Structure, AddressRules, CommonRules, DigitalIdentityRules, IntegrableTLCCRules, LangAttributedRules, SchemeInformationRules, ServiceInfoExtensionsRules, SignatureRules, StringRules, StringTypesRules, TSLRules, TSPRules, TSPServiceRules, URITypesRules;

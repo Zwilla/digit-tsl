@@ -103,7 +103,7 @@ public class ApiChecksController {
         ServiceResponse<List<CheckDTO>> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-                response.setContent(checkService.getTLChecksResult(cookie.getTlId()));
+                response.setContent(checkService.getTLChecks(cookie.getTlId()));
                 response.setResponseStatus(HttpStatus.OK.toString());
             } else {
                 response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
@@ -164,8 +164,7 @@ public class ApiChecksController {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
                 TL currentTl = tlService.getTL(cookie.getTlId());
-                TL previousTl = tlService.getPublishedTLByCountryCode(currentTl.getSchemeInformation().getTerritory());
-                rulesRunner.runAllRules(currentTl, previousTl);
+                rulesRunner.runAllRulesByTL(currentTl);
                 response.setResponseStatus(HttpStatus.OK.toString());
             } else {
                 response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());

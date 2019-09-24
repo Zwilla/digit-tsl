@@ -32,6 +32,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
+import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
@@ -57,11 +58,9 @@ public class RulesValidationJobService {
     @Autowired
     private AuditService auditService;
 
-    @Autowired
-    private CheckService checkService;
-
     public void start() {
-        LOGGER.debug("**** START ****");
+        LOGGER.debug("**** START RULES VALIDATION JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, "", 0, "SYSTEM", "Start rules validation job");
         List<DBTrustedLists> notArchivedTLs = tlService.findTLNotArchived();
 
         if (CollectionUtils.isNotEmpty(notArchivedTLs)) {
@@ -69,17 +68,8 @@ public class RulesValidationJobService {
                 TL current = tlService.getTL(notArchivedTL.getId());
                 if (current != null) {
                     LOGGER.debug("START run rule for " + current.getDbName() + " @ " + TLUtils.toStringFormat(new Date()));
-                    TL previous = null;
-                    if (TLStatus.DRAFT.equals(notArchivedTL.getStatus())) {
-                        // Compare the draft with the current production
-                        previous = tlService.getPublishedTLByCountry(notArchivedTL.getTerritory());
-                        checkService.cleanResultByLocation(current.getTlId() + "_");
-                    } else {
-                        // Compare the current production with its previous version
-                        previous = tlService.getPreviousProduction(notArchivedTL.getTerritory());
 
-                    }
-                    rulesRunner.runAllRules(current, previous);
+                    rulesRunner.runAllRulesByTL(current);
                     if (TLStatus.DRAFT.equals(notArchivedTL.getStatus())) {
                         auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, notArchivedTL.getTerritory().getCodeTerritory(),
                                 notArchivedTL.getXmlFile().getId(), "SYSTEM", "CLASS:RulesValidationJobService.START,NAME:" + notArchivedTL.getName() + ",XMLFILEID:"
@@ -95,6 +85,8 @@ public class RulesValidationJobService {
                 }
             }
         }
+        LOGGER.debug("**** END RULES VALIDATION JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, "", 0, "SYSTEM", "End rules validation job");
     }
 
 }

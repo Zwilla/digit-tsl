@@ -54,9 +54,6 @@ public class TLValidator {
     private SignersService signersService;
 
     @Autowired
-    private RulesRunnerService rulesRunner;
-
-    @Autowired
     private XmlSignatureValidationService xmlSignatureValidationService;
 
     @Autowired
@@ -120,23 +117,13 @@ public class TLValidator {
     }
 
     /**
-     * Run DBChecks
+     * Validate TL Signature status
      *
      * @param tl
      */
-    public void checkTLorLOTLWithCurrentProdLOTL(DBTrustedLists tl) {
+    public void validateTLSignature(DBTrustedLists tl) {
         Map<String, List<CertificateToken>> potentialsSigners = signersService.getAllPotentialsSigners();
         checkTL(tl, potentialsSigners.get(tl.getTerritory().getCodeTerritory()));
-    }
-
-    /**
-     * Validate signature with DSS & run DBChecks
-     *
-     * @param tl
-     */
-    public void checkAllSignature(DBTrustedLists tl) {
-        checkTLorLOTLWithCurrentProdLOTL(tl);
-        rulesRunner.validateSignature(tl.getId());
     }
 
 }

@@ -43,6 +43,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXResult;
 import javax.xml.transform.stream.StreamSource;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.fop.apps.EnvironmentalProfileFactory;
 import org.apache.fop.apps.FOUserAgent;
 import org.apache.fop.apps.Fop;
@@ -63,11 +64,9 @@ import org.springframework.stereotype.Service;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
-import eu.europa.ec.joinup.tsl.business.constant.TLCCTarget;
 import eu.europa.ec.joinup.tsl.business.dto.CheckDTO;
 import eu.europa.ec.joinup.tsl.business.dto.CheckResultDTO;
 import eu.europa.ec.joinup.tsl.business.dto.NotificationPointers;
-import eu.europa.ec.joinup.tsl.business.dto.TLCCRequestDTO;
 import eu.europa.ec.joinup.tsl.business.dto.TLDifference;
 import eu.europa.ec.joinup.tsl.business.dto.TLSignature;
 import eu.europa.ec.joinup.tsl.business.dto.User;
@@ -90,13 +89,13 @@ public class PDFReportService {
     private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Autowired
+    private CheckService checkService;
+
+    @Autowired
     private TLService tlService;
 
     @Autowired
     private CountryService countryService;
-
-    @Autowired
-    private TLCCService tlccService;
 
     @Autowired
     private SignatureChangeService signatureChangeService;
@@ -123,7 +122,7 @@ public class PDFReportService {
         fopFactory = builder.build();
 
         foUserAgent = fopFactory.newFOUserAgent();
-        foUserAgent.setCreator("TL Manager");
+        foUserAgent.setCreator("TL-Manager");
         foUserAgent.setAccessibility(true);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -251,7 +250,7 @@ public class PDFReportService {
         } else {
             toSerial.setProduction(true);
             DBCountries country = countryService.getCountryByTerritory(tl.getSchemeInformation().getTerritory());
-            comparedTl = tlService.getPreviousProduction(country);
+            comparedTl = tlService.getPreviousProductionByCountry(country);
             if (comparedTl != null) {
                 TLSignature comparedSignature = tlService.getSignatureInfo(comparedTl.getTlId());
                 toSerial.setComparedTL(new PDFInfoTL(comparedTl, comparedSignature));
@@ -286,7 +285,10 @@ public class PDFReportService {
 
         toSerial.setTlccActive(tlccActive);
         if (tlccActive) {
-            toSerial.setChecks(tlccService.getErrorTlccChecks(new TLCCRequestDTO(tl.getTlId()), TLCCTarget.TRUSTED_LIST));
+            final List<CheckResultDTO> errorTlccChecks = checkService.getTLChecksResuls(tl.getTlId());
+            if (CollectionUtils.isNotEmpty(errorTlccChecks)) {
+                toSerial.setChecks(errorTlccChecks);
+            }
         }
         return toSerial;
     }

@@ -45,5 +45,5 @@ public interface TLCertificateRepository extends CrudRepository<DBCertificate, I
 
     public void deleteByTlType(TLType type);
 
-    public List<DBCertificate> findByBase64(String base64);
+    public List<DBCertificate> findBySki(byte[] ski);
 }

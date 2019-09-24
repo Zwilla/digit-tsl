@@ -56,8 +56,7 @@ public class LOTLValidationService {
     public void lotlValidation(String username) {
         DBTrustedLists dbLOTL = tlService.getLOTL();
         TL currentLOTL = tlService.getDtoTL(dbLOTL);
-        TL previousLOTL = tlService.getPreviousProduction(dbLOTL.getTerritory());
-        rulesRunnerService.runAllRules(currentLOTL, previousLOTL);
+        rulesRunnerService.runAllRulesByTL(currentLOTL);
         tlValidator.checkLOTL(dbLOTL);
         auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.VALIDATION, AuditStatus.SUCCES, "EU", dbLOTL.getXmlFile().getId(), username, "Run LOTL Validation (signature/checks)");
     }

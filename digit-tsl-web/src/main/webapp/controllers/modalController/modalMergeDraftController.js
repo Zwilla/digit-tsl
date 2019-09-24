@@ -9,6 +9,7 @@ function modalMergeDraftController($scope, $modalInstance, httpFactory, appConst
 	$scope.loadStatus = $scope.mergeDraft_preCalcul;
 	$scope.readyToMerge = false;
 	$scope.conflicts = [];
+	$scope.changes = [];
 
 	$scope.selectedCountry = null;
 	$scope.selectedDrafts = [];
@@ -57,7 +58,6 @@ function modalMergeDraftController($scope, $modalInstance, httpFactory, appConst
 			$scope.selectedCountry = $scope.countries[0];
 			updateDraftList();
 		}
-		console.log($scope.selectedCountry);
 	}
 	initModal();
 
@@ -95,6 +95,7 @@ function modalMergeDraftController($scope, $modalInstance, httpFactory, appConst
 		$scope.loadStatus = $scope.mergeDraft_preCalcul;
 		$scope.loadMerge = true;
 		$scope.conflicts = [];
+		$scope.changes = [];
 		$scope.mergeChanges = null;
 		var obj = {
 			countryCode : $scope.selectedCountry.countryCode,
@@ -121,18 +122,30 @@ function modalMergeDraftController($scope, $modalInstance, httpFactory, appConst
 	 */
 	var processMap = function(map) {
 		Object.keys(map).forEach(function(key) {
+			// Conflict
 			if (map[key].length > 1) {
 				var tmpConflict = {
 					location : key,
 					drafts : []
 				}
+
 				for (var i = 0; i < map[key].length; i++) {
 					if (tmpConflict.drafts.indexOf(map[key][i].draft) == -1) {
-						tmpConflict.drafts.push(map[key][i].draft)
+						tmpConflict.drafts.push(map[key][i].draft);
 					}
 				}
 				$scope.conflicts.push(tmpConflict);
 			}
+
+			// Changes
+			var tmpChange = {
+				location : key,
+				drafts : []
+			}
+			for (var i = 0; i < map[key].length; i++) {
+				tmpChange.drafts.push(map[key][i].draft);
+			}
+			$scope.changes.push(tmpChange);
 		});
 	}
 

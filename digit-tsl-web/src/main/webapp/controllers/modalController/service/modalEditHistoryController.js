@@ -1,11 +1,11 @@
-/************ Browse a Service Provider Extension *************/
-function modalEditHistoryController($scope, $modalInstance,$modal, history,listChecks,listDiff,properties,httpFactory,digitalIdService,
-		tabsetFactory,extensionFactory,showModal) {
+/** ********** Browse a Service Provider Extension ************ */
+function modalEditHistoryController($scope, $modalInstance, $modal, history, listChecks, listDiff, properties, httpFactory, digitalIdService,
+		tabsetFactory, extensionFactory, showModal) {
 	initMessages($scope);
 	initScope($scope);
 
 	$scope.history = angular.copy(history);
-	$scope.listChecks=listChecks;
+	$scope.listChecks = listChecks;
 	$scope.listDiffProviders = listDiff;
 	$scope.languages = languagesProperties;
 	$scope.serviceTypeIdentifiers = serviceTypeIdentifiersProperties.sort(dynamicSort("label"));
@@ -27,82 +27,86 @@ function modalEditHistoryController($scope, $modalInstance,$modal, history,listC
 		table.push(obj);
 	};
 
-	$scope.deleteTable = function(table,item) {
+	$scope.deleteTable = function(table, item) {
 		var index = table.indexOf(item);
 		table.splice(index, 1);
 	};
 
 	/*--------------- Type Identifier -----------------*/
 
-	$scope.changeTypeIdentifier = function(){
-        //if service type identifier is changed to a nothavingpki
-        if($scope.history.typeIdentifierBis.indexOf($scope.service_nothavingpki,1)>-1){
-            if($scope.history.digitalIdentification[0]!=null && ($scope.history.digitalIdentification[0].certificateList!=undefined && $scope.history.digitalIdentification[0].certificateList.length>0
-                    || $scope.history.digitalIdentification[0].subjectName || $scope.history.digitalIdentification[0].x509ski)){
-                showModal.applicationError($scope.service_warnNonOtherPki);
-                $scope.history.typeIdentifierBis = $scope.history.typeIdentifier;
-                return;
-            };
-        }
-        $scope.history.typeIdentifier = $scope.history.typeIdentifierBis;
-    };
+	$scope.changeTypeIdentifier = function() {
+		// if service type identifier is changed to a nothavingpki
+		if ($scope.service.typeIdentifierBis.indexOf($scope.service_nothavingpki, 1) > -1) {
+			if (($scope.service.digitalIdentification != null && $scope.service.digitalIdentification.length > 0 && $scope.service.digitalIdentification[0] != null)
+					&& (($scope.service.digitalIdentification[0].certificateList != undefined && $scope.service.digitalIdentification[0].certificateList.length > 0)
+							|| $scope.service.digitalIdentification[0].subjectName || $scope.service.digitalIdentification[0].x509ski)) {
+				showModal.applicationError($scope.service_warnNonOtherPki);
+				$scope.service.typeIdentifierBis = $scope.service.typeIdentifier;
+				return;
+			}
+		}
+		$scope.service.typeIdentifier = $scope.service.typeIdentifierBis;
+	};
 
-	var initTypeIdentifier = function(){
-		if(history.typeIdentifier!=undefined && history.typeIdentifier!=null){
+	var initTypeIdentifier = function() {
+		if (history.typeIdentifier != undefined && history.typeIdentifier != null) {
 			$scope.history.typeIdentifierBis = history.typeIdentifier;
-		} else{
+		} else {
 			$scope.history.typeIdentifierBis = "";
-		};
+		}
+		;
 	};
 	initTypeIdentifier();
 
 	/*------------------------------ Digital Identification (Factory) ----------------------------*/
 
-	$scope.deleteDigitalIdentitie = function(digital){
-		$scope.history.digitalIdentification.splice($scope.history.digitalIdentification.indexOf(digital),1);
+	$scope.deleteDigitalIdentitie = function(digital) {
+		$scope.history.digitalIdentification.splice($scope.history.digitalIdentification.indexOf(digital), 1);
 	};
 
 	$scope.addDigitalIdentitie = function() {
-		if($scope.history.typeIdentifier.indexOf($scope.service_nothavingpki,1)!=-1){
-			digitalIdService.addDigitalOther(listDiff,listChecks,"history").then(function(other) {
+		if ($scope.history.typeIdentifier.indexOf($scope.service_nothavingpki, 1) != -1) {
+			digitalIdService.addDigitalOther(listDiff, listChecks, "history").then(function(other) {
 				$scope.history.digitalIdentification.push(other);
 			});
-		}else{
-			digitalIdService.addDigitalIdentitie(listDiff,listChecks,"history").then(function(tmpDigital) {
+		} else {
+			digitalIdService.addDigitalIdentitie(listDiff, listChecks, "history").then(function(tmpDigital) {
 				$scope.history.digitalIdentification.push(tmpDigital);
 			});
-		};
+		}
+		;
 	};
 
-	$scope.editDigitalIdentitie = function(digital,index){
+	$scope.editDigitalIdentitie = function(digital, index) {
 		var digitalBackUp = angular.copy(digital);
 		digitalBackUp.checkToRun = $scope.history.checkToRun;
-		digitalIdService.editDigitalIdentitie(digitalBackUp,listDiff,listChecks,"history",$scope.history.typeIdentifier).then(function(tmpDigital) {
-			$scope.history.digitalIdentification[index] = tmpDigital;
-		});
+		digitalIdService.editDigitalIdentitie(digitalBackUp, listDiff, listChecks, "history", $scope.history.typeIdentifier).then(
+				function(tmpDigital) {
+					$scope.history.digitalIdentification[index] = tmpDigital;
+				});
 	};
 
 	/*--------------- Extension (Factory) -----------------*/
 
-	$scope.labelExtension = function(extension){
+	$scope.labelExtension = function(extension) {
 		return extensionFactory.extensionLabel(extension);
 	};
 
-	$scope.browserExtension  = function(extension,serviceName){
-		extensionFactory.browseExtension(extension,serviceName);
+	$scope.browserExtension = function(extension, serviceName) {
+		extensionFactory.browseExtension(extension, serviceName);
 	};
 
-	$scope.addExtension = function(typeExtension){
+	$scope.addExtension = function(typeExtension) {
 		extensionFactory.addExtension(typeExtension).then(function(ext) {
 			$scope.history.extension.push(ext);
 		});
 	};
 
-	$scope.editExtension = function(extension,index){
+	$scope.editExtension = function(extension, index) {
 		var extBackUp = angular.copy(extension);
-		extensionFactory.editExtension(extension,$scope.listChecks,$scope.listDiffProviders).then(function(ext) {
+		extensionFactory.editExtension(extension, $scope.listChecks, $scope.listDiffProviders).then(function(ext) {
 			$scope.history.extension[index] = ext;
-		}, function(){
+		}, function() {
 			$scope.history.extension[index] = extBackUp;
 		});
 	};

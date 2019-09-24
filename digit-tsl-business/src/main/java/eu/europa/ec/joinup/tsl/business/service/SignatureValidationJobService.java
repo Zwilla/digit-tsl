@@ -20,6 +20,7 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +31,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.repository.TLRepository;
+import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
+import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
+import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
+import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
 import eu.europa.esig.dss.x509.CertificateToken;
@@ -47,6 +52,9 @@ public class SignatureValidationJobService {
     private TLRepository tlRepository;
 
     @Autowired
+    private AuditService auditService;
+
+    @Autowired
     private SignersService signersService;
 
     @Autowired
@@ -56,7 +64,8 @@ public class SignatureValidationJobService {
     private CountryService countryService;
 
     public void start() {
-        LOGGER.debug("**** START ****");
+        LOGGER.debug("**** START SIGNATURE VALIDATION " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, "", 0, "SYSTEM", "Start signature validation job");
         DBTrustedLists lotl = tlRepository.findByTerritoryAndStatusAndArchiveFalse(countryService.getLOTLCountry(), TLStatus.PROD);
         if (lotl != null) {
             Map<String, List<CertificateToken>> potentialSigners = signersService.getTLPotentialsSigners();
@@ -72,5 +81,7 @@ public class SignatureValidationJobService {
                 }
             }
         }
+        LOGGER.debug("**** END SIGNATURE VALIDATION " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.CHECKSIGNATURE, AuditStatus.SUCCES, "", 0, "SYSTEM", "End signature validation job");
     }
 }

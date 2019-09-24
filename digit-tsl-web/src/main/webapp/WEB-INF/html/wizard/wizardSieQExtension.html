@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
+<script th:src="@{/controllers/wizard/sieQExtensionController.js}"></script>
+<script th:src="@{/script/directive/UriDirective.js}"></script>
+<script th:src="@{/script/functions/serviceNode.js}"></script>
+<script th:src="@{/script/directive/digitalIdentityDirective.js}"></script>
+<script th:src="@{/script/directive/extensionDirective.js}"></script>
+<script th:src="@{/script/factory/extensionFactory.js}"></script>
+</head>
+<body>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
+
+	<div class="body" ng-controller="sieQExtensionController">
+
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
+
+		<!-- MAIN CONTENT -->
+		<main>
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{wizard.sieqExtension.menu}"></span>
+			</div>
+			<!-- Informations -->
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-lg-12">
+					<span class="fa fa-info-circle"></span>
+					<span th:text="#{wizard.sieqExtension.info}"></span>
+				</div>
+			</div>
+			<br />
+			<!-- Loading  -->
+			<div ng-show="!load">
+				<div align="center">
+					<label th:text="#{wizard.sieqExtension.inProgress}"></label>
+				</div>
+				<th:block th:replace="spinner :: spinner"></th:block>
+			</div>
+			<!-- Criterias -->
+			<div ng-show="load && !searchInit" class="row">
+				<!-- Certificate -->
+				<div class="row">
+					<div class="wizard-tlsigning-row">
+						<span th:text="#{tCertificate}"></span>
+					</div>
+					<div class="wizard-tlsigning-radio">
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="certificateType" value="FILE" class="radio-alignement">
+							<span th:text="#{tFile}"></span>
+						</label>
+						<label class="checkbox-inline">
+							<input type="radio" name="type" ng-model="certificateType" value="B64" class="radio-alignement">
+							<span th:text="#{tB64}"></span>
+						</label>
+					</div>
+				</div>
+				<!-- Input file -->
+				<div class="row" style="margin-top: 15px;" ng-if="certificateType=='FILE'">
+					<div class="wizard-tlsigning-row">
+						<span th:text="#{wizard.sieqExtension.certFile}"></span>
+					</div>
+					<input id="fileInput" type="file" class="wizard-tlsigning-certinpute" onchange="angular.element(this).scope().uploadFile(this.files[0])" />
+				</div>
+				<!-- Input B64 -->
+				<div class="row" style="margin-top: 15px;" ng-show="certificateType=='B64'">
+					<div class="wizard-tlsigning-row" style="vertical-align: top;">
+						<span th:text="#{wizard.sieqExtension.certB64}"></span>
+					</div>
+					<div class="wizard-tlsigning-certinpute">
+						<textarea ng-model="requestForm.certificateB64" rows="5" cols="100" style="margin-left: 0px; resize: none;"></textarea>
+					</div>
+				</div>
+				<!-- Submit -->
+				<div class="row">
+					<button class="btn btn-primary" ng-click="submitCertificate()" ng-disabled="isSubmitDisabled()" th:text="#{wizard.sieqExtension.runValidation}" style="float: right; margin-right: 10px;"></button>
+				</div>
+				<br />
+			</div>
+
+			<!-- Results -->
+			<div ng-if="load && searchInit" class="row">
+				<!-- Certificate -->
+				<div class="row col-lg-12" ng-init="tCertificate = initCert(validationResult.certificate)">
+					<div>
+						<label th:text="#{tCertificate}"></label>
+						<div class="wizard-certificate-carret">
+							<span ng-click="tCertificate.show=true" ng-if="tCertificate.show==false" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+							<span ng-click="tCertificate.show=false" ng-if="tCertificate.show==true" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+						</div>
+						<span>{{tCertificate.certSubjectShortName}} ({{ tCertificate.certNotBefore | date:'yyyy-MM-dd'}} - {{ tCertificate.certAfter | date:'yyyy-MM-dd'}})</span>
+					</div>
+					<th:block th:replace="certificat :: certificat" th:remove="tag"></th:block>
+				</div>
+				<!-- Results -->
+				<div ng-if="validationResult.services!=null && validationResult.services.length>0">
+					<!-- Trust anchors -->
+					<div class="row col-lg-12">
+						<label th:text="#{wizard.sieqExtension.trustAnchor}"></label>
+					</div>
+					<!-- Services -->
+					<div ng-repeat="result in validationResult.services track by $index" class="row col-lg-12">
+						<div style="margin-left: 15px;" ng-class="isOpen(service.show)">
+							<div class="openClose">
+								<span ng-if="result.service.show!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="result.service.show='1'"></span>
+								<span ng-if="result.service.show=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="result.service.show='0'"></span>
+							</div>
+							<span>{{result.service.serviceName[0].value | cut:true:55:'...'}}</span>
+							<div ng-bind-html="serviceNode(service)" style="display: inline;" ng-if="result.service.show!='1'"></div>
+						</div>
+						<div ng-if="result.service.show=='1'" style="margin-left: 15px;" class="isOpenBorder">
+							<!-- Service Information -->
+							<div class="container-fluid isOpenTopBorder">
+								<!-- Matching qualifiers -->
+								<div class="row">
+									<div class="col-sm-2 qualifiers-information text-right">
+										<span th:text="#{wizard.sieqExtension.capturedQualifiers}"></span>
+									</div>
+									<div class="col-sm-10">
+										<label ng-if="result.qualifiers.length==0">No qualifier found</label>
+										<span ng-if="result.qualifiers.length>0" ng-repeat="qualifier in result.qualifiers">
+											<label>{{qualifier}}</label>
+											;
+										</span>
+									</div>
+								</div>
+								<!-- Country Code-->
+								<div class="row">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{tbCountry}"></span>
+									</div>
+									<div class="col-sm-9">
+										<uri value="result.countryCode"></uri>
+									</div>
+								</div>
+								<!-- Type Identifier -->
+								<div class="row">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.serviceInformation.type}"></span>
+									</div>
+									<div class="col-sm-9">
+										<uri value="result.service.typeIdentifier"></uri>
+									</div>
+								</div>
+								<!-- Service Name -->
+								<div class="row" ng-hide="tableVisibility(result.service.serviceName)">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.serviceName}"></span>
+									</div>
+									<div class="col-sm-10" ng-init="result.service.serviceNameShow='0'">
+										<div class="openClose">
+											<span ng-if="result.service.serviceNameShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="result.service.serviceNameShow='1'"></span>
+											<span ng-if="result.service.serviceNameShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="result.service.serviceNameShow='0'"></span>
+										</div>
+										<div ng-if="result.service.serviceNameShow=='0'" class="tabInformationClose">
+											<span>{{result.service.serviceName[0].value}}</span>
+										</div>
+										<div ng-if="result.service.serviceNameShow=='1'" class="tabInformationOpen">
+											<tabset> <tab ng-repeat="info in result.service.serviceName"> <tab-heading> <span>{{info.language}}</span> </tab-heading> <span style="margin-top: 3px;">{{info.value}}</span>
+											</tab> </tabset>
+										</div>
+									</div>
+								</div>
+								<!-- Current Status -->
+								<div class="row">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.serviceInformation.currentState}"></span>
+									</div>
+									<div class="col-sm-9">
+										<uri value="result.service.currentStatus"></uri>
+									</div>
+								</div>
+								<!-- Status Starting Date -->
+								<div class="row">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.serviceInformation.stateDate}"></span>
+									</div>
+									<div class="col-sm-9">
+										<span>{{result.service.currentStatusStartingDate | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+									</div>
+								</div>
+								<!-- Scheme Definition URI -->
+								<div class="row" ng-hide="tableVisibility(result.service.schemeDefinitionUri)">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.schemeDef}"></span>
+									</div>
+									<div class="col-sm-10" ng-init="result.service.schemeDefinitionURIShow='0'">
+										<div class="openClose">
+											<span ng-click="result.service.schemeDefinitionURIShow='1'" ng-if="result.service.schemeDefinitionURIShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer"></span>
+											<span ng-click="result.service.schemeDefinitionURIShow='0'" ng-if="result.service.schemeDefinitionURIShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer"></span>
+										</div>
+										<div ng-if="result.service.schemeDefinitionURIShow=='0'" class="tabInformationClose">
+											<uri value="result.service.schemeDefinitionUri[0].value"></uri>
+										</div>
+										<div ng-if="result.service.schemeDefinitionURIShow=='1'" class="tabInformationOpen">
+											<tabset> <tab ng-repeat="info in result.service.schemeDefinitionUri"> <tab-heading> <span style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <uri
+												value="info.value"></uri> </tab> </tabset>
+										</div>
+									</div>
+								</div>
+								<!-- Service Supply Point -->
+								<div class="row" ng-hide="tableVisibility(result.service.supplyPoint)">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.serviceSupply}"></span>
+									</div>
+									<div class="col-sm-10" ng-init="result.service.supplyPointShow='0'">
+										<div ng-repeat="info in result.service.supplyPoint" style="display: block;">
+											<uri value="info.value" style="margin-top: 3px;"></uri>
+										</div>
+									</div>
+								</div>
+								<!-- TSP Definition URI -->
+								<div class="row" ng-hide="tableVisibility(result.service.tspdefinitionUri)">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.tspSchemeDef}"></span>
+									</div>
+									<div class="col-sm-10" ng-init="result.service.serviceDefinitionURIShow='0'">
+										<div class="openClose">
+											<span ng-if="result.service.serviceDefinitionURIShow!='1'" class="fa fa-caret-right closeTabIcon cursor-pointer" ng-click="result.service.serviceDefinitionURIShow='1'"></span>
+											<span ng-if="result.service.serviceDefinitionURIShow=='1'" class="fa fa-caret-down openTabIcon cursor-pointer" ng-click="result.service.serviceDefinitionURIShow='0'"></span>
+										</div>
+										<div ng-if="result.service.serviceDefinitionURIShow=='0'" class="tabInformationClose">
+											<uri value="result.service.tspdefinitionUri[0].value" style="margin-top: 3px;"></uri>
+										</div>
+										<div ng-if="result.service.serviceDefinitionURIShow=='1'" class="tabInformationOpen">
+											<tabset> <tab ng-repeat="info in result.service.tspdefinitionUri"> <tab-heading> <span style="margin-left: 5px;">{{info.language}}</span> </tab-heading> <uri
+												value="info.value" style="margin-top: 3px;"></uri> </tab> </tabset>
+										</div>
+									</div>
+								</div>
+								<!-- Extension -->
+								<div class="row" ng-hide="tableVisibility(result.service.extension)">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.extension}" style="margin-left: 2px;"></span>
+									</div>
+									<div class="col-sm-10" ng-if="result.service.extension[0]!=null" style="padding-right: 0">
+										<extensiondir extension="result.service.extension[0]"></extensiondir>
+									</div>
+									<div class="row" ng-repeat="extension in result.service.extension" ng-hide="$first">
+										<div class="col-sm-2"></div>
+										<div style="display: inline-block; padding-right: 0" class="col-sm-10">
+											<extensiondir extension="extension"></extensiondir>
+										</div>
+									</div>
+								</div>
+								<!-- Digital Identity -->
+								<div class="row">
+									<div class="col-sm-2 scheme-information text-right">
+										<span th:text="#{serviceProvider.digitalIdentities}" style="margin-left: 2px;"></span>
+									</div>
+									<div class="col-sm-10" style="padding-right: 0">
+										<digitalidentity digital="result.service.digitalIdentification[0]"></digitalidentity>
+									</div>
+								</div>
+							</div>
+						</div>
+						<br />
+					</div>
+				</div>
+				<!-- No results -->
+				<div class="row col-lg-12" ng-if="validationResult.services==null || validationResult.services.length==0">
+					<label th:text="#{wizard.sieqExtension.noResults}"></label>
+				</div>
+				<div class="row" style="margin-top: 15px;">
+					<button class="btn btn-primary" ng-click="resetSearch()" th:text="#{wizard.sieqExtension.reset.search}" style="float: right; margin-right: 10px;"></button>
+				</div>
+			</div>
+			<br /> <br />
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
+</body>
+</html>

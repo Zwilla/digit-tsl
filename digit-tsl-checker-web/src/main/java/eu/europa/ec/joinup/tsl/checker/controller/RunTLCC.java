@@ -20,6 +20,7 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.checker.controller;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -50,7 +51,9 @@ import org.w3c.dom.Element;
 
 import edu.upc.ac.tsl.conformance.checker.forintegration.IntegrableTSLChecker;
 import edu.upc.ac.tsl.conformance.tools.ByteArray;
+import eu.europa.ec.joinup.tsl.checker.dto.TLCCFileRequestDTO;
 import eu.europa.ec.joinup.tsl.checker.dto.TLCCRequestDTO;
+import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.KeyStoreCertificateSource;
 
@@ -114,8 +117,40 @@ public class RunTLCC {
             StringWriter wrt = new StringWriter();
             TransformerFactory.newInstance().newTransformer().transform(new DOMSource(el), new StreamResult(wrt));
             return wrt.toString();
+
+        } catch (UnsupportedEncodingException e) {
+            LOGGER.error("TLCC read all rules integrable error.", e);
+            throw new IllegalStateException("TLCC rules file can't be find or read.");
         } catch (Exception e) {
             LOGGER.error("Error TLCC call " + requestDTO, e);
+            return null;
+        }
+    }
+
+    @POST
+    @Path("/file/executeAllChecks")
+    public String executeAllChecksFromFile(TLCCFileRequestDTO tlccFileRequest) {
+        File rulesFile = new File(this.getClass().getClassLoader().getResource("AllRules_Integrable.csv").getFile());
+        String rulesPath = "";
+        try (InputStream lotlIS = new ByteArrayInputStream(tlccFileRequest.getLotlFile()); InputStream tlIS = new ByteArrayInputStream(tlccFileRequest.getTlFile())) {
+            rulesPath = URLDecoder.decode(rulesFile.getAbsolutePath(), "utf-8");
+            EUMSTLsSigningCertsAsInECLOLReader asInECLOL = new EUMSTLsSigningCertsAsInECLOLReader(lotlIS);
+            Map<String, TreeSet<ByteArray>> mapSigning = asInECLOL.getEUMSTLsSigingCertsByCountryCode();
+
+            List<X509Certificate> keystore = new ArrayList<>();
+            for (String b64 : tlccFileRequest.getKeyStore()) {
+                CertificateToken token = DSSUtils.loadCertificateFromBase64EncodedString(b64);
+                keystore.add(token.getCertificate());
+            }
+
+            IntegrableTSLChecker tslChecker = new IntegrableTSLChecker(mapSigning, keystore, rulesPath, true);
+            Element el = tslChecker.verifyTL("1", tlIS);
+
+            StringWriter wrt = new StringWriter();
+            TransformerFactory.newInstance().newTransformer().transform(new DOMSource(el), new StreamResult(wrt));
+            return wrt.toString();
+        } catch (Exception e) {
+            LOGGER.error("Error TLCC call ", e);
             return null;
         }
     }

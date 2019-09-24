@@ -42,10 +42,11 @@ public class CheckDTO implements Serializable {
     private CheckStatus status;
     private CheckImpact impact;
     private String description;
+    private String translation;
+    private String standardReference;
     private CheckType type;
 
     private Date startDate;
-    private Date endDate;
     private Long since;
 
     public CheckDTO() {
@@ -53,33 +54,34 @@ public class CheckDTO implements Serializable {
 
     public CheckDTO(DBCheck db) {
         super();
-        id = db.getId();
-        hrLocation = "";
-        target = db.getTarget();
-        name = db.getName();
-        status = db.getPriority();
-        impact = db.getImpact();
-        description = db.getDescription();
-        type = db.getType();
+        this.id = db.getId();
+        this.hrLocation = "";
+        this.target = db.getTarget();
+        this.name = db.getName();
+        this.status = db.getPriority();
+        this.impact = db.getImpact();
+        this.description = db.getDescription();
+        this.type = db.getType();
+        this.translation = db.getTranslation();
+        this.standardReference = db.getStandardReference();
     }
 
     public CheckDTO(CheckResultDTO checkResult) {
-        id = checkResult.getId();
-        hrLocation = checkResult.getLocation();
-        description = checkResult.getDescription();
-        status = checkResult.getStatus();
+        this.id = checkResult.getId();
+        this.hrLocation = checkResult.getLocation();
+        this.description = checkResult.getDescription();
+        this.status = checkResult.getStatus();
+        this.translation = checkResult.getTranslation();
+        this.standardReference = checkResult.getStandardReference();
     }
 
     public CheckDTO(DBCheckResult dbResult) {
-        id = dbResult.getLocation();
-        hrLocation = dbResult.getHrLocation();
-        description = dbResult.getDescription();
-        status = dbResult.getStatus();
-
-        startDate = dbResult.getStartDate();
-        since = dbResult.getSince();
-        endDate = dbResult.getEndDate();
-
+        this.id = dbResult.getLocation();
+        this.hrLocation = dbResult.getHrLocation();
+        this.description = dbResult.getDescription();
+        this.status = dbResult.getStatus();
+        this.translation = dbResult.getCheck().getTranslation();
+        this.standardReference = dbResult.getCheck().getStandardReference();
     }
 
     public String getId() {
@@ -154,20 +156,28 @@ public class CheckDTO implements Serializable {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
     public Long getSince() {
         return since;
     }
 
     public void setSince(Long since) {
         this.since = since;
+    }
+
+    public String getTranslation() {
+        return translation;
+    }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
+
+    public String getStandardReference() {
+        return standardReference;
+    }
+
+    public void setStandardReference(String standardReference) {
+        this.standardReference = standardReference;
     }
 
 }

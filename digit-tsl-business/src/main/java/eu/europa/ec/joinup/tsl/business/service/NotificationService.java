@@ -183,7 +183,7 @@ public class NotificationService {
      * @param notification
      */
     public ByteArrayOutputStream getNotificationOs(NotificationPointers notification) {
-        if ((notification.getHrPointer() != null) && StringUtils.isNotEmpty(notification.getHrPointer().getTlLocation())) {
+        if (notification.getHrPointer() != null && StringUtils.isNotEmpty(notification.getHrPointer().getTlLocation())) {
             String hrLocation = notification.getHrPointer().getTlLocation();
             notification.getHrPointer().setTlLocation(hrLocation);
             notification.getHrPointer().setMimeType(MimeType.PDF);
@@ -195,6 +195,8 @@ public class NotificationService {
             } else {
                 notification.getHrPointer().setSchemeTerritory(notification.getTlsoContact().getTerritory());
             }
+        } else if (notification.getHrPointer() != null && StringUtils.isEmpty(notification.getHrPointer().getTlLocation()) && StringUtils.isEmpty(notification.getHrPointer().getSchemeTerritory())) {
+            notification.setHrPointer(null);
         }
         DateFormat df = new SimpleDateFormat(DATE_FORMAT);
         String docID = notification.getMpPointer().getSchemeTerritory() + "-" + df.format(notification.getCreationDate());

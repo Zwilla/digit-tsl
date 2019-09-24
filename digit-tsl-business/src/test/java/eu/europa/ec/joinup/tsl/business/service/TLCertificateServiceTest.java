@@ -42,10 +42,11 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLDigitalIdentification;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLPointersToOtherTSL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.approachbreak.CertificateElement;
 import eu.europa.ec.joinup.tsl.business.repository.TLCertificateRepository;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.model.DBCertificate;
 import eu.europa.ec.joinup.tsl.model.enums.MimeType;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
-import eu.europa.esig.dss.DSSUtils;
+import eu.europa.esig.dss.validation.SignatureValidationContext;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.jaxb.v5.tsl.TrustStatusListTypeV5;
 
@@ -157,8 +158,15 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
 
         if (directoryListing != null) {
             for (File file : directoryListing) {
-                ca = DSSUtils.loadCertificate(file);
-                rootCA = certificateService.getRootCertificate(ca);
+                ca = CertificateTokenUtils.loadCertificate(file);
+                SignatureValidationContext svc = certificateService.initSVC(ca);
+                final Set<CertificateToken> rootCAs = certificateService.getRootCertificate(ca, svc);
+                if (CollectionUtils.isEmpty(rootCAs)) {
+                    rootCA = null;
+                } else {
+                    rootCA = rootCAs.iterator().next();
+                }
+
                 if (rootCA == null) {
                     // Bad cert
                     ArrayUtils.contains(badCerts, file.getName());
@@ -166,11 +174,14 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
                 } else {
                     // Good cert
                     ArrayUtils.contains(goodCerts, file.getName());
-                    Set<ServiceDataDTO> rootServices = certificateService.getServicesByRootCA(ca);
+                    Set<ServiceDataDTO> rootServices = certificateService.getServicesByCertificate(ca, svc);
                     Assert.assertTrue(!rootServices.isEmpty());
                     if (file.getName().equals("5E2FDC8BDFC7F3B1DF8B34EA0B10E7550F90F894219AB43C35F47F24A645D7AD.cer")) {
                         // 3 Services use the same root CA
                         Assert.assertEquals(3, rootServices.size());
+                    } else if (file.getName().equals("5AA887CC7082CE5107FD737A00D1D3E0D99A30A3F9CF4F2AF22BB1A1D1DDBECC.cer")
+                            || file.getName().equals("5F7DB6AA051CA3384FCE329513E5474706A2B2C5FA2EDCAB1FF3984CEEC292D7.cer")) {
+                        Assert.assertEquals(2, rootServices.size());
                     } else {
                         Assert.assertEquals(1, rootServices.size());
                     }
@@ -188,14 +199,14 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
         Assert.assertEquals(1, signingCertificates.size());
         // CommonCertificateVerifier null during retrieve certificate
         CertificateToken token = signingCertificates.iterator().next();
-        Assert.assertNull(token.getTrustAnchor());
-        Assert.assertTrue(certificateService.getServicesByRootCA(token).isEmpty());
+        SignatureValidationContext svc = certificateService.initSVC(token);
+        Assert.assertTrue(certificateService.getServicesByCertificate(token, svc).isEmpty());
 
         loadAllTLs("");
         signingCertificates = certificateService.retrieveSigningCertificatesFromFile(f);
         token = signingCertificates.iterator().next();
-        Assert.assertNotNull(token.getTrustAnchor());
-        Set<ServiceDataDTO> servicesByRootCA = certificateService.getServicesByRootCA(token);
+        svc = certificateService.initSVC(token);
+        Set<ServiceDataDTO> servicesByRootCA = certificateService.getServicesByCertificate(token, svc);
         Assert.assertFalse(servicesByRootCA.isEmpty());
         ServiceDataDTO sd = servicesByRootCA.iterator().next();
         Assert.assertNotNull(sd);
@@ -208,9 +219,11 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
 
         Set<CertificateToken> retrieveSigningCertificatesFromFile = certificateService.retrieveSigningCertificatesFromFile(new File("src/test/resources/signed-files/HR.xml"));
         for (CertificateToken certificateToken : retrieveSigningCertificatesFromFile) {
-            CertificateToken rootCertificate = certificateService.getRootCertificate(certificateToken);
+            SignatureValidationContext svc = certificateService.initSVC(certificateToken);
+            CertificateToken rootCertificate = certificateService.getRootCertificate(certificateToken, svc).iterator().next();
             Assert.assertNotNull(rootCertificate);
-            Set<ServiceDataDTO> servicesByRootCA = certificateService.getServicesByRootCA(rootCertificate);
+            svc = certificateService.initSVC(rootCertificate);
+            Set<ServiceDataDTO> servicesByRootCA = certificateService.getServicesByCertificate(rootCertificate, svc);
             Assert.assertFalse(servicesByRootCA.isEmpty());
             Assert.assertEquals(2, servicesByRootCA.size());
         }

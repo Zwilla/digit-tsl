@@ -156,10 +156,11 @@ public class TLLoader {
         }
 
         xmlFile = tl.getXmlFile();
-        xmlFile.setLastScanDate(new Date());
+        Date date = new Date();
         if (isNewXML) {
             xmlFile.setDigest(xmlDigest);
-            xmlFile.setFirstScanDate(new Date());
+            xmlFile.setFirstScanDate(date);
+            xmlFile.setLastScanDate(date);
 
             // Check if digest match an existing file
             if (CollectionUtils.isEmpty(matchingTL)) {
@@ -172,6 +173,8 @@ public class TLLoader {
 
             auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CREATE, AuditStatus.SUCCES, countryCode, xmlFile.getId(), "SYSTEM",
                     "CLASS:TLLoader.LOADTL_CREATETL,TLID:" + tl.getId() + ",NEWXML:" + isNewXML + ",XMLDIGEST --> " + xmlDigest);
+        } else {
+            xmlFile.setLastScanDate(date);
         }
 
         try {
@@ -251,8 +254,7 @@ public class TLLoader {
             LOGGER.debug("check on " + dbTl.getId() + "[ " + dbTl.getName() + "]");
             TL current = tlService.getPublishedTLByCountry(dbTl.getTerritory());
             if ((current != null) && (current.getTlId() > 0)) {
-                TL previous = tlService.getPreviousProduction(dbTl.getTerritory());
-                rulesRunner.runAllRules(current, previous);
+                rulesRunner.runAllRulesByTL(current);
                 auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CHECKCONFORMANCE, AuditStatus.SUCCES, dbTl.getTerritory().getCodeTerritory(), dbTl.getXmlFile().getId(), "SYSTEM",
                         "CLASS:TLLoader.CHECK,NAME:" + dbTl.getName() + ",XMLFILEID:" + dbTl.getXmlFile().getId() + ",XMLDIGEST:" + dbTl.getXmlFile().getDigest());
             }
@@ -284,7 +286,7 @@ public class TLLoader {
         DBTrustedLists dbTlOld = tlService.getDbTL(load.getTlId());
         DBTrustedLists dbTl = tlService.getPublishedDbTLByCountry(dbTlOld.getTerritory());
         LOGGER.debug("checkSig on " + dbTl.getId() + "[ " + dbTl.getName() + "]");
-        tlValidator.checkTLorLOTLWithCurrentProdLOTL(dbTl);
+        tlValidator.validateTLSignature(dbTl);
     }
 
     /**

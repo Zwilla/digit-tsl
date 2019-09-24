@@ -115,6 +115,7 @@ public class AuditService {
      * @param infos
      * @return
      */
+    @Transactional(value = TxType.REQUIRES_NEW)
     public Audit addAuditLog(AuditTarget target, AuditAction action, AuditStatus status, String cc, int fileId, String username, String infos) {
         LOGGER.debug("addAuditLog for " + target);
         DBAudit dbAudit = new DBAudit();

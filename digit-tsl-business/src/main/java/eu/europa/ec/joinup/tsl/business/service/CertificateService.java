@@ -60,6 +60,7 @@ import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.esig.dss.DSSASN1Utils;
 import eu.europa.esig.dss.DSSRevocationUtils;
 import eu.europa.esig.dss.tsl.KeyUsageBit;
+import eu.europa.esig.dss.validation.SignatureValidationContext;
 import eu.europa.esig.dss.x509.CertificateToken;
 
 @Service
@@ -115,35 +116,35 @@ public class CertificateService {
         List<CheckResultDTO> checkResults = new ArrayList<>();
         // Check country attribute match
         if (!countryMatchSchemeTerritory(certificateToken, schemeTerritory)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_COUNTRY_ATTRIBUTE)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_COUNTRY_ATTRIBUTE)));
         }
         // Check organization attribute match
         if (!organizationMatchOperatorName(certificateToken, new ArrayList<String>(TLUtils.extractEnglishValues(prodTL.getSchemeInformation().getSchemeOpeName())))) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_ORGANIZATION_ATTRIBUTE)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_ORGANIZATION_ATTRIBUTE)));
         }
         // Check validity
         if (certificateIsExpired(certificateToken, new Date())) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_CERT_EXPIRED)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_CERT_EXPIRED)));
         }
         // Check extendedKeyUsages - tslSigning
         if (!hasTslSigningExtendedKeyUsage(certificateToken)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_EXTEND_KU)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_EXTEND_KU)));
         }
         // Check KeyUsages (digitalSignature and/or nonRepudiation)
         if (!hasAllowedKeyUsagesBits(certificateToken)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_KU)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_KU)));
         }
         // Check basic constraints false
         if (!isBasicConstraintCaFalse(certificateToken)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_BASIC_CONSTRAINTS)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_BASIC_CONSTRAINTS)));
         }
         // Check issuer is self-signed or issuyedBy a TSP from TLs
         if (!isIssuerVerified(certificateToken)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_ISSUER)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_ISSUER)));
         }
         // Check SKI value according to RFC 5280
         if (!isSKIComputeRight(certificateToken)) {
-            checkResults.add(new CheckResultDTO(checkService.getCheckById(CHECK_SKI_VALUE)));
+            checkResults.add(new CheckResultDTO("", checkService.getCheckById(CHECK_SKI_VALUE)));
         }
 
         return new TLSigningCertificateResultDTO(certificateToken.getEncoded(), checkResults);
@@ -256,7 +257,7 @@ public class CertificateService {
      */
     public boolean hasAllowedKeyUsagesBits(CertificateToken certificate) {
         if (certificate != null) {
-            Set<KeyUsageBit> keyUsageBits = certificate.getKeyUsageBits();
+            List<KeyUsageBit> keyUsageBits = certificate.getKeyUsageBits();
             if (CollectionUtils.size(keyUsageBits) == 1) {
                 return (keyUsageBits.contains(KeyUsageBit.digitalSignature) || keyUsageBits.contains(KeyUsageBit.nonRepudiation));
             } else if (CollectionUtils.size(keyUsageBits) == 2) {
@@ -289,8 +290,9 @@ public class CertificateService {
         if (certificate.isSelfSigned()) {
             return true;
         } else {
-            CertificateToken rootCertificate = tlCertificateService.getRootCertificate(certificate);
-            return rootCertificate != null;
+            SignatureValidationContext svc = tlCertificateService.initSVC(certificate);
+            Set<CertificateToken> rootCertificate = tlCertificateService.getRootCertificate(certificate, svc);
+            return (!CollectionUtils.isEmpty(rootCertificate));
         }
     }
 

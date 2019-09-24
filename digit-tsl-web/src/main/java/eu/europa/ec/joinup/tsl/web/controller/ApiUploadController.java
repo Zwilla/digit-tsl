@@ -45,9 +45,9 @@ import eu.europa.ec.joinup.tsl.business.service.TLDraftService;
 import eu.europa.ec.joinup.tsl.business.service.TLService;
 import eu.europa.ec.joinup.tsl.business.service.TLValidator;
 import eu.europa.ec.joinup.tsl.business.service.UserService;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 
 @Controller
@@ -83,12 +83,11 @@ public class ApiUploadController {
                     DBTrustedLists newDraft = draftService.createDraftFromXML(myFile.getBytes(), cookieId, userName, load);
 
                     // CHECK SIGNATURE
-                    tlValidator.checkTLorLOTLWithCurrentProdLOTL(newDraft);
+                    tlValidator.validateTLSignature(newDraft);
 
                     // EXECUTE ALL CHECK
                     TL draft = tlService.getTL(newDraft.getId());
-                    TL currentProd = tlService.getPublishedTLByCountry(newDraft.getTerritory());
-                    rulesRunner.runAllRules(draft, currentProd);
+                    rulesRunner.runAllRulesByTL(draft);
                     tlService.setTlCheckStatus(draft.getTlId());
 
                     TrustedListsReport tlInfo = tlService.getTLInfo(newDraft.getId());
@@ -113,11 +112,16 @@ public class ApiUploadController {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             if (myFile != null) {
                 try {
-                    CertificateToken certToken = DSSUtils.loadCertificate(myFile.getBytes());
-                    TLDigitalIdentification tlDigitalId = new TLDigitalIdentification(certToken.getEncoded());
-                    if (tlDigitalId.getCertificateList() != null) {
-                        response.setContent(tlDigitalId);
-                        response.setResponseStatus(HttpStatus.OK.toString());
+                    CertificateToken certToken = CertificateTokenUtils.loadCertificate(myFile.getBytes());
+                    if (certToken != null) {
+                        TLDigitalIdentification tlDigitalId = new TLDigitalIdentification(certToken.getEncoded());
+                        if (tlDigitalId.getCertificateList() != null) {
+                            response.setContent(tlDigitalId);
+                            response.setResponseStatus(HttpStatus.OK.toString());
+                        } else {
+                            LOGGER.error("Certificate LIST NULL");
+                            response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+                        }
                     } else {
                         LOGGER.error("Certificate LIST NULL");
                         response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
@@ -140,7 +144,7 @@ public class ApiUploadController {
     public @ResponseBody ServiceResponse<TLDigitalIdentification> importCertB64(@RequestBody String base64) {
         ServiceResponse<TLDigitalIdentification> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            CertificateToken certToken = DSSUtils.loadCertificateFromBase64EncodedString(base64);
+            CertificateToken certToken = CertificateTokenUtils.loadCertificate(base64);
             response.setContent(new TLDigitalIdentification(certToken.getEncoded()));
             response.setResponseStatus(HttpStatus.OK.toString());
         } else {

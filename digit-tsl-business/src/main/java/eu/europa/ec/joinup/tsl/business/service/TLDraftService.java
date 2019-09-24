@@ -162,11 +162,10 @@ public class TLDraftService {
     public TrustedListsReport finalizeDraftCreation(DBTrustedLists draft, String name) {
         auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.CREATE, AuditStatus.SUCCES, draft.getTerritory().getCodeTerritory(), draft.getXmlFile().getId(), name, "TLID:" + draft.getId());
         // CHECK SIGNATURE STATUS
-        tlValidator.checkTLorLOTLWithCurrentProdLOTL(draft);
+        tlValidator.validateTLSignature(draft);
         // EXECUTE ALL CHECK
         TL draftTL = tlService.getTL(draft.getId());
-        TL currentProd = tlService.getPublishedTLByCountry(draft.getTerritory());
-        rulesRunner.runAllRules(draftTL, currentProd);
+        rulesRunner.runAllRulesByTL(draftTL);
 
         tlService.setTlCheckStatus(draftTL.getTlId());
         // RETURN TL REPORT

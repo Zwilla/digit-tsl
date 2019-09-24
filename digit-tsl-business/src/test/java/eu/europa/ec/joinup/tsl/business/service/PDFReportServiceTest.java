@@ -181,7 +181,7 @@ public class PDFReportServiceTest extends AbstractSpringTest {
         dbTL.setType(TLType.TL);
         dbTL.setStatus(TLStatus.DRAFT);
         tlRepository.save(dbTL);
-        rulesRunnerService.runAllRules(tl, null);
+        rulesRunnerService.runAllRulesByTL(tl);
 
         FileOutputStream fos = new FileOutputStream(file);
         reportService.generateTLReport(tl, fos);

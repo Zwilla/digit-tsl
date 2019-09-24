@@ -84,6 +84,9 @@ public class TLCCService {
     @Value("${tlcc.active}")
     private boolean tlccActive;
 
+    @Value("${tlcc.log:false}")
+    private boolean tlccLog;
+
     /**
      * Trigger TLCC and get errors result
      *
@@ -143,6 +146,10 @@ public class TLCCService {
                 RestTemplate restTemplate = new RestTemplate();
 
                 String requestUrl = tlccUrl + "/" + tlccTarget.toString();
+                if (tlccLog) {
+                    LOGGER.debug("********** TLCC results **********\n");
+                    LOGGER.debug(requestUrl);
+                }
 
                 DBTrustedLists lotl = tlService.getLOTL();
                 if ((lotl == null) || (lotl.getXmlFile() == null)) {

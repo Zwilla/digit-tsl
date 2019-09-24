@@ -40,9 +40,9 @@ import org.springframework.web.multipart.MultipartFile;
 import eu.europa.ec.joinup.tsl.business.dto.TLSigningCertificateResultDTO;
 import eu.europa.ec.joinup.tsl.business.service.CertificateService;
 import eu.europa.ec.joinup.tsl.business.service.UserService;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
 import eu.europa.esig.dss.DSSException;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 
 @Controller
@@ -64,9 +64,15 @@ public class ApiTLSigningController {
         ServiceResponse<TLSigningCertificateResultDTO> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             try {
-                CertificateToken certificateToken = DSSUtils.loadCertificate(myFile.getBytes());
-                response.setContent(certificateService.checkTLSigningCertificate(certificateToken, territory));
-                response.setResponseStatus(HttpStatus.OK.toString());
+                CertificateToken certificateToken = CertificateTokenUtils.loadCertificate(myFile.getBytes());
+                if (certificateToken != null) {
+
+                    response.setContent(certificateService.checkTLSigningCertificate(certificateToken, territory));
+                    response.setResponseStatus(HttpStatus.OK.toString());
+                } else {
+                    response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
+                    response.setErrorMessage(bundle.getString("error.multipartfile.to.certificate"));
+                }
             } catch (DSSException | IOException e) {
                 LOGGER.error(bundle.getString("error.multipartfile.to.certificate"), e);
                 response.setResponseStatus(HttpStatus.BAD_REQUEST.toString());
@@ -83,7 +89,7 @@ public class ApiTLSigningController {
         ServiceResponse<TLSigningCertificateResultDTO> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             try {
-                CertificateToken certificateToken = DSSUtils.loadCertificateFromBase64EncodedString(b64);
+                CertificateToken certificateToken = CertificateTokenUtils.loadCertificate(b64);
                 response.setContent(certificateService.checkTLSigningCertificate(certificateToken, territory));
                 response.setResponseStatus(HttpStatus.OK.toString());
             } catch (DSSException e) {

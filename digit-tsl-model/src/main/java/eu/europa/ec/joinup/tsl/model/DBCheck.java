@@ -44,6 +44,12 @@ public class DBCheck {
     @Column(name = "DESCRIPTION", length = 4096, nullable = false, updatable = false)
     private String description;
 
+    @Column(name = "TRANSLATION", length = 2000, nullable = true)
+    private String translation;
+
+    @Column(name = "STANDARD_REFERENCE", length = 200, nullable = true)
+    private String standardReference;
+
     @Column(name = "TARGET", nullable = false, updatable = false)
     @Enumerated(EnumType.STRING)
     private Tag target;
@@ -65,64 +71,6 @@ public class DBCheck {
     private CheckType type;
 
     public DBCheck() {
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = (prime * result) + ((description == null) ? 0 : description.hashCode());
-        result = (prime * result) + ((id == null) ? 0 : id.hashCode());
-        result = (prime * result) + ((impact == null) ? 0 : impact.hashCode());
-        result = (prime * result) + ((name == null) ? 0 : name.hashCode());
-        result = (prime * result) + ((priority == null) ? 0 : priority.hashCode());
-        result = (prime * result) + ((target == null) ? 0 : target.hashCode());
-        result = (prime * result) + ((type == null) ? 0 : type.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        DBCheck other = (DBCheck) obj;
-        if (description == null) {
-            if (other.description != null) {
-                return false;
-            }
-        } else if (!description.equals(other.description)) {
-            return false;
-        }
-        if (id == null) {
-            if (other.id != null) {
-                return false;
-            }
-        } else if (!id.equals(other.id)) {
-            return false;
-        }
-        if (impact != other.impact) {
-            return false;
-        }
-        if (name != other.name) {
-            return false;
-        }
-        if (priority != other.priority) {
-            return false;
-        }
-        if (target != other.target) {
-            return false;
-        }
-        if (type != other.type) {
-            return false;
-        }
-        return true;
     }
 
     public String getId() {
@@ -181,9 +129,83 @@ public class DBCheck {
         this.description = description;
     }
 
+    public String getTranslation() {
+        return translation;
+    }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
+
+    public String getStandardReference() {
+        return standardReference;
+    }
+
+    public void setStandardReference(String standardReference) {
+        this.standardReference = standardReference;
+    }
+
     @Override
     public String toString() {
         return "DBCheck [id=" + id + ", target=" + target + ", name=" + name + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((impact == null) ? 0 : impact.hashCode());
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        result = prime * result + ((priority == null) ? 0 : priority.hashCode());
+        result = prime * result + ((standardReference == null) ? 0 : standardReference.hashCode());
+        result = prime * result + ((target == null) ? 0 : target.hashCode());
+        result = prime * result + ((translation == null) ? 0 : translation.hashCode());
+        result = prime * result + ((type == null) ? 0 : type.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        DBCheck other = (DBCheck) obj;
+        if (description == null) {
+            if (other.description != null)
+                return false;
+        } else if (!description.equals(other.description))
+            return false;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        if (impact != other.impact)
+            return false;
+        if (name != other.name)
+            return false;
+        if (priority != other.priority)
+            return false;
+        if (standardReference == null) {
+            if (other.standardReference != null)
+                return false;
+        } else if (!standardReference.equals(other.standardReference))
+            return false;
+        if (target != other.target)
+            return false;
+        if (translation == null) {
+            if (other.translation != null)
+                return false;
+        } else if (!translation.equals(other.translation))
+            return false;
+        if (type != other.type)
+            return false;
+        return true;
     }
 
 }

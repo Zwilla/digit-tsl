@@ -97,7 +97,7 @@ public class ContactServiceTest extends AbstractSpringTest {
     public void CgetContact() {
         List<TLSOContact> contact = contactService.getContact();
         Assert.assertNotNull(contact);
-        Assert.assertEquals(2, contact.size());
+        Assert.assertEquals(32, contact.size());
     }
 
     @Test

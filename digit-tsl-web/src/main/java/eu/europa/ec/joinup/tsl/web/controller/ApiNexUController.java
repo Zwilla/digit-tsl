@@ -137,10 +137,10 @@ public class ApiNexUController {
                     SecurityContextHolder.getContext().getAuthentication().getName(), "TLID:" + signatureObject.getTlId());
             tlService.updateSignedXMLFile(signedDoc, signatureObject.getTlId());
 
-            // Check all TL
-            rulesRunnerService.validDraftAfterSignature(signatureObject.getTlId());
             // Check signature
-            tlValidator.checkAllSignature(tlService.getDbTL(signatureObject.getTlId()));
+            tlValidator.validateTLSignature(tlService.getDbTL(signatureObject.getTlId()));
+            // Check all TL
+            rulesRunnerService.runAllRulesByTLId(signatureObject.getTlId());
             response.setResponseStatus(HttpStatus.OK.toString());
             TLSignature signature = tlService.getSignatureInfo(signatureObject.getTlId());
             response.setContent(signature);

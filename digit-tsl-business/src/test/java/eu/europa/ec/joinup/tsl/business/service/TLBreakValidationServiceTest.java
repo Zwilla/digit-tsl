@@ -255,6 +255,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbc1.setNotBefore(new Date(125, 01, 11, 15, 00));
         dbc1.setNotAfter(new Date(128, 01, 3, 10, 10));
         dbc1.setSubjectName("TEST 1");
+        dbc1.setSki("ABC".getBytes());
 
         dbc1.setTlType(TLType.LOTL);
         certificateRepository.save(dbc1);
@@ -283,6 +284,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         dbc2.setNotAfter(new Date(128, 01, 3, 10, 10));
         dbc2.setSubjectName("TEST 2");
         dbc2.setTlType(TLType.LOTL);
+        dbc2.setSki("ABC".getBytes());
         certificateRepository.save(dbc2);
 
         // Check 7 days before expiration of those 2 new certs
@@ -306,6 +308,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         cloneOfCert3.setNotBefore(certs.get(3).getNotBefore());
         cloneOfCert3.setSubjectName("CLONE TEST");
         cloneOfCert3.setTlType(certs.get(3).getTlType());
+        cloneOfCert3.setSki("ABC".getBytes());
         cloneOfCert3 = certificateRepository.save(cloneOfCert3);
 
         // Two cert condition expire in 60 days. Two certs concerned
@@ -401,6 +404,7 @@ public class TLBreakValidationServiceTest extends AbstractSpringTest {
         certificate.setSubjectName("TEST CERTIFICATE");
         certificate.setTlType(TLType.LOTL);
         certificate.setBase64("fghjkl");
+        certificate.setSki("ABC".getBytes());
         certificate = certificateRepository.save(certificate);
         dbTL.setNextUpdateDate(new Date(128, 01, 10, 10, 10));
         tlRepo.save(dbTL);

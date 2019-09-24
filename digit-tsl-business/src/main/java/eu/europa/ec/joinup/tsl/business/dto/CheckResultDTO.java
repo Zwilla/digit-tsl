@@ -22,36 +22,38 @@ package eu.europa.ec.joinup.tsl.business.dto;
 
 import eu.europa.ec.joinup.tsl.business.dto.tlcc.Check;
 import eu.europa.ec.joinup.tsl.model.DBCheck;
+import eu.europa.ec.joinup.tsl.model.DBCheckResult;
 import eu.europa.ec.joinup.tsl.model.enums.CheckStatus;
 
+/**
+ * @author simon.ghisalberti
+ *
+ */
 public class CheckResultDTO {
 
     private String id;
     private String checkId;
     private String location;
     private String description;
+    private String translation;
+    private String standardReference;
     private CheckStatus status;
 
     public CheckResultDTO(String id, CheckDTO check, boolean isSuccess) {
         super();
         this.id = id;
-        checkId = check.getId();
-        location = "";
+        this.checkId = check.getId();
+        this.location = "";
 
         if (isSuccess) {
-            status = CheckStatus.SUCCESS;
+            this.status = CheckStatus.SUCCESS;
         } else {
-            status = check.getStatus();
+            this.status = check.getStatus();
         }
 
-        description = check.getDescription();
-    }
-
-    public CheckResultDTO(DBCheck dbCheck) {
-        id = "";
-        checkId = dbCheck.getId();
-        description = dbCheck.getDescription();
-        status = dbCheck.getPriority();
+        this.description = check.getDescription();
+        this.translation = check.getTranslation();
+        this.standardReference = check.getStandardReference();
     }
 
     public CheckResultDTO(String id, DBCheck dbCheck) {
@@ -59,6 +61,8 @@ public class CheckResultDTO {
         this.checkId = dbCheck.getId();
         this.description = dbCheck.getDescription();
         this.status = dbCheck.getPriority();
+        this.translation = dbCheck.getTranslation();
+        this.standardReference = dbCheck.getStandardReference();
     }
 
     public CheckResultDTO(String id, Check tlccCheck) {
@@ -88,6 +92,15 @@ public class CheckResultDTO {
             break;
         }
         description = tlccCheck.getContent();
+    }
+
+    public CheckResultDTO(DBCheckResult dbResult) {
+        this.id = dbResult.getLocation();
+        this.checkId = dbResult.getCheck().getId();
+        this.location = dbResult.getHrLocation();
+        this.description = dbResult.getDescription();
+        this.translation = dbResult.getCheck().getTranslation();
+        this.status = dbResult.getStatus();
     }
 
     public String getId() {
@@ -130,59 +143,83 @@ public class CheckResultDTO {
         this.status = status;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = (prime * result) + ((id == null) ? 0 : id.hashCode());
-        result = (prime * result) + ((description == null) ? 0 : description.hashCode());
-        result = (prime * result) + ((location == null) ? 0 : location.hashCode());
-        result = (prime * result) + ((status == null) ? 0 : status.hashCode());
-        return result;
+    public String getTranslation() {
+        return translation;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        CheckResultDTO other = (CheckResultDTO) obj;
-        if (id == null) {
-            if (other.id != null) {
-                return false;
-            }
-        } else if (!id.equals(other.id)) {
-            return false;
-        }
-        if (description == null) {
-            if (other.description != null) {
-                return false;
-            }
-        } else if (!description.equals(other.description)) {
-            return false;
-        }
-        if (location == null) {
-            if (other.location != null) {
-                return false;
-            }
-        } else if (!location.equals(other.location)) {
-            return false;
-        }
-        if (status != other.status) {
-            return false;
-        }
-        return true;
+    public void setTranslation(String translation) {
+        this.translation = translation;
+    }
+
+    public String getStandardReference() {
+        return standardReference;
+    }
+
+    public void setStandardReference(String standardReference) {
+        this.standardReference = standardReference;
     }
 
     @Override
     public String toString() {
         return "CheckResultDTO [id=" + id + ", checkId=" + checkId + ", location=" + location + ", description=" + description + ", status=" + status + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((checkId == null) ? 0 : checkId.hashCode());
+        result = prime * result + ((description == null) ? 0 : description.hashCode());
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        result = prime * result + ((location == null) ? 0 : location.hashCode());
+        result = prime * result + ((standardReference == null) ? 0 : standardReference.hashCode());
+        result = prime * result + ((status == null) ? 0 : status.hashCode());
+        result = prime * result + ((translation == null) ? 0 : translation.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        CheckResultDTO other = (CheckResultDTO) obj;
+        if (checkId == null) {
+            if (other.checkId != null)
+                return false;
+        } else if (!checkId.equals(other.checkId))
+            return false;
+        if (description == null) {
+            if (other.description != null)
+                return false;
+        } else if (!description.equals(other.description))
+            return false;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        if (location == null) {
+            if (other.location != null)
+                return false;
+        } else if (!location.equals(other.location))
+            return false;
+        if (standardReference == null) {
+            if (other.standardReference != null)
+                return false;
+        } else if (!standardReference.equals(other.standardReference))
+            return false;
+        if (status != other.status)
+            return false;
+        if (translation == null) {
+            if (other.translation != null)
+                return false;
+        } else if (!translation.equals(other.translation))
+            return false;
+        return true;
     }
 
 }

@@ -35,6 +35,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import eu.europa.ec.joinup.tsl.business.dto.TLDifference;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.ChangeUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
@@ -189,27 +190,24 @@ public class TLServiceHistory extends AbstractTLDTO {
             List<TLDigitalIdentification> digitalIdHistoryList = new ArrayList<>();
             for (TLDigitalIdentification digitalId : serviceToHistory.getDigitalIdentification()) {
                 TLDigitalIdentification digitalIdToHistorize = new TLDigitalIdentification();
-                // TLCertificate cert = new TLCertificate(digitalId.getCertificateList().get(0).getTlId(),
-                // digitalId.getCertificateList().get(0).getId(),
-                // digitalId.getCertificateList().get(0).getCertEncoded());
-                // RECUPERER LE SKI DU CERTIF? SI + CERTIFICAT?
-                // RECUPERER LE SKI DU CHAMP SKI? SI PAS COHERENT AVEC CERTIF?
                 if ((digitalId.getCertificateList() != null) && (digitalId.getCertificateList().get(0) != null)) {
-                    CertificateToken cert = DSSUtils.loadCertificate(digitalId.getCertificateList().get(0).getCertEncoded());
-                    digitalIdToHistorize.setSubjectName(cert.getSubjectX500Principal().toString());
+                    CertificateToken cert = CertificateTokenUtils.loadCertificate(digitalId.getCertificateList().get(0).getCertEncoded());
+                    if (cert != null) {
+                        digitalIdToHistorize.setSubjectName(cert.getSubjectX500Principal().toString());
 
-                    if (TLUtils.getSki(cert) != null) {
-                        digitalIdToHistorize.setX509ski(TLUtils.getSki(cert));
-                    } else {
-                        DLSequence seq1;
-                        try {
-                            seq1 = (DLSequence) DERSequence.fromByteArray(cert.getPublicKey().getEncoded());
-                            DERBitString item2 = (DERBitString) seq1.getObjectAt(1);
-                            DLSequence seq2 = (DLSequence) DERSequence.fromByteArray(item2.getBytes());
-                            digitalIdToHistorize.setX509ski(DSSUtils.digest(DigestAlgorithm.SHA1, seq2.getEncoded()));
-                        } catch (IOException e) {
-                            LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(cert.getEncoded()) + "' : " + e.getMessage(), e);
-                            cert = null;
+                        if (TLUtils.getSki(cert) != null) {
+                            digitalIdToHistorize.setX509ski(TLUtils.getSki(cert));
+                        } else {
+                            DLSequence seq1;
+                            try {
+                                seq1 = (DLSequence) DERSequence.fromByteArray(cert.getPublicKey().getEncoded());
+                                DERBitString item2 = (DERBitString) seq1.getObjectAt(1);
+                                DLSequence seq2 = (DLSequence) DERSequence.fromByteArray(item2.getBytes());
+                                digitalIdToHistorize.setX509ski(DSSUtils.digest(DigestAlgorithm.SHA1, seq2.getEncoded()));
+                            } catch (IOException e) {
+                                LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(cert.getEncoded()) + "' : " + e.getMessage(), e);
+                                cert = null;
+                            }
                         }
                     }
 
@@ -229,19 +227,21 @@ public class TLServiceHistory extends AbstractTLDTO {
             if ((serviceDigitalList.get(0).getX509ski() != null) && ArrayUtils.isEmpty(serviceDigitalList.get(0).getX509ski())) {
                 skiService = serviceDigitalList.get(0).getX509ski();
             } else {
-                CertificateToken cert = DSSUtils.loadCertificate(serviceDigitalList.get(0).getCertificateList().get(0).getCertEncoded());
-                if (TLUtils.getSki(cert) != null) {
-                    skiService = TLUtils.getSki(cert);
-                } else {
-                    DLSequence seq1;
-                    try {
-                        seq1 = (DLSequence) DERSequence.fromByteArray(cert.getPublicKey().getEncoded());
-                        DERBitString item2 = (DERBitString) seq1.getObjectAt(1);
-                        DLSequence seq2 = (DLSequence) DERSequence.fromByteArray(item2.getBytes());
-                        skiService = DSSUtils.digest(DigestAlgorithm.SHA1, seq2.getEncoded());
-                    } catch (IOException e) {
-                        LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(cert.getEncoded()) + "' : " + e.getMessage(), e);
-                        cert = null;
+                CertificateToken cert = CertificateTokenUtils.loadCertificate(serviceDigitalList.get(0).getCertificateList().get(0).getCertEncoded());
+                if (cert != null) {
+                    if (TLUtils.getSki(cert) != null) {
+                        skiService = TLUtils.getSki(cert);
+                    } else {
+                        DLSequence seq1;
+                        try {
+                            seq1 = (DLSequence) DERSequence.fromByteArray(cert.getPublicKey().getEncoded());
+                            DERBitString item2 = (DERBitString) seq1.getObjectAt(1);
+                            DLSequence seq2 = (DLSequence) DERSequence.fromByteArray(item2.getBytes());
+                            skiService = DSSUtils.digest(DigestAlgorithm.SHA1, seq2.getEncoded());
+                        } catch (IOException e) {
+                            LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(cert.getEncoded()) + "' : " + e.getMessage(), e);
+                            cert = null;
+                        }
                     }
                 }
             }

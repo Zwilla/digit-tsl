@@ -28,12 +28,12 @@ import javax.xml.crypto.dsig.CanonicalizationMethod;
 
 import org.apache.commons.codec.binary.Base64;
 
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.web.form.nexu.GetCertificateResponse;
 import eu.europa.ec.joinup.tsl.web.form.nexu.SignatureRequest;
 import eu.europa.ec.joinup.tsl.web.form.nexu.ToBeSigned;
 import eu.europa.ec.joinup.tsl.web.form.nexu.TokenId;
 import eu.europa.esig.dss.DSSDocument;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.DigestAlgorithm;
 import eu.europa.esig.dss.SignatureLevel;
 import eu.europa.esig.dss.SignaturePackaging;
@@ -48,7 +48,7 @@ public class SignatureUtil {
     public static XAdESSignatureParameters getSignatureParams(GetCertificateResponse certificateResponse, DSSDocument doc) {
         XAdESSignatureParameters params = new XAdESSignatureParameters();
 
-        CertificateToken signingCertificate = DSSUtils.loadCertificateFromBase64EncodedString(certificateResponse.getCertificate());
+        CertificateToken signingCertificate = CertificateTokenUtils.loadCertificate(certificateResponse.getCertificate());
 
         params.setSignatureLevel(SignatureLevel.XAdES_BASELINE_B);
         params.setSignaturePackaging(SignaturePackaging.ENVELOPED);

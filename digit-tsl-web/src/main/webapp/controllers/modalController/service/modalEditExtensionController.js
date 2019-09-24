@@ -1,225 +1,239 @@
 /** ****** Extension modal edition ******* */
-function modalEditExtensionController($scope, $modalInstance, $modal, extension, listChecks, listDiff, typeModal, extensionFactory, showModal) {
-    initMessages($scope);
+function modalEditExtensionController($scope, $modalInstance, $modal, httpFactory, extension, listChecks, listDiff, typeModal, extensionFactory,
+		showModal) {
+	initMessages($scope);
 
-    $scope.extension = extension;
-    $scope.listChecks = listChecks;
-    $scope.listDiff = listDiff;
-    $scope.countryName = countryCodeNameProperties;
-    $scope.languages = languagesProperties;
-    $scope.qualifiers = qualifiersProperties;
-    $scope.identifierType = identifierQualifierTypeProperties;
-    $scope.additionnalQualifier = additionnalServiceInfoQualifierProperties;
-    $scope.isQualificationExtension = false;
+	$scope.extension = extension;
+	$scope.listChecks = listChecks;
+	$scope.listDiff = listDiff;
+	$scope.countryName = countryCodeNameProperties;
+	$scope.languages = languagesProperties;
+	$scope.qualifiers = qualifiersProperties;
+	$scope.identifierType = identifierQualifierTypeProperties;
+	$scope.additionnalQualifier = additionnalServiceInfoQualifierProperties;
+	$scope.isQualificationExtension = false;
 
-    initScope($scope);
-    
-    /* MODAL FUNCTION */
-    $scope.ok = function() {
-        if (typeModal === "expiredCertRevocationDate" && $scope.extension.expiredCertsRevocationDate == null) {
-            showModal.applicationError($scope.extension_expiredCertDateNotFilled);
-        } else {
-            initBool($scope.extension.critical);
-            initKeyUsageBool();
-            $modalInstance.close($scope.extension);
-        }
-    };
+	initScope($scope);
 
-    $scope.cancel = function() {
-        $modalInstance.dismiss('cancel');
-    };
+	/* MODAL FUNCTION */
+	$scope.ok = function() {
+		if (typeModal === "expiredCertRevocationDate" && $scope.extension.expiredCertsRevocationDate == null) {
+			showModal.applicationError($scope.extension_expiredCertDateNotFilled);
+		} else {
+			initBool($scope.extension.critical);
+			initKeyUsageBool();
+			$modalInstance.close($scope.extension);
+		}
+	};
 
-    $scope.addTable = function(table) {
-        if(table==null){
-            table = []
-        }
-        var obj = new Object();
-        obj.id = Math.floor((Math.random() * 100) + 1);
-        table.push(obj);
-        return table;
-    };
+	$scope.cancel = function() {
+		$modalInstance.dismiss('cancel');
+	};
 
-    $scope.addTableString = function(table) {
-        table.push("");
-    };
+	$scope.addTable = function(table) {
+		if (table == null) {
+			table = []
+		}
+		var obj = new Object();
+		obj.id = Math.floor((Math.random() * 100) + 1);
+		table.push(obj);
+		return table;
+	};
 
-    $scope.deleteTab = function(table, item) {
-        var index = table.indexOf(item);
-        table.splice(index, 1);
-    };
+	$scope.addTableString = function(table) {
+		table.push("");
+	};
 
-    /* Init a table */
-    $scope.initTable = function(table) {
-        if (table == undefined || table == null) {
-            return [];
-        }
-    };
+	$scope.deleteTab = function(table, item) {
+		var index = table.indexOf(item);
+		table.splice(index, 1);
+	};
 
-    /**
-     * Calendar
-     */
-    $scope.open = function($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
-        $scope.opened = true;
-    };
+	/* Init a table */
+	$scope.initTable = function(table) {
+		if (table == undefined || table == null) {
+			return [];
+		}
+	};
 
-    $scope.format = 'yyyy-MM-dd HH:mm:ss';
+	/**
+	 * Calendar
+	 */
+	$scope.open = function($event) {
+		$event.preventDefault();
+		$event.stopPropagation();
+		$scope.opened = true;
+	};
 
-    /** ------------ Qualification Extension ------------* */
+	$scope.format = 'yyyy-MM-dd HH:mm:ss';
 
-    $scope.isUserDefined = function() {
-        for (var i = 0; i < $scope.additionnalQualifier.length; i++) {
-            if ($scope.additionnalQualifier[i].label == $scope.extension.additionnalServiceInfo.value) {
-                return false;
-            }
-        }
-        return true;
-    };
+	/** ------------ Taken Over By ------------* */
 
-    $scope.additionnalUserDefined = function() {
-        if ($scope.extension.additionnalServiceInfo.value != undefined && $scope.extension.additionnalServiceInfo.value != null) {
-            if (!$scope.isUserDefined()) {
-                $scope.extension.additionnalServiceInfo.value = "";
-            }
-        }
-    };
+	$scope.getTSPNames = function(countryCode) {
+		if (countryCode) {
+			httpFactory.get("/api/tl/information/taken-over-by/" + countryCode, $scope.browserController_getTobError).then(function(tspNames) {
+				console.log(tspNames);
+				$scope.tspNames = tspNames;
+			});
+		}
+	}
 
-    /** ------------ Qualification Extension ------------* */
+	/** ------------ Qualification Extension ------------* */
 
-    /* Qualification Extension table */
+	$scope.isUserDefined = function() {
+		for (var i = 0; i < $scope.additionnalQualifier.length; i++) {
+			if ($scope.additionnalQualifier[i].label == $scope.extension.additionnalServiceInfo.value) {
+				return false;
+			}
+		}
+		return true;
+	};
 
-    $scope.addCriteria = function(criteria) {
-        criteria.criteriaList.push(extensionFactory.newCriteria());
-    };
+	$scope.additionnalUserDefined = function() {
+		if ($scope.extension.additionnalServiceInfo.value != undefined && $scope.extension.additionnalServiceInfo.value != null) {
+			if (!$scope.isUserDefined()) {
+				$scope.extension.additionnalServiceInfo.value = "";
+			}
+		}
+	};
 
-    $scope.addQualification = function() {
-        extension.qualificationsExtension.push(extensionFactory.initQualificationExtension());
-    }
+	/** ------------ Qualification Extension ------------* */
 
-    $scope.addPolicyList = function(policyList) {
-        if (policyList == undefined || policyList == null) {
-            policyList = [];
-        }
-        var obj = new Object();
-        obj.policyBit = [];
-        policyList.push(obj);
-    };
+	/* Qualification Extension table */
 
-    $scope.addPolicyIdentifier = function(policyBit) {
-        if (policyBit == undefined || policyBit == null) {
-            policyBit = [];
-        }
-        var bit = new Object();
-        bit.id = Math.floor((Math.random() * 100) + 1);
-        bit.documentationReferences = [];
-        policyBit.push(bit);
-    };
+	$scope.addCriteria = function(criteria) {
+		criteria.criteriaList.push(extensionFactory.newCriteria());
+	};
 
-    $scope.addKeyUsageList = function(criteria) {
-        if (criteria.keyUsage == undefined || criteria.keyUsage == null) {
-            criteria.keyUsage = [];
-        }
-        var obj = new Object();
-        obj.keyUsageBit = extensionFactory.initKeyUsage(null);
-        obj.show = "1";
-        criteria.keyUsage.push(obj);
-    };
+	$scope.addQualification = function() {
+		extension.qualificationsExtension.push(extensionFactory.initQualificationExtension());
+	}
 
-    $scope.initPolicyList = function(criteria) {
-        if (criteria.policyList == undefined || criteria.policyList == null) {
-            criteria.policyList = [];
-        } else {
-            for (var i = 0; i < criteria.policyList.length; i++) {
-                for (var j = 0; j < criteria.policyList[i].policyBit.length; j++) {
-                    if (criteria.policyList[i].policyBit[j].documentationReferences == null) {
-                        criteria.policyList[i].policyBit[j].documentationReferences = [];
-                    }
-                }
-            }
-        }
-        return criteria;
-    };
+	$scope.addPolicyList = function(policyList) {
+		if (policyList == undefined || policyList == null) {
+			policyList = [];
+		}
+		var obj = new Object();
+		obj.policyBit = [];
+		policyList.push(obj);
+	};
 
-    $scope.initOtherList = function(otherList) {
-        if (otherList == undefined || otherList == null) {
-            otherList = new Object();
-            otherList.certDnaList = [];
-            otherList.extendedKeyUsageList = [];
-        } else {
-            if (otherList.certDnaList == undefined || otherList.certDnaList == null) {
-                otherList.certDnaList = [];
-            }
-            if (otherList.extendedKeyUsageList == undefined || otherList.extendedKeyUsageList == null) {
-                otherList.extendedKeyUsageList = [];
-            }
-        }
-        return otherList;
-    };
+	$scope.addPolicyIdentifier = function(policyBit) {
+		if (policyBit == undefined || policyBit == null) {
+			policyBit = [];
+		}
+		var bit = new Object();
+		bit.id = Math.floor((Math.random() * 100) + 1);
+		bit.documentationReferences = [];
+		policyBit.push(bit);
+	};
 
-    /**
-     * Init bool to true/false for select
-     */
-    var initBool = function(value) {
-        if (value != undefined && value != null) {
-            if (value == "false" || value == false) {
-                return false;
-            } else if (value == "true" || value == true) {
-                return true;
-            } else {
-                return null;
-            }
-        } else {
-            return null;
-        }
-    };
-    $scope.extension.critical = initBool($scope.extension.critical);
+	$scope.addKeyUsageList = function(criteria) {
+		if (criteria.keyUsage == undefined || criteria.keyUsage == null) {
+			criteria.keyUsage = [];
+		}
+		var obj = new Object();
+		obj.keyUsageBit = extensionFactory.initKeyUsage(null);
+		obj.show = "1";
+		criteria.keyUsage.push(obj);
+	};
 
-    /**
-     * Init keyUsage list
-     */
-    var initKeyUsageBool = function() {
-        if ($scope.isQualificationExtension != false) {
-            for (var i = 0; i < $scope.extension.qualificationsExtension.length; i++) {
-                // Init Criteria keyUsage
-                if ($scope.extension.qualificationsExtension[i].criteria != undefined && $scope.extension.qualificationsExtension[i].criteria != null) {
-                    if ($scope.extension.qualificationsExtension[i].criteria.keyUsage != undefined && $scope.extension.qualificationsExtension[i].criteria.keyUsage != null) {
-                        for (var j = 0; j < $scope.extension.qualificationsExtension[i].criteria.keyUsage.length; j++) {
-                            if ($scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit != null) {
-                                for (var k = 0; k < $scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit.length; k++) {
-                                    $scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit[k].isValue = initBool($scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit[k].isValue);
-                                }
-                            }
-                        }
-                    }
+	$scope.initPolicyList = function(criteria) {
+		if (criteria.policyList == undefined || criteria.policyList == null) {
+			criteria.policyList = [];
+		} else {
+			for (var i = 0; i < criteria.policyList.length; i++) {
+				for (var j = 0; j < criteria.policyList[i].policyBit.length; j++) {
+					if (criteria.policyList[i].policyBit[j].documentationReferences == null) {
+						criteria.policyList[i].policyBit[j].documentationReferences = [];
+					}
+				}
+			}
+		}
+		return criteria;
+	};
 
-                    // Init CriteriaList keyUsage
-                    if ($scope.extension.qualificationsExtension[i].criteria.criteriaList != undefined && $scope.extension.qualificationsExtension[i].criteria.criteriaList != null) {
-                        for (var a = 0; a < $scope.extension.qualificationsExtension[i].criteria.criteriaList.length; a++) {
-                            if ($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage != null) {
-                                for (var j = 0; j < $scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage.length; j++) {
-                                    if ($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit != null) {
-                                        for (var k = 0; k < $scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit.length; k++) {
-                                            $scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit[k].isValue = initBool($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit[k].isValue);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    };
-    initKeyUsageBool();
+	$scope.initOtherList = function(otherList) {
+		if (otherList == undefined || otherList == null) {
+			otherList = new Object();
+			otherList.certDnaList = [];
+			otherList.extendedKeyUsageList = [];
+		} else {
+			if (otherList.certDnaList == undefined || otherList.certDnaList == null) {
+				otherList.certDnaList = [];
+			}
+			if (otherList.extendedKeyUsageList == undefined || otherList.extendedKeyUsageList == null) {
+				otherList.extendedKeyUsageList = [];
+			}
+		}
+		return otherList;
+	};
 
-    /*--- DOM MANAGEMENT ---*/
+	/**
+	 * Init bool to true/false for select
+	 */
+	var initBool = function(value) {
+		if (value != undefined && value != null) {
+			if (value == "false" || value == false) {
+				return false;
+			} else if (value == "true" || value == true) {
+				return true;
+			} else {
+				return null;
+			}
+		} else {
+			return null;
+		}
+	};
+	$scope.extension.critical = initBool($scope.extension.critical);
 
-    $scope.initShow = function(obj) {
-        if (obj != undefined && obj.show == undefined) {
-            obj.show = '0';
-        }
-        ;
-    };
+	/**
+	 * Init keyUsage list
+	 */
+	var initKeyUsageBool = function() {
+		if ($scope.isQualificationExtension != false) {
+			for (var i = 0; i < $scope.extension.qualificationsExtension.length; i++) {
+				// Init Criteria keyUsage
+				if ($scope.extension.qualificationsExtension[i].criteria != undefined && $scope.extension.qualificationsExtension[i].criteria != null) {
+					if ($scope.extension.qualificationsExtension[i].criteria.keyUsage != undefined
+							&& $scope.extension.qualificationsExtension[i].criteria.keyUsage != null) {
+						for (var j = 0; j < $scope.extension.qualificationsExtension[i].criteria.keyUsage.length; j++) {
+							if ($scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit != null) {
+								for (var k = 0; k < $scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit.length; k++) {
+									$scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit[k].isValue = initBool($scope.extension.qualificationsExtension[i].criteria.keyUsage[j].keyUsageBit[k].isValue);
+								}
+							}
+						}
+					}
+
+					// Init CriteriaList keyUsage
+					if ($scope.extension.qualificationsExtension[i].criteria.criteriaList != undefined
+							&& $scope.extension.qualificationsExtension[i].criteria.criteriaList != null) {
+						for (var a = 0; a < $scope.extension.qualificationsExtension[i].criteria.criteriaList.length; a++) {
+							if ($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage != null) {
+								for (var j = 0; j < $scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage.length; j++) {
+									if ($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit != null) {
+										for (var k = 0; k < $scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit.length; k++) {
+											$scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit[k].isValue = initBool($scope.extension.qualificationsExtension[i].criteria.criteriaList[a].keyUsage[j].keyUsageBit[k].isValue);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	};
+	initKeyUsageBool();
+
+	/*--- DOM MANAGEMENT ---*/
+
+	$scope.initShow = function(obj) {
+		if (obj != undefined && obj.show == undefined) {
+			obj.show = '0';
+		}
+		;
+	};
 
 };

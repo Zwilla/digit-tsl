@@ -21,6 +21,7 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceDto;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceHistory;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
 import eu.europa.ec.joinup.tsl.business.util.DateUtils;
+import eu.europa.ec.joinup.tsl.business.util.LocationUtils;
 import eu.europa.ec.joinup.tsl.business.util.ServiceUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.DBCheck;
@@ -41,21 +42,39 @@ public class TLTransitionCheckService {
     private CheckService checkService;
 
     @Transactional
-    public List<CheckResultDTO> getCheckPrevious(int tlId) {
+    public List<CheckResultDTO> getTransitionCheck(int tlId) {
         List<CheckResultDTO> results = new ArrayList<>();
-        Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
-
         // Init current TL and compared TL
         DBTrustedLists dbTL = tlService.getDbTL(tlId);
         TL currentTL = tlService.getDtoTL(dbTL);
         TL comparedTL = null;
         if (dbTL.getStatus().equals(TLStatus.PROD)) {
-            comparedTL = tlService.getPreviousProduction(dbTL.getTerritory());
+            comparedTL = tlService.getPreviousProductionByCountry(dbTL.getTerritory());
         } else {
             comparedTL = tlService.getPublishedTLByCountry(dbTL.getTerritory());
         }
+        // Perform checks
+        results.addAll(perfomTransitionChecks(tlId, dbTL, currentTL, comparedTL));
+        // Init HR Location
+        for (CheckResultDTO result : results) {
+            result.setLocation(LocationUtils.idUserReadable(currentTL, result.getId()));
+        }
+        return results;
+    }
 
+    /**
+     * Perform transition checks on TL
+     * 
+     * @param tlId
+     * @param dbTL
+     * @param currentTL
+     * @param comparedTL
+     * @return
+     */
+    private List<CheckResultDTO> perfomTransitionChecks(int tlId, DBTrustedLists dbTL, TL currentTL, TL comparedTL) {
+        List<CheckResultDTO> results = new ArrayList<>();
         if (comparedTL != null) {
+            Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
             // Init publication date
             Date publicationDate = null;
             if (dbTL.getStatus().equals(TLStatus.PROD) && dbTL.getXmlFile() != null) {
@@ -68,9 +87,6 @@ public class TLTransitionCheckService {
             if (dbTL.getXmlFile() != null && dbTL.getXmlFile().getSignatureInformation() != null && dbTL.getXmlFile().getSignatureInformation().getSigningDate() != null) {
                 signingDate = dbTL.getXmlFile().getSignatureInformation().getSigningDate();
             }
-            // Init TSP temporary lists
-            List<TLServiceProvider> tmpPreviousTSPs = (CollectionUtils.isEmpty(comparedTL.getServiceProviders()) ? new ArrayList<TLServiceProvider>()
-                    : new ArrayList<TLServiceProvider>(comparedTL.getServiceProviders()));
 
             // Checks
             if (isSigningDateUlterior(signingDate, publicationDate)) {
@@ -84,26 +100,44 @@ public class TLTransitionCheckService {
             }
 
             // Check TSPs
-            for (TLServiceProvider currentTSP : currentTL.getServiceProviders()) {
-                TLServiceProvider tspFound = null;
-                for (TLServiceProvider previousTSP : tmpPreviousTSPs) {
-                    if (TLUtils.isTSPMatch(currentTSP, previousTSP)) {
-                        tspFound = currentTSP;
-                        results.addAll(getServicesCheck(currentTSP, previousTSP, publicationDate, transitionChecks));
-                        break;
-                    }
-                }
-                if (tspFound != null) {
-                    tmpPreviousTSPs.remove(tspFound);
+            results.addAll(performTSPChecks(currentTL, comparedTL, transitionChecks, publicationDate));
+
+        }
+        return results;
+    }
+
+    /**
+     * Perform transition checks on TSPs
+     * 
+     * @param currentTL
+     * @param comparedTL
+     * @param results
+     * @param transitionChecks
+     * @param publicationDate
+     * @return
+     */
+    public List<CheckResultDTO> performTSPChecks(TL currentTL, TL comparedTL, Map<String, DBCheck> transitionChecks, Date publicationDate) {
+        List<CheckResultDTO> results = new ArrayList<>();
+        // Init TSP temporary lists
+        List<TLServiceProvider> tmpPreviousTSPs = (CollectionUtils.isEmpty(comparedTL.getServiceProviders()) ? new ArrayList<TLServiceProvider>()
+                : new ArrayList<TLServiceProvider>(comparedTL.getServiceProviders()));
+        for (TLServiceProvider currentTSP : currentTL.getServiceProviders()) {
+            TLServiceProvider tspFound = null;
+            for (TLServiceProvider previousTSP : tmpPreviousTSPs) {
+                if (TLUtils.isTSPMatch(currentTSP, previousTSP)) {
+                    tspFound = previousTSP;
+                    results.addAll(getServicesCheck(currentTSP, previousTSP, publicationDate, transitionChecks));
+                    break;
                 }
             }
-
-            if (CollectionUtils.isNotEmpty(tmpPreviousTSPs)) {
-                for (TLServiceProvider tsp : tmpPreviousTSPs) {
-                    results.add(new CheckResultDTO(tsp.getId() + "_" + Tag.TSP_SERVICE, transitionChecks.get(getCheckID(CheckName.TSP_DELETE))));
-                }
+            if (tspFound != null) {
+                tmpPreviousTSPs.remove(tspFound);
             }
-
+        }
+        if (CollectionUtils.isNotEmpty(tmpPreviousTSPs)) {
+            for (TLServiceProvider tsp : tmpPreviousTSPs) {
+                results.add(new CheckResultDTO(tsp.getId() + "_" + Tag.TSP_SERVICE, transitionChecks.get(getCheckID(CheckName.TSP_DELETE))));
+            }
         }
         return results;
     }
@@ -157,62 +191,70 @@ public class TLTransitionCheckService {
         // Init services list
         List<TLServiceDto> tmpCurrentServices = (CollectionUtils.isEmpty(currentTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<TLServiceDto>(currentTSP.getTSPServices()));
         List<TLServiceDto> tmpPreviousServices = (CollectionUtils.isEmpty(previousTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<TLServiceDto>(previousTSP.getTSPServices()));
-        for (TLServiceDto currentService : currentTSP.getTSPServices()) {
-            TLServiceDto serviceFound = null;
-            TransitionStatus transitionStatus = null;
-            for (TLServiceDto previousService : tmpPreviousServices) {
-                transitionStatus = serviceMatch(currentService, previousService);
-                switch (transitionStatus) {
-                case EQUALS:
-                    serviceFound = previousService;
-                    break;
-                case SERVICE_MATCH:
-                case SERVICE_UPDATED:
-                    // Compare service
-                    if (!currentService.equalsWithoutHistory(previousService)) {
-                        checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.SERVICE_UPDATE_NO_HISTORY))));
-                    }
-                    // Compare history
-                    if ((CollectionUtils.isEmpty(currentService.getHistory()) && CollectionUtils.isNotEmpty(previousService.getHistory())) || (CollectionUtils.isNotEmpty(currentService.getHistory())
-                            && CollectionUtils.isNotEmpty(previousService.getHistory()) && (!currentService.getHistory().equals(previousService.getHistory())))) {
-                        checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.HISTORY_CHANGE))));
-                    }
-                    serviceFound = previousService;
-                    break;
-                case HISTORY_MATCH:
-                case HISTORY_UPDATED:
-                    serviceFound = previousService;
-                    List<TLServiceHistory> tmpCurrentHistory = (CollectionUtils.isEmpty(currentService.getHistory()) ? new ArrayList<TLServiceHistory>()
-                            : new ArrayList<TLServiceHistory>(currentService.getHistory()));
-                    if (CollectionUtils.isNotEmpty(tmpCurrentHistory)) {
-                        if (!ServiceUtils.isServiceHistoryEquals(previousService, tmpCurrentHistory.get(0))) {
-                            // The new history entry has changed from the previous service
-                            checkResults.add(new CheckResultDTO(tmpCurrentHistory.get(0).getId(), transitionChecks.get(getCheckID(CheckName.NEW_HISTORY_CHANGE))));
+        if (!CollectionUtils.isEmpty(currentTSP.getTSPServices())) {
+            for (TLServiceDto currentService : currentTSP.getTSPServices()) {
+                TLServiceDto serviceFound = null;
+                TransitionStatus transitionStatus = null;
+                for (TLServiceDto previousService : tmpPreviousServices) {
+                    transitionStatus = serviceMatch(currentService, previousService);
+                    switch (transitionStatus) {
+                    case EQUALS:
+                        serviceFound = previousService;
+                        break;
+                    case SERVICE_MATCH:
+                    case SERVICE_UPDATED:
+                        // Compare service
+                        final boolean equalsTransition = currentService.equalsTransition(previousService);
+                        if (equalsTransition && !currentService.compareStartingDate(previousService)) {
+                            // Change on starting date only
+                            checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.SERVICE_UPDATE_STARTING_TIME_ONLY))));
+                        } else if (!equalsTransition) {
+                            // Change in service
+                            checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.SERVICE_UPDATE_NO_HISTORY))));
                         }
-                        // Remove first history entry which is the previous service entry
-                        tmpCurrentHistory.remove(0);
+                        // Compare history
+                        if ((CollectionUtils.isEmpty(currentService.getHistory()) && CollectionUtils.isNotEmpty(previousService.getHistory()))
+                                || (CollectionUtils.isNotEmpty(currentService.getHistory()) && CollectionUtils.isNotEmpty(previousService.getHistory())
+                                        && (!currentService.getHistory().equals(previousService.getHistory())))) {
+                            checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.HISTORY_CHANGE))));
+                        }
+                        serviceFound = previousService;
+                        break;
+                    case HISTORY_MATCH:
+                    case HISTORY_UPDATED:
+                        serviceFound = previousService;
+                        List<TLServiceHistory> tmpCurrentHistory = (CollectionUtils.isEmpty(currentService.getHistory()) ? new ArrayList<TLServiceHistory>()
+                                : new ArrayList<TLServiceHistory>(currentService.getHistory()));
+                        if (CollectionUtils.isNotEmpty(tmpCurrentHistory)) {
+                            if (!ServiceUtils.isServiceHistoryEquals(previousService, tmpCurrentHistory.get(0))) {
+                                // The new history entry has changed from the previous service
+                                checkResults.add(new CheckResultDTO(tmpCurrentHistory.get(0).getId(), transitionChecks.get(getCheckID(CheckName.NEW_HISTORY_CHANGE))));
+                            }
+                            // Remove first history entry which is the previous service entry
+                            tmpCurrentHistory.remove(0);
+                        }
+                        List<TLServiceHistory> tmpPreviousHistory = (CollectionUtils.isEmpty(previousService.getHistory()) ? new ArrayList<TLServiceHistory>()
+                                : new ArrayList<TLServiceHistory>(previousService.getHistory()));
+                        if (!tmpCurrentHistory.equals(tmpPreviousHistory)) {
+                            checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.HISTORY_CHANGE))));
+                        }
+                        break;
+                    default:
+                        break;
                     }
-                    List<TLServiceHistory> tmpPreviousHistory = (CollectionUtils.isEmpty(previousService.getHistory()) ? new ArrayList<TLServiceHistory>()
-                            : new ArrayList<TLServiceHistory>(previousService.getHistory()));
-                    if (!tmpCurrentHistory.equals(tmpPreviousHistory)) {
-                        checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.HISTORY_CHANGE))));
+
+                    if (serviceFound != null) {
+                        break;
                     }
-                    break;
-                default:
-                    break;
                 }
 
                 if (serviceFound != null) {
-                    break;
+                    if (transitionStatus != null && (transitionStatus.equals(TransitionStatus.EQUALS) || transitionStatus.equals(TransitionStatus.SERVICE_MATCH)
+                            || transitionStatus.equals(TransitionStatus.SERVICE_UPDATED))) {
+                        tmpCurrentServices.remove(currentService);
+                    }
+                    tmpPreviousServices.remove(serviceFound);
                 }
-            }
-
-            if (serviceFound != null) {
-                if (transitionStatus != null
-                        && (transitionStatus.equals(TransitionStatus.EQUALS) || transitionStatus.equals(TransitionStatus.SERVICE_MATCH) || transitionStatus.equals(TransitionStatus.SERVICE_UPDATED))) {
-                    tmpCurrentServices.remove(currentService);
-                }
-                tmpPreviousServices.remove(serviceFound);
             }
         }
         // New service(s) added

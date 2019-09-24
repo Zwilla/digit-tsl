@@ -29,18 +29,18 @@ import java.util.Map;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
-import org.apache.commons.collections.CollectionUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.CheckDTO;
+import eu.europa.ec.joinup.tsl.business.dto.CheckResultDTO;
 import eu.europa.ec.joinup.tsl.business.repository.CheckRepository;
 import eu.europa.ec.joinup.tsl.business.repository.ResultRepository;
 import eu.europa.ec.joinup.tsl.model.DBCheck;
 import eu.europa.ec.joinup.tsl.model.DBCheckResult;
 import eu.europa.ec.joinup.tsl.model.enums.CheckStatus;
-import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
 
 @Service
@@ -100,6 +100,16 @@ public class CheckService {
     public DBCheck edit(CheckDTO check) {
         DBCheck checkToEdit = checkRepository.findOne(check.getId());
         checkToEdit.setPriority(check.getStatus());
+        if (StringUtils.isNotEmpty(check.getTranslation())) {
+            checkToEdit.setTranslation(check.getTranslation());
+        } else {
+            checkToEdit.setTranslation(null);
+        }
+        if (StringUtils.isNotEmpty(check.getStandardReference())) {
+            checkToEdit.setStandardReference(check.getStandardReference());
+        } else {
+            checkToEdit.setStandardReference(null);
+        }
         return checkRepository.save(checkToEdit);
     }
 
@@ -113,40 +123,9 @@ public class CheckService {
         resultRepository.delete(resultList);
     }
 
-    /**
-     * Clean database check by location starting by @location
-     *
-     * @param location
-     */
     @Transactional(value = TxType.REQUIRES_NEW)
-    public void cleanResultByLocation(String location) {
-        // Only for DRAFT
-        List<DBCheckResult> dbList = resultRepository.findByLocationStartingWith(location);
-        if (CollectionUtils.isNotEmpty(dbList)) {
-            if (dbList.get(0).getTrustedList().getStatus().equals(TLStatus.DRAFT)) {
-                resultRepository.delete(dbList);
-            }
-        }
-    }
-
-    /**
-     * Clean comparison checks
-     * 
-     * @param tlId
-     */
-    @Transactional(value = TxType.REQUIRES_NEW)
-    public void cleanComparisonCheck(int tlId) {
-        resultRepository.deleteByTrustedListIdAndCheckTarget(tlId, Tag.COMPARISON_CHECK);
-    }
-
-    /**
-     * Clean transition checks
-     * 
-     * @param tlId
-     */
-    @Transactional(value = TxType.REQUIRES_NEW)
-    public void cleanTransitionCheck(int tlId) {
-        resultRepository.deleteByTrustedListIdAndCheckTarget(tlId, Tag.TRANSITION_CHECK);
+    public void deleteByTrustedListId(int tlId) {
+        resultRepository.deleteByTrustedListId(tlId);
     }
 
     /**
@@ -156,22 +135,13 @@ public class CheckService {
      *            - if false, get only 'current' result (No historic)
      * @return
      */
-    public List<CheckDTO> getTLChecksResult(int id) {
+    public List<CheckDTO> getTLChecks(int id) {
         List<CheckDTO> results = new ArrayList<>();
-        List<DBCheckResult> dbCheckResultList = resultRepository.findByTrustedListIdAndStatusInAndEndDateIsNull(id, errorStatus);
+        List<DBCheckResult> dbCheckResultList = resultRepository.findByTrustedListIdAndStatusIn(id, errorStatus);
         for (DBCheckResult dbResult : dbCheckResultList) {
             results.add(new CheckDTO(dbResult));
         }
         return results;
-    }
-
-    /**
-     * Create DBCheck map.
-     *
-     * @return Map<CheckID, DBCheck>
-     */
-    public Map<String, DBCheck> getCheckMap() {
-        return initCheckMap(checkRepository.findAll());
     }
 
     /**
@@ -191,6 +161,15 @@ public class CheckService {
             }
         }
         return checkMap;
+    }
+
+    public List<CheckResultDTO> getTLChecksResuls(int tlId) {
+        List<CheckResultDTO> results = new ArrayList<>();
+        List<DBCheckResult> dbCheckResultList = resultRepository.findByTrustedListIdAndStatusIn(tlId, errorStatus);
+        for (DBCheckResult dbResult : dbCheckResultList) {
+            results.add(new CheckResultDTO(dbResult));
+        }
+        return results;
     }
 
 }

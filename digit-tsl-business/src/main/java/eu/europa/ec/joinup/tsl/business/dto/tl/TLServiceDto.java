@@ -727,185 +727,6 @@ public class TLServiceDto extends AbstractTLDTO {
         return ret;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = (prime * result) + ((currentStatus == null) ? 0 : currentStatus.hashCode());
-        result = (prime * result) + ((currentStatusStartingDate == null) ? 0 : currentStatusStartingDate.hashCode());
-        result = (prime * result) + ((extension == null) ? 0 : extension.hashCode());
-        result = (prime * result) + ((history == null) ? 0 : history.hashCode());
-        result = (prime * result) + ((schemeDefinitionUri == null) ? 0 : schemeDefinitionUri.hashCode());
-        result = (prime * result) + ((serviceDigitalIdentification == null) ? 0 : serviceDigitalIdentification.hashCode());
-        result = (prime * result) + ((serviceName == null) ? 0 : serviceName.hashCode());
-        result = (prime * result) + ((supplyPoint == null) ? 0 : supplyPoint.hashCode());
-        result = (prime * result) + ((tspDefinitionUri == null) ? 0 : tspDefinitionUri.hashCode());
-        result = (prime * result) + ((typeIdentifier == null) ? 0 : typeIdentifier.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        TLServiceDto other = (TLServiceDto) obj;
-        if (currentStatus == null) {
-            if (other.currentStatus != null) {
-                return false;
-            }
-        } else if (!currentStatus.equals(other.currentStatus)) {
-            return false;
-        }
-        if (currentStatusStartingDate == null) {
-            if (other.currentStatusStartingDate != null) {
-                return false;
-            }
-        } else if (!currentStatusStartingDate.equals(other.currentStatusStartingDate)) {
-            return false;
-        }
-        if (extension == null) {
-            if (other.extension != null) {
-                return false;
-            }
-        } else if (!extension.equals(other.extension)) {
-            return false;
-        }
-        if (history == null) {
-            if (other.history != null) {
-                return false;
-            }
-        } else if (!history.equals(other.history)) {
-            return false;
-        }
-        if (schemeDefinitionUri == null) {
-            if (other.schemeDefinitionUri != null) {
-                return false;
-            }
-        } else if (!schemeDefinitionUri.equals(other.schemeDefinitionUri)) {
-            return false;
-        }
-        if (serviceDigitalIdentification == null) {
-            if (other.serviceDigitalIdentification != null) {
-                return false;
-            }
-        } else if (!serviceDigitalIdentification.equals(other.serviceDigitalIdentification)) {
-            return false;
-        }
-        if (serviceName == null) {
-            if (other.serviceName != null) {
-                return false;
-            }
-        } else if (!serviceName.equals(other.serviceName)) {
-            return false;
-        }
-        if (supplyPoint == null) {
-            if (other.supplyPoint != null) {
-                return false;
-            }
-        } else if (!supplyPoint.equals(other.supplyPoint)) {
-            return false;
-        }
-        if (tspDefinitionUri == null) {
-            if (other.tspDefinitionUri != null) {
-                return false;
-            }
-        } else if (!tspDefinitionUri.equals(other.tspDefinitionUri)) {
-            return false;
-        }
-        if (typeIdentifier == null) {
-            if (other.typeIdentifier != null) {
-                return false;
-            }
-        } else if (!typeIdentifier.equals(other.typeIdentifier)) {
-            return false;
-        }
-        return true;
-    }
-
-    public boolean equalsWithoutHistory(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        TLServiceDto other = (TLServiceDto) obj;
-        if (currentStatus == null) {
-            if (other.currentStatus != null) {
-                return false;
-            }
-        } else if (!currentStatus.equals(other.currentStatus)) {
-            return false;
-        }
-        if (currentStatusStartingDate == null) {
-            if (other.currentStatusStartingDate != null) {
-                return false;
-            }
-        } else if (!currentStatusStartingDate.equals(other.currentStatusStartingDate)) {
-            return false;
-        }
-        if (extension == null) {
-            if (other.extension != null) {
-                return false;
-            }
-        } else if (!extension.equals(other.extension)) {
-            return false;
-        }
-        if (schemeDefinitionUri == null) {
-            if (other.schemeDefinitionUri != null) {
-                return false;
-            }
-        } else if (!schemeDefinitionUri.equals(other.schemeDefinitionUri)) {
-            return false;
-        }
-        if (serviceDigitalIdentification == null) {
-            if (other.serviceDigitalIdentification != null) {
-                return false;
-            }
-        } else if (!serviceDigitalIdentification.equals(other.serviceDigitalIdentification)) {
-            return false;
-        }
-        if (serviceName == null) {
-            if (other.serviceName != null) {
-                return false;
-            }
-        } else if (!serviceName.equals(other.serviceName)) {
-            return false;
-        }
-        if (supplyPoint == null) {
-            if (other.supplyPoint != null) {
-                return false;
-            }
-        } else if (!supplyPoint.equals(other.supplyPoint)) {
-            return false;
-        }
-        if (tspDefinitionUri == null) {
-            if (other.tspDefinitionUri != null) {
-                return false;
-            }
-        } else if (!tspDefinitionUri.equals(other.tspDefinitionUri)) {
-            return false;
-        }
-        if (typeIdentifier == null) {
-            if (other.typeIdentifier != null) {
-                return false;
-            }
-        } else if (!typeIdentifier.equals(other.typeIdentifier)) {
-            return false;
-        }
-        return true;
-    }
-
     public String getTypeIdentifier() {
         return typeIdentifier;
     }
@@ -1003,6 +824,166 @@ public class TLServiceDto extends AbstractTLDTO {
             }
         });
         return qServiceTypes;
+    }
+
+    /**
+     * Compare current status starting date & time. True if equals, false if not
+     * 
+     * @param previousService
+     */
+    public boolean compareStartingDate(TLServiceDto previousService) {
+        if (this.getCurrentStatusStartingDate() != null && (previousService == null || previousService.getCurrentStatusStartingDate() == null)) {
+            return false;
+        } else if (this.getCurrentStatusStartingDate() == null && (previousService != null && previousService.getCurrentStatusStartingDate() != null)) {
+            return false;
+        } else {
+            return this.getCurrentStatusStartingDate().equals(previousService.getCurrentStatusStartingDate());
+        }
+    }
+
+    /**
+     * Compare service for transition check (specific behavior). History, current status starting date & time is not compared and SDI is compared in a
+     * specific way
+     */
+    public boolean equalsTransition(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        TLServiceDto other = (TLServiceDto) obj;
+        if (currentStatus == null) {
+            if (other.currentStatus != null)
+                return false;
+        } else if (!currentStatus.equals(other.currentStatus)) {
+            return false;
+        }
+        if (extension == null) {
+            if (other.extension != null)
+                return false;
+        } else if (!extension.equals(other.extension)) {
+            return false;
+        }
+        if (serviceName == null) {
+            if (other.serviceName != null)
+                return false;
+        } else if (!serviceName.equals(other.serviceName)) {
+            return false;
+        }
+        if (typeIdentifier == null) {
+            if (other.typeIdentifier != null)
+                return false;
+        } else if (!typeIdentifier.equals(other.typeIdentifier)) {
+            return false;
+        }
+        if (serviceDigitalIdentification == null) {
+            if (other.serviceDigitalIdentification != null) {
+                return false;
+            }
+        } else {
+            // Specific behavior for transition
+            if ((CollectionUtils.isNotEmpty(serviceDigitalIdentification) && CollectionUtils.isEmpty(other.serviceDigitalIdentification))
+                    || (CollectionUtils.isEmpty(serviceDigitalIdentification) && CollectionUtils.isNotEmpty(other.serviceDigitalIdentification))) {
+                return false;
+            } else {
+                // Compare first
+                TLDigitalIdentification digitalIdentification = serviceDigitalIdentification.get(0);
+                TLDigitalIdentification otherDigitalIdentification = other.serviceDigitalIdentification.get(0);
+                if (!digitalIdentification.equalsTransition(otherDigitalIdentification)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((currentStatus == null) ? 0 : currentStatus.hashCode());
+        result = prime * result + ((currentStatusStartingDate == null) ? 0 : currentStatusStartingDate.hashCode());
+        result = prime * result + ((extension == null) ? 0 : extension.hashCode());
+        result = prime * result + ((history == null) ? 0 : history.hashCode());
+        result = prime * result + ((qServiceTypes == null) ? 0 : qServiceTypes.hashCode());
+        result = prime * result + ((schemeDefinitionUri == null) ? 0 : schemeDefinitionUri.hashCode());
+        result = prime * result + ((serviceDigitalIdentification == null) ? 0 : serviceDigitalIdentification.hashCode());
+        result = prime * result + ((serviceName == null) ? 0 : serviceName.hashCode());
+        result = prime * result + ((supplyPoint == null) ? 0 : supplyPoint.hashCode());
+        result = prime * result + ((tspDefinitionUri == null) ? 0 : tspDefinitionUri.hashCode());
+        result = prime * result + ((typeIdentifier == null) ? 0 : typeIdentifier.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        TLServiceDto other = (TLServiceDto) obj;
+        if (currentStatus == null) {
+            if (other.currentStatus != null)
+                return false;
+        } else if (!currentStatus.equals(other.currentStatus))
+            return false;
+        if (currentStatusStartingDate == null) {
+            if (other.currentStatusStartingDate != null)
+                return false;
+        } else if (!currentStatusStartingDate.equals(other.currentStatusStartingDate))
+            return false;
+        if (extension == null) {
+            if (other.extension != null)
+                return false;
+        } else if (!extension.equals(other.extension))
+            return false;
+        if (history == null) {
+            if (other.history != null)
+                return false;
+        } else if (!history.equals(other.history))
+            return false;
+        if (qServiceTypes == null) {
+            if (other.qServiceTypes != null)
+                return false;
+        } else if (!qServiceTypes.equals(other.qServiceTypes))
+            return false;
+        if (schemeDefinitionUri == null) {
+            if (other.schemeDefinitionUri != null)
+                return false;
+        } else if (!schemeDefinitionUri.equals(other.schemeDefinitionUri))
+            return false;
+        if (serviceDigitalIdentification == null) {
+            if (other.serviceDigitalIdentification != null)
+                return false;
+        } else if (!serviceDigitalIdentification.equals(other.serviceDigitalIdentification))
+            return false;
+        if (serviceName == null) {
+            if (other.serviceName != null)
+                return false;
+        } else if (!serviceName.equals(other.serviceName))
+            return false;
+        if (supplyPoint == null) {
+            if (other.supplyPoint != null)
+                return false;
+        } else if (!supplyPoint.equals(other.supplyPoint))
+            return false;
+        if (tspDefinitionUri == null) {
+            if (other.tspDefinitionUri != null)
+                return false;
+        } else if (!tspDefinitionUri.equals(other.tspDefinitionUri))
+            return false;
+        if (typeIdentifier == null) {
+            if (other.typeIdentifier != null)
+                return false;
+        } else if (!typeIdentifier.equals(other.typeIdentifier))
+            return false;
+        return true;
     }
 
 }

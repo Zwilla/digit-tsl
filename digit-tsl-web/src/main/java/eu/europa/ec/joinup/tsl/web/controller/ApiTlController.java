@@ -200,11 +200,10 @@ public class ApiTlController {
                 DBTrustedLists draft = draftService.conflictTLtoDraft(tl);
 
                 // CHECK SIGNATURE STATUS
-                tlValidator.checkTLorLOTLWithCurrentProdLOTL(draft);
+                tlValidator.validateTLSignature(draft);
 
                 TL draftTL = tlService.getTL(draft.getId());
-                TL currentProd = tlService.getPublishedTLByCountry(draft.getTerritory());
-                rulesRunner.runAllRules(draftTL, currentProd);
+                rulesRunner.runAllRulesByTL(draftTL);
 
                 tlService.setTlCheckStatus(draftTL.getTlId());
 

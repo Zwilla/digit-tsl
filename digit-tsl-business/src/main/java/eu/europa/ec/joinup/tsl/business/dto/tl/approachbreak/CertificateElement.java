@@ -25,12 +25,12 @@ import java.util.Date;
 import org.apache.commons.codec.binary.Base64;
 import org.bouncycastle.asn1.x500.style.BCStyle;
 
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBCertificate;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
 import eu.europa.esig.dss.DSSASN1Utils;
 import eu.europa.esig.dss.DSSException;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 
 public class CertificateElement {
@@ -66,7 +66,7 @@ public class CertificateElement {
         breakDay = false;
         expireIn = DateUtils.getDifferenceBetweenDatesInDays(notAfter, checkDate);
         try {
-            token = DSSUtils.loadCertificateFromBase64EncodedString(dbCertificate.getBase64());
+            token = CertificateTokenUtils.loadCertificate(dbCertificate.getBase64());
         } catch (DSSException e) {
             // Could not parse certificate
             token = null;

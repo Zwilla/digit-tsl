@@ -252,6 +252,14 @@ footer {
 	margin-left: 5px;
 }
 
+ul.wizard-sie-list li {
+	margin-bottom: 10px;
+}
+
+.list-no-bullet {
+	list-style-type: none;
+}
+
 /******** Notification ********/
 .divNotifBlank {
 	display: inline-block;
@@ -484,7 +492,21 @@ footer {
 	background-color: #F0F0F4;
 }
 
+.qualifiers-information {
+	background-color: #0065a2;
+	color: white;
+}
+
 .blackColor {
+	color: black;
+}
+
+.tlccUserFriendlyDesc {
+	color: orange;
+	padding-right: 5px;
+}
+
+.tlccStandardRef {
 	color: black;
 }
 
@@ -550,6 +572,10 @@ footer {
 
 .paddingR-5 {
 	padding-right: 5px;
+}
+
+.paddingB-5 {
+	padding-bottom: 5px;
 }
 
 .paddingB-10 {
@@ -702,5 +728,4 @@ button[ng-click^="select(null)"] {
 
 .nv-legend-text {
 	cursor: default !important;
-}
 }

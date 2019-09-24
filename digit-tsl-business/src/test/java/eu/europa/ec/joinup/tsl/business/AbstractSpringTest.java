@@ -20,6 +20,11 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
 
 import org.junit.runner.RunWith;
@@ -32,19 +37,23 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import eu.europa.ec.joinup.tsl.business.config.AsyncConfig;
 import eu.europa.ec.joinup.tsl.business.config.BusinessConfig;
 import eu.europa.ec.joinup.tsl.business.config.ExecutorServiceConfig;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
 import eu.europa.ec.joinup.tsl.business.repository.ServiceRepository;
 import eu.europa.ec.joinup.tsl.business.repository.TLCertificateRepository;
 import eu.europa.ec.joinup.tsl.business.repository.TLRepository;
 import eu.europa.ec.joinup.tsl.business.repository.TrustServiceProviderRepository;
 import eu.europa.ec.joinup.tsl.business.service.ApplicationPropertyService;
 import eu.europa.ec.joinup.tsl.business.service.CountryService;
+import eu.europa.ec.joinup.tsl.business.service.TLBuilder;
 import eu.europa.ec.joinup.tsl.business.service.TLDataLoaderService;
+import eu.europa.ec.joinup.tsl.business.service.TrustedListJaxbService;
 import eu.europa.ec.joinup.tsl.model.DBCountries;
 import eu.europa.ec.joinup.tsl.model.DBFiles;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 import eu.europa.ec.joinup.tsl.model.enums.MimeType;
 import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
+import eu.europa.esig.jaxb.v5.tsl.TrustStatusListTypeV5;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { AsyncConfig.class, ExecutorServiceConfig.class, BusinessConfig.class, AlertingTestConfig.class, PersistenceTestConfig.class, ServiceTestConfig.class })
@@ -58,19 +67,24 @@ public abstract class AbstractSpringTest {
     private TLRepository tlRepository;
 
     @Autowired
-    private TLDataLoaderService dataLoaderService;
-
-    @Autowired
     private ServiceRepository serviceRepository;
 
     @Autowired
     private TrustServiceProviderRepository trustServiceRepository;
 
     @Autowired
+    private TLDataLoaderService dataLoaderService;
+    @Autowired
     private CountryService countryService;
 
     @Autowired
     private ApplicationPropertyService applicationPropertyService;
+
+    @Autowired
+    private TLBuilder tlBuilder;
+
+    @Autowired
+    private TrustedListJaxbService jaxbService;
 
     public void loadAllTLs(String prefix) {
         tlRepository.deleteAll();
@@ -111,6 +125,13 @@ public abstract class AbstractSpringTest {
 
     public String getLOTLUrl() {
         return applicationPropertyService.getLOTLUrl();
+    }
+
+    public TL fileToTL(int id, String path) throws FileNotFoundException, IOException {
+        InputStream xml = new FileInputStream(new File(path));
+        TrustStatusListTypeV5 unmarshall = jaxbService.unmarshallTSLV5(xml);
+        TL tl = tlBuilder.buildTLV5(id, unmarshall);
+        return tl;
     }
 
 }

@@ -35,6 +35,9 @@ import eu.europa.ec.joinup.tsl.business.util.CronUtils;
 import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.model.DBCountries;
 import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
+import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
+import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
+import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 
 /**
  * Alerting job for trusted list break approach
@@ -44,6 +47,9 @@ import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 public class TLBreakAlertingJobService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TLBreakAlertingJobService.class);
+
+    @Autowired
+    private AuditService auditService;
 
     @Autowired
     private TLService tlService;
@@ -64,7 +70,8 @@ public class TLBreakAlertingJobService {
      * Trigger signature alert job
      */
     public void start() {
-        LOGGER.debug("**** BREAK JOB START ****");
+        LOGGER.debug("**** START TL BREAK ALERTING JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.TL_BREAK_ALERTING, AuditStatus.SUCCES, "", 0, "SYSTEM", "Start tl break alerting job");
         Date checkDate = new Date();
         for (DBCountries country : countryService.getAll()) {
             DBTrustedLists dbTL = tlService.getPublishedDbTLByCountry(country);
@@ -74,6 +81,9 @@ public class TLBreakAlertingJobService {
                 tlStatusBreakAlert(dbTL, checkDate);
             }
         }
+        LOGGER.debug("**** END TL BREAK ALERTING JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.TL_BREAK_ALERTING, AuditStatus.SUCCES, "", 0, "SYSTEM", "End tl break alerting job");
+
     }
 
     /**

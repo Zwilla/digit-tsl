@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 	<artifactId>digit-tsl</artifactId>
-	<version>5.5</version>
+	<version>5.6</version>
 
 	<packaging>pom</packaging>
 	<name>Root pom</name>
@@ -24,7 +22,7 @@
 		<build.timestamp>${maven.build.timestamp}</build.timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
-		<dss.version>5.3.2</dss.version>
+		<dss.version>5.4.3</dss.version>
 
 		<spring.version>4.1.7.RELEASE</spring.version>
 		<spring-data.version>1.9.0.RELEASE</spring-data.version>
@@ -53,6 +51,11 @@
 		<module>digit-tsl-pretty-print-client</module>
 		<module>digit-tsl-pretty-print-web</module>
 	</modules>
+
+	<scm>
+		<developerConnection>scm:git:https://bitbucket.org/nowina/digit-tsl.git</developerConnection>
+		<tag>5.6-FINAL</tag>
+	</scm>
 
 	<build>
 		<plugins>
@@ -269,12 +272,22 @@
 			</dependency>
 			<dependency>
 				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
+				<artifactId>dss-tsl-validation</artifactId>
+				<version>${dss.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 				<artifactId>dss-utils-apache-commons</artifactId>
 				<version>${dss.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
 				<artifactId>dss-crl-parser-stream</artifactId>
+				<version>${dss.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>eu.europa.ec.joinup.sd-dss</groupId>
+				<artifactId>dss-pades-pdfbox</artifactId>
 				<version>${dss.version}</version>
 			</dependency>
 			<dependency>
@@ -350,10 +363,33 @@
 
 	<repositories>
 		<repository>
+			<id>forge.nowina.lu.release</id>
+			<name>Internal repository</name>
+			<url>http://forge.nowina.local/nexus/content/repositories/releases/</url>
+		</repository>
+		<repository>
+			<id>forge.nowina.lu.snapshot</id>
+			<name>Snapshot repository</name>
+			<url>http://forge.nowina.local/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
 			<id>cefdigital</id>
 			<name>cefdigital</name>
 			<url>https://ec.europa.eu/cefdigital/artifact/content/repositories/esignaturedss/</url>
 		</repository>
 	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>forge.nowina.local</id>
+			<name>Internal repository</name>
+			<url>http://forge.nowina.local/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>forge.nowina.local</id>
+			<name>Internal repository</name>
+			<url>http://forge.nowina.local/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>

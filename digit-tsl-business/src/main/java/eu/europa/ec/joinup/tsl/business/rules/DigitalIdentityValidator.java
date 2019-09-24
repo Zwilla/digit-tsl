@@ -37,6 +37,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLCertificate;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLDigitalIdentityUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.esig.dss.DSSUtils;
@@ -50,7 +51,7 @@ public class DigitalIdentityValidator {
 
     public boolean isBase64Certificate(byte[] certificateBinaries) {
         try {
-            CertificateToken certificate = DSSUtils.loadCertificate(certificateBinaries);
+            CertificateToken certificate = CertificateTokenUtils.loadCertificate(certificateBinaries);
             if (certificate != null) {
                 return true;
             }

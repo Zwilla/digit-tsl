@@ -71,7 +71,7 @@ public class TLDraftServiceTest extends AbstractSpringTest {
         DBTrustedLists draftTSL = draftService.cloneTLtoDraft(EU_COUNTRY_CODE, draftStoreService.getNewDraftStore(), "test-man", new Load());
         assertNotNull(draftTSL);
 
-        tlValidator.checkTLorLOTLWithCurrentProdLOTL(draftTSL);
+        tlValidator.validateTLSignature(draftTSL);
         TrustedListsReport report = tlService.getTLInfo(draftTSL.getId());
         assertNotNull(report);
 
@@ -98,7 +98,7 @@ public class TLDraftServiceTest extends AbstractSpringTest {
         assertNotNull(draftTSL.getNextUpdateDate());
         assertTrue(StringUtils.isNotEmpty(draftTSL.getName()));
 
-        tlValidator.checkTLorLOTLWithCurrentProdLOTL(draftTSL);
+        tlValidator.validateTLSignature(draftTSL);
         TrustedListsReport report = tlService.getTLInfo(draftTSL.getId());
         assertNotNull(report);
     }

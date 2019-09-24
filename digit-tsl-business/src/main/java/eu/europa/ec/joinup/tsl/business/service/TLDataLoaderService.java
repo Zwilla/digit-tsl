@@ -39,6 +39,7 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLPointersToOtherTSL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceDto;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceHistory;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.model.DBCountries;
 import eu.europa.ec.joinup.tsl.model.DBService;
 import eu.europa.ec.joinup.tsl.model.DBTrustServiceProvider;
@@ -48,7 +49,6 @@ import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
 import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 import eu.europa.ec.joinup.tsl.model.enums.MimeType;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 
 /**
@@ -194,7 +194,8 @@ public class TLDataLoaderService {
                                     for (TLDigitalIdentification digit : service.getDigitalIdentification()) {
                                         if (!CollectionUtils.isEmpty(digit.getCertificateList())) {
                                             for (TLCertificate certificate : digit.getCertificateList()) {
-                                                CertificateToken certificateToken = DSSUtils.loadCertificate(certificate.getCertEncoded());
+                                                // try {
+                                                CertificateToken certificateToken = CertificateTokenUtils.loadCertificate(certificate.getCertEncoded());
                                                 if (certificateToken == null) {
                                                     LOGGER.error("UpdateTrustedListData - CertificateToken NULL found for " + country.getCodeTerritory());
                                                 } else {

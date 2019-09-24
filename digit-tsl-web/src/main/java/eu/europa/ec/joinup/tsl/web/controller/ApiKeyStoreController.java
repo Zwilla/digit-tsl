@@ -24,8 +24,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -46,12 +44,12 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLDigitalIdentification;
 import eu.europa.ec.joinup.tsl.business.service.AbstractAlertingService;
 import eu.europa.ec.joinup.tsl.business.service.AuditService;
 import eu.europa.ec.joinup.tsl.business.service.UserService;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
 import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
 import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
 import eu.europa.esig.dss.DSSException;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.KeyStoreCertificateSource;
 
@@ -81,8 +79,7 @@ public class ApiKeyStoreController {
         ServiceResponse<List<TLCertificate>> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
             List<TLCertificate> list = new ArrayList<>();
-            List<CertificateToken> certificatesFromKeyStore = keyStoreCertificateSource.getCertificates();
-            sortCertificateList(certificatesFromKeyStore);
+            List<CertificateToken> certificatesFromKeyStore = CertificateTokenUtils.sortCertificateList(keyStoreCertificateSource.getCertificates());
             for (CertificateToken certificateToken : certificatesFromKeyStore) {
                 TLCertificate cert = new TLCertificate(certificateToken.getEncoded());
                 cert.setId(certificateToken.getDSSIdAsString());
@@ -103,7 +100,7 @@ public class ApiKeyStoreController {
         ServiceResponse<String> response = new ServiceResponse<>();
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
             try (FileOutputStream fos = new FileOutputStream(new File(lotlKeyStoreFilename))) {
-                CertificateToken certificateToken = DSSUtils.loadCertificateFromBase64EncodedString(base64);
+                CertificateToken certificateToken = CertificateTokenUtils.loadCertificate(base64);
                 keyStoreCertificateSource.addCertificateToKeyStore(certificateToken);
                 keyStoreCertificateSource.store(fos);
                 auditService.addAuditLog(AuditTarget.ADMINISTRATION_LIST_SIGNING_CERT, AuditAction.CREATE, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
@@ -147,8 +144,7 @@ public class ApiKeyStoreController {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
             List<TLDigitalIdentification> digitalList = new ArrayList<>();
 
-            List<CertificateToken> certificatesFromKeyStore = keyStoreCertificateSource.getCertificates();
-            sortCertificateList(certificatesFromKeyStore);
+            List<CertificateToken> certificatesFromKeyStore = CertificateTokenUtils.sortCertificateList(keyStoreCertificateSource.getCertificates());
             for (CertificateToken certificateToken : certificatesFromKeyStore) {
                 TLDigitalIdentification digitalId = new TLDigitalIdentification();
                 TLCertificate cert = new TLCertificate(certificateToken.getEncoded());
@@ -166,12 +162,4 @@ public class ApiKeyStoreController {
         return response;
     }
 
-    private void sortCertificateList(List<CertificateToken> list) {
-        Collections.sort(list, new Comparator<CertificateToken>() {
-            @Override
-            public int compare(CertificateToken o1, CertificateToken o2) {
-                return o1.getNotAfter().compareTo(o2.getNotAfter());
-            }
-        });
-    }
 }

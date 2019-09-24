@@ -22,6 +22,7 @@ package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -222,4 +223,19 @@ public class TLDataService {
         trustServiceRepository.deleteAllByCountryCode(countryCode);
     }
 
+    // ----- ----- Information ----- ----- //
+
+    /**
+     * Find all TSP names
+     * 
+     * @param country
+     */
+    public Set<String> findCountryTSPNames(String country) {
+        Set<String> tspNames = new HashSet<>();
+        List<DBTrustServiceProvider> tspList = trustServiceRepository.findAllByCountryCode(country);
+        for (DBTrustServiceProvider tsp : tspList) {
+            tspNames.addAll(tsp.getTspNames());
+        }
+        return tspNames;
+    }
 }

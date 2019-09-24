@@ -10,8 +10,9 @@
 		<tbody>
 			<tr ng-repeat="item in paginedTable[selectPage-1]">
 				<td ng-repeat="(key, value) in item" style="word-break: break-word">
-					<div ng-if="!value.action" compile="value"></div>
-					<div ng-if="value.action" ng-click="evalFunction(value.action)" compile="value.html"></div>
+					<div ng-if="!options.renderHTML" ng-bind-html="value"></div>
+					<div ng-if="options.renderHTML && !value.action" compile="value"></div>
+					<div ng-if="options.renderHTML && value.action" ng-click="evalFunction(value.action)" compile="value.html"></div>
 				</td>
 			</tr>
 		</tbody>

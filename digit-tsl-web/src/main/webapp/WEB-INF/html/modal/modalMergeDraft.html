@@ -86,17 +86,35 @@
 					<!-- SI result -->
 					<div ng-if="getMapLength(mergeChanges.siResult.mergeResult)>0" style="margin-top: 5px;">
 						<label th:text="#{schemeInformation}"></label>
-						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.siResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.siResult.mergeResult">
+							<label>
+								<span class="fa fa-arrow-right"></span>
+								<span>{{value[0].draft}}: </span>
+							</label>
+							<span>{{key}} - {{getStatus(value[0].status)}}</span>
+						</div>
 					</div>
 					<!-- PTOTL result -->
 					<div ng-if="getMapLength(mergeChanges.pointerResult.mergeResult)>0" style="margin-top: 5px;">
 						<label th:text="#{pdf.pointer}"></label>
-						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.pointerResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.pointerResult.mergeResult">
+							<label>
+								<span class="fa fa-arrow-right"></span>
+								<span>{{value[0].draft}}: </span>
+							</label>
+							<span>{{key}} - {{getStatus(value[0].status)}}</span>
+						</div>
 					</div>
 					<!-- TSP result -->
 					<div ng-if="getMapLength(mergeChanges.tspResult.mergeResult)>0" style="margin-top: 5px;">
 						<label th:text="#{serviceProvider}"></label>
-						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.tspResult.mergeResult">- {{key}} : {{getStatus(value[0].status)}}</div>
+						<div style="margin-left: 5px;" ng-repeat="(key, value) in mergeChanges.tspResult.mergeResult">
+							<label>
+								<span class="fa fa-arrow-right"></span>
+								<span>{{value[0].draft}}: </span>
+							</label>
+							<span>{{key}} - {{getStatus(value[0].status)}}</span>
+						</div>
 					</div>
 
 					<div class="alert alert-warning" style="margin-top: 10px;">

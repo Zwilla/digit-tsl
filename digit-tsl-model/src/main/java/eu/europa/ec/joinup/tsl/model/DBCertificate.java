@@ -53,11 +53,14 @@ public class DBCertificate {
     @Column(name = "NOT_AFTER", nullable = false)
     private Date notAfter;
 
-    @Column(name = "BASE_64", nullable = false, length = 5000)
+    @Column(name = "BASE_64", nullable = false, length = 6000)
     private String base64;
 
     @Column(name = "TL_TYPE", nullable = false)
     private TLType tlType;
+
+    @Column(name = "SKI", nullable = false)
+    private byte[] ski;
 
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
     private DBService service;
@@ -128,6 +131,14 @@ public class DBCertificate {
 
     public void setService(DBService service) {
         this.service = service;
+    }
+
+    public byte[] getSki() {
+        return ski;
+    }
+
+    public void setSki(byte[] ski) {
+        this.ski = ski;
     }
 
 }

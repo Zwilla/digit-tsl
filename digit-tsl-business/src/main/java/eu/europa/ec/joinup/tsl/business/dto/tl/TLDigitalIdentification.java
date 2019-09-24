@@ -25,16 +25,17 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.StringUtils;
 
 import eu.europa.ec.joinup.tsl.business.dto.TLDifference;
 import eu.europa.ec.joinup.tsl.business.util.AnyTypeUtils;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLDigitalIdentityUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.jaxb.tsl.DigitalIdentityListType;
 import eu.europa.esig.jaxb.tsl.DigitalIdentityType;
@@ -190,9 +191,11 @@ public class TLDigitalIdentification extends AbstractTLDTO {
         if (getCertificateList() != null) {
 
             for (int i = 0; i < getCertificateList().size(); i++) {
-                CertificateToken certT = DSSUtils.loadCertificate(serviceCert.getCertEncoded());
-                tmpCertSubjectName = certT.getSubjectX500Principal().toString();
-                tmpCertSki = TLUtils.getSki(certT);
+                CertificateToken certT = CertificateTokenUtils.loadCertificate(serviceCert.getCertEncoded());
+                if (certT != null) {
+                    tmpCertSubjectName = certT.getSubjectX500Principal().toString();
+                    tmpCertSki = TLUtils.getSki(certT);
+                }
             }
 
             if (!StringUtils.isEmpty(getSubjectName())) {
@@ -221,9 +224,11 @@ public class TLDigitalIdentification extends AbstractTLDTO {
             // No certificate, but perhaps SKI and/Or SUbject Name --> Historic!
             // IF USER WANT TO PUBLISH IN MP XML
             if (serviceCert != null) {
-                CertificateToken certT = DSSUtils.loadCertificate(serviceCert.getCertEncoded());
-                tmpCertSubjectName = certT.getSubjectX500Principal().toString();
-                tmpCertSki = TLUtils.getSki(certT);
+                CertificateToken certT = CertificateTokenUtils.loadCertificate(serviceCert.getCertEncoded());
+                if (certT != null) {
+                    tmpCertSubjectName = certT.getSubjectX500Principal().toString();
+                    tmpCertSki = TLUtils.getSki(certT);
+                }
             }
 
             DigitalIdentityTypeV5 tslDigitalIdSN = new DigitalIdentityTypeV5();
@@ -350,56 +355,6 @@ public class TLDigitalIdentification extends AbstractTLDTO {
         return diffList;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = (prime * result) + ((certificateList == null) ? 0 : certificateList.hashCode());
-        result = (prime * result) + ((other == null) ? 0 : other.hashCode());
-        result = (prime * result) + ((subjectName == null) ? 0 : subjectName.hashCode());
-        result = (prime * result) + Arrays.hashCode(x509ski);
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        TLDigitalIdentification other = (TLDigitalIdentification) obj;
-        if (certificateList == null) {
-            if (other.certificateList != null) {
-                return false;
-            }
-        } else if (!certificateList.equals(other.certificateList)) {
-            return false;
-        }
-        if (this.other == null) {
-            if (other.other != null) {
-                return false;
-            }
-        } else if (!TLDigitalIdentityUtils.equalsBetweenOther(this.other, other.other)) {
-            return false;
-        }
-        if (subjectName == null) {
-            if (other.subjectName != null) {
-                return false;
-            }
-        } else if (!subjectName.equals(other.subjectName)) {
-            return false;
-        }
-        if (!Arrays.equals(x509ski, other.x509ski)) {
-            return false;
-        }
-        return true;
-    }
-
     public List<Object> getOther() {
         return other;
     }
@@ -449,6 +404,108 @@ public class TLDigitalIdentification extends AbstractTLDTO {
             }
         }
         return "Undefined";
+    }
+
+    /**
+     * Compare SDI for transition check (specific behavior).
+     * 
+     * @param obj
+     */
+    public boolean equalsTransition(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        TLDigitalIdentification other = (TLDigitalIdentification) obj;
+        if (certificateList == null) {
+            if (other.certificateList != null)
+                return false;
+        } else {
+            // Specific behavior
+            if ((CollectionUtils.isNotEmpty(certificateList) && CollectionUtils.isEmpty(other.certificateList))
+                    || (CollectionUtils.isEmpty(certificateList) && CollectionUtils.isNotEmpty(other.certificateList))) {
+                return false;
+            } else {
+                boolean oneSDIMatch = false;
+                for (TLCertificate certificate : certificateList) {
+                    for (TLCertificate otherCertificate : other.certificateList) {
+                        if (Arrays.equals(certificate.getCertSki(), otherCertificate.getCertSki())) {
+                            oneSDIMatch = true;
+                            break;
+                        }
+                    }
+                }
+                // No SDI match
+                if (!oneSDIMatch) {
+                    return false;
+                }
+            }
+        }
+        if (this.other == null) {
+            if (other.other != null)
+                return false;
+        } else if (!this.other.equals(other.other))
+            return false;
+        if (subjectName == null) {
+            if (other.subjectName != null)
+                return false;
+        } else if (!subjectName.equals(other.subjectName))
+            return false;
+        if (!Arrays.equals(x509ski, other.x509ski))
+            return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = (prime * result) + ((certificateList == null) ? 0 : certificateList.hashCode());
+        result = (prime * result) + ((other == null) ? 0 : other.hashCode());
+        result = (prime * result) + ((subjectName == null) ? 0 : subjectName.hashCode());
+        result = (prime * result) + Arrays.hashCode(x509ski);
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        TLDigitalIdentification other = (TLDigitalIdentification) obj;
+        if (certificateList == null) {
+            if (other.certificateList != null) {
+                return false;
+            }
+        } else if (!certificateList.equals(other.certificateList)) {
+            return false;
+        }
+        if (this.other == null) {
+            if (other.other != null) {
+                return false;
+            }
+        } else if (!TLDigitalIdentityUtils.equalsBetweenOther(this.other, other.other)) {
+            return false;
+        }
+        if (subjectName == null) {
+            if (other.subjectName != null) {
+                return false;
+            }
+        } else if (!subjectName.equals(other.subjectName)) {
+            return false;
+        }
+        if (!Arrays.equals(x509ski, other.x509ski)) {
+            return false;
+        }
+        return true;
     }
 
 }

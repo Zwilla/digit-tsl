@@ -20,10 +20,11 @@
  ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.config;
 
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.util.EntityUtils;
@@ -32,6 +33,7 @@ import org.slf4j.LoggerFactory;
 
 import eu.europa.esig.dss.DSSException;
 import eu.europa.esig.dss.client.http.commons.CommonsDataLoader;
+import eu.europa.esig.dss.utils.Utils;
 
 public class CommonDataLoaderOverride extends CommonsDataLoader {
 
@@ -48,9 +50,8 @@ public class CommonDataLoaderOverride extends CommonsDataLoader {
      */
     @Override
     protected byte[] httpGet(final String url) {
-
         HttpGet httpRequest = null;
-        HttpResponse httpResponse = null;
+        CloseableHttpResponse httpResponse = null;
         CloseableHttpClient client = null;
         try {
 
@@ -62,25 +63,23 @@ public class CommonDataLoaderOverride extends CommonsDataLoader {
             }
 
             client = getHttpClient(url);
-            httpResponse = getHttpResponse(client, httpRequest, url);
+            httpResponse = getHttpResponse(client, httpRequest);
 
-            final byte[] returnedBytes = readHttpResponse(url, httpResponse);
-            return returnedBytes;
+            return readHttpResponse(httpResponse);
 
-        } catch (URISyntaxException e) {
-            throw new DSSException(e);
-
+        } catch (URISyntaxException | IOException e) {
+            throw new DSSException("Unable to process GET call for url '" + url + "'", e);
         } finally {
-
             try {
                 if (httpRequest != null) {
                     httpRequest.releaseConnection();
                 }
                 if (httpResponse != null) {
                     EntityUtils.consumeQuietly(httpResponse.getEntity());
+                    Utils.closeQuietly(httpResponse);
                 }
             } finally {
-                closeClient(client);
+                Utils.closeQuietly(client);
             }
         }
     }

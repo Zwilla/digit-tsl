@@ -30,6 +30,7 @@ import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,6 +44,7 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TLDigitalIdentification;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLName;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceDto;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceExtension;
+import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceHistory;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLSupplyPoint;
 import eu.europa.ec.joinup.tsl.business.repository.TLRepository;
@@ -222,5 +224,53 @@ public class TlEditServiceService {
 
         }
         return nbreRemove;
+    }
+
+    /**
+     * Update service status and create new history entry
+     * 
+     * @param tlId
+     * @param tspId
+     * @param serviceId
+     * @return TL updated
+     */
+    public TL newStatus(int tlId, String tspId, String serviceId) {
+        DBTrustedLists dbTL = tlRepository.findOne(tlId);
+        if (TLStatus.DRAFT.equals(dbTL.getStatus())) {
+            // CHANGES IN XML FILE
+            TL tl = tlService.getDtoTL(dbTL);
+            for (TLServiceProvider tsp : tl.getServiceProviders()) {
+                if (tsp.getId().equals(tspId)) {
+                    for (TLServiceDto service : tsp.getTSPServices()) {
+                        if (service.getId().equals(serviceId)) {
+                            TLServiceHistory newHistory = new TLServiceHistory();
+                            newHistory.setCurrentStatus(service.getCurrentStatus());
+                            newHistory.setCurrentStatusStartingDate(service.getCurrentStatusStartingDate());
+                            newHistory.setDigitalIdentification(service.getDigitalIdentification());
+                            newHistory.setExtension(service.getExtension());
+                            newHistory.setServiceName(service.getServiceName());
+                            newHistory.setTypeIdentifier(service.getTypeIdentifier());
+                            if (CollectionUtils.isEmpty(service.getHistory())) {
+                                service.setHistory(new ArrayList<TLServiceHistory>());
+                            }
+                            service.getHistory().add(0, newHistory);
+                            service.setCurrentStatusStartingDate(new Date());
+                            break;
+                        }
+                    }
+                }
+            }
+
+            byte[] updatedTL = jaxbService.marshallToBytesAsV5(tl);
+            if (ArrayUtils.isNotEmpty(updatedTL)) {
+                DBFiles xmlFile = dbTL.getXmlFile();
+                xmlFile.setLocalPath(fileService.storeNewDraftTL(xmlFile.getMimeTypeFile(), updatedTL, dbTL.getTerritory().getCodeTerritory(), xmlFile.getLocalPath()));
+                tlRepository.save(dbTL);
+                dbTL.setLastEditedDate(new Date());
+                return tlService.getDtoTL(dbTL);
+            }
+
+        }
+        return null;
     }
 }

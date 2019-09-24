@@ -27,20 +27,15 @@ import org.springframework.data.repository.CrudRepository;
 import eu.europa.ec.joinup.tsl.model.DBCheck;
 import eu.europa.ec.joinup.tsl.model.DBCheckResult;
 import eu.europa.ec.joinup.tsl.model.enums.CheckStatus;
-import eu.europa.ec.joinup.tsl.model.enums.Tag;
 
 public interface ResultRepository extends CrudRepository<DBCheckResult, Integer> {
 
     List<DBCheckResult> findByCheck(DBCheck check);
 
-    List<DBCheckResult> findByLocationStartingWith(String location);
-
-    DBCheckResult findByLocationAndCheckAndEndDateNull(String location, DBCheck check);
-
     List<DBCheckResult> findByCheckAndTrustedListId(DBCheck check, int dbId);
 
-    List<DBCheckResult> findByTrustedListIdAndStatusInAndEndDateIsNull(int tlId, List<CheckStatus> status);
+    List<DBCheckResult> findByTrustedListIdAndStatusIn(int tlId, List<CheckStatus> status);
 
-    void deleteByTrustedListIdAndCheckTarget(int tlId, Tag target);
+    void deleteByTrustedListId(int tlId);
 
 }

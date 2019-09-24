@@ -40,8 +40,6 @@ import eu.europa.ec.joinup.tsl.model.DBFiles;
 import eu.europa.ec.joinup.tsl.model.DBSignatureInformation;
 import eu.europa.ec.joinup.tsl.model.enums.SignatureStatus;
 import eu.europa.esig.dss.SignatureLevel;
-import eu.europa.esig.dss.jaxb.diagnostic.XmlSignatureScope;
-import eu.europa.esig.dss.utils.Utils;
 import eu.europa.esig.dss.validation.policy.rules.Indication;
 import eu.europa.esig.dss.validation.policy.rules.SubIndication;
 import eu.europa.esig.dss.validation.reports.Reports;
@@ -52,7 +50,6 @@ import eu.europa.esig.dss.validation.reports.wrapper.SignatureWrapper;
 import eu.europa.esig.dss.x509.CertificateToken;
 import eu.europa.esig.dss.x509.CommonTrustedCertificateSource;
 import eu.europa.esig.dss.x509.KeyStoreCertificateSource;
-import eu.europa.esig.dss.xades.validation.XmlRootSignatureScope;
 
 @Transactional(value = TxType.REQUIRED)
 public abstract class AbstractSignatureValidationService {
@@ -109,9 +106,6 @@ public abstract class AbstractSignatureValidationService {
         }
         try {
             Reports reports = getReports(file, potentialSigners);
-            // TODO improve with DSS-1487
-            boolean acceptableScope = false;
-            // reports.print();
             SimpleReport simpleReport = reports.getSimpleReport();
             List<String> signatureIdList = simpleReport.getSignatureIdList();
             if (CollectionUtils.isEmpty(signatureIdList)) {
@@ -123,11 +117,6 @@ public abstract class AbstractSignatureValidationService {
             } else {
                 DiagnosticData diagnosticData = reports.getDiagnosticData();
                 SignatureWrapper signatureWrapper = diagnosticData.getSignatureById(diagnosticData.getFirstSignatureId());
-                List<XmlSignatureScope> signatureScopes = signatureWrapper.getSignatureScopes();
-                if (Utils.collectionSize(signatureScopes) == 1) {
-                    XmlSignatureScope xmlSignatureScope = signatureScopes.get(0);
-                    acceptableScope = XmlRootSignatureScope.class.getSimpleName().equals(xmlSignatureScope.getScope());
-                }
                 String signatureId = simpleReport.getFirstSignatureId();
                 Indication indication = simpleReport.getIndication(signatureId);
                 SignatureStatus status = null;
@@ -151,9 +140,6 @@ public abstract class AbstractSignatureValidationService {
                 String signatureFormat = simpleReport.getSignatureFormat(signatureId);
                 if (SignatureStatus.VALID.equals(status) && !isBaselineB(signatureFormat)) {
                     signatureInfo.setIndication(SignatureStatus.NOT_BASELINE_B);
-                } else if (SignatureStatus.VALID.equals(status) && !acceptableScope) {
-                    signatureInfo.setIndication(SignatureStatus.FILE_NOT_FOUND);
-                    signatureInfo.setSignatureFormat(signatureFormat);
                 }
 
                 SubIndication subIndication = simpleReport.getSubIndication(signatureId);

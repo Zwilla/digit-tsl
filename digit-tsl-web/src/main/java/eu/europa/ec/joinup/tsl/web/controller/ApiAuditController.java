@@ -70,12 +70,8 @@ public class ApiAuditController {
     @RequestMapping(value = "/criteriaList", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<AuditCriteriaDTO> getCriteria() {
         ServiceResponse<AuditCriteriaDTO> response = new ServiceResponse<>();
-        if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isManagement(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            response.setResponseStatus(HttpStatus.OK.toString());
-            response.setContent(auditService.initCriteria());
-        } else {
-            response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
-        }
+        response.setResponseStatus(HttpStatus.OK.toString());
+        response.setContent(auditService.initCriteria());
         return response;
     }
 

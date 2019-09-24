@@ -21,7 +21,6 @@
 package eu.europa.ec.joinup.tsl.web.controller;
 
 import java.util.List;
-import java.util.ResourceBundle;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -57,6 +56,7 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
 import eu.europa.ec.joinup.tsl.web.form.ServiceResponse;
 import eu.europa.ec.joinup.tsl.web.form.TLHistoryEdition;
 import eu.europa.ec.joinup.tsl.web.form.TLInformationEdition;
+import eu.europa.ec.joinup.tsl.web.form.TLNewStatus;
 import eu.europa.ec.joinup.tsl.web.form.TLNotificationEdition;
 import eu.europa.ec.joinup.tsl.web.form.TLPointerEdition;
 import eu.europa.ec.joinup.tsl.web.form.TLServiceEdition;
@@ -67,8 +67,6 @@ import eu.europa.ec.joinup.tsl.web.form.TLServiceProviderEdition;
 public class ApiTlEditionController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiTlEditionController.class);
-
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Autowired
     private TlEditSchemeInfoService tlEditSchemeInfoService;
@@ -122,17 +120,12 @@ public class ApiTlEditionController {
                         TLSchemeInformation schemeInfoUpdatedWithId = new TLSchemeInformation(tlInformationEdition.getTlId(), schemeInfoUpdated.asTSLTypeV5());
 
                         if (!tlService.getSignatureInfo(tlInformationEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlInformationEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlInformationEdition.getTlId()));
                         }
 
-                        // CHECK SCHEME INFORMATION ONLY
                         if (tlInformationEdition.isCheckToRun()) {
                             TL draft = tlService.getTL(tlInformationEdition.getTlId());
-                            TL published = tlService.getPublishedTLByCountryCode(draft.getSchemeInformation().getTerritory());
-
-                            rulesRunner.validateSchemeInformation(tlInformationEdition.getTlId());
-                            rulesRunner.compareTL(draft, published);
-                            rulesRunner.persistTransitionCheck(draft);
+                            rulesRunner.runAllRulesByTL(draft);
                             tlService.setTlCheckStatus(tlInformationEdition.getTlId());
                         }
 
@@ -187,11 +180,11 @@ public class ApiTlEditionController {
                         }
 
                         if (!tlService.getSignatureInfo(tlPointerEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlPointerEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlPointerEdition.getTlId()));
                         }
 
                         if (tlPointerEdition.isCheckToRun()) {
-                            rulesRunner.validateAllPointers(tlPointerEdition.getTlId());
+                            rulesRunner.runAllRulesByTLId(tlPointerEdition.getTlId());
                             tlService.setTlCheckStatus(tlPointerEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -226,14 +219,11 @@ public class ApiTlEditionController {
                         TL tl = tlService.getTL(tlPointerEdition.getTlId());
                         response.setContent(tl.getPointers());
                         if (!tl.getSigStatus().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlPointerEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlPointerEdition.getTlId()));
                         }
                         // RUN ALL POINTERS CHECK
                         if (tlPointerEdition.isCheckToRun()) {
-                            TL published = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
-
-                            rulesRunner.validateAllPointers(tlPointerEdition.getTlId());
-                            rulesRunner.compareTL(tl, published);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlPointerEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -278,13 +268,11 @@ public class ApiTlEditionController {
                         }
 
                         if (!tlService.getSignatureInfo(tlServiceProviderEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceProviderEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceProviderEdition.getTlId()));
                         }
 
-                        // CHECK PROVIDER ONLY
                         if (tlServiceProviderEdition.isCheckToRun()) {
-                            rulesRunner.validateServiceProvider(tlServiceProviderEdition.getTlId(), getTSPId(serviceProviderUpdatedWithId), false);
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceProviderEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -320,15 +308,10 @@ public class ApiTlEditionController {
                         TL tl = tlService.getTL(tlServiceProviderEdition.getTlId());
                         response.setContent(tl.getServiceProviders());
                         if (!tl.getSigStatus().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceProviderEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceProviderEdition.getTlId()));
                         }
-                        // RUN ALL PROVIDER CHECK
                         if (tlServiceProviderEdition.isCheckToRun()) {
-                            TL published = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
-
-                            rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
-                            rulesRunner.compareTL(tl, published);
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceProviderEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -377,13 +360,11 @@ public class ApiTlEditionController {
                         }
 
                         if (!tlService.getSignatureInfo(tlServiceEdition.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceEdition.getTlId()));
                         }
 
                         if (tlServiceEdition.isCheckToRun()) {
-                            int parentId = tlServiceEdition.getParentIndex().get(0) + 1;
-                            rulesRunner.validateService(tlServiceEdition.getTlId(), parentId, getServiceId(parentId, serviceUpdatedWithId));
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceEdition.getTlId());
                         }
 
@@ -420,15 +401,10 @@ public class ApiTlEditionController {
                         TL tl = tlService.getTL(tlServiceEdition.getTlId());
                         response.setContent(tl.getServiceProviders());
                         if (!tl.getSigStatus().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceEdition.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceEdition.getTlId()));
                         }
-                        // RUN ALL PROVIDER CHECK
                         if (tlServiceEdition.isCheckToRun()) {
-                            TL published = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
-
-                            rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
-                            rulesRunner.compareTL(tl, published);
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceEdition.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -440,6 +416,31 @@ public class ApiTlEditionController {
                     response.setResponseStatus(HttpStatus.CONFLICT.toString());
                 }
 
+            } else {
+                response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
+            }
+        } else {
+            response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
+        }
+        return response;
+    }
+
+    @RequestMapping(value = "/createNewStatus", method = RequestMethod.PUT)
+    public @ResponseBody ServiceResponse<TL> createNewStatus(@RequestBody TLNewStatus tlNewStatus) {
+        ServiceResponse<TL> response = new ServiceResponse<>();
+        if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
+            if (tlService.inStoreOrProd(tlNewStatus.getTlId(), tlNewStatus.getCookie())) {
+                if (TLUtils.checkDate(tlService.getEdt(tlNewStatus.getTlId()), tlNewStatus.getLastEditedDate())) {
+                    TL tl = tlEditServiceService.newStatus(tlNewStatus.getTlId(), tlNewStatus.getTspId(), tlNewStatus.getServiceId());
+                    if (tlNewStatus.isCheckToRun()) {
+                        rulesRunner.runAllRulesByTL(tl);
+                        tlService.setTlCheckStatus(tlNewStatus.getTlId());
+                    }
+                    response.setContent(tl);
+                    response.setResponseStatus(HttpStatus.OK.toString());
+                } else {
+                    response.setResponseStatus(HttpStatus.CONFLICT.toString());
+                }
             } else {
                 response.setResponseStatus(HttpStatus.UNAUTHORIZED.toString());
             }
@@ -465,12 +466,11 @@ public class ApiTlEditionController {
                         // parentIndex[0] -> provider; parentIndex[1] -> service;
                         response.setContent(tl.getServiceProviders().get(tlServiceHistory.getParentIndex().get(0)).getTSPServices().get(tlServiceHistory.getParentIndex().get(1)).getHistory());
                         if (!tlService.getSignatureInfo(tlServiceHistory.getTlId()).getIndication().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceHistory.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceHistory.getTlId()));
                         }
 
                         if (tlServiceHistory.isCheckToRun()) {
-                            rulesRunner.validateService(tlServiceHistory.getTlId(), (tlServiceHistory.getParentIndex().get(0) + 1), (tlServiceHistory.getParentIndex().get(1) + 1));
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceHistory.getTlId());
                         }
 
@@ -505,14 +505,10 @@ public class ApiTlEditionController {
                         TL tl = tlService.getTL(tlServiceHistory.getTlId());
                         response.setContent(tl.getServiceProviders());
                         if (!tl.getSigStatus().equals(SignatureStatus.NOT_SIGNED)) {
-                            tlValidator.checkAllSignature(tlService.getDbTL(tlServiceHistory.getTlId()));
+                            tlValidator.validateTLSignature(tlService.getDbTL(tlServiceHistory.getTlId()));
                         }
                         if (tlServiceHistory.isCheckToRun()) {
-                            TL published = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
-
-                            rulesRunner.validateAllServiceProvider(tl.getTlId(), tl.getServiceProviders());
-                            rulesRunner.compareTL(tl, published);
-                            rulesRunner.persistTransitionCheck(tl);
+                            rulesRunner.runAllRulesByTL(tl);
                             tlService.setTlCheckStatus(tlServiceHistory.getTlId());
                         }
                         response.setResponseStatus(HttpStatus.OK.toString());
@@ -635,43 +631,6 @@ public class ApiTlEditionController {
         // }
         pointerEdition.setTlPointerObj(pointer);
         return pointerEdition;
-    }
-
-    /* Private method */
-    /**
-     * Get trust service provider index in TL from id
-     *
-     * @exception id
-     *                is null or doesn't contain Tag.TSP_SERVICE_PROVIDER
-     * @param tsp
-     * @return
-     */
-    private int getTSPId(TLServiceProvider tsp) {
-        try {
-            String[] tspId = tsp.getId().split(Tag.TSP_SERVICE_PROVIDER + "_");
-            return Integer.parseInt(tspId[1]);
-        } catch (Exception e) {
-            LOGGER.error("TSP id is null or don't respect format 'tlId_TSP_SERVICE_PROVIDER'.", e);
-            throw new IllegalStateException(bundle.getString("tlcc.general.error"));
-        }
-    }
-
-    /**
-     * Get service index in TL from id
-     *
-     * @exception id
-     *                is null or doesn't contain Tag.TSP_SERVICE
-     * @param service
-     * @return
-     */
-    private int getServiceId(int tspIndex, TLServiceDto service) {
-        try {
-            String[] serviceId = service.getId().split(Tag.TSP_SERVICE_PROVIDER + "_" + tspIndex + "_" + Tag.TSP_SERVICE + "_");
-            return Integer.parseInt(serviceId[1]);
-        } catch (Exception e) {
-            LOGGER.error("Service id is null or don't respect format 'tlId_TSP_SERVICE_PROVIDER'.", e);
-            throw new IllegalStateException(bundle.getString("tlcc.general.error"));
-        }
     }
 
 }

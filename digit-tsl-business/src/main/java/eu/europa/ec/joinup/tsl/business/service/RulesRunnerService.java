@@ -36,13 +36,17 @@ import eu.europa.ec.joinup.tsl.business.dto.CheckResultDTO;
 import eu.europa.ec.joinup.tsl.business.dto.TLCCRequestDTO;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLPointersToOtherTSL;
-import eu.europa.ec.joinup.tsl.business.dto.tl.TLServiceProvider;
+import eu.europa.ec.joinup.tsl.business.repository.ResultRepository;
 import eu.europa.ec.joinup.tsl.business.rules.ComparisonCheckValidator;
 import eu.europa.ec.joinup.tsl.business.rules.ListOfGenericsValidator;
 import eu.europa.ec.joinup.tsl.business.rules.NotificationValidator;
 import eu.europa.ec.joinup.tsl.business.rules.PointersToOtherTSLValidator;
 import eu.europa.ec.joinup.tsl.business.rules.ServiceDigitalIdentityValidator;
-import eu.europa.ec.joinup.tsl.business.util.LocationUtils;
+import eu.europa.ec.joinup.tsl.business.rules.SieQValidator;
+import eu.europa.ec.joinup.tsl.model.DBCheck;
+import eu.europa.ec.joinup.tsl.model.DBCheckResult;
+import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
+import eu.europa.ec.joinup.tsl.model.enums.CheckType;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
 
 /**
@@ -51,6 +55,9 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
 @Service
 @Transactional(value = TxType.REQUIRED)
 public class RulesRunnerService {
+
+    @Autowired
+    private ResultRepository resultRepository;
 
     @Autowired
     private CheckService checkService;
@@ -74,100 +81,47 @@ public class RulesRunnerService {
     private NotificationValidator notificationValidator;
 
     @Autowired
-    private CheckResultPersistenceService persistenceService;
-
-    @Autowired
     private PointersToOtherTSLValidator pointerValidator;
 
     @Autowired
     private ServiceDigitalIdentityValidator serviceDigitalIdentityValidator;
 
+    @Autowired
+    private SieQValidator sieQValidator;
+
     /**
-     * Run All rules; perform TLCC and TLM checks
+     * Clean all results for current TL and run TLCC/Comparison and transition checks
+     * 
+     * @param tlId
+     */
+    public void runAllRulesByTLId(final int tlId) {
+        TL draft = tlService.getTL(tlId);
+        runAllRulesByTL(draft);
+    }
+
+    /**
+     * Clean all results for current TL and run TLCC/Comparison and transition checks
      *
      * @param currentTL
      * @param previousTL
      */
-    public void runAllRules(final TL currentTL, final TL previousTL) {
+    @Transactional(value = TxType.REQUIRES_NEW)
+    public void runAllRulesByTL(final TL currentTL) {
+        List<CheckResultDTO> checkResults = new ArrayList<>();
         if (currentTL != null) {
-            List<CheckResultDTO> checkResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(currentTL.getTlId()), TLCCTarget.TRUSTED_LIST);
-            if (checkResults == null) {
-                // Case where TLCC unreachable
-                checkResults = new ArrayList<>();
+            checkService.deleteByTrustedListId(currentTL.getTlId());
+            final List<CheckResultDTO> errorTlccChecks = tlccService.getErrorTlccChecks(new TLCCRequestDTO(currentTL.getTlId()), TLCCTarget.TRUSTED_LIST);
+            if (errorTlccChecks != null) {
+                checkResults.addAll(errorTlccChecks);
             }
-            checkResults.addAll(getComparisonChecks(currentTL, previousTL));
-            checkService.cleanTransitionCheck(currentTL.getTlId());
-            checkResults.addAll(getTransitionChecks(currentTL));
-            persistenceService.persistAllResults(currentTL.getTlId(), checkResults);
-        }
-    }
-
-    /**
-     * Clean checks & validate scheme information. Perform TLCC API on @TLCCTarget.SCHEME_INFORMATION
-     *
-     * @param tlId
-     */
-    public void validateSchemeInformation(int tlId) {
-        checkService.cleanResultByLocation(tlId + "_" + Tag.SCHEME_INFORMATION);
-        List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.SCHEME_INFORMATION);
-        persistenceService.persistAllResults(tlId, tlccCheckResults);
-    }
-
-    /**
-     * Clean checks & validate all PTOTSL. Perform TLCC API on @TLCCTarget.POINTERS_TO_OTHER_TSL
-     *
-     * @param tlId
-     */
-    public void validateAllPointers(int tlId) {
-        checkService.cleanResultByLocation(tlId + "_" + Tag.POINTERS_TO_OTHER_TSL);
-        List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.POINTERS_TO_OTHER_TSL);
-        persistenceService.persistAllResults(tlId, tlccCheckResults);
-    }
-
-    /**
-     * Clean checks & validate all TSP. Look through TSP and perform TLCC API on @TLCCTarget.TSP_SERVICE_PROVIDER
-     *
-     * @param tlId
-     * @param serviceProviders
-     */
-    public void validateAllServiceProvider(int tlId, List<TLServiceProvider> serviceProviders) {
-        checkService.cleanResultByLocation(tlId + "_" + Tag.TSP_SERVICE_PROVIDER);
-        if (!CollectionUtils.isEmpty(serviceProviders)) {
-            // Index start at 1 for TLCC Index result
-            for (int index = 1; index < (serviceProviders.size() + 1); index++) {
-                validateServiceProvider(tlId, index, true);
+            checkResults.addAll(transitionCheckService.getTransitionCheck(currentTL.getTlId()));
+            checkResults.addAll(sieQValidator.getSieQCheck(currentTL));
+            TL previousTL = tlService.getBaselineTL(currentTL);
+            if (previousTL != null) {
+                checkResults.addAll(getComparisonChecks(currentTL, previousTL));
             }
         }
-    }
-
-    /**
-     * Clean checks if not already cleaned & valide TSP. Perform TLCC API on @TLCCTarget.TSP_SERVICE_PROVIDER
-     *
-     * @param tlId
-     * @param tspIndex
-     * @param resultClean
-     *            : true when called through validateAllServiceProvider. Rules are cleaned in parent method
-     */
-    public void validateServiceProvider(int tlId, int tspIndex, boolean resultClean) {
-        if (!resultClean) {
-            checkService.cleanResultByLocation(tlId + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + tspIndex);
-        }
-        List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId, tspIndex), TLCCTarget.TRUST_SERVICE_PROVIDER);
-        persistenceService.persistAllResults(tlId, tlccCheckResults);
-
-    }
-
-    /**
-     * Clean checks & validate a service. Get specifc service by @tspIndex & @serviceIndex and perform TLCC API on @TLCCTarget.TSP_SERVICE
-     *
-     * @param tlId
-     * @param tspIndex
-     * @param serviceIndex
-     */
-    public void validateService(int tlId, int tspIndex, int serviceIndex) {
-        checkService.cleanResultByLocation(tlId + "_" + Tag.TSP_SERVICE_PROVIDER + "_" + tspIndex + "_" + Tag.TSP_SERVICE + "_" + serviceIndex);
-        List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId, tspIndex, serviceIndex), TLCCTarget.TSP_SERVICE);
-        persistenceService.persistAllResults(tlId, tlccCheckResults);
+        persistCheckResults(currentTL.getTlId(), checkResults);
     }
 
     public List<CheckResultDTO> validateNotification(TLPointersToOtherTSL pointer) {
@@ -190,41 +144,6 @@ public class RulesRunnerService {
     }
 
     /**
-     * Run comparison check on trusted list.
-     *
-     * @param current
-     * @param previous
-     */
-    public void compareTL(TL current, TL previous) {
-        List<CheckResultDTO> results = getComparisonChecks(current, previous);
-        persistenceService.persistAllResults(current.getTlId(), results);
-    }
-
-    /**
-     * Run transition check on trusted list and persist in database
-     * 
-     * @param currentTL
-     */
-    public void persistTransitionCheck(TL currentTL) {
-        checkService.cleanTransitionCheck(currentTL.getTlId());
-        List<CheckResultDTO> results = getTransitionChecks(currentTL);
-        persistenceService.persistAllResults(currentTL.getTlId(), results);
-    }
-
-    /**
-     * Get transition checks and calcul HR location
-     * 
-     * @param currentTL
-     */
-    private List<CheckResultDTO> getTransitionChecks(TL currentTL) {
-        List<CheckResultDTO> results = transitionCheckService.getCheckPrevious(currentTL.getTlId());
-        for (CheckResultDTO result : results) {
-            result.setLocation(LocationUtils.idUserReadable(currentTL, result.getId()));
-        }
-        return results;
-    }
-
-    /**
      * Get comparison check result between current & previous TL
      *
      * @param current
@@ -242,36 +161,33 @@ public class RulesRunnerService {
         return results;
     }
 
-    public void validateSignature(int tlId) {
-        checkService.cleanResultByLocation(tlId + "_" + Tag.SIGNATURE);
-        TL tl = tlService.getTL(tlId);
-        // TODO(5.4.RC1) TDEV-794: Temporary solution. Waiting for a specific TLCC API to check Signature only
-        // In the futur version of TLCC, check should be performed with the following line
-        // tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.SIGNATURE);
-        if ((tl.getSigStatus() != null)) {
-            List<CheckResultDTO> tlccCheckResults = tlccService.getErrorTlccChecks(new TLCCRequestDTO(tlId), TLCCTarget.TRUSTED_LIST);
-            if (!CollectionUtils.isEmpty(tlccCheckResults)) {
-                List<CheckResultDTO> signatureCheckResults = new ArrayList<>();
-                for (CheckResultDTO tlccCheck : tlccCheckResults) {
-                    if (tlccCheck.getCheckId().contains(Tag.SignatureRules.toString())) {
-                        signatureCheckResults.add(tlccCheck);
-                    }
-                }
-                persistenceService.persistAllResults(tlId, signatureCheckResults);
-            }
-        }
-    }
-
     /**
-     * Run all checks after signature performed on draft
-     *
-     * @param tlId
+     * Persist CheckResultDTO list as DBCheckResult
+     * 
+     * @param checkResults
      */
-    public void validDraftAfterSignature(int tlId) {
-        checkService.cleanResultByLocation(tlId + "_");
-        TL draft = tlService.getTL(tlId);
-        TL currentProd = tlService.getPublishedTLByCountryCode(draft.getSchemeInformation().getTerritory());
-        runAllRules(draft, currentProd);
+    private void persistCheckResults(int tlId, List<CheckResultDTO> checkResults) {
+        if (!CollectionUtils.isEmpty(checkResults)) {
+            DBTrustedLists dbTL = tlService.getDbTL(tlId);
+            List<DBCheckResult> dbChecks = new ArrayList<>();
+            for (CheckResultDTO check : checkResults) {
+                DBCheck dbCheck = checkService.getCheckById(check.getCheckId());
+                DBCheckResult dbCheckResult = new DBCheckResult();
+                dbCheckResult.setTrustedList(dbTL);
+                dbCheckResult.setLocation(check.getId());
+                dbCheckResult.setHrLocation(check.getLocation());
+                dbCheckResult.setCheck(dbCheck);
+                if (dbCheck.getType().equals(CheckType.TLCC)) {
+                    dbCheckResult.setDescription(check.getDescription());
+                    dbCheckResult.setStatus(dbCheck.getPriority());
+                } else {
+                    dbCheckResult.setStatus(check.getStatus());
+                    dbCheckResult.setDescription(dbCheck.getDescription());
+                }
+                dbChecks.add(dbCheckResult);
+            }
+            resultRepository.save(dbChecks);
+        }
     }
 
 }

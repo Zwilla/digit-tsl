@@ -240,7 +240,7 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 					}else if(typeEdit=="tlPointer"){
 						callService = "pointers";
 						deferred.resolve();
-					}else if(typeEdit=="tlServiceProvider" || typeEdit=="tlService" || typeEdit=="tlServiceHistory"){
+					}else if(typeEdit=="tlServiceProvider" || typeEdit=="tlService" || typeEdit=="tlServiceHistory" || typeEdit=="createNewStatus"){
 						callService = "serviceProvider";
 						deferred.resolve();
 					};
@@ -1254,32 +1254,31 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 			};
 
 			$scope.serviceNode = function(service){
-				if(service!=null){
-					var span = "";
-					var emptySpan = "<span class='emptySpan'></span>"
-					if(service.currentStatusStartingDate!=undefined && service.currentStatusStartingDate!=null){
-						var startingDate = $filter('date')(service.currentStatusStartingDate, "yyyy-MM-dd");
-						span = span +"<span class='boldNode'>"+startingDate+"</span>"+emptySpan;
-					};
-					if(service.typeIdentifier!=undefined && service.typeIdentifier!=null){
-						typeIdentifier = "";
-						if(service.typeIdentifier.indexOf("TrstSvd")!=-1){
-							var typeIdentifier = service.typeIdentifier.split("http://uri.etsi.org/TrstSvd/Svctype/")[1];
-						}else if(service.typeIdentifier.indexOf("TrstSvc")!=-1){
-							var typeIdentifier = service.typeIdentifier.split("http://uri.etsi.org/TrstSvc/Svctype/")[1];
-						};
-						span = span +typeIdentifier+emptySpan;
-					};
-					if(service.currentStatus!=undefined && service.currentStatus!=null){
-						var currentStatus = service.currentStatus.split("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/")[1];
-						span = span +currentStatus;
-					};
-					if(span!=""){
-						span = " : "+span;
-					};
-					return span;
-				};
+				return serviceNode(service);
 			};
+			
+			/**
+			 * Update current service status & create new history entry
+			 */
+			$scope.newServiceStatus = function(tsp, service){
+				showModal.confirmation($scope.browserController_confirmationNewStatus, appConstant.modalTitle.confirmation).then(function() {
+					$scope.load = false;
+					var tlNewStatus = {
+							tlId : $scope.tlIdDb ,
+							tspId : tsp.id,
+							serviceId : service.id,
+							cookie : $scope.draftStoreId,
+							lastEditedDate : $scope.myTl.lastEdited,
+							checkToRun : $scope.myTl.checkToRun
+					};
+					
+					postModif("createNewStatus",tlNewStatus, $scope.browserController_errorNewStatus, function(){
+						$scope.myTl = $scope.newValue;
+						$scope.myTl.serviceProviders[tsp.index].open = '1';
+						$scope.myTl.userEditable = true;
+					}, tsp.index);
+				});
+			}
 
 
 			/*---------------------- Service History ----------------------*/
@@ -1762,6 +1761,7 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 										
 					for(var i=0;i<$scope.myTl.serviceProviders.length;i++){
 						var tmpTSP = angular.copy($scope.myTl.serviceProviders[i]);
+						tmpTSP = removeEmpty(tmpTSP);
 						tmpTSP.tspservices=[];
 						var servicesFound = false;
 													
@@ -1771,9 +1771,9 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 															
 								// Clean service history & certificates
 								// (base64/ASN1/CertInfo)
-								var tmpService =
-								angular.copy($scope.myTl.serviceProviders[i].tspservices[j]);
+								var tmpService = angular.copy($scope.myTl.serviceProviders[i].tspservices[j]);
 								tmpService.history=null;
+								tmpService = removeEmpty(tmpService);
 								if(tmpService.digitalIdentification!=null){
 									for(var di=0;di<tmpService.digitalIdentification.length;di++){
 										for(var ci=0;ci<tmpService.digitalIdentification[di].certificateList.length;ci++){
@@ -1838,5 +1838,16 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 				}
 				return true;
 			}
+
+			/**
+			 * Remove null/undefined JSON object
+			 */
+			const removeEmpty = function(obj) {
+				Object.keys(obj).forEach(function(k) {
+					(obj[k] && typeof obj[k] === 'object') && removeEmpty(obj[k]) ||
+				    (!obj[k] && obj[k] !== undefined) && delete obj[k]
+				});
+				return obj;
+			};
 			
 } ]);

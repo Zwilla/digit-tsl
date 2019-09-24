@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu();">
+<head>
+<link rel="icon" th:href="@{/style/favico.ico}" />
+<th:block th:replace="head_fragment :: head_fragment"></th:block>
+<script th:src="@{/controllers/wizard/sieQGuidelinesController.js}"></script>
+</head>
+<body>
+	<!-- Header -->
+	<th:block th:replace="header :: header" th:remove="tag"></th:block>
+
+	<div class="body" ng-controller="sieQGuidelinesController">
+
+		<!-- Menu -->
+		<th:block th:replace="menu :: nav" th:remove="tag"></th:block>
+
+		<!-- MAIN CONTENT -->
+		<main>
+		<div class="panel panel-primary">
+			<div class="panel-heading" style="max-height: 35px">
+				<span th:text="#{wizard.sieqGuidelines.menu}"></span>
+			</div>
+			<!-- Informations -->
+			<div class="row" style="margin-top: 10px;">
+				<div class="col-lg-12">
+					<span class="fa fa-info-circle"></span>
+					<span ng-bind-html="wizard_sieqGuidelines_info"></span>
+				</div>
+			</div>
+			<br />
+			<div class="row">
+				<div class="col-lg-12">
+					<!-- 1 -->
+					<div class="row">
+						<label>1. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.1.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_1_description"></div>
+					<br/>
+					<!-- 2 -->
+					<div class="row">
+						<label>2. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.2.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_2_description"></div>
+					<br/>
+					<!-- 3 -->
+					<div class="row">
+						<label>3. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.3.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_3_description"></div>
+					<br/>
+					<!-- 4 -->
+					<div class="row">
+						<label>4. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.4.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_4_description"></div>
+					<br/>
+					<!-- 5 -->
+					<div class="row">
+						<label>5. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.5.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_5_description"></div>
+					<br/>
+					<!-- 6 -->
+					<div class="row">
+						<label>6. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.6.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_6_description"></div>
+					<br/>
+					<!-- 7 -->
+					<div class="row">
+						<label>7. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.7.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_7_description"></div>
+					<br/>
+					<!-- 8 -->
+					<div class="row">
+						<label>8. <span style="text-decoration: underline;" th:text="#{wizard.sieqGuidelines.8.title}"></span></label>
+					</div>
+					<div ng-bind-html="wizard_sieqGuidelines_8_description"></div>
+					<br/>
+				</div>
+			</div>
+		</div>
+		</main>
+	</div>
+	<!-- Footer -->
+	<th:block th:replace="footer :: footer" th:remove="tag"></th:block>
+</body>
+</html>

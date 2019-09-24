@@ -3,7 +3,7 @@ digitTslWeb.controller('401errorController', [ '$scope', '$modal', '$interval', 
 
             initMessages($scope);
 
-            $scope.timer = 5;
+            $scope.timer = 10;
 
             var getBrowserUrl = function() {
                 httpFactory.get("/api/tl/browser/url", $scope.appController_errorUserLoading).then(function(url) {

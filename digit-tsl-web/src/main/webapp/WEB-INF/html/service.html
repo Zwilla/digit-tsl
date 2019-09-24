@@ -11,6 +11,10 @@
 			</div>
 			<span>{{service.serviceName[0].value | cut:true:55:'...'}}</span>
 			<div ng-bind-html="serviceNode(service)" style="display: inline;" ng-if="service.show!='1'"></div>
+			<!-- New status -->
+			<span ng-if="myTl.userEditable && serviceProvider.edit==false" ng-click="newServiceStatus(serviceProvider,service)" class="fa fa-plus cursor-pointer editIcon"
+				tooltip="Create a new status to '{{service.serviceName[0].value}}' with the appropriate history entry" tooltip-placement="right"></span>
+			<!-- Edit -->
 			<span ng-if="myTl.userEditable && serviceProvider.edit==false" ng-click="editTlDraft('editService',[serviceProvider.index,service.index])" class="fa fa-edit cursor-pointer editIcon"
 				tooltip="{{service.editTooltip}}" ng-init="service.editTooltip=EditTooltip(service.serviceName[0].value)" tooltip-placement="right"></span>
 			<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':service.serviceName[0].value}}" confirmed="deleteService(service,[serviceProvider.index,null,null]);" ng-show="serviceProvider.edit==true"

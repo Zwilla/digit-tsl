@@ -123,10 +123,10 @@ public class ApiSignatureController {
                 auditService.addAuditLog(AuditTarget.DRAFT_TL, AuditAction.SEAL, AuditStatus.SUCCES, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
                         "SEAL:" + tlSignatureInformation.getSealName() + ";TLID:" + tlSignatureInformation.getTlId());
                 tlService.updateSignedXMLFile(new InMemoryDocument(signFile), tlSignatureInformation.getTlId());
-                // Check all TL
-                rulesRunner.validDraftAfterSignature(tlSignatureInformation.getTlId());
                 // Check signature
-                tlValidator.checkAllSignature(tlService.getDbTL(tlSignatureInformation.getTlId()));
+                tlValidator.validateTLSignature(tlService.getDbTL(tlSignatureInformation.getTlId()));
+                // Check all TL
+                rulesRunner.runAllRulesByTLId(tlSignatureInformation.getTlId());
                 response.setResponseStatus(HttpStatus.OK.toString());
                 response.setContent(tlService.getSignatureInfo(tlSignatureInformation.getTlId()));
             } catch (Exception e) {

@@ -37,9 +37,9 @@ digitTslWeb
 								+ '<p>The last release of the application can be found here: <a href="%NEXU_URL%">Download NexU</a>.</p>'
 								+ '<div>For further questions, please don’t hesitate to contact the EC TL Service team at:</div> <div><a>EC-TL-Service@ec.europa.eu</a>.</div>',
 						notInstalledError : '<p>This message appears because either NexU is not running on your PC or is not installed yet.</p>'
-								+ '<p>If you want to sign a Trusted List directly from TL Manager, you need to download and/or start NexU on your PC. '
+								+ '<p>If you want to sign a Trusted List directly from TL-Manager, you need to download and/or start NexU on your PC. '
 								+ 'NexU is an open-source signing module that can be found here: <a href="%NEXU_URL%">Download NexU</a>.</p>'
-								+ '<p>If you prefer not to download NexU, as an alternative you can export the Trusted List, sign it with the signing application of your choice that generates a XAdES signature compliant to the requirement of the ETSI 119 612 Standard, and import it back into TL Manager.</p>'
+								+ '<p>If you prefer not to download NexU, as an alternative you can export the Trusted List, sign it with the signing application of your choice that generates a XAdES signature compliant to the requirement of the ETSI 119 612 Standard, and import it back into TL-Manager.</p>'
 								+ '<p>A compliant DSS-based offline signing tool is available here: <a href="%SIGNING_TOOL_URL%">Download the offline TL-signing tool</a>.</p>'
 								+ '<div>For further questions, please don’t hesitate to contact the EC TL Service team at:</div> <div><a>EC-TL-Service@ec.europa.eu</a>.</div>',
 						certificateError : "<p>An error occurred while connecting to the smartcard. Please try again.<p/><div>If the problem persists, please contact the EC TL Service team at:</div> <a>EC-TL-Service@ec.europa.eu</a>.",
@@ -186,6 +186,10 @@ digitTslWeb
 
 					wizardSigningCertificate : {
 						form_uncomplete : "Please fill all the fields of the form before submit your request."
+					},
+
+					wizardSieQValidation : {
+						request_error : "Error while loading certificate from request."
 					}
 
 				});

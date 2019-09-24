@@ -37,7 +37,6 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import eu.europa.ec.joinup.tsl.business.dto.TLDifference;
 import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
-import eu.europa.esig.dss.DSSUtils;
 import eu.europa.esig.dss.tsl.KeyUsageBit;
 import eu.europa.esig.dss.utils.Utils;
 import eu.europa.esig.dss.x509.CertificateToken;
@@ -73,7 +72,7 @@ public class TLCertificate extends AbstractTLDTO {
         if (encodedCertificate != null) {
 
             try {
-                CertificateToken cert = DSSUtils.loadCertificate(encodedCertificate);
+                CertificateToken cert = CertificateTokenUtils.loadCertificate(encodedCertificate);
                 if (cert != null) {
                     certEncoded = cert.getEncoded();
                     token = cert;
@@ -82,7 +81,7 @@ public class TLCertificate extends AbstractTLDTO {
                     certSerial = cert.getSerialNumber().toString();
                     certIssuer = cert.getIssuerX500Principal().toString();
                     certSubjectShortName = CertificateTokenUtils.getSubjectName(cert);
-                    certDigestAlgo = cert.getDigestAlgorithm().getName();
+                    certDigestAlgo = cert.getSignatureAlgorithm().getDigestAlgorithm().getName();
                     certAfter = cert.getNotAfter();
                     certNotBefore = cert.getNotBefore();
                     try {
@@ -113,11 +112,8 @@ public class TLCertificate extends AbstractTLDTO {
                 }
             } catch (Exception e) {
                 token = null;
-                if (e.getMessage().equals("invalid info structure in RSA public key")) {
-                    LOGGER.error("invalid info structure in RSA public key : " + Base64.encodeBase64String(encodedCertificate));
-                } else {
-                    LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(encodedCertificate) + "' : " + e.getMessage(), e);
-                }
+                LOGGER.error("Unable to parse certificate '" + Base64.encodeBase64String(encodedCertificate));
+                LOGGER.debug("Parsing error", e);
             }
         }
     }
@@ -140,7 +136,7 @@ public class TLCertificate extends AbstractTLDTO {
     }
 
     public void setTokenFromEncoded() {
-        setToken(DSSUtils.loadCertificate(getCertEncoded()));
+        setToken(CertificateTokenUtils.loadCertificate(getCertEncoded()));
     }
 
     @Override

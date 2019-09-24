@@ -9,6 +9,8 @@ function modalCheckDirectiveController($scope, $modalInstance, list, label) {
 	var backUpList = angular.copy(list);
 	var list = angular.copy(list);
 	$scope.filtre = "";
+	$scope.showTranslation = false;
+	$scope.translationPresent = false;
 
 	$scope.ok = function() {
 		$modalInstance.close();
@@ -19,12 +21,32 @@ function modalCheckDirectiveController($scope, $modalInstance, list, label) {
 	};
 
 	var initOption = function() {
-		$scope.tableOptions = initCheckOption(list,"Location");
+		// Show/Hide translation switch
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].translation) {
+				$scope.translationPresent = true;
+				break;
+			}
+		}
+
+		$scope.tableOptions = initCheckOption(list, "Location", null, null, $scope.showTranslation);
 	};
 	initOption();
 
 	/** Filter * */
 	$scope.$watch("filtre", function() {
+		updateList();
+	}, true);
+
+	/** Filter * */
+	$scope.$watch("showTranslation", function() {
+		updateList();
+	}, true);
+
+	/**
+	 * Update list on filtre/show translation value change
+	 */
+	var updateList = function() {
 		if ($scope.filtre == "") {
 			list = backUpList;
 		} else {
@@ -32,10 +54,13 @@ function modalCheckDirectiveController($scope, $modalInstance, list, label) {
 			for (var i = 0; i < backUpList.length; i++) {
 				if (backUpList[i].status == $scope.filtre) {
 					list.push(backUpList[i]);
-				};
-			};
-		};
+				}
+			}
+		}
 		initOption();
-	}, true);
+	}
 
+	$scope.switchTranslation = function() {
+		$scope.showTranslation = !$scope.showTranslation;
+	}
 };

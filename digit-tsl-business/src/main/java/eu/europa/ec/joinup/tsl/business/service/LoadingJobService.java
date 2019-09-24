@@ -21,8 +21,7 @@
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -41,6 +40,8 @@ import eu.europa.ec.joinup.tsl.business.dto.TLUrls;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLCertificate;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLDigitalIdentification;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLPointersToOtherTSL;
+import eu.europa.ec.joinup.tsl.business.util.CertificateTokenUtils;
+import eu.europa.ec.joinup.tsl.business.util.DateUtils;
 import eu.europa.ec.joinup.tsl.business.util.TLUtils;
 import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
 import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
@@ -85,13 +86,19 @@ public class LoadingJobService {
     @Autowired
     private ApplicationPropertyService applicationPropertyService;
 
+    @Autowired
+    private SieQValidationService sieQValidationService;
+
     public void start() {
-        LOGGER.debug("**** START ****");
+        boolean newFound = false;
+        LOGGER.debug("**** START LOADING JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.LOAD_TL, AuditStatus.SUCCES, "", 0, "SYSTEM", "Start loading job");
         // LAUNCH RULES AND SIGNATURE VALIDATION IF NEW TL
         Load loadLotl = new Load();
 
         TrustStatusListType jaxbTl = tlLoader.loadTL(lotlTerritory, applicationPropertyService.getLOTLUrl(), TLType.LOTL, TLStatus.PROD, loadLotl);
         if (loadLotl.isNew()) {
+            newFound = true;
             tlLoader.checkSigLOTL(loadLotl);
             tlLoader.check(loadLotl);
             tlService.setTlCheckStatus(loadLotl.getTlId());
@@ -120,6 +127,7 @@ public class LoadingJobService {
                     tlLoader.loadTL(countryCode, urls.getXmlUrl(), TLType.TL, TLStatus.PROD, loadTl);
 
                     if (loadTl.isNew() || loadLotl.isNew()) {
+                        newFound = true;
                         tlLoader.check(loadTl);
                         tlLoader.checkSig(loadTl);
                         tlLoader.loadServiceList(loadTl);
@@ -142,6 +150,12 @@ public class LoadingJobService {
             }
             LOGGER.error("*********************");
         }
+
+        if (newFound) {
+            sieQValidationService.refreshTLCertificateSource();
+        }
+        LOGGER.debug("**** END LOADING JOB " + DateUtils.getToFormatYMDH(new Date()) + "****");
+        auditService.addAuditLog(AuditTarget.JOBS, AuditAction.LOAD_TL, AuditStatus.SUCCES, "", 0, "SYSTEM", "End loading job");
     }
 
     private Map<String, TLUrls> buildMap(List<TLPointersToOtherTSL> tlPointers) {
@@ -170,7 +184,7 @@ public class LoadingJobService {
             if (MimeType.XML.equals(pointer.getMimeType()) && lotlTerritory.equals(pointer.getSchemeTerritory())) {
                 LOGGER.debug("UPDATE SIGNING CERTIFICATE FOR " + pointer.getId());
 
-                List<CertificateToken> certificatesFromKeyStore = keyStoreCertificateSource.getCertificates();
+                List<CertificateToken> certificatesFromKeyStore = CertificateTokenUtils.sortCertificateList(keyStoreCertificateSource.getCertificates());
 
                 List<CertificateToken> certificatesFromPointer = new ArrayList<>();
                 for (TLDigitalIdentification digitalId : pointer.getServiceDigitalId()) {
@@ -179,8 +193,7 @@ public class LoadingJobService {
                     }
                 }
 
-                sortCertificateList(certificatesFromKeyStore);
-                sortCertificateList(certificatesFromPointer);
+                certificatesFromPointer = CertificateTokenUtils.sortCertificateList(certificatesFromPointer);
 
                 if (!Objects.deepEquals(certificatesFromKeyStore, certificatesFromPointer)) {
                     // delete of all certificate
@@ -212,12 +225,4 @@ public class LoadingJobService {
 
     }
 
-    private void sortCertificateList(List<CertificateToken> list) {
-        Collections.sort(list, new Comparator<CertificateToken>() {
-            @Override
-            public int compare(CertificateToken o1, CertificateToken o2) {
-                return o1.getNotAfter().compareTo(o2.getNotAfter());
-            }
-        });
-    }
 }

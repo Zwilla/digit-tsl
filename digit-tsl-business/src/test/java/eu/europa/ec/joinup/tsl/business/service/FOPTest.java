@@ -76,7 +76,7 @@ public class FOPTest {
         fopFactory = builder.build();
 
         foUserAgent = fopFactory.newFOUserAgent();
-        foUserAgent.setCreator("TL Manager");
+        foUserAgent.setCreator("TL-Manager");
         foUserAgent.setAccessibility(true);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();

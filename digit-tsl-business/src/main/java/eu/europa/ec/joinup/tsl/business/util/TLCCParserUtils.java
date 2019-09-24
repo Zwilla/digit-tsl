@@ -84,7 +84,7 @@ public class TLCCParserUtils {
             // Workaround for Signature check on TrustServiceStatusList child (Ask JC for update of TLCC)
             if (!CollectionUtils.isEmpty(tlcc.getTrustServiceStatusList().getCheck())) {
                 for (Check check : tlcc.getTrustServiceStatusList().getCheck()) {
-                    if (check.getCheckId().equals("TSLRules.SIG_MUST_BE_PRESENT")) {
+                    if ("TSLRules.SIG_MUST_BE_PRESENT".equals(check.getCheckId())) {
                         cR.add(new CheckResultDTO(tlId + separator + Tag.SIGNATURE, check));
                     } else {
                         cR.add(new CheckResultDTO(tlId + separator + Tag.SCHEME_INFORMATION + separator + Tag.Structure, check));

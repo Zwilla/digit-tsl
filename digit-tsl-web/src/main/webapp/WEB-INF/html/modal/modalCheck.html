@@ -8,12 +8,22 @@
 		<span style="float: right; margin-right: 10px;" class="fa fa-times cursor-pointer" ng-click="cancel()"></span>
 	</div>
 	<div class="panel-body">
-		<div style="margin-left: 588px;">
-			<span th:text="#{check.typeCheck}"> </span>
-			<select ng-model="filtre">
-				<option value="" label="All"></option>
-				<option ng-repeat="i in STATUS" value="{{i}}" ng-if="i!='IGNORE'">{{i}}</option>
-			</select>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-4" ng-if="translationPresent">
+				<span th:text="#{check.showTranslation}"> </span>
+				<!-- OFF -->
+				<span ng-if="!showTranslation" ng-click="switchTranslation()" class="fa fa-toggle-on cursor-pointer fa-lg gly-rotate-180" style="color: red"></span>
+				<!-- ON -->
+				<span ng-if="showTranslation" ng-click="switchTranslation()" class="fa fa-toggle-on cursor-pointer fa-lg" style="color: green"></span>
+			</div>
+			<div class="col-md-6">
+				<span th:text="#{check.typeCheck}"> </span>
+				<select ng-model="filtre">
+					<option value="" label="All"></option>
+					<option ng-repeat="i in STATUS" value="{{i}}" ng-if="i!='IGNORE'">{{i}}</option>
+				</select>
+			</div>
 		</div>
 		<paginator options="tableOptions"></paginator>
 	</div>

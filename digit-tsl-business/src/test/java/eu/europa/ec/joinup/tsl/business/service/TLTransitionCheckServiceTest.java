@@ -1,15 +1,14 @@
 package eu.europa.ec.joinup.tsl.business.service;
 
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.oxm.XmlMappingException;
@@ -20,19 +19,12 @@ import eu.europa.ec.joinup.tsl.business.dto.tl.TL;
 import eu.europa.ec.joinup.tsl.business.dto.tl.TLSchemeInformation;
 import eu.europa.ec.joinup.tsl.model.DBCheck;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
-import eu.europa.esig.jaxb.v5.tsl.TrustStatusListTypeV5;
 
 @SuppressWarnings("deprecation")
 public class TLTransitionCheckServiceTest extends AbstractSpringTest {
 
     @Autowired
     private TLTransitionCheckService tlTransitionCheckService;
-
-    @Autowired
-    private TLBuilder tlBuilder;
-
-    @Autowired
-    private TrustedListJaxbService jaxbService;
 
     @Autowired
     private CheckService checkService;
@@ -76,40 +68,33 @@ public class TLTransitionCheckServiceTest extends AbstractSpringTest {
     public void initServiceTransitionEntry() throws XmlMappingException, IOException {
         Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
 
-        InputStream xml = new FileInputStream(new File("src/test/resources/tsl/BE-TEST/BE_39.xml"));
-        TrustStatusListTypeV5 unmarshall = jaxbService.unmarshallTSLV5(xml);
-        TL previousTL = tlBuilder.buildTLV5(1, unmarshall);
+        TL previousTL = fileToTL(1, "src/test/resources/tsl/BE-TEST/BE_39.xml");
 
-        xml = new FileInputStream(new File("src/test/resources/tsl/BE-TEST/BE_40.xml"));
-        unmarshall = jaxbService.unmarshallTSLV5(xml);
-        TL currentTL = tlBuilder.buildTLV5(2, unmarshall);
+        TL currentTL = fileToTL(2, "src/test/resources/tsl/BE-TEST/BE_40.xml");
 
         List<CheckResultDTO> tspCheck = tlTransitionCheckService.getServicesCheck(currentTL.getServiceProviders().get(0), previousTL.getServiceProviders().get(0), new Date(), transitionChecks);
-        Assert.assertEquals(8, tspCheck.size());
+        Assert.assertEquals(7, tspCheck.size());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_2", tspCheck.get(0).getId());
-        Assert.assertEquals("TRANSITION_CHECK.SERVICE_UPDATE_NO_HISTORY", tspCheck.get(0).getCheckId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_3", tspCheck.get(0).getId());
+        Assert.assertEquals("TRANSITION_CHECK.HISTORY_CHANGE", tspCheck.get(0).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_3", tspCheck.get(1).getId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_4", tspCheck.get(1).getId());
         Assert.assertEquals("TRANSITION_CHECK.HISTORY_CHANGE", tspCheck.get(1).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_4", tspCheck.get(2).getId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_5", tspCheck.get(2).getId());
         Assert.assertEquals("TRANSITION_CHECK.HISTORY_CHANGE", tspCheck.get(2).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_5", tspCheck.get(3).getId());
-        Assert.assertEquals("TRANSITION_CHECK.HISTORY_CHANGE", tspCheck.get(3).getCheckId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_1", tspCheck.get(3).getId());
+        Assert.assertEquals("TRANSITION_CHECK.SERVICE_PUBLICATION_DATE", tspCheck.get(3).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_1", tspCheck.get(4).getId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_4", tspCheck.get(4).getId());
         Assert.assertEquals("TRANSITION_CHECK.SERVICE_PUBLICATION_DATE", tspCheck.get(4).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_4", tspCheck.get(5).getId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_5", tspCheck.get(5).getId());
         Assert.assertEquals("TRANSITION_CHECK.SERVICE_PUBLICATION_DATE", tspCheck.get(5).getCheckId());
 
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1_TSP_SERVICE_5", tspCheck.get(6).getId());
-        Assert.assertEquals("TRANSITION_CHECK.SERVICE_PUBLICATION_DATE", tspCheck.get(6).getCheckId());
-
-        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1", tspCheck.get(7).getId());
-        Assert.assertEquals("TRANSITION_CHECK.SERVICE_DELETE", tspCheck.get(7).getCheckId());
+        Assert.assertEquals("2_TSP_SERVICE_PROVIDER_1", tspCheck.get(6).getId());
+        Assert.assertEquals("TRANSITION_CHECK.SERVICE_DELETE", tspCheck.get(6).getCheckId());
 
         tspCheck = tlTransitionCheckService.getServicesCheck(currentTL.getServiceProviders().get(1), previousTL.getServiceProviders().get(1), new Date(), transitionChecks);
         Assert.assertEquals(2, tspCheck.size());
@@ -128,15 +113,20 @@ public class TLTransitionCheckServiceTest extends AbstractSpringTest {
     public void testEE() throws XmlMappingException, IOException {
         Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
 
-        InputStream xml = new FileInputStream(new File("src/test/resources/tsl/EE-TEST/EE_43.xml"));
-        TrustStatusListTypeV5 unmarshall = jaxbService.unmarshallTSLV5(xml);
-        TL previousTL = tlBuilder.buildTLV5(1, unmarshall);
-
-        xml = new FileInputStream(new File("src/test/resources/tsl/EE-TEST/EE_44.xml"));
-        unmarshall = jaxbService.unmarshallTSLV5(xml);
-        TL currentTL = tlBuilder.buildTLV5(2, unmarshall);
+        TL previousTL = fileToTL(1, "src/test/resources/tsl/EE-TEST/EE_43.xml");
+        TL currentTL = fileToTL(2, "src/test/resources/tsl/EE-TEST/EE_44.xml");
 
         List<CheckResultDTO> tspCheck = tlTransitionCheckService.getServicesCheck(currentTL.getServiceProviders().get(0), previousTL.getServiceProviders().get(0), new Date(), transitionChecks);
         Assert.assertNotNull(tspCheck);
+    }
+
+    @Ignore
+    public void zTSPChecks() throws FileNotFoundException, IOException {
+        TL comparedTL = fileToTL(1, "src/test/resources/transition/NL_41.xml");
+        TL currentTL = fileToTL(2, "src/test/resources/transition/NL_42.xml");
+        Date publicationDate = new Date(119, 3, 23);
+        Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
+        List<CheckResultDTO> checks = tlTransitionCheckService.performTSPChecks(currentTL, comparedTL, transitionChecks, publicationDate);
+        Assert.assertTrue(checks.isEmpty());
     }
 }

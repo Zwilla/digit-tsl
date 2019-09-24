@@ -545,8 +545,13 @@ public class LocationUtils {
     }
 
     private static String addServiceProviderNameHr(TL tl, int serviceProviderToCheck) {
-        if (CollectionUtils.isNotEmpty(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPName())) {
-            return " : " + tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPName().get(0).getValue();
+        try {
+
+            if (CollectionUtils.isNotEmpty(tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPName())) {
+                return " : " + tl.getServiceProviders().get(serviceProviderToCheck - 1).getTSPName().get(0).getValue();
+            }
+        } catch (IndexOutOfBoundsException e) {
+            return "";
         }
         return "";
     }
