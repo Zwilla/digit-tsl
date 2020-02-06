@@ -25,7 +25,7 @@
 		<dss.version>5.4.3</dss.version>
 
 		<spring.version>4.1.7.RELEASE</spring.version>
-		<spring-data.version>1.9.0.RELEASE</spring-data.version>
+		<spring-data.version>1.11.23.RELEASE</spring-data.version>
 
 		<jackson.version>2.6.0</jackson.version>
 
