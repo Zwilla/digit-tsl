@@ -1,7 +1,5 @@
 package eu.europa.ec.joinup.tsl.business.quartz;
 
-import javax.annotation.PostConstruct;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +24,6 @@ public class LoadingJobScheduler {
     @Autowired
     private LoadingJobService loadingJobService;
 
-    @PostConstruct
     public void launchIfEmpty() {
         if (loadLotlOnStartup && (tlRepository.count() == 0)) {
             loadLOTL();

@@ -149,4 +149,8 @@ public class ApplicationPropertyService {
         return property.isActive();
     }
 
+
+    public List<DBApplicationProperty> getBooleanProperties() {
+        return propertyRepository.findByTypeNotIn(booleanProperties);
+    }
 }

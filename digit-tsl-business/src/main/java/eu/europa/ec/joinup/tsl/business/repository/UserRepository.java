@@ -14,7 +14,7 @@ public interface UserRepository extends CrudRepository<DBUser, Integer> {
 
     DBUser findByEcasId(String name);
 
-    List<DBUser> findByTerritoryAndRoleCode(DBCountries territory, DBRole role_code);
+    List<DBUser> findByTerritoryAndRoleCode(DBCountries territory, String role_code);
 
     DBUser findByEcasIdAndRoleCodeIn(String ecasId, List<String> roles);
 

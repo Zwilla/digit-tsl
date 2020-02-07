@@ -41,7 +41,7 @@ public class TLKeyUsage extends AbstractTLDTO {
     public KeyUsageTypeV5 asTSLTypeV5() {
         KeyUsageTypeV5 kut = new KeyUsageTypeV5();
         for (TLKeyUsageBit keyUsage : this.getKeyUsageBit()) {
-            if (keyUsage.getIsValue() != null) {
+            if (!keyUsage.getIsValue()) {
                 kut.getKeyUsageBit().add(keyUsage.asTSLTypeV5());
             }
         }

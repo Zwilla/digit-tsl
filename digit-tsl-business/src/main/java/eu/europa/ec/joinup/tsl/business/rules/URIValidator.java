@@ -33,16 +33,12 @@ public class URIValidator extends GenericValidator {
     }
 
     @Async
-    public Future<boolean> isAccessibleUri(String uri) {
+    public Future<Boolean> isAccessibleUri(String uri) {
         return new AsyncResult<>(cacheDataLoader.isAccessibleUri(uri));
     }
 
     public boolean isSecureURI(String uri) {
-        if (uri.toLowerCase().startsWith("https")) {
-            return true;
-        } else {
-            return false;
-        }
+        return uri.toLowerCase().startsWith("https");
     }
 
 }

@@ -22,7 +22,7 @@ public abstract class AbstractCheckValidator {
         results.add(new CheckResultDTO(location, check, valid));
     }
 
-    protected void runAsync(CheckDTO check, String location, Future<boolean> futureValid, List<CheckResultDTO> results) {
+    protected void runAsync(CheckDTO check, String location, Future<Boolean> futureValid, List<CheckResultDTO> results) {
         boolean result = false;
         try {
             while (true) {

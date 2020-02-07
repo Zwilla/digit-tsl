@@ -518,7 +518,7 @@ public class LocationUtils {
     private static String getLocation(String text, int occurs) {
         String result = text;
         for (int i = 0; i < occurs; i++) {
-            result = result.substring(result.indexOf(_) + 1);
+            result = result.substring(result.indexOf('_') + 1);
         }
         return result;
     }

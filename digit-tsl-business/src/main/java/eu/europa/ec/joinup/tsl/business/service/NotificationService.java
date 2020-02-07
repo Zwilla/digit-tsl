@@ -184,11 +184,7 @@ public class NotificationService {
                 contactService.getDeletedContact(notification.getTlsoContact()));
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        try {
-            jaxbService.marshallNotification(memberStateNotificationV5, out);
-        } catch (IOException e) {
-            LOGGER.info("createDraftFromBinaries error : " + e.getMessage(), e);
-        }
+        jaxbService.marshallNotification(memberStateNotificationV5, out);
 
         return out;
     }

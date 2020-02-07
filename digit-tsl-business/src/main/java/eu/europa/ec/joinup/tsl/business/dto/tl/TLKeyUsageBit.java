@@ -50,7 +50,7 @@ public class TLKeyUsageBit extends AbstractTLDTO {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = (prime * result) + ((isValue == null) ? 0 : isValue.hashCode());
+        result = (prime * result) + ((!isValue) ? 0 : value.hashCode());
         result = (prime * result) + ((value == null) ? 0 : value.hashCode());
         return result;
     }
@@ -67,21 +67,16 @@ public class TLKeyUsageBit extends AbstractTLDTO {
             return false;
         }
         TLKeyUsageBit other = (TLKeyUsageBit) obj;
-        if (isValue == null) {
-            if (other.isValue != null) {
+        if (isValue) {
+            if (!other.isValue) {
                 return false;
             }
-        } else if (!isValue.equals(other.isValue)) {
+        } else if (other.isValue) {
             return false;
         }
         if (value == null) {
-            if (other.value != null) {
-                return false;
-            }
-        } else if (!value.equals(other.value)) {
-            return false;
-        }
-        return true;
+            return other.value == null;
+        } else return value.equals(other.value);
     }
 
 }

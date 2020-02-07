@@ -52,7 +52,8 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
         } catch (ClassNotFoundException e) {
             // Additional freemarker config not found
         }
-        List<Class> configs = new ArrayList<>(Arrays.asList(ApplicationConfig.class, OverrideConfig.class, PersistenceConfig.class, DataLoaderConfig.class, WebSecurityConfig.class, ProxyConfiguration.class));
+        List<Class> configs =
+                new ArrayList<Class>(Arrays.asList(ApplicationConfig.class, OverrideConfig.class, PersistenceConfig.class, DataLoaderConfig.class, WebSecurityConfig.class, ProxyConfiguration.class));
         if (config != null) {
             configs.add(config);
         }
