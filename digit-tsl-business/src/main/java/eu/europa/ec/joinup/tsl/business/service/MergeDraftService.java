@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
@@ -76,7 +56,6 @@ public class MergeDraftService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MergeDraftService.class);
 
-    /** ----- ----- Prepare merge and check conflicts ----- ----- **/
 
     /**
      * Get list of changes between PROD and a list of drafts. Changes are group by location with the related drafts TL
@@ -154,7 +133,7 @@ public class MergeDraftService {
         tlPTOTLs.removeAll(prodTL.getPointers());
 
         for (TLPointersToOtherTSL tlPTOTL : tlPTOTLs) {
-            Boolean ptotlFound = false;
+            boolean ptotlFound = false;
             TLPointersToOtherTSL prodPTOTLtoRemove = null;
             String tlPTOTLLocation = getPTOTLLocation(tlPTOTL);
             for (TLPointersToOtherTSL prodPTOTL : prodPTOTLs) {
@@ -205,7 +184,7 @@ public class MergeDraftService {
         prodTSPs.removeAll(tl.getServiceProviders());
         tlTSPs.removeAll(prodTL.getServiceProviders());
         for (TLServiceProvider tlTSP : tlTSPs) {
-            Boolean tspFound = false;
+            boolean tspFound = false;
             TLServiceProvider prodTSPtoRemove = null;
             for (TLServiceProvider prodTSP : prodTSPs) {
                 if (tlTSP.getName().equals(prodTSP.getName())) {

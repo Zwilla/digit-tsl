@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>21</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">Office for Communications</Name>
             <Name xml:lang="de">Amt für Kommunikation</Name>
@@ -37,10 +37,10 @@
             <URI xml:lang="en">http://www.llv.li/#/12063/trusted-list-of-supervisedaccredited-certification-service-providers</URI>
             <URI xml:lang="de">http://www.llv.li/#/12296/vertrauenswurdige-liste-der-beaufsichtigten-bzw-akkreditierten-zertifizierungsdiensteanbieter</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LI</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LI</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>LI</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -75,7 +75,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -91,7 +91,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -143,7 +143,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Liechtenstein Post Advanced CA</Name>
                             <Name xml:lang="de">Liechtenstein Post Advanced CA</Name>
@@ -156,7 +156,7 @@
 <X509SubjectName>CN=Liechtenstein Post Advanced CA, OU=Issuing Certification Authority, O=Liechtensteinische Post AG, C=LI</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <SchemeServiceDefinitionURI>
                             <URI xml:lang="en">http://www.llv.li/#/112176/electronic-signature</URI>
@@ -179,14 +179,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Advanced CA</Name>
 <Name xml:lang="de">Liechtenstein Post Advanced CA</Name>
@@ -199,7 +199,7 @@
     <X509SKI>ByAYmXTB6KvKsLWCPqwl2xVy8nY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2016-06-30T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
@@ -219,7 +219,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Advanced CA</Name>
 <Name xml:lang="de">Liechtenstein Post Advanced CA</Name>
@@ -232,7 +232,7 @@
     <X509SKI>ByAYmXTB6KvKsLWCPqwl2xVy8nY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
@@ -252,7 +252,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Advanced CA (1st certificate)</Name>
 <Name xml:lang="de">Liechtenstein Post Advanced CA (1. Zertifikat)</Name>
@@ -265,11 +265,11 @@
     <X509SKI>ByAYmXTB6KvKsLWCPqwl2xVy8nY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Advanced CA (1st certificate)</Name>
 <Name xml:lang="de">Liechtenstein Post Advanced CA (1. Zertifikat)</Name>
@@ -282,14 +282,14 @@
     <X509SKI>ByAYmXTB6KvKsLWCPqwl2xVy8nY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-22T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
                             <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -302,7 +302,7 @@
 <X509SubjectName>CN=Liechtenstein Post Qualified CA, OU=Issuing Certification Authority, O=Liechtensteinische Post AG, C=LI</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <SchemeServiceDefinitionURI>
                             <URI xml:lang="en">http://www.llv.li/#/112176/electronic-signature</URI>
@@ -325,14 +325,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -345,7 +345,7 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2016-06-30T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
@@ -365,7 +365,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -378,7 +378,7 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:02Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
@@ -398,7 +398,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -411,11 +411,11 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:02Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -428,11 +428,11 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:01Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -445,11 +445,11 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationrevoked</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationrevoked</ServiceStatus>
                             <StatusStartingTime>2012-12-31T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -462,11 +462,11 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2009-09-14T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Qualified CA</Name>
 <Name xml:lang="de">Liechtenstein Post Qualified CA</Name>
@@ -479,7 +479,7 @@
     <X509SKI>+xuQk/2Y2n+SahpGJjbR84+HAOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-22T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -524,7 +524,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">lisign-qualified-01</Name>
                             <Name xml:lang="de">lisign-qualified-01</Name>
@@ -537,19 +537,19 @@
 <X509SubjectName>CN=lisign-qualified-01, OU=lisign-qualified-01, O=FLZ-Anstalt, C=LI</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">lisign-qualified-01</Name>
 <Name xml:lang="de">lisign-qualified-01</Name>
@@ -562,11 +562,11 @@
     <X509SKI>SGy22fwuiO0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2009-09-14T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">lisign-qualified-01</Name>
 <Name xml:lang="de">lisign-qualified-01</Name>
@@ -579,7 +579,7 @@
     <X509SKI>SGy22fwuiO0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-08-25T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -624,7 +624,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Trusted List CA 1</Name>
                             <Name xml:lang="de">Vertrauenswürdige Liste CA 1</Name>
@@ -637,19 +637,19 @@
 <X509SubjectName>CN=Trusted List CA 1, O=Amt für Kommunikation, C=LI</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Trusted List CA 1</Name>
 <Name xml:lang="de">Vertrauenswürdige Liste CA 1</Name>
@@ -662,14 +662,14 @@
     <X509SKI>/WNtmTo8ovxAH8MWrqxXK5AkVKo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-02-07T13:56:34Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Trusted List CA 2</Name>
                             <Name xml:lang="de">Vertrauensliste CA 2</Name>
@@ -685,12 +685,12 @@
 <X509SKI>xtpl5ueSfdn8EJWUO/Ym9dhkhnE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-02-01T23:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -736,7 +736,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SwissSign LI Qualified Platinum CA 2016 - G22</Name>
                             <Name xml:lang="de">SwissSign LI Qualified Platinum CA 2016 - G22</Name>
@@ -752,12 +752,12 @@
 <X509SKI>8CIl6FKXYCQ+bmN+XGHyHIG/x54=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-12-07T01:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -765,7 +765,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SwissSign LI Platinum Qualified CA 2016 - G3</Name>
                             <Name xml:lang="de">SwissSign LI Platinum Qualified CA 2016 - G3</Name>
@@ -781,12 +781,12 @@
 <X509SKI>8A71tur7IBp7ORlbJ6qzhLcozDc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-12-07T01:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -794,7 +794,7 @@
                 </TSPService>
             </TSPServices>
         </TrustServiceProvider>
-    </TrustServiceProviderList><dsig:Signature Id="Signature-30b60703-1" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:SignedInfo Id="SignedInfo-30b60703-1"><dsig:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><dsig:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><dsig:Reference Id="Reference-30b60703-1" URI=""><dsig:Transforms xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><dsig:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></dsig:Transforms><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>tjXMtHmDpvxSbFrsneJBxBiwrPzH2IjCdXH6eSXTghU=</dsig:DigestValue></dsig:Reference><dsig:Reference Id="Reference-30b60703-2" Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-30b60703-1"><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>iMj68E71X9nqvRPuYHtDlJIsBFx/GlEQx+blqBRHvo4=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue Id="SignatureValue-30b60703-1">l7V/makZ7pUf0UcKmqx3nFqv5mUPWO58N3MipIyOFixiEgfnQiqKUBjZg4KxryiS
+    </TrustServiceProviderList><dsig:Signature Id="Signature-30b60703-1" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:SignedInfo Id="SignedInfo-30b60703-1"><dsig:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><dsig:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><dsig:Reference Id="Reference-30b60703-1" URI=""><dsig:Transforms xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><dsig:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></dsig:Transforms><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>tjXMtHmDpvxSbFrsneJBxBiwrPzH2IjCdXH6eSXTghU=</dsig:DigestValue></dsig:Reference><dsig:Reference Id="Reference-30b60703-2" Type="https://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-30b60703-1"><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>iMj68E71X9nqvRPuYHtDlJIsBFx/GlEQx+blqBRHvo4=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue Id="SignatureValue-30b60703-1">l7V/makZ7pUf0UcKmqx3nFqv5mUPWO58N3MipIyOFixiEgfnQiqKUBjZg4KxryiS
 6eH/AJuFYUOz06FLAg2k9LzdqFlpd/2RvZz/vdcm0uu6U85kITrvG1zxPAyxBemk
 qbl6cQf0WPiKZBXkCU+x6B4xF/LpUTRleuTIh0fs7IJ7KUFU2YiQ9wi/hkMpgviH
 sTsDbcmNu+tQOLGpnmt2hL4VTxXt03HUy2Oml4IFUkiSf896qAE6/XfZkua7ZAkZ
@@ -826,5 +826,5 @@ WAOHT4d3j4/pl7oqmX+gPbQLTKoE6Jhrvz0y2tJW4hglsV+iEFqzJce90sbcxfq8
 oaA5X34jT+msyqDLB6G/QIfQy9pn1JCzAJaJGome8uQIIUlw6MmZSgRfINN8yCRZ
 8ibH6flREcEjFAZQcujNPPiLkXf2mPtr1HIEhpby28/2yMyEMpzA7dDHqdIHWww9
 BW+HOIys3xteB9h9y2imhYoe//XCViFnUTaW6dgvRqSHPrWHk3EFavP5oks0KrcE
-3tVom/OENXAe8l6/Mfqwt9ElRaXNiyMNzBn1s6yJpzhlaEUi</dsig:X509Certificate></dsig:X509Data></dsig:KeyInfo><dsig:Object Id="Object-30b60703-1"><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns3="http://uri.etsi.org/01903/v1.4.1#" Target="#Signature-30b60703-1" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:sl="http://www.buergerkarte.at/namespaces/securitylayer/1.2#"><xades:SignedProperties Id="SignedProperties-30b60703-1"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-09T15:37:40Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>6jaohTkNP2T4syBApGwiOf3AlxUggVkXiToASq7mWMw=</dsig:DigestValue></xades:CertDigest><xades:IssuerSerial><dsig:X509IssuerName>CN=Trusted List CA 2,O=Amt für Kommunikation,C=LI</dsig:X509IssuerName><dsig:X509SerialNumber>15715481224356676678</dsig:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-30b60703-1"><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></dsig:Object></dsig:Signature>
+3tVom/OENXAe8l6/Mfqwt9ElRaXNiyMNzBn1s6yJpzhlaEUi</dsig:X509Certificate></dsig:X509Data></dsig:KeyInfo><dsig:Object Id="Object-30b60703-1"><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns3="https://uri.etsi.org/01903/v1.4.1#" Target="#Signature-30b60703-1" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:sl="http://www.buergerkarte.at/namespaces/securitylayer/1.2#"><xades:SignedProperties Id="SignedProperties-30b60703-1"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-09T15:37:40Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><dsig:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><dsig:DigestValue>6jaohTkNP2T4syBApGwiOf3AlxUggVkXiToASq7mWMw=</dsig:DigestValue></xades:CertDigest><xades:IssuerSerial><dsig:X509IssuerName>CN=Trusted List CA 2,O=Amt für Kommunikation,C=LI</dsig:X509IssuerName><dsig:X509SerialNumber>15715481224356676678</dsig:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#Reference-30b60703-1"><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></dsig:Object></dsig:Signature>
 </TrustServiceStatusList>

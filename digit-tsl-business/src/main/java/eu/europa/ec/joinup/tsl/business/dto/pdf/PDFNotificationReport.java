@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.pdf;
 
 import java.text.SimpleDateFormat;
@@ -63,20 +43,18 @@ public class PDFNotificationReport {
     @XStreamAsAttribute
     private String dateOfEffect;
     @XStreamAsAttribute
-    private String docID;
-    @XStreamAsAttribute
     private TLSignature signatureInformation;
     @XStreamAsAttribute
     private List<User> users;
 
-    private List<Map<String, String>> schemeOperatorNames = new ArrayList<>();
+    private final List<Map<String, String>> schemeOperatorNames = new ArrayList<>();
 
     @XStreamImplicit(itemFieldName = "certificate")
-    private List<String> signingCertificates = new ArrayList<>();
+    private final List<String> signingCertificates = new ArrayList<>();
     @XStreamImplicit(itemFieldName = "certificateRemoved")
-    private List<String> signingCertificatesRemoved = new ArrayList<>();
+    private final List<String> signingCertificatesRemoved = new ArrayList<>();
     @XStreamAlias("changeList")
-    private List<PDFMeasure> changes = new ArrayList<>();
+    private final List<PDFMeasure> changes = new ArrayList<>();
 
     private List<PDFCheck> pointersToOtherTslChecks = new ArrayList<>();
 
@@ -90,7 +68,7 @@ public class PDFNotificationReport {
     private int infoChecks;
 
     public PDFNotificationReport(String countryName, Date date) {
-        docID = "(Document ID : " + countryName + "-" + TLUtils.toStringFormatZ(date) + ")";
+        String docID = "(Document ID : " + countryName + "-" + TLUtils.toStringFormatZ(date) + ")";
     }
 
     public String getMemberState() {
@@ -169,11 +147,9 @@ public class PDFNotificationReport {
 
     public void addSchemeOperatorName(String language, String value) {
         boolean canAdd = true;
-        if (canAdd) {
-            Map<String, String> map = new HashMap<>();
-            map.put(language, value);
-            schemeOperatorNames.add(map);
-        }
+        Map<String, String> map = new HashMap<>();
+        map.put(language, value);
+        schemeOperatorNames.add(map);
     }
 
     public void addSigningCertificate(String value) {

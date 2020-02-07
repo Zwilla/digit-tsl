@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="TSL-BE-2016-T3" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="TSL-BE-2016-T3" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>30</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">FPS Economy, SMEs, Self-employed and Energy - Quality and Safety</Name>
             <Name xml:lang="nl">FOD Economie, KMO, Middenstand en Energie - Kwaliteit en Veiligheid</Name>
@@ -37,10 +37,10 @@
         <SchemeInformationURI>
             <URI xml:lang="en">https://tsl.belgium.be/</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BE</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BE</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>BE</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -74,7 +74,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -90,7 +90,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -137,7 +137,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Belgium Root CA, C=BE</Name>
                         </ServiceName>
@@ -152,19 +152,19 @@
 <X509SKI>EPAMVpth6lc6tjWXbZ/duRSO2+Y=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-09-06T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -185,14 +185,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Belgium Root CA, C=BE</Name>
                             </ServiceName>
@@ -204,19 +204,19 @@
     <X509SKI>EPAMVpth6lc6tjWXbZ/duRSO2+Y=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -237,13 +237,13 @@
 </Extension>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Belgium Root CA, C=BE</Name>
                             </ServiceName>
@@ -255,19 +255,19 @@
     <X509SKI>EPAMVpth6lc6tjWXbZ/duRSO2+Y=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2003-01-26T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -292,7 +292,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Belgium Root CA2, C=BE</Name>
                         </ServiceName>
@@ -307,19 +307,19 @@
 <X509SKI>hYrr9MW7vg5ZA5Te1oABFeMQnDk=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -340,14 +340,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Belgium Root CA2, C=BE</Name>
                             </ServiceName>
@@ -359,19 +359,19 @@
     <X509SKI>hYrr9MW7vg5ZA5Te1oABFeMQnDk=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2007-10-04T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -396,7 +396,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Belgium Root CA3, C=BE</Name>
                         </ServiceName>
@@ -411,19 +411,19 @@
 <X509SKI>uLxsAI9bGYWdJQGc8BncQI7QOCs=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -444,14 +444,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Belgium Root CA3, C=BE</Name>
                             </ServiceName>
@@ -463,19 +463,19 @@
     <X509SKI>uLxsAI9bGYWdJQGc8BncQI7QOCs=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-06-26T12:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -500,7 +500,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Belgium Root CA4, C=BE</Name>
                         </ServiceName>
@@ -515,19 +515,19 @@
 <X509SKI>Z+jxTk+ztfMHbwicDIPZetlb50k=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -548,14 +548,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Belgium Root CA4, C=BE</Name>
                             </ServiceName>
@@ -567,19 +567,19 @@
     <X509SKI>Z+jxTk+ztfMHbwicDIPZetlb50k=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-06-26T12:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -604,7 +604,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Certipost Public CA for Qualified Signatures, O=Certipost n.v./s.a., C=BE</Name>
                         </ServiceName>
@@ -622,19 +622,19 @@
 <X509SKI>Djczxyhuv85f5irmmJCLrMHmKEQ=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-12-14T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Certipost Public CA for Qualified Signatures, O=Certipost n.v./s.a., C=BE</Name>
                             </ServiceName>
@@ -646,18 +646,18 @@
     <X509SKI>Djczxyhuv85f5irmmJCLrMHmKEQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Certipost Public CA for Qualified Signatures, O=Certipost n.v./s.a., C=BE</Name>
                             </ServiceName>
@@ -669,14 +669,14 @@
     <X509SKI>Djczxyhuv85f5irmmJCLrMHmKEQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-01-11T19:45:06Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CN=Certipost E-Trust Primary Qualified CA, O=Certipost s.a./n.v., C=BE</Name>
                         </ServiceName>
@@ -691,19 +691,19 @@
 <X509SKI>8Hj5B3cQu9weoa55+zAQ28Y0+Bc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-12-14T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -727,14 +727,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Certipost E-Trust Primary Qualified CA, O=Certipost s.a./n.v., C=BE</Name>
                             </ServiceName>
@@ -746,19 +746,19 @@
     <X509SKI>8Hj5B3cQu9weoa55+zAQ28Y0+Bc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -782,13 +782,13 @@
 </Extension>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CN=Certipost E-Trust Primary Qualified CA, O=Certipost s.a./n.v., C=BE</Name>
                             </ServiceName>
@@ -800,19 +800,19 @@
     <X509SKI>8Hj5B3cQu9weoa55+zAQ28Y0+Bc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2005-07-26T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -871,7 +871,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SWIFTNet PKI Certification Authority</Name>
                         </ServiceName>
@@ -886,14 +886,14 @@
 <X509SKI>PjCzOzWXV//xQNsbRQE4LhWnnrI=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -907,14 +907,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SWIFTNet PKI Certification Authority</Name>
                             </ServiceName>
@@ -926,14 +926,14 @@
     <X509SKI>PjCzOzWXV//xQNsbRQE4LhWnnrI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-05-15T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -982,7 +982,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">QuoVadis BE PKI Certification Authority</Name>
                         </ServiceName>
@@ -997,19 +997,19 @@
 <X509SKI>+A9lHHpjGaq/RG+mSRIh83pd4w0=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">QuoVadis BE PKI Certification Authority</Name>
                             </ServiceName>
@@ -1021,14 +1021,14 @@
     <X509SKI>+A9lHHpjGaq/RG+mSRIh83pd4w0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-05-20T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">QuoVadis BE PKI Certification Authority G2</Name>
                         </ServiceName>
@@ -1043,19 +1043,19 @@
 <X509SKI>h8m8MZcSenO7fsA9RVG0ASWVUas=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">QuoVadis BE PKI Certification Authority G2</Name>
                             </ServiceName>
@@ -1067,7 +1067,7 @@
     <X509SKI>h8m8MZcSenO7fsA9RVG0ASWVUas=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1107,7 +1107,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Zetes TSP PKI certification authority</Name>
                         </ServiceName>
@@ -1122,19 +1122,19 @@
 <X509SKI>4rTbX2oPAlBU1R3v0nZyciGVRis=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Zetes TSP PKI certification authority</Name>
                             </ServiceName>
@@ -1146,7 +1146,7 @@
     <X509SKI>4rTbX2oPAlBU1R3v0nZyciGVRis=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-19T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1154,7 +1154,7 @@
             </TSPServices>
         </TrustServiceProvider>
     </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#TSL-BE-2016-T3"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>wc7FZwyJ5aqZWHGy/HGhEnwwm+ka03YpVOIl2A/Xc6w=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-xades"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>RuwIV5riGBsXXpoLo22POPtC123wfj0hINNuU4idmIs=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-signature-value">QaGwUqZXe5P0rP0SxcdA9cq4W1OZAAIqgxhC88D0S7xaeInbxJQzzOOX+WBPLwkEvem/CSWrjp41
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference URI="#TSL-BE-2016-T3"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>wc7FZwyJ5aqZWHGy/HGhEnwwm+ka03YpVOIl2A/Xc6w=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-xades"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>RuwIV5riGBsXXpoLo22POPtC123wfj0hINNuU4idmIs=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-signature-value">QaGwUqZXe5P0rP0SxcdA9cq4W1OZAAIqgxhC88D0S7xaeInbxJQzzOOX+WBPLwkEvem/CSWrjp41
 a9uRTCOTXD5lq9zb2ktg4Qk3Ws0SJ/xj5IIUKRSPtSEdvQgalgnKlB8V27y4CW5ByiYjlooOKmHJ
 IOQteVg6U6aulaWTq0f9IfolUmpt2CiBBOMEmZ8T/WusEGw0ib0kiAM/VFdKYcWWvs5hth5P9c5S
 5NtC7Vfk5jkvm+dMP+EnszsHBkmbauxKk82jqz0OvohG18Nzq12S12Ql8K4469L9MNWHRxkQUDgn
@@ -1179,4 +1179,4 @@ XSJSAjKXS1uvnABtq3fQabHwxNc8rIQPkLk=</ds:X509Certificate><ds:X509IssuerSerial><d
 uwAADJsdsfM5hDMHN6FEOxNFjeRpfmPu5+jbV+dA/+Em8OCI1b8MEUa7vAqI+b6uR89ySk4H7fLX
 hKcG+b0hWYevqPYq3V9+NkSVOALRu/LMWb8yKqWt1rHXTH+Vw8o5xit3UYJA7jmgcVhHsblIjeC7
 zvjGnMKGsRKi4RGekwCxlktlpjRFtzpVHX+53NE8/5Z8kLLhZ9NXOKYOeoY8sS7aY8h8DcG0w8fn
-IwaQb3jk/TW+lHyhR5JwuQH6yDlpxS11Jsig/w==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><xades:SignedProperties Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-xades"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-16T14:21:36Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>wfZd/VSqx4pp/KimiNdz8AJ5abA5AnmEZCbYZbl3De8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=BE, O="FPS Economy, SMEs, Self-employed and Energy - Quality and Safety", CN=Belgian Trusted List Scheme Operator</ds:X509IssuerName><ds:X509SerialNumber>12597032158223217295</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+IwaQb3jk/TW+lHyhR5JwuQH6yDlpxS11Jsig/w==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea" xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><xades:SignedProperties Id="xmldsig-60aad621-287f-4ec2-a7c2-1d4d672d0fea-xades"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-16T14:21:36Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>wfZd/VSqx4pp/KimiNdz8AJ5abA5AnmEZCbYZbl3De8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>C=BE, O="FPS Economy, SMEs, Self-employed and Energy - Quality and Safety", CN=Belgian Trusted List Scheme Operator</ds:X509IssuerName><ds:X509SerialNumber>12597032158223217295</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

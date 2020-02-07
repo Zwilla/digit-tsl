@@ -2,1041 +2,1041 @@ Italy
 
     Banca d'Italia 
 
-        CN=Banca d'Italia,OU=Servizi di certificazione,O=Banca d'Italia/00950501007,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Banca d'Italia,OU=Servizi di certificazione,O=Banca d'Italia/00950501007,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Banca d'Italia,OU=Servizi di certificazione,O=Banca d'Italia/00950501007,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Banca d'Italia,OU=Servizi di certificazione,O=Banca d'Italia/00950501007,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Infocert S.p.A. 
 
-        CN=InfoCert Firma Qualificata,OU=Certificatore Accreditato,serialNumber=07945211006,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Firma Qualificata,OU=Certificatore Accreditato,serialNumber=07945211006,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=InfoCert Time Stamping Authority,OU=TSA,serialNumber=07945211006,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCert Time Stamping Authority,OU=TSA,serialNumber=07945211006,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCert Firma Qualificata 2,serialNumber=07945211006,OU=Certificatore Accreditato,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Firma Qualificata 2,serialNumber=07945211006,OU=Certificatore Accreditato,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=InfoCert Time Stamping Authority 2,serialNumber=07945211006,OU=TSA,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCert Time Stamping Authority 2,serialNumber=07945211006,OU=TSA,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCert Time Stamping Authority TS,OU=TSA,serialNumber=07945211006,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCert Time Stamping Authority TS,OU=TSA,serialNumber=07945211006,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCert-OpenTrust Qualified Electronic Signature CA,OU=For issuance in InfoCert-OpenTrust Personal Signature Remote SSCD,O=InfoCert SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert-OpenTrust Qualified Electronic Signature CA,OU=For issuance in InfoCert-OpenTrust Personal Signature Remote SSCD,O=InfoCert SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = InfoCert Servizi di Certificazione,OU = Ente Certificatore,SERIALNUMBER = 07945211006,O = INFOCERT SPA,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = InfoCert Servizi di Certificazione,OU = Ente Certificatore,SERIALNUMBER = 07945211006,O = INFOCERT SPA,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=InfoCert Servizi di Certificazione 2,serialNumber=07945211006,OU=Ente Certificatore,O=INFOCERT SPA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=InfoCert Servizi di Certificazione 2,serialNumber=07945211006,OU=Ente Certificatore,O=INFOCERT SPA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=InfoCert Qualified Time Stamping Authority 2, SERIALNUMBER=07945211006, OU=TSA, O=INFOCERT SPA, C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=InfoCert Qualified Time Stamping Authority 2, SERIALNUMBER=07945211006, OU=TSA, O=INFOCERT SPA, C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        CN=InfoCert Qualified Electronic Signature CA 3, OID.2.5.4.97=VATIT-07945211006, OU=Qualified Trust Service Provider, O=InfoCert S.p.A., C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Qualified Electronic Signature CA 3, OID.2.5.4.97=VATIT-07945211006, OU=Qualified Trust Service Provider, O=InfoCert S.p.A., C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        CN=InfoCert Domain Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Domain Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        CN=InfoCert Extended Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Extended Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        CN=InfoCert Organization Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCert Organization Validation SHA256 - CA 3 OU=WSA Trust Service Provider O=InfoCert S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
     Actalis S.p.A. 
 
-        CN=Actalis Qualified Certificates CA G1,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis Qualified Certificates CA G1,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis Qualified Certificates CA,OU=Qualified Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis Qualified Certificates CA,OU=Qualified Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis S.p.A. - Direzione Commerciale Firma,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis S.p.A. - Direzione Commerciale Firma,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis CA per Firma Digitale Qualificata,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis CA per Firma Digitale Qualificata,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=postaca@asmez.it,CN=ASMEZ firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=postaca@asmez.it,CN=ASMEZ firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Comune di Livorno Firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Comune di Livorno Firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Firma digitale Regione Marche,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Firma digitale Regione Marche,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digit. AIPA Cons. Portale San. Ped. OPBG,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digit. AIPA Cons. Portale San. Ped. OPBG,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma digitale - Molise Dati,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma digitale - Molise Dati,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale AIPA - Ascoli Piceno,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale AIPA - Ascoli Piceno,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale AIPA - Provincia di Firenze,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale AIPA - Provincia di Firenze,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Banca Agrileasing,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Banca Agrileasing,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Comune di Bologna,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Comune di Bologna,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Intersiel S.p.A.,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Intersiel S.p.A.,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Provincia di Campobasso,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Provincia di Campobasso,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma digitale Provincia di Varese,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma digitale Provincia di Varese,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Regione Campania,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Regione Campania,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale Regione Liguria,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale Regione Liguria,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale RTRT,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale RTRT,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale TELCAL,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale TELCAL,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- IZSAM - FIRMA DIGITALE,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- IZSAM - FIRMA DIGITALE,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=urp@provincia.brescia.it,CN=Ca Provincia di Brescia firma digitale a norma,OU=Ufficio Relazioni con il Pubblico,O=Actalis S.p.A.,L=Brescia,ST=BS,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=urp@provincia.brescia.it,CN=Ca Provincia di Brescia firma digitale a norma,OU=Ufficio Relazioni con il Pubblico,O=Actalis S.p.A.,L=Brescia,ST=BS,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Provincia di Roma Firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Provincia di Roma Firma digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider 6,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider 6,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider 2,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis Qualified Certificates CA,OU=Certification Service Provider 2,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- REGIONE EMILIA-ROMAGNA FORMAZIONE FIRMA DIGIT.,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- REGIONE EMILIA-ROMAGNA FORMAZIONE FIRMA DIGIT.,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- SIEMENS MEDICAL SOLUTIONS,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- SIEMENS MEDICAL SOLUTIONS,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Teleskill Italia S.p.A-Firma Digit. AIPA CR 24,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Teleskill Italia S.p.A-Firma Digit. AIPA CR 24,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis S.p.A. TSA,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Actalis S.p.A. TSA,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Actalis Secure Time Stamping CA,L=Milano,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Actalis Secure Time Stamping CA,L=Milano,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Timestamping,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Timestamping,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Actalis - Firma Digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis - Firma Digitale,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- BNL S.p.A. Corporate Firma,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- BNL S.p.A. Corporate Firma,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=- Firma Digitale-Comune di Firenze,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=- Firma Digitale-Comune di Firenze,OU=Certification Service Provider,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=CA Qualificata BNL erogata da Actalis,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=CA Qualificata BNL erogata da Actalis,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis Time Stamping CA G1,OU=Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Actalis Time Stamping CA G1,OU=Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=CA Qualificata Regione Campania erogata da Actalis,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=CA Qualificata Regione Campania erogata da Actalis,OU=Qualified Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Actalis CA per Firma Digitale Qualificata 2,OU=Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis CA per Firma Digitale Qualificata 2,OU=Certification Service Provider,O=Actalis S.p.A./03358520967,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = Actalis CA per Autenticazione CNS 2,OU = Servizi di certificazione,O = Actalis S.p.A./03358520967,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Actalis CA per Autenticazione CNS 2,OU = Servizi di certificazione,O = Actalis S.p.A./03358520967,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lombardia Certification Authority Cittadini 2,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lombardia Certification Authority Cittadini 2,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lombardia Certification Authority Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lombardia Certification Authority Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana Certification Authority Cittadini Virtuale,OU = Servizi di certificazioneO = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana Certification Authority Cittadini Virtuale,OU = Servizi di certificazioneO = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana Certification Authority Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana Certification Authority Cittadini,OU = Servizi di certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Actalis CA per certificati CNS G1,OU = CNS Certification Service Provider,O = Actalis S.p.A./03358520967,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Actalis CA per certificati CNS G1,OU = CNS Certification Service Provider,O = Actalis S.p.A./03358520967,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Provincia autonoma Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia autonoma Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Provincia autonoma Trento - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia autonoma Trento - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lombardia - CA Cittadini - 2013,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lombardia - CA Cittadini - 2013,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A..C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A..C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Agenzia delle Entrate,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Agenzia delle Entrate,OU = Servizi di Certificazione,O = Actalis S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Actalis TSA 1 EIDAS,OU= Qualified Time Stamping Authority,O=Actalis S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Actalis TSA 1 EIDAS,OU= Qualified Time Stamping Authority,O=Actalis S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        CN=Actalis EU Qualified Certificates CA G1 OU=Qualified Trust Service Provider 2.5.4.97=VATIT-03358520967 O=Actalis S.p.A. L=Ponte San Pietro C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Actalis EU Qualified Certificates CA G1 OU=Qualified Trust Service Provider 2.5.4.97=VATIT-03358520967 O=Actalis S.p.A. L=Ponte San Pietro C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Aruba Posta Elettronica Certificata S.p.A. 
 
-        CN=ArubaPEC S.p.A. NG CA 1,OU=Certification Authority,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC S.p.A. NG CA 1,OU=Certification Authority,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC S.p.A. NG CA 2,OU=Certification AuthorityB,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC S.p.A. NG CA 2,OU=Certification AuthorityB,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC per Arma dei Carabinieri CA 1,OU=ArubaPEC per Certification Authority Carabinieri 1,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC per Arma dei Carabinieri CA 1,OU=ArubaPEC per Certification Authority Carabinieri 1,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC S.p.A. NG TSA 1,OU=Time Stamping Authority,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=ArubaPEC S.p.A. NG TSA 1,OU=Time Stamping Authority,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=ArubaPEC S.p.A. NG TSA 2,OU=Time Stamping AuthorityB,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=ArubaPEC S.p.A. NG TSA 2,OU=Time Stamping AuthorityB,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=ArubaPEC S.p.A. NG CA 3,OU=Certification AuthorityC,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC S.p.A. NG CA 3,OU=Certification AuthorityC,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC per Regione Basilicata CA 1,OU=ArubaPEC per CA Regione Basilicata di Firma Qualificata,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC per Regione Basilicata CA 1,OU=ArubaPEC per CA Regione Basilicata di Firma Qualificata,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC S.p.A. NG CA 1,OU=Certification Authority,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=ArubaPEC S.p.A. NG CA 1,OU=Certification Authority,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=ArubaPEC S.p.A. NG CA 2,OU=Certification AuthorityB,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=ArubaPEC S.p.A. NG CA 2,OU=Certification AuthorityB,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=ArubaPEC per Arma dei Carabinieri CA 1,OU=ArubaPEC per Certification Authority Carabinieri 1,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=ArubaPEC per Arma dei Carabinieri CA 1,OU=ArubaPEC per Certification Authority Carabinieri 1,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana Certification Authority Cittadini,OU = Servizi di certificazione,O = ArubaPEC S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana Certification Authority Cittadini,OU = Servizi di certificazione,O = ArubaPEC S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = ArubaPEC S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = ArubaPEC per Regione Basilicata CA 2,OU = ArubaPEC per CA Regione Basilicata di Autenticazione,O = ArubaPEC S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = ArubaPEC per Regione Basilicata CA 2,OU = ArubaPEC per CA Regione Basilicata di Autenticazione,O = ArubaPEC S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=ArubaPEC per CA di firma qualificata,OU=ArubaPEC per mod. ATe firma qualificata,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC per CA di firma qualificata,OU=ArubaPEC per mod. ATe firma qualificata,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ArubaPEC per CA di autenticazione,OU=ArubaPEC per mod. ATe autenticazione,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=ArubaPEC per CA di autenticazione,OU=ArubaPEC per mod. ATe autenticazione,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=ArubaPEC S.p.A. NG TSA 1 EIDAS,OU=Qualified Time Stamping Authority,O=ArubaPEC S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=ArubaPEC S.p.A. NG TSA 1 EIDAS,OU=Qualified Time Stamping Authority,O=ArubaPEC S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        CN=ArubaPEC EU Qualified Certificates CA G1 OU=Qualified Trust Service Provider 2.5.4.97=VATIT-01879020517 O=ArubaPEC S.p.A. L=Arezzo C =IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=ArubaPEC EU Qualified Certificates CA G1 OU=Qualified Trust Service Provider 2.5.4.97=VATIT-01879020517 O=ArubaPEC S.p.A. L=Arezzo C =IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Lombardia Integrata S.p.A. Servizi Infotelematici per il Territorio 
 
-        CN=LISIT Servizio di certificazione per la Firma Digitale,OU=Servizio di certificazione,O=LISIT S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=LISIT Servizio di certificazione per la Firma Digitale,OU=Servizio di certificazione,O=LISIT S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=LISIT Servizio di certificazione per la Marcatura Temporale,OU=Servizio di certificazione,O=LISIT S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=LISIT Servizio di certificazione per la Marcatura Temporale,OU=Servizio di certificazione,O=LISIT S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Monte dei Paschi di Siena Bank S.p.A. 
 
-        CN=MPS Root Certification Authority,O=Banca Monte dei Paschi di Siena S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=MPS Root Certification Authority,O=Banca Monte dei Paschi di Siena S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=MPS Production Identrus Certification Authority,OU=MPS Identrus Infrastructure,O=Banca Monte dei Paschi di Siena S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=MPS Production Identrus Certification Authority,OU=MPS Identrus Infrastructure,O=Banca Monte dei Paschi di Siena S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=MPS Production Identrus Certification Authority,OU=MPS Identrus Infrastructure,O=Banca Monte dei Paschi di Siena S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=MPS Production Identrus Certification Authority,OU=MPS Identrus Infrastructure,O=Banca Monte dei Paschi di Siena S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     CEDACRI S.p.A. 
 
-        CN=Cedacricert,O=Cedacri SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Cedacricert,O=Cedacri SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Cedacricert,O=Cedacri SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Cedacricert,O=Cedacri SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=CedacricertCATS,O=Cedacri SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=CedacricertCATS,O=Cedacri SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=CedacricertCATS,O=Cedacri SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=CedacricertCATS,O=Cedacri SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Consiglio Nazionale dei Dottori Commercialisti e degli Esperti Contabili 
 
-        CN=Certicomm CNDCEC,serialNumber=09758941000,OU=Firma Qualificata,O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Certicomm CNDCEC,serialNumber=09758941000,OU=Firma Qualificata,O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Certicomm CNDCEC 2,serialNumber=09758941000,OU=CA Accreditata,O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Certicomm CNDCEC 2,serialNumber=09758941000,OU=CA Accreditata,O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Certicomm CNDCEC 2 SERIALNUMBER=09758941000 OU=CA Accreditata O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Certicomm CNDCEC 2 SERIALNUMBER=09758941000 OU=CA Accreditata O=Consiglio Nazionale Dottori Commercialisti ed Esperti Contabili C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
     Ministero della Difesa 
 
-        EMAIL=info_pkiff@smd.difesa.it,CN=Ministero della Difesa - PKI di Firma Qualificata,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=info_pkiff@smd.difesa.it,CN=Ministero della Difesa - PKI di Firma Qualificata,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=info_pkiff@smd.difesa.it,CN=Time Stamp Authority PKI di Firma Qualificata,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        EMAIL=info_pkiff@smd.difesa.it,CN=Time Stamp Authority PKI di Firma Qualificata,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        EMAIL=info_pkiff@smd.difesa.it,CN=Time Stamp Authority PKI di Firma Qualificata - EMISSIONE 2009,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        EMAIL=info_pkiff@smd.difesa.it,CN=Time Stamp Authority PKI di Firma Qualificata - EMISSIONE 2009,serialNumber=97355240587,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Ministero della Difesa - CA di Firma Digitale,2.5.4.5=#130b3937333535323430353837,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Ministero della Difesa - CA di Firma Digitale,2.5.4.5=#130b3937333535323430353837,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Ministero della Difesa - Time Stamp Authority,2.5.4.5=#130b3937333535323430353837,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Ministero della Difesa - Time Stamp Authority,2.5.4.5=#130b3937333535323430353837,OU=S.M.D. - C.do C4 Difesa,O=Ministero della Difesa,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN = Ministero della Difesa - CA di Autenticazione CNS,OU = S.M.D. - C.do C4 Difesa,O = Ministero della Difesa,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Ministero della Difesa - CA di Autenticazione CNS,OU = S.M.D. - C.do C4 Difesa,O = Ministero della Difesa,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
     Consiglio Nazionale del Notariato 
 
-        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato-Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato-Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato - Servizio Firma Digitale,OU=Servizio Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato - Servizio Firma Digitale,OU=Servizio Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Consiglio Nazionale del Notariato Certification Authority,OU=Servizio Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT,serialNumber=80052590587 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Consiglio Nazionale del Notariato Certification Authority,OU=Servizio Firma Digitale,O=Consiglio Nazionale del Notariato,C=IT,serialNumber=80052590587 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato-Time Stamp,O=Consiglio Nazionale del Notariato,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato-Time Stamp,O=Consiglio Nazionale del Notariato,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato - TS Authority,O=Consiglio Nazionale del Notariato,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        EMAIL=certificazione@notariato.it,CN=Consiglio Nazionale del Notariato - TS Authority,O=Consiglio Nazionale del Notariato,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        EMAIL=certificazione@notariato.it,CN=CNN - Servizio marche temporali,O=Consiglio Nazionale del Notariato,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        EMAIL=certificazione@notariato.it,CN=CNN - Servizio marche temporali,O=Consiglio Nazionale del Notariato,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Consiglio Nazionale del Notariato Time Stamping Authority CA,OU=Servizio Marcatura Temporale,O=Consiglio Nazionale del Notariato,C=IT,serialNumber=80052590587 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Consiglio Nazionale del Notariato Time Stamping Authority CA,OU=Servizio Marcatura Temporale,O=Consiglio Nazionale del Notariato,C=IT,serialNumber=80052590587 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Consiglio Nazionale Forense 
 
-        EMAIL=certificazione@consiglionazionaleforense.it,CN=Consiglio Nazionale Forense - Firma Digitale,O=Consiglio Nazionale Forense,L=Roma,ST=RM,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=certificazione@consiglionazionaleforense.it,CN=Consiglio Nazionale Forense - Firma Digitale,O=Consiglio Nazionale Forense,L=Roma,ST=RM,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     IT Telecom S.r.l. 
 
-        CN=I.T. Telecom FirmaSicura CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom FirmaSicura CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom Firma Qualificata CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom Firma Qualificata CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom per GOLEM Software s.r.l.,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom per GOLEM Software s.r.l.,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom per il Ministero dell'Interno CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom per il Ministero dell'Interno CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom Time Stamp Authority,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=I.T. Telecom Time Stamp Authority,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=I.T. Telecom per il Ministero dell'Interno CA 1,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom per il Ministero dell'Interno CA 1,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom Time Stamp Authority 1,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=I.T. Telecom Time Stamp Authority 1,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=I.T. Telecom CNS,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=I.T. Telecom CNS,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=I.T. Telecom Firma Qualificata CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=I.T. Telecom Firma Qualificata CA,OU=Servizi di certificazione,O=I.T. Telecom S.R.L.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Lombardia Certification Authority Cittadini,OU = Servizi di certificazione,O = I.T. Telecom S.R.L.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Lombardia Certification Authority Cittadini,OU = Servizi di certificazione,O = I.T. Telecom S.R.L.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
     In.Te.S.A. S.p.A. 
 
-        CN=In.Te.S.A. - Certification Authority,O=In.Te.S.A. S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=In.Te.S.A. - Certification Authority,O=In.Te.S.A. S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=IN.TE.S.A. Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=IN.TE.S.A. Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=In.Te.S.A. - Time Stamping Certification Authority,O=In.Te.S.A. S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=In.Te.S.A. - Time Stamping Certification Authority,O=In.Te.S.A. S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=IN.TE.S.A. Time Stamping Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=IN.TE.S.A. Time Stamping Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=IN.TE.S.A. CA - Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=IN.TE.S.A. CA - Certification Authority,O=IN.TE.S.A. S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Intesa Sanpaolo Bank S.p.A. 
 
-        CN=Intesa Sanpaolo S.p.A. Firma Digitale 01,O=Intesa Sanpaolo S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Intesa Sanpaolo S.p.A. Firma Digitale 01,O=Intesa Sanpaolo S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Intesa Sanpaolo S.p.A. Firma Digitale 02,O=Intesa Sanpaolo S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Intesa Sanpaolo S.p.A. Firma Digitale 02,O=Intesa Sanpaolo S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Intesa Sanpaolo Production Identrust Certification Authority,OU=Intesa Sanpaolo Identrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Intesa Sanpaolo Production Identrust Certification Authority,OU=Intesa Sanpaolo Identrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Intesa Sanpaolo S.p.A. IdenTrust Certification Authority,OU=Intesa Sanpaolo S.p.A. IdenTrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Intesa Sanpaolo S.p.A. IdenTrust Certification Authority,OU=Intesa Sanpaolo S.p.A. IdenTrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Intesa Sanpaolo S.p.A. IdenTrust Certification Authority II,OU=Intesa Sanpaolo S.p.A. IdenTrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Intesa Sanpaolo S.p.A. IdenTrust Certification Authority II,OU=Intesa Sanpaolo S.p.A. IdenTrust Infrastructure,O=Intesa Sanpaolo S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = Intesa Sanpaolo S.p.A. Firma Qualificata,O = Intesa Sanpaolo S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN = Intesa Sanpaolo S.p.A. Firma Qualificata,O = Intesa Sanpaolo S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Postecom S.p.A. 
 
-        CN=Postecert per Camera dei Deputati,OU=CA e Sicurezza,O=Postecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecert per Camera dei Deputati,OU=CA e Sicurezza,O=Postecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Postecom CA1,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecom CA1,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Postecom CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecom CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Postecert per Regione Emilia-Romagna,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecert per Regione Emilia-Romagna,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Postecom Timestamper CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Postecom Timestamper CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Postecom TimeStamper CA,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Postecom TimeStamper CA,OU=CA e Sicurezza,O=Postecom s.p.a.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Postecert per Regione Emilia-Romagna CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecert per Regione Emilia-Romagna CA2,OU=Certification Authority,O=Postecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Postecom CA3,OU=Certification Authority,O=Postecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecom CA3,OU=Certification Authority,O=Postecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = Provincia Autonoma di Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia Autonoma di Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Provincia Autonoma di Trento - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia Autonoma di Trento - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Provincia Autonoma di Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia Autonoma di Bolzano - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Provincia Autonoma di Trento - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Provincia Autonoma di Trento - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma della Sardegna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Campania - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Emilia Romagna - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lombardia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lombardia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Toscana - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Veneto - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Abruzzo - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Friuli Venezia Giulia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma Valle d'Aosta - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Basilicata - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Calabria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Lazio - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Liguria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Marche - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Molise - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Piemonte - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Puglia - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Umbria - CA Cittadini,OU = Servizi di Certificazione,O = Postecom S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Autonoma della Sardegna - CA Cittadini, OU = Servizi di Certificazione, O = Postecom S.p.A., C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Autonoma della Sardegna - CA Cittadini, OU = Servizi di Certificazione, O = Postecom S.p.A., C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Siciliana - CA Cittadini, OU = Servizi di Certificazione, O = Postecom S.p.A., C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Siciliana - CA Cittadini, OU = Servizi di Certificazione, O = Postecom S.p.A., C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Postecom EU Qualified Certificates CA 2.5.4.97=VATIT-05838841004 O=Postecom S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Postecom EU Qualified Certificates CA 2.5.4.97=VATIT-05838841004 O=Postecom S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        CN=Postecom Time Stamping Authority 2.5.4.97=VATIT-05838841004 O=Postecom S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Postecom Time Stamping Authority 2.5.4.97=VATIT-05838841004 O=Postecom S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Sogei S.p.A. 
 
-        OU=CA FIRMA,OU=Servizi di Certificazione,O=Sogei SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        OU=CA FIRMA,OU=Servizi di Certificazione,O=Sogei SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OU=CA TSA,OU=Servizi di Certificazione,O=Sogei SpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        OU=CA TSA,OU=Servizi di Certificazione,O=Sogei SpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Banca di Roma S.p.A. 
 
-        CN=bancaroma Production Identrus Certification Authority,OU=bancaroma Identrus Infrastructure,O=Banca di Roma S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=bancaroma Production Identrus Certification Authority,OU=bancaroma Identrus Infrastructure,O=Banca di Roma S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=bancaroma Production Identrus Certification Authority,OU=bancaroma Identrus Infrastructure,O=Banca di Roma S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=bancaroma Production Identrus Certification Authority,OU=bancaroma Identrus Infrastructure,O=Banca di Roma S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Enel.it S.p.A. 
 
-        OU=Certificazione Titolari,OU=Servizi di Firma Qualificata,O=Enel.it S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        OU=Certificazione Titolari,OU=Servizi di Firma Qualificata,O=Enel.it S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OU=Certificazione TSA,OU=Servizi di Firma Qualificata,O=Enel.it S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        OU=Certificazione TSA,OU=Servizi di Firma Qualificata,O=Enel.it S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Finital S.p.A. 
 
-        CN=Finital CA,OU=CA Division,O=Finital S.p.A.,L=Arezzo,ST=AR,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Finital CA,OU=CA Division,O=Finital S.p.A.,L=Arezzo,ST=AR,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Finital CA (timestamp),OU=CA Division,O=Finital S.p.A.,L=Arezzo,ST=AR,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Finital CA (timestamp),OU=CA Division,O=Finital S.p.A.,L=Arezzo,ST=AR,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Banca Intesa S.p.A. 
 
-        CN=Bancaintesa Production Identrus Certification Authority,OU=Bancaintesa Identrus Infrastructure,O=Bancaintesa S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Bancaintesa Production Identrus Certification Authority,OU=Bancaintesa Identrus Infrastructure,O=Bancaintesa S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Sanpaolo IMI S.p.A. 
 
-        CN=sanpaoloimi Production Identrus Certification Authority,OU=sanpaoloimi Identrus Infrastructure,O=Sanpaolo IMI S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=sanpaoloimi Production Identrus Certification Authority,OU=sanpaoloimi Identrus Infrastructure,O=Sanpaolo IMI S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=sanpaoloimi Production Identrus Certification Authority,OU=sanpaoloimi Identrus Infrastructure,O=Sanpaolo IMI S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=sanpaoloimi Production Identrus Certification Authority,OU=sanpaoloimi Identrus Infrastructure,O=Sanpaolo IMI S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Cedacrinord S.p.A. 
 
-        CN=Cedacricert,O=Cedacrinord SpA,C=IT,DC=cacdn,DC=org - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Cedacricert,O=Cedacrinord SpA,C=IT,DC=cacdn,DC=org - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     SECETI S.p.A. 
 
-        CN=SECETI Certificatore per la firma digitale,L=Milano,O=SECETI S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=SECETI Certificatore per la firma digitale,L=Milano,O=SECETI S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     SIA S.p.A. 
 
-        CN=SIA - Servizio di Certificazione per la Firma Digitale,L=Milano,O=SIA S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=SIA - Servizio di Certificazione per la Firma Digitale,L=Milano,O=SIA S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=SIA Secure Time Stamping CA,L=Milano,O=SIA S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=SIA Secure Time Stamping CA,L=Milano,O=SIA S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     SSB S.p.A. 
 
-        CN=SSB Firma Qualificata,OU=Servizi di PKI,OU=Certification Authority,O=SSB S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=SSB Firma Qualificata,OU=Servizi di PKI,OU=Certification Authority,O=SSB S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=ROOT CA - Validazione Temporale,OU=Servizi di PKI,OU=Certification Authority,O=SSB S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=ROOT CA - Validazione Temporale,OU=Servizi di PKI,OU=Certification Authority,O=SSB S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Trustitalia S.p.A. 
 
-        C=IT,CN=TI Firma Digitale CA,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        C=IT,CN=TI Firma Digitale CA,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        C=IT,CN=TI Firma Digitale CA - G2,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        C=IT,CN=TI Firma Digitale CA - G2,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        C=IT,CN=TI Firma Digitale CA - G3,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        C=IT,CN=TI Firma Digitale CA - G3,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        C=IT,CN=Time Stamping CA,OU=Servizi di Certificazione TSA,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        C=IT,CN=Time Stamping CA,OU=Servizi di Certificazione TSA,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        C=IT,CN=TI Time Stamping CA,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        C=IT,CN=TI Time Stamping CA,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=TI Time Stamping CA,OU=Servizi di Certificazione TSA 2,O=Trust Italia S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=TI Time Stamping CA,OU=Servizi di Certificazione TSA 2,O=Trust Italia S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        C=IT,CN=TI Time Stamper CA - G2,O=Trust Italia S.p.A. - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        C=IT,CN=TI Time Stamper CA - G2,O=Trust Italia S.p.A. - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Centro Tecnico per la Rete Unitaria Pubblica Amministrazione 
 
-        CN=CT RUPA CA1,OU=Sicurezza,O=Centro Tecnico per la Rete Unitaria Pubblica Amministrazione,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=CT RUPA CA1,OU=Sicurezza,O=Centro Tecnico per la Rete Unitaria Pubblica Amministrazione,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=CT RUPA TimeStamper CA,OU=Sicurezza,O=Centro Tecnico per la Rete Unitaria Pubblica Amministrazione,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=CT RUPA TimeStamper CA,OU=Sicurezza,O=Centro Tecnico per la Rete Unitaria Pubblica Amministrazione,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Centro nazionale per l'informatica nella pubblica amministrazione 
 
-        CN=CNIPA CA1,OU=Servizi di Sicurezza e Certificazione,O=Centro Nazionale per l'Informatica nella PA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=CNIPA CA1,OU=Servizi di Sicurezza e Certificazione,O=Centro Nazionale per l'Informatica nella PA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=CNIPA TimeStamper CA,OU=Servizi di Sicurezza e Certificazione,O=Centro Nazionale per l'Informatica nella PA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=CNIPA TimeStamper CA,OU=Servizi di Sicurezza e Certificazione,O=Centro Nazionale per l'Informatica nella PA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     CERTICOMM 
 
-        C=IT,O=Certicomm,OU=Firma Qualificata,serialNumber=08093901000,CN=Certicomm Firma Qualificata - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        C=IT,O=Certicomm,OU=Firma Qualificata,serialNumber=08093901000,CN=Certicomm Firma Qualificata - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Esercito Italiano Comando C4 IEW 
 
-        CN=EICERT,OU=COMANDO C4IEW,O=ESERCITO ITALIANO,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=EICERT,OU=COMANDO C4IEW,O=ESERCITO ITALIANO,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=EICERT TSA,OU=COMANDO C4IEW,O=ESERCITO ITALIANO,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=EICERT TSA,OU=COMANDO C4IEW,O=ESERCITO ITALIANO,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     I.T. Telecom S.p.A. 
 
-        CN=I.T. Telecom CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom FirmaSicura CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom FirmaSicura CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom per GOLEM Software s.r.l.,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom per GOLEM Software s.r.l.,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom per il Ministero dell'Interno CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=I.T. Telecom per il Ministero dell'Interno CA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=I.T. Telecom Time Stamp Authority,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=I.T. Telecom Time Stamp Authority,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=I.T. Telecom TSA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=I.T. Telecom TSA,OU=PKI Solutions,O=I.T. Telecom S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Infocamere SC.p.A. 
 
-        CN=InfoCamere Firma Digitale,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCamere Firma Digitale,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=InfoCamere Firma Digitale 2,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCamere Firma Digitale 2,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=InfoCamere Firma Qualificata,OU=Certificatore Accreditato del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=InfoCamere Firma Qualificata,OU=Certificatore Accreditato del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=InfoCamere Time Stamping Authority 4,OU=TSA del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCamere Time Stamping Authority 4,OU=TSA del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCamere Time Stamping Authority,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCamere Time Stamping Authority,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCamere Time Stamping Authority 3,OU=TSA del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCamere Time Stamping Authority 3,OU=TSA del Sistema Camerale,serialNumber=02313821007,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=InfoCamere Time Stamping Authority 2,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=InfoCamere Time Stamping Authority 2,OU=Certification Service Provider,OU=Ente Certificatore del Sistema Camerale,O=InfoCamere SCpA,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Namirial S.p.A. 
 
-        CN=Namirial CA Firma Qualificata,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Namirial CA Firma Qualificata,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Namirial CA TSA,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Namirial CA TSA,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN = Namirial CA Autenticazione,OU = Certification Authority,O = Namirial S.p.A./02046570426,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Namirial CA Autenticazione,OU = Certification Authority,O = Namirial S.p.A./02046570426,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Namirial Qualified eSignature,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Namirial Qualified eSignature,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Namirial Time Stamping Authority,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Namirial Time Stamping Authority,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Namirial Qualified e-Signature,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Namirial Qualified e-Signature,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Namirial CA TSA,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Namirial CA TSA,OU=Certification Authority,O=Namirial S.p.A./02046570426,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        CN=Namirial Time Stamping Authority,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Namirial Time Stamping Authority,OU=Namirial Trust Service Provider,O=Namirial S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Lombardia Informatica S.p.A. 
 
-        CN=Servizio di Certificazione per la Firma Digitale - CA2,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Servizio di Certificazione per la Firma Digitale - CA2,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Servizio di Certificazione per la Firma Digitale - CA1,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Servizio di Certificazione per la Firma Digitale - CA1,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Servizio di Certificazione per la Marcatura Temporale,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Servizio di Certificazione per la Marcatura Temporale,OU=Servizio di certificazione,O=Lombardia Informatica S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Saritel S.p.A. 
 
-        CN=Certificatore Saritel,OU=Certificatore 1,OU=Certification Service Provider,O=Saritel S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Certificatore Saritel,OU=Certificatore 1,OU=Certification Service Provider,O=Saritel S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=Time Stamping Authority Saritel,OU=TSA 1,OU=Certification Service Provider,O=Saritel S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=Time Stamping Authority Saritel,OU=TSA 1,OU=Certification Service Provider,O=Saritel S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     ICBPI S.P.A. 
 
-        CN=Certification Authority ICBPI,OU=Qualified Certification Service Provider,O=ICBPI S.p.A./13212880150,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Certification Authority ICBPI,OU=Qualified Certification Service Provider,O=ICBPI S.p.A./13212880150,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Telecom Italia Trust Technologies S.r.l. 
 
-        CN=TI Trust Technologies CA,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=TI Trust Technologies CA,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=TI Trust Technologies per il Ministero dell'Interno CA,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=TI Trust Technologies per il Ministero dell'Interno CA,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=TI Trust Technologies Time Stamp Authority,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN=TI Trust Technologies Time Stamp Authority,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=TI Trust Technologies CA 1,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=TI Trust Technologies CA 1,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN=TI Trust Technologies CA 2,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=TI Trust Technologies CA 2,OU=Servizi di certificazione,O=Telecom Italia Trust Technologies S.r.l.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = TI Trust Technologies CA,OU = Servizi di certificazione,O = Telecom Italia Trust Technologies S.r.l.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = TI Trust Technologies CA,OU = Servizi di certificazione,O = Telecom Italia Trust Technologies S.r.l.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=TI Trust Technologies per il Ministero dell'Interno CA OU=Servizi di certificazione O=Telecom Italia Trust Technologies S.r.l. C=I - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=TI Trust Technologies per il Ministero dell'Interno CA OU=Servizi di certificazione O=Telecom Italia Trust Technologies S.r.l. C=I - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = TI Trust Technologies eIDAS TSA,OU = Servizi di certificazione,O = Telecom Italia Trust Technologies S.r.l.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN = TI Trust Technologies eIDAS TSA,OU = Servizi di certificazione,O = Telecom Italia Trust Technologies S.r.l.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Zucchetti S.p.A. 
 
-        CN = Zucchetti Firma Qualificata, SERIALNUMBER = 5006900962,OU = Certificatore Accreditato,O = Zucchetti S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN = Zucchetti Firma Qualificata, SERIALNUMBER = 5006900962,OU = Certificatore Accreditato,O = Zucchetti S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CN = Zucchetti Time Stamping Authority,SERIALNUMBER = 5006900962,OU = Certificatore Accreditato,O = Zucchetti S.p.A.,C = IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        CN = Zucchetti Time Stamping Authority,SERIALNUMBER = 5006900962,OU = Certificatore Accreditato,O = Zucchetti S.p.A.,C = IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        CN=Zucchetti Qualified Time Stamping Authority,SERIALNUMBER=5006900962,OU=Certificatore Accreditato,O=Zucchetti S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Zucchetti Qualified Time Stamping Authority,SERIALNUMBER=5006900962,OU=Certificatore Accreditato,O=Zucchetti S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     BNL Multiservizi S.p.A. 
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi SpA - Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi SpA - Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=CA BNL Multiservizi S.p.A. Open Market,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=CA BNL Multiservizi S.p.A. Open Market,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. - Corporate Firma,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. - Corporate Firma,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=- BNL S.p.A. - Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=- BNL S.p.A. - Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. - Firma Digitale AIPA/CR/24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. - Firma Digitale AIPA/CR/24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. Firma Digitale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL S.p.A. Firma Digitale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi S.p.A. - Firma Digitale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi S.p.A. - Firma Digitale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma digitale - Molise Dati,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma digitale - Molise Dati,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA - Provincia di Firenze,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA - Provincia di Firenze,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA Cons. Portale San. Ped. OPBG,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA Cons. Portale San. Ped. OPBG,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA - Ascoli Piceno,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale AIPA - Ascoli Piceno,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Banca Agrileasing,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Banca Agrileasing,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Comune di Bologna,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Comune di Bologna,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Intersiel S.p.A.,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Intersiel S.p.A.,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Provincia di Campobasso,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Provincia di Campobasso,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma digitale Provincia di Varese,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma digitale Provincia di Varese,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Campania,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Campania,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Lazio,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,L=Roma,ST=RM,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Lazio,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,L=Roma,ST=RM,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Liguria,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale Regione Liguria,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale RTRT,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale RTRT,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale TELCAL,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale TELCAL,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale-Comune di Firenze,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Firma Digitale-Comune di Firenze,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=IZSAM - FIRMA DIGITALE,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=IZSAM - FIRMA DIGITALE,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=REGIONE EMILIA-ROMAGNA FORMAZIONE FIRMA DIGITALE,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=I - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=REGIONE EMILIA-ROMAGNA FORMAZIONE FIRMA DIGITALE,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=I - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=SIEMENS MEDICAL SOLUTIONS,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,L=Roma,ST=RM,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=SIEMENS MEDICAL SOLUTIONS,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,L=Roma,ST=RM,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=Teleskill Italia S.p.A-Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=Teleskill Italia S.p.A-Firma Digitale AIPA CR 24,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi S.p.A. - Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=BNL Multiservizi S.p.A. - Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        EMAIL=key_management@bnl.it,CN=BNL multiCERTIFY Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        EMAIL=key_management@bnl.it,CN=BNL multiCERTIFY Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        EMAIL=multicertify@bnlmultiservizi.it,CN=CA Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        EMAIL=multicertify@bnlmultiservizi.it,CN=CA Marcatura Temporale,OU=Certification Service Provider,O=BNL Multiservizi S.p.A.,C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     Ministero dell'Interno 
 
-        C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=National root CA for the Italian Electronic Identity Card - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=National root CA for the Italian Electronic Identity Card - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=Issuing sub CA for the Italian Electronic Identity Card - SUBCA1 - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        C=IT, O=Ministero dell'Interno, OU=Direz. Centr. per i Servizi Demografici - CNSD, CN=Issuing sub CA for the Italian Electronic Identity Card - SUBCA1 - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
     Poste Italiane S.p.A. 
 
-        CN=Poste Italiane EU Qualified Certificates CA 2.5.4.97=VATIT-01114601006 O=Poste Italiane S.p.A. C = IT - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CN=Poste Italiane EU Qualified Certificates CA 2.5.4.97=VATIT-01114601006 O=Poste Italiane S.p.A. C = IT - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        CN=Poste Italiane Time Stamping Authority 2.5.4.97 = VATIT-01114601006 O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        CN=Poste Italiane Time Stamping Authority 2.5.4.97 = VATIT-01114601006 O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        CN=Provincia Autonoma di Bolzano - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Provincia Autonoma di Bolzano - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Provincia Autonoma di Trento - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Provincia Autonoma di Trento - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Abruzzo - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Abruzzo - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Autonoma della Sardegna - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Autonoma della Sardegna - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Autonoma Friuli Venezia Giulia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Autonoma Friuli Venezia Giulia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Autonoma Valle d'Aosta - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Autonoma Valle d'Aosta - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Basilicata - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Basilicata - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Calabria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Calabria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Campania - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Campania - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Emilia Romagna - CA Cittadini OU= Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Emilia Romagna - CA Cittadini OU= Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Lazio - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Lazio - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Liguria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Liguria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Lombardia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Lombardia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Marche - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Marche - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Molise - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Molise - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN = Regione Piemonte - CA Cittadini OU = Servizi di Certificazione O = Poste Italiane S.p.A. C = IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN = Regione Piemonte - CA Cittadini OU = Servizi di Certificazione O = Poste Italiane S.p.A. C = IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Puglia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Puglia - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Siciliana - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Siciliana - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Umbria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Umbria - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 
-        CN=Regione Veneto - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - http://uri.etsi.org/TrstSvc/Svctype/IdV 
+        CN=Regione Veneto - CA Cittadini OU=Servizi di Certificazione O=Poste Italiane S.p.A. C=IT - https://uri.etsi.org/TrstSvc/Svctype/IdV
 

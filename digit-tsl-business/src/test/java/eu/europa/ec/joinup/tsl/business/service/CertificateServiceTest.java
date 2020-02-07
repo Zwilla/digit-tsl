@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import static org.junit.Assert.assertEquals;
@@ -28,6 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.security.cert.CertificateParsingException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -117,7 +98,7 @@ public class CertificateServiceTest extends AbstractSpringTest {
     }
 
     @Test
-    public void getSigningCertificate() throws Exception {
+    public void getSigningCertificate() {
 
         File f = new File("src/test/resources/tsl-be.xml");
         CertificateToken cert = TLUtils.getSigningCertificate(f);
@@ -126,13 +107,13 @@ public class CertificateServiceTest extends AbstractSpringTest {
     }
 
     @Test
-    public void countryMatchSchemeTerritory() throws CertificateParsingException {
+    public void countryMatchSchemeTerritory() {
         Assert.assertFalse(certificateService.countryMatchSchemeTerritory(DE_CERTIFICATE, "BE"));
         Assert.assertTrue(certificateService.countryMatchSchemeTerritory(DE_CERTIFICATE, "DE"));
     }
 
     @Test
-    public void organizationMatchOperatorName() throws CertificateParsingException {
+    public void organizationMatchOperatorName() {
         List<String> names = new ArrayList<>();
         names.add("Test");
         names.add("Name");
@@ -155,20 +136,20 @@ public class CertificateServiceTest extends AbstractSpringTest {
     @Test
     @SuppressWarnings("deprecation")
     public void certificateIsExpired() {
-        Date date2018 = new Date(118, 1, 1);
-        Date date2050 = new Date(150, 1, 1);
+        Date date2018 = new Date(118, Calendar.FEBRUARY, 1);
+        Date date2050 = new Date(150, Calendar.FEBRUARY, 1);
         Assert.assertFalse(certificateService.certificateIsExpired(DE_CERTIFICATE, date2018));
         Assert.assertTrue(certificateService.certificateIsExpired(DE_CERTIFICATE, date2050));
     }
 
     @Test
-    public void isSKIComputeRight() throws IOException {
+    public void isSKIComputeRight() {
         Assert.assertTrue(certificateService.isSKIComputeRight(BE_SIGNING_CERTIFICATE));
         Assert.assertFalse(certificateService.isSKIComputeRight(CY_SIGNING_CERTIFICATE));
     }
 
     @Test
-    public void checkTLSigningCertificate() throws IOException {
+    public void checkTLSigningCertificate() {
         Load load = new Load();
         tlLoader.loadTL("BE", "https://tsl.belgium.be/tsl-be.xml", TLType.TL, TLStatus.PROD, load);
         tlLoader.loadServiceList(load);

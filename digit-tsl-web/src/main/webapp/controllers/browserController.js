@@ -1387,14 +1387,14 @@ digitTslWeb.controller('browserController', [ '$scope','$modal','$window','$loca
 					if(history.typeIdentifier!=undefined && history.typeIdentifier!=null){
 						typeIdentifier = "";
 						if(history.typeIdentifier.indexOf("TrstSvd")!=-1){
-							var typeIdentifier = history.typeIdentifier.split("http://uri.etsi.org/TrstSvd/Svctype/")[1];
+							var typeIdentifier = history.typeIdentifier.split("https://uri.etsi.org/TrstSvd/Svctype/")[1];
 						}else if(history.typeIdentifier.indexOf("TrstSvc")!=-1){
-							var typeIdentifier = history.typeIdentifier.split("http://uri.etsi.org/TrstSvc/Svctype/")[1];
+							var typeIdentifier = history.typeIdentifier.split("https://uri.etsi.org/TrstSvc/Svctype/")[1];
 						};
 						span = span +typeIdentifier+emptySpan;
 					};
 					if(history.currentStatus!=undefined && history.currentStatus!=null){
-						var currentStatus = history.currentStatus.split("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/")[1];
+						var currentStatus = history.currentStatus.split("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/")[1];
 						span = span +currentStatus+emptySpan;
 					};
 					if(span!=""){

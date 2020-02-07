@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import static org.junit.Assert.assertEquals;
@@ -26,6 +6,7 @@ import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -82,29 +63,29 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
     public void init() {
         DBFiles f1 = new DBFiles();
         f1.setDigest("");
-        f1.setFirstScanDate(new Date(116, 9, 25, 11, 25));
+        f1.setFirstScanDate(new Date(116, Calendar.OCTOBER, 25, 11, 25));
         f1.setLocalPath("LU" + File.separatorChar + "2016-10-13_12-56-25.xml");
         f1.setMimeTypeFile(MimeType.XML);
         f1.setUrl("");
         f1.setAvailabilityInfos(new ArrayList<DBFilesAvailability>());
 
         DBFilesAvailability a0 = new DBFilesAvailability();
-        a0.setCheckDate(new Date(116, 9, 02, 8, 10));
+        a0.setCheckDate(new Date(116, Calendar.OCTOBER, 2, 8, 10));
         a0.setFile(f1);
         a0.setStatus(AvailabilityStatus.AVAILABLE);
 
         DBFilesAvailability a1 = new DBFilesAvailability();
-        a1.setCheckDate(new Date(116, 9, 25, 11, 26));
+        a1.setCheckDate(new Date(116, Calendar.OCTOBER, 25, 11, 26));
         a1.setFile(f1);
         a1.setStatus(AvailabilityStatus.AVAILABLE);
 
         DBFilesAvailability a2 = new DBFilesAvailability();
-        a2.setCheckDate(new Date(116, 10, 29, 18, 20));
+        a2.setCheckDate(new Date(116, Calendar.OCTOBER, 29, 18, 20));
         a2.setFile(f1);
         a2.setStatus(AvailabilityStatus.UNAVAILABLE);
 
         DBFilesAvailability a3 = new DBFilesAvailability();
-        a3.setCheckDate(new Date(116, 10, 30, 10, 10));
+        a3.setCheckDate(new Date(116, Calendar.OCTOBER, 30, 10, 10));
         a3.setFile(f1);
         a3.setStatus(AvailabilityStatus.AVAILABLE);
 
@@ -124,8 +105,8 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         tl.setVersionIdentifier(5);
         tl = tlRepo.save(tl);
 
-        dMin = new Date(116, 9, 20, 12, 00);
-        dMax = new Date(116, 10, 30, 00, 01);
+        dMin = new Date(116, Calendar.SEPTEMBER, 20, 12, 0);
+        dMax = new Date(116, Calendar.OCTOBER, 30, 0, 1);
     }
 
     @After
@@ -160,7 +141,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
     @Test
     @SuppressWarnings("deprecation")
     public void getFullHistory() {
-        AvailabilityHistory history = availabilityService.getHistory(tl, new Date(110, 9, 02, 8, 10), dMax);
+        AvailabilityHistory history = availabilityService.getHistory(tl, new Date(110, Calendar.OCTOBER, 2, 8, 10), dMax);
         Assert.assertNotNull(history);
     }
 
@@ -203,7 +184,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
     public void getCurrentStatusDuration() {
         AvailabilityState unavailableTiming = availabilityService.getCurrentStatusDuration(getFile().getId());
         Assert.assertEquals(AvailabilityStatus.AVAILABLE, unavailableTiming.getStatus());
-        Assert.assertEquals(new Date(116, 10, 30, 10, 10), unavailableTiming.getStartDate());
+        Assert.assertEquals(new Date(116, Calendar.NOVEMBER, 30, 10, 10), unavailableTiming.getStartDate());
     }
 
     @Test
@@ -214,7 +195,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         Assert.assertFalse(availabilityService.unavailabilityAlertVerification(dbFile.getId()));
 
         DBFilesAvailability a1 = new DBFilesAvailability();
-        a1.setCheckDate(new Date(117, 7, 30, 10, 30));
+        a1.setCheckDate(new Date(117, Calendar.AUGUST, 30, 10, 30));
         a1.setFile(dbFile);
         a1.setStatus(AvailabilityStatus.UNAVAILABLE);
 
@@ -232,7 +213,7 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
         Assert.assertFalse(availabilityService.triggerAlerting(dbFile.getId()));
 
         DBFilesAvailability a1 = new DBFilesAvailability();
-        a1.setCheckDate(new Date(117, 7, 30, 10, 30));
+        a1.setCheckDate(new Date(117, Calendar.AUGUST, 30, 10, 30));
         a1.setFile(dbFile);
         a1.setStatus(AvailabilityStatus.UNAVAILABLE);
 
@@ -245,7 +226,6 @@ public class AvailabilityServiceTest extends AbstractSpringTest {
 
     private DBFiles getFile() {
         List<DBFiles> dbFiles = (List<DBFiles>) fileRepository.findAll();
-        DBFiles dbFile = dbFiles.get(0);
-        return dbFile;
+        return dbFiles.get(0);
     }
 }

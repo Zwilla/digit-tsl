@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayInputStream;
@@ -28,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -35,7 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.annotation.PostConstruct;
 import javax.xml.transform.Result;
 import javax.xml.transform.Templates;
 import javax.xml.transform.Transformer;
@@ -84,9 +64,9 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
  * PDF report generator (Notification/TL)
  */
 @Service
-public class PDFReportService {
+public abstract class PDFReportService {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Autowired
     private CheckService checkService;
@@ -104,14 +84,13 @@ public class PDFReportService {
     private PDFNotificationReportBuilderService notificationReportBuilderService;
 
     @Value("${tlcc.active}")
-    private Boolean tlccActive;
+    private boolean tlccActive;
 
     private FopFactory fopFactory;
     private FOUserAgent foUserAgent;
     private Templates templateOrderedCheckResult;
     private Templates templateNotificationChange;
 
-    @PostConstruct
     public void init() throws Exception {
 
         ResourceResolver rr = ResourceResolverFactory.createTempAwareResourceResolver(getTempResourceResolver(), getResourceResolver());
@@ -163,7 +142,7 @@ public class PDFReportService {
         Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
         Result res = new SAXResult(fop.getDefaultHandler());
         Transformer transformer = templateNotificationChange.newTransformer();
-        InputStream is = new ByteArrayInputStream(xml.getBytes("UTF-8"));
+        InputStream is = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8));
         transformer.transform(new StreamSource(is), res);
     }
 
@@ -192,7 +171,7 @@ public class PDFReportService {
         Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
         Result res = new SAXResult(fop.getDefaultHandler());
         Transformer transformer = templateOrderedCheckResult.newTransformer();
-        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes("UTF-8"))), res);
+        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))), res);
 
     }
 
@@ -220,7 +199,7 @@ public class PDFReportService {
         Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, os);
         Result res = new SAXResult(fop.getDefaultHandler());
         Transformer transformer = templateOrderedCheckResult.newTransformer();
-        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes("UTF-8"))), res);
+        transformer.transform(new StreamSource(new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))), res);
 
     }
 
@@ -257,14 +236,12 @@ public class PDFReportService {
             }
         }
 
-        if ((tl != null) && (comparedTl != null)) {
-            List<TLDifference> diffSchemeInfo = new ArrayList<>();
-            List<TLDifference> diffPointers = new ArrayList<>();
+        if (comparedTl != null) {
             List<TLDifference> diffProviders = new ArrayList<>();
             List<TLDifference> diffSignature = new ArrayList<>();
 
-            diffSchemeInfo.addAll(tl.asPublishedDiff(comparedTl));
-            diffPointers.addAll(tl.getPointersDiff(comparedTl.getPointers(), tl.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
+            List<TLDifference> diffSchemeInfo = new ArrayList<>(tl.asPublishedDiff(comparedTl));
+            List<TLDifference> diffPointers = new ArrayList<>(tl.getPointersDiff(comparedTl.getPointers(), tl.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
 
             if ((tl.getServiceProviders() != null) && (comparedTl.getServiceProviders() != null)) {
                 diffProviders.addAll(tl.getTrustServiceProvidersDiff(comparedTl.getServiceProviders(), tl.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
@@ -314,7 +291,7 @@ public class PDFReportService {
             private final Map<String, ByteArrayOutputStream> tempBaos = Collections.synchronizedMap(new HashMap<String, ByteArrayOutputStream>());
 
             @Override
-            public Resource getResource(String id) throws IOException {
+            public Resource getResource(String id) {
                 if (!tempBaos.containsKey(id)) {
                     throw new IllegalArgumentException("Resource with id = " + id + " does not exist");
                 }
@@ -322,7 +299,7 @@ public class PDFReportService {
             }
 
             @Override
-            public OutputStream getOutputStream(String id) throws IOException {
+            public OutputStream getOutputStream(String id) {
                 ByteArrayOutputStream out = new ByteArrayOutputStream();
                 tempBaos.put(id, out);
                 return out;

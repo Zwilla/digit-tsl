@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.util.ArrayList;
@@ -70,42 +50,45 @@ public class PDFUtils {
      */
     public static List<PDFMeasure> convertDifferences(List<TLDifference> differences, NotificationPointers pointers, boolean isPDF) {
         List<PDFMeasure> notificationChanges = new ArrayList<>();
-        Boolean schemeOperatorChange = false;
-        for (int i = 0; i < differences.size(); i++) {
-            TLDifference difference = differences.get(i);
-
+        boolean schemeOperatorChange = false;
+        for (TLDifference difference : differences) {
             PDFMeasure change = new PDFMeasure();
             if (difference.getId() != null) {
                 if ((pointers.getHrPointer() != null) && difference.getId().equals(pointers.getHrPointer().getId() + '_' + Tag.POINTER_LOCATION)) {
-                    if (pointers.getHrPointer().getTlLocation() == "") {
+                    if (pointers.getHrPointer().getTlLocation().equals("")) {
                         change.addChange(bundle.getString("notificationController.urlPdfRemoved"));
                         String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfRemovedMeasure"), isPDF).replace("%ST%", pointers.getHrPointer().getSchemeTerritory())
                                 .replace("%PBL%", difference.getPublishedValue());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
-                    } else {
+                    }
+                    else {
                         change.addChange(removeHtmlTag(bundle.getString("notificationController.urlPdfChanged").replace("%LOC%", pointers.getHrPointer().getTlLocation()), isPDF));
                         String measure = removeHtmlTag(bundle.getString("notificationController.urlPdfChangedMeasure"), isPDF).replace("%ST%", pointers.getHrPointer().getSchemeTerritory())
                                 .replace("%PBL%", difference.getPublishedValue()).replace("%LOC%", pointers.getHrPointer().getTlLocation());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     }
-                } else if ((pointers.getMpPointer() != null) && difference.getId().equals(pointers.getMpPointer().getId() + '_' + Tag.POINTER_LOCATION)) {
-                    if (pointers.getMpPointer().getTlLocation() == "") {
+                }
+                else if ((pointers.getMpPointer() != null) && difference.getId().equals(pointers.getMpPointer().getId() + '_' + Tag.POINTER_LOCATION)) {
+                    if (pointers.getMpPointer().getTlLocation().equals("")) {
                         change.addChange(bundle.getString("notificationController.urlXmlRemoved"));
                         String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlRemovedMeasure"), isPDF).replaceAll("%ST%", pointers.getMpPointer().getSchemeTerritory());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
-                    } else {
+                    }
+                    else {
                         change.addChange(removeHtmlTag(bundle.getString("notificationController.urlXmlChanged").replace("%LOC%", pointers.getMpPointer().getTlLocation()), isPDF));
                         String measure = removeHtmlTag(bundle.getString("notificationController.urlXmlChangedMeasure"), isPDF).replace("%ST%", pointers.getMpPointer().getSchemeTerritory())
                                 .replace("%PBL%", difference.getPublishedValue()).replace("%LOC%", pointers.getMpPointer().getTlLocation());
                         change.addMeasure(measure);
                         notificationChanges.add(change);
                     }
-                } else if ((pointers.getMpPointer() != null) && difference.getId().equals(Tag.NOTIFICATION.toString() + '_' + Tag.POINTER_LOCATION)) {
+                }
+                else if ((pointers.getMpPointer() != null) && difference.getId().equals(Tag.NOTIFICATION.toString() + '_' + Tag.POINTER_LOCATION)) {
                     LOGGER.warn("Notficiation : Undefined changes");
-                } else if (difference.getId().contains(Tag.SCHEME_OPERATOR_NAME.toString()) && !schemeOperatorChange) {
+                }
+                else if (difference.getId().contains(Tag.SCHEME_OPERATOR_NAME.toString()) && !schemeOperatorChange) {
                     change.addChange(bundle.getString("notificationController.changeOperatorName"));
                     notificationChanges.add(change);
                     schemeOperatorChange = true;
@@ -135,21 +118,21 @@ public class PDFUtils {
             TLSOContact oContact = originalPointers.getTlsoContact();
 
             if ((pContact.getName() != null) && !pContact.getName().equals(oContact.getName())) {
-                if (pContact.getName() == "") {
+                if (pContact.getName().equals("")) {
                     change.addChange(bundle.getString("notificationController.nameRemoved"));
                 } else {
                     change.addChange(removeHtmlTag(bundle.getString("notificationController.nameChangedTo").replace("%NAME%", pContact.getName()), isPDF));
                 }
             }
             if ((pContact.getPostalAddress() != null) && !pContact.getPostalAddress().equals(oContact.getPostalAddress())) {
-                if (pContact.getPostalAddress() == "") {
+                if (pContact.getPostalAddress().equals("")) {
                     change.addChange(bundle.getString("notificationController.addressRemoved"));
                 } else {
                     change.addChange(removeHtmlTag(bundle.getString("notificationController.addressChangedTo").replace("%ADDRESS%", pContact.getPostalAddress()), isPDF));
                 }
             }
             if ((pContact.getPhoneNumber() != null) && !pContact.getPhoneNumber().equals(oContact.getPhoneNumber())) {
-                if (pContact.getPhoneNumber() == "") {
+                if (pContact.getPhoneNumber().equals("")) {
                     change.addChange(bundle.getString("notificationController.phoneRemoved"));
                 } else {
                     change.addChange(removeHtmlTag(bundle.getString("notificationController.phoneChangedTo").replace("%PHONE%", pContact.getPhoneNumber()), isPDF));
@@ -162,7 +145,7 @@ public class PDFUtils {
                 if (diff.getId().contains((Tag.ELECTRONIC_ADDRESS.toString()))) {
                     if (diff.getCurrentValue().equals("")) {
                         contactRemoved.add(diff.getPublishedValue());
-                    } else if (diff.getPublishedValue().equals("") && (diff.getCurrentValue() != "")) {
+                    } else if (diff.getPublishedValue().equals("") && (!diff.getCurrentValue().equals(""))) {
                         contactAdded.add(diff.getCurrentValue());
                     }
                 }

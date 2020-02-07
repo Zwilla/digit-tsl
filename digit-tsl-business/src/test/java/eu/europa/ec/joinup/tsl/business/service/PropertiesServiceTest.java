@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import static org.junit.Assert.assertEquals;
@@ -61,7 +41,7 @@ public class PropertiesServiceTest extends AbstractSpringTest {
 
     @Test
     public void CgetTSLTagValue() {
-        assertEquals("http://uri.etsi.org/19612/TSLTag", propertiesService.getTSLTagValue());
+        assertEquals("https://uri.etsi.org/19612/TSLTag", propertiesService.getTSLTagValue());
     }
 
     @Test
@@ -71,47 +51,47 @@ public class PropertiesServiceTest extends AbstractSpringTest {
 
     @Test
     public void EgetLOTLStatusDeterminationApproachValue() {
-        assertEquals("http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUlistofthelists", propertiesService.getLOTLStatusDeterminationApproachValue());
+        assertEquals("https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUlistofthelists", propertiesService.getLOTLStatusDeterminationApproachValue());
     }
 
     @Test
     public void FgetTLStatusDeterminationApproachValue() {
-        assertEquals("http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate", propertiesService.getTLStatusDeterminationApproachValue());
+        assertEquals("https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate", propertiesService.getTLStatusDeterminationApproachValue());
     }
 
     @Test
     public void GgetLOTLSchemeCommunityRulesValue() {
-        assertEquals("http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists", propertiesService.getLOTLSchemeCommunityRulesValue());
+        assertEquals("https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists", propertiesService.getLOTLSchemeCommunityRulesValue());
     }
 
     @Test
     public void HgetServiceTypeIdentifiers() {
         List<String> serviceTypeIdentifiers = propertiesService.getServiceTypeIdentifiers();
         assertTrue(CollectionUtils.isNotEmpty(serviceTypeIdentifiers));
-        assertTrue(serviceTypeIdentifiers.contains("http://uri.etsi.org/TrstSvc/Svctype/IdV"));
+        assertTrue(serviceTypeIdentifiers.contains("https://uri.etsi.org/TrstSvc/Svctype/IdV"));
     }
 
     @Test
     public void IgetServiceStatus() {
         List<String> serviceStatus = propertiesService.getServiceStatus();
         assertTrue(CollectionUtils.isNotEmpty(serviceStatus));
-        assertTrue(serviceStatus.contains("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw"));
+        assertTrue(serviceStatus.contains("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw"));
     }
 
     @Test
     public void JgetQualifiers() {
         List<String> qualifiers = propertiesService.getQualifiers();
         assertTrue(CollectionUtils.isNotEmpty(qualifiers));
-        assertTrue(qualifiers.contains("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"));
+        assertTrue(qualifiers.contains("https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"));
     }
 
     @Test
     public void KgetTLSchemeCommunityRulesValues() {
         List<String> schemeCommunityRulesValues = propertiesService.getTLSchemeCommunityRulesValues();
         assertTrue(CollectionUtils.isNotEmpty(schemeCommunityRulesValues));
-        assertTrue(schemeCommunityRulesValues.contains("http://uri.etsi.org/TrstSvc/TrustedList/schemerules/AT"));
-        assertTrue(schemeCommunityRulesValues.contains("http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon"));
-        assertFalse(schemeCommunityRulesValues.contains("http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"));
+        assertTrue(schemeCommunityRulesValues.contains("https://uri.etsi.org/TrstSvc/TrustedList/schemerules/AT"));
+        assertTrue(schemeCommunityRulesValues.contains("https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon"));
+        assertFalse(schemeCommunityRulesValues.contains("https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"));
     }
 
     @Test
@@ -128,9 +108,9 @@ public class PropertiesServiceTest extends AbstractSpringTest {
     @Test
     public void NgetStatusForNationalRootCAQC() {
         List<String> statusForNationalRootCAQC = propertiesService.getStatusForNationalRootCAQC();
-        assertTrue(CollectionUtils.size(statusForNationalRootCAQC) == 2);
-        assertTrue(statusForNationalRootCAQC.contains("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw"));
-        assertTrue(statusForNationalRootCAQC.contains("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw"));
+        assertEquals(2, CollectionUtils.size(statusForNationalRootCAQC));
+        assertTrue(statusForNationalRootCAQC.contains("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw"));
+        assertTrue(statusForNationalRootCAQC.contains("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw"));
     }
 
     @Test

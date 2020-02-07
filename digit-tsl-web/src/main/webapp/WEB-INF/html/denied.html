@@ -2,18 +2,18 @@
 <html xmlns:th="http://www.thymeleaf.org" ng-app="digitTslWeb" ng-controller="appController" ng-init="initMenu()">
 <head>
 <link rel="icon" th:href="@{/style/favico.ico}" />
-<th:block th:replace== "head_fragment ::head_fragment"></th:block>
+<th:block th:replace=="head_fragment ::head_fragment></th:block>
 
 <script th:src="@{/controllers/homeController.js}"></script>
 
 </head>
 <body>
 	<!-- Header -->
-	<th:block th:replace== "header :: header" th:remove="tag"></th:block>
+	<th:block th:replace==header :: header th:remove="tag"></th:block>
 
 	<div class="body">
 		<!-- Menu -->
-		<th:block th:replace== "menu :: nav" th:remove="tag"></th:block>
+		<th:block th:replace=="menu::nav" th:remove="tag"></th:block>
 
 		<main>
 		<div class="alert alert-warning alert-dismissible" style="margin-top: 15px;">

@@ -2,8 +2,8 @@
 <TLCCResults xmlns="http://www.etsi.org/19162/conformanceChecker">
 	<TrustServiceStatusList>
 		<TSLTag>
-			<Check checkId="IS_URI" status="SUCCESS">The value of component TSLTag must be a valid URI.Value found: http://uri.etsi.org/19612/TSLTag</Check>
-			<Check checkId="TAG_1" status="SUCCESS">TSLtag MUST be "http://uri.etsi.org/19612/TSLTag"</Check>
+			<Check checkId="IS_URI" status="SUCCESS">The value of component TSLTag must be a valid URI.Value found: https://uri.etsi.org/19612/TSLTag</Check>
+			<Check checkId="TAG_1" status="SUCCESS">TSLtag MUST be "https://uri.etsi.org/19612/TSLTag"</Check>
 		</TSLTag>
 		<SchemeInformation>
 			<TSLVersionIdentifier>
@@ -15,9 +15,9 @@
 				<Check checkId="SCHI_SEQNUM_EQ_GREATER_THAN_1" status="SUCCESS">Component TSLSequenceNumber MUST be equal or greater than 1. Found value: "28"</Check>
 			</TSLSequenceNumber>
 			<TSLType>
-				<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLType must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric"</Check>
-				<Check checkId="IS_URI" status="SUCCESS">The value of component TSLType must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</Check>
-				<Check checkId="URI_VAL_EUMS_LIST" status="SUCCESS">For a EUMS List, the TSLType MUST be "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric".</Check>
+				<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLType must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric"</Check>
+				<Check checkId="IS_URI" status="SUCCESS">The value of component TSLType must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</Check>
+				<Check checkId="URI_VAL_EUMS_LIST" status="SUCCESS">For a EUMS List, the TSLType MUST be "https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric".</Check>
 			</TSLType>
 			<SchemeTerritory>
 				<Check checkId="ONE_OF_EUMS_CCODES" status="SUCCESS">For an EUMS Trusted List the SchemeTerritory value MUST be the country code of one of the EU member States. Found value: "LU"</Check>
@@ -159,27 +159,27 @@
 				<Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeInformationURI-URI elements shall be 'en'. Found in SchemeInformationURI-URI[1]</Check>
 			</SchemeInformationURI>
 			<StatusDeterminationApproach>
-				<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of StatusDeterminationApproach must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate"</Check>
-				<Check checkId="IS_URI" status="SUCCESS">The value of component StatusDeterminationApproach must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</Check>
+				<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of StatusDeterminationApproach must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate"</Check>
+				<Check checkId="IS_URI" status="SUCCESS">The value of component StatusDeterminationApproach must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</Check>
 				<Check checkId="URI_VAL_COHERENT_WITH_EUMS_LIST" status="SUCCESS">The StatusDeterminationApproach value must be the one corresponding to a EUMS Trusted List.</Check>
 			</StatusDeterminationApproach>
 			<SchemeTypeCommunityRules>
 				<URI index="1" language="en">
-					<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon"</Check>
-					<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</Check>
+					<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon"</Check>
+					<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</Check>
 					<Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
-					<Check checkId="URI_VAL_EUMS_LIST" status="SUCCESS">For a EUMS List, the URI MUST be "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon".</Check>
-					<Check checkId="URI_EUMS_OR_ECLOL_VAL_EN" status="SUCCESS"> In an EUMS TL the multilingual element corresponding to the common URI reference "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon" MUST have its xml:lang attribute set to value "en".</Check>
+					<Check checkId="URI_VAL_EUMS_LIST" status="SUCCESS">For a EUMS List, the URI MUST be "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon".</Check>
+					<Check checkId="URI_EUMS_OR_ECLOL_VAL_EN" status="SUCCESS"> In an EUMS TL the multilingual element corresponding to the common URI reference "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon" MUST have its xml:lang attribute set to value "en".</Check>
 				</URI>
 				<URI index="2" language="en">
-					<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU"</Check>
-					<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</Check>
+					<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU"</Check>
+					<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</Check>
 					<Check checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
-					<Check checkId="URI_FOR_EUMS_CC" status="SUCCESS"> For an EUMS TL the other legal URI value, apart from the common one, may be either "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CC" (where CC is the value of SchemeTerritory component) or any URI descendant from this value.</Check>
+					<Check checkId="URI_FOR_EUMS_CC" status="SUCCESS"> For an EUMS TL the other legal URI value, apart from the common one, may be either "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CC" (where CC is the value of SchemeTerritory component) or any URI descendant from this value.</Check>
 				</URI>
 				<Check checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeTypeCommunityRules-URI elements shall be 'en'. Found in SchemeTypeCommunityRules-URI[2]</Check>
-				<Check checkId="EUMS_COMMON_URI_PRESENT" status="SUCCESS"> For an EUMS TL the SchemeTypeCommunityRules must contain one URI child whose value is "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon".</Check>
-				<Check checkId="EUMS_CC_URI_PRESENT" status="SUCCESS"> For an EUMS TL the SchemeTypeCommunityRules must contain the URI "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CC" where CC is the territory indicated within the SchemeTerritory component.</Check>
+				<Check checkId="EUMS_COMMON_URI_PRESENT" status="SUCCESS"> For an EUMS TL the SchemeTypeCommunityRules must contain one URI child whose value is "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon".</Check>
+				<Check checkId="EUMS_CC_URI_PRESENT" status="SUCCESS"> For an EUMS TL the SchemeTypeCommunityRules must contain the URI "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CC" where CC is the territory indicated within the SchemeTerritory component.</Check>
 			</SchemeTypeCommunityRules>
 			<PolicyOrLegalNotice>
 				<TSLLegalNotice index="1" language="en">
@@ -291,10 +291,10 @@
 					<AdditionalInformation>
 						<OtherInformation index="1">
 							<TSLType>
-								<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLType must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists"</Check>
-								<Check checkId="IS_URI" status="SUCCESS">The value of component TSLType must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</Check>
+								<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of TSLType must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists"</Check>
+								<Check checkId="IS_URI" status="SUCCESS">The value of component TSLType must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</Check>
 								<Check
-                                    checkId="EUMS_TL_PTR_TSLTYPE_IN_PTR_TO_ECLOL" status="SUCCESS">For an EUMS TL, within a pointer pointing to the XML EC LOTL the TSLType of AdditionalInformation in OtherPointerTSL MUST BE "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists".</Check>
+                                    checkId="EUMS_TL_PTR_TSLTYPE_IN_PTR_TO_ECLOL" status="SUCCESS">For an EUMS TL, within a pointer pointing to the XML EC LOTL the TSLType of AdditionalInformation in OtherPointerTSL MUST BE "https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists".</Check>
 							</TSLType>
 						</OtherInformation>
 						<OtherInformation index="2">
@@ -331,19 +331,19 @@ Attributes found:
 						<OtherInformation index="5">
 							<SchemeTypeCommunityRules>
 								<URI index="1" language="en">
-									<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"</Check>
-									<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</Check>
+									<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"</Check>
+									<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</Check>
 									<Check
                                     checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
-									<Check checkId="URI_VAL_EC_LOL" status="SUCCESS">For a EC List of Trusted Lists, the URI MUST be "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists".</Check>
-									<Check checkId="URI_ECLOL_VAL_EN" status="SUCCESS"> In the EC List of Trusted Lists the multilingual element corresponding to the URI reference "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists" MUST have its xml:lang attribute set to value "en".</Check>
+									<Check checkId="URI_VAL_EC_LOL" status="SUCCESS">For a EC List of Trusted Lists, the URI MUST be "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists".</Check>
+									<Check checkId="URI_ECLOL_VAL_EN" status="SUCCESS"> In the EC List of Trusted Lists the multilingual element corresponding to the URI reference "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists" MUST have its xml:lang attribute set to value "en".</Check>
 								</URI>
 								<URI index="2" language="eu">
-									<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"</Check>
-									<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</Check>
+									<Check checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists"</Check>
+									<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</Check>
 									<Check
                                     checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "eu"</Check>
-									<Check checkId="URI_VAL_EC_LOL" status="SUCCESS">For a EC List of Trusted Lists, the URI MUST be "http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists".</Check>
+									<Check checkId="URI_VAL_EC_LOL" status="SUCCESS">For a EC List of Trusted Lists, the URI MUST be "https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists".</Check>
 								</URI>
 								<Check
                                     checkId="LANG_ATTR_ONE_SHALL_BE_EN" status="SUCCESS">The value of the xml:lang attribute of one of the SchemeTypeCommunityRules-URI elements shall be 'en'. Found in SchemeTypeCommunityRules-URI[1]</Check>
@@ -532,11 +532,11 @@ Attributes found:
 					</TSPInformationURI>
 					<TSPInformationExtensions>
 						<Extension index="1">
-							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [http://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
-							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [http://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
+							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [https://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
+							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [https://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
 						</Extension>
 						<Extension index="2">
-							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [http://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
+							<Check checkId="NOT_RECOGNIZED_ELEMENT" status="WARNING">The component under check is unkown for the TLCC. The TLCC will not conduct any check on it. First Extension XML element child found is: [https://uri.etsi.org/01903/v1.3.2#][ObjectIdentifier]</Check>
 						</Extension>
 					</TSPInformationExtensions>
 				</TSPInformation>
@@ -545,9 +545,9 @@ Attributes found:
 						<ServiceInformation>
 							<ServiceTypeIdentifier>
 								<Check
-                                    checkId="SVC_TYPE_IN_REG_910_2014" status="SUCCESS">The value of ServiceTyeIdentifier in the service information section MUST be one of the starndardized values supporting EU Regulation 910/2014. Found ServiceTypeIdentifier value: http://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
+                                    checkId="SVC_TYPE_IN_REG_910_2014" status="SUCCESS">The value of ServiceTyeIdentifier in the service information section MUST be one of the starndardized values supporting EU Regulation 910/2014. Found ServiceTypeIdentifier value: https://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
 								<Check
-                                    checkId="SVC_TYPE_IN_REG_910_2014" status="SUCCESS">The value of ServiceTyeIdentifier in the service information section MUST be one of the starndardized values supporting EU Regulation 910/2014. Found ServiceTypeIdentifier value: http://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
+                                    checkId="SVC_TYPE_IN_REG_910_2014" status="SUCCESS">The value of ServiceTyeIdentifier in the service information section MUST be one of the starndardized values supporting EU Regulation 910/2014. Found ServiceTypeIdentifier value: https://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
 							</ServiceTypeIdentifier>
 							<ServiceName>
 								<Name index="1" language="en">
@@ -612,8 +612,8 @@ Attributes found:
 							</ServiceDigitalIdentity>
 							<ServiceStatus>
 								<Check
-                                    checkId="SVC_STAT_IN_REG_910_2014" status="SUCCESS">The ServiceStatus value MUST be a valid value for the EU Regulation 910/2014 starting on 1st July 2016. Found ServiceStatus value: http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</Check>
-								<Check checkId="SVC_STAT_VALID_FOR_TYPE" status="SUCCESS">The ServiceStatus value MUST be a valid value for the service type. ServiceTypeIdentifier found value: http://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
+                                    checkId="SVC_STAT_IN_REG_910_2014" status="SUCCESS">The ServiceStatus value MUST be a valid value for the EU Regulation 910/2014 starting on 1st July 2016. Found ServiceStatus value: https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</Check>
+								<Check checkId="SVC_STAT_VALID_FOR_TYPE" status="SUCCESS">The ServiceStatus value MUST be a valid value for the service type. ServiceTypeIdentifier found value: https://uri.etsi.org/TrstSvc/Svctype/CA/QC</Check>
 							</ServiceStatus>
 							<StatusStartingTime>
 								<Check checkId="SVC_START_BEFORE_NOW" status="SUCCESS">The StatusStartingTime MUST be earlier than the checking instant. StatusStartingTime found value: 2016-07-01T00:00:00Z</Check>
@@ -669,8 +669,8 @@ Attributes found:
 									<AdditionalServiceInformation>
 										<URI language="en">
 											<Check
-                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures"</Check>
-											<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</Check>
+                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures"</Check>
+											<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</Check>
 											<Check
                                     checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
 										</URI>
@@ -752,7 +752,7 @@ Attributes found:
 												<Qualifier index="1">
 													<URI>
 														<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD</Check>
 														<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 													</URI>
@@ -760,7 +760,7 @@ Attributes found:
 												<Qualifier index="2">
 													<URI>
 														<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD</Check>
 														<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 													</URI>
@@ -768,7 +768,7 @@ Attributes found:
 												<Qualifier index="3">
 													<URI>
 														<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert</Check>
 														<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 													</URI>
@@ -991,20 +991,20 @@ Attributes found:
 									</Qualifications>
 								</Extension>
 							</ServiceInformationExtensions>
-							<Check checkId="SVC_ASIE_COHERENT_TO_TYPE" status="SUCCESS">The ServiceType value http://uri.etsi.org/TrstSvc/Svctype/CA/QC MUST be further qualified by the AdditionalServiceInformation extension value(s) http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures According to ETSI TS 119 162v2.1.1, Annex J (a) (iii)</Check>
-							<Check checkId="ANNEXJ_STAT_TRANSITION" status="SUCCESS">The transition of the status MUST be as specified in ETSI TS 119 612v2.1.1 Annex J. Transition from http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision to http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted is correct according to Annex J (a)(i) (1)/(2)</Check>
+							<Check checkId="SVC_ASIE_COHERENT_TO_TYPE" status="SUCCESS">The ServiceType value https://uri.etsi.org/TrstSvc/Svctype/CA/QC MUST be further qualified by the AdditionalServiceInformation extension value(s) https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures According to ETSI TS 119 162v2.1.1, Annex J (a) (iii)</Check>
+							<Check checkId="ANNEXJ_STAT_TRANSITION" status="SUCCESS">The transition of the status MUST be as specified in ETSI TS 119 612v2.1.1 Annex J. Transition from https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision to https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted is correct according to Annex J (a)(i) (1)/(2)</Check>
 							<Check
-                                checkId="ANNEX_J_A_IV_CORRECT_QUAL_MIGRATION" status="SUCCESS">If the previously listed service is qualified by one of the qualifiers identified in Annex J (a) (iv) then this qualifier MUST be migrated to the value specified in the aforementioned point. Found qualifier http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD in previous service, and found http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD in the migrated service</Check>
+                                checkId="ANNEX_J_A_IV_CORRECT_QUAL_MIGRATION" status="SUCCESS">If the previously listed service is qualified by one of the qualifiers identified in Annex J (a) (iv) then this qualifier MUST be migrated to the value specified in the aforementioned point. Found qualifier https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD in previous service, and found https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD in the migrated service</Check>
 							<Check
-                                checkId="ANNEX_J_A_IV_CORRECT_QUAL_MIGRATION" status="SUCCESS">If the previously listed service is qualified by one of the qualifiers identified in Annex J (a) (iv) then this qualifier MUST be migrated to the value specified in the aforementioned point. Found qualifier http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD in previous service, and found http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD in the migrated service</Check>
-							<Check checkId="ANNEX_J_A_IV_NO_OLD_QUALS" status="ERROR">The migrated service MUST not contain qualifiers that according to Annex J (a) (iv) MUST migrate to different values. Found qualifier http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD in migrated service, which MUST not be present</Check>
-							<Check checkId="ANNEX_J_A_IV_NO_OLD_QUALS" status="ERROR">The migrated service MUST not contain qualifiers that according to Annex J (a) (iv) MUST migrate to different values. Found qualifier http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD in migrated service, which MUST not be present</Check>
+                                checkId="ANNEX_J_A_IV_CORRECT_QUAL_MIGRATION" status="SUCCESS">If the previously listed service is qualified by one of the qualifiers identified in Annex J (a) (iv) then this qualifier MUST be migrated to the value specified in the aforementioned point. Found qualifier https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD in previous service, and found https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD in the migrated service</Check>
+							<Check checkId="ANNEX_J_A_IV_NO_OLD_QUALS" status="ERROR">The migrated service MUST not contain qualifiers that according to Annex J (a) (iv) MUST migrate to different values. Found qualifier https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD in migrated service, which MUST not be present</Check>
+							<Check checkId="ANNEX_J_A_IV_NO_OLD_QUALS" status="ERROR">The migrated service MUST not contain qualifiers that according to Annex J (a) (iv) MUST migrate to different values. Found qualifier https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD in migrated service, which MUST not be present</Check>
 						</ServiceInformation>
 						<ServiceHistory>
 							<ServiceHistoryInstance index="1">
 								<ServiceTypeIdentifier>
 									<Check
-                                    checkId="SVC_TYPE_IN_DIR_1999_93_EC" status="SUCCESS">When the StatusStartingTime in an historic instance is previous to the entry into force of the EU Regulation 910/2014, then the type of service in the service section MUST be one of the standardized values supporting EC Directive 1999/93/EC. ServiceTypeIdentifier value found: http://uri.etsi.org/TrstSvc/Svctype/CA/QC. StatusStartingTime value found: 2013-10-13T00:00:00Z</Check>
+                                    checkId="SVC_TYPE_IN_DIR_1999_93_EC" status="SUCCESS">When the StatusStartingTime in an historic instance is previous to the entry into force of the EU Regulation 910/2014, then the type of service in the service section MUST be one of the standardized values supporting EC Directive 1999/93/EC. ServiceTypeIdentifier value found: https://uri.etsi.org/TrstSvc/Svctype/CA/QC. StatusStartingTime value found: 2013-10-13T00:00:00Z</Check>
 								</ServiceTypeIdentifier>
 								<ServiceName>
 									<Name index="1" language="en">
@@ -1058,7 +1058,7 @@ Attributes found:
 								</ServiceDigitalIdentity>
 								<ServiceStatus>
 									<Check
-                                    checkId="SVC_STAT_VALID_FOR_TYPE" status="SUCCESS">The ServiceStatus value MUST be a valid value for the service type. StatusStartingTime was previous to the entry into force of Regulation 910/2014. ServiceTypeIdentifier value found: http://uri.etsi.org/TrstSvc/Svctype/CA/QC; ServiceStatus value found: http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</Check>
+                                    checkId="SVC_STAT_VALID_FOR_TYPE" status="SUCCESS">The ServiceStatus value MUST be a valid value for the service type. StatusStartingTime was previous to the entry into force of Regulation 910/2014. ServiceTypeIdentifier value found: https://uri.etsi.org/TrstSvc/Svctype/CA/QC; ServiceStatus value found: https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</Check>
 								</ServiceStatus>
 								<StatusStartingTime>
 									<Check
@@ -1069,8 +1069,8 @@ Attributes found:
 										<AdditionalServiceInformation>
 											<URI language="en">
 												<Check
-                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures"</Check>
-												<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</Check>
+                                    checkId="NOT_EMPTY_URI" status="SUCCESS">The value of URI must be a non empty URI reference. The string for the URI is: "https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures"</Check>
+												<Check checkId="IS_URI" status="SUCCESS">The value of component URI must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</Check>
 												<Check
                                     checkId="LANG_ATTR_ONE_OF_ALLOWED" status="SUCCESS">The value of the xml:lang attribute of URI is one of the values for European languages specified in IETF RFC 5646 and in clause E.1 of ETSI TS 119 612. Found value: "en"</Check>
 											</URI>
@@ -1152,7 +1152,7 @@ Attributes found:
 													<Qualifier index="1">
 														<URI>
 															<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD</Check>
 															<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 														</URI>
@@ -1160,7 +1160,7 @@ Attributes found:
 													<Qualifier index="2">
 														<URI>
 															<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD</Check>
 															<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 														</URI>
@@ -1168,7 +1168,7 @@ Attributes found:
 													<Qualifier index="3">
 														<URI>
 															<Check
-                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert</Check>
+                                    checkId="IS_URI" status="SUCCESS">The value of component uri must be a valid URI.Value found: https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert</Check>
 															<Check
                                     checkId="SVC_QUALIFS_QUALIFIER_VALUE" status="SUCCESS">The value of Qualifier element MUST be one of the set defined for this component.StatusStartingTime value found is 2013-10-13T00:00:00Z, which was before the entry into force of EU Regulation 910/2014.</Check>
 														</URI>

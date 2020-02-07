@@ -2,37 +2,37 @@ Liechtenstein
 
     Liechtensteinische Post AG 
 
-        Liechtenstein Post Advanced CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Liechtenstein Post Advanced CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Liechtenstein Post Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Liechtenstein Post Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     FLZ-Anstalt 
 
-        lisign-qualified-01 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        lisign-qualified-01 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Office for Communications 
 
-        Trusted List CA 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trusted List CA 1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Trusted List CA 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trusted List CA 2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
     SwissSign AG 
 
-        SwissSign LI Qualified Platinum CA 2016 - G22 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SwissSign LI Qualified Platinum CA 2016 - G22 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        SwissSign LI Platinum Qualified CA 2016 - G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SwissSign LI Platinum Qualified CA 2016 - G3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 

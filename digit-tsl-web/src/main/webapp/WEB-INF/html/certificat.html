@@ -98,8 +98,8 @@
 			<div ng-init="tCertificate.certB64Open='0'">
 				<span ng-if="tCertificate.certB64Open!='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-right closeTabIcon cursor-pointer" ng-click="tCertificate.certB64Open='1'"></span>
 				<span ng-if="tCertificate.certB64Open=='1'" style="width: 10px;" class=" col-sm-1 fa fa-caret-down openTabIcon cursor-pointer" ng-click="tCertificate.certB64Open='0'"></span>
-				<p class="col-sm-9" ng-if="tCertificate.certB64Open=='0'" style="margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ tCertificate.certB64}}</p>
-				<pre class="col-sm-9" ng-if="tCertificate.certB64Open=='1'" style="margin-bottom: 0px; word-wrap: break-word; white-space: pre-wrap; word-break: break-all;">{{ tCertificate.certB64}}</pre>
+				<p class="col-sm-9" ng-if="tCertificate.certB64Open=='0'" style="margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ tCertificate.certB64}}</p>
+				<pre class="col-sm-9" ng-if="tCertificate.certB64Open=='1'" style="margin-bottom: 0; word-wrap: break-word; white-space: pre-wrap; word-break: break-all;">{{ tCertificate.certB64}}</pre>
 			</div>
 		</div>
 		<!-- Certificate Info -->

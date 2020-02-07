@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.io.BufferedWriter;
@@ -43,7 +23,7 @@ import eu.europa.ec.joinup.tsl.business.dto.data.stats.StatisticType;
 
 public class StatisticCSVWriter {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     private static final Logger LOGGER = LoggerFactory.getLogger(StatisticCSVWriter.class);
 
@@ -109,7 +89,7 @@ public class StatisticCSVWriter {
             }
         }
 
-        return header.toArray(new String[header.size()]);
+        return header.toArray(new String[0]);
     }
 
     /**
@@ -118,7 +98,7 @@ public class StatisticCSVWriter {
      * @param serviceLegalType
      * @param showTOB
      */
-    private static List<String> generateLegalTypeHeader(ServiceLegalType serviceLegalType, Boolean showTOB) {
+    private static List<String> generateLegalTypeHeader(ServiceLegalType serviceLegalType, boolean showTOB) {
         List<String> legalTypeHeader = new ArrayList<>();
         // Active
         legalTypeHeader.add(bundle.getString("type.active").replace("%TYPE%", serviceLegalType.getCode()));
@@ -175,7 +155,7 @@ public class StatisticCSVWriter {
                 }
             }
         }
-        return record.toArray(new Object[record.size()]);
+        return record.toArray(new Object[0]);
     }
 
 }

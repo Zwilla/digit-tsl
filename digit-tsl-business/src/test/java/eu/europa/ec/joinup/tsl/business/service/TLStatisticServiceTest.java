@@ -1,28 +1,9 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -228,7 +209,7 @@ public class TLStatisticServiceTest extends AbstractSpringTest {
 
     @SuppressWarnings("deprecation")
     @Test
-    public void luHistory() throws IOException {
+    public void luHistory() {
         loadTL(countryService.getCountryByTerritory("LU"), "LU_HISTORY");
 
         List<StatisticTSP> luStat = statisticService.getCountryStatisticByTSP("LU", new Date());
@@ -243,7 +224,7 @@ public class TLStatisticServiceTest extends AbstractSpringTest {
         Assert.assertEquals(1, luxTrust.getTypes().get(ServiceLegalType.Q_TIMESTAMP).getNbInactive());
 
         // 2017-01-01
-        luStat = statisticService.getCountryStatisticByTSP("LU", new Date(117, 0, 1));
+        luStat = statisticService.getCountryStatisticByTSP("LU", new Date(117, Calendar.JANUARY, 1));
         luxTrust = luStat.get(0);
         Assert.assertEquals(2, luxTrust.getNbService());
         Assert.assertEquals(1, luxTrust.getTypes().get(ServiceLegalType.Q_CERT_ESIG).getNbActive());
@@ -253,7 +234,7 @@ public class TLStatisticServiceTest extends AbstractSpringTest {
         Assert.assertEquals(0, luxTrust.getTypes().get(ServiceLegalType.Q_TIMESTAMP).getNbInactive());
 
         // 2013-01-01
-        luStat = statisticService.getCountryStatisticByTSP("LU", new Date(113, 0, 1));
+        luStat = statisticService.getCountryStatisticByTSP("LU", new Date(113, Calendar.JANUARY, 1));
         luxTrust = luStat.get(0);
         Assert.assertEquals(1, luxTrust.getNbService());
         Assert.assertEquals(0, luxTrust.getTypes().get(ServiceLegalType.Q_CERT_ESIG).getNbActive());

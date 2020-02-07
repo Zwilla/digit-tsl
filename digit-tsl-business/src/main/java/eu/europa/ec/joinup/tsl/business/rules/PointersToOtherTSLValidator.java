@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.rules;
 
 import java.util.ArrayList;
@@ -158,12 +138,12 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
             break;
         case IS_LOCATION_PUBLISHED_LOTL:
             if (!isLOTL) {
-                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
+                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, false, results);
             }
             break;
         case IS_LOCATION_PUBLISHED_TL:
             if (isLOTL) {
-                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, isLOTL, results);
+                checkAllLocationsCorrectPublished(check, tlId + "_" + Tag.POINTERS_TO_OTHER_TSL, pointers, true, results);
             }
             break;
         case IS_SCHEME_TERRITORY_PRESENT:
@@ -219,7 +199,7 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
             break;
         case IS_X509CERTIFICATE_COUNTRY_CODE_MATCH:
             if (isLOTL) {
-                checkAllDigitalIdsCountryCodeMatch(check, pointers, isLOTL, results);
+                checkAllDigitalIdsCountryCodeMatch(check, pointers, true, results);
             }
             break;
         case IS_X509CERTIFICATE_ORGANIZATION_MATCH:
@@ -407,8 +387,8 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
             for (TLPointersToOtherTSL pointer : pointers) {
                 List<TLSchemeTypeCommunityRule> schemeTypeCommunityRules = pointer.getSchemeTypeCommunity();
                 if (isLOTL && !pointer.getSchemeTerritory().equals(lotlTerritory)) {
-                    // http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon
-                    // http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR
+                    // https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon
+                    // https://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR
                     if (CollectionUtils.size(schemeTypeCommunityRules) == 2) {
                         List<String> schemeCommunityRulesValues = propertiesService.getTLSchemeCommunityRulesValues();
                         boolean findAllInDB = true;
@@ -425,7 +405,7 @@ public class PointersToOtherTSLValidator extends AbstractCheckValidator {
                         addResult(check, pointer.getId() + "_" + Tag.POINTER_COMMUNITY_RULE, false, results);
                     }
                 } else {
-                    // TL must points to http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists
+                    // TL must points to https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists
                     if (CollectionUtils.size(schemeTypeCommunityRules) == 1) {
                         TLSchemeTypeCommunityRule communityRule = schemeTypeCommunityRules.get(0);
                         addResult(check, pointer.getId() + "_" + Tag.POINTER_COMMUNITY_RULE, genericValidator.isEquals(propertiesService.getLOTLSchemeCommunityRulesValue(), communityRule.getValue()),

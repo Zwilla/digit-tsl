@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="UKTSL01Dec2017" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="UKTSL01Dec2017" TSLTag="https://uri.etsi.org/19612/TSLTag">
   <SchemeInformation>
     <TSLVersionIdentifier>5</TSLVersionIdentifier>
     <TSLSequenceNumber>16</TSLSequenceNumber>
-    <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+    <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
     <SchemeOperatorName>
       <Name xml:lang="en">tScheme Limited</Name>
     </SchemeOperatorName>
@@ -26,10 +26,10 @@
     <SchemeInformationURI>
       <URI xml:lang="en">http://www.tscheme.org/UK_TSL/Scheme_info.html</URI>
     </SchemeInformationURI>
-    <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+    <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
     <SchemeTypeCommunityRules>
-      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
+      <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+      <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
     </SchemeTypeCommunityRules>
     <SchemeTerritory>UK</SchemeTerritory>
     <PolicyOrLegalNotice>
@@ -67,7 +67,7 @@
         <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
         <AdditionalInformation>
           <OtherInformation>
-            <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+            <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
           </OtherInformation>
           <OtherInformation>
             <SchemeTerritory>EU</SchemeTerritory>
@@ -82,7 +82,7 @@
           </OtherInformation>
           <OtherInformation>
             <SchemeTypeCommunityRules>
-              <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+              <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
             </SchemeTypeCommunityRules>
           </OtherInformation>
         </AdditionalInformation>
@@ -128,7 +128,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Trustassured</Name>
             </ServiceName>
@@ -141,7 +141,7 @@
                 <Other>http://www.tscheme.org/directory/rbsg/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
             <StatusStartingTime>2017-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/rbsg/index.html</URI>
@@ -155,14 +155,14 @@
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Trustassured</Name>
               </ServiceName>
@@ -174,18 +174,18 @@
                   <X509SKI>YxfAgdS/D6lmMZb6F8GwytoXAtA=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
               <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
               <ServiceInformationExtensions>
                 <Extension Critical="true">
                   <AdditionalServiceInformation>
-                    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                   </AdditionalServiceInformation>
                 </Extension>
               </ServiceInformationExtensions>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Trustassured</Name>
               </ServiceName>
@@ -197,7 +197,7 @@
                   <X509SKI>YxfAgdS/D6lmMZb6F8GwytoXAtA=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2002-02-11T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -235,7 +235,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Certificate Factory</Name>
             </ServiceName>
@@ -244,7 +244,7 @@
                 <Other>http://www.tscheme.org/directory/trustis/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/trustis/index.html</URI>
@@ -258,7 +258,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Certificate Factory</Name>
               </ServiceName>
@@ -267,7 +267,7 @@
                   <Other>http://www.tscheme.org/directory/trustis/index.html</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2002-03-08T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -304,7 +304,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">BT Assure PKI</Name>
             </ServiceName>
@@ -313,7 +313,7 @@
                 <Other>http://www.tscheme.org/directory/BT_Assure/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/BT_Assure/index.html</URI>
@@ -324,7 +324,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/unspecified</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">BT Assure PKI</Name>
               </ServiceName>
@@ -333,7 +333,7 @@
                   <Other>http://www.tscheme.org/directory/BT_Assure/index.html</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2002-05-27T11:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -371,7 +371,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Root CA for NHS PKI</Name>
             </ServiceName>
@@ -381,7 +381,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/NHS_RootCA/index.html</URI>
@@ -392,7 +392,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Root CA for NHS PKI</Name>
               </ServiceName>
@@ -404,7 +404,7 @@
                   <X509SKI>4ycXk8wrnt+1VnVyc8LXC6Cd8Fs=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-11-29T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -442,7 +442,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">ARTL</Name>
             </ServiceName>
@@ -452,7 +452,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/RoS_ARTL/index.html</URI>
@@ -466,7 +466,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">ARTL</Name>
               </ServiceName>
@@ -478,7 +478,7 @@
                   <X509SKI>BR+J0DAzgxB+8GnUor3ObWVkqCY=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2008-05-12T11:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -516,7 +516,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Police Service Root CA</Name>
             </ServiceName>
@@ -526,7 +526,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/HO_IT_RootCA/index.html</URI>
@@ -537,7 +537,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Police Service Root CA</Name>
               </ServiceName>
@@ -549,14 +549,14 @@
                   <X509SKI>2/OxBN4S1ncHaZjlVyRvOSLyaVM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2011-02-25T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Police Service IAM Central Services CA</Name>
             </ServiceName>
@@ -566,7 +566,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/HO_IT_CSCA/index.html</URI>
@@ -577,7 +577,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Police Service IAM Central Services CA</Name>
               </ServiceName>
@@ -589,7 +589,7 @@
                   <X509SKI>m7cDREC4irBoRhT4OENQTChkPn8=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2011-02-25T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -627,7 +627,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">BT Radianz Messaging</Name>
             </ServiceName>
@@ -637,7 +637,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/BT_MSM/index.html</URI>
@@ -648,7 +648,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">BT Radianz Messaging</Name>
               </ServiceName>
@@ -660,7 +660,7 @@
                   <X509SKI>qZdmWwbEBgHlCKuW/KEEDMpEylM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2011-03-08T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -698,7 +698,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Digital Policing - Secure Services</Name>
               <Name xml:lang="en">Metropolitan Police Class 3 Primary CA</Name>
@@ -709,7 +709,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/Met_police/index.html</URI>
@@ -720,7 +720,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Digital Policing - Secure Services</Name>
                 <Name xml:lang="en">Metropolitan Police Class 3 Primary CA</Name>
@@ -733,14 +733,14 @@
                   <X509SKI>BcYvVKzwg9eQodsDuesf0jOc2ME=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2012-12-14T12:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Metropolitan Police Class 3 Secondary CA</Name>
               <Name xml:lang="en">Digital Policing - Secure Services</Name>
@@ -751,7 +751,7 @@
 
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/Met_police/index.html</URI>
@@ -762,7 +762,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Metropolitan Police Class 3 Secondary CA</Name>
                 <Name xml:lang="en">Digital Policing - Secure Services</Name>
@@ -775,7 +775,7 @@
                   <X509SKI>MM7wPjqAo+wfg2z8TioA5R2V7aU=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2012-12-14T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -813,7 +813,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">IDaaS (Identity as a Service)</Name>
             </ServiceName>
@@ -822,7 +822,7 @@
                 <Other>http://www.tscheme.org/directory/EXPN_IDaaS/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/EXPN_IDaaS/index.html</URI>
@@ -833,7 +833,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">IDaaS (Identity as a Service)</Name>
               </ServiceName>
@@ -842,7 +842,7 @@
                   <Other>http://www.tscheme.org/directory/Digidentity/index.html</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2014-10-20T23:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -880,7 +880,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Universal Identity Service</Name>
             </ServiceName>
@@ -889,7 +889,7 @@
                 <Other>http://www.tscheme.org/directory/VZN_UIS/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/VZN_UIS/index.html</URI>
@@ -903,24 +903,24 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Universal Identity Service</Name>
               </ServiceName>
               <ServiceDigitalIdentity/>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2015-02-11T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Identity Proofing Service and Identity Broker Service (IPS/IBS) from Verizon (UK) Limited</Name>
             </ServiceName>
             <ServiceDigitalIdentity/>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-10-09T23:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/VZN_IPSIBS/supporting.html</URI>
@@ -960,7 +960,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">CitizenSafe IdP Service</Name>
             </ServiceName>
@@ -969,7 +969,7 @@
                 <Other>http://www.tscheme.org/directory/GBG_CSafe/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-11-03T23:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/GBG_CSafe/index.html</URI>
@@ -983,7 +983,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">ID3global Service</Name>
               </ServiceName>
@@ -992,11 +992,11 @@
                   <Other>http://www.tscheme.org/directory/GBG_ID3/index.html</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
               <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">ID3global Service</Name>
               </ServiceName>
@@ -1005,7 +1005,7 @@
                   <Other>http://www.tscheme.org/directory/GBG_ID3/index.html</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2015-02-12T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -1043,7 +1043,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Digidentity BV Identity Service for Verify</Name>
             </ServiceName>
@@ -1052,7 +1052,7 @@
                 <Other>http://www.tscheme.org/directory/DDY_IDP/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/DDY_IDP/index.html</URI>
@@ -1063,21 +1063,21 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Digidentity BV Identity Service for Verify</Name>
               </ServiceName>
               <ServiceDigitalIdentity>
                 <DigitalId>
-                  <Other>https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt;</Other>
+                  <Other>https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt;</Other>
 
                 </DigitalId>
                 <DigitalId>
-                  <Other>https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt;</Other>
+                  <Other>https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt; https://www.digidentity.eu/en/ &lt;ServiceSupplyPoint xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#"&gt;https://www.digidentity.eu/en/&lt;/ServiceSupplyPoint&gt;</Other>
 
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2015-04-29T23:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -1115,7 +1115,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Barclays Identity Service</Name>
             </ServiceName>
@@ -1124,7 +1124,7 @@
                 <Other>http://www.barclays.co.uk/identity</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/Barclays/index.html</URI>
@@ -1135,7 +1135,7 @@
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Barclays Identity Service</Name>
               </ServiceName>
@@ -1144,7 +1144,7 @@
                   <Other>http://www.barclays.co.uk/identity</Other>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
               <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
@@ -1182,7 +1182,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Digital Certificate Service</Name>
               <Name xml:lang="en">DCS</Name>
@@ -1193,7 +1193,7 @@
  
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/</URI>
@@ -1209,7 +1209,7 @@
                 <ns5:Qualifications>
                   <ns5:QualificationElement>
                     <ns5:Qualifiers>
-                      <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
+                      <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDStatusAsInCert"/>
                     </ns5:Qualifiers>
                     <ns5:CriteriaList assert="none">
                       <ns5:KeyUsage>
@@ -1221,14 +1221,14 @@
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">Digital Certificate Service</Name>
                 <Name xml:lang="en">DCS</Name>
@@ -1241,14 +1241,14 @@
                   <X509SKI>RQzDa1mn+JcP23bygRrMLsZz0nM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2016-06-29T23:00:00Z</StatusStartingTime>
               <ServiceInformationExtensions>
                 <Extension Critical="true">
                   <ns5:Qualifications>
                     <ns5:QualificationElement>
                       <ns5:Qualifiers>
-                        <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+                        <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
                       </ns5:Qualifiers>
                       <ns5:CriteriaList assert="none">
                         <ns5:KeyUsage>
@@ -1292,7 +1292,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">SecureIdentity from Morpho UK Limited</Name>
             </ServiceName>
@@ -1301,7 +1301,7 @@
                 <Other>https://help.secureidentity.co.uk/hc/en-gb</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-10-20T22:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/Morpho_SecId/index.html</URI>
@@ -1341,7 +1341,7 @@
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">Royal Mail Identity Verification service</Name>
             </ServiceName>
@@ -1350,7 +1350,7 @@
                 <Other>http://www.tscheme.org/directory/RMG_IV/index.html</Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-11-03T23:00:00Z</StatusStartingTime>
             <SchemeServiceDefinitionURI>
               <URI xml:lang="en">http://www.tscheme.org/directory/RMG_IV/index.html</URI>
@@ -1363,4 +1363,4 @@
       </TSPServices>
     </TrustServiceProvider>
   </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-e90f22cfe7a384b1db4bd20ac5bd281d"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>DadIKTPWa934z2bDyLGt0FsUvcSGk/oko8+gII7iRAg=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-e90f22cfe7a384b1db4bd20ac5bd281d"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>GUJjgCsY+hTIC+fqx0ommhTRK2nF66a5yeFYlDW7Ybw=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-e90f22cfe7a384b1db4bd20ac5bd281d">QpEaZwwfBFTiSyrmJ2QrzP5JNOvThigK1+wd6ddcVIjmWdcjmavbUKVl6DBCTlMhYOsu16NEZ2OYUGwA7YspbdgbBHWrC6WMvlE/pWGrl7JL7yk1d07+nC+Itc5RhFysxiAFCHVCjpnafOcj59d64jop6qqgGfkU/r623MJZP+Ow/5kLC8XBlqw+wrHC8NJDNUHv/e/54PgY8CzGFaYqPbXj4sIt50YF1b0HZykQ/EVbaxI6RcZGJ6TwpBdq5sgQ4ujHBa4DdxShtPFiedrUBfRhMBqwfPBNGjYvGR8769w8WeD8zo0+b9d9Xm+roGTapq3zfFlLuG2hFWof8Cr7Ng==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIDdzCCAl+gAwIBAgIFFGqFxsQwDQYJKoZIhvcNAQELBQAwSzELMAkGA1UEBhMCVUsxGDAWBgNVBAoMD3RTY2hlbWUgTGltaXRlZDEMMAoGA1UECwwDUEtJMRQwEgYDVQQDDAtUU0wgU2lnbmluZzAeFw0xNzA2MzAwMDAwMDBaFw0yMDA2MzAwMDAwMDBaMEsxCzAJBgNVBAYTAlVLMRgwFgYDVQQKDA90U2NoZW1lIExpbWl0ZWQxDDAKBgNVBAsMA1BLSTEUMBIGA1UEAwwLVFNMIFNpZ25pbmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDStPNQHIHDBBW4a2CBtQmfktkPoWd6j26XOBWZ9Cg7PvpqBeAu0kgt4vhB3AB2dnv0HuC69hW7rZ+AB/BoouJOPvWEY6KO7ExpqgQsVJK+WqaFR7aJOX2rz04a/yGAUF66eml0VfKq+twTHg7dTCh87tp7hdO+9dVPPhwHfvZ3eEIRZgm/TPO86EOLF2woobI/XsvwgDov7s9kYmdb8siWlYCnKJweB/jcfDcgQhcp+EhOco0v78GkrqE3e42IpBbCPd+qIBJ93Ktlx0u36t4o4iIwIK1gZ2fLjjwRi7RRePBgVHjUrGlOQOMbLtyDYKdGcB1/1wizOJyuMLOJXNk9AgMBAAGjYjBgMB0GA1UdDgQWBBS3NhffOsG+oVozK8Wl+sE1ERxXAjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIGwDARBgNVHSAECjAIMAYGBFUdIAAwEQYDVR0lBAowCAYGBACRNwMAMA0GCSqGSIb3DQEBCwUAA4IBAQBohaP/1eHYrIMabhV71MmIWPrL14e3/yqHE8RwnSGUvpnjnXhIU7lNpL6BAhe+VfHhghLuHpJvPDU/GieOTEKQWC6WS+uvG0zO1f/53MgV0uHdpgm1Pkm0m2YWuP3Rkq63jO936Z7hODPhUaUOTWBAv3H6Bzx0FaqN3aANz/Ua9NwX3O93lWNxmrgqrgnH3lBmAzvXatKQDt1VQ3whsOXclfTwcklfmlUjxnQofcn1OtNHuTNY+LPRx2RX/QzHQRlWxPHSyNKDEITs8UOrXJIX5SFVy5ioQMIty/28cNVTt77FZTPDsnnQa9izh/aG009gsX3u1AnbmYqsacV3CGXR</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-e90f22cfe7a384b1db4bd20ac5bd281d"><xades:SignedProperties Id="xades-id-e90f22cfe7a384b1db4bd20ac5bd281d"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-01T17:47:50Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>1ibU2HBCMQDAH3U/DB9y6FtiWXI=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSL Signing,OU=PKI,O=tScheme Limited,C=UK</ds:X509IssuerName><ds:X509SerialNumber>87686497988</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-e90f22cfe7a384b1db4bd20ac5bd281d"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>DadIKTPWa934z2bDyLGt0FsUvcSGk/oko8+gII7iRAg=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-e90f22cfe7a384b1db4bd20ac5bd281d"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>GUJjgCsY+hTIC+fqx0ommhTRK2nF66a5yeFYlDW7Ybw=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-e90f22cfe7a384b1db4bd20ac5bd281d">QpEaZwwfBFTiSyrmJ2QrzP5JNOvThigK1+wd6ddcVIjmWdcjmavbUKVl6DBCTlMhYOsu16NEZ2OYUGwA7YspbdgbBHWrC6WMvlE/pWGrl7JL7yk1d07+nC+Itc5RhFysxiAFCHVCjpnafOcj59d64jop6qqgGfkU/r623MJZP+Ow/5kLC8XBlqw+wrHC8NJDNUHv/e/54PgY8CzGFaYqPbXj4sIt50YF1b0HZykQ/EVbaxI6RcZGJ6TwpBdq5sgQ4ujHBa4DdxShtPFiedrUBfRhMBqwfPBNGjYvGR8769w8WeD8zo0+b9d9Xm+roGTapq3zfFlLuG2hFWof8Cr7Ng==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIDdzCCAl+gAwIBAgIFFGqFxsQwDQYJKoZIhvcNAQELBQAwSzELMAkGA1UEBhMCVUsxGDAWBgNVBAoMD3RTY2hlbWUgTGltaXRlZDEMMAoGA1UECwwDUEtJMRQwEgYDVQQDDAtUU0wgU2lnbmluZzAeFw0xNzA2MzAwMDAwMDBaFw0yMDA2MzAwMDAwMDBaMEsxCzAJBgNVBAYTAlVLMRgwFgYDVQQKDA90U2NoZW1lIExpbWl0ZWQxDDAKBgNVBAsMA1BLSTEUMBIGA1UEAwwLVFNMIFNpZ25pbmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDStPNQHIHDBBW4a2CBtQmfktkPoWd6j26XOBWZ9Cg7PvpqBeAu0kgt4vhB3AB2dnv0HuC69hW7rZ+AB/BoouJOPvWEY6KO7ExpqgQsVJK+WqaFR7aJOX2rz04a/yGAUF66eml0VfKq+twTHg7dTCh87tp7hdO+9dVPPhwHfvZ3eEIRZgm/TPO86EOLF2woobI/XsvwgDov7s9kYmdb8siWlYCnKJweB/jcfDcgQhcp+EhOco0v78GkrqE3e42IpBbCPd+qIBJ93Ktlx0u36t4o4iIwIK1gZ2fLjjwRi7RRePBgVHjUrGlOQOMbLtyDYKdGcB1/1wizOJyuMLOJXNk9AgMBAAGjYjBgMB0GA1UdDgQWBBS3NhffOsG+oVozK8Wl+sE1ERxXAjAJBgNVHRMEAjAAMA4GA1UdDwEB/wQEAwIGwDARBgNVHSAECjAIMAYGBFUdIAAwEQYDVR0lBAowCAYGBACRNwMAMA0GCSqGSIb3DQEBCwUAA4IBAQBohaP/1eHYrIMabhV71MmIWPrL14e3/yqHE8RwnSGUvpnjnXhIU7lNpL6BAhe+VfHhghLuHpJvPDU/GieOTEKQWC6WS+uvG0zO1f/53MgV0uHdpgm1Pkm0m2YWuP3Rkq63jO936Z7hODPhUaUOTWBAv3H6Bzx0FaqN3aANz/Ua9NwX3O93lWNxmrgqrgnH3lBmAzvXatKQDt1VQ3whsOXclfTwcklfmlUjxnQofcn1OtNHuTNY+LPRx2RX/QzHQRlWxPHSyNKDEITs8UOrXJIX5SFVy5ioQMIty/28cNVTt77FZTPDsnnQa9izh/aG009gsX3u1AnbmYqsacV3CGXR</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-e90f22cfe7a384b1db4bd20ac5bd281d"><xades:SignedProperties Id="xades-id-e90f22cfe7a384b1db4bd20ac5bd281d"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-01T17:47:50Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>1ibU2HBCMQDAH3U/DB9y6FtiWXI=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=TSL Signing,OU=PKI,O=tScheme Limited,C=UK</ds:X509IssuerName><ds:X509SerialNumber>87686497988</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

@@ -2,7 +2,7 @@ Ireland
 
     Post.Trust Ltd 
 
-        Post.Trust Ltd - qualified certificate service - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Post.Trust Ltd - qualified certificate service - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

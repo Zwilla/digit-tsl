@@ -1,25 +1,6 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -34,8 +15,8 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
  */
 public class LocationUtils {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
-    private static String multiple = "(s)";
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final String multiple = "(s)";
 
     public static String idUserReadable(TL tl, String checksLocation) {
         StringBuffer hrLocation = new StringBuffer();
@@ -43,9 +24,9 @@ public class LocationUtils {
         hrLocation.append(startHr(tl));
 
         if (str1.startsWith(Tag.TSL_TAG.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.tag"));
+            hrLocation.append(" || ").append(bundle.getString("check.tag"));
         } else if (str1.startsWith(Tag.POINTERS_TO_OTHER_TSL.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.pointers"));
+            hrLocation.append(" || ").append(bundle.getString("check.pointers"));
 
             if (str1.equals(Tag.POINTERS_TO_OTHER_TSL.toString())) {
                 return hrLocation.toString();
@@ -53,18 +34,18 @@ public class LocationUtils {
                 formatPointersToOtherTSL(tl, hrLocation, str1);
             }
         } else if (str1.startsWith(Tag.SCHEME_INFORMATION.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.schemeInformation"));
+            hrLocation.append(" || ").append(bundle.getString("check.schemeInformation"));
 
             if (str1.equals(Tag.SCHEME_INFORMATION.toString())) {
                 return hrLocation.toString();
             } else if (str1.equals(Tag.SCHEME_INFORMATION + "_" + Tag.Structure)) {
-                hrLocation.append(" || " + bundle.getString("tStrucuture"));
+                hrLocation.append(" || ").append(bundle.getString("tStrucuture"));
                 return hrLocation.toString();
             } else {
                 formatSchemeinformation(tl, hrLocation, str1);
             }
         } else if (str1.startsWith(Tag.TSP_SERVICE_PROVIDER.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.serviceProvider"));
+            hrLocation.append(" || ").append(bundle.getString("check.serviceProvider"));
 
             if (str1.equals(Tag.TSP_SERVICE_PROVIDER.toString())) {
                 return hrLocation.toString();
@@ -72,25 +53,25 @@ public class LocationUtils {
                 formatServiceProvider(tl, hrLocation, str1);
             }
         } else if (str1.startsWith(Tag.TSP_SERVICE.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.service"));
+            hrLocation.append(" || ").append(bundle.getString("check.service"));
         } else if (str1.startsWith(Tag.SERVICE_HISTORY.toString())) {
-            hrLocation.append(" || " + bundle.getString("check.serviceHistory"));
+            hrLocation.append(" || ").append(bundle.getString("check.serviceHistory"));
         } else {
             if (checksLocation.contains(tl.getId() + "_" + Tag.SIGNATURE)) {
                 if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.DIGEST_ALGORITHM)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.digestAlgo"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.digestAlgo"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.ENCRYPTION_ALGORITHM)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.encryptionAlgo"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.encryptionAlgo"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.INDICATION)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.indication"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.indication"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.SIGNATURE_FORMAT)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.format"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.format"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.SIGNED_BY)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.signBy"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.signBy"));
                 } else if (checksLocation.equals(tl.getId() + "_" + Tag.SIGNATURE + "_" + Tag.SIGNING_DATE)) {
-                    hrLocation.append(" || " + bundle.getString("tSignature") + " || " + bundle.getString("signature.signingDate"));
+                    hrLocation.append(" || ").append(bundle.getString("tSignature")).append(" || ").append(bundle.getString("signature.signingDate"));
                 }
             }
         }
@@ -98,35 +79,35 @@ public class LocationUtils {
     }
 
     private static void formatPointersToOtherTSL(TL tl, StringBuffer hrLocation, String str1) {
-        String p_str2 = getLocation(str1, '_', 4);
+        String p_str2 = getLocation(str1, 4);
         if (p_str2.contains("_")) {
             String pointerCheck = p_str2.substring(0, p_str2.indexOf('_'));
 
-            if (isInt(pointerCheck) && pointerIsNotUndefined(tl, Integer.valueOf(pointerCheck))) {
-                hrLocation.append(addPointerNameHr(tl, Integer.valueOf(pointerCheck)));
+            if (isInt(pointerCheck) && pointerIsNotUndefined(tl, Integer.parseInt(pointerCheck))) {
+                hrLocation.append(addPointerNameHr(tl, Integer.parseInt(pointerCheck)));
                 String p_str3 = p_str2.substring(p_str2.indexOf('_') + 1);
 
                 if (p_str3.startsWith(Tag.POINTER_TYPE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("tlType"));
+                    hrLocation.append(" || ").append(bundle.getString("tlType"));
 
                 } else if (p_str3.startsWith(Tag.POINTER_LOCATION.toString())) {
-                    hrLocation.append(" || " + bundle.getString("tlLocation"));
+                    hrLocation.append(" || ").append(bundle.getString("tlLocation"));
 
                 } else if (p_str3.startsWith(Tag.SCHEME_OPERATOR_NAME.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeOpeName") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("schemeOpeName")).append(multiple);
 
                 } else if (p_str3.startsWith(Tag.POINTER_COMMUNITY_RULE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeInfo.communityRule") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("schemeInfo.communityRule")).append(multiple);
 
                 } else if (p_str3.startsWith(Tag.POINTER_SCHEME_TERRITORY.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeTerritory"));
+                    hrLocation.append(" || ").append(bundle.getString("schemeTerritory"));
 
                 } else if (p_str3.startsWith(Tag.POINTER_MIME_TYPE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("mimeType"));
+                    hrLocation.append(" || ").append(bundle.getString("mimeType"));
 
                 } else if (p_str3.startsWith(Tag.SERVICE_DIGITAL_IDENTITY.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeInfo.digitalIdentities"));
-                    formatPointerDigitalIdentities(tl, hrLocation, p_str3, Integer.valueOf(pointerCheck));
+                    hrLocation.append(" || ").append(bundle.getString("schemeInfo.digitalIdentities"));
+                    formatPointerDigitalIdentities(tl, hrLocation, p_str3, Integer.parseInt(pointerCheck));
                 }
             }
         }
@@ -134,92 +115,92 @@ public class LocationUtils {
     }
 
     private static void formatPointerDigitalIdentities(TL tl, StringBuffer hrLocation, String strDigitalId, int pointerToCheck) {
-        String di_str = getLocation(strDigitalId, '_', 3);
+        String di_str = getLocation(strDigitalId, 3);
         if (di_str.contains("_")) {
             String digitalIdCheck = di_str.substring(0, di_str.indexOf('_'));
-            if (isInt(digitalIdCheck) && pointerDigitalIsNotUndefined(tl, pointerToCheck, Integer.valueOf(digitalIdCheck))) {
-                hrLocation.append(addPointerDigitalIdNameHr(tl, pointerToCheck, Integer.valueOf(digitalIdCheck)));
+            if (isInt(digitalIdCheck) && pointerDigitalIsNotUndefined(tl, pointerToCheck, Integer.parseInt(digitalIdCheck))) {
+                hrLocation.append(addPointerDigitalIdNameHr(tl, pointerToCheck, Integer.parseInt(digitalIdCheck)));
             }
         }
     }
 
     private static void formatSchemeinformation(TL tl, StringBuffer hrLocation, String str1) {
-        String si_str2 = getLocation(str1, '_', 2);
+        String si_str2 = getLocation(str1, 2);
 
         if (si_str2.startsWith(Tag.SEQUENCE_NUMBER.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.sequenceNumber"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.sequenceNumber"));
 
         } else if (si_str2.startsWith(Tag.TSL_TYPE.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.type"));
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.type"));
 
         } else if (si_str2.startsWith(Tag.SCHEME_OPERATOR_NAME.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeOpeName") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("schemeOpeName")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.SCHEME_OPERATOR_NAME + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeOpeName().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeOpeName().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.POSTAL_ADDRESSES.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.postalAddress") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.postalAddress")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.POSTAL_ADDRESSES + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeOpePostal().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeOpePostal().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.ELECTRONIC_ADDRESS.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.electronicAddress") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.electronicAddress")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.ELECTRONIC_ADDRESS + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeOpeElectronic().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeOpeElectronic().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.SCHEME_NAME.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.schemeName") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.schemeName")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.SCHEME_NAME + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeName().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeName().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.SCHEME_INFORMATION_URI.toString())) {
-            hrLocation.append(" || " + bundle.getString("serviceProvider.informationURI") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("serviceProvider.informationURI")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.SCHEME_INFORMATION_URI + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeInfoUri().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeInfoUri().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.STATUS_DETERMINATION.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.statusDetermination"));
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.statusDetermination"));
 
         } else if (si_str2.startsWith(Tag.SCHEME_TYPE_COMMUNITY_RULES.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.communityRule") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.communityRule")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.SCHEME_TYPE_COMMUNITY_RULES + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemeTypeCommRule().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemeTypeCommRule().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.POLICY_OR_LEGAL_NOTICE.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.legalNotice") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.legalNotice")).append(multiple);
             String tmp = deleteStartingGivingFirst(si_str2, Tag.POLICY_OR_LEGAL_NOTICE + "_");
             if (isInt(tmp)) {
-                hrLocation.append(" || " + bundle.getString("tLanguage") + " : " + tl.getSchemeInformation().getSchemePolicy().get(Integer.valueOf(tmp) - 1).getLanguage());
+                hrLocation.append(" || ").append(bundle.getString("tLanguage")).append(" : ").append(tl.getSchemeInformation().getSchemePolicy().get(Integer.parseInt(tmp) - 1).getLanguage());
             }
 
         } else if (si_str2.startsWith(Tag.ISSUE_DATE.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.issueDate"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.issueDate"));
 
         } else if (si_str2.startsWith(Tag.NEXT_UPDATE.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.expiryDate"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.expiryDate"));
 
         } else if (si_str2.startsWith(Tag.DISTRIBUTION_LIST.toString())) {
-            hrLocation.append(" || " + bundle.getString("schemeInfo.distributionList") + multiple);
+            hrLocation.append(" || ").append(bundle.getString("schemeInfo.distributionList")).append(multiple);
 
         } else if (si_str2.startsWith(Tag.TSL_TAG.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.tslTag"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.tslTag"));
 
         } else if (si_str2.startsWith(Tag.HISTORICAL_PERIOD.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.historicalPeriod"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.historicalPeriod"));
         } else if (si_str2.startsWith(Tag.TSL_IDENTIFIER.toString())) {
-            hrLocation.append(" || " + bundle.getString("tlBrowser.tslId"));
+            hrLocation.append(" || ").append(bundle.getString("tlBrowser.tslId"));
         }
     }
 
@@ -234,109 +215,109 @@ public class LocationUtils {
     }
 
     private static void formatServiceProvider(TL tl, StringBuffer hrLocation, String str1) {
-        String str2 = getLocation(str1, '_', 3);
+        String str2 = getLocation(str1, 3);
         if (str2.contains("_")) {
             String serviceProviderToCheck = str2.substring(0, str2.indexOf('_'));
             if (isInt(serviceProviderToCheck)) {
-                hrLocation.append(addServiceProviderNameHr(tl, Integer.valueOf(serviceProviderToCheck)));
+                hrLocation.append(addServiceProviderNameHr(tl, Integer.parseInt(serviceProviderToCheck)));
                 String str3 = str2.substring(str2.indexOf('_') + 1);
 
                 if (str3.startsWith(Tag.TSP_INFORMATION_URI.toString())) {
-                    hrLocation.append(" || " + bundle.getString("serviceProvider.informationURI") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("serviceProvider.informationURI")).append(multiple);
 
                 } else if (str3.startsWith(Tag.SERVICE_EXTENSION.toString())) {
-                    hrLocation.append(" || " + bundle.getString("serviceProvider.extension") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("serviceProvider.extension")).append(multiple);
 
                 } else if (str3.startsWith(Tag.ELECTRONIC_ADDRESS.toString())) {
-                    hrLocation.append(" || " + bundle.getString("tlBrowser.electronicAddress") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("tlBrowser.electronicAddress")).append(multiple);
 
                 } else if (str3.startsWith(Tag.POSTAL_ADDRESSES.toString())) {
-                    hrLocation.append(" || " + bundle.getString("tlBrowser.postalAddress") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("tlBrowser.postalAddress")).append(multiple);
 
                 } else if (str3.startsWith(Tag.TSP_TRADE_NAME.toString())) {
-                    hrLocation.append(" || " + bundle.getString("serviceProvider.tradeName") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("serviceProvider.tradeName")).append(multiple);
 
                 } else if (str3.startsWith(Tag.TSP_NAME.toString())) {
-                    hrLocation.append(" || " + bundle.getString("serviceProvider.name") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("serviceProvider.name")).append(multiple);
 
                 } else if (str3.startsWith(Tag.TSP_SERVICE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("serviceProvider.trustService"));
-                    String str4 = getLocation(str3, '_', 2);
+                    hrLocation.append(" || ").append(bundle.getString("serviceProvider.trustService"));
+                    String str4 = getLocation(str3, 2);
                     if (str4.contains("_")) {
                         String tSPServiceToCheck = str4.substring(0, str4.indexOf('_'));
                         if (isInt(tSPServiceToCheck)) {
-                            hrLocation.append(addTSPServiceNameHr(tl, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck)));
+                            hrLocation.append(addTSPServiceNameHr(tl, Integer.parseInt(serviceProviderToCheck), Integer.parseInt(tSPServiceToCheck)));
                             String str5 = str4.substring(str4.indexOf('_') + 1);
                             if (str5.startsWith(Tag.SERVICE_TYPE_IDENTIFIER.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.type"));
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.type"));
 
                             } else if (str5.startsWith(Tag.SERVICE_NAME.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.name") + multiple);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.name")).append(multiple);
 
                             } else if (str5.startsWith(Tag.SERVICE_STATUS_STARTING_TIME.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.stateDate"));
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.stateDate"));
 
                             } else if (str5.startsWith(Tag.SERVICE_STATUS.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.currentState"));
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.currentState"));
 
                             } else if (str5.startsWith(Tag.SCHEME_SERVICE_DEFINITION_URI.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.schemeDef") + multiple);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.schemeDef")).append(multiple);
 
                             } else if (str5.startsWith(Tag.SERVICE_SUPPLY_POINT.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.serviceSupply") + multiple);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceSupply")).append(multiple);
 
                             } else if (str5.startsWith(Tag.TSP_SERVICE_DEFINITION_URI.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.tspSchemeDef") + multiple);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.tspSchemeDef")).append(multiple);
 
                             } else if (str5.startsWith(Tag.SERVICE_EXTENSION.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.extension") + multiple);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.extension")).append(multiple);
                                 if (str5.contains(Tag.SERVICE_ADDITIONNAL_EXT.toString())) {
-                                    hrLocation.append(" || " + bundle.getString("extension.additionalService"));
+                                    hrLocation.append(" || ").append(bundle.getString("extension.additionalService"));
                                 } else if (str5.contains(Tag.SERVICE_QUALIFICATION_EXT.toString())) {
-                                    hrLocation.append(" || " + bundle.getString("extension.qualificationExtension"));
+                                    hrLocation.append(" || ").append(bundle.getString("extension.qualificationExtension"));
                                 } else if (str5.contains(Tag.SERVICE_TAKEN_OVER_BY.toString())) {
-                                    hrLocation.append(" || " + bundle.getString("extension.takenOverBy"));
+                                    hrLocation.append(" || ").append(bundle.getString("extension.takenOverBy"));
                                 } else if (str5.contains(Tag.SERVICE_EXPIRED_CERT_REVOCATION.toString())) {
-                                    hrLocation.append(" || " + bundle.getString("extension.expiredCertRevocation"));
+                                    hrLocation.append(" || ").append(bundle.getString("extension.expiredCertRevocation"));
                                 }
 
                             } else if (str5.startsWith(Tag.SERVICE_DIGITAL_IDENTITY.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.digitalIdentities"));
-                                formatServiceDigitalIdentities(tl, hrLocation, str5, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck));
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.digitalIdentities"));
+                                formatServiceDigitalIdentities(tl, hrLocation, str5, Integer.parseInt(serviceProviderToCheck), Integer.parseInt(tSPServiceToCheck));
 
                             } else if (str5.startsWith(Tag.SERVICE_HISTORY.toString())) {
-                                hrLocation.append(" || " + bundle.getString("serviceProvider.history"));
-                                String str6 = getLocation(str5, '_', 2);
+                                hrLocation.append(" || ").append(bundle.getString("serviceProvider.history"));
+                                String str6 = getLocation(str5, 2);
                                 if (str6.contains("_")) {
                                     String historyToCheck = str6.substring(0, str6.indexOf('_'));
                                     if (isInt(historyToCheck)) {
-                                        hrLocation.append(addHistoryServiceNameHr(tl, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck), Integer.valueOf(historyToCheck)));
+                                        hrLocation.append(addHistoryServiceNameHr(tl, Integer.parseInt(serviceProviderToCheck), Integer.parseInt(tSPServiceToCheck), Integer.parseInt(historyToCheck)));
                                         String str7 = str6.substring(str6.indexOf('_') + 1);
                                         if (str7.startsWith(Tag.SERVICE_TYPE_IDENTIFIER.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.type"));
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.type"));
 
                                         } else if (str7.startsWith(Tag.SERVICE_NAME.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.name") + multiple);
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.name")).append(multiple);
 
                                         } else if (str7.startsWith(Tag.SERVICE_STATUS_STARTING_TIME.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.stateDate"));
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.stateDate"));
 
                                         } else if (str7.startsWith(Tag.SERVICE_STATUS.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.serviceInformation.currentState"));
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.serviceInformation.currentState"));
                                         } else if (str7.startsWith(Tag.SERVICE_EXTENSION.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.extension") + multiple);
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.extension")).append(multiple);
                                             if (str7.contains(Tag.SERVICE_ADDITIONNAL_EXT.toString())) {
-                                                hrLocation.append(" || " + bundle.getString("extension.additionalService"));
+                                                hrLocation.append(" || ").append(bundle.getString("extension.additionalService"));
                                             } else if (str7.contains(Tag.SERVICE_QUALIFICATION_EXT.toString())) {
-                                                hrLocation.append(" || " + bundle.getString("extension.qualificationExtension"));
+                                                hrLocation.append(" || ").append(bundle.getString("extension.qualificationExtension"));
                                             } else if (str7.contains(Tag.SERVICE_TAKEN_OVER_BY.toString())) {
-                                                hrLocation.append(" || " + bundle.getString("extension.takenOverBy"));
+                                                hrLocation.append(" || ").append(bundle.getString("extension.takenOverBy"));
                                             } else if (str7.contains(Tag.SERVICE_EXPIRED_CERT_REVOCATION.toString())) {
-                                                hrLocation.append(" || " + bundle.getString("extension.expiredCertRevocation"));
+                                                hrLocation.append(" || ").append(bundle.getString("extension.expiredCertRevocation"));
                                             }
                                         } else if (str7.startsWith(Tag.SERVICE_DIGITAL_IDENTITY.toString())) {
-                                            hrLocation.append(" || " + bundle.getString("serviceProvider.digitalIdentities"));
-                                            formatServiceDigitalIdentities(tl, hrLocation, str7, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(tSPServiceToCheck));
+                                            hrLocation.append(" || ").append(bundle.getString("serviceProvider.digitalIdentities"));
+                                            formatServiceDigitalIdentities(tl, hrLocation, str7, Integer.parseInt(serviceProviderToCheck), Integer.parseInt(tSPServiceToCheck));
                                         }
                                     }
                                 }
@@ -344,7 +325,7 @@ public class LocationUtils {
                         }
                     } else {
                         if (isInt(str4)) {
-                            hrLocation.append(addTSPServiceNameHr(tl, Integer.valueOf(serviceProviderToCheck), Integer.valueOf(str4)));
+                            hrLocation.append(addTSPServiceNameHr(tl, Integer.parseInt(serviceProviderToCheck), Integer.parseInt(str4)));
                         }
                     }
                 }
@@ -354,11 +335,11 @@ public class LocationUtils {
     }
 
     private static void formatServiceDigitalIdentities(TL tl, StringBuffer hrLocation, String strDigitalId, int serviceProvider, int tspServiceToCheck) {
-        String di_str = getLocation(strDigitalId, '_', 3);
+        String di_str = getLocation(strDigitalId, 3);
         if (di_str.contains("_")) {
             String digitalIdCheck = di_str.substring(0, di_str.indexOf('_'));
-            if (isInt(digitalIdCheck) && pointerIsNotUndefined(tl, Integer.valueOf(digitalIdCheck))) {
-                hrLocation.append(addServiceDigitalIdNameHr(tl, serviceProvider, tspServiceToCheck, Integer.valueOf(digitalIdCheck)));
+            if (isInt(digitalIdCheck) && pointerIsNotUndefined(tl, Integer.parseInt(digitalIdCheck))) {
+                hrLocation.append(addServiceDigitalIdNameHr(tl, serviceProvider, tspServiceToCheck, Integer.parseInt(digitalIdCheck)));
             }
         }
     }
@@ -366,9 +347,9 @@ public class LocationUtils {
     public static String getDigitalIdList(String location) {
         String ret = null;
         if (location.contains("_")) {
-            String p_str2 = getLocation(location, '_', 6);
+            String p_str2 = getLocation(location, 6);
             if (p_str2.contains("_") && p_str2.startsWith(Tag.SERVICE_DIGITAL_IDENTITY.toString())) {
-                String di_str = getLocation(p_str2, '_', 3);
+                String di_str = getLocation(p_str2, 3);
                 if (di_str.contains("_")) {
                     String digitalIdCheck = di_str.substring(0, di_str.indexOf('_'));
                     ret = digitalIdCheck;
@@ -380,56 +361,54 @@ public class LocationUtils {
     }
 
     public static String formatNotificationPointerId(TLPointersToOtherTSL pointer, String location) {
-        StringBuffer hrLocation = new StringBuffer();
+        StringBuilder hrLocation = new StringBuilder();
 
         if (location.contains("_")) {
-            String p_str2 = getLocation(location, '_', 6);
+            String p_str2 = getLocation(location, 6);
             if (p_str2.contains("_")) {
                 if (p_str2.startsWith(Tag.POINTER_TYPE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("tlType"));
+                    hrLocation.append(" || ").append(bundle.getString("tlType"));
                     //
                 } else if (p_str2.startsWith(Tag.POINTER_LOCATION.toString())) {
                     if (pointer.getMimeType().equals(MimeType.XML)) {
-                        hrLocation.append(" || " + bundle.getString("changes.url.xml"));
+                        hrLocation.append(" || ").append(bundle.getString("changes.url.xml"));
                     } else {
-                        hrLocation.append(" || " + bundle.getString("changes.url.pdf"));
+                        hrLocation.append(" || ").append(bundle.getString("changes.url.pdf"));
                     }
                 } else if (p_str2.startsWith(Tag.SCHEME_OPERATOR_NAME.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeOpeName") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("schemeOpeName")).append(multiple);
 
                 } else if (p_str2.startsWith(Tag.SCHEME_TYPE_COMMUNITY_RULES.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeInfo.communityRule") + multiple);
+                    hrLocation.append(" || ").append(bundle.getString("schemeInfo.communityRule")).append(multiple);
 
                 } else if (p_str2.startsWith(Tag.POINTER_SCHEME_TERRITORY.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeTerritory"));
+                    hrLocation.append(" || ").append(bundle.getString("schemeTerritory"));
 
                 } else if (p_str2.startsWith(Tag.POINTER_MIME_TYPE.toString())) {
-                    hrLocation.append(" || " + bundle.getString("mimeType"));
+                    hrLocation.append(" || ").append(bundle.getString("mimeType"));
 
                 } else if (p_str2.startsWith(Tag.SERVICE_DIGITAL_IDENTITY.toString())) {
-                    hrLocation.append(" || " + bundle.getString("schemeInfo.digitalIdentities"));
-                    String di_str = getLocation(p_str2, '_', 3);
+                    hrLocation.append(" || ").append(bundle.getString("schemeInfo.digitalIdentities"));
+                    String di_str = getLocation(p_str2, 3);
                     if (di_str.contains("_")) {
                         String digitalIdCheckTmp = di_str.substring(0, di_str.indexOf('_'));
                         int digitalIdCheck = Integer.parseInt(digitalIdCheckTmp) - 1;
-                        hrLocation.append(" || " + pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertSubjectShortName() + " || "
-                                + TLUtils.toStringFormat(pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertNotBefore()) + " - "
-                                + TLUtils.toStringFormat(pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertAfter()));
+                        hrLocation.append(" || ").append(pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertSubjectShortName()).append(" || ").append(TLUtils.toStringFormat(pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertNotBefore())).append(" - ").append(TLUtils.toStringFormat(pointer.getServiceDigitalId().get(digitalIdCheck).getCertificateList().get(0).getCertAfter()));
                     }
                 } else if (p_str2.startsWith(Tag.POINTERS_TO_OTHER_TSL.toString())) {
-                    hrLocation.append(" || " + bundle.getString("pdf.pointer"));
+                    hrLocation.append(" || ").append(bundle.getString("pdf.pointer"));
                 }
             } else {
                 if (location.equals(Tag.NOTIFICATION + "_" + Tag.SERVICE_DIGITAL_IDENTITY)) {
-                    hrLocation.append(" || " + bundle.getString("schemeInfo.digitalIdentities"));
+                    hrLocation.append(" || ").append(bundle.getString("schemeInfo.digitalIdentities"));
                 } else if (location.equals(Tag.NOTIFICATION + "_" + Tag.CONTACT + "_" + Tag.ELECTRONIC_ADDRESS)) {
-                    hrLocation.append(" || " + bundle.getString("tlBrowser.electronicAddress"));
+                    hrLocation.append(" || ").append(bundle.getString("tlBrowser.electronicAddress"));
                 } else if (location.equals(Tag.NOTIFICATION + "_" + Tag.CONTACT_NAME)) {
-                    hrLocation.append(" || " + bundle.getString("tNotification.schemeContact.name"));
+                    hrLocation.append(" || ").append(bundle.getString("tNotification.schemeContact.name"));
                 } else if (location.equals(Tag.NOTIFICATION + "_" + Tag.CONTACT_ADDRESS)) {
-                    hrLocation.append(" || " + bundle.getString("tNotification.schemeContact.postalAddress"));
+                    hrLocation.append(" || ").append(bundle.getString("tNotification.schemeContact.postalAddress"));
                 } else if (location.equals(Tag.NOTIFICATION + "_" + Tag.CONTACT_PHONE)) {
-                    hrLocation.append(" || " + bundle.getString("tNotification.schemeContact.electronicAddress"));
+                    hrLocation.append(" || ").append(bundle.getString("tNotification.schemeContact.electronicAddress"));
                 }
             }
         }
@@ -508,7 +487,7 @@ public class LocationUtils {
             if (myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getSubjectName() != null) {
                 return " : " + myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getSubjectName();
             } else if (myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getX509ski() != null) {
-                return " : " + myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getX509ski().toString();
+                return " : " + Arrays.toString(myTl.getPointers().get(pointerToCheck - 1).getServiceDigitalId().get(pointerDigitalToCheck - 1).getX509ski());
             } else {
                 return " : undefined";
             }
@@ -536,10 +515,10 @@ public class LocationUtils {
 
     }
 
-    private static String getLocation(String text, char character, int occurs) {
+    private static String getLocation(String text, int occurs) {
         String result = text;
         for (int i = 0; i < occurs; i++) {
-            result = result.substring(result.indexOf(character) + 1);
+            result = result.substring(result.indexOf(_) + 1);
         }
         return result;
     }

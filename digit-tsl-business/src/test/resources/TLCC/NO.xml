@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" TSLTag="http://uri.etsi.org/19612/TSLTag" Id="TrustServiceStatusList-1">
+<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" TSLTag="https://uri.etsi.org/19612/TSLTag" Id="TrustServiceStatusList-1">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>28</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">NORWEGIAN COMMUNICATIONS AUTHORITY</Name>
             <Name xml:lang="no">NASJONAL KOMMUNIKASJONSMYNDIGHET</Name>
@@ -35,10 +35,10 @@
             <URI xml:lang="en">http://www.nkom.no/tsl_en</URI>
             <URI xml:lang="no">http://www.nkom.no/tsl_no</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>NO</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -73,7 +73,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -88,7 +88,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -136,7 +136,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -152,19 +152,19 @@
 <X509SKI>H982rbByf7H1MHZ27OtR7ZnnjW0=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -177,11 +177,11 @@
     <X509SKI>H982rbByf7H1MHZ27OtR7ZnnjW0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -194,7 +194,7 @@
     <X509SKI>H982rbByf7H1MHZ27OtR7ZnnjW0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-05-19T13:09:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -233,7 +233,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -252,19 +252,19 @@
 <X509SKI>OBTmyPCppAP0Tj4io1vy1uCtQHQ=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -277,14 +277,14 @@
     <X509SKI>OBTmyPCppAP0Tj4io1vy1uCtQHQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2005-05-11T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -300,19 +300,19 @@
 <X509SKI>zMP4B7ecbXpO9acrHQX5s0cckdE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -325,7 +325,7 @@
     <X509SKI>zMP4B7ecbXpO9acrHQX5s0cckdE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-01-04T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -364,7 +364,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -380,19 +380,19 @@
 <X509SKI>vq6nr7jW3G1+6pw2+5hsb+2/jsM=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -405,14 +405,14 @@
     <X509SKI>vq6nr7jW3G1+6pw2+5hsb+2/jsM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-02-28T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -428,19 +428,19 @@
 <X509SKI>K1rYUDfoq8Tv+K39u1yRV4+2tpc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -453,7 +453,7 @@
     <X509SKI>K1rYUDfoq8Tv+K39u1yRV4+2tpc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-20T11:55:26Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -497,7 +497,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -513,19 +513,19 @@
 <X509SKI>Cx2ElXOq6yKlHXCEJYnXvD2O3A4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -538,14 +538,14 @@
     <X509SKI>Cx2ElXOq6yKlHXCEJYnXvD2O3A4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -561,19 +561,19 @@
 <X509SKI>j0Srqu3MEr8PWecYQpC8qAPp/3w=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -586,11 +586,11 @@
     <X509SKI>j0Srqu3MEr8PWecYQpC8qAPp/3w=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -603,7 +603,7 @@
     <X509SKI>j0Srqu3MEr8PWecYQpC8qAPp/3w=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-02-16T01:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -644,7 +644,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -660,19 +660,19 @@
 <X509SKI>seXJcKX+QJsXMEHncVzZT0uiTAs=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -685,14 +685,14 @@
     <X509SKI>seXJcKX+QJsXMEHncVzZT0uiTAs=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -708,19 +708,19 @@
 <X509SKI>hjsaV8OpLghMwJoLdpDit5zq4ww=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -733,11 +733,11 @@
     <X509SKI>hjsaV8OpLghMwJoLdpDit5zq4ww=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -750,7 +750,7 @@
     <X509SKI>hjsaV8OpLghMwJoLdpDit5zq4ww=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-05-22T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -793,7 +793,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -809,19 +809,19 @@
 <X509SKI>PQh50HY8R4nhQePkgD+n4A/ElTw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -834,14 +834,14 @@
     <X509SKI>PQh50HY8R4nhQePkgD+n4A/ElTw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -857,19 +857,19 @@
 <X509SKI>saiFlVA4JXNe08/xw7Mv0wfJpoU=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -882,11 +882,11 @@
     <X509SKI>saiFlVA4JXNe08/xw7Mv0wfJpoU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -899,7 +899,7 @@
     <X509SKI>saiFlVA4JXNe08/xw7Mv0wfJpoU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-06-28T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -941,7 +941,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -957,19 +957,19 @@
 <X509SKI>xSiwAgaOYhswJiVq/zAsOxgX2Aw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -982,14 +982,14 @@
     <X509SKI>xSiwAgaOYhswJiVq/zAsOxgX2Aw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1005,19 +1005,19 @@
 <X509SKI>2upcLVH8f8IzZnxnhjCIbaNO/aY=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1030,11 +1030,11 @@
     <X509SKI>2upcLVH8f8IzZnxnhjCIbaNO/aY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1047,7 +1047,7 @@
     <X509SKI>2upcLVH8f8IzZnxnhjCIbaNO/aY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-06-29T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1091,7 +1091,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1107,19 +1107,19 @@
 <X509SKI>AYZj8PZQANNaZLrFPeiLb/2IL5s=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1132,14 +1132,14 @@
     <X509SKI>AYZj8PZQANNaZLrFPeiLb/2IL5s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1155,19 +1155,19 @@
 <X509SKI>Q9OCttcM9MSgjwoEtqRmqkK55Kg=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1180,11 +1180,11 @@
     <X509SKI>Q9OCttcM9MSgjwoEtqRmqkK55Kg=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1197,7 +1197,7 @@
     <X509SKI>Q9OCttcM9MSgjwoEtqRmqkK55Kg=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-06-30T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1243,7 +1243,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1259,19 +1259,19 @@
 <X509SKI>uc4U8R9tGmJGe8GMK7elunk1wqY=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1284,14 +1284,14 @@
     <X509SKI>uc4U8R9tGmJGe8GMK7elunk1wqY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1307,19 +1307,19 @@
 <X509SKI>ZPGchVPX4l9XcZCjiIyDONA1EJI=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1332,11 +1332,11 @@
     <X509SKI>ZPGchVPX4l9XcZCjiIyDONA1EJI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1349,7 +1349,7 @@
     <X509SKI>ZPGchVPX4l9XcZCjiIyDONA1EJI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-07-03T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1392,7 +1392,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1408,19 +1408,19 @@
 <X509SKI>6NSHQC1bPSZyX119QtsIQ2PtMaY=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1433,11 +1433,11 @@
     <X509SKI>6NSHQC1bPSZyX119QtsIQ2PtMaY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2015-05-28T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1450,14 +1450,14 @@
     <X509SKI>6NSHQC1bPSZyX119QtsIQ2PtMaY=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1473,19 +1473,19 @@
 <X509SKI>IWIpkcpSaSwr/4Z6UUiz6tVxmVk=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1498,11 +1498,11 @@
     <X509SKI>IWIpkcpSaSwr/4Z6UUiz6tVxmVk=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1515,7 +1515,7 @@
     <X509SKI>IWIpkcpSaSwr/4Z6UUiz6tVxmVk=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2007-03-15T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1557,7 +1557,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1573,19 +1573,19 @@
 <X509SKI>iSHNYHhl4Zq1/l/WqlZtcftadtM=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1598,11 +1598,11 @@
     <X509SKI>iSHNYHhl4Zq1/l/WqlZtcftadtM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2015-05-28T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1615,14 +1615,14 @@
     <X509SKI>iSHNYHhl4Zq1/l/WqlZtcftadtM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1638,19 +1638,19 @@
 <X509SKI>LLgshvgaZRlTX0LUYfRqh7qETYw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1663,11 +1663,11 @@
     <X509SKI>LLgshvgaZRlTX0LUYfRqh7qETYw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1680,7 +1680,7 @@
     <X509SKI>LLgshvgaZRlTX0LUYfRqh7qETYw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2007-10-08T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1724,7 +1724,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1740,19 +1740,19 @@
 <X509SKI>e7gdEue7si38j89BupLkRxLITgs=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1765,11 +1765,11 @@
     <X509SKI>e7gdEue7si38j89BupLkRxLITgs=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2015-05-28T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1782,14 +1782,14 @@
     <X509SKI>e7gdEue7si38j89BupLkRxLITgs=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1805,19 +1805,19 @@
 <X509SKI>jSD9Sdka2LtEdRdd14HKCzO5uyI=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1830,11 +1830,11 @@
     <X509SKI>jSD9Sdka2LtEdRdd14HKCzO5uyI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-07-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1847,7 +1847,7 @@
     <X509SKI>jSD9Sdka2LtEdRdd14HKCzO5uyI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -1886,7 +1886,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
                             <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1902,19 +1902,19 @@
 <X509SKI>E8xhvBpoPl+ZMHepVTAiMZJKw+E=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-07-01T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Certification Authority issuing Qualified Certificates</Name>
 <Name xml:lang="no">Sertifikatutsteder som utsteder kvalifiserte sertifikater</Name>
@@ -1927,12 +1927,12 @@
     <X509SKI>E8xhvBpoPl+ZMHepVTAiMZJKw+E=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2009-10-31T11:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
             </TSPServices>
         </TrustServiceProvider>
-    </TrustServiceProviderList><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-1386328405"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="id-LockItSignatureReference-1x173220822" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>XmMznu7Gx04cVcgH8GMrltY6zcMCyjxJbBh/2VOeC2U=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-81024052"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>guTCGgPTlg2LAa/cnZ4k5vSo7HdA5YZ7bKNgS92tA2Y=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Kg6J3dK8W2QB1HjeccEdbO93RXAr0xTr0DRcGxaLfFDEBwv31A+hlMDIcvqFiino0ABE13cR0TWrNjgRMLc14eQYp5V1pAHSbLlseFvYCyYi+utD4eNy0RrEmlt8uyAkSNe/gio4wkLf3pWVmn2oWBU1wzuytUUIjtQqXhmlDoc7f4BvqLy4+84dtdh9RmcyxOEEAN3xU8JbmpEVAOiQSMEXdFMK9MnQ9pljaRhaaaiJWrOXs2RTGKuNIFQUMQWdpN4L6EHqvwYD7Zh3ukUKxWdcadYT5hKERp5DdqlTbYuBk/NghnNcojKoeOC0FLBxLm/oGYWZALH+d4NjhfM=</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>17B5dsooeuRBbfmE6lX0fUbAhEirAlB/5oG2gx3hIcpFdwEoYSI2meqFLqR26vnZW4PDMa+iC/RrH65aiTXbIygsrCM3ZSFhfke2TORxfKzSTgFjcOmCBnmOvNZa8M2g6yCtqibrw44Fpc5XCzCJ7E8NnpoPHPSYMkF80Sh0TNxHzjNb6ibfXC+h75EcQBG+wz/qVaYhboD2ajN7/fnQv9xcwIPKdGfdEoBaL1dsiqjtCu970757Oht2PtrrKc1h1Lf8FZSvHXd0LpE5ucCzFblgk3uWau8dhMKejk8U9RvQ/jI1eS44OhhSK0hXQYdE6sHWqK+EYGxY1sqFjXs=</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509IssuerSerial><ds:X509IssuerName>CN=Buypass Class 3 CA 3, O=Buypass AS-983163327, C=NO</ds:X509IssuerName><ds:X509SerialNumber>8945554292642484399647855</ds:X509SerialNumber></ds:X509IssuerSerial><ds:X509SubjectName>SERIALNUMBER=974446871, CN=NASJONAL KOMMUNIKASJONSMYNDIGHET, OU=Nett/NE, O=NASJONAL KOMMUNIKASJONSMYNDIGHET, C=NO</ds:X509SubjectName><ds:X509Certificate>MIIE8zCCA9ugAwIBAgILB2ZLeEvsahPcLG8wDQYJKoZIhvcNAQELBQAwSzELMAkGA1UEBhMCTk8xHTAbBgNVBAoMFEJ1eXBhc3MgQVMtOTgzMTYzMzI3MR0wGwYDVQQDDBRCdXlwYXNzIENsYXNzIDMgQ0EgMzAeFw0xNTAxMTMwOTE3NTRaFw0xODAxMTMyMjU5MDBaMIGJMQswCQYDVQQGEwJOTzEpMCcGA1UECgwgTkFTSk9OQUwgS09NTVVOSUtBU0pPTlNNWU5ESUdIRVQxEDAOBgNVBAsMB05ldHQvTkUxKTAnBgNVBAMMIE5BU0pPTkFMIEtPTU1VTklLQVNKT05TTVlORElHSEVUMRIwEAYDVQQFEwk5NzQ0NDY4NzEwggEfMA0GCSqGSIb3DQEBAQUAA4IBDAAwggEHAoH/ANeweXbKKHrkQW35hOpV9H1GwIRIqwJQf+aBtoMd4SHKRXcBKGEiNpnqhS6kdur52VuDwzGvogv0ax+uWok12yMoLKwjN2UhYX5HtkzkcXys0k4BY3DpggZ5jrzWWvDNoOsgraom68OOBaXOVwswiexPDZ6aDxz0mDJBfNEodEzcR84zW+om31wvoe+RHEARvsM/6lWmIW6A9moze/350L/cXMCDynRn3RKAWi9XbIqo7Qrve9O+ezobdj7a6ynNYdS3/BWUrx13dC6RObnAsxW5YJN7lmrvHYTCno5PFPUb0P4yNXkuODoYUitIV0GHROrB1qivhGBsWNbKhY17AgMBAAGjggGaMIIBljAJBgNVHRMEAjAAMB8GA1UdIwQYMBaAFMzD+Ae3nG16TvWnKx0F+bNHHJHRMB0GA1UdDgQWBBRmTbuN0c7EqTSY57PDZomR8/hWKTAOBgNVHQ8BAf8EBAMCBkAwFQYDVR0gBA4wDDAKBghghEIBGgEDBTCBpQYDVR0fBIGdMIGaMC+gLaArhilodHRwOi8vY3JsLmJ1eXBhc3Mubm8vY3JsL0JQQ2xhc3MzQ0EzLmNybDBnoGWgY4ZhbGRhcDovL2xkYXAuYnV5cGFzcy5uby9kYz1CdXlwYXNzLGRjPU5PLENOPUJ1eXBhc3MlMjBDbGFzcyUyMDMlMjBDQSUyMDM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdDB6BggrBgEFBQcBAQRuMGwwMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLmJ1eXBhc3Mubm8vb2NzcC9CUENsYXNzM0NBMzA1BggrBgEFBQcwAoYpaHR0cDovL2NydC5idXlwYXNzLm5vL2NydC9CUENsYXNzM0NBMy5jZXIwDQYJKoZIhvcNAQELBQADggEBALS/sVxRLfnPGbwofV3Lhi8aIK0q6zJiexeNya18eOhhb/uIlFBY1OqsStfYHbG6HeB7kW8uEg2eekUOMZnq7hzVGhH6zl2gwfQijQ4Z2EGzwnMGAxo1ECzCom/U8A2Vedfna6dTJ/Be+wuwH9fAeIkLJ4XIGRTDiB6+5vVyNVx+ABkrUMxLvcFGDu7Tig0tCdhfkTNV604InVAcjVFNb1meyo/TjMmqx6TIYfjqCwi7EaThi3IKEB1Y+yxcU9TCweznyWobBfNOanq55vfemlTZm6+xooo3bAgsCp6AxF6ozVNpkSCRnGNjBICM2IqXiqNnsFwstfhB1zqwsmtaOGs=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature-1386328405"><xades:SignedProperties Id="SignedProperties-81024052"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-01T10:52:13.329Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>tN4K4bFcJBVC6uso3Lug6Dmk6Zs4y7h8qXfASbTyog8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Buypass Class 3 CA 3, O=Buypass AS-983163327, C=NO</ds:X509IssuerName><ds:X509SerialNumber>8945554292642484399647855</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#id-LockItSignatureReference-1x173220822"><xades:Description>Content-Type: text/xml; charset=UTF-8; name="doc.xml"</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature>
+    </TrustServiceProviderList><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-1386328405"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="id-LockItSignatureReference-1x173220822" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>XmMznu7Gx04cVcgH8GMrltY6zcMCyjxJbBh/2VOeC2U=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-81024052"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>guTCGgPTlg2LAa/cnZ4k5vSo7HdA5YZ7bKNgS92tA2Y=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Kg6J3dK8W2QB1HjeccEdbO93RXAr0xTr0DRcGxaLfFDEBwv31A+hlMDIcvqFiino0ABE13cR0TWrNjgRMLc14eQYp5V1pAHSbLlseFvYCyYi+utD4eNy0RrEmlt8uyAkSNe/gio4wkLf3pWVmn2oWBU1wzuytUUIjtQqXhmlDoc7f4BvqLy4+84dtdh9RmcyxOEEAN3xU8JbmpEVAOiQSMEXdFMK9MnQ9pljaRhaaaiJWrOXs2RTGKuNIFQUMQWdpN4L6EHqvwYD7Zh3ukUKxWdcadYT5hKERp5DdqlTbYuBk/NghnNcojKoeOC0FLBxLm/oGYWZALH+d4NjhfM=</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>17B5dsooeuRBbfmE6lX0fUbAhEirAlB/5oG2gx3hIcpFdwEoYSI2meqFLqR26vnZW4PDMa+iC/RrH65aiTXbIygsrCM3ZSFhfke2TORxfKzSTgFjcOmCBnmOvNZa8M2g6yCtqibrw44Fpc5XCzCJ7E8NnpoPHPSYMkF80Sh0TNxHzjNb6ibfXC+h75EcQBG+wz/qVaYhboD2ajN7/fnQv9xcwIPKdGfdEoBaL1dsiqjtCu970757Oht2PtrrKc1h1Lf8FZSvHXd0LpE5ucCzFblgk3uWau8dhMKejk8U9RvQ/jI1eS44OhhSK0hXQYdE6sHWqK+EYGxY1sqFjXs=</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509IssuerSerial><ds:X509IssuerName>CN=Buypass Class 3 CA 3, O=Buypass AS-983163327, C=NO</ds:X509IssuerName><ds:X509SerialNumber>8945554292642484399647855</ds:X509SerialNumber></ds:X509IssuerSerial><ds:X509SubjectName>SERIALNUMBER=974446871, CN=NASJONAL KOMMUNIKASJONSMYNDIGHET, OU=Nett/NE, O=NASJONAL KOMMUNIKASJONSMYNDIGHET, C=NO</ds:X509SubjectName><ds:X509Certificate>MIIE8zCCA9ugAwIBAgILB2ZLeEvsahPcLG8wDQYJKoZIhvcNAQELBQAwSzELMAkGA1UEBhMCTk8xHTAbBgNVBAoMFEJ1eXBhc3MgQVMtOTgzMTYzMzI3MR0wGwYDVQQDDBRCdXlwYXNzIENsYXNzIDMgQ0EgMzAeFw0xNTAxMTMwOTE3NTRaFw0xODAxMTMyMjU5MDBaMIGJMQswCQYDVQQGEwJOTzEpMCcGA1UECgwgTkFTSk9OQUwgS09NTVVOSUtBU0pPTlNNWU5ESUdIRVQxEDAOBgNVBAsMB05ldHQvTkUxKTAnBgNVBAMMIE5BU0pPTkFMIEtPTU1VTklLQVNKT05TTVlORElHSEVUMRIwEAYDVQQFEwk5NzQ0NDY4NzEwggEfMA0GCSqGSIb3DQEBAQUAA4IBDAAwggEHAoH/ANeweXbKKHrkQW35hOpV9H1GwIRIqwJQf+aBtoMd4SHKRXcBKGEiNpnqhS6kdur52VuDwzGvogv0ax+uWok12yMoLKwjN2UhYX5HtkzkcXys0k4BY3DpggZ5jrzWWvDNoOsgraom68OOBaXOVwswiexPDZ6aDxz0mDJBfNEodEzcR84zW+om31wvoe+RHEARvsM/6lWmIW6A9moze/350L/cXMCDynRn3RKAWi9XbIqo7Qrve9O+ezobdj7a6ynNYdS3/BWUrx13dC6RObnAsxW5YJN7lmrvHYTCno5PFPUb0P4yNXkuODoYUitIV0GHROrB1qivhGBsWNbKhY17AgMBAAGjggGaMIIBljAJBgNVHRMEAjAAMB8GA1UdIwQYMBaAFMzD+Ae3nG16TvWnKx0F+bNHHJHRMB0GA1UdDgQWBBRmTbuN0c7EqTSY57PDZomR8/hWKTAOBgNVHQ8BAf8EBAMCBkAwFQYDVR0gBA4wDDAKBghghEIBGgEDBTCBpQYDVR0fBIGdMIGaMC+gLaArhilodHRwOi8vY3JsLmJ1eXBhc3Mubm8vY3JsL0JQQ2xhc3MzQ0EzLmNybDBnoGWgY4ZhbGRhcDovL2xkYXAuYnV5cGFzcy5uby9kYz1CdXlwYXNzLGRjPU5PLENOPUJ1eXBhc3MlMjBDbGFzcyUyMDMlMjBDQSUyMDM/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdDB6BggrBgEFBQcBAQRuMGwwMwYIKwYBBQUHMAGGJ2h0dHA6Ly9vY3NwLmJ1eXBhc3Mubm8vb2NzcC9CUENsYXNzM0NBMzA1BggrBgEFBQcwAoYpaHR0cDovL2NydC5idXlwYXNzLm5vL2NydC9CUENsYXNzM0NBMy5jZXIwDQYJKoZIhvcNAQELBQADggEBALS/sVxRLfnPGbwofV3Lhi8aIK0q6zJiexeNya18eOhhb/uIlFBY1OqsStfYHbG6HeB7kW8uEg2eekUOMZnq7hzVGhH6zl2gwfQijQ4Z2EGzwnMGAxo1ECzCom/U8A2Vedfna6dTJ/Be+wuwH9fAeIkLJ4XIGRTDiB6+5vVyNVx+ABkrUMxLvcFGDu7Tig0tCdhfkTNV604InVAcjVFNb1meyo/TjMmqx6TIYfjqCwi7EaThi3IKEB1Y+yxcU9TCweznyWobBfNOanq55vfemlTZm6+xooo3bAgsCp6AxF6ozVNpkSCRnGNjBICM2IqXiqNnsFwstfhB1zqwsmtaOGs=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#Signature-1386328405"><xades:SignedProperties Id="SignedProperties-81024052"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-01T10:52:13.329Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>tN4K4bFcJBVC6uso3Lug6Dmk6Zs4y7h8qXfASbTyog8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Buypass Class 3 CA 3, O=Buypass AS-983163327, C=NO</ds:X509IssuerName><ds:X509SerialNumber>8945554292642484399647855</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#id-LockItSignatureReference-1x173220822"><xades:Description>Content-Type: text/xml; charset=UTF-8; name="doc.xml"</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature>
 </TrustServiceStatusList>

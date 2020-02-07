@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.util.ArrayList;
@@ -258,9 +238,6 @@ public class TLServiceDto extends AbstractTLDTO {
             diffList.add(new TLDifference(getId() + "_" + Tag.SERVICE_TYPE_IDENTIFIER, publishedTlService.getTypeIdentifier(), getTypeIdentifier()));
         }
 
-        /*************************************
-         * List<TLServiceExtension> extension;
-         *************************************/
         List<TLServiceExtension> tmp = !CollectionUtils.isEmpty(getExtension()) ? new ArrayList<>(getExtension()) : new ArrayList<TLServiceExtension>();
         List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlService.getExtension()) ? new ArrayList<>(publishedTlService.getExtension()) : new ArrayList<TLServiceExtension>();
 
@@ -276,9 +253,6 @@ public class TLServiceDto extends AbstractTLDTO {
 
         diffList.addAll(ChangeUtils.diffOfExtension(tmp, tmpPublished, getId()));
 
-        /*************************************
-         * List<TLDefinitionUri> schemeDefinitionUri;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getSchemeDefinitionUri())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLDefUriList(getSchemeDefinitionUri(), publishedTlService.getSchemeDefinitionUri(), getId() + "_" + Tag.SCHEME_SERVICE_DEFINITION_URI);
             if (changeList.size() > 0) {
@@ -290,9 +264,6 @@ public class TLServiceDto extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLDefinitionUri> tspDefinitionUri;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPDefinitionUri())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLDefUriList(getTSPDefinitionUri(), publishedTlService.getTSPDefinitionUri(), getId() + "_" + Tag.TSP_SERVICE_DEFINITION_URI);
             if (changeList.size() > 0) {
@@ -304,9 +275,6 @@ public class TLServiceDto extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLSupplyPoint> supplyPoint;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getSupplyPoint())) {
             for (TLSupplyPoint supply : getSupplyPoint()) {
                 if (!publishedTlService.getSupplyPoint().contains(supply)) {
@@ -323,14 +291,8 @@ public class TLServiceDto extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLDigitalIdentification> serviceDigitalIdentification;
-         *************************************/
         diffList.addAll(ChangeUtils.diffOfDigitalList(getDigitalIdentification(), publishedTlService.getDigitalIdentification(), getId()));
 
-        /*************************************
-         * List<TLName> serviceName;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getServiceName())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getServiceName(), publishedTlService.getServiceName(), getId() + "_" + Tag.SERVICE_NAME);
             if (changeList.size() > 0) {
@@ -342,9 +304,6 @@ public class TLServiceDto extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLServiceHistory> history;
-         *************************************/
         // COPY VALUE OF DRAFT DATA
         List<TLServiceHistory> tmpHisto = new ArrayList<>();
         List<TLServiceHistory> tmpPublishedHitso = null;
@@ -506,7 +465,7 @@ public class TLServiceDto extends AbstractTLDTO {
             /*
              * 5.5.1.1
              */
-            if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/CA/QC")) {
+            if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/CA/QC")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5511(getCurrentStatus()));
 
@@ -528,8 +487,8 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.1.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL/QC")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL/QC")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5511(getCurrentStatus()));
                 List<TLServiceExtension> tmpList = new ArrayList<>();
@@ -542,30 +501,30 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.1.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS/Q")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS/REM")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PSES/Q")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/EDS/Q")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/EDS/REM")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/PSES/Q")) {
                 addToHistory();
-                setCurrentStatus("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn");
+                setCurrentStatus("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn");
 
                 /*
                  * 5.5.2.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/CA/PKC") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/EDS")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PSES") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/AdESValidation")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/AdESGeneration")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/CA/PKC") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/TSA")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/EDS")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/PSES") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/AdESValidation")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/AdESGeneration")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5521(getCurrentStatus()));
 
                 /*
                  * 5.5.2.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/REM")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/REM")) {
                 addToHistory();
                 setTypeIdentifier("");// Normally /REM not use for the moment
                 setCurrentStatus(checkServiceStatus5521(getCurrentStatus()));
@@ -573,29 +532,29 @@ public class TLServiceDto extends AbstractTLDTO {
                 /*
                  * 5.5.3.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/RA/nothavingPKIid")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/ACA") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/Archiv") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/IdV")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/KEscrow") || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/PPwd")
-                    || getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/unspecified")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/RA") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/RA/nothavingPKIid")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/ACA") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/Archiv") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/IdV")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/KEscrow") || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/PPwd")
+                    || getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/unspecified")) {
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5531(getCurrentStatus()));
 
                 /*
                  * 5.5.3.1
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority")) {
                 addToHistory();
 
-                setTypeIdentifier("http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority");
+                setTypeIdentifier("https://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority");
                 setCurrentStatus(checkServiceStatus5531(getCurrentStatus()));
 
                 /*
                  * 5.5.3.1 --> ERROR SVD - SVC... Error in Standard... --> Migrate?
                  */
-            } else if (getTypeIdentifier().equalsIgnoreCase("http://uri.etsi.org/TrstSvc/Svctype/TLIssuer")) {
+            } else if (getTypeIdentifier().equalsIgnoreCase("https://uri.etsi.org/TrstSvc/Svctype/TLIssuer")) {
 
-                setTypeIdentifier("http://uri.etsi.org/TrstSvd/Svctype/TLIssuer");
+                setTypeIdentifier("https://uri.etsi.org/TrstSvd/Svctype/TLIssuer");
                 addToHistory();
                 setCurrentStatus(checkServiceStatus5531(getCurrentStatus()));
             }
@@ -624,7 +583,7 @@ public class TLServiceDto extends AbstractTLDTO {
         AdditionalServiceInformationTypeV5 aSIType = new AdditionalServiceInformationTypeV5();
         NonEmptyMultiLangURITypeV5 uriType = new NonEmptyMultiLangURITypeV5();
         uriType.setLang("en");
-        uriType.setValue("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures");
+        uriType.setValue("https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures");
         aSIType.setURI(uriType);
         TLAdditionnalServiceInfo aSIForeSignature = new TLAdditionnalServiceInfo(serviceToAdd.getTlId(), serviceToAdd.getId(), aSIType);
         serviceToAdd.setAdditionnalServiceInfo(aSIForeSignature);
@@ -647,20 +606,20 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn";
             break;
         default:
             break;
@@ -673,20 +632,20 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
             break;
         default:
             break;
@@ -699,26 +658,26 @@ public class TLServiceDto extends AbstractTLDTO {
         String tmpPublishStatus = StringUtils.trimToEmpty(publishStatus);
         String ret = "";
         switch (tmpPublishStatus) {
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel";
             break;
-        case "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw":
-            ret = "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
+        case "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedbynationallaw":
+            ret = "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel";
             break;
         default:
             break;
@@ -837,6 +796,7 @@ public class TLServiceDto extends AbstractTLDTO {
         } else if (this.getCurrentStatusStartingDate() == null && (previousService != null && previousService.getCurrentStatusStartingDate() != null)) {
             return false;
         } else {
+            assert previousService != null;
             return this.getCurrentStatusStartingDate().equals(previousService.getCurrentStatusStartingDate());
         }
     }

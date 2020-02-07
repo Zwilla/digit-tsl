@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.notification;
 
 import java.io.ByteArrayOutputStream;
@@ -109,7 +89,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
         Date d = new Date();
-        List<String> contactDeleted = new ArrayList<String>();
+        List<String> contactDeleted = new ArrayList<>();
         contactDeleted.add("test1");
         contactDeleted.add("test2");
 
@@ -133,7 +113,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
         out.writeTo(fos);
         fos.close();
 
-        Assert.assertNotNull(new File(notifPath));
+        new File(notifPath);
     }
 
     // Service
@@ -168,7 +148,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
 
         // Pointer
         TrustStatusListType unmarshall;
-        List<OtherTSLPointerTypeV5> tlPointers = new ArrayList<OtherTSLPointerTypeV5>();
+        List<OtherTSLPointerTypeV5> tlPointers = new ArrayList<>();
         unmarshall = jaxbService.unmarshallTSL(new File("src/test/resources/lotl.xml"));
 
         if (unmarshall.getSchemeInformation().getPointersToOtherTSL().getOtherTSLPointer() != null) {
@@ -192,7 +172,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
         out.writeTo(fos);
         fos.close();
 
-        Assert.assertNotNull(new File(notifPath));
+        new File(notifPath);
     }
 
     // @Test
@@ -237,7 +217,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
     // .getTextualInformationOrOtherInformation();
     // Map<String, Object> properties = TLUtils.extractAsMapV5(textualInformationOrOtherInformation);
     //
-    // Object mm = properties.get("{http://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
+    // Object mm = properties.get("{https://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
     // if ((mm instanceof String) && (((String) mm).length() > 1)) {
     // MimeType mimetype = TLUtils.convert((String) mm);
     // Assert.assertEquals(MimeType.XML, mimetype);
@@ -257,7 +237,7 @@ public class MemberStateNotificationV5JaxbTest extends AbstractSpringTest {
     // .getTextualInformationOrOtherInformation();
     // properties = TLUtils.extractAsMapV5(textualInformationOrOtherInformation);
     //
-    // mm = properties.get("{http://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
+    // mm = properties.get("{https://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
     // if ((mm instanceof String) && (((String) mm).length() > 1)) {
     // MimeType mimetype = TLUtils.convert((String) mm);
     // Assert.assertEquals(MimeType.XML, mimetype);

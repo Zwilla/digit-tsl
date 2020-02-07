@@ -2,123 +2,123 @@ Norway
 
     ZebSign AS 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Buypass AS 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Commfides Norge AS 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Danske Bank 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Bankenes ID-tjeneste AS 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     DNB Bank ASA 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Nordea Bank Norge ASA 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Eika Gruppen AS 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     SpareBank 1 Banksamarbeidet DA 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     SEB Privatbanken ASA 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Handelsbanken NUF 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Skandiabanken AB NUF 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Statoil ASA 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

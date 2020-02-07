@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.controller;
 
 import java.util.ArrayList;
@@ -64,8 +44,8 @@ public class ApiPropertiesController {
     @RequestMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ServiceResponse<List<Properties>> getProperties() {
-        ServiceResponse<List<Properties>> response = new ServiceResponse<List<Properties>>();
-        List<Properties> propList = new ArrayList<Properties>();
+        ServiceResponse<List<Properties>> response = new ServiceResponse<>();
+        List<Properties> propList = new ArrayList<>();
 
         propList.addAll(propertiesService.getProperties());
         propList.addAll(countryService.getPropertiesCountry());
@@ -77,7 +57,7 @@ public class ApiPropertiesController {
 
     @RequestMapping(value = "/delete", method = RequestMethod.PUT)
     public @ResponseBody ServiceResponse<Properties> delProp(@RequestBody Properties editionProp) {
-        ServiceResponse<Properties> response = new ServiceResponse<Properties>();
+        ServiceResponse<Properties> response = new ServiceResponse<>();
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             if ((editionProp == null) || (editionProp.getCodeList() == null)) {
                 auditService.addAuditLog(AuditTarget.ADMINISTRATION_PROPERTIES, AuditAction.DELETE, AuditStatus.ERROR, "", 0, SecurityContextHolder.getContext().getAuthentication().getName(),
@@ -102,7 +82,7 @@ public class ApiPropertiesController {
 
     @RequestMapping(value = "/add", method = RequestMethod.PUT)
     public @ResponseBody ServiceResponse<Properties> addProp(@RequestBody Properties editionProp) {
-        ServiceResponse<Properties> response = new ServiceResponse<Properties>();
+        ServiceResponse<Properties> response = new ServiceResponse<>();
         if (SecurityContextHolder.getContext().getAuthentication() != null) {
             Properties updatedProp = null;
             if (!StringUtils.isEmpty(editionProp.getCodeList()) && !StringUtils.isEmpty(editionProp.getLabel())) {

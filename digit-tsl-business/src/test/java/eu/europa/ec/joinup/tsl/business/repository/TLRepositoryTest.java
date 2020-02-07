@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.repository;
 
 import static org.junit.Assert.assertEquals;
@@ -47,7 +27,7 @@ public class TLRepositoryTest extends AbstractSpringTest {
     public void findByTerritoryAndStatusAndArchiveTrueOrderByIssueDateDesc() {
         DBCountries territory = createEurope();
 
-        int createTLinDB = createTLinDB(TLStatus.PROD, false, territory);
+        int createTLinDB = createTLinDB(false, territory);
         assertTrue(createTLinDB > 0);
 
         DBTrustedLists findOne = repo.findOne(createTLinDB);
@@ -57,7 +37,7 @@ public class TLRepositoryTest extends AbstractSpringTest {
 
         assertTrue(CollectionUtils.isEmpty(repo.findByTerritoryAndStatusAndArchiveTrueOrderByIdDesc(territory, TLStatus.PROD)));
 
-        createTLinDB = createTLinDB(TLStatus.PROD, true, territory);
+        createTLinDB = createTLinDB(true, territory);
         assertTrue(createTLinDB > 0);
 
         assertTrue(CollectionUtils.isNotEmpty(repo.findByTerritoryAndStatusAndArchiveTrueOrderByIdDesc(territory, TLStatus.PROD)));
@@ -71,12 +51,12 @@ public class TLRepositoryTest extends AbstractSpringTest {
         return countryRepository.save(territory);
     }
 
-    private int createTLinDB(TLStatus status, boolean archive, DBCountries country) {
+    private int createTLinDB(boolean archive, DBCountries country) {
         DBTrustedLists trustedList = new DBTrustedLists();
         trustedList.setType(TLType.LOTL);
         trustedList.setTerritory(country);
         trustedList.setXmlFile(new DBFiles());
-        trustedList.setStatus(status);
+        trustedList.setStatus(TLStatus.PROD);
         trustedList.setArchive(archive);
         repo.save(trustedList);
         return trustedList.getId();

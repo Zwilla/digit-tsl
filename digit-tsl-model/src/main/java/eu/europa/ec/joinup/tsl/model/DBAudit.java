@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.model;
 
 import java.util.Date;
@@ -58,19 +38,19 @@ public class DBAudit {
     @Enumerated(EnumType.STRING)
     private AuditStatus status;
 
-    @Column(name = "FILEID", nullable = true, updatable = false)
+    @Column(name = "FILEID", updatable = false)
     private int fileId;
 
-    @Column(name = "FILE_DIGEST", nullable = true, updatable = false)
+    @Column(name = "FILE_DIGEST", updatable = false)
     private String fileDigest;
 
-    @Column(name = "COUNTRY_CODE", nullable = true, updatable = false)
+    @Column(name = "COUNTRY_CODE", updatable = false)
     private String countryCode;
 
-    @Column(name = "USERNAME", nullable = true, updatable = false)
+    @Column(name = "USERNAME", updatable = false)
     private String username;
 
-    @Column(name = "INFOS", length = 4096, nullable = true, updatable = false)
+    @Column(name = "INFOS", length = 4096, updatable = false)
     private String infos;
 
     public DBAudit() {

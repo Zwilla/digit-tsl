@@ -2,183 +2,183 @@ Lithuania
 
     Residents Register Service under the Ministry of the Interior 
 
-        GRT_OCSP Service-1 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-1 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-2 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-3 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-3 (IssuingCA-A) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-4 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-4 (IssuingCA-B) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-5 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-5 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-3 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-3 (IssuingCA-A) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-4 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-4 (IssuingCA-B) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-5(IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-5(IssuingCA-A) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_Qualified certificates for electronic signature-6(IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        GRT_Qualified certificates for electronic signature-6(IssuingCA-B) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-6(IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-6(IssuingCA-A) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-7(IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-7(IssuingCA-B) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-8 (IssuingCA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-8 (IssuingCA-A) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        GRT_OCSP Service-9 (IssuingCA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        GRT_OCSP Service-9 (IssuingCA-B) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
     State Enterprise Centre of Registers 
 
-        RC_OCSP Service-2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-2 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-3 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-3 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-4 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-4 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_Qualified certificates for electronic signature-2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        RC_Qualified certificates for electronic signature-2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        RC_Qualified certificates for electronic signature-3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        RC_Qualified certificates for electronic signature-3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        RC_Qualified certificates for electronic signature - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        RC_Qualified certificates for electronic signature - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        RC_Qualified certificates for electronic signature-4 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        RC_Qualified certificates for electronic signature-4 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-5 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-5 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-6 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-6 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-7 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-7 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_OCSP Service-8 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        RC_OCSP Service-8 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        RC_Qualified certificates for electronic signature-5 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        RC_Qualified certificates for electronic signature-5 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     UAB BalTstamp 
 
-        Qualified time stamp service 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified time stamp service 2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             Timestamping; 
 
-        Qualified time stamp service - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified time stamp service - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             Timestamping; 
 
-        Qualified time stamp service 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Qualified time stamp service 3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
             QTimestamping; 
 
     UAB Skaitmeninio sertifikavimo centras 
 
-        SSC_OCSP Service-2 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        SSC_OCSP Service-2 (SSC Qualified Class 3) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        SSC_OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        SSC_OCSP Service - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-1 (SSC Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-1 (SSC Class 3) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-2 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-2 (SSC Qualified Class 3) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-3 (SSC Qualified Class 3 VS) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-3 (SSC Qualified Class 3 VS) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-4 (SSC Qualified Class 3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-4 (SSC Qualified Class 3) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-5 (SSC GDL Class 2-4 QCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-5 (SSC GDL Class 2-4 QCA) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SSC_Qualified certificates for electronic signature-6 (SSC GDL VS Class 2-4 QCA) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SSC_Qualified certificates for electronic signature-6 (SSC GDL VS Class 2-4 QCA) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Identity Documents Personalisation Centre under the Ministry of the Interior 
 
-        ADIC_Qualified certificates for electronic signature-1 (ADIC CA-A) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ADIC_Qualified certificates for electronic signature-1 (ADIC CA-A) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        ADIC_Qualified certificates for electronic signature-2 (ADIC CA-B) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ADIC_Qualified certificates for electronic signature-2 (ADIC CA-B) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        ADIC_OCSP Service-1 (OCSP for ADIC CA-A) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        ADIC_OCSP Service-1 (OCSP for ADIC CA-A) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 
-        ADIC_OCSP Service-2 (OCSP for ADIC CA-B) - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        ADIC_OCSP Service-2 (OCSP for ADIC CA-B) - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
             QCert for eSig; 
 

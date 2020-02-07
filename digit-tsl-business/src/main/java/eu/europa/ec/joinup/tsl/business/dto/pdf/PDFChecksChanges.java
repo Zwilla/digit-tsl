@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.pdf;
 
 import java.text.SimpleDateFormat;
@@ -39,17 +19,7 @@ import eu.europa.ec.joinup.tsl.model.enums.CheckStatus;
 public class PDFChecksChanges {
 
     @XStreamAsAttribute
-    private int numberOfCheck = 0;
-    @XStreamAsAttribute
-    private int warningChecks;
-    @XStreamAsAttribute
-    private int errorChecks;
-    @XStreamAsAttribute
-    private int infoChecks;
-    @XStreamAsAttribute
     private String countryName;
-    @XStreamAsAttribute
-    private String generationDate;
     @XStreamAsAttribute
     private String sequence;
     @XStreamAsAttribute
@@ -61,7 +31,7 @@ public class PDFChecksChanges {
     @XStreamAsAttribute
     private int serviceChanges;
     @XStreamAsAttribute
-    private Boolean tlccActive;
+    private boolean tlccActive;
     @XStreamAsAttribute
     private int signatureChanges;
 
@@ -92,7 +62,7 @@ public class PDFChecksChanges {
     public PDFChecksChanges() {
         Date currentDate = new Date();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        generationDate = dateFormat.format(currentDate);
+        String generationDate = dateFormat.format(currentDate);
     }
 
     public void setChecks(List<CheckResultDTO> checks) {
@@ -138,9 +108,9 @@ public class PDFChecksChanges {
     }
 
     private void countChecks(List<CheckResultDTO> checks) {
-        errorChecks = 0;
-        warningChecks = 0;
-        infoChecks = 0;
+        int errorChecks = 0;
+        int warningChecks = 0;
+        int infoChecks = 0;
 
         for (CheckResultDTO check : checks) {
             if (check.getStatus() == CheckStatus.ERROR) {
@@ -152,7 +122,7 @@ public class PDFChecksChanges {
             }
         }
 
-        numberOfCheck = errorChecks + warningChecks + infoChecks;
+        int numberOfCheck = errorChecks + warningChecks + infoChecks;
     }
 
     private List<PDFCheck> createCheckList(List<CheckResultDTO> list) {
@@ -316,11 +286,11 @@ public class PDFChecksChanges {
         this.signatureChecks = signatureChecks;
     }
 
-    public Boolean getTlccActive() {
+    public boolean getTlccActive() {
         return tlccActive;
     }
 
-    public void setTlccActive(Boolean tlccActive) {
+    public void setTlccActive(boolean tlccActive) {
         this.tlccActive = tlccActive;
     }
 

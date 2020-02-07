@@ -12,8 +12,8 @@
   <certificate>Certificate 1 : Веселин Божков Божков 2012-11-15 - 2017-11-15 12:28:05</certificate>
   <certificate>Certificate 2 : Ирина Станчева Романска 2014-09-04 - 2019-09-04 12:01:14</certificate>
   <changes/>
-  <new-hrPointer>&lt;OtherTSLPointer xmlns=&quot;http://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;http://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;http://uri.etsi.org/02231/v2/add
-itionaltypes#&quot; xmlns:ns5=&quot;http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;http://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
+  <new-hrPointer>&lt;OtherTSLPointer xmlns=&quot;https://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;https://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;https://uri.etsi.org/02231/v2/add
+itionaltypes#&quot; xmlns:ns5=&quot;https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;https://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
   &lt;ServiceDigitalIdentities&gt;&#xd;
     &lt;ServiceDigitalIdentity&gt;&#xd;
       &lt;DigitalId&gt;&#xd;
@@ -61,7 +61,7 @@ ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° �
   &lt;TSLLocation&gt;http://crc.bg/files/_bg/TSL-CRC-BG-signed.pdf&lt;/TSLLocation&gt;&#xd;
   &lt;AdditionalInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
-      &lt;TSLType&gt;http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
+      &lt;TSLType&gt;https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
     &lt;/OtherInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
       &lt;SchemeTerritory&gt;BG&lt;/SchemeTerritory&gt;&#xd;
@@ -77,15 +77,15 @@ ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° �
     &lt;/OtherInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
       &lt;SchemeTypeCommunityRules&gt;&#xd;
-        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
-        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
       &lt;/SchemeTypeCommunityRules&gt;&#xd;
     &lt;/OtherInformation&gt;&#xd;
   &lt;/AdditionalInformation&gt;&#xd;
 &lt;/OtherTSLPointer&gt;&#xd;
 </new-hrPointer>
-  <new-mpPointer>&lt;OtherTSLPointer xmlns=&quot;http://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;http://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;http://uri.etsi.org/02231/v2/add
-itionaltypes#&quot; xmlns:ns5=&quot;http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;http://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
+  <new-mpPointer>&lt;OtherTSLPointer xmlns=&quot;https://uri.etsi.org/02231/v2#&quot; xmlns:ns2=&quot;http://www.w3.org/2000/09/xmldsig#&quot; xmlns:ns3=&quot;https://uri.etsi.org/01903/v1.3.2#&quot; xmlns:ns4=&quot;https://uri.etsi.org/02231/v2/add
+itionaltypes#&quot; xmlns:ns5=&quot;https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#&quot; xmlns:ns6=&quot;https://uri.etsi.org/01903/v1.4.1#&quot;&gt;&#xd;
   &lt;ServiceDigitalIdentities&gt;&#xd;
     &lt;ServiceDigitalIdentity&gt;&#xd;
       &lt;DigitalId&gt;&#xd;
@@ -133,7 +133,7 @@ ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° �
   &lt;TSLLocation&gt;http://crc.bg/files/_bg/TSL-CRC-BG-signed.xml&lt;/TSLLocation&gt;&#xd;
   &lt;AdditionalInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
-      &lt;TSLType&gt;http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
+      &lt;TSLType&gt;https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric&lt;/TSLType&gt;&#xd;
     &lt;/OtherInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
       &lt;SchemeTerritory&gt;BG&lt;/SchemeTerritory&gt;&#xd;
@@ -149,8 +149,8 @@ ulation Commission,CN=Ð˜Ñ€Ð¸Ð½Ð° Ð¡Ñ‚Ð°Ð½Ñ‡ÐµÐ²Ð° �
     &lt;/OtherInformation&gt;&#xd;
     &lt;OtherInformation&gt;&#xd;
       &lt;SchemeTypeCommunityRules&gt;&#xd;
-        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
-        &lt;URI xml:lang=&quot;en&quot;&gt;http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon&lt;/URI&gt;&#xd;
+        &lt;URI xml:lang=&quot;en&quot;&gt;https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG&lt;/URI&gt;&#xd;
       &lt;/SchemeTypeCommunityRules&gt;&#xd;
     &lt;/OtherInformation&gt;&#xd;
   &lt;/AdditionalInformation&gt;&#xd;

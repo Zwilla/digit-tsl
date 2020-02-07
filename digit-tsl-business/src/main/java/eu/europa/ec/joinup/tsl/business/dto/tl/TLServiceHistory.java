@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.io.IOException;
@@ -170,10 +150,7 @@ public class TLServiceHistory extends AbstractTLDTO {
                         tmpQaExt.setCriteria(qa.getCriteria());
                         tmpQaExt.setId(qa.getId());
                         // tmpQaExt.setQualifTypeList(new ArrayList<String>(qa.getQualifTypeList()));
-                        List<String> strList = new ArrayList<>();
-                        for (String str : qa.getQualifTypeList()) {
-                            strList.add(str);
-                        }
+                        List<String> strList = new ArrayList<>(qa.getQualifTypeList());
                         tmpQaExt.setQualifTypeList(strList);
                         qaList.add(tmpQaExt);
                     }
@@ -295,9 +272,6 @@ public class TLServiceHistory extends AbstractTLDTO {
 
     public List<TLDifference> asPublishedDiff(TLServiceHistory publishedTlHistory) {
         List<TLDifference> diffList = new ArrayList<>();
-        /*************************************
-         * List<TLName> serviceName;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getServiceName())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getServiceName(), publishedTlHistory.getServiceName(), getId() + "_" + Tag.SERVICE_NAME);
             if (changeList.size() > 0) {
@@ -309,9 +283,6 @@ public class TLServiceHistory extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLServiceExtension> extension;
-         *************************************/
         List<TLServiceExtension> tmp = !CollectionUtils.isEmpty(getExtension()) ? new ArrayList<>(getExtension()) : new ArrayList<TLServiceExtension>();
         List<TLServiceExtension> tmpPublished = !CollectionUtils.isEmpty(publishedTlHistory.getExtension()) ? new ArrayList<>(publishedTlHistory.getExtension()) : new ArrayList<TLServiceExtension>();
 
@@ -327,9 +298,6 @@ public class TLServiceHistory extends AbstractTLDTO {
 
         diffList.addAll(ChangeUtils.diffOfExtension(tmp, tmpPublished, getId()));
 
-        /*************************************
-         * List<TLDigitalIdentity> digitalIdentification;
-         *************************************/
         diffList.addAll(ChangeUtils.diffOfDigitalList(getDigitalIdentification(), publishedTlHistory.getDigitalIdentification(), getId()));
 
         return diffList;

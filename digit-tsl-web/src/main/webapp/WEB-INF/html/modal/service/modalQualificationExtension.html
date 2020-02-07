@@ -59,13 +59,13 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-12" ng-repeat="tab in qualif.qualifTypeList track by $index" style="padding-bottom: 2px; padding-top: 2px; padding-right: 0px !important;">
+					<div class="col-sm-12" ng-repeat="tab in qualif.qualifTypeList track by $index" style="padding-bottom: 2px; padding-top: 2px; padding-right: 0 !important;">
 						<div class="col-sm-11">
 							<select ng-model="qualif.qualifTypeList[$index]" required name="qualiftab_{{$index}}" style="width: 105%;">
 								<option ng-repeat="qualifier in qualifiers" ng-selected="tab==qualifier.label">{{qualifier.label}}</option>
 							</select>
 						</div>
-						<div class="col-sm-1" style="padding-right: 0px;">
+						<div class="col-sm-1" style="padding-right: 0;">
 							<span class="requiredIcon" tooltip="{{tRequiredInStandard}}" tooltip-placement="right" style="margin-left: 10px;">(*)</span>
 							<span ng-confirm="{{confirm_delete | replaceIn:'%OBJ%':extension_additionnalServiceInformation_qualifier}}" confirmed="deleteTab(qualif.qualifTypeList,tab)" tooltip="{{tDelete}}"
 								tooltip-placement="right" class="fa fa-trash cursor-pointer" style="float: right; margin-top: 5px; margin-right: 1px;"></span>
@@ -419,7 +419,7 @@
 													</div>
 												</div>
 												<!-- Other Criteria -->
-												<div style="margin-top: 0px;" class="row">
+												<div style="margin-top: 0;" class="row">
 													<div class="col-sm-12 scheme-information" ng-init="criteriaList.otherList = initOtherList(criteriaList.otherList)">
 														<span th:text="#{extension.other}">Other</span>
 														<div class="dropdown" style="display: inline; float: right; margin-right: -10px; color: #337ab7;">

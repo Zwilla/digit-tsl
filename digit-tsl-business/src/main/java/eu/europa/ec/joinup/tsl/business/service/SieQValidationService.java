@@ -47,8 +47,6 @@ public class SieQValidationService {
 
     private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
-    private final String OJ_URL = "http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2016.233.01.0001.01.ENG";
-    private final String LOTL_ROOT_SCHEME_INFO_URI = "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl.html";
     private TrustedListsCertificateSource trustedListsCertificateSource;
 
     @Autowired
@@ -187,7 +185,9 @@ public class SieQValidationService {
         job.setCheckTSLSignatures(true);
         job.setDataLoader(new CommonsDataLoader());
         job.setLotlUrl(lotlUrl);
+        String LOTL_ROOT_SCHEME_INFO_URI = "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl.html";
         job.setLotlRootSchemeInfoUri(LOTL_ROOT_SCHEME_INFO_URI);
+        String OJ_URL = "http://eur-lex.europa.eu/legal-content/EN/TXT/?uri=uriserv:OJ.C_.2016.233.01.0001.01.ENG";
         job.setOjUrl(OJ_URL);
         job.setLotlCode("EU");
         job.setOjContentKeyStore(lotlKeyStore);
@@ -204,7 +204,7 @@ public class SieQValidationService {
      * @param certificateToken
      */
     private List<String> getQualifiers(ServiceInfoStatus serviceInfoStatus, CertificateToken certificateToken) {
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
         final Map<String, List<Condition>> qualifiersAndConditions = serviceInfoStatus.getQualifiersAndConditions();
         for (Entry<String, List<Condition>> conditionEntry : qualifiersAndConditions.entrySet()) {
             List<Condition> conditions = conditionEntry.getValue();

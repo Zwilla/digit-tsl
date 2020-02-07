@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.rules;
 
 import static org.junit.Assert.assertFalse;
@@ -41,7 +21,7 @@ public class LanguageValidatorTest extends AbstractSpringTest {
     @Test
     public void isLanguagePresent() {
         TLGeneric tlGeneric = null;
-        assertFalse(languageValidator.isLanguagePresent(tlGeneric));
+        assertFalse(languageValidator.isLanguagePresent(null));
 
         tlGeneric = new TLName();
         assertFalse(languageValidator.isLanguagePresent(tlGeneric));
@@ -56,7 +36,7 @@ public class LanguageValidatorTest extends AbstractSpringTest {
     @Test
     public void isLanguageLowerCase() {
         TLGeneric tlGeneric = null;
-        assertFalse(languageValidator.isLanguageLowerCase(tlGeneric));
+        assertFalse(languageValidator.isLanguageLowerCase(null));
 
         tlGeneric = new TLName();
         assertFalse(languageValidator.isLanguageLowerCase(tlGeneric));
@@ -75,7 +55,7 @@ public class LanguageValidatorTest extends AbstractSpringTest {
     public void isAllowedLanguage() {
 
         TLGeneric tlGeneric = null;
-        assertFalse(languageValidator.isAllowedLanguage(tlGeneric));
+        assertFalse(languageValidator.isAllowedLanguage((TLGeneric) null));
 
         tlGeneric = new TLName();
         assertFalse(languageValidator.isAllowedLanguage(tlGeneric));
@@ -97,9 +77,9 @@ public class LanguageValidatorTest extends AbstractSpringTest {
     public void isLanguagesContainsEnglish() {
 
         List<TLGeneric> generics = null;
-        assertTrue(languageValidator.isLanguagesContainsEnglish(generics));
+        assertTrue(languageValidator.isLanguagesContainsEnglish(null));
 
-        generics = new ArrayList<TLGeneric>();
+        generics = new ArrayList<>();
         assertTrue(languageValidator.isLanguagesContainsEnglish(generics));
 
         generics.add(new TLGeneric() {

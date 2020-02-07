@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayOutputStream;
@@ -55,13 +35,13 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
 @Service
 public class ContactService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(ContactService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ContactService.class);
 
     @Value("${contact.url}")
     private String contactUrl;
 
     @Value("${use.tl.contact:false}")
-    private Boolean useTLContact;
+    private boolean useTLContact;
 
     @Autowired
     private TLService tlService;
@@ -121,7 +101,7 @@ public class ContactService {
                     if (tlElectronic.getValue().startsWith("mailto:")) {
                         String tlAddress = tlElectronic.getValue();
                         tlAddress = tlAddress.replace("mailto:", "");
-                        Boolean isPresent = false;
+                        boolean isPresent = false;
                         for (String contactElectronic : contact.getElectronicAddress().getURI()) {
                             if (tlAddress.trim().equalsIgnoreCase(contactElectronic.trim())) {
                                 isPresent = true;
@@ -182,6 +162,8 @@ public class ContactService {
         }
 
         // Name
+        assert editContact != null;
+        assert publishedContact != null;
         if ((publishedContact.getName() != null) && !publishedContact.getName().equals(editContact.getName())) {
             if (StringUtils.isEmpty(editContact.getName())) {
                 diff = new TLDifference(id + "_" + Tag.CONTACT_NAME, publishedContact.getName(), "");
@@ -192,8 +174,11 @@ public class ContactService {
             }
             diff.setHrLocation("Name");
             listDiff.add(diff);
-        } else if ((publishedContact.getName() == null) && (editContact.getName() != null)) {
-            diff = new TLDifference(id + "_" + Tag.CONTACT_NAME.toString(), "", editContact.getName());
+        } else {
+            assert editContact != null;
+            if ((publishedContact.getName() == null) && (editContact.getName() != null)) {
+                diff = new TLDifference(id + "_" + Tag.CONTACT_NAME.toString(), "", editContact.getName());
+            }
         }
 
         // Postal Address

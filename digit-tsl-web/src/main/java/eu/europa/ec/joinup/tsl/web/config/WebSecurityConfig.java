@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.config;
 
 import java.util.ArrayList;
@@ -64,7 +44,7 @@ import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
 @EnableWebMvcSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Value("${casServerUrl}")
     private String casServerUrl;
@@ -100,7 +80,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+    protected void configure(AuthenticationManagerBuilder auth) {
 
         auth.authenticationProvider(authenticationProvider());
     }
@@ -127,7 +107,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 
-    AuthenticationUserDetailsService<CasAssertionAuthenticationToken> service2 = new AuthenticationUserDetailsService<CasAssertionAuthenticationToken>() {
+    final AuthenticationUserDetailsService<CasAssertionAuthenticationToken> service2 = new AuthenticationUserDetailsService<CasAssertionAuthenticationToken>() {
         @Override
         public UserDetails loadUserDetails(CasAssertionAuthenticationToken token) throws UsernameNotFoundException {
             if (token.getName() == null) {

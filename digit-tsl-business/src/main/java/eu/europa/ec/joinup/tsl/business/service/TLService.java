@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
@@ -88,7 +68,7 @@ public class TLService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TLService.class);
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Autowired
     private TLRepository tlRepository;
@@ -137,7 +117,7 @@ public class TLService {
     public List<TrustedListsReport> getAllProdTlReports() {
         List<TrustedListsReport> list = new ArrayList<>();
         List<DBTrustedLists> lst = tlRepository.findByStatusAndArchiveFalseOrderByNameAsc(TLStatus.PROD);
-        Boolean isContactVisible = systemService.getColumnVisible(ColumnName.CONTACTS.toString());
+        boolean isContactVisible = systemService.getColumnVisible(ColumnName.CONTACTS.toString());
         for (DBTrustedLists trustedListsDB : lst) {
             try {
                 TrustedListsReport rt = tlReport(trustedListsDB, isContactVisible);
@@ -240,7 +220,7 @@ public class TLService {
      *            (show/hide contact)
      * @return
      */
-    private TrustedListsReport tlReport(DBTrustedLists trustedListsDB, Boolean isContactVisible) {
+    private TrustedListsReport tlReport(DBTrustedLists trustedListsDB, boolean isContactVisible) {
         TrustedListsReport rt = new TrustedListsReport();
 
         DBFiles xmlFile = trustedListsDB.getXmlFile();
@@ -552,7 +532,7 @@ public class TLService {
      * @param isContactVisible
      *            (show/hide contact column)
      */
-    public TrustedListsReport getTLInfo(DBTrustedLists tldb, Boolean isContactVisible) {
+    public TrustedListsReport getTLInfo(DBTrustedLists tldb, boolean isContactVisible) {
         TrustedListsReport rt = tlReport(tldb, isContactVisible);
         return rt;
     }
@@ -591,7 +571,7 @@ public class TLService {
     public int extractVersionFromFile(DBFiles dbf) {
         File xml = fileService.getTSLFile(dbf);
         String fileVersion = FileUtils.getTlVersion(xml);
-        return Integer.valueOf(fileVersion);
+        return Integer.parseInt(fileVersion);
     }
 
     /**
@@ -720,7 +700,7 @@ public class TLService {
         if (country != null) {
             tl = tlRepository.findByTerritoryAndStatusAndArchiveFalse(country, TLStatus.PROD);
             if (tl == null) {
-                tl = createTL(xmlUrl, type, status, country, tl);
+                tl = createTL(xmlUrl, type, status, country, null);
             } else if ((tl.getXmlFile() != null) && !StringUtils.equals(xmlUrl, tl.getXmlFile().getUrl())) {
                 tl.getXmlFile().setUrl(xmlUrl);
             }
@@ -876,7 +856,7 @@ public class TLService {
      *
      * @param draftId
      */
-    public Boolean checkDraftNotification(int draftId) {
+    public boolean checkDraftNotification(int draftId) {
         List<DBNotification> notifications = getDraftPointerNotified(draftId);
         if (!notifications.isEmpty()) {
             for (DBNotification notification : notifications) {
@@ -966,7 +946,7 @@ public class TLService {
      * @param tl
      * @param status
      */
-    public void archive(DBTrustedLists tl, Boolean status) {
+    public void archive(DBTrustedLists tl, boolean status) {
         tl.setArchive(status);
         tlRepository.save(tl);
     }

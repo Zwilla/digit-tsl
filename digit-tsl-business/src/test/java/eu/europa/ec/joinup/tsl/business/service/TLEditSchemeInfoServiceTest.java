@@ -1,27 +1,4 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 import javax.transaction.Transactional;
 
@@ -38,6 +15,8 @@ import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 import eu.europa.ec.joinup.tsl.model.enums.TLStatus;
 import eu.europa.ec.joinup.tsl.model.enums.TLType;
 import eu.europa.ec.joinup.tsl.model.enums.Tag;
+
+import static org.junit.Assert.*;
 
 @Transactional
 public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
@@ -97,15 +76,15 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
 
         TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), tlScheme, Tag.SEQUENCE_NUMBER.toString(), "");
         // CHECK RETURN
-        assertTrue(schemeInfoUpdated.getSequenceNumber() == SN);
+        assertEquals((int) schemeInfoUpdated.getSequenceNumber(), SN);
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
         // CHECK DB
-        assertTrue(dbLOTL.getSequenceNumber() == SN);
+        assertEquals(dbLOTL.getSequenceNumber(), SN);
 
         TL lotlUpdated = tlService.getTL(1);
         // CHECK XML FILE
-        assertTrue(lotlUpdated.getSchemeInformation().getSequenceNumber() == SN);
+        assertEquals((int) lotlUpdated.getSchemeInformation().getSequenceNumber(), SN);
     }
 
     @Test
@@ -117,16 +96,16 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
 
         TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.ISSUE_DATE.toString(), "");
         // CHECK RETURN
-        assertTrue(schemeInfoUpdated.getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
+        assertEquals(schemeInfoUpdated.getIssueDate(), detl.getSchemeInformation().getIssueDate());
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
         DBTrustedLists dbDE = tlService.getDbTL(2);
         // CHECK DB
-        assertTrue(dbLOTL.getIssueDate().equals(dbDE.getIssueDate()));
+        assertEquals(dbLOTL.getIssueDate(), dbDE.getIssueDate());
 
         TL lotlUpdated = tlService.getTL(1);
         // CHECK XML FILE
-        assertTrue(lotlUpdated.getSchemeInformation().getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
+        assertEquals(lotlUpdated.getSchemeInformation().getIssueDate(), detl.getSchemeInformation().getIssueDate());
     }
 
     @Test
@@ -138,16 +117,16 @@ public class TLEditSchemeInfoServiceTest extends AbstractSpringTest {
 
         TLSchemeInformation schemeInfoUpdated = tlEditSchemeInfoService.edit(lotl.getTlId(), detl.getSchemeInformation(), Tag.NEXT_UPDATE.toString(), "");
         // CHECK RETURN
-        assertTrue(schemeInfoUpdated.getNextUpdateDate().equals(detl.getSchemeInformation().getNextUpdateDate()));
+        assertEquals(schemeInfoUpdated.getNextUpdateDate(), detl.getSchemeInformation().getNextUpdateDate());
 
         DBTrustedLists dbLOTL = tlService.getDbTL(1);
         DBTrustedLists dbDE = tlService.getDbTL(2);
         // CHECK DB
-        assertTrue(dbLOTL.getNextUpdateDate().equals(dbDE.getNextUpdateDate()));
+        assertEquals(dbLOTL.getNextUpdateDate(), dbDE.getNextUpdateDate());
 
         TL lotlUpdated = tlService.getTL(1);
         // CHECK XML FILE
-        assertTrue(lotlUpdated.getSchemeInformation().getNextUpdateDate().equals(detl.getSchemeInformation().getNextUpdateDate()));
+        assertEquals(lotlUpdated.getSchemeInformation().getNextUpdateDate(), detl.getSchemeInformation().getNextUpdateDate());
         // assertFalse(lotlUpdated.getSchemeInformation().getIssueDate().equals(detl.getSchemeInformation().getIssueDate()));
     }
 

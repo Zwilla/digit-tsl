@@ -15,7 +15,7 @@ public class ServiceUtils {
      * @param service
      * @param history
      */
-    public static Boolean isServiceHistoryEquals(TLServiceDto service, TLServiceHistory history) {
+    public static boolean isServiceHistoryEquals(TLServiceDto service, TLServiceHistory history) {
         if (!service.getTypeIdentifier().equals(history.getTypeIdentifier())) {
             return false;
         } else if (!service.getServiceName().equals(history.getServiceName())) {

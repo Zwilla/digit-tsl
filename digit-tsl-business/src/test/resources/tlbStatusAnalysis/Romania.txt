@@ -2,237 +2,237 @@ Romania
 
     Trans Sped SRL 
 
-        Trans Sped Qualified CA II - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped Qualified CA II - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped SAFE CA II - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped SAFE CA II - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped SAFE CA I - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped SAFE CA I - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped QCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped QCA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped SAFE CA III - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped SAFE CA III - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Trans Sped Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Trans Sped Mobile QCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped Mobile QCA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped QCA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trans Sped QCA G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trans Sped TSA G2 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Trans Sped TSA G2 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     DigiSign S.A. 
 
-        DigiSign Qualified Root CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Qualified Root CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Qualified Root CA v2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Qualified Root CA v2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Root Certification Authority (v3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Root Certification Authority (v3) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DIGISIGN Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DIGISIGN Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Public CA  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Public CA  - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Qualified Public CA (v2) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Qualified Public CA (v2) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Qualified Public CA (v3) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiSign Qualified Public CA (v3) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Digisign Timestamping - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Digisign Timestamping - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-         tss-s0.digisign.ro - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+         tss-s0.digisign.ro - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Time-stamp Signer 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Time-stamp Signer 1 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        DigiSign TimeStamp Service  - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        DigiSign TimeStamp Service  - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Timestamp Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Timestamp Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Time-stamp Signer 0 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Time-stamp Signer 0 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        DigiSign Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        DigiSign Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        DigiSign OCSP Validation Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        DigiSign OCSP Validation Service - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigiSign Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        DigiSign Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     CERTSIGN S.A. 
 
-        certSIGN CA Clasa 2(Certificate simple) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN CA Clasa 2(Certificate simple) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN CA Clasa 2 G2(Certificate simple - Generatia a 2-a) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN CA Clasa 2 G2(Certificate simple - Generatia a 2-a) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Enterprise CA Clasa 3(Certificate pentru organizatii) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN Enterprise CA Clasa 3(Certificate pentru organizatii) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Enterprise CA Clasa 3 G2(Certificate pentru organizatii - Generatia a 2-a) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN Enterprise CA Clasa 3 G2(Certificate pentru organizatii - Generatia a 2-a) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        certSIGN Qualified CA Clasa 3(Certificate calificate) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        certSIGN Qualified CA Clasa 3(Certificate calificate) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Qualified CA Clasa 3(Certificate calificate - Generatia a 2-a) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        certSIGN Qualified CA Clasa 3(Certificate calificate - Generatia a 2-a) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Non-Repudiation CA Class 4(Certificate pentru nerepudiere) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN Non-Repudiation CA Class 4(Certificate pentru nerepudiere) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Non-Repudiation CA Class 4 G2(Certificate pentru nerepudiere - Generatia a 2-a) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        certSIGN Non-Repudiation CA Class 4 G2(Certificate pentru nerepudiere - Generatia a 2-a) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Autoritate de Marcare Temporala - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        certSIGN Autoritate de Marcare Temporala - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        certSIGN Digital Certificate Validation Authority - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        certSIGN Digital Certificate Validation Authority - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Validation Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        certSIGN Validation Service - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSIGN Validation Service G2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        certSIGN Validation Service G2 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        certSAFE Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        certSAFE Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     AlfaTrust Certification Services S.A. 
 
-        AlfaSign Public CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AlfaSign Public CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        ALFATRUST ROOT CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ALFATRUST ROOT CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AlfaTrust TS Services - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        AlfaTrust TS Services - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        ALFATRUST ROOT CA V2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ALFATRUST ROOT CA V2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AlfaSign Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AlfaSign Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AlfaStamp TS Services - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        AlfaStamp TS Services - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        AlfaSign TSA Server - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        AlfaSign TSA Server - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     CENTRUL DE CALCUL SA 
 
-        Cert Digital CA Class 2  - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Cert Digital CA Class 2  - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Enterprise CA Class 3 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Cert Digital Enterprise CA Class 3 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Qualified CA  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Cert Digital Qualified CA  - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Non-Repudiation CA Class 4  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Cert Digital Non-Repudiation CA Class 4  - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Enterprise CA Class 3  - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Cert Digital Enterprise CA Class 3  - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Enterprise CA Class 3 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital Enterprise CA Class 3 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Organization CA Class 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Cert Digital Organization CA Class 2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Organization CA Class 2 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital Organization CA Class 2 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Qualified CA Class 3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Cert Digital Qualified CA Class 3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Qualified CA Class 3 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CertDigital Qualified CA Class 3 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Non-Repudiation CA Class 4  - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Cert Digital Non-Repudiation CA Class 4  - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital NonRepudiation CA Class 4 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital NonRepudiation CA Class 4 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cert Digital Time Stamping Authority  - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Cert Digital Time Stamping Authority  - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        CertDigital Timestamping Authority G2 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        CertDigital Timestamping Authority G2 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        CertDigital Validation Authority G2 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        CertDigital Validation Authority G2 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Enterprise CA Class 3 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital Enterprise CA Class 3 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital NonRepudiation CA Class 4 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital NonRepudiation CA Class 4 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Organization CA Class 2 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital Organization CA Class 2 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        CertDigital Qualified CA Class 3 G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CertDigital Qualified CA Class 3 G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 

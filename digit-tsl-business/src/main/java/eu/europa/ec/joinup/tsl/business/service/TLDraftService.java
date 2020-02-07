@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
@@ -109,40 +89,38 @@ public class TLDraftService {
         if (country != null) {
             DBTrustedLists tldb = tlRepository.findByTerritoryAndStatusAndArchiveFalse(country, TLStatus.PROD);
             LOGGER.info("Clone to Draft -> " + country.getCodeTerritory() + " [id = " + tldb.getId() + "]");
-            if (tldb != null) {
-                DBFiles xmlFile = tldb.getXmlFile();
-                DBFiles unpersistedXmlDraft = prepareDraftFromTSL(xmlFile, territory, migrate);
+            DBFiles xmlFile = tldb.getXmlFile();
+            DBFiles unpersistedXmlDraft = prepareDraftFromTSL(xmlFile, territory, migrate);
 
-                if (unpersistedXmlDraft != null) {
-                    try {
-                        File tslFile = fileService.getTSLFile(unpersistedXmlDraft);
-                        TrustStatusListTypeV5 tslType = jaxbService.unmarshallTSLV5(tslFile);
-                        TL draftTLDTO = tlBuilder.buildTLV5(0, tslType);
+            if (unpersistedXmlDraft != null) {
+                try {
+                    File tslFile = fileService.getTSLFile(unpersistedXmlDraft);
+                    TrustStatusListTypeV5 tslType = jaxbService.unmarshallTSLV5(tslFile);
+                    TL draftTLDTO = tlBuilder.buildTLV5(0, tslType);
 
-                        DBTrustedLists draftTL = new DBTrustedLists();
-                        draftTL.setDraftStoreId(cookieId);
-                        draftTL.setTerritory(country);
-                        draftTL.setStatus(TLStatus.DRAFT);
-                        draftTL.setParent(tldb);
-                        draftTL.setType(tldb.getType());
+                    DBTrustedLists draftTL = new DBTrustedLists();
+                    draftTL.setDraftStoreId(cookieId);
+                    draftTL.setTerritory(country);
+                    draftTL.setStatus(TLStatus.DRAFT);
+                    draftTL.setParent(tldb);
+                    draftTL.setType(tldb.getType());
 
-                        draftTL.setSequenceNumber(draftTLDTO.getSchemeInformation().getSequenceNumber());
-                        draftTL.setIssueDate(draftTLDTO.getSchemeInformation().getIssueDate());
-                        draftTL.setNextUpdateDate(draftTLDTO.getSchemeInformation().getNextUpdateDate());
-                        draftTL.setVersionIdentifier(tlService.extractVersionFromFile(unpersistedXmlDraft));
+                    draftTL.setSequenceNumber(draftTLDTO.getSchemeInformation().getSequenceNumber());
+                    draftTL.setIssueDate(draftTLDTO.getSchemeInformation().getIssueDate());
+                    draftTL.setNextUpdateDate(draftTLDTO.getSchemeInformation().getNextUpdateDate());
+                    draftTL.setVersionIdentifier(tlService.extractVersionFromFile(unpersistedXmlDraft));
 
-                        draftTL.setXmlFile(unpersistedXmlDraft);
+                    draftTL.setXmlFile(unpersistedXmlDraft);
 
-                        draftTL.setLastEditedDate(new Date());
-                        draftTL.setCreatedBy(userName);
+                    draftTL.setLastEditedDate(new Date());
+                    draftTL.setCreatedBy(userName);
 
-                        tlRepository.save(draftTL);
-                        draftTL.setName(getDraftName(country, draftTL.getId()));
+                    tlRepository.save(draftTL);
+                    draftTL.setName(getDraftName(country, draftTL.getId()));
 
-                        return draftTL;
-                    } catch (Exception e) {
-                        LOGGER.error("Unable to create a draft : " + e.getMessage(), e);
-                    }
+                    return draftTL;
+                } catch (Exception e) {
+                    LOGGER.error("Unable to create a draft : " + e.getMessage(), e);
                 }
             }
         } else {
@@ -245,7 +223,7 @@ public class TLDraftService {
         DBCountries country = countryService.getCountryByTerritory(draftTLDTO.getSchemeInformation().getTerritory());
 
         if (country != null) {
-            DBFiles draftXmlFile = createEmptyFile(MimeType.XML);
+            DBFiles draftXmlFile = createEmptyFile();
 
             String draftXmlPath = fileService.storeNewDraftTL(MimeType.XML, draftBinaries, country.getCodeTerritory(), null);
             draftXmlFile.setLocalPath(draftXmlPath);
@@ -326,7 +304,7 @@ public class TLDraftService {
             String draftPath = fileService.storeNewDraftTL(MimeType.XML, draftBinaries, countryCode, null);
             LOGGER.info("Draft local path : " + draftPath);
 
-            draftFile = createEmptyFile(MimeType.XML);
+            draftFile = createEmptyFile();
             draftFile.setLocalPath(draftPath);
 
         } catch (Exception e) {
@@ -340,9 +318,9 @@ public class TLDraftService {
         return TLStatus.DRAFT + "_" + country.getCodeTerritory() + "_" + id;
     }
 
-    private DBFiles createEmptyFile(MimeType mimeType) {
+    private DBFiles createEmptyFile() {
         DBFiles draftFile = new DBFiles();
-        draftFile.setMimeTypeFile(mimeType);
+        draftFile.setMimeTypeFile(MimeType.XML);
         return draftFile;
     }
 

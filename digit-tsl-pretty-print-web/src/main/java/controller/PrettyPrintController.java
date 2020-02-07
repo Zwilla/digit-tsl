@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package controller;
 
 import java.io.File;
@@ -73,6 +53,7 @@ public class PrettyPrintController implements PrettyPrintService {
 
         // Override properties hard-coded
         Properties prop = getPrivateAttribute("prop", m, Properties.class);
+        assert prop != null;
         prop.loadFromXML(fis);
         prop.setProperty("imagePath", propertyAbsolutePath + File.separator + "res");
         prop.setProperty("pdfImagePath", propertyAbsolutePath + File.separator + "res");
@@ -85,20 +66,20 @@ public class PrettyPrintController implements PrettyPrintService {
         fis.close();
 
         genericInvokMethod(Main.class, "InitializeVectors", prop);
-        genericInvokMethod(Main.class, "InitializeX509ExtensionsHashTable", null);
+        genericInvokMethod(Main.class, "InitializeX509ExtensionsHashTable", (Object) (Object) null);
 
-        String inputTslFileName = (xmlFilePath);
-        String outputHtmlFileName = (htmlFilePath);
         setValueToPrivateAttribute("outFileNamePdf", pdfFilePath);
 
-        File tslFile = new File(inputTslFileName);
+        File tslFile = new File((xmlFilePath));
         Object[] readTSLParams = new Object[2];
         readTSLParams[0] = tslFile;
-        readTSLParams[1] = outputHtmlFileName;
+        readTSLParams[1] = (htmlFilePath);
         genericInvokMethod(m, "readTSL", readTSLParams);
 
         ExportPDFA ep = getPrivateAttribute("ep", m, ExportPDFA.class);
-        ep.ClosePDFA();
+        if (ep != null) {
+            ep.ClosePDFA();
+        }
     }
 
     private void setValueToPrivateAttribute(String attributeName, Object newValue) {

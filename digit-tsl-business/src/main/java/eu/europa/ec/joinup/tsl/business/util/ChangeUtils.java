@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.text.SimpleDateFormat;
@@ -60,10 +40,10 @@ public class ChangeUtils {
         }
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLName tlName : draft) {
+            if (tmpPublished.contains(tlName)) {
+                tmpPublished.remove(tlName);
+                tmp.remove(tlName);
             }
         }
 
@@ -119,10 +99,10 @@ public class ChangeUtils {
         List<TLPostalAddress> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLPostalAddress tlPostalAddress : draft) {
+            if (tmpPublished.contains(tlPostalAddress)) {
+                tmpPublished.remove(tlPostalAddress);
+                tmp.remove(tlPostalAddress);
             }
         }
 
@@ -178,10 +158,10 @@ public class ChangeUtils {
         List<TLElectronicAddress> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLElectronicAddress tlElectronicAddress : draft) {
+            if (tmpPublished.contains(tlElectronicAddress)) {
+                tmpPublished.remove(tlElectronicAddress);
+                tmp.remove(tlElectronicAddress);
             }
         }
 
@@ -237,10 +217,10 @@ public class ChangeUtils {
         List<TLDefinitionUri> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLDefinitionUri tlDefinitionUri : draft) {
+            if (tmpPublished.contains(tlDefinitionUri)) {
+                tmpPublished.remove(tlDefinitionUri);
+                tmp.remove(tlDefinitionUri);
             }
         }
 
@@ -296,10 +276,10 @@ public class ChangeUtils {
         List<TLInformationUri> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLInformationUri tlInformationUri : draft) {
+            if (tmpPublished.contains(tlInformationUri)) {
+                tmpPublished.remove(tlInformationUri);
+                tmp.remove(tlInformationUri);
             }
         }
 
@@ -355,10 +335,10 @@ public class ChangeUtils {
         List<TLDistributionPoint> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLDistributionPoint tlDistributionPoint : draft) {
+            if (tmpPublished.contains(tlDistributionPoint)) {
+                tmpPublished.remove(tlDistributionPoint);
+                tmp.remove(tlDistributionPoint);
             }
         }
 
@@ -390,10 +370,10 @@ public class ChangeUtils {
         List<TLSchemeTypeCommunityRule> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLSchemeTypeCommunityRule tlSchemeTypeCommunityRule : draft) {
+            if (tmpPublished.contains(tlSchemeTypeCommunityRule)) {
+                tmpPublished.remove(tlSchemeTypeCommunityRule);
+                tmp.remove(tlSchemeTypeCommunityRule);
             }
         }
 
@@ -449,10 +429,10 @@ public class ChangeUtils {
         List<TLSchemePolicy> tmpPublished = new ArrayList<>(published);
 
         // DELETE EQUALS
-        for (int i = 0; i < draft.size(); i++) {
-            if (tmpPublished.contains(draft.get(i))) {
-                tmpPublished.remove(draft.get(i));
-                tmp.remove(draft.get(i));
+        for (TLSchemePolicy tlSchemePolicy : draft) {
+            if (tmpPublished.contains(tlSchemePolicy)) {
+                tmpPublished.remove(tlSchemePolicy);
+                tmp.remove(tlSchemePolicy);
             }
         }
 
@@ -506,7 +486,7 @@ public class ChangeUtils {
 
         if (draft != null) {
             for (TLDigitalIdentification draftDigit : draft) {
-                Boolean match = false;
+                boolean match = false;
                 for (TLDigitalIdentification publishedDigit : publishedTlDigiId) {
                     if (TLDigitalIdentityUtils.matchTLDigitalIdentification(draftDigit, publishedDigit)) {
                         match = true;
@@ -523,12 +503,10 @@ public class ChangeUtils {
                 }
             }
         } else {
-            if (publishedTlDigiId != null) {
-                for (TLDigitalIdentification publishedDigit : publishedTlDigiId) {
-                    diffList.add(new TLDifference(parentId, publishedDigit.getName(), ""));
-                }
-
+            for (TLDigitalIdentification publishedDigit : publishedTlDigiId) {
+                diffList.add(new TLDifference(parentId, publishedDigit.getName(), ""));
             }
+
         }
 
         if (!tmpPublished.isEmpty()) {
@@ -627,7 +605,7 @@ public class ChangeUtils {
 
         if (!CollectionUtils.isEmpty(draftQE) || !CollectionUtils.isEmpty(publishedQE)) {
             for (TLServiceExtension published : publishedQE) {
-                Boolean publishedMatch = false;
+                boolean publishedMatch = false;
                 for (TLServiceExtension draft : draftQE) {
                     if (published.equals(draft)) {
                         publishedMatch = true;
@@ -640,7 +618,7 @@ public class ChangeUtils {
             }
 
             for (TLServiceExtension draft : draftQE) {
-                Boolean draftMatch = false;
+                boolean draftMatch = false;
                 for (TLServiceExtension published : publishedQE) {
                     if (draft.equals(published)) {
                         draftMatch = true;

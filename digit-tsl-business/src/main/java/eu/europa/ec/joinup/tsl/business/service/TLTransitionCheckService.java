@@ -43,7 +43,6 @@ public class TLTransitionCheckService {
 
     @Transactional
     public List<CheckResultDTO> getTransitionCheck(int tlId) {
-        List<CheckResultDTO> results = new ArrayList<>();
         // Init current TL and compared TL
         DBTrustedLists dbTL = tlService.getDbTL(tlId);
         TL currentTL = tlService.getDtoTL(dbTL);
@@ -54,7 +53,7 @@ public class TLTransitionCheckService {
             comparedTL = tlService.getPublishedTLByCountry(dbTL.getTerritory());
         }
         // Perform checks
-        results.addAll(perfomTransitionChecks(tlId, dbTL, currentTL, comparedTL));
+        List<CheckResultDTO> results = new ArrayList<>(perfomTransitionChecks(tlId, dbTL, currentTL, comparedTL));
         // Init HR Location
         for (CheckResultDTO result : results) {
             result.setLocation(LocationUtils.idUserReadable(currentTL, result.getId()));
@@ -120,7 +119,7 @@ public class TLTransitionCheckService {
         List<CheckResultDTO> results = new ArrayList<>();
         // Init TSP temporary lists
         List<TLServiceProvider> tmpPreviousTSPs = (CollectionUtils.isEmpty(comparedTL.getServiceProviders()) ? new ArrayList<TLServiceProvider>()
-                : new ArrayList<TLServiceProvider>(comparedTL.getServiceProviders()));
+                : new ArrayList<>(comparedTL.getServiceProviders()));
         for (TLServiceProvider currentTSP : currentTL.getServiceProviders()) {
             TLServiceProvider tspFound = null;
             for (TLServiceProvider previousTSP : tmpPreviousTSPs) {
@@ -189,8 +188,8 @@ public class TLTransitionCheckService {
     public List<CheckResultDTO> getServicesCheck(TLServiceProvider currentTSP, TLServiceProvider previousTSP, Date publicationDate, Map<String, DBCheck> transitionChecks) {
         List<CheckResultDTO> checkResults = new ArrayList<>();
         // Init services list
-        List<TLServiceDto> tmpCurrentServices = (CollectionUtils.isEmpty(currentTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<TLServiceDto>(currentTSP.getTSPServices()));
-        List<TLServiceDto> tmpPreviousServices = (CollectionUtils.isEmpty(previousTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<TLServiceDto>(previousTSP.getTSPServices()));
+        List<TLServiceDto> tmpCurrentServices = (CollectionUtils.isEmpty(currentTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<>(currentTSP.getTSPServices()));
+        List<TLServiceDto> tmpPreviousServices = (CollectionUtils.isEmpty(previousTSP.getTSPServices()) ? new ArrayList<TLServiceDto>() : new ArrayList<>(previousTSP.getTSPServices()));
         if (!CollectionUtils.isEmpty(currentTSP.getTSPServices())) {
             for (TLServiceDto currentService : currentTSP.getTSPServices()) {
                 TLServiceDto serviceFound = null;
@@ -224,7 +223,7 @@ public class TLTransitionCheckService {
                     case HISTORY_UPDATED:
                         serviceFound = previousService;
                         List<TLServiceHistory> tmpCurrentHistory = (CollectionUtils.isEmpty(currentService.getHistory()) ? new ArrayList<TLServiceHistory>()
-                                : new ArrayList<TLServiceHistory>(currentService.getHistory()));
+                                : new ArrayList<>(currentService.getHistory()));
                         if (CollectionUtils.isNotEmpty(tmpCurrentHistory)) {
                             if (!ServiceUtils.isServiceHistoryEquals(previousService, tmpCurrentHistory.get(0))) {
                                 // The new history entry has changed from the previous service
@@ -234,7 +233,7 @@ public class TLTransitionCheckService {
                             tmpCurrentHistory.remove(0);
                         }
                         List<TLServiceHistory> tmpPreviousHistory = (CollectionUtils.isEmpty(previousService.getHistory()) ? new ArrayList<TLServiceHistory>()
-                                : new ArrayList<TLServiceHistory>(previousService.getHistory()));
+                                : new ArrayList<>(previousService.getHistory()));
                         if (!tmpCurrentHistory.equals(tmpPreviousHistory)) {
                             checkResults.add(new CheckResultDTO(currentService.getId(), transitionChecks.get(getCheckID(CheckName.HISTORY_CHANGE))));
                         }

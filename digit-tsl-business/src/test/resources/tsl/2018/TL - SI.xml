@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="SI-TSL_1" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="SI-TSL_1" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>30</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">Republic of Slovenia, Ministry of Public Administration, Information Society Directorate</Name>
             <Name xml:lang="sl">Republika Slovenija, Ministrstvo za javno upravo, Direktorat za informacijsko družbo</Name>
@@ -36,10 +36,10 @@
             <URI xml:lang="en">http://www.mju.gov.si/en/areas_of_work/information_society/trusted_list/</URI>
             <URI xml:lang="sl">http://www.mju.gov.si/si/delovna_podrocja/informacijska_druzba/elektronske_identitete_in_storitve_zaupanja/zanesljivi_seznam/</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SI</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SI</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>SI</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -79,7 +79,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -94,7 +94,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -155,7 +155,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIGOV-CA</Name>
                             <Name xml:lang="sl">SIGOV-CA</Name>
@@ -171,19 +171,19 @@
 <X509SKI>HvjUU2uzgwbpBAZXAvmlv8ZYPHI=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIGOV-CA</Name>
 <Name xml:lang="sl">SIGOV-CA</Name>
@@ -196,14 +196,14 @@
     <X509SKI>HvjUU2uzgwbpBAZXAvmlv8ZYPHI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2001-01-16T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIGEN-CA</Name>
                             <Name xml:lang="sl">SIGEN-CA</Name>
@@ -219,19 +219,19 @@
 <X509SKI>cXuKBh8xBVWrYBJ3RyAeA4gY7Ik=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIGEN-CA</Name>
 <Name xml:lang="sl">SIGEN-CA</Name>
@@ -244,14 +244,14 @@
     <X509SKI>cXuKBh8xBVWrYBJ3RyAeA4gY7Ik=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2001-07-08T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 1</Name>
                             <Name xml:lang="sl">SI-TSA 1</Name>
@@ -267,13 +267,13 @@
 <X509SKI>9SuD+pSSYbSfACqXdgmpV3WiRjA=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 1</Name>
                             <Name xml:lang="sl">SI-TSA 1</Name>
@@ -289,12 +289,12 @@
 <X509SKI>9SuD+pSSYbSfACqXdgmpV3WiRjA=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 1</Name>
 <Name xml:lang="sl">SI-TSA 1</Name>
@@ -307,11 +307,11 @@
     <X509SKI>9SuD+pSSYbSfACqXdgmpV3WiRjA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 1</Name>
 <Name xml:lang="sl">SI-TSA 1</Name>
@@ -324,14 +324,14 @@
     <X509SKI>9SuD+pSSYbSfACqXdgmpV3WiRjA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-08-25T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 2</Name>
                             <Name xml:lang="sl">SI-TSA 2</Name>
@@ -347,13 +347,13 @@
 <X509SKI>6+0/h2f9ExTMSGGVaGWHVIRrOQw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 2</Name>
                             <Name xml:lang="sl">SI-TSA 2</Name>
@@ -369,12 +369,12 @@
 <X509SKI>6+0/h2f9ExTMSGGVaGWHVIRrOQw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 2</Name>
 <Name xml:lang="sl">SI-TSA 2</Name>
@@ -387,11 +387,11 @@
     <X509SKI>6+0/h2f9ExTMSGGVaGWHVIRrOQw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 2</Name>
 <Name xml:lang="sl">SI-TSA 2</Name>
@@ -404,14 +404,14 @@
     <X509SKI>6+0/h2f9ExTMSGGVaGWHVIRrOQw=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-08-25T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 1</Name>
                             <Name xml:lang="sl">SI-TSA 1</Name>
@@ -427,12 +427,12 @@
 <X509SKI>CdrtR5mWlJYTW4NqCra5HdrBs+s=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-12-18T01:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 1</Name>
 <Name xml:lang="sl">SI-TSA 1</Name>
@@ -445,14 +445,14 @@
     <X509SKI>CdrtR5mWlJYTW4NqCra5HdrBs+s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 1</Name>
                             <Name xml:lang="sl">SI-TSA 1</Name>
@@ -468,12 +468,12 @@
 <X509SKI>CdrtR5mWlJYTW4NqCra5HdrBs+s=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-04T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 1</Name>
 <Name xml:lang="sl">SI-TSA 1</Name>
@@ -486,11 +486,11 @@
     <X509SKI>CdrtR5mWlJYTW4NqCra5HdrBs+s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 1</Name>
 <Name xml:lang="sl">SI-TSA 1</Name>
@@ -503,14 +503,14 @@
     <X509SKI>CdrtR5mWlJYTW4NqCra5HdrBs+s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-08-26T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 2</Name>
                             <Name xml:lang="sl">SI-TSA 2</Name>
@@ -526,12 +526,12 @@
 <X509SKI>hquI7IADdQB/Yb9s50Q2poAjtd0=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-12-18T01:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 2</Name>
 <Name xml:lang="sl">SI-TSA 2</Name>
@@ -544,14 +544,14 @@
     <X509SKI>hquI7IADdQB/Yb9s50Q2poAjtd0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TSA 2</Name>
                             <Name xml:lang="sl">SI-TSA 2</Name>
@@ -567,12 +567,12 @@
 <X509SKI>hquI7IADdQB/Yb9s50Q2poAjtd0=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 2</Name>
 <Name xml:lang="sl">SI-TSA 2</Name>
@@ -585,11 +585,11 @@
     <X509SKI>hquI7IADdQB/Yb9s50Q2poAjtd0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TSA 2</Name>
 <Name xml:lang="sl">SI-TSA 2</Name>
@@ -602,7 +602,7 @@
     <X509SKI>hquI7IADdQB/Yb9s50Q2poAjtd0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-08-26T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -654,7 +654,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIGOV-CA</Name>
                             <Name xml:lang="sl">SIGOV-CA</Name>
@@ -670,29 +670,29 @@
 <X509SKI>Rl5A5VPt/v4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIGOV-CA</Name>
 <Name xml:lang="sl">SIGOV-CA</Name>
@@ -705,14 +705,14 @@
     <X509SKI>Rl5A5VPt/v4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-01-10T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIGEN-CA G2</Name>
                             <Name xml:lang="sl">SIGEN-CA G2</Name>
@@ -728,29 +728,29 @@
 <X509SKI>TCUnjKgtcp4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIGEN-CA G2</Name>
 <Name xml:lang="sl">SIGEN-CA G2</Name>
@@ -763,14 +763,14 @@
     <X509SKI>TCUnjKgtcp4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-05T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-TRUST Root</Name>
                             <Name xml:lang="sl">SI-TRUST Root</Name>
@@ -786,34 +786,34 @@
 <X509SKI>TKPDaF4IAmM=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-TRUST Root</Name>
 <Name xml:lang="sl">SI-TRUST Root</Name>
@@ -826,12 +826,12 @@
     <X509SKI>TKPDaF4IAmM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-05-22T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -840,7 +840,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SI-PASS-CA</Name>
                             <Name xml:lang="sl">SI-PASS-CA</Name>
@@ -856,14 +856,14 @@
 <X509SKI>SDLKRk4zywo=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -877,14 +877,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SI-PASS-CA</Name>
 <Name xml:lang="sl">SI-PASS-CA</Name>
@@ -897,7 +897,7 @@
     <X509SKI>SDLKRk4zywo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-27T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -946,7 +946,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA PO</Name>
                             <Name xml:lang="sl">HALCOM CA PO</Name>
@@ -962,16 +962,16 @@
 <X509SKI>SEFMX1BP</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -985,14 +985,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA PO</Name>
 <Name xml:lang="sl">HALCOM CA PO</Name>
@@ -1005,15 +1005,15 @@
     <X509SKI>SEFMX1BP</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2007-01-28T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1028,7 +1028,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA PO</Name>
 <Name xml:lang="sl">HALCOM CA PO</Name>
@@ -1041,15 +1041,15 @@
     <X509SKI>SEFMX1BP</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2002-04-08T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1067,7 +1067,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA PO 2</Name>
                             <Name xml:lang="sl">HALCOM CA PO 2</Name>
@@ -1083,16 +1083,16 @@
 <X509SKI>SK9XZr/SwAI=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1109,9 +1109,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1135,14 +1135,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA PO 2</Name>
 <Name xml:lang="sl">HALCOM CA PO 2</Name>
@@ -1155,15 +1155,15 @@
     <X509SKI>SK9XZr/SwAI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2004-02-07T19:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1180,8 +1180,8 @@
         </ns5:QualificationElement>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1209,7 +1209,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA FO</Name>
                             <Name xml:lang="sl">HALCOM CA FO</Name>
@@ -1225,16 +1225,16 @@
 <X509SKI>SCAcYg1YUiU=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1256,9 +1256,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1277,14 +1277,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA FO</Name>
 <Name xml:lang="sl">HALCOM CA FO</Name>
@@ -1297,15 +1297,15 @@
     <X509SKI>SCAcYg1YUiU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2005-08-05T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1327,8 +1327,8 @@
         </ns5:QualificationElement>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1351,7 +1351,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA TS 1</Name>
                             <Name xml:lang="sl">HALCOM CA TS 1</Name>
@@ -1367,12 +1367,12 @@
 <X509SKI>SekmFDR8RMQ=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA TS 1</Name>
 <Name xml:lang="sl">HALCOM CA TS 1</Name>
@@ -1385,11 +1385,11 @@
     <X509SKI>SekmFDR8RMQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2011-08-07T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA TS 1</Name>
 <Name xml:lang="sl">HALCOM CA TS 1</Name>
@@ -1402,14 +1402,14 @@
     <X509SKI>SekmFDR8RMQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-08-14T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA PO 3</Name>
                             <Name xml:lang="sl">HALCOM CA PO 3</Name>
@@ -1422,16 +1422,16 @@
 <X509SubjectName>CN=Halcom CA PO 3,O=Halcom d.d.,C=SI</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1445,14 +1445,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA PO 3</Name>
 <Name xml:lang="sl">HALCOM CA PO 3</Name>
@@ -1465,15 +1465,15 @@
     <X509SKI>RtyrRmjDAX4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-01-03T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1491,7 +1491,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA TS 2</Name>
                             <Name xml:lang="sl">HALCOM CA TS 2</Name>
@@ -1507,12 +1507,12 @@
 <X509SKI>S1oHu3IAXxo=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA TS 2</Name>
 <Name xml:lang="sl">HALCOM CA TS 2</Name>
@@ -1525,11 +1525,11 @@
     <X509SKI>S1oHu3IAXxo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA TS 2</Name>
 <Name xml:lang="sl">HALCOM CA TS 2</Name>
@@ -1542,14 +1542,14 @@
     <X509SKI>S1oHu3IAXxo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-08-07T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM SECURE SERVER CA</Name>
                         </ServiceName>
@@ -1564,16 +1564,16 @@
 <X509SKI>SqFI3oK9x3w=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1587,14 +1587,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM SECURE SERVER CA</Name>
                             </ServiceName>
@@ -1606,15 +1606,15 @@
     <X509SKI>SqFI3oK9x3w=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2014-10-31T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1629,7 +1629,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM SECURE SERVER CA</Name>
                             </ServiceName>
@@ -1641,15 +1641,15 @@
     <X509SKI>SqFI3oK9x3w=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-02-28T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1667,7 +1667,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM SECURE SERVER CA 1</Name>
                         </ServiceName>
@@ -1682,16 +1682,16 @@
 <X509SKI>THp1htVJjYQ=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1708,14 +1708,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM SECURE SERVER CA 1</Name>
                             </ServiceName>
@@ -1727,15 +1727,15 @@
     <X509SKI>THp1htVJjYQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-10-31T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1756,7 +1756,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom Root CA</Name>
                         </ServiceName>
@@ -1771,21 +1771,21 @@
 <X509SKI>TpTYimPCz3k=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1799,14 +1799,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Halcom Root CA</Name>
                             </ServiceName>
@@ -1818,20 +1818,20 @@
     <X509SKI>TpTYimPCz3k=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-10-31T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="false">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1849,7 +1849,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA TS 3</Name>
                             <Name xml:lang="sl">HALCOM CA TS 3</Name>
@@ -1865,12 +1865,12 @@
 <X509SKI>TSeoYwZGtRE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HALCOM CA TS 3</Name>
 <Name xml:lang="sl">HALCOM CA TS 3</Name>
@@ -1883,14 +1883,14 @@
     <X509SKI>TSeoYwZGtRE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-29T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom Root Certificate Authority</Name>
                             <Name xml:lang="sl">Halcom Root Certificate Authority</Name>
@@ -1906,20 +1906,20 @@
 <X509SKI>Qq6mQ8eYKLA=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -1933,24 +1933,24 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Halcom Root Certificate Authority</Name>
 <Name xml:lang="sl">Halcom Root Certificate Authority</Name>
@@ -1963,19 +1963,19 @@
     <X509SKI>Qq6mQ8eYKLA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-29T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="false">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -1993,7 +1993,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom CA PO e-signature 1</Name>
                             <Name xml:lang="sl">Halcom CA PO e-signature 1</Name>
@@ -2009,21 +2009,21 @@
 <X509SKI>QPaVIJt5wgk=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2040,7 +2040,7 @@
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Halcom CA PO e-signature 1</Name>
 <Name xml:lang="sl">Halcom CA PO e-signature 1</Name>
@@ -2053,14 +2053,14 @@
     <X509SKI>QPaVIJt5wgk=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-29T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom CA FO e-signature 1</Name>
                             <Name xml:lang="sl">Halcom CA FO e-signature 1</Name>
@@ -2076,21 +2076,21 @@
 <X509SKI>SPs7E5nDTs4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2103,8 +2103,8 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2121,7 +2121,7 @@
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Halcom CA FO e-signature 1</Name>
 <Name xml:lang="sl">Halcom CA FO e-signature 1</Name>
@@ -2134,14 +2134,14 @@
     <X509SKI>SPs7E5nDTs4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-29T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom CA PO e-seal 1</Name>
                             <Name xml:lang="sl">Halcom CA PO e-seal 1</Name>
@@ -2157,17 +2157,17 @@
 <X509SKI>SUh2UHcKsQw=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2183,9 +2183,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2200,12 +2200,12 @@
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -2213,7 +2213,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom CA web 1</Name>
                             <Name xml:lang="sl">Halcom CA web 1</Name>
@@ -2229,19 +2229,19 @@
 <X509SKI>SEILF+2unnA=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForWSA"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForWSA"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2256,7 +2256,7 @@
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -2264,7 +2264,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HALCOM CA TS 4</Name>
                             <Name xml:lang="sl">HALCOM CA TS 4</Name>
@@ -2280,13 +2280,13 @@
 <X509SKI>SKsb5KOLhJM=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Halcom CA TSA 1</Name>
                             <Name xml:lang="sl">Halcom CA TSA 1</Name>
@@ -2302,15 +2302,15 @@
 <X509SKI>Q4+LVp9EHtc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:Description/>
@@ -2320,7 +2320,7 @@
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -2374,7 +2374,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">CA NLB</Name>
                             <Name xml:lang="sl">CA NLB</Name>
@@ -2390,16 +2390,16 @@
 <X509SKI>D/F5ZP25vA9F2g1M4V/QcDc5MRE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2413,14 +2413,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CA NLB</Name>
 <Name xml:lang="sl">CA NLB</Name>
@@ -2433,15 +2433,15 @@
     <X509SKI>D/F5ZP25vA9F2g1M4V/QcDc5MRE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2005-09-19T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -2456,7 +2456,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">CA NLB</Name>
 <Name xml:lang="sl">CA NLB</Name>
@@ -2469,15 +2469,15 @@
     <X509SKI>D/F5ZP25vA9F2g1M4V/QcDc5MRE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>1999-07-15T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -2495,7 +2495,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">AC NLB</Name>
                             <Name xml:lang="sl">AC NLB</Name>
@@ -2511,16 +2511,16 @@
 <X509SKI>zLu7htZv+L60RyJ3s7at1wFZlk0=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2554,14 +2554,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">AC NLB</Name>
 <Name xml:lang="sl">AC NLB</Name>
@@ -2574,15 +2574,15 @@
     <X509SKI>zLu7htZv+L60RyJ3s7at1wFZlk0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2003-05-15T10:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -2620,7 +2620,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ACNLB SubCA</Name>
                         </ServiceName>
@@ -2635,26 +2635,26 @@
 <X509SKI>RU+8a+pK6os=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2667,10 +2667,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2683,10 +2683,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2699,10 +2699,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2715,10 +2715,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2731,10 +2731,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2747,9 +2747,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2767,7 +2767,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ACNLB RootCA</Name>
                             <Name xml:lang="sl">ACNLB RootCA</Name>
@@ -2783,22 +2783,22 @@
 <X509SKI>SnnBXjKBxoc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -2849,7 +2849,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">POŠTArCA</Name>
                             <Name xml:lang="sl">POŠTArCA</Name>
@@ -2865,21 +2865,21 @@
 <X509SKI>P73Njt++0WtlRD9g7OpCLjBwH2g=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2916,9 +2916,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2955,10 +2955,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2975,10 +2975,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/NotQualified"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -2995,9 +2995,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3034,9 +3034,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3077,7 +3077,7 @@
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">POŠTArCA</Name>
 <Name xml:lang="sl">POŠTArCA</Name>
@@ -3090,14 +3090,14 @@
     <X509SKI>P73Njt++0WtlRD9g7OpCLjBwH2g=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2003-03-17T11:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TSA 1</Name>
                             <Name xml:lang="sl">TSA 1</Name>
@@ -3113,12 +3113,12 @@
 <X509SKI>+x6zdYvzz43ef0bJmPNxB5p4L78=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">TSA 1</Name>
 <Name xml:lang="sl">TSA 1</Name>
@@ -3131,11 +3131,11 @@
     <X509SKI>+x6zdYvzz43ef0bJmPNxB5p4L78=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">TSA 1</Name>
 <Name xml:lang="sl">TSA 1</Name>
@@ -3148,14 +3148,14 @@
     <X509SKI>+x6zdYvzz43ef0bJmPNxB5p4L78=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2009-10-22T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TSA 2</Name>
                             <Name xml:lang="sl">TSA 2</Name>
@@ -3171,12 +3171,12 @@
 <X509SKI>KRuhctJFWWdn7p5uUAuZXkFxqzU=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">TSA 2</Name>
 <Name xml:lang="sl">TSA 2</Name>
@@ -3189,11 +3189,11 @@
     <X509SKI>KRuhctJFWWdn7p5uUAuZXkFxqzU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">TSA 2</Name>
 <Name xml:lang="sl">TSA 2</Name>
@@ -3206,14 +3206,14 @@
     <X509SKI>KRuhctJFWWdn7p5uUAuZXkFxqzU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2009-11-10T10:06:22Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">POSTArCA Root</Name>
                             <Name xml:lang="sl">POSTArCA Root</Name>
@@ -3229,27 +3229,27 @@
 <X509SKI>Q4mm6xeKb34=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -3257,7 +3257,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">POSTArCA G2</Name>
                             <Name xml:lang="sl">POSTArCA G2</Name>
@@ -3273,30 +3273,30 @@
 <X509SKI>SwDt8g6Xo3w=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForWSA"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForWSA"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3309,9 +3309,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3324,9 +3324,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3339,9 +3339,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3354,10 +3354,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3370,10 +3370,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3386,10 +3386,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3402,10 +3402,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3418,10 +3418,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3434,10 +3434,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3450,10 +3450,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3466,11 +3466,11 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCQSCDManagedOnBehalf"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3488,7 +3488,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Qualified electronic time stamps</Name>
                             <Name xml:lang="sl">Kvalificiran elektronski žig</Name>
@@ -3504,13 +3504,13 @@
 <X509SKI>SwDt8g6Xo3w=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TSA 1</Name>
                             <Name xml:lang="sl">TSA 1</Name>
@@ -3526,13 +3526,13 @@
 <X509SKI>w5kmKPjDIh2/ejLe9z1d9jWuC38=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TSA 2</Name>
                             <Name xml:lang="sl">TSA 2</Name>
@@ -3548,7 +3548,7 @@
 <X509SKI>NHbu7ceZjVT4UI/3BaAvEAN0EzE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-07-05T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
@@ -3596,7 +3596,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Restricted</Name>
                             <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3612,19 +3612,19 @@
 <X509SKI>Sc8CmU1ss5E=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3637,11 +3637,11 @@
     <X509SKI>Sc8CmU1ss5E=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2014-04-01T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3654,14 +3654,14 @@
     <X509SKI>Sc8CmU1ss5E=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-04-01T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Restricted</Name>
                             <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3677,19 +3677,19 @@
 <X509SKI>STWRTVW/mQc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-12-18T01:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3702,18 +3702,18 @@
     <X509SKI>STWRTVW/mQc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3726,14 +3726,14 @@
     <X509SKI>STWRTVW/mQc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2011-03-28T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Restricted</Name>
                             <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3749,16 +3749,16 @@
 <X509SKI>TH1VCOe/QH4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -3805,14 +3805,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3825,15 +3825,15 @@
     <X509SKI>TH1VCOe/QH4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-02-06T23:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="atLeastOne">
                 <ns5:PolicySet>
@@ -3884,7 +3884,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Restricted</Name>
                             <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3900,19 +3900,19 @@
 <X509SKI>TH1VCOe/QH4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SIMoD-CA-Restricted</Name>
 <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -3925,14 +3925,14 @@
     <X509SKI>TH1VCOe/QH4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-07-17T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">tsa1pki</Name>
                             <Name xml:lang="sl">tsa1pki</Name>
@@ -3948,12 +3948,12 @@
 <X509SKI>TjgBSom3twE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">tsa1pki</Name>
 <Name xml:lang="sl">tsa1pki</Name>
@@ -3966,11 +3966,11 @@
     <X509SKI>TjgBSom3twE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2013-12-12T23:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">tsa1pki</Name>
 <Name xml:lang="sl">tsa1pki</Name>
@@ -3983,14 +3983,14 @@
     <X509SKI>TjgBSom3twE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2010-12-13T10:23:48Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">tsa1pki</Name>
                             <Name xml:lang="sl">tsa1pki</Name>
@@ -4006,12 +4006,12 @@
 <X509SKI>SJo9LplwKR4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">tsa1pki</Name>
 <Name xml:lang="sl">tsa1pki</Name>
@@ -4024,14 +4024,14 @@
     <X509SKI>SJo9LplwKR4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-09-13T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Restricted</Name>
                             <Name xml:lang="sl">SIMoD-CA-Restricted</Name>
@@ -4047,26 +4047,26 @@
 <X509SKI>Qj5j9uUaq08=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -4079,9 +4079,9 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESig"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -4094,10 +4094,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -4110,10 +4110,10 @@
     </ns5:QualificationElement>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCStatement"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForESeal"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCForLegalPerson"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="atLeastOne">
             <ns5:PolicySet>
@@ -4131,7 +4131,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SIMoD-CA-Root</Name>
                             <Name xml:lang="sl">SIMoD-CA-Root</Name>
@@ -4147,22 +4147,22 @@
 <X509SKI>RmxV0DffKvo=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-06-29T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -4212,7 +4212,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/EDS/Q</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/EDS/Q</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">EIUS QMAIL</Name>
                             <Name xml:lang="sl">VEP.SI</Name>
@@ -4228,13 +4228,13 @@
 <X509SKI>R7EuXzPfXUM=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-05T00:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">EIUS VALIDATOR</Name>
                             <Name xml:lang="sl">VEP.SI VALIDATOR</Name>
@@ -4250,17 +4250,17 @@
 <X509SKI>TeaLEJh3fmQ=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-05T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -4268,7 +4268,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">EIUS TSA</Name>
                             <Name xml:lang="sl">EIUS TS</Name>
@@ -4284,11 +4284,11 @@
 <X509SKI>QnNpp8HsQ1w=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-05T00:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
             </TSPServices>
         </TrustServiceProvider>
     </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-9dab1a3e4eb8c5f18373b72b8811b671"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>/AORbb8lCO+7U2na/90y/DgMYrBV86nHsXTut3/VXnQ=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-9dab1a3e4eb8c5f18373b72b8811b671"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>sQUbomilEk4H5PUhgJOr4XFv2l/X4UPAdNyFAO35evw=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-9dab1a3e4eb8c5f18373b72b8811b671">Z7nP/DURPqIjq3VAcBzw9aaQCQtxVIBwUx2/v+62+xOftirPOZoDDBCqu1KkkS0JNco7kHXi3AloINPyYjXmmn1GOcaSHjYRTpBl8JjKlP/iWen74PChJljAbLkldFeO4Ka8LE4j9LMy/x5TfnTshovyVW+ncsgJGpYq0AZ6yqCJPP9X/YNvwwwPHCyH6EegdHut0BuYhnXTMyIvGabk+VfAn4ww+3IeJTww59NRyI0BCOwFGgmvaKGCEnTv71jRlt7biIS8uDPLzXreKQL8S6p/LJ8Y9FMU0LArSs3br35AqrNA+GmoPablaGk7RMkMG8Lu9ElBPuTVLMwkUTtlGA==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIELzCCAxegAwIBAgIFLvZjf4IwDQYJKoZIhvcNAQELBQAwga4xCzAJBgNVBAYTAlNJMWEwXwYDVQQKE1hSZXB1YmxpYyBvZiBTbG92ZW5pYSwgTWluaXN0cnkgb2YgUHVibGljIEFkbWluaXN0cmF0aW9uLCBJbmZvcm1hdGlvbiBTb2NpZXR5IERpcmVjdG9yYXRlMRgwFgYDVQQDDA9NYXJqYW4gS2F2xI1pxI0xDzANBgNVBCoTBk1hcmphbjERMA8GA1UEBAwIS2F2xI1pxI0wHhcNMTcwMjIxMTM1ODAwWhcNMjAwMjIxMTM1ODAwWjCBrjELMAkGA1UEBhMCU0kxYTBfBgNVBAoTWFJlcHVibGljIG9mIFNsb3ZlbmlhLCBNaW5pc3RyeSBvZiBQdWJsaWMgQWRtaW5pc3RyYXRpb24sIEluZm9ybWF0aW9uIFNvY2lldHkgRGlyZWN0b3JhdGUxGDAWBgNVBAMMD01hcmphbiBLYXbEjWnEjTEPMA0GA1UEKhMGTWFyamFuMREwDwYDVQQEDAhLYXbEjWnEjTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDVwmQKl8jIWNi2xJU0sIWsJtBxN1nGBgi++nWymLbBvSkeDU1FwKE7fBnYML/AzX1YRik3eZwDpzW87EJI95jB35HzdbWNA4Nc77QOjbx96WSIf55AtgLV5LpCuXTbKD1tloUiplG3TkqCxpfOsTAwCpFLUFMcoqR6RHtwKOdYPl651nlGn0JNAcNxBDHA5jkYgozYLFM1Udxf56S3rYLOSIbxB7w8PmJF/XTaTSC9K1vYcwi614xFtwugrYsqME0lC2AcB306NzikcxRjoZbmMQXRx3QJ0uLuj1EUrc85jBUUEfPPPiLczEmxdaazj1DBQ2AcEwirMk08OUanf30CAwEAAaNSMFAwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU5cVRr8/DUJm9oy2ek2L4NIHyMQYwDgYDVR0PAQH/BAQDAgbAMBEGA1UdJQQKMAgGBgQAkTcDADANBgkqhkiG9w0BAQsFAAOCAQEAT97btTH9R+QgN3AQO5NY3AN47uG1Efwm1Vq6w0obZvuYs61sdMBVsAvcORNUCh3kVw7PhZ9PJJaAV7RDITY5W8hucMnvWrl60ezxPuUaGKG/reQbRGxD/6wXMGXYgRNexrYrmueseq9/xg4w/n3u2xRzdOjsYA5ork94Kn+OaJmEZbpRFcijm1n0i5TbNPF5ArsKDsBbvGhMQeZ5NaPzVfzDYhR2GxV7v8+6jLUAhlXpU1pUA1L2lXDilMVt0RTRu40uOMV3NPwAFCRVyBJstY0QY5wfL9/KQm6zP1m3bA8Upe2avz01KO8/fcvGa7YPI1aVBeAouMY9acAEuPqIhw==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-9dab1a3e4eb8c5f18373b72b8811b671"><xades:SignedProperties Id="xades-id-9dab1a3e4eb8c5f18373b72b8811b671"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-18T15:43:40Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>84SkvvOTUOab/5JE0+WWd5+eJ4k=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>2.5.4.4=#0c084b6176c48d69c48d,2.5.4.42=#13064d61726a616e,CN=Marjan Kavčič,O=Republic of Slovenia\, Ministry of Public Administration\, Information Society Directorate,C=SI</ds:X509IssuerName><ds:X509SerialNumber>201702211458</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-9dab1a3e4eb8c5f18373b72b8811b671"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>/AORbb8lCO+7U2na/90y/DgMYrBV86nHsXTut3/VXnQ=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-9dab1a3e4eb8c5f18373b72b8811b671"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>sQUbomilEk4H5PUhgJOr4XFv2l/X4UPAdNyFAO35evw=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-9dab1a3e4eb8c5f18373b72b8811b671">Z7nP/DURPqIjq3VAcBzw9aaQCQtxVIBwUx2/v+62+xOftirPOZoDDBCqu1KkkS0JNco7kHXi3AloINPyYjXmmn1GOcaSHjYRTpBl8JjKlP/iWen74PChJljAbLkldFeO4Ka8LE4j9LMy/x5TfnTshovyVW+ncsgJGpYq0AZ6yqCJPP9X/YNvwwwPHCyH6EegdHut0BuYhnXTMyIvGabk+VfAn4ww+3IeJTww59NRyI0BCOwFGgmvaKGCEnTv71jRlt7biIS8uDPLzXreKQL8S6p/LJ8Y9FMU0LArSs3br35AqrNA+GmoPablaGk7RMkMG8Lu9ElBPuTVLMwkUTtlGA==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIELzCCAxegAwIBAgIFLvZjf4IwDQYJKoZIhvcNAQELBQAwga4xCzAJBgNVBAYTAlNJMWEwXwYDVQQKE1hSZXB1YmxpYyBvZiBTbG92ZW5pYSwgTWluaXN0cnkgb2YgUHVibGljIEFkbWluaXN0cmF0aW9uLCBJbmZvcm1hdGlvbiBTb2NpZXR5IERpcmVjdG9yYXRlMRgwFgYDVQQDDA9NYXJqYW4gS2F2xI1pxI0xDzANBgNVBCoTBk1hcmphbjERMA8GA1UEBAwIS2F2xI1pxI0wHhcNMTcwMjIxMTM1ODAwWhcNMjAwMjIxMTM1ODAwWjCBrjELMAkGA1UEBhMCU0kxYTBfBgNVBAoTWFJlcHVibGljIG9mIFNsb3ZlbmlhLCBNaW5pc3RyeSBvZiBQdWJsaWMgQWRtaW5pc3RyYXRpb24sIEluZm9ybWF0aW9uIFNvY2lldHkgRGlyZWN0b3JhdGUxGDAWBgNVBAMMD01hcmphbiBLYXbEjWnEjTEPMA0GA1UEKhMGTWFyamFuMREwDwYDVQQEDAhLYXbEjWnEjTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALDVwmQKl8jIWNi2xJU0sIWsJtBxN1nGBgi++nWymLbBvSkeDU1FwKE7fBnYML/AzX1YRik3eZwDpzW87EJI95jB35HzdbWNA4Nc77QOjbx96WSIf55AtgLV5LpCuXTbKD1tloUiplG3TkqCxpfOsTAwCpFLUFMcoqR6RHtwKOdYPl651nlGn0JNAcNxBDHA5jkYgozYLFM1Udxf56S3rYLOSIbxB7w8PmJF/XTaTSC9K1vYcwi614xFtwugrYsqME0lC2AcB306NzikcxRjoZbmMQXRx3QJ0uLuj1EUrc85jBUUEfPPPiLczEmxdaazj1DBQ2AcEwirMk08OUanf30CAwEAAaNSMFAwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU5cVRr8/DUJm9oy2ek2L4NIHyMQYwDgYDVR0PAQH/BAQDAgbAMBEGA1UdJQQKMAgGBgQAkTcDADANBgkqhkiG9w0BAQsFAAOCAQEAT97btTH9R+QgN3AQO5NY3AN47uG1Efwm1Vq6w0obZvuYs61sdMBVsAvcORNUCh3kVw7PhZ9PJJaAV7RDITY5W8hucMnvWrl60ezxPuUaGKG/reQbRGxD/6wXMGXYgRNexrYrmueseq9/xg4w/n3u2xRzdOjsYA5ork94Kn+OaJmEZbpRFcijm1n0i5TbNPF5ArsKDsBbvGhMQeZ5NaPzVfzDYhR2GxV7v8+6jLUAhlXpU1pUA1L2lXDilMVt0RTRu40uOMV3NPwAFCRVyBJstY0QY5wfL9/KQm6zP1m3bA8Upe2avz01KO8/fcvGa7YPI1aVBeAouMY9acAEuPqIhw==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-9dab1a3e4eb8c5f18373b72b8811b671"><xades:SignedProperties Id="xades-id-9dab1a3e4eb8c5f18373b72b8811b671"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-18T15:43:40Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>84SkvvOTUOab/5JE0+WWd5+eJ4k=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>2.5.4.4=#0c084b6176c48d69c48d,2.5.4.42=#13064d61726a616e,CN=Marjan Kavčič,O=Republic of Slovenia\, Ministry of Public Administration\, Information Society Directorate,C=SI</ds:X509IssuerName><ds:X509SerialNumber>201702211458</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

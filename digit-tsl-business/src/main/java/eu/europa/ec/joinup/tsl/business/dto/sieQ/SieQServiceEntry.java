@@ -24,14 +24,9 @@ public class SieQServiceEntry {
         this.qualifiers = new ArrayList<>();
         if (!CollectionUtils.isEmpty(list)) {
             for (String qualifier : list) {
-                this.qualifiers.add(qualifier.replace("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/", ""));
+                this.qualifiers.add(qualifier.replace("https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/", ""));
             }
-            this.qualifiers.sort(new Comparator<String>() {
-                @Override
-                public int compare(String o1, String o2) {
-                    return o1.compareTo(o2);
-                }
-            });
+            this.qualifiers.sort(Comparator.naturalOrder());
         }
     }
 

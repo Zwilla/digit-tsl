@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayOutputStream;
@@ -50,43 +30,35 @@ public class AlertingService extends AbstractAlertingService {
     }
 
     @Override
-    public boolean sendNewTLReport(int tlId) {
-        return false;
+    public void sendNewTLReport(int tlId) {
     }
 
     @Override
-    public boolean sendNotificationPublished(DBTrustedLists lotl, DBCountries country, Set<DBNotification> notifications) {
-        return false;
+    public void sendNotificationPublished(DBTrustedLists lotl, DBCountries country, Set<DBNotification> notifications) {
     }
 
     @Override
-    public boolean sendNewSigningCertificate() {
-        return false;
+    public void sendNewSigningCertificate() {
     }
 
     @Override
-    public boolean sendRetentionJobReport(RetentionAlertDTO retentionAlert) {
-        return false;
+    public void sendRetentionJobReport(RetentionAlertDTO retentionAlert) {
     }
 
     @Override
-    public boolean sendSignatureAlert(DBTrustedLists dbTL, TLSignature tmpSignature) {
-        return false;
+    public void sendSignatureAlert(DBTrustedLists dbTL, TLSignature tmpSignature) {
     }
 
     @Override
-    public boolean sendAvailabilityAlert(DBTrustedLists dbTL) {
-        return false;
+    public void sendAvailabilityAlert(DBTrustedLists dbTL) {
     }
 
     @Override
-    public boolean sendBreakAlert(TLBreakStatus breakStatus) {
-        return false;
+    public void sendBreakAlert(TLBreakStatus breakStatus) {
     }
 
     @Override
-    public boolean sendDailyUnavailabilityAlert(Date today, ByteArrayOutputStream unavailabilityReportOS) {
-        return false;
+    public void sendDailyUnavailabilityAlert(Date today, ByteArrayOutputStream unavailabilityReportOS) {
     }
 
     @Override
@@ -100,8 +72,7 @@ public class AlertingService extends AbstractAlertingService {
     }
 
     @Override
-    public boolean sendTLCacheIssue(String country, String currentDigest, String otherDigest, int index) {
-        return false;
+    public void sendTLCacheIssue(String country, String currentDigest, String otherDigest, int index) {
     }
 
 }

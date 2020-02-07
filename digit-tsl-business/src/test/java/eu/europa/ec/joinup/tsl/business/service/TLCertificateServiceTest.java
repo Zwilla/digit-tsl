@@ -1,27 +1,8 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
@@ -90,11 +71,11 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
     @Test
     @SuppressWarnings("deprecation")
     public void getByCountryCode() {
-        List<CertificateElement> certElements = certificateService.getByCountryCode("EU", TLType.LOTL, new Date(117, 6, 6, 12, 00));
+        List<CertificateElement> certElements = certificateService.getByCountryCode("EU", TLType.LOTL, new Date(117, Calendar.JULY, 6, 12, 0));
         Assert.assertNotNull(certElements);
         Assert.assertEquals(4, certElements.size());
 
-        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, 6, 6, 12, 00), TLType.LOTL);
+        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, Calendar.JULY, 6, 12, 0), TLType.LOTL);
         Assert.assertNotNull(certElements);
         Assert.assertEquals(4, certElements.size());
         CertificateElement cert = certElements.get(0);
@@ -102,18 +83,18 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
         Assert.assertTrue(cert.isExpired());
         Assert.assertEquals(-248, cert.getExpirationIn());
         // Not before 01/01/2015
-        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(115, 0, 0, 12, 00), TLType.LOTL);
+        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(115, Calendar.JANUARY, 0, 12, 0), TLType.LOTL);
         Assert.assertEquals(3, certElements.size());
 
         // Not before 01/01/2011
-        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(111, 0, 0, 12, 00), TLType.LOTL);
+        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(111, Calendar.JANUARY, 0, 12, 0), TLType.LOTL);
         Assert.assertEquals(0, certElements.size());
     }
 
     @Test
     @SuppressWarnings("deprecation")
     public void getByCountryCodeAndExpirationDate() {
-        Date expirationDate = new Date(118, 6, 19, 12, 00);
+        Date expirationDate = new Date(118, Calendar.JULY, 19, 12, 0);
         List<CertificateElement> certElements = certificateService.getExpiredCertificateByCountryCode("EU", expirationDate, TLType.LOTL, new Date());
         Assert.assertNotNull(certElements);
         Assert.assertEquals(1, certElements.size());
@@ -125,10 +106,10 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
         List<DBCertificate> dbCerts = certificateRepository.findAll();
         Assert.assertEquals(84, dbCerts.size());
 
-        List<CertificateElement> certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, 6, 6, 12, 00), TLType.LOTL);
+        List<CertificateElement> certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, Calendar.JULY, 6, 12, 0), TLType.LOTL);
         Assert.assertEquals(4, certElements.size());
         certificateService.deleteByCountryCode("EU", TLType.LOTL);
-        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, 6, 6, 12, 00), TLType.LOTL);
+        certElements = certificateService.getByCountryCodeBeforeDate("EU", new Date(117, Calendar.JULY, 6, 12, 0), TLType.LOTL);
         Assert.assertEquals(0, certElements.size());
 
         dbCerts = certificateRepository.findAll();
@@ -175,7 +156,7 @@ public class TLCertificateServiceTest extends AbstractSpringTest {
                     // Good cert
                     ArrayUtils.contains(goodCerts, file.getName());
                     Set<ServiceDataDTO> rootServices = certificateService.getServicesByCertificate(ca, svc);
-                    Assert.assertTrue(!rootServices.isEmpty());
+                    Assert.assertFalse(rootServices.isEmpty());
                     if (file.getName().equals("5E2FDC8BDFC7F3B1DF8B34EA0B10E7550F90F894219AB43C35F47F24A645D7AD.cer")) {
                         // 3 Services use the same root CA
                         Assert.assertEquals(3, rootServices.size());

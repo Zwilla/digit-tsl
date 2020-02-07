@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.data.stats;
 
 import eu.europa.ec.joinup.tsl.business.constant.ServiceLegalType;
@@ -43,12 +23,12 @@ public class StatisticType {
         nbInactiveTOB = 0;
     }
 
-    public void incrementCounter(Boolean isActive, Boolean isTOB) {
+    public void incrementCounter(boolean isActive, boolean isTOB) {
         if (isActive && !isTOB) {
             nbActive = nbActive + 1;
-        } else if (isActive && isTOB) {
+        } else if (isActive) {
             nbActiveTOB = nbActiveTOB + 1;
-        } else if (!isActive && !isTOB) {
+        } else if (!isTOB) {
             nbInactive = nbInactive + 1;
         } else {
             nbInactiveTOB = nbInactiveTOB + 1;
@@ -58,7 +38,7 @@ public class StatisticType {
     /**
      * Return if type has at least one service
      */
-    public Boolean hasService() {
+    public boolean hasService() {
         return ((nbActive > 0) || (nbActiveTOB > 0) || (nbInactive > 0) || (nbInactiveTOB > 0));
     }
 

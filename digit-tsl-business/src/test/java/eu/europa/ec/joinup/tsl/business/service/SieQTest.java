@@ -102,18 +102,18 @@ public class SieQTest extends AbstractSpringTest {
             processTL(tl);
         }
 
-        atoKu.append("Results: " + indexAtoKu + bL);
-        allKu.append("Results: " + indexAllKu + bL);
-        noneKu.append("Results: " + indexNoneKu + bL);
-        atoPs.append("Results: " + indexAtoPs + bL);
-        allPs.append("Results: " + indexAllPs + bL);
-        nonePs.append("Results: " + indexNonePs + bL);
-        atoOther.append("Results: " + indexAtoOther + bL);
-        allOther.append("Results: " + indexAllOther + bL);
-        noneOther.append("Results: " + indexNoneOther + bL);
-        atoCriteria.append("Results: " + indexAtoCriteria + bL);
-        allCriteria.append("Results: " + indexAllCriteria + bL);
-        noneCriteria.append("Results: " + indexNoneCriteria + bL);
+        atoKu.append("Results: ").append(indexAtoKu).append(bL);
+        allKu.append("Results: ").append(indexAllKu).append(bL);
+        noneKu.append("Results: ").append(indexNoneKu).append(bL);
+        atoPs.append("Results: ").append(indexAtoPs).append(bL);
+        allPs.append("Results: ").append(indexAllPs).append(bL);
+        nonePs.append("Results: ").append(indexNonePs).append(bL);
+        atoOther.append("Results: ").append(indexAtoOther).append(bL);
+        allOther.append("Results: ").append(indexAllOther).append(bL);
+        noneOther.append("Results: ").append(indexNoneOther).append(bL);
+        atoCriteria.append("Results: ").append(indexAtoCriteria).append(bL);
+        allCriteria.append("Results: ").append(indexAllCriteria).append(bL);
+        noneCriteria.append("Results: ").append(indexNoneCriteria).append(bL);
 
         FileUtils.write(new File("src/test/resources/sieQ-AtLeastOne-KeyUsage.txt"), atoKu.toString(), StandardCharsets.UTF_8);
         FileUtils.write(new File("src/test/resources/sieQ-All-KeyUsage.txt"), allKu.toString(), StandardCharsets.UTF_8);
@@ -166,49 +166,47 @@ public class SieQTest extends AbstractSpringTest {
         int indexPolicyList = 0;
         boolean otherItems = false;
         boolean criteriaList = false;
-        sb.append(serviceInfo + tab + tab + "Qualifiers: " + getQualifiers(qE.getQualifTypeList()) + bL);
+        sb.append(serviceInfo).append(tab).append(tab).append("Qualifiers: ").append(getQualifiers(qE.getQualifTypeList())).append(bL);
         final TLCriteria criteria = qE.getCriteria();
-        sb.append(tab + tab + "Assert: " + criteria.getAsserts() + bL);
-        if (criteria != null) {
-            // Key Usage
-            if (!CollectionUtils.isEmpty(criteria.getKeyUsage())) {
-                int i = 1;
-                for (TLKeyUsage keyUsage : criteria.getKeyUsage()) {
-                    indexKeyUsage = indexKeyUsage + keyUsage.getKeyUsageBit().size();
-                    sb.append(tab + tab + "KeyUsage n° " + i + " - " + keyUsage.getKeyUsageBit().size() + " bit" + bL);
-                    i++;
-                }
-                sb.append(bL);
+        sb.append(tab + tab + "Assert: ").append(criteria.getAsserts()).append(bL);
+        // Key Usage
+        if (!CollectionUtils.isEmpty(criteria.getKeyUsage())) {
+            int i = 1;
+            for (TLKeyUsage keyUsage : criteria.getKeyUsage()) {
+                indexKeyUsage = indexKeyUsage + keyUsage.getKeyUsageBit().size();
+                sb.append(tab + tab + "KeyUsage n° ").append(i).append(" - ").append(keyUsage.getKeyUsageBit().size()).append(" bit").append(bL);
+                i++;
             }
-            // Policy List
-            if (!CollectionUtils.isEmpty(criteria.getPolicyList())) {
-                int i = 1;
-                for (TLPolicies policy : criteria.getPolicyList()) {
-                    indexPolicyList = indexPolicyList + policy.getPolicyBit().size();
-                    sb.append(tab + tab + "Policy set " + i + " - " + policy.getPolicyBit().size() + " OID" + bL);
-                    i++;
-                }
-                sb.append(bL);
+            sb.append(bL);
+        }
+        // Policy List
+        if (!CollectionUtils.isEmpty(criteria.getPolicyList())) {
+            int i = 1;
+            for (TLPolicies policy : criteria.getPolicyList()) {
+                indexPolicyList = indexPolicyList + policy.getPolicyBit().size();
+                sb.append(tab + tab + "Policy set ").append(i).append(" - ").append(policy.getPolicyBit().size()).append(" OID").append(bL);
+                i++;
             }
-            // Other criteria
-            if (criteria.getOtherList() != null) {
-                if (criteria.getOtherList().getCertDnaList() != null) {
-                    sb.append(tab + tab + "Cert DNA " + criteria.getOtherList().getCertDnaList().size());
-                    otherItems = true;
-                }
-                if (criteria.getOtherList().getExtendedKeyUsageList() != null) {
-                    sb.append(tab + tab + "Ext KeyUsage " + criteria.getOtherList().getExtendedKeyUsageList().size());
-                    otherItems = true;
-                }
+            sb.append(bL);
+        }
+        // Other criteria
+        if (criteria.getOtherList() != null) {
+            if (criteria.getOtherList().getCertDnaList() != null) {
+                sb.append(tab + tab + "Cert DNA ").append(criteria.getOtherList().getCertDnaList().size());
+                otherItems = true;
             }
-            // Criteria List
-            if (!CollectionUtils.isEmpty(criteria.getCriteriaList())) {
-                sb.append(tab + tab + "Criteria list " + criteria.getCriteriaList().size());
-                for (TLCriteria tlCriteria : criteria.getCriteriaList()) {
-                    processCriteria(sb, tlCriteria);
-                }
-                criteriaList = true;
+            if (criteria.getOtherList().getExtendedKeyUsageList() != null) {
+                sb.append(tab + tab + "Ext KeyUsage ").append(criteria.getOtherList().getExtendedKeyUsageList().size());
+                otherItems = true;
             }
+        }
+        // Criteria List
+        if (!CollectionUtils.isEmpty(criteria.getCriteriaList())) {
+            sb.append(tab + tab + "Criteria list ").append(criteria.getCriteriaList().size());
+            for (TLCriteria tlCriteria : criteria.getCriteriaList()) {
+                processCriteria(sb, tlCriteria);
+            }
+            criteriaList = true;
         }
         sb.append(bL + bL);
 
@@ -276,51 +274,49 @@ public class SieQTest extends AbstractSpringTest {
     }
 
     private void processCriteria(StringBuilder sb, TLCriteria criteria) {
-        sb.append(tab + tab + "Assert: " + criteria.getAsserts() + bL);
-        if (criteria != null) {
-            // Key Usage
-            if (!CollectionUtils.isEmpty(criteria.getKeyUsage())) {
-                int i = 1;
-                for (TLKeyUsage keyUsage : criteria.getKeyUsage()) {
-                    sb.append(tab + tab + "KeyUsage n° " + i + " - " + keyUsage.getKeyUsageBit().size() + " bit" + bL);
-                    i++;
-                }
-                sb.append(bL);
+        sb.append(tab + tab + "Assert: ").append(criteria.getAsserts()).append(bL);
+        // Key Usage
+        if (!CollectionUtils.isEmpty(criteria.getKeyUsage())) {
+            int i = 1;
+            for (TLKeyUsage keyUsage : criteria.getKeyUsage()) {
+                sb.append(tab + tab + "KeyUsage n° ").append(i).append(" - ").append(keyUsage.getKeyUsageBit().size()).append(" bit").append(bL);
+                i++;
             }
-            // Policy List
-            if (!CollectionUtils.isEmpty(criteria.getPolicyList())) {
-                int i = 1;
-                for (TLPolicies policy : criteria.getPolicyList()) {
-                    sb.append(tab + tab + "Policy set " + i + " - " + policy.getPolicyBit().size() + " OID" + bL);
-                    i++;
-                }
-                sb.append(bL);
+            sb.append(bL);
+        }
+        // Policy List
+        if (!CollectionUtils.isEmpty(criteria.getPolicyList())) {
+            int i = 1;
+            for (TLPolicies policy : criteria.getPolicyList()) {
+                sb.append(tab + tab + "Policy set ").append(i).append(" - ").append(policy.getPolicyBit().size()).append(" OID").append(bL);
+                i++;
             }
-            // Other criteria
-            if (criteria.getOtherList() != null) {
-                if (criteria.getOtherList().getCertDnaList() != null) {
-                    sb.append(tab + tab + "Cert DNA " + criteria.getOtherList().getCertDnaList().size());
-                }
-                if (criteria.getOtherList().getExtendedKeyUsageList() != null) {
-                    sb.append(tab + tab + "Ext KeyUsage " + criteria.getOtherList().getExtendedKeyUsageList().size());
-                }
+            sb.append(bL);
+        }
+        // Other criteria
+        if (criteria.getOtherList() != null) {
+            if (criteria.getOtherList().getCertDnaList() != null) {
+                sb.append(tab + tab + "Cert DNA ").append(criteria.getOtherList().getCertDnaList().size());
             }
-            // Criteria List
-            if (!CollectionUtils.isEmpty(criteria.getCriteriaList())) {
-                sb.append(tab + tab + "Criteria list " + criteria.getCriteriaList().size());
-                for (TLCriteria tlCriteria : criteria.getCriteriaList()) {
-                    processCriteria(sb, tlCriteria);
-                }
+            if (criteria.getOtherList().getExtendedKeyUsageList() != null) {
+                sb.append(tab + tab + "Ext KeyUsage ").append(criteria.getOtherList().getExtendedKeyUsageList().size());
+            }
+        }
+        // Criteria List
+        if (!CollectionUtils.isEmpty(criteria.getCriteriaList())) {
+            sb.append(tab + tab + "Criteria list ").append(criteria.getCriteriaList().size());
+            for (TLCriteria tlCriteria : criteria.getCriteriaList()) {
+                processCriteria(sb, tlCriteria);
             }
         }
         sb.append(bL + bL);
     }
 
     private String getQualifiers(List<String> qualifTypeList) {
-        String qualifiers = "";
+        StringBuilder qualifiers = new StringBuilder();
         for (String qualif : qualifTypeList) {
-            qualifiers = qualifiers + qualif.replace("http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/", "") + "; ";
+            qualifiers.append(qualif.replace("https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/", "")).append("; ");
         }
-        return qualifiers;
+        return qualifiers.toString();
     }
 }

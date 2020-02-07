@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" TSLTag="http://uri.etsi.org/19612/TSLTag" Id="TSL_CZ">
+<TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" TSLTag="https://uri.etsi.org/19612/TSLTag" Id="TSL_CZ">
 	<SchemeInformation>
 		<TSLVersionIdentifier>5</TSLVersionIdentifier>
 		<TSLSequenceNumber>72</TSLSequenceNumber>
-		<TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+		<TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
 		<SchemeOperatorName>
 			<Name xml:lang="en">Ministry of the Interior of the Czech Republic</Name>
 			<Name xml:lang="cs">Ministerstvo vnitra České republiky</Name>
@@ -35,10 +35,10 @@
 		<SchemeInformationURI>
 			<URI xml:lang="en">http://tsl.gov.cz/doc/scheme-information_en.pdf</URI>
 		</SchemeInformationURI>
-		<StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+		<StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
 		<SchemeTypeCommunityRules>
-			<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-			<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
+			<URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+			<URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
 		</SchemeTypeCommunityRules>
 		<SchemeTerritory>CZ</SchemeTerritory>
 		<PolicyOrLegalNotice>
@@ -93,7 +93,7 @@
 				<TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
 				<AdditionalInformation>
 					<OtherInformation>
-						<TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+						<TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
 					</OtherInformation>
 					<OtherInformation>
 						<SchemeTerritory>EU</SchemeTerritory>
@@ -108,7 +108,7 @@
 					</OtherInformation>
 					<OtherInformation>
 						<SchemeTypeCommunityRules>
-							<URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+							<URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
 						</SchemeTypeCommunityRules>
 					</OtherInformation>
 				</AdditionalInformation>
@@ -152,7 +152,7 @@
 			<TSPServices>
 				<TSPService>
 					<ServiceInformation>
-						<ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+						<ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
 						<ServiceName>
 							<Name xml:lang="en">Name</Name>
 						</ServiceName>
@@ -167,15 +167,15 @@
 								<X509SKI>ToSecss7KY0=</X509SKI>
 							</DigitalId>
 						</ServiceDigitalIdentity>
-						<ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+						<ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
 						<StatusStartingTime>2019-05-28T22:00:00Z</StatusStartingTime>
 						<ServiceInformationExtensions>
 							<Extension Critical="true">
 								<ns5:Qualifications>
 									<ns5:QualificationElement>
 										<ns5:Qualifiers>
-											<ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
-											<ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
+											<ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+											<ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCSSCDStatusAsInCert"/>
 										</ns5:Qualifiers>
 										<ns5:CriteriaList assert="atLeastOne">
 											<ns5:KeyUsage>
@@ -195,7 +195,7 @@
 								<ns5:Qualifications>
 									<ns5:QualificationElement>
 										<ns5:Qualifiers>
-											<ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+											<ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
 										</ns5:Qualifiers>
 										<ns5:CriteriaList assert="atLeastOne">
 											<ns5:PolicySet>
@@ -223,7 +223,7 @@
 								<ns5:Qualifications>
 									<ns5:QualificationElement>
 										<ns5:Qualifiers>
-											<ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+											<ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
 										</ns5:Qualifiers>
 										<ns5:CriteriaList assert="">
 											<ns5:KeyUsage>

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="ID0001" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="ID0001" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>190</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">European Commission</Name>
             <Name xml:lang="bg">Европейска комисия</Name>
@@ -106,9 +106,9 @@
             <URI xml:lang="sv">https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl.html#sv</URI>
             <URI xml:lang="hr">https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl.html#hr</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUlistofthelists</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUlistofthelists</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>EU</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -231,7 +231,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -246,7 +246,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -267,7 +267,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.signatur.rtr.at/currenttl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>AT</SchemeTerritory>
@@ -283,8 +283,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/AT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/AT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -320,7 +320,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://tsl.belgium.be/tsl-be.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>BE</SchemeTerritory>
@@ -338,8 +338,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BE</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -360,7 +360,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://crc.bg/files/_en/TSL_BG.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>BG</SchemeTerritory>
@@ -376,8 +376,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -398,7 +398,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://crc.bg/files/_en/TSL_BG.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>BG</SchemeTerritory>
@@ -414,8 +414,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/BG</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -436,7 +436,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.mcw.gov.cy/mcw/dec/dec.nsf/all/B28C11BBFDBAC045C2257E0D002937E9/$file/TSL-CY-sign.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>CY</SchemeTerritory>
@@ -452,8 +452,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CY</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CY</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -479,7 +479,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://tsl.gov.cz/publ/TSL_CZ.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>CZ</SchemeTerritory>
@@ -495,8 +495,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -522,7 +522,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://tsl.gov.cz/publ/TSL_CZ.xtsl</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>CZ</SchemeTerritory>
@@ -538,8 +538,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/CZ</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -560,7 +560,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.nrca-ds.de/st/TSL-XML.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>DE</SchemeTerritory>
@@ -576,8 +576,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/DE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/DE</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -603,7 +603,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.digst.dk/~/media/Files/Loesninger-og-infrastruktur/NemID/HumanReadabletldkxml.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>DK</SchemeTerritory>
@@ -619,8 +619,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/DK</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/DK</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -646,7 +646,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.digst.dk/~/media/Files/Loesninger-og-infrastruktur/NemID/TLDK.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>DK</SchemeTerritory>
@@ -662,8 +662,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/DK</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/DK</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -684,7 +684,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://sr.riik.ee/tsl/estonian-tsl.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EE</SchemeTerritory>
@@ -700,8 +700,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EE</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -722,7 +722,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://sr.riik.ee/tsl/estonian-tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EE</SchemeTerritory>
@@ -738,8 +738,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EE</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -760,7 +760,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.eett.gr/tsl/EL-TSL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EL</SchemeTerritory>
@@ -778,8 +778,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EL</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EL</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -800,7 +800,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://sede.minetur.gob.es/Prestadores/TSL/TSL.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>ES</SchemeTerritory>
@@ -816,8 +816,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/ES</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/ES</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -838,7 +838,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://sede.minetur.gob.es/Prestadores/TSL/TSL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>ES</SchemeTerritory>
@@ -854,8 +854,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/ES</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/ES</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -881,7 +881,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.viestintavirasto.fi/attachments/HumanReadable_TSL-Ficora.xml.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>FI</SchemeTerritory>
@@ -897,8 +897,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/FI</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/FI</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -924,7 +924,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.viestintavirasto.fi/attachments/TSL-Ficora.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>FI</SchemeTerritory>
@@ -940,8 +940,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/FI</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/FI</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -972,7 +972,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.ssi.gouv.fr/eidas/TL-FR.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>FR</SchemeTerritory>
@@ -988,8 +988,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/FR</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/FR</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1020,7 +1020,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.ssi.gouv.fr/eidas/TL-FR.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>FR</SchemeTerritory>
@@ -1036,8 +1036,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/FR</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/FR</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1068,7 +1068,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.mingo.hr/TLS/TSL-HR.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>HR</SchemeTerritory>
@@ -1084,8 +1084,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/HR</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1106,7 +1106,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.nmhh.hu/tl/pub/HU_TL.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>HU</SchemeTerritory>
@@ -1122,8 +1122,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HU</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/HU</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1144,7 +1144,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.nmhh.hu/tl/pub/HU_TL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>HU</SchemeTerritory>
@@ -1160,8 +1160,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/HU</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/HU</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1192,7 +1192,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://files.dcenr.gov.ie/rh/Irelandtslsigned.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>IE</SchemeTerritory>
@@ -1208,8 +1208,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/IE</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/IE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1225,7 +1225,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.neytendastofa.is/library/Files/TSl/tsl.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>IS</SchemeTerritory>
@@ -1241,8 +1241,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/IS</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/IS</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1258,7 +1258,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.neytendastofa.is/library/Files/TSl/tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>IS</SchemeTerritory>
@@ -1274,8 +1274,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/IS</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/IS</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1296,7 +1296,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://eidas.agid.gov.it/TL/TSL-IT.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>IT</SchemeTerritory>
@@ -1312,8 +1312,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/IT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/IT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1334,7 +1334,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.llv.li/files/ak/xml-llv-ak-tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>LI</SchemeTerritory>
@@ -1350,8 +1350,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LI</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LI</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1372,7 +1372,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://elektroninisparasas.lt/LT-TSL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>LT</SchemeTerritory>
@@ -1388,8 +1388,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1415,7 +1415,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://portail-qualite.public.lu/content/dam/qualite/fr/publications/confiance-numerique/liste-confiance-nationale/tsl-pdf/tsl.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>LU</SchemeTerritory>
@@ -1433,8 +1433,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1460,7 +1460,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://portail-qualite.public.lu/content/dam/qualite/fr/publications/confiance-numerique/liste-confiance-nationale/tsl-xml/tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>LU</SchemeTerritory>
@@ -1478,8 +1478,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1500,7 +1500,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.dvi.gov.lv/en/wp-content/uploads/TSL/tsl-lv.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>LV</SchemeTerritory>
@@ -1516,8 +1516,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LV</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LV</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1538,7 +1538,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.mca.org.mt/tsl/MT_TSL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>MT</SchemeTerritory>
@@ -1553,8 +1553,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/MT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/MT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1575,7 +1575,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.agentschaptelecom.nl/sites/default/files/current-tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>NL</SchemeTerritory>
@@ -1591,8 +1591,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/NL</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/NL</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1618,7 +1618,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://tl-norway.no/TSL/NO_TSL.PDF</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>NO</SchemeTerritory>
@@ -1633,8 +1633,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1660,7 +1660,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://tl-norway.no/TSL/NO_TSL.XML</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>NO</SchemeTerritory>
@@ -1675,8 +1675,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/NO</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1697,7 +1697,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.nccert.pl/tsl/PL_TSL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>PL</SchemeTerritory>
@@ -1713,8 +1713,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/PL</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/PL</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1735,7 +1735,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.gns.gov.pt/media/1891/TSLPTHR.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>PT</SchemeTerritory>
@@ -1751,8 +1751,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/PT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/PT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1773,7 +1773,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.gns.gov.pt/media/1894/TSLPT.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>PT</SchemeTerritory>
@@ -1789,8 +1789,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/PT</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/PT</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1816,7 +1816,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.comunicatii.gov.ro/wp-content/uploads/2017/10/TrustedList-versiunea-pdf.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>RO</SchemeTerritory>
@@ -1833,8 +1833,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/RO</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/RO</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1860,7 +1860,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://www.comunicatii.gov.ro/trustedlist.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>RO</SchemeTerritory>
@@ -1877,8 +1877,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/RO</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/RO</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1899,7 +1899,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>https://trustedlist.pts.se/SE-TL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>SE</SchemeTerritory>
@@ -1915,8 +1915,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SE</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SE</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1947,7 +1947,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.mju.gov.si/fileadmin/mju.gov.si/pageuploads/DID/Informacijska_druzba/eIDAS/SI_TL.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>SI</SchemeTerritory>
@@ -1963,8 +1963,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SI</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SI</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -1985,7 +1985,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://ep.nbu.gov.sk/kca/tsl/tsl.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>SK</SchemeTerritory>
@@ -2001,8 +2001,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SK</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SK</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -2033,7 +2033,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.tscheme.org/UK_TSL/HR_TSL-UKsigned.pdf</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>UK</SchemeTerritory>
@@ -2048,8 +2048,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -2080,7 +2080,7 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                 <TSLLocation>http://www.tscheme.org/UK_TSL/TSL-UKsigned.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>UK</SchemeTerritory>
@@ -2095,8 +2095,8 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/UK</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -2110,4 +2110,4 @@ Europska Komisija održava ovo web-mjesto kao sredstvo za postizanje interoperab
             <URI>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</URI>
         </DistributionPoints>
     </SchemeInformation>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-229897f68a5561095a6f31213e806e3a"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>OpId+blE5j1lZi/CfgiCHLafkp/C0bkHqfEcnAGlGMo=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-229897f68a5561095a6f31213e806e3a"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>kiRVb3w4QoV1dTxeZQk+Y3JLDfX2El1wAC7AwxYFF1U=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-229897f68a5561095a6f31213e806e3a">Wfc+4aagGZQlySulc/gpbbelVrwRGBLZqAQc3o53gDW5HwEl/6n24WMwlz9jPj7IuXs1cz5KM9JREcG408K81Nsw9Qmv5zrlCrLn0aqpqGvv6UCHKCm05rp1hZtIZPdJ+o9xj9Q3ybObGQg8I22fY1xG7YZ92fPq1AMU2bjua8aQAO4UGwzi2IcIWy/3I8GKmnqvdOPsJHRsEnXqD4Z1HDy6w9Ob1Eju2IbvB3Oyu+Im2NJlVQ53CEYXPlfAPrA/tWuCpMgA1tmhwILRUmEilDR2Bq0gYMGsRdnrK7y6rZ74NWlfTNGXPkfIo/BQopg86B3Q6HyEb/i1w6CBq4wsvQ==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-229897f68a5561095a6f31213e806e3a"><xades:SignedProperties Id="xades-id-229897f68a5561095a6f31213e806e3a"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-04T08:08:04Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>A5mi8h7SDKZmn5hTqjmbdp+wp8s=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=LuxTrust Global Qualified CA 3,O=LuxTrust S.A.,C=LU</ds:X509IssuerName><ds:X509SerialNumber>1743254</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-229897f68a5561095a6f31213e806e3a"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>OpId+blE5j1lZi/CfgiCHLafkp/C0bkHqfEcnAGlGMo=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-229897f68a5561095a6f31213e806e3a"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>kiRVb3w4QoV1dTxeZQk+Y3JLDfX2El1wAC7AwxYFF1U=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-229897f68a5561095a6f31213e806e3a">Wfc+4aagGZQlySulc/gpbbelVrwRGBLZqAQc3o53gDW5HwEl/6n24WMwlz9jPj7IuXs1cz5KM9JREcG408K81Nsw9Qmv5zrlCrLn0aqpqGvv6UCHKCm05rp1hZtIZPdJ+o9xj9Q3ybObGQg8I22fY1xG7YZ92fPq1AMU2bjua8aQAO4UGwzi2IcIWy/3I8GKmnqvdOPsJHRsEnXqD4Z1HDy6w9Ob1Eju2IbvB3Oyu+Im2NJlVQ53CEYXPlfAPrA/tWuCpMgA1tmhwILRUmEilDR2Bq0gYMGsRdnrK7y6rZ74NWlfTNGXPkfIo/BQopg86B3Q6HyEb/i1w6CBq4wsvQ==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-229897f68a5561095a6f31213e806e3a"><xades:SignedProperties Id="xades-id-229897f68a5561095a6f31213e806e3a"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-04T08:08:04Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>A5mi8h7SDKZmn5hTqjmbdp+wp8s=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=LuxTrust Global Qualified CA 3,O=LuxTrust S.A.,C=LU</ds:X509IssuerName><ds:X509SerialNumber>1743254</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

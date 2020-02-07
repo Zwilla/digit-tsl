@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
@@ -42,7 +22,7 @@ public class LogManagerService {
     @Value("${logs.folder}")
     private String logFolderPath;
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     /**
      * Look into @logFolderPath and return list of file order by last modification date;
@@ -59,12 +39,7 @@ public class LogManagerService {
                 logFiles.add(new LogFileDTO(file));
             }
         }
-        logFiles.sort(new Comparator<LogFileDTO>() {
-            @Override
-            public int compare(LogFileDTO o1, LogFileDTO o2) {
-                return o2.getLastModificationDate().compareTo(o1.getLastModificationDate());
-            }
-        });
+        logFiles.sort((o1, o2) -> o2.getLastModificationDate().compareTo(o1.getLastModificationDate()));
         return logFiles;
     }
 
@@ -76,7 +51,7 @@ public class LogManagerService {
      *                The file is currently writing or reading
      * @return
      */
-    public Boolean deleteFile(String fileName) {
+    public boolean deleteFile(String fileName) {
         File file = new File(logFolderPath + File.separatorChar + fileName);
         if (file.exists()) {
             try {

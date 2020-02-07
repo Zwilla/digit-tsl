@@ -1,25 +1,6 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import javax.transaction.Transactional;
@@ -80,7 +61,7 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
         assertTrue(pointerUpdated.getId().equalsIgnoreCase(""));
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size() - 1) == nbreLOTL);
+        assertEquals((lotlUpdated.getPointers().size() - 1), nbreLOTL);
     }
 
     @Test
@@ -107,13 +88,13 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
         assertTrue(pointerUpdated.getId().equalsIgnoreCase(lotl.getPointers().get(0).getId()));
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size()) == nbreLOTL);
+        assertEquals((lotlUpdated.getPointers().size()), nbreLOTL);
         TLPointersToOtherTSL editedPointer = lotl.getPointers().get(0);
         assertTrue(editedPointer.getId().equalsIgnoreCase(edtPointer.getId()));
 
-        assertTrue(editedPointer.getMimeType().equals(newPointer.getMimeType()));
-        assertTrue(editedPointer.getSchemeTerritory().equals(newPointer.getSchemeTerritory()));
-        assertTrue(editedPointer.getTlLocation().equals(newPointer.getTlLocation()));
+        assertEquals(editedPointer.getMimeType(), newPointer.getMimeType());
+        assertEquals(editedPointer.getSchemeTerritory(), newPointer.getSchemeTerritory());
+        assertEquals(editedPointer.getTlLocation(), newPointer.getTlLocation());
         assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeOpeName(), newPointer.getSchemeOpeName()));
         assertTrue(CollectionUtils.isEqualCollection(editedPointer.getSchemeTypeCommunity(), newPointer.getSchemeTypeCommunity()));
         assertTrue(CollectionUtils.isEqualCollection(editedPointer.getServiceDigitalId(), newPointer.getServiceDigitalId()));
@@ -129,10 +110,10 @@ public class TLEditPointerServiceTest extends AbstractSpringTest {
 
         int nbre = tlEditPointerService.delete(lotl.getTlId(), lotl.getPointers().get(0), "");
         // CHECK RETURN
-        assertTrue(nbre == 1);
+        assertEquals(1, nbre);
 
         TL lotlUpdated = tlService.getTL(1);
-        assertTrue((lotlUpdated.getPointers().size() + 1) == nbreLOTL);
+        assertEquals((lotlUpdated.getPointers().size() + 1), nbreLOTL);
     }
 
 }

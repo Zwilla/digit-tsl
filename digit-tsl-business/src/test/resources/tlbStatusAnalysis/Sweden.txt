@@ -2,31 +2,31 @@ Sweden
 
     SignGuard Europe AB 
 
-        SignGuard Europe AB - qualified certificate service - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SignGuard Europe AB - qualified certificate service - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        SignGuard Europe AB – Qualified OCSP Service - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        SignGuard Europe AB – Qualified OCSP Service - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     TrustWeaver AB 
 
-        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+        TrustWeaver Signature Validation Service - https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+        TrustWeaver Signature Validation Service - https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        TrustWeaver Signature Validation Service - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+        TrustWeaver Signature Validation Service - https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 

@@ -25,13 +25,12 @@ public class SieQValidatorTest extends AbstractSpringTest {
     private CheckService checkService;
 
     @Test
-    public void testExtension() throws FileNotFoundException, IOException {
+    public void testExtension() throws IOException {
         List<CheckResultDTO> results = new ArrayList<>();
         TL tl = fileToTL(1, "src/test/resources/SIEQ_TEST.xml");
         List<CheckDTO> checks = checkService.getTarget(Tag.SIEQ_CHECK);
         for (CheckDTO check : checks) {
             results.addAll(sieQValidator.validate(check, tl));
         }
-        Assert.assertNotNull(results.size());
     }
 }

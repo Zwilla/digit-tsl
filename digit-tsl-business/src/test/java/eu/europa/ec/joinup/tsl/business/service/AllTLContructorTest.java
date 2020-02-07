@@ -1,25 +1,6 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -56,10 +37,9 @@ public class AllTLContructorTest {
         File folder = new File("src/test/resources/tsl");
         Collection<File> listFiles = FileUtils.listFiles(folder, new String[] { "xml" }, true);
 
-        return listFiles.toArray(new File[listFiles.size()]);
+        return listFiles.toArray(new File[0]);
     }
 
-    private TestContextManager testContextManager;
 
     @Autowired
     TrustedListJaxbService jaxbService;
@@ -69,7 +49,7 @@ public class AllTLContructorTest {
 
     @Before
     public void setUpStringContext() throws Exception {
-        testContextManager = new TestContextManager(getClass());
+        TestContextManager testContextManager = new TestContextManager(getClass());
         testContextManager.prepareTestInstance(this);
     }
 
@@ -83,8 +63,10 @@ public class AllTLContructorTest {
             myTl = tlBuilder.buildTLV4(0, unmarshall);
         }
 
+        assert myTl != null;
+        assert myTl != null;
         assertTrue(StringUtils.isNotEmpty(myTl.getTslTag()));
-        assertTrue(myTl.getSchemeInformation() != null);
+        assertNotNull(myTl.getSchemeInformation());
         assertTrue(StringUtils.isNotEmpty(myTl.getSchemeInformation().getTerritory()));
         assertTrue(myTl.getSchemeInformation().getSequenceNumber() > 0);
         assertTrue(myTl.getSchemeInformation().getTlIdentifier() > 0);

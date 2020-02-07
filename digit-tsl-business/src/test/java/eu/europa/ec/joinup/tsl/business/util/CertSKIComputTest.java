@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.io.IOException;
@@ -61,7 +41,7 @@ public class CertSKIComputTest {
         return DSSUtils.digest(DigestAlgorithm.SHA1, item.getOctets());
     }
 
-    private byte[] computeSKIFromBytes(CertificateToken certificate) throws IOException {
+    private byte[] computeSKIFromBytes(CertificateToken certificate) {
         // DLSequence seq = (DLSequence) DERSequence.fromByteArray(certificate.getPublicKey().getEncoded());
         // DERBitString item = (DERBitString) seq.getObjectAt(1);
         return DSSUtils.digest(DigestAlgorithm.SHA1, certificate.getPublicKey().getEncoded());

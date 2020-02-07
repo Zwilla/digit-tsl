@@ -1,25 +1,6 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import javax.transaction.Transactional;
@@ -78,7 +59,7 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
         assertTrue(svcUpdated.getId().equalsIgnoreCase(""));
 
         TL tlUpdated = tlService.getTL(1);
-        assertTrue((tlUpdated.getServiceProviders().size() - 1) == nbreSvc);
+        assertEquals((tlUpdated.getServiceProviders().size() - 1), nbreSvc);
     }
 
     @Test
@@ -101,7 +82,7 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
         assertTrue(svcUpdated.getId().equalsIgnoreCase(svcDe.getId()));
 
         TL tlUpdated = tlService.getTL(1);
-        assertTrue(tlUpdated.getServiceProviders().size() == nbreSvc);
+        assertEquals(tlUpdated.getServiceProviders().size(), nbreSvc);
         assertTrue(CollectionUtils.isEqualCollection(tlUpdated.getServiceProviders().get(0).getTSPName(), svcBe.getTSPName()));
     }
 
@@ -115,10 +96,10 @@ public class TLEditServiceProviderServiceTest extends AbstractSpringTest {
 
         int nbre = tlEditServiceProviderService.delete(detl.getTlId(), detl.getServiceProviders().get(0));
         // CHECK RETURN
-        assertTrue(nbre == 1);
+        assertEquals(1, nbre);
 
         TL tlUpdated = tlService.getTL(1);
-        assertTrue((tlUpdated.getServiceProviders().size() + 1) == nbreSvc);
+        assertEquals((tlUpdated.getServiceProviders().size() + 1), nbreSvc);
 
     }
 

@@ -2,23 +2,23 @@ Finland
 
     Population Register Centre 
 
-        VRK Gov. CA for Citizen Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK Gov. CA for Citizen Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        VRK Gov. CA for Citizen Qualified Certificates - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK Gov. CA for Citizen Qualified Certificates - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        VRK CA for Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        VRK CA for Qualified Certificates - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Qualified Certificates - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        VRK CA for Healthcare Professionals Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Healthcare Professionals Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 

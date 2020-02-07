@@ -1,8 +1,8 @@
 /******** Application Layout ********/
 nav {
-	left: 0px;
+	left: 0;
 	position: absolute;
-	top: 0px;
+	top: 0;
 	width: 13%;
 }
 
@@ -24,7 +24,7 @@ footer {
 	bottom: 0;
 	border-top: thick double #2F70A8;
 	height: 30px;
-	margin: 10px 0px;
+	margin: 10px 0;
 	position: relative;
 	right: 0;
 	width: 100%;
@@ -114,7 +114,7 @@ footer {
 .light-hr {
 	height: 1px;
 	background-color: #888;
-	padding: 0px;
+	padding: 0;
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
@@ -166,7 +166,7 @@ footer {
 	border-radius: 3px;
 	color: white;
 	padding-left: 4px;
-	border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0;
 }
 
 /* /!\ Override in modal pointer/service/history */
@@ -238,12 +238,12 @@ footer {
 }
 
 .wizard-tlsigning-radio>.checkbox-inline {
-	padding-left: 0px;
+	padding-left: 0;
 }
 
 .wizard-tlsigning-certinpute {
 	display: inline-block !important;
-	padding-left: 0px !important;
+	padding-left: 0 !important;
 }
 
 .wizard-certificate-carret {
@@ -287,7 +287,7 @@ ul.wizard-sie-list li {
 .calendar-button {
 	margin-top: -3px;
 	margin-left: -4px;
-	border-radius: 0px !important;
+	border-radius: 0 !important;
 }
 
 .no-unavailability-info {
@@ -587,7 +587,7 @@ ul.wizard-sie-list li {
 }
 
 .remove-padding {
-	padding-left: 0px !important;
+	padding-left: 0 !important;
 }
 
 .underline {
@@ -598,7 +598,7 @@ ul.wizard-sie-list li {
 	text-decoration: none !important;
 }
 
-.no-underline : hover {
+.no-underline:hover {
 	text-decoration: none !important;
 }
 
@@ -628,7 +628,15 @@ ul.wizard-sie-list li {
 }
 
 .tlm-border {
-	border: #337ab7 1px solid transparent;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: transparent;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
@@ -668,15 +676,15 @@ select {
 }
 
 .modal-content {
-	border: 0px;
+	border: 0;
 }
 
 .container-fluid {
-	padding-right: 0px;
+	padding-right: 0;
 }
 
 .nav>li>a {
-	padding: 0px 5px;
+	padding: 0 5px;
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover

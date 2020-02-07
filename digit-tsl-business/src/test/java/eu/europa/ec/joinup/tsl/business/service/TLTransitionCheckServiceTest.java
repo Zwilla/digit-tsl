@@ -2,6 +2,7 @@ package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -35,8 +36,8 @@ public class TLTransitionCheckServiceTest extends AbstractSpringTest {
     public void initTL() {
         previousTL = new TL();
         TLSchemeInformation tlSchemeInfo = new TLSchemeInformation();
-        tlSchemeInfo.setIssueDate(new Date(118, 1, 1));
-        tlSchemeInfo.setNextUpdateDate(new Date(118, 6, 1));
+        tlSchemeInfo.setIssueDate(new Date(118, Calendar.FEBRUARY, 1));
+        tlSchemeInfo.setNextUpdateDate(new Date(118, Calendar.JULY, 1));
         previousTL.setSchemeInformation(tlSchemeInfo);
     }
 
@@ -47,20 +48,20 @@ public class TLTransitionCheckServiceTest extends AbstractSpringTest {
         schemeInformation.setIssueDate(new Date(117, 12, 30));
         currentTL.setSchemeInformation(schemeInformation);
         Assert.assertTrue(tlTransitionCheckService.isIssueDateBackDated(currentTL, previousTL));
-        schemeInformation.setIssueDate(new Date(118, 1, 2));
+        schemeInformation.setIssueDate(new Date(118, Calendar.FEBRUARY, 2));
         Assert.assertFalse(tlTransitionCheckService.isIssueDateBackDated(currentTL, previousTL));
     }
 
     @Test
     public void isSigningDateUlterior() {
         Date signingDate = null;
-        Date publicationDate = new Date(118, 1, 10);
+        Date publicationDate = new Date(118, Calendar.FEBRUARY, 10);
+        Assert.assertFalse(tlTransitionCheckService.isSigningDateUlterior(null, publicationDate));
+        signingDate = new Date(117, Calendar.FEBRUARY, 1);
         Assert.assertFalse(tlTransitionCheckService.isSigningDateUlterior(signingDate, publicationDate));
-        signingDate = new Date(117, 1, 1);
-        Assert.assertFalse(tlTransitionCheckService.isSigningDateUlterior(signingDate, publicationDate));
-        signingDate = new Date(118, 1, 12);
+        signingDate = new Date(118, Calendar.FEBRUARY, 12);
         Assert.assertTrue(tlTransitionCheckService.isSigningDateUlterior(signingDate, publicationDate));
-        signingDate = new Date(118, 1, 10);
+        signingDate = new Date(118, Calendar.FEBRUARY, 10);
         Assert.assertFalse(tlTransitionCheckService.isSigningDateUlterior(signingDate, publicationDate));
     }
 
@@ -121,10 +122,10 @@ public class TLTransitionCheckServiceTest extends AbstractSpringTest {
     }
 
     @Ignore
-    public void zTSPChecks() throws FileNotFoundException, IOException {
+    public void zTSPChecks() throws IOException {
         TL comparedTL = fileToTL(1, "src/test/resources/transition/NL_41.xml");
         TL currentTL = fileToTL(2, "src/test/resources/transition/NL_42.xml");
-        Date publicationDate = new Date(119, 3, 23);
+        Date publicationDate = new Date(119, Calendar.APRIL, 23);
         Map<String, DBCheck> transitionChecks = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
         List<CheckResultDTO> checks = tlTransitionCheckService.performTSPChecks(currentTL, comparedTL, transitionChecks, publicationDate);
         Assert.assertTrue(checks.isEmpty());

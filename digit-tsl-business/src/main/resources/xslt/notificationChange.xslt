@@ -194,7 +194,7 @@
 														select="text:translate('pdf.notification.contact.mail')" />
 												</fo:block>
 											</fo:table-cell>
-											<xsl:if test="count(contactMail/string) > '0'">
+											<xsl:if test="count(contactMail/string) > 0">
 												<fo:table-cell>
 													<xsl:for-each select="contactMail/string">
 														<fo:block>

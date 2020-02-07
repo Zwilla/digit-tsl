@@ -1,23 +1,4 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -54,7 +35,7 @@ import edu.upc.ac.xml.UPCXMLUtils;
  */
 public class EUMSTLsSigningCertsAsInECLOLReader {
 
-    private InputStream isECLOL;
+    private final InputStream isECLOL;
 
     /**
      * Constructor
@@ -75,7 +56,7 @@ public class EUMSTLsSigningCertsAsInECLOLReader {
      *             if any problem occurs while processing the ECLOL
      */
     public Map<String, TreeSet<ByteArray>> getEUMSTLsSigingCertsByCountryCode() throws Exception {
-        Map<String, TreeSet<ByteArray>> result = new HashMap<String, TreeSet<ByteArray>>();
+        Map<String, TreeSet<ByteArray>> result = new HashMap<>();
         TrustServiceStatusListDocument tslDoc = TrustServiceStatusListDocument.Factory.parse(this.isECLOL);
         if (tslDoc == null) {
             return result;
@@ -130,7 +111,7 @@ public class EUMSTLsSigningCertsAsInECLOLReader {
         }
         for (AnyType other : othersArr) {
             Element elOther = (Element) other.getDomNode();
-            NodeList mimeTypes = elOther.getElementsByTagNameNS("http://uri.etsi.org/02231/v2/additionaltypes#", "MimeType");
+            NodeList mimeTypes = elOther.getElementsByTagNameNS("https://uri.etsi.org/02231/v2/additionaltypes#", "MimeType");
             if ((mimeTypes != null) && (mimeTypes.getLength() > 0)) {
                 Element mimeTypeEl = (Element) mimeTypes.item(0);
                 String mimeType = UPCXMLUtils.getTextContent(mimeTypeEl);
@@ -146,7 +127,7 @@ public class EUMSTLsSigningCertsAsInECLOLReader {
 
     private void getCertificatesForTerritory(Map<String, TreeSet<ByteArray>> result, String schemeTerritory, ServiceDigitalIdentityListType sdisList, int numPointer) {
         DigitalIdentityListType[] digIds = sdisList.getServiceDigitalIdentityArray();
-        TreeSet<ByteArray> set = new TreeSet<ByteArray>();
+        TreeSet<ByteArray> set = new TreeSet<>();
         result.put(schemeTerritory, set);
         if ((digIds == null) || (digIds.length == 0)) {
             return;
@@ -176,7 +157,7 @@ public class EUMSTLsSigningCertsAsInECLOLReader {
         }
         for (AnyType other : othersArr) {
             Element elOther = (Element) other.getDomNode();
-            NodeList schTerrs = elOther.getElementsByTagNameNS("http://uri.etsi.org/02231/v2#", "SchemeTerritory");
+            NodeList schTerrs = elOther.getElementsByTagNameNS("https://uri.etsi.org/02231/v2#", "SchemeTerritory");
             if ((schTerrs != null) && (schTerrs.getLength() > 0)) {
                 Element schTerr = (Element) schTerrs.item(0);
                 return UPCXMLUtils.getTextContent(schTerr);

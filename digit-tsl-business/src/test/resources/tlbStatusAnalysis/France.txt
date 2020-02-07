@@ -2,479 +2,479 @@ France
 
     Agence Nationale des Titres Sécurisés 
 
-        Acteur de l'Administration d'Etat - Authentification 3 étoiles - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Acteur de l'Administration d'Etat - Authentification 3 étoiles - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Acteur de l'Administration d'Etat - Signature 3 étoiles - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Acteur de l'Administration d'Etat - Signature 3 étoiles - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Acteur des Collectivités Territoriales - Authentification 3 étoiles - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Acteur des Collectivités Territoriales - Authentification 3 étoiles - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Acteur des Collectivités Territoriales - Signature 3 étoiles - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Acteur des Collectivités Territoriales - Signature 3 étoiles - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Autorité de Certification Personnes AAE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Autorité de Certification Personnes AAE - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Autorité de Certification Personnes AAE - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Autorité de Certification Personnes AAE - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Autorité de certification porteur AAE 3 étoiles V2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Autorité de certification porteur AAE 3 étoiles V2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Autorité de certification porteur ACT 3 étoiles V2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Autorité de certification porteur ACT 3 étoiles V2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Assemblée Permanente des Chambres de Métiers 
 
-        CERTIMETIERSARTISANAT - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CERTIMETIERSARTISANAT - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        CERTIMETIERSARTISANATV2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CERTIMETIERSARTISANATV2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Caisse des dépôts 
 
-        CDC - LEGALIA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CDC - LEGALIA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Click and Trust 
 
-        ADMINEO Authentification RGS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ADMINEO Authentification RGS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        ADMINEO Signature RGS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ADMINEO Signature RGS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        ADMINEO - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ADMINEO - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        MERCANTEO AUTH RGS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MERCANTEO AUTH RGS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        MERCANTEO SIGN RGS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MERCANTEO SIGN RGS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        MERCANTEO - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MERCANTEO - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Mercanteo EU sign 1.2.250.1.98.1.1.22.1.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Mercanteo EU sign 1.2.250.1.98.1.1.22.1.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            URI http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            URI https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Mercanteo EU sign 1.2.250.1.98.1.1.22.1.1.2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Mercanteo EU sign 1.2.250.1.98.1.1.22.1.1.2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
     Credit Agricole Cards & Payments 
 
-        CA LCL RGS Certificate Mixed Use - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CA LCL RGS Certificate Mixed Use - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        CA LCL RGS Certificate Separeted Use - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CA LCL RGS Certificate Separeted Use - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     CertEurope 
 
-        CERTEUROPE ADVANCED CA V3 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CERTEUROPE ADVANCED CA V3 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        CERTEUROPE ADVANCED CA V4 - Authentification et signature - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CERTEUROPE ADVANCED CA V4 - Authentification et signature - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        CERTEUROPE ADVANCED CA V4 - Signature - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        CERTEUROPE ADVANCED CA V4 - Signature - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Certinomis SA 
 
-        Certinomis AC 2 stars - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certinomis AC 2 stars - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certinomis - Prime CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certinomis - Prime CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certinomis - Prime CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certinomis - Prime CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certinomis - AA et Agents - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certinomis - AA et Agents - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certinomis - AA et Agents - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certinomis - AA et Agents - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     ChamberSign 
 
-        Audacio ** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Audacio ** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Fiducio RGS ** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Fiducio RGS ** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Identio RGS ** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Identio RGS ** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Initio * - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Initio * - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Probatio identité *** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Probatio identité *** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Probatio signature *** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Probatio signature *** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Signitio RGS ** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Signitio RGS ** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Signitio RGS *** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Signitio RGS *** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Cryptolog International 
 
-        Certification Authority for Universign Time Stamping - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certification Authority for Universign Time Stamping - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Universign CA hardware - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Universign CA hardware - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Universign CA hardware - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Universign CA hardware - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Universign Software Primary CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Universign Software Primary CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Universign Hardware Primary CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Universign Hardware Primary CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Universign Time Stamping - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Universign Time Stamping - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Certification Authority for Universign Time Stamping 2015 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certification Authority for Universign Time Stamping 2015 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Universign Time Stamping 2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Universign Time Stamping 2015 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Universign Time Stamping - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Universign Time Stamping - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Universign Time Stamping 2015 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Universign Time Stamping 2015 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     Dhimyotis 
 
-        Certigna Cachet Serveur - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna Cachet Serveur - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna ID PRIS ** PRO - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna ID PRIS ** PRO - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna ID PRIS *** PRO - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna ID PRIS *** PRO - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna ID PRIS *** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna ID PRIS *** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna ID PRIS ** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna ID PRIS ** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna ID PRIS Pro - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna ID PRIS Pro - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna ID PRIS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna ID PRIS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        FR03 1.2.250.1.177.2.2.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        FR03 1.2.250.1.177.2.2.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Certigna Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna Services CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        Certigna Identity Plus CA - ID *** - 1.2.250.1.177.2.4.1.6.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Identity Plus CA - ID *** - 1.2.250.1.177.2.4.1.6.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna Entity CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna Entity CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna Entity Code Signing CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna Entity Code Signing CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna Identity CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certigna Identity CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Certigna Identity Plus CA - ID ** Pro - 1.2.250.1.177.2.4.1.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Identity Plus CA - ID ** Pro - 1.2.250.1.177.2.4.1.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna Identity Plus CA - ID *** Pro - 1.2.250.1.177.2.4.1.3.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Identity Plus CA - ID *** Pro - 1.2.250.1.177.2.4.1.3.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna Identity Plus CA - ID ** - 1.2.250.1.177.2.4.1.4.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Identity Plus CA - ID ** - 1.2.250.1.177.2.4.1.4.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certigna Entity Code Signing CA - Cachet de signature de code ** - 1.2.250.1.177.2.8.1.2.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Entity Code Signing CA - Cachet de signature de code ** - 1.2.250.1.177.2.8.1.2.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Certigna Entity CA - Cachet de signature de mails et de documents ** - 1.2.250.1.177.2.6.1.4.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Entity CA - Cachet de signature de mails et de documents ** - 1.2.250.1.177.2.6.1.4.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Certigna Entity CA - Cachet de signature de jetons d'horodatage ** - 1.2.250.1.177.2.6.1.6.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certigna Entity CA - Cachet de signature de jetons d'horodatage ** - 1.2.250.1.177.2.6.1.6.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
     Ministère de la Justice 
 
-        MJL Authentification RGS *** - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MJL Authentification RGS *** - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        MJL Signature RGS *** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        MJL Signature RGS *** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Natixis SA 
 
-        CESAM OR - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        CESAM OR - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Docusign France 
 
-        KEYNECTIS ICS ADVANCED Class 3 CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        KEYNECTIS ICS ADVANCED Class 3 CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        KEYNECTIS ICS QUALIFIED CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KEYNECTIS ICS QUALIFIED CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        KEYNECTIS QUALIFIED CDS - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KEYNECTIS QUALIFIED CDS - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Cloud Signing Personal Signature CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Cloud Signing Personal Signature CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Keynectis CDS CA for timestamping - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Keynectis CDS CA for timestamping - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     SG Trust Services 
 
-        SG TS 2 STARS - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        SG TS 2 STARS - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Worldline 
 
-        AC OTU - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        AC OTU - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Ordre National des Experts-Comptables 
 
-        Ordre des Experts-Comptables - région Alsace RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Alsace RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Alsace Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Alsace Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Aquitaine RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Aquitaine RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Aquitaine Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Aquitaine Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Auvergne RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Auvergne RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Auvergne Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Auvergne Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Bourgogne RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Bourgogne RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Bourgogne Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Bourgogne Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Bretagne RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Bretagne RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Bretagne Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Bretagne Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Champagne RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Champagne RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Champagne Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Champagne Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Guadeloupe RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Guadeloupe RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Guadeloupe Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Guadeloupe Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Guyane RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Guyane RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Guyane Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Guyane Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région La Réunion RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région La Réunion RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région La Réunion Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région La Réunion Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région LN-PCAL RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région LN-PCAL RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région LN-PCAL Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région LN-PCAL Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Limoges RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Limoges RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Limoges Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Limoges Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Lorraine RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Lorraine RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Lorraine Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Lorraine Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Marseille PACAC RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Marseille PACAC RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Marseille PACAC Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Marseille PACAC Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Martinique RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Martinique RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Martinique Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Martinique Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Montpellier RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Montpellier RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Montpellier Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Montpellier Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Orléans RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Orléans RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Orléans Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Orléans Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Paris RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Paris RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Paris Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Paris Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Pays de Loire RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Pays de Loire RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Pays de Loire Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Pays de Loire Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Picardie RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Picardie RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Picardie Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Picardie Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Poitou Charantes RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Poitou Charantes RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Poitou Charantes Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Poitou Charantes Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Rhône Alpes RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Rhône Alpes RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Rhône Alpes Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Rhône Alpes Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Rouen Normandie RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Rouen Normandie RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Rouen Normandie Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Rouen Normandie Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Toulouse RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Toulouse RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Toulouse Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Toulouse Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Corse RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Corse RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Corse Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Corse Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Marseille PACA RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Marseille PACA RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Marseille PACA Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Marseille PACA Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - région Elu EC RGS*** - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ordre des Experts-Comptables - région Elu EC RGS*** - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Ordre des Experts-Comptables - région Elu EC Etsi 102042 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - région Elu EC Etsi 102042 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Ordre des Experts-Comptables - Cachet Cabinet - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Ordre des Experts-Comptables - Cachet Cabinet - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        PC Experts Comptables 1.2.250.1.165.1.10.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        PC Experts Comptables 1.2.250.1.165.1.10.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Imprimerie Nationale 
 
-        Pass'IN - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Pass'IN - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Pass'IN - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Pass'IN - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Conseil Supérieur du Notariat 
 
-        AC REAL 2017 1.2.250.1.78.1.1.3.1.3.1.1.22 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AC REAL 2017 1.2.250.1.78.1.1.3.1.3.1.1.22 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AC REAL 2016 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AC REAL 2016 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AC REAL 2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AC REAL 2014 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AC REAL - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AC REAL - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        AH NOTAIRES - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        AH NOTAIRES - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Autorité d’Horodatage du Notariat REALTS2019 1.2.250.1.78.1.1.3.1.4.6.1.6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Autorité d’Horodatage du Notariat REALTS2019 1.2.250.1.78.1.1.3.1.4.6.1.6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        AC REAL 2019 1.2.250.1.78.1.1.3.1.3.1.1.22 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        AC REAL 2019 1.2.250.1.78.1.1.3.1.3.1.1.22 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-        Autorité d’Horodatage du Notariat REALTS2021 1.2.250.1.78.1.1.3.1.4.6.1.6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Autorité d’Horodatage du Notariat REALTS2021 1.2.250.1.78.1.1.3.1.4.6.1.6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Le groupe La Poste 
 
-        La Poste - Autorité d'horodatage - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        La Poste - Autorité d'horodatage - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        La Poste - Autorité d'horodatage - UH1 1.2.250.1.8.1.1.1.1.6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        La Poste - Autorité d'horodatage - UH1 1.2.250.1.8.1.1.1.1.6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        La Poste - Autorité d'horodatage - UH2 1.2.250.1.8.1.1.1.1.6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        La Poste - Autorité d'horodatage - UH2 1.2.250.1.8.1.1.1.1.6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        La Poste - Autorité d'horodatage - UH3 1.2.250.1.8.1.1.1.1.6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        La Poste - Autorité d'horodatage - UH3 1.2.250.1.8.1.1.1.1.6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Almerys 
 
-        ALMERYS USER SIGNING CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ALMERYS USER SIGNING CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        ALMERYS CUSTOMER SERVICES CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        ALMERYS CUSTOMER SERVICES CA - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        ALMERYS SIGNATURE AND AUTHENTICATION CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ALMERYS SIGNATURE AND AUTHENTICATION CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     AriadNEXT 
 
-        Customer CA G2 1.3.6.1.4.1.38226.10.4.4.1.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Customer CA G2 1.3.6.1.4.1.38226.10.4.4.1.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        One Time CA G2 1.3.6.1.4.1.38226.10.4.5.1.1.2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        One Time CA G2 1.3.6.1.4.1.38226.10.4.5.1.1.2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        FR04 1.3.6.1.4.1.38226.10.4.2.1.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        FR04 1.3.6.1.4.1.38226.10.4.2.1.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Legal Person CA G2 1.3.6.1.4.1.38226.10.4.3.1.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Legal Person CA G2 1.3.6.1.4.1.38226.10.4.3.1.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Legal Person CA G2 1.3.6.1.4.1.38226.10.4.3.2.1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Legal Person CA G2 1.3.6.1.4.1.38226.10.4.3.2.1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     Yousign 
 
-        Certificate authority - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Certificate authority - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 

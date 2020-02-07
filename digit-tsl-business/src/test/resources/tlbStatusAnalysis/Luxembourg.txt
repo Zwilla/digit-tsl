@@ -2,33 +2,33 @@ Luxembourg
 
     LuxTrust S.A. 
 
-        LuxTrust Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        LuxTrust Qualified Certification Authority - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        LuxTrust Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        LuxTrust Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        LuxTrust Global Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        LuxTrust Global Qualified Certification Authority - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        LuxTrust Global Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        LuxTrust Global Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        LuxTrust Global Qualified Certification Authority 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        LuxTrust Global Qualified Certification Authority 2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        LuxTrust Global Qualified Certification Authority 3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        LuxTrust Global Qualified Certification Authority 3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        LuxTrust Global Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        LuxTrust Global Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        LuxTrust Qualified Time Stamping - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        LuxTrust Qualified Time Stamping - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     SeMarket Certification Authority S.A.  
 
-        SeMarket Qualified Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SeMarket Qualified Certification Authority - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 

@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.util.HashSet;
@@ -117,13 +97,13 @@ public class TLQServiceTypeUtils {
         case STIConstant.caQC:
         case STIConstant.ocspQC:
         case STIConstant.crlQC:
-            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.Q_CERT_ESIG, ServiceLegalType.Q_CERT_ESEAL, ServiceLegalType.Q_WAC));
+            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.Q_CERT_ESIG, ServiceLegalType.Q_CERT_ESEAL, ServiceLegalType.Q_WAC));
             break;
         case STIConstant.qesValidationQ:
-            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.Q_VAL_ESIG, ServiceLegalType.Q_VAL_ESEAL, ServiceLegalType.UNDEFINED));
+            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.Q_VAL_ESIG, ServiceLegalType.Q_VAL_ESEAL, ServiceLegalType.UNDEFINED));
             break;
         case STIConstant.psesQ:
-            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.Q_PRES_ESIG, ServiceLegalType.Q_PRES_ESEAL, ServiceLegalType.UNDEFINED));
+            qTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.Q_PRES_ESIG, ServiceLegalType.Q_PRES_ESEAL, ServiceLegalType.UNDEFINED));
             break;
         case STIConstant.tsaQTST:
             qTrustTypes.add(ServiceLegalType.Q_TIMESTAMP.getCode());
@@ -150,16 +130,16 @@ public class TLQServiceTypeUtils {
         case STIConstant.caPKC:
         case STIConstant.ocsp:
         case STIConstant.crl:
-            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.CERT_ESIG, ServiceLegalType.CERT_ESEAL, ServiceLegalType.WAC));
+            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.CERT_ESIG, ServiceLegalType.CERT_ESEAL, ServiceLegalType.WAC));
             break;
         case STIConstant.adesValidation:
-            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.VAL_ESIG, ServiceLegalType.VAL_ESEAL, ServiceLegalType.UNDEFINED));
+            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.VAL_ESIG, ServiceLegalType.VAL_ESEAL, ServiceLegalType.UNDEFINED));
             break;
         case STIConstant.adesGeneration:
-            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.GEN_ESIG, ServiceLegalType.GEN_ESEAL, ServiceLegalType.UNDEFINED));
+            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.GEN_ESIG, ServiceLegalType.GEN_ESEAL, ServiceLegalType.UNDEFINED));
             break;
         case STIConstant.pses:
-            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.UNDEFINED, ServiceLegalType.PRES_ESIG, ServiceLegalType.PRES_ESEAL, ServiceLegalType.UNDEFINED));
+            nonQTrustTypes.addAll(loopExtension(extensions, ServiceLegalType.PRES_ESIG, ServiceLegalType.PRES_ESEAL, ServiceLegalType.UNDEFINED));
             break;
         case STIConstant.tsa:
         case STIConstant.tsaTssQC:
@@ -181,17 +161,16 @@ public class TLQServiceTypeUtils {
      * Loop through service additionnal service extension and set service type depends on aSi Set undefined value when no aSi detected
      *
      * @param service
-     * @param undefinedValue
      * @param eSigValue
      * @param eSealValue
      * @param wsaValue
      * @return
      */
-    private static Set<String> loopExtension(List<TLServiceExtension> extensions, ServiceLegalType undefinedValue, ServiceLegalType eSigValue, ServiceLegalType eSealValue, ServiceLegalType wsaValue) {
+    private static Set<String> loopExtension(List<TLServiceExtension> extensions, ServiceLegalType eSigValue, ServiceLegalType eSealValue, ServiceLegalType wsaValue) {
         Set<String> results = new HashSet<>();
         if (CollectionUtils.isEmpty(extensions)) {
             // Default value
-            results.add(undefinedValue.getCode());
+            results.add(ServiceLegalType.UNDEFINED.getCode());
         } else {
             // Check through Additionnal Service Extension
             for (TLServiceExtension ext : extensions) {

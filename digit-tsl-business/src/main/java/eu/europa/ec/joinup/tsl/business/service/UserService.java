@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
@@ -59,9 +39,9 @@ import eu.europa.ec.joinup.tsl.model.enums.Tag;
 @Transactional(value = TxType.REQUIRED)
 public class UserService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     private static final String superAdmin = "SUP";
     private static final String admin = "MAN";
@@ -126,16 +106,12 @@ public class UserService {
     public List<User> getUsersOrderByCountryAndName() {
         List<User> list = new ArrayList<>();
         List<DBUser> usrList = userRepository.findAllByOrderByTerritoryCodeTerritoryAscNameAsc();
-        usrList.sort(new Comparator<DBUser>() {
-
-            @Override
-            public int compare(DBUser u1, DBUser u2) {
-                int sComp = u1.getTerritory().getCodeTerritory().compareTo(u2.getTerritory().getCodeTerritory());
-                if (sComp != 0) {
-                    return sComp;
-                } else {
-                    return u1.getEcasId().compareTo(u2.getEcasId());
-                }
+        usrList.sort((u1, u2) -> {
+            int sComp = u1.getTerritory().getCodeTerritory().compareTo(u2.getTerritory().getCodeTerritory());
+            if (sComp != 0) {
+                return sComp;
+            } else {
+                return u1.getEcasId().compareTo(u2.getEcasId());
             }
         });
 

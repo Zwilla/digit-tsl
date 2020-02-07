@@ -48,12 +48,7 @@ public class TransitionEntry {
                 this.asieList.add(tlServiceExtension.getAdditionnalServiceInfo().getValue());
             }
         }
-        this.asieList.sort(new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.compareTo(o2);
-            }
-        });
+        this.asieList.sort(Comparator.naturalOrder());
     }
 
     public String getX509SKI() {
@@ -96,11 +91,8 @@ public class TransitionEntry {
         } else if (!asieList.equals(other.asieList))
             return false;
         if (x509SKI == null) {
-            if (other.x509SKI != null)
-                return false;
-        } else if (!x509SKI.equals(other.x509SKI))
-            return false;
-        return true;
+            return other.x509SKI == null;
+        } else return x509SKI.equals(other.x509SKI);
     }
 
     @Override

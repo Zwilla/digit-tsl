@@ -2,169 +2,169 @@ Netherlands
 
     Agentschap Centraal Informatiepunt Beroepen Gezondheidszorg 
 
-        UZI-register Medewerker op naam CA G21 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Medewerker op naam CA G21 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        UZI-register Medewerker op naam CA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Medewerker op naam CA G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        UZI-register Medewerker op naam - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Medewerker op naam - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        UZI-register Zorgverlener CA G21 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Zorgverlener CA G21 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        UZI-register Zorgverlener CA G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Zorgverlener CA G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        UZI-register Zorgverlener CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        UZI-register Zorgverlener CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Digidentity B.V. 
 
-        Digidentity SSCD CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Digidentity SSCD CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        MachtigingOnline SSCD CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        MachtigingOnline SSCD CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Diginotar B.V. 
 
-        DigiNotar PKIoverheid CA Organisatie - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiNotar PKIoverheid CA Organisatie - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        DigiNotar PKIoverheid CA Overheid en Bedrijven - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiNotar PKIoverheid CA Overheid en Bedrijven - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        DigiNotar PKIoverheid CA Overheid - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiNotar PKIoverheid CA Overheid - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        DigiNotar Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigiNotar Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     ESG de Electronische Signatuur B.V. 
 
-        ESG Burger CA-G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ESG Burger CA-G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        ESG CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ESG CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        ESG Organisatie CA-G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ESG Organisatie CA-G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        ESG Persoonlijk CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ESG Persoonlijk CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Getronics Nederland B.V. 
 
-        Getronics CSP Justitie CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Getronics CSP Justitie CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Getronics CSP Organisatie CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Getronics CSP Organisatie CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Getronics PinkRoccade PKIoverheid CA - Overheid en Bedrijven - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Getronics PinkRoccade PKIoverheid CA - Overheid en Bedrijven - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Getronics PinkRoccade Qualified Certificate CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Getronics PinkRoccade Qualified Certificate CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Getronics Qualified Certificate Individual CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Getronics Qualified Certificate Individual CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     KPN B.V. 
 
-        KPN PKIoverheid Organisatie CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KPN PKIoverheid Organisatie CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        KPN PKIoverheid Organisatie Persoon CA - G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KPN PKIoverheid Organisatie Persoon CA - G3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     KPN Corporate Market B.V. 
 
-        KPN Corporate Market CSP Justitie CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KPN Corporate Market CSP Justitie CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        KPN Corporate Market CSP Organisatie CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        KPN Corporate Market CSP Organisatie CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Ministerie van Defensie 
 
-        Ministerie van Defensie Certificatie Autoriteit - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ministerie van Defensie Certificatie Autoriteit - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Ministerie van Defensie Certificatie Autoriteit Defensiepas - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ministerie van Defensie Certificatie Autoriteit Defensiepas - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Ministerie van Defensie Certificatie Autoriteit Defensiepas - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ministerie van Defensie Certificatie Autoriteit Defensiepas - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        Ministerie van Defensie Certificatie Autoriteit - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Ministerie van Defensie Certificatie Autoriteit - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Ministerie van Infrastructuur en Milieu 
 
-        MinIenM Taxi CA Boordcomputerkaarten - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        MinIenM Taxi CA Boordcomputerkaarten - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     QuoVadis Trustlink B.V. 
 
-        QuoVadis CSP - PKI Overheid CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis CSP - PKI Overheid CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis CSP Burger CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis CSP Burger CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis EU Issuing Certification Authority G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis EU Issuing Certification Authority G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis EU Issuing Certification Authority G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis EU Issuing Certification Authority G3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis EU Issuing Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis EU Issuing Certification Authority - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis EU Qualified Issuing Certification Authority - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis EU Qualified Issuing Certification Authority - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        QuoVadis EU Issuing Certification Authority G4 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        QuoVadis EU Issuing Certification Authority G4 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

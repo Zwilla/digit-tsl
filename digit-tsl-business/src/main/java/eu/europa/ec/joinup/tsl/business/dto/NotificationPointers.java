@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto;
 
 import java.io.Serializable;
@@ -46,9 +26,9 @@ public class NotificationPointers implements Serializable {
     private TLSignature signatureInformation;
 
     public NotificationPointers() {
-        this.deletedCertificates = new ArrayList<String>();
-        this.addedCertificates = new ArrayList<String>();
-        this.currentCertificates = new ArrayList<String>();
+        this.deletedCertificates = new ArrayList<>();
+        this.addedCertificates = new ArrayList<>();
+        this.currentCertificates = new ArrayList<>();
         this.tlsoContact = new TLSOContact();
     }
 
@@ -146,7 +126,7 @@ public class NotificationPointers implements Serializable {
 
     public List<User> getUsers() {
         if (users == null) {
-            this.users = new ArrayList<User>();
+            this.users = new ArrayList<>();
         }
         return users;
     }
@@ -156,7 +136,7 @@ public class NotificationPointers implements Serializable {
     }
 
     public void initUsers(List<DBUser> dbUsers) {
-        this.users = new ArrayList<User>();
+        this.users = new ArrayList<>();
         for (DBUser dbUser : dbUsers) {
             this.users.add(new User(dbUser));
         }

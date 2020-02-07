@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="TrustServiceStatusList-1" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="TrustServiceStatusList-1" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>32</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">ILNAS</Name>
             <Name xml:lang="fr">ILNAS</Name>
@@ -46,10 +46,10 @@
             <URI xml:lang="fr">https://portail-qualite.public.lu/fr/confiance-numerique/prestataires-services-confiance/liste-confiance/scheme-information-fr/index.html</URI>
             <URI xml:lang="de">https://portail-qualite.public.lu/fr/confiance-numerique/prestataires-services-confiance/liste-confiance/scheme-information-de/index.html</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/LU</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>LU</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -88,7 +88,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -103,7 +103,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -166,7 +166,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                         </ServiceName>
@@ -178,19 +178,19 @@
 <X509SubjectName>CN=LuxTrust Qualified CA,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-02-23T00:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                             </ServiceName>
@@ -202,18 +202,18 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                             </ServiceName>
@@ -225,11 +225,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                             </ServiceName>
@@ -241,11 +241,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
                             <StatusStartingTime>2013-10-12T23:59:59Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                             </ServiceName>
@@ -257,11 +257,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2009-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Qualified Certification Authority</Name>
                             </ServiceName>
@@ -273,14 +273,14 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-07-29T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Time Stamping Authority</Name>
                         </ServiceName>
@@ -292,12 +292,12 @@
 <X509SubjectName>CN=LuxTrust Qualified CA,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/deprecatedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2017-02-23T00:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Time Stamping Authority</Name>
                             </ServiceName>
@@ -309,11 +309,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Time Stamping Authority</Name>
                             </ServiceName>
@@ -325,11 +325,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Time Stamping Authority</Name>
                             </ServiceName>
@@ -341,11 +341,11 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
                             <StatusStartingTime>2013-10-12T23:59:59Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Time Stamping Authority</Name>
                             </ServiceName>
@@ -357,14 +357,14 @@
     <X509SKI>jZCjB90aE3eZTJKrTUPeP80pZAU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2009-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Global Qualified Certification Authority</Name>
                         </ServiceName>
@@ -376,19 +376,19 @@
 <X509SubjectName>CN=LuxTrust Global Qualified CA,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority</Name>
                             </ServiceName>
@@ -400,11 +400,11 @@
     <X509SKI>NBYb8dNkZ2JMozS8DbNTpHyh8Rc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority</Name>
                             </ServiceName>
@@ -416,11 +416,11 @@
     <X509SKI>NBYb8dNkZ2JMozS8DbNTpHyh8Rc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
                             <StatusStartingTime>2013-10-12T23:59:59Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority</Name>
                             </ServiceName>
@@ -432,11 +432,11 @@
     <X509SKI>NBYb8dNkZ2JMozS8DbNTpHyh8Rc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2012-11-30T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority</Name>
                             </ServiceName>
@@ -448,14 +448,14 @@
     <X509SKI>NBYb8dNkZ2JMozS8DbNTpHyh8Rc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-08-01T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                         </ServiceName>
@@ -467,12 +467,12 @@
 <X509SubjectName>CN=LuxTrust Global Timestamping CA,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                             </ServiceName>
@@ -484,11 +484,11 @@
     <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-10-13T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                             </ServiceName>
@@ -500,11 +500,11 @@
     <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accreditationceased</ServiceStatus>
                             <StatusStartingTime>2013-10-12T23:59:59Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                             </ServiceName>
@@ -516,11 +516,11 @@
     <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
                             <StatusStartingTime>2012-11-30T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                             </ServiceName>
@@ -532,14 +532,14 @@
     <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-10-03T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Global Qualified Certification Authority 2</Name>
                         </ServiceName>
@@ -551,19 +551,19 @@
 <X509SubjectName>CN=LuxTrust Global Qualified CA 2,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority 2</Name>
                             </ServiceName>
@@ -575,14 +575,14 @@
     <X509SKI>75a/fWU6VbTScPgM7Eri8ycGmlI=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-11-19T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Global Qualified Certification Authority 3</Name>
                         </ServiceName>
@@ -594,19 +594,19 @@
 <X509SubjectName>CN=LuxTrust Global Qualified CA 3,O=LuxTrust S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Qualified Certification Authority 3</Name>
                             </ServiceName>
@@ -618,14 +618,14 @@
     <X509SKI>Y4/CiwOxq47YU0eWHZmoffasqHU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-08-12T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                         </ServiceName>
@@ -640,12 +640,12 @@
 <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-02-17T00:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">LuxTrust Global Time Stamping Authority</Name>
                             </ServiceName>
@@ -657,14 +657,14 @@
     <X509SKI>9b8ixh3+8gaDI11ewiWRlBkdPIc=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-11-30T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust Qualified Time Stamping</Name>
                         </ServiceName>
@@ -679,13 +679,13 @@
 <X509SKI>Y4/CiwOxq47YU0eWHZmoffasqHU=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-02-17T00:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">LuxTrust SSL Certification Authority 5</Name>
                         </ServiceName>
@@ -700,12 +700,12 @@
 <X509SKI>CZdFjhOsalxvH0FM9F7FwQzGbxk=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-11-29T01:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -745,7 +745,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SeMarket Qualified Certification Authority</Name>
                         </ServiceName>
@@ -757,7 +757,7 @@
 <X509SubjectName>CN=SeMarket CA Root,O=SeMarket CA S.A.,C=LU</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                         <SchemeServiceDefinitionURI>
                             <URI xml:lang="en">http://www.portail-qualite.public.lu/fr/confiance-numerique/prestataires-services-confiance/liste-confiance/se-market/index.html</URI>
@@ -767,7 +767,7 @@
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:PolicySet>
@@ -782,14 +782,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SeMarket Qualified Certification Authority</Name>
                             </ServiceName>
@@ -801,14 +801,14 @@
     <X509SKI>87dhyhzwq6SpDcQJ4Zq6g48MkOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked</ServiceStatus>
                             <StatusStartingTime>2009-09-11T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:PolicySet>
@@ -824,7 +824,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SeMarket Qualified Certification Authority</Name>
                             </ServiceName>
@@ -836,14 +836,14 @@
     <X509SKI>87dhyhzwq6SpDcQJ4Zq6g48MkOA=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2007-11-27T00:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:PolicySet>
@@ -863,4 +863,4 @@
             </TSPServices>
         </TrustServiceProvider>
     </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-4a4ae153c8e04d802669e31954b474ae"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>SZ3hSM7xBAukQkagZuSmJ9HF46EYp9ruRK8rpHxWoGg=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-4a4ae153c8e04d802669e31954b474ae"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>vC7SJOmCQ72ongeMrq+YbRBiXm5+gP0E9klKnOvvYjc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-4a4ae153c8e04d802669e31954b474ae">ExKayN93WiRgUFlp0n9t6LEeVLq2HrRXAzdEIczMPqq3cfLn3HCCk+5l6RimbPcCGoualGfcx82AZBRCxD1tLJ+XrhNcGsO+d+93mX6kFiektoq3+YzlGrZPtFoqlD16uVIwxj2browTUmU+ZeK9lLjWYkZaXOkR9vmeHEGv/3nnqnjgaSzI3OqgLRg04I5qWfQ8HK4aLZyouJ20j4ufXoXCOP3Iy/SNwFuTb/ANAggOjdohUIlJO+jmlQEI8z2V33tGJ6lh0F9NmkPAoRPwQJjOpR3dTWrjfDDKFqqN5F1bxvTMf2FintJ8D/pouvIP0CvHIheLF7QkroLHTA/mhg==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIHADCCBOigAwIBAgIDHFYZMA0GCSqGSIb3DQEBCwUAME4xCzAJBgNVBAYTAkxVMRYwFAYDVQQKDA1MdXhUcnVzdCBTLkEuMScwJQYDVQQDDB5MdXhUcnVzdCBHbG9iYWwgUXVhbGlmaWVkIENBIDMwHhcNMTcwMTEzMTAxMjQ4WhcNMjAwMTEzMTAxMjQ4WjCB/DELMAkGA1UEBhMCTFUxCzAJBgNVBAcTAkxVMQ4wDAYDVQQKEwVJTE5BUzETMBEGA1UECxMKTFUyMjk1OTQ2MzEhMB8GA1UECxMYRGlnaXRhbCB0cnVzdCBkZXBhcnRtZW50MRMwEQYDVQQDEwpBbGFpbiBXYWhsMQ0wCwYDVQQEEwRXYWhsMQ4wDAYDVQQqEwVBbGFpbjEdMBsGA1UEBRMUMTExMDU4ODc3NTAwMzE1NzAxMjcxJzAlBgkqhkiG9w0BCQEWGGFsYWluLndhaGxAaWxuYXMuZXRhdC5sdTEcMBoGA1UEDBMTUHJvZmVzc2lvbmFsIFBlcnNvbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALxVOFLLh8aHGfFi/opvxrqCJljslQ5ilTiCrPIHWvenxRXpeAFupSN56hIxBLZvWeeeQs9EdKNEMXzRuljTC/rj5akdGeohfzXMIcXCF17T94qdWfZDmV7BXYhHwycEn+DPJQu8DKrjFcDWwm0MsFdx1/FrrkYWEVi8AVmTfRP+GDnOD2eQGqt5Qs0S/QjosMQwW9ao2RAyuyqVIei/6r4V7m+8bJITU6nTbydmaJasj6usTfuUo31e89glnfCDngIrjGVb0MNShR/DwdSf7OKBj1jZKUcVqDSK3qYUnONjmXtcYTYLYuo9GFUYblVs8W+NnB+W5L8eImaLCIqx1H8CAwEAAaOCAjYwggIyMAwGA1UdEwEB/wQCMAAwZgYIKwYBBQUHAQEEWjBYMCcGCCsGAQUFBzABhhtodHRwOi8vcWNhLm9jc3AubHV4dHJ1c3QubHUwLQYIKwYBBQUHMAKGIWh0dHA6Ly9jYS5sdXh0cnVzdC5sdS9MVEdRQ0EzLmNydDCCAR4GA1UdIASCARUwggERMIIBAwYIK4ErAQEKAwEwgfYwgccGCCsGAQUFBwICMIG6GoG3THV4VHJ1c3QgUXVhbGlmaWVkIENlcnRpZmljYXRlIG9uIFNTQ0QgY29tcGxpYW50IHdpdGggRVRTSSBUUyAxMDEgNDU2IFFDUCsgY2VydGlmaWNhdGUgcG9saWN5LiBLZXkgR2VuZXJhdGlvbiBieSBDU1AuIFNvbGUgQXV0aG9yaXNlZCBVc2FnZTogU3VwcG9ydCBvZiBRdWFsaWZpZWQgRWxlY3Ryb25pYyBTaWduYXR1cmUuMCoGCCsGAQUFBwIBFh5odHRwczovL3JlcG9zaXRvcnkubHV4dHJ1c3QubHUwCAYGBACLMAEBMCIGCCsGAQUFBwEDBBYwFDAIBgYEAI5GAQEwCAYGBACORgEEMAsGA1UdDwQEAwIGQDAfBgNVHSMEGDAWgBRjj8KLA7GrjthTR5Ydmah99qyodTAzBgNVHR8ELDAqMCigJqAkhiJodHRwOi8vY3JsLmx1eHRydXN0Lmx1L0xUR1FDQTMuY3JsMBEGA1UdDgQKBAhMWuScfMPzLjANBgkqhkiG9w0BAQsFAAOCAgEAouuuqLLZ0VQpKcn3yl5SRE1N6gM+FdaqUBiI2p9L4RNPTN9waxxjruG7E8FALpOJuWSizUi6zLLLVlFE3bJJGXZFzwZ/ApZgTIKmAfdHmjPPn4NfgHQcal+AkTjhQRKZNwpVWMfKrufbcf2DYefJmynG6Z+iiLsqvNkALn6Pu+K7TOjckcpaU6ucpzZ9w5VjHRFbc0hC39NCw82CUJEuYAVYMPykea8kRSdAbfX5mkQ7uQdCK/P5xaujOKr9ZcsOmHTnkWXvyaPWWKHLKfiTryhbI4HmWutGIseutRiQddzirdzowblQEr7x1iocyYwWeRP2CfGnxlkb8gdfDn/TMhik1e7Pv1g55vOF9FaFH5TcL5vtiUH17SY4Bb2vWASFddDKhrei8n1OThztibZgsDzXxssPb8oiG5pdb9mJmiBRzghdmf0iWPaHwjXjWne08SB2jK4JNMGDYU4xP7XeSGtq8nyZesK11gXhs7O9kSeDKhYB+mKQKcJ++X6PlNpPAtAaLIimIqcdXyoEZTtdlpYi8ZW7DaKOvB66VzlBCjhse+YQoNGyhu756o8iAB8YfQyrKOlJvwLYZb9AS0KC60gMT0vZWXjVao+fzOsRQo+t2ZRvmXxG7SEq22OLrJERf69WW3fbBqX4N5uVAzBmE4nYvjD6Kw9SxLsg+AB9nFM=</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-4a4ae153c8e04d802669e31954b474ae"><xades:SignedProperties Id="xades-id-4a4ae153c8e04d802669e31954b474ae"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-13T14:55:34Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>YHZqZQ0LYadbdsGAmUJWKXUC+z8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=LuxTrust Global Qualified CA 3,O=LuxTrust S.A.,C=LU</ds:X509IssuerName><ds:X509SerialNumber>1857049</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-4a4ae153c8e04d802669e31954b474ae"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>SZ3hSM7xBAukQkagZuSmJ9HF46EYp9ruRK8rpHxWoGg=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-4a4ae153c8e04d802669e31954b474ae"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>vC7SJOmCQ72ongeMrq+YbRBiXm5+gP0E9klKnOvvYjc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-4a4ae153c8e04d802669e31954b474ae">ExKayN93WiRgUFlp0n9t6LEeVLq2HrRXAzdEIczMPqq3cfLn3HCCk+5l6RimbPcCGoualGfcx82AZBRCxD1tLJ+XrhNcGsO+d+93mX6kFiektoq3+YzlGrZPtFoqlD16uVIwxj2browTUmU+ZeK9lLjWYkZaXOkR9vmeHEGv/3nnqnjgaSzI3OqgLRg04I5qWfQ8HK4aLZyouJ20j4ufXoXCOP3Iy/SNwFuTb/ANAggOjdohUIlJO+jmlQEI8z2V33tGJ6lh0F9NmkPAoRPwQJjOpR3dTWrjfDDKFqqN5F1bxvTMf2FintJ8D/pouvIP0CvHIheLF7QkroLHTA/mhg==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>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</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-4a4ae153c8e04d802669e31954b474ae"><xades:SignedProperties Id="xades-id-4a4ae153c8e04d802669e31954b474ae"><xades:SignedSignatureProperties><xades:SigningTime>2017-12-13T14:55:34Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>YHZqZQ0LYadbdsGAmUJWKXUC+z8=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=LuxTrust Global Qualified CA 3,O=LuxTrust S.A.,C=LU</ds:X509IssuerName><ds:X509SerialNumber>1857049</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.util.ArrayList;
@@ -51,8 +31,8 @@ public class TLOtherCriteria extends AbstractTLDTO {
         int i = 0;
         int j = 0;
         if (anyType.getContent() != null) {
-            List<TLPoliciesBit> extended = new ArrayList<TLPoliciesBit>();
-            List<TLPoliciesBit> certDna = new ArrayList<TLPoliciesBit>();
+            List<TLPoliciesBit> extended = new ArrayList<>();
+            List<TLPoliciesBit> certDna = new ArrayList<>();
             for (Object obj : anyType.getContent()) {
                 if (obj instanceof JAXBElement) {
                     JAXBElement obj2 = (JAXBElement) obj;
@@ -92,8 +72,8 @@ public class TLOtherCriteria extends AbstractTLDTO {
         int i = 0;
         int j = 0;
         if (at.getContent() != null) {
-            List<TLPoliciesBit> extended = new ArrayList<TLPoliciesBit>();
-            List<TLPoliciesBit> certDna = new ArrayList<TLPoliciesBit>();
+            List<TLPoliciesBit> extended = new ArrayList<>();
+            List<TLPoliciesBit> certDna = new ArrayList<>();
             for (Object obj : at.getContent()) {
                 if (obj instanceof JAXBElement) {
                     JAXBElement obj2 = (JAXBElement) obj;
@@ -136,7 +116,7 @@ public class TLOtherCriteria extends AbstractTLDTO {
                 csDNAt.getAttributeOID().add(pb.asTSLTypeV5());
             }
             at.getContent().add(
-                    new JAXBElement<CertSubjectDNAttributeTypeV5>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "CertSubjectDNAttribute"), CertSubjectDNAttributeTypeV5.class, csDNAt));
+                    new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2/additionaltypes#", "CertSubjectDNAttribute"), CertSubjectDNAttributeTypeV5.class, csDNAt));
         }
 
         if (CollectionUtils.isNotEmpty(this.getExtendedKeyUsageList())) {
@@ -144,7 +124,7 @@ public class TLOtherCriteria extends AbstractTLDTO {
             for (TLPoliciesBit pb : this.getExtendedKeyUsageList()) {
                 ekut.getKeyPurposeId().add(pb.asTSLTypeV5());
             }
-            at.getContent().add(new JAXBElement<ExtendedKeyUsageTypeV5>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "ExtendedKeyUsage"), ExtendedKeyUsageTypeV5.class, ekut));
+            at.getContent().add(new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2/additionaltypes#", "ExtendedKeyUsage"), ExtendedKeyUsageTypeV5.class, ekut));
         }
 
         return at;

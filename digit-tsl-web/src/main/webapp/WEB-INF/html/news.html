@@ -50,7 +50,7 @@
 						<span th:text="#{tStartDate}"></span>
 						<div style="display: inline">
 							<input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.startDate" is-open="opened" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
-							<button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0px 12px !important;">
+							<button type="button" class="btn btn-default" ng-click="open($event)" style="height: 26px; padding: 0 12px !important;">
 								<span class="fa fa-calendar"></span>
 							</button>
 						</div>
@@ -59,7 +59,7 @@
 						<span th:text="#{tEndDate}"></span>
 						<div style="display: inline">
 							<input type="text" datepicker-popup="yyyy-MM-dd" ng-model="auditSearch.endDate" is-open="openedEnd" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" close-text="Close" />
-							<button type="button" class="btn btn-default" ng-click="openEnd($event)" style="height: 26px; padding: 0px 12px !important;">
+							<button type="button" class="btn btn-default" ng-click="openEnd($event)" style="height: 26px; padding: 0 12px !important;">
 								<span class="fa fa-calendar"></span>
 							</button>
 						</div>

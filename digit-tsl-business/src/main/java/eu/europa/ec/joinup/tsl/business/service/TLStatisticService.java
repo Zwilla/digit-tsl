@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayOutputStream;
@@ -61,8 +41,8 @@ public class TLStatisticService {
     @Value("${lotl.territory}")
     private String lotlTerritory;
 
-    private static final List<String> activeStatus = Arrays.asList("http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
-            "http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel");
+    private static final List<String> activeStatus = Arrays.asList("https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted",
+            "https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel");
 
     /* ----- ----- CSV Generation ----- ----- */
 
@@ -237,7 +217,7 @@ public class TLStatisticService {
                     shAbstract = service;
                 } else if (!CollectionUtils.isEmpty(service.getHistory())) {
                     // Current service not started before extract date. Loop through historic required
-                    Boolean historyFound = false;
+                    boolean historyFound = false;
                     int index = 0;
                     while (!historyFound && (index < service.getHistory().size())) {
                         if (service.getHistory().get(index).getStartingDate().before(extractDate)) {
@@ -255,10 +235,10 @@ public class TLStatisticService {
                     statTSP.incrementNbService();
 
                     // Verify is service is active
-                    Boolean isActive = activeStatus.contains(shAbstract.getStatus());
+                    boolean isActive = activeStatus.contains(shAbstract.getStatus());
 
                     // Verify if service is TakenOverBy
-                    Boolean isTOB = !StringUtils.isEmpty(shAbstract.getTakenOverBy());
+                    boolean isTOB = !StringUtils.isEmpty(shAbstract.getTakenOverBy());
 
                     // Calcul legal types
                     for (String qType : shAbstract.getQTypes()) {

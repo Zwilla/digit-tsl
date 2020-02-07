@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.util.ArrayList;
@@ -232,9 +212,6 @@ public class TLServiceProvider extends AbstractTLDTO {
     public List<TLDifference> asPublishedDiff(TLServiceProvider publishedTlServiceProvider, String parentId) {
         List<TLDifference> diffList = new ArrayList<>();
 
-        /*************************************
-         * List<TLService> tspServices;
-         *************************************/
         // COPY VALUE OF DRAFT DATA
         List<TLServiceDto> tmp = !CollectionUtils.isEmpty(getTSPServices()) ? new ArrayList<>(getTSPServices()) : new ArrayList<TLServiceDto>();
         List<TLServiceDto> tmpPublished = !CollectionUtils.isEmpty(publishedTlServiceProvider.getTSPServices()) ? new ArrayList<>(publishedTlServiceProvider.getTSPServices())
@@ -290,9 +267,6 @@ public class TLServiceProvider extends AbstractTLDTO {
             diffList.add(new TLDifference(parentId + "_" + Tag.TSP_SERVICE, published.getTypeIdentifier() + " - " + TLUtils.toStringFormat(published.getCurrentStatusStartingDate()), ""));
         }
 
-        /*************************************
-         * List<TLName> tspName;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPName())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getTSPName(), publishedTlServiceProvider.getTSPName(), getId() + "_" + Tag.TSP_NAME);
             if (changeList.size() > 0) {
@@ -304,9 +278,6 @@ public class TLServiceProvider extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLName> tspTradeName;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPTradeName())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLNameList(getTSPTradeName(), publishedTlServiceProvider.getTSPTradeName(), getId() + "_" + Tag.TSP_TRADE_NAME);
             if (changeList.size() > 0) {
@@ -318,9 +289,6 @@ public class TLServiceProvider extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLPostalAddress> tspPostal;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPPostal())) {
             List<TLDifference> changeList = ChangeUtils.diffOfPostalList(getTSPPostal(), publishedTlServiceProvider.getTSPPostal(), getId() + "_" + Tag.POSTAL_ADDRESSES);
             if (changeList.size() > 0) {
@@ -332,9 +300,6 @@ public class TLServiceProvider extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLElectronicAddress> tspElectronic;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPElectronic())) {
             List<TLDifference> changeList = ChangeUtils.diffOfElectronic(getTSPElectronic(), publishedTlServiceProvider.getTSPElectronic(), getId() + "_" + Tag.ELECTRONIC_ADDRESS);
             if (changeList.size() > 0) {
@@ -346,9 +311,6 @@ public class TLServiceProvider extends AbstractTLDTO {
             }
         }
 
-        /*************************************
-         * List<TLInformationUri> tspInfoUri;
-         *************************************/
         if (CollectionUtils.isNotEmpty(getTSPInfoUri())) {
             List<TLDifference> changeList = ChangeUtils.diffOfTLInfoUriList(getTSPInfoUri(), publishedTlServiceProvider.getTSPInfoUri(), getId() + "_" + Tag.TSP_INFORMATION_URI);
             if (changeList.size() > 0) {
@@ -359,10 +321,6 @@ public class TLServiceProvider extends AbstractTLDTO {
                 diffList.addAll(ChangeUtils.initEmptyCurrentListDifference(publishedTlServiceProvider.getTSPInfoUri(), getId() + '_' + Tag.TSP_INFORMATION_URI));
             }
         }
-
-        /*************************************
-         * List<TLInformationExtension> tspExtension;
-         *************************************/
 
         return diffList;
     }
@@ -463,7 +421,7 @@ public class TLServiceProvider extends AbstractTLDTO {
     }
 
     public String getName() {
-        if ((this != null) && !CollectionUtils.isEmpty(getTSPName())) {
+        if (!CollectionUtils.isEmpty(getTSPName())) {
             if (getTSPName().get(0).getValue() != null) {
                 return getTSPName().get(0).getValue();
             }

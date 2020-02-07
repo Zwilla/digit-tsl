@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
@@ -117,7 +97,7 @@ public class TLLoader {
 
         // Verify if the new version is not the result of cache issue
         if (isNewXML && isNotFirstLoading) {
-            Boolean cacheIssue = false;
+            boolean cacheIssue = false;
             if (!CollectionUtils.isEmpty(matchingTL)) {
                 // At least one PROD trusted list has the same digest => newest loaded trusted list is an previous version
                 byte[] tmpFile = null;
@@ -172,13 +152,13 @@ public class TLLoader {
             }
 
             auditService.addAuditLog(AuditTarget.PROD_TL, AuditAction.CREATE, AuditStatus.SUCCES, countryCode, xmlFile.getId(), "SYSTEM",
-                    "CLASS:TLLoader.LOADTL_CREATETL,TLID:" + tl.getId() + ",NEWXML:" + isNewXML + ",XMLDIGEST --> " + xmlDigest);
+                    "CLASS:TLLoader.LOADTL_CREATETL,TLID:" + tl.getId() + ",NEWXML:" + ",XMLDIGEST --> " + xmlDigest);
         } else {
             xmlFile.setLastScanDate(date);
         }
 
         try {
-            if ((xmlFile != null) && StringUtils.isNotEmpty(xmlFile.getLocalPath())) {
+            if (StringUtils.isNotEmpty(xmlFile.getLocalPath())) {
                 File tslFile = fileService.getTSLFile(xmlFile);
                 jaxbTL = jaxbService.unmarshallTSL(tslFile);
                 tl.setIssueDate(TLUtils.toDate(jaxbTL.getSchemeInformation().getListIssueDateTime()));

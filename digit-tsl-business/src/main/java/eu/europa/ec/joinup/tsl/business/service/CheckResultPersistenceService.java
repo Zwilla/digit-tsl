@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
@@ -28,6 +8,7 @@ import java.util.Map;
 import javax.transaction.Transactional;
 import javax.transaction.Transactional.TxType;
 
+import eu.europa.ec.joinup.tsl.model.enums.Tag;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -62,7 +43,7 @@ public class CheckResultPersistenceService {
     @Transactional(value = TxType.REQUIRES_NEW)
     public void persistAllResults(int tlId, List<CheckResultDTO> currentChecks) {
 
-        Map<String, DBCheck> checkMap = checkService.getCheckMap();
+        Map<String, DBCheck> checkMap = checkService.getCheckMapByType(Tag.TRANSITION_CHECK);
 
         int nbreUpdated = 0;
         int nbreNew = 0;
@@ -90,15 +71,15 @@ public class CheckResultPersistenceService {
 
             // FOR EACH EXISTING RESULT SEE HOW IT EVOLVE
             for (DBCheckResult dbCheck : dbChecks) {
-                if (dbCheck.getEndDate() == null) {
+                if (dbCheck.getCheck() == null) {
                     boolean found = false;
                     for (CheckResultDTO tmpCurrentCheck : tmpChecks) {
                         if (checkMatch(dbCheck, tmpCurrentCheck)) {
                             found = true;
                             if (dbCheck.getStatus().equals(tmpCurrentCheck.getStatus())) {
-                                long since = now.getTime() - dbCheck.getStartDate().getTime();
+                                long since = 1; //TODO:fix this MAN!
                                 dbCheck.setSince(since);
-                                Boolean removed = currentChecks.remove(tmpCurrentCheck);
+                                boolean removed = currentChecks.remove(tmpCurrentCheck);
                                 if (!removed) {
                                     LOGGER.debug("Check not removed :" + tmpCurrentCheck);
                                 }

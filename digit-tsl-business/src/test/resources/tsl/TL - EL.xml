@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="EL-TL-030" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="EL-TL-030" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>30</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">Hellenic Telecommunications and Post Commission, EETT</Name>
             <Name xml:lang="en">EETT</Name>
@@ -37,10 +37,10 @@
             <URI xml:lang="en">http://www.eett.gr/tsl/en/info</URI>
             <URI xml:lang="el">http://www.eett.gr/tsl/gr/info</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EL</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EL</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>EL</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -75,7 +75,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -90,7 +90,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -148,7 +148,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Hellenic Public Administration CA - HPARCA</Name>
                             <Name xml:lang="el">ΑΡΧΗ ΠΙΣΤΟΠΟΙΗΣΗΣ ΕΛΛΗΝΙΚΟΥ ΔΗΜΟΣΙΟΥ</Name>
@@ -161,7 +161,7 @@
 <X509SubjectName>CN=YPES - Ministry of Interior CA,OU=Gen.Gram. D. Dsis k H.D. Gen. Secret. of Public Admin. and Egov,OU=YPES - Ministry of Interior,O=Hellenic Public Administration Root CA - HPARCA,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <TSPServiceDefinitionURI>
                             <URI xml:lang="en">https://pki.ermis.gov.gr/repository_en.html</URI>
@@ -170,14 +170,14 @@
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Public Administration CA - HPARCA</Name>
 <Name xml:lang="el">ΑΡΧΗ ΠΙΣΤΟΠΟΙΗΣΗΣ ΕΛΛΗΝΙΚΟΥ ΔΗΜΟΣΙΟΥ</Name>
@@ -190,11 +190,11 @@
     <X509SKI>mC4DAeuNrIf3F50+MtrpiNZVN30=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2012-03-09T11:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Public Administration CA</Name>
 <Name xml:lang="el">ΑΡΧΗ ΠΙΣΤΟΠΟΙΗΣΗΣ ΕΛΛΗΝΙΚΟΥ ΔΗΜΟΣΙΟΥ</Name>
@@ -207,14 +207,14 @@
     <X509SKI>mC4DAeuNrIf3F50+MtrpiNZVN30=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2007-06-20T09:09:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Hellenic Public Administration Root CA (HPARCA) – Certification Services for Citizens</Name>
                             <Name xml:lang="el">ΑΡΧΗ ΠΙΣΤΟΠΟΙΗΣΗΣ ΤΟΥ ΕΛΛΗΝΙΚΟΥ ΔΗΜΟΣΙΟΥ (ΑΠΕΔ) - ΥΠΗΡΕΣΙΕΣ ΠΙΣΤΟΠΟΙΗΣΗΣ ΠΡΟΣ ΠΟΛΙΤΕΣ (SHA1)</Name>
@@ -227,19 +227,19 @@
 <X509SubjectName>CN=HPARCA Certification Services for Citizens,OU=Ministry of Interior\, Decentralization and e-Government,O=Hellenic Public Administration Root CA - HPARCA,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Public Administration Root CA (HPARCA) – Certification Services for Citizens</Name>
 <Name xml:lang="el">ΑΡΧΗ ΠΙΣΤΟΠΟΙΗΣΗΣ ΤΟΥ ΕΛΛΗΝΙΚΟΥ ΔΗΜΟΣΙΟΥ (ΑΠΕΔ) - ΥΠΗΡΕΣΙΕΣ ΠΙΣΤΟΠΟΙΗΣΗΣ ΠΡΟΣ ΠΟΛΙΤΕΣ (SHA1)</Name>
@@ -252,14 +252,14 @@
     <X509SKI>+bLgtyNaCTAtLnne7vXq4/3KE8Q=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2010-06-09T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HELLENIC PUBLIC ADMINISTRATION CERTIFICATION SERVICES</Name>
                             <Name xml:lang="el">ΥΠΗΡΕΣΙΕΣ ΠΙΣΤΟΠΟΙΗΣΗΣ ΕΛΛΗΝΙΚΗΣ ΔΗΜΟΣΙΑΣ ΔΙΟΙΚΗΣΗΣ</Name>
@@ -272,19 +272,19 @@
 <X509SubjectName>CN=Hellenic Public Administration Issuing CA,OU=HPARCA,O=Hellenic Public Administration Certification Services,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HELLENIC PUBLIC ADMINISTRATION CERTIFICATION SERVICES</Name>
 <Name xml:lang="el">ΥΠΗΡΕΣΙΕΣ ΠΙΣΤΟΠΟΙΗΣΗΣ ΕΛΛΗΝΙΚΗΣ ΔΗΜΟΣΙΑΣ ΔΙΟΙΚΗΣΗΣ</Name>
@@ -297,14 +297,14 @@
     <X509SKI>szJC5j/X1SvXeLm9CqS8uejY+UE=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-08-02T00:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HPARCA Services for Administration Bodies (Legal Entities) before 1/8/2013</Name>
                             <Name xml:lang="el">Πιστοποιητικά για Νομικά Πρόσωπα του δημοσίου τομέα πριν 1/8/2013</Name>
@@ -314,7 +314,7 @@
 <X509Certificate>MIIFaTCCBFGgAwIBAgIQNbrRDsuneXn778xqwlwt8DANBgkqhkiG9w0BAQUFADCBwDELMAkGA1UEBhMCR1IxPjA8BgNVBAoTNUhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBDZXJ0aWZpY2F0aW9uIFNlcnZpY2VzMUAwPgYDVQQLEzdNaW5pc3RyeSBvZiBJbnRlcmlvciwgRGVjZW50cmFsaXphdGlvbiBhbmQgZS1Hb3Zlcm5tZW50MS8wLQYDVQQDEyZIZWxsZW5pYyBQdWJsaWMgQWRtaW5pc3RyYXRpb24gUm9vdCBDQTAeFw0wOTExMzAwMDAwMDBaFw0xOTExMjkyMzU5NTlaMIHOMQswCQYDVQQGEwJHUjE4MDYGA1UEChMvSGVsbGVuaWMgUHVibGljIEFkbWluaXN0cmF0aW9uIFJvb3QgQ0EgLSBIUEFSQ0ExQDA+BgNVBAsTN01pbmlzdHJ5IG9mIEludGVyaW9yLCBEZWNlbnRyYWxpemF0aW9uIGFuZCBlLUdvdmVybm1lbnQxQzBBBgNVBAMTOkhQQVJDQSBTZXJ2aWNlcyBmb3IgQWRtaW5pc3RyYXRpb24gQm9kaWVzIChMZWdhbCBFbnRpdGllcykwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDlooM7TyAE9Z1jgR3FOl6aIWq/YNOFbSq4xc9KrcIlHMC2Xp7Kx5SURKqt+6hJTcwICMoeGyG61KDG2XCCW566RPTzQGApg5Lpj6jt2cTcuY4N4NrgXxr4eKU31cnYoaZh265DnyVG7HEJTjIeeI9p8PgKmeXEt6pucVwUlKFWruMKWv7gRNJcMNBKUBeuh00ZtImIyizBiyFULn60YA62751XEixHG9NGqtzVN/25UEeTRWc7C70pgeOKRzlbHRbB8MW4A/rsrV9JNPdHTDeC2u8EXON9YOgbF61c0Cjy6+RDmjiWD77qn5NSCD9YfniT5FP3A3hYQ8WE9Pv1Bp19AgMBAAGjggFNMIIBSTASBgNVHRMBAf8ECDAGAQH/AgEAMIGJBgNVHSAEgYEwfzB9BgsqgiwAhtsxAQcBATBuMDQGCCsGAQUFBwIBFihodHRwczovL3BraS5lcm1pcy5nb3YuZ3IvcmVwb3NpdG9yeS5odG1sMDYGCCsGAQUFBwICMCoaKGh0dHBzOi8vcGtpLmVybWlzLmdvdi5nci9yZXBvc2l0b3J5Lmh0bWwwNgYDVR0fBC8wLTAroCmgJ4YlaHR0cDovL2NybC5lcm1pcy5nb3YuZ3IvY2EvaHBhcmNhLmNybDAOBgNVHQ8BAf8EBAMCAQYwHwYDVR0RBBgwFqQUMBIxEDAOBgNVBAMTB0VybWlzLTQwHQYDVR0OBBYEFJYZDzsGZxMJ/KHVFZH8qQG15ms6MB8GA1UdIwQYMBaAFDJJQEmIFh1qq8QkKcgnxEn7T2ELMA0GCSqGSIb3DQEBBQUAA4IBAQAoBM4c2myzySzFgIoXBax0rZxPBgk320kLDEdX/NDXrusAJOeZhTzw0oWjOy0FLMGSoziD070HFaCz8I/zQXbH9p262u1EzSsnEdAKt9F2Si4jJpkyruO/T+sVc58RRkCuVDxPjerNUSjrnD9EaSIs2+JrPberWOzcjMHZuAz89oq7mmW0IYsVEeCLMh/xaQmV1vIJ6Qqw3Y7MovS4HDN3Ut4IHxmTvt9RIiP9Bl6LzTx2ZhFmW5J7iylbekdz36ZnkUKl4sjihpiJdgXvJHgu6LQU1GAaQsxA59fa+PwkK9Vi8RWwoF8N6QejZL4OkEuD1UQBpEuHDTKHimklmT5w</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <TSPServiceDefinitionURI>
                             <URI xml:lang="el">https://pki.ermis.gov.gr/repository.html</URI>
@@ -323,14 +323,14 @@
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HPARCA Services for Administration Bodies (Legal Entities) before 1/8/2013</Name>
 <Name xml:lang="el">Πιστοποιητικά για Νομικά Πρόσωπα του δημοσίου τομέα πριν 1/8/2013</Name>
@@ -343,12 +343,12 @@
     <X509SKI>lhkPOwZnEwn8odUVkfypAbXmazo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2009-11-29T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -357,7 +357,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">HPARCA Services for Administration Bodies (Legal Entities)</Name>
                             <Name xml:lang="el">Πιστοποιητικά για Νομικά Πρόσωπα του δημοσίου τομέα</Name>
@@ -367,7 +367,7 @@
 <X509Certificate>MIIFJTCCBA2gAwIBAgIQeSqecUyty/n5i3PmEZ8QLDANBgkqhkiG9w0BAQsFADCBjzELMAkGA1UEBhMCR1IxPjA8BgNVBAoTNUhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBDZXJ0aWZpY2F0aW9uIFNlcnZpY2VzMQ8wDQYDVQQLEwZIUEFSQ0ExLzAtBgNVBAMTJkhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBSb290IENBMB4XDTEzMDYxODAwMDAwMFoXDTIzMDYxNzIzNTk1OVowgaUxCzAJBgNVBAYTAkdSMT4wPAYDVQQKEzVIZWxsZW5pYyBQdWJsaWMgQWRtaW5pc3RyYXRpb24gQ2VydGlmaWNhdGlvbiBTZXJ2aWNlczEPMA0GA1UECxMGSFBBUkNBMUUwQwYDVQQDEzxIZWxsZW5pYyBQdWJsaWMgQWRtaW5pc3RyYXRpb24gZm9yIExlZ2FsIEVudGl0aWVzIElzc3VpbmcgQ0EwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDNMY1iRWTMI+TanxtmmlUH7Iez6kf+jueQqGH0sM4WXqqDVvGwzyVRZOfLxYrZcp1nz1zUuI98vlZ01chdgm0TfO3jv5X9pu+8SESfwL72+9MfEzNwQXxUhvL2xAvMWPkp7fF79nMKiMskGozGa81o5kCMsRbWavhRqwzRKCMu3deI1/DkCrEQ8+1QcBkC4KZXoz/IL2EW6ExZ6d4fOHMTm3/yuAiEFKAuZ+DVtHmCt335HKbENoJoAL0jLR1fH14moZVYGpNgT08LlOCIzF4vo5Us1rrgFZT5cwQ46lVDXyDQiUL/Y7UXtv1D85PulbtfU8W+qYpCbTFT3IRcaj4hAgMBAAGjggFjMIIBXzASBgNVHRMBAf8ECDAGAQH/AgEAMIGJBgNVHSAEgYEwfzB9BgsqgiwAhtsxAQcBATBuMDQGCCsGAQUFBwIBFihodHRwczovL3BraS5lcm1pcy5nb3YuZ3IvcmVwb3NpdG9yeS5odG1sMDYGCCsGAQUFBwICMCoaKGh0dHBzOi8vcGtpLmVybWlzLmdvdi5nci9yZXBvc2l0b3J5Lmh0bWwwOQYDVR0fBDIwMDAuoCygKoYoaHR0cDovL2NybC5lcm1pcy5nb3YuZ3IvY2EvaHBhcmNhLWcyLmNybDAOBgNVHQ8BAf8EBAMCAQYwEQYJYIZIAYb4QgEBBAQDAgEGMB8GA1UdEQQYMBakFDASMRAwDgYDVQQDEwdFcm1pcy03MB0GA1UdDgQWBBSEy+4igJ4tSDdTGxIHcx5vM3I7zTAfBgNVHSMEGDAWgBRZCxiiCR4h3GFl06S+BeVM5kGIHTANBgkqhkiG9w0BAQsFAAOCAQEAO0TWd4xtct3HLPLr06S/4R7VDeeOjdQcXpxoxWu48KJaFpUBCH/y7+ngLTkH01XdK8SGUQpMPprg5kFIMukfaW9/rktTlose9h4LA7V8YgYngTVeLy/PyisKl92pLUc6Fvq8SAZLDtvvj/Th6wO6SA7iBFjcIexUNI6p6UBpkbSZM030sJPZIh0GoS1liDGMk2tu6XzCjOHaDkOKS8QYvvDbWTGDFZ0CWq3Qk7JOoY6UyndVk77DItqiNapiLkGvzGe6qVj/R+mzroyYJ5oft9yqC4DwyMMGOKuarvzDUG8qC4gNKWy+iQdI4ayS1i+kNkh1vtmyomGVqx+z+q9LRQ==</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <TSPServiceDefinitionURI>
                             <URI xml:lang="el">https://pki.ermis.gov.gr/repository.html</URI>
@@ -376,14 +376,14 @@
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/PKC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">HPARCA Services for Administration Bodies (Legal Entities)</Name>
 <Name xml:lang="el">Πιστοποιητικά για Νομικά Πρόσωπα του δημοσίου τομέα</Name>
@@ -396,12 +396,12 @@
     <X509SKI>hMvuIoCeLUg3UxsSB3MebzNyO80=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-06-17T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -450,7 +450,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ADACOM Qualified Certificate Services CA</Name>
                         </ServiceName>
@@ -462,19 +462,19 @@
 <X509SubjectName>CN=ADACOM Qualified Certificate Services CA,OU=Class 2 OnSite Individual Subscriber CA,OU=Terms of use at https://sec.adacom.com/rpa (c)03,OU=VeriSign Trust Network,O=ADACOM S.A.,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-07-07T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Certificate Services CA</Name>
                             </ServiceName>
@@ -486,18 +486,18 @@
     <X509SKI>EuQiPqxKRUj0YeyfFR1ZfHRTUNM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Certificate Services CA</Name>
                             </ServiceName>
@@ -509,11 +509,11 @@
     <X509SKI>EuQiPqxKRUj0YeyfFR1ZfHRTUNM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionincessation</ServiceStatus>
                             <StatusStartingTime>2012-05-09T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Certificate Services CA</Name>
                             </ServiceName>
@@ -525,14 +525,14 @@
     <X509SKI>EuQiPqxKRUj0YeyfFR1ZfHRTUNM=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2002-10-01T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ADACOM Qualified Services CA</Name>
                         </ServiceName>
@@ -547,19 +547,19 @@
 <X509SKI>U4yt9CyhEamWjqRFRi718c6jQ1s=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-07-07T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Services CA</Name>
                             </ServiceName>
@@ -571,18 +571,18 @@
     <X509SKI>U4yt9CyhEamWjqRFRi718c6jQ1s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Services CA</Name>
                             </ServiceName>
@@ -594,11 +594,11 @@
     <X509SKI>U4yt9CyhEamWjqRFRi718c6jQ1s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2013-01-25T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Services CA</Name>
                             </ServiceName>
@@ -610,11 +610,11 @@
     <X509SKI>U4yt9CyhEamWjqRFRi718c6jQ1s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionrevoked</ServiceStatus>
                             <StatusStartingTime>2013-01-24T10:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ADACOM Qualified Services CA</Name>
                             </ServiceName>
@@ -626,14 +626,14 @@
     <X509SKI>U4yt9CyhEamWjqRFRi718c6jQ1s=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-06-30T09:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ADACOM CA for EU Qualified e-Signatures</Name>
                         </ServiceName>
@@ -648,12 +648,12 @@
 <X509SKI>jZ8G9Lqoy5YZRvmvrRS+U1DFAog=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-06T21:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -661,7 +661,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ADACOM CA for EU Qualified e-Seals</Name>
                         </ServiceName>
@@ -676,12 +676,12 @@
 <X509SKI>bjP/zNWQjlu+XMsj0M8hPFHmtyA=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-06T21:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -735,7 +735,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ASYK Qualified Certificates CA</Name>
                         </ServiceName>
@@ -747,14 +747,14 @@
 <X509SubjectName>CN=ASYK Qualified Certificates CA,OU=Qualified Certificates CA,O=ASYK S.A.,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:KeyUsage>
@@ -778,14 +778,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ASYK Qualified Certificates CA</Name>
                             </ServiceName>
@@ -797,14 +797,14 @@
     <X509SKI>QoYxvFDxOH0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/supervisionceased</ServiceStatus>
                             <StatusStartingTime>2012-04-24T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -829,7 +829,7 @@
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ASYK Qualified Certificates CA</Name>
                             </ServiceName>
@@ -841,14 +841,14 @@
     <X509SKI>QoYxvFDxOH0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2006-03-17T12:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -876,7 +876,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ATHEX Qualified Certificates CA</Name>
                         </ServiceName>
@@ -888,14 +888,14 @@
 <X509SubjectName>CN=ATHEX Qualified Certificates CA,O=Athens Exchange S.A.,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-07-07T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:KeyUsage>
@@ -912,14 +912,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ATHEX Qualified Certificates CA</Name>
                             </ServiceName>
@@ -931,14 +931,14 @@
     <X509SKI>Sv81FrFXg/g=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -955,13 +955,13 @@
 </Extension>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ATHEX Qualified Certificates CA</Name>
                             </ServiceName>
@@ -973,14 +973,14 @@
     <X509SKI>Sv81FrFXg/g=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2012-01-16T11:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -1001,7 +1001,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">ATHEX Qualified Certificates CA G2</Name>
                         </ServiceName>
@@ -1013,14 +1013,14 @@
 <X509SubjectName>CN=ATHEX Qualified Certificates CA G2,O=ATHENS STOCK EXCHANGE,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:KeyUsage>
@@ -1037,14 +1037,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">ATHEX Qualified Certificates CA G2</Name>
                             </ServiceName>
@@ -1056,14 +1056,14 @@
     <X509SKI>TATH5H+afZ4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-26T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -1125,7 +1125,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">BYTE ePrescription Certification Authority 001</Name>
                         </ServiceName>
@@ -1134,14 +1134,14 @@
 <X509Certificate>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</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:KeyUsage>
@@ -1165,14 +1165,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">BYTE ePrescription Certification Authority 001</Name>
                             </ServiceName>
@@ -1184,14 +1184,14 @@
     <X509SKI>7p7nlsOPoLLAUswCJ+FGXldIBtQ=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2014-09-10T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -1219,7 +1219,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">BYTE General Certification Authority 001</Name>
                         </ServiceName>
@@ -1228,19 +1228,19 @@
 <X509Certificate>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</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="all">
             <ns5:KeyUsage>
@@ -1255,7 +1255,7 @@
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">BYTE General Certification Authority 001</Name>
                             </ServiceName>
@@ -1267,14 +1267,14 @@
     <X509SKI>kJUILcHjnJjuDPE5R9a87PQuq1o=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-01-07T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCWithSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="all">
                 <ns5:KeyUsage>
@@ -1290,7 +1290,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">BYTE Root Certification Authority 001</Name>
                         </ServiceName>
@@ -1305,17 +1305,17 @@
 <X509SKI>tE1mt9OzyJl8ATLQkTr31qgSMd4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-06T21:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -1323,7 +1323,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">BYTE Qualified Time Stamping</Name>
                         </ServiceName>
@@ -1338,7 +1338,7 @@
 <X509SKI>d6cgdetgUt8nm8ELo9C+Zut47JU=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-06T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
@@ -1386,7 +1386,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Hellenic Academic and Research Institutions RootCA 2011</Name>
                         </ServiceName>
@@ -1398,24 +1398,24 @@
 <X509SubjectName>CN=Hellenic Academic and Research Institutions RootCA 2011,O=Hellenic Academic and Research Institutions Cert. Authority,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Academic and Research Institutions RootCA 2011</Name>
                             </ServiceName>
@@ -1427,12 +1427,12 @@
     <X509SKI>ppFC/RNhSiOeCKQp5dgTBCPuQSU=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2015-06-03T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -1441,7 +1441,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Hellenic Academic and Research Institutions RootCA 2015</Name>
                         </ServiceName>
@@ -1453,24 +1453,24 @@
 <X509SubjectName>CN=Hellenic Academic and Research Institutions RootCA 2015,O=Hellenic Academic and Research Institutions Cert. Authority,L=Athens,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Academic and Research Institutions RootCA 2015</Name>
                             </ServiceName>
@@ -1482,12 +1482,12 @@
     <X509SKI>cRVnyMjJvXVdctA4GGqd83EkVAs=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-23T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -1496,7 +1496,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Hellenic Academic and Research Institutions ECC RootCA 2015</Name>
                         </ServiceName>
@@ -1508,24 +1508,24 @@
 <X509SubjectName>CN=Hellenic Academic and Research Institutions ECC RootCA 2015,O=Hellenic Academic and Research Institutions Cert. Authority,L=Athens,C=GR</X509SubjectName>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-06-30T19:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Hellenic Academic and Research Institutions ECC RootCA 2015</Name>
                             </ServiceName>
@@ -1537,12 +1537,12 @@
     <X509SKI>tCILgpkkAQ6cu+QO/b/7lyCTmSo=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2016-06-23T21:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/RootCA-QC</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -1551,7 +1551,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">Time-Stamping Unit 2017</Name>
                         </ServiceName>
@@ -1566,11 +1566,11 @@
 <X509SKI>utHW84oF+Yjif/W+V+9FLS6dzu4=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2017-07-06T21:00:00Z</StatusStartingTime>
                     </ServiceInformation>
                 </TSPService>
             </TSPServices>
         </TrustServiceProvider>
     </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-f97588e28bf15a166c5206786659ee3b"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>d9NtKBB0mkBFdF7udqWzyY9Y9bxQy7HTGFnrUK/JQjo=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-f97588e28bf15a166c5206786659ee3b"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>ctIl2iyyk1JbKSYp7NaIm/GyR7ajVBARPE0hpBoIoz0=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-f97588e28bf15a166c5206786659ee3b">p/KNmaEgN510ETG+XRZJWUMCwyRf/O3izivCEtv65y3HEZBJQH5GUl6OsHumyXtREG5VEuYKjdKn4xJshIMd85YTWr1GFKxXQSiLxBSIT9uWb78cVHVapPUueAyamNwGPuFZa7RDiHwCVpN1jN++znYB5tosjWlta/qVQ5Ghu/+6eYxEpru4ECK7RLXwyeIIWdp++pRVItGNc3rHkAYdXwutteWEzLd0r+EBhezqyjLPd5C2Y5Q4RMfBxTfw/VCBkRXKTf0IA5piZvNWLDt0/0jE3CqwPaCBtT4mZ0rwXZuL5548CtLIy4Jxv4Zus4FCdhU03aJuL5eCyNy1i5bxfQ==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIFJDCCBAygAwIBAgIQHC/9ut45MxRLIscCQhfbaDANBgkqhkiG9w0BAQsFADCBpTELMAkGA1UEBhMCR1IxPjA8BgNVBAoTNUhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBDZXJ0aWZpY2F0aW9uIFNlcnZpY2VzMQ8wDQYDVQQLEwZIUEFSQ0ExRTBDBgNVBAMTPEhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBmb3IgTGVnYWwgRW50aXRpZXMgSXNzdWluZyBDQTAeFw0xNjA2MjMwMDAwMDBaFw0yMTAzMjIyMzU5NTlaMIGtMQswCQYDVQQGEwJFTDEPMA0GA1UEBxQGQXRoZW5zMT4wPAYDVQQKFDVIZWxsZW5pYyBUZWxlY29tbXVuaWNhdGlvbnMgYW5kIFBvc3QgQ29tbWlzc2lvbiwgRUVUVDENMAsGA1UECxQERUVUVDE+MDwGA1UEAxM1SGVsbGVuaWMgVGVsZWNvbW11bmljYXRpb25zIGFuZCBQb3N0IENvbW1pc3Npb24sIEVFVFQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZMJ5AkBRXgfSa0uinelv0RdAYvpgrFstUfegJLUymKIS95WTerluheJv3hHH3btz93JWcwLIAK+5SQlJXrYWidcM4IPsZiJzFUWyDfEOev8SVhLYS2/fpdODvla7PInop1sZ2eFtBOvOmnb1iywyrnIFdwFI2JgVFPf2vWL+KU/bPqoaO/syTJ8aTnSh/ZHK05o2xqwAeMVrSgA85BL7sroYGPE5JdCsId5fp0tlItkyBv/60FjKjtIxQHR/xlIDz0fzIhuPXt2q0aygO75PbWuZ/5GqF5pRuMubWqZsCRbcBk0F8QCFWG7dN4SQhfuG5F/2aiuZM/1F49u1HgiXfAgMBAAGjggFEMIIBQDAJBgNVHRMEAjAAMFEGA1UdIARKMEgwRgYMKoIsAIbbMQEHAQEHMDYwNAYIKwYBBQUHAgEWKGh0dHBzOi8vcGtpLmVybWlzLmdvdi5nci9yZXBvc2l0b3J5Lmh0bWwwSgYDVR0fBEMwQTA/oD2gO4Y5aHR0cDovL2NybC5lcm1pcy5nb3YuZ3IvSFBBUkNBTGVnYWxFbnRpdGllcy9MYXRlc3RDUkwuY3JsMAsGA1UdDwQEAwIHgDAdBgNVHQ4EFgQUw4lWvFCzRzsC+rLxJ6NpYtWVIbUwHwYDVR0jBBgwFoAUhMvuIoCeLUg3UxsSB3MebzNyO80wEQYDVR0lBAowCAYGBACRNwMAMDQGCCsGAQUFBwEBBCgwJjAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZXJtaXMuZ292LmdyMA0GCSqGSIb3DQEBCwUAA4IBAQDB8PFBlykkN3mvF6Bv0JBTsP4VnBkeix/VH0qS5omhMPhBLQCvmDS/LdW60miGCyNaSJIOZag2Nubnp4pAyeWNsTMy1HVraYPGYkty0oW4dPx6VQJdKRD2IUZMT7jaQZ1hbtLQItl0C4L5raQNoN3T3giDqlwnMjNAqbrR/mHaV+kui+vojiUQeeNK0FuhHM8zrEXwrt9uSGVTldR98fdGavQ5kfZo79I95jnJhvQLRrivV8kAQh6AOVaCVj7HLdWLKmhq/ecc2t+zS5iUlwWe73oxNPGIc8juzyVav2bHtoF1nJ+QYheDPy+O5U4OcWB6xzpNv4DiAmdI/FR6PZIk</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-f97588e28bf15a166c5206786659ee3b"><xades:SignedProperties Id="xades-id-f97588e28bf15a166c5206786659ee3b"><xades:SignedSignatureProperties><xades:SigningTime>2017-07-07T12:56:20Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>9PYK7stEUjPtWBW6/L6mPQ9yLpo=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Hellenic Public Administration for Legal Entities Issuing CA,OU=HPARCA,O=Hellenic Public Administration Certification Services,C=GR</ds:X509IssuerName><ds:X509SerialNumber>37467568089171555032727837529595173736</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-f97588e28bf15a166c5206786659ee3b"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>d9NtKBB0mkBFdF7udqWzyY9Y9bxQy7HTGFnrUK/JQjo=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-f97588e28bf15a166c5206786659ee3b"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>ctIl2iyyk1JbKSYp7NaIm/GyR7ajVBARPE0hpBoIoz0=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-f97588e28bf15a166c5206786659ee3b">p/KNmaEgN510ETG+XRZJWUMCwyRf/O3izivCEtv65y3HEZBJQH5GUl6OsHumyXtREG5VEuYKjdKn4xJshIMd85YTWr1GFKxXQSiLxBSIT9uWb78cVHVapPUueAyamNwGPuFZa7RDiHwCVpN1jN++znYB5tosjWlta/qVQ5Ghu/+6eYxEpru4ECK7RLXwyeIIWdp++pRVItGNc3rHkAYdXwutteWEzLd0r+EBhezqyjLPd5C2Y5Q4RMfBxTfw/VCBkRXKTf0IA5piZvNWLDt0/0jE3CqwPaCBtT4mZ0rwXZuL5548CtLIy4Jxv4Zus4FCdhU03aJuL5eCyNy1i5bxfQ==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIFJDCCBAygAwIBAgIQHC/9ut45MxRLIscCQhfbaDANBgkqhkiG9w0BAQsFADCBpTELMAkGA1UEBhMCR1IxPjA8BgNVBAoTNUhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBDZXJ0aWZpY2F0aW9uIFNlcnZpY2VzMQ8wDQYDVQQLEwZIUEFSQ0ExRTBDBgNVBAMTPEhlbGxlbmljIFB1YmxpYyBBZG1pbmlzdHJhdGlvbiBmb3IgTGVnYWwgRW50aXRpZXMgSXNzdWluZyBDQTAeFw0xNjA2MjMwMDAwMDBaFw0yMTAzMjIyMzU5NTlaMIGtMQswCQYDVQQGEwJFTDEPMA0GA1UEBxQGQXRoZW5zMT4wPAYDVQQKFDVIZWxsZW5pYyBUZWxlY29tbXVuaWNhdGlvbnMgYW5kIFBvc3QgQ29tbWlzc2lvbiwgRUVUVDENMAsGA1UECxQERUVUVDE+MDwGA1UEAxM1SGVsbGVuaWMgVGVsZWNvbW11bmljYXRpb25zIGFuZCBQb3N0IENvbW1pc3Npb24sIEVFVFQwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDZMJ5AkBRXgfSa0uinelv0RdAYvpgrFstUfegJLUymKIS95WTerluheJv3hHH3btz93JWcwLIAK+5SQlJXrYWidcM4IPsZiJzFUWyDfEOev8SVhLYS2/fpdODvla7PInop1sZ2eFtBOvOmnb1iywyrnIFdwFI2JgVFPf2vWL+KU/bPqoaO/syTJ8aTnSh/ZHK05o2xqwAeMVrSgA85BL7sroYGPE5JdCsId5fp0tlItkyBv/60FjKjtIxQHR/xlIDz0fzIhuPXt2q0aygO75PbWuZ/5GqF5pRuMubWqZsCRbcBk0F8QCFWG7dN4SQhfuG5F/2aiuZM/1F49u1HgiXfAgMBAAGjggFEMIIBQDAJBgNVHRMEAjAAMFEGA1UdIARKMEgwRgYMKoIsAIbbMQEHAQEHMDYwNAYIKwYBBQUHAgEWKGh0dHBzOi8vcGtpLmVybWlzLmdvdi5nci9yZXBvc2l0b3J5Lmh0bWwwSgYDVR0fBEMwQTA/oD2gO4Y5aHR0cDovL2NybC5lcm1pcy5nb3YuZ3IvSFBBUkNBTGVnYWxFbnRpdGllcy9MYXRlc3RDUkwuY3JsMAsGA1UdDwQEAwIHgDAdBgNVHQ4EFgQUw4lWvFCzRzsC+rLxJ6NpYtWVIbUwHwYDVR0jBBgwFoAUhMvuIoCeLUg3UxsSB3MebzNyO80wEQYDVR0lBAowCAYGBACRNwMAMDQGCCsGAQUFBwEBBCgwJjAkBggrBgEFBQcwAYYYaHR0cDovL29jc3AuZXJtaXMuZ292LmdyMA0GCSqGSIb3DQEBCwUAA4IBAQDB8PFBlykkN3mvF6Bv0JBTsP4VnBkeix/VH0qS5omhMPhBLQCvmDS/LdW60miGCyNaSJIOZag2Nubnp4pAyeWNsTMy1HVraYPGYkty0oW4dPx6VQJdKRD2IUZMT7jaQZ1hbtLQItl0C4L5raQNoN3T3giDqlwnMjNAqbrR/mHaV+kui+vojiUQeeNK0FuhHM8zrEXwrt9uSGVTldR98fdGavQ5kfZo79I95jnJhvQLRrivV8kAQh6AOVaCVj7HLdWLKmhq/ecc2t+zS5iUlwWe73oxNPGIc8juzyVav2bHtoF1nJ+QYheDPy+O5U4OcWB6xzpNv4DiAmdI/FR6PZIk</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-f97588e28bf15a166c5206786659ee3b"><xades:SignedProperties Id="xades-id-f97588e28bf15a166c5206786659ee3b"><xades:SignedSignatureProperties><xades:SigningTime>2017-07-07T12:56:20Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>9PYK7stEUjPtWBW6/L6mPQ9yLpo=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Hellenic Public Administration for Legal Entities Issuing CA,OU=HPARCA,O=Hellenic Public Administration Certification Services,C=GR</ds:X509IssuerName><ds:X509SerialNumber>37467568089171555032727837529595173736</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

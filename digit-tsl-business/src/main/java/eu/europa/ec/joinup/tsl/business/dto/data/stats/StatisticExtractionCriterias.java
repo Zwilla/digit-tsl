@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.data.stats;
 
 import java.text.SimpleDateFormat;
@@ -37,11 +17,11 @@ public class StatisticExtractionCriterias {
     private List<String> countries;
 
     // Show/hide fields
-    private Boolean showTOB;
-    private Boolean showSequenceNumber;
-    private Boolean showTradeName;
-    private Boolean showQualified;
-    private Boolean showUnqualified;
+    private boolean showTOB;
+    private boolean showSequenceNumber;
+    private boolean showTradeName;
+    private boolean showQualified;
+    private boolean showUnqualified;
 
     public StatisticExtractionCriterias() {
         super();
@@ -82,10 +62,10 @@ public class StatisticExtractionCriterias {
         if (StringUtils.isEmpty(specificCountry)) {
             fileName.append("ALL - ");
         } else {
-            fileName.append(specificCountry + " - ");
+            fileName.append(specificCountry).append(" - ");
         }
         // Type
-        fileName.append(type.name() + " - ");
+        fileName.append(type.name()).append(" - ");
         // Date
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.YYYY");
         fileName.append(dateFormat.format(extractDate));
@@ -96,9 +76,9 @@ public class StatisticExtractionCriterias {
         // Options (qualified/non qualified)
         if (showQualified && showUnqualified) {
             fileName.append(" - Q & NQ");
-        } else if (showQualified && !showUnqualified) {
+        } else if (showQualified) {
             fileName.append(" - Q");
-        } else if (!showQualified && showUnqualified) {
+        } else if (showUnqualified) {
             fileName.append(" - NQ");
         }
         return fileName.toString();
@@ -136,43 +116,43 @@ public class StatisticExtractionCriterias {
         this.countries = countries;
     }
 
-    public Boolean getShowTOB() {
+    public boolean getShowTOB() {
         return showTOB;
     }
 
-    public void setShowTOB(Boolean showTOB) {
+    public void setShowTOB(boolean showTOB) {
         this.showTOB = showTOB;
     }
 
-    public Boolean getShowSequenceNumber() {
+    public boolean getShowSequenceNumber() {
         return showSequenceNumber;
     }
 
-    public void setShowSequenceNumber(Boolean showSequenceNumber) {
+    public void setShowSequenceNumber(boolean showSequenceNumber) {
         this.showSequenceNumber = showSequenceNumber;
     }
 
-    public Boolean getShowTradeName() {
+    public boolean getShowTradeName() {
         return showTradeName;
     }
 
-    public void setShowTradeName(Boolean showTradeName) {
+    public void setShowTradeName(boolean showTradeName) {
         this.showTradeName = showTradeName;
     }
 
-    public Boolean getShowQualified() {
+    public boolean getShowQualified() {
         return showQualified;
     }
 
-    public void setShowQualified(Boolean showQualified) {
+    public void setShowQualified(boolean showQualified) {
         this.showQualified = showQualified;
     }
 
-    public Boolean getShowUnqualified() {
+    public boolean getShowUnqualified() {
         return showUnqualified;
     }
 
-    public void setShowUnqualified(Boolean showUnqualified) {
+    public void setShowUnqualified(boolean showUnqualified) {
         this.showUnqualified = showUnqualified;
     }
 

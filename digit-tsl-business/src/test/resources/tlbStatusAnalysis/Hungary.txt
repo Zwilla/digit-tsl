@@ -2,619 +2,619 @@ Hungary
 
     MÁV Service Center Private Limited Company 
 
-        Trust&CA QKET v2.0 (Qualified certificates for public administration) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trust&CA QKET v2.0 (Qualified certificates for public administration) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trust&Sign QCA v1.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trust&Sign QCA v1.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Trust&CA NQ v2.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trust&CA NQ v2.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Trust&CA NQ v2.0 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL 
+        Trust&CA NQ v2.0 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL
 
-        Trust&CA NQKET v2.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trust&CA NQKET v2.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Trust&CA NQKET v2.0 - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL 
+        Trust&CA NQKET v2.0 - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/CRL
 
-        Trust&Sign ACA v1.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trust&Sign ACA v1.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Trust&Sign TSA v2.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Trust&Sign TSA v2.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Trust&Sign TSA v1.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Trust&Sign TSA v1.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Trust&CA OTP TSA1 v2.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Trust&CA OTP TSA1 v2.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Trust&CA OTP TSA2 v2.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Trust&CA OTP TSA2 v2.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        Info&CA NQKET v3.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Info&CA NQKET v3.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Info&CA NQKET v4.0 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Info&CA NQKET v4.0 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Info&CA TSA v4.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Info&CA TSA v4.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Info&CA TSA v3.0 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Info&CA TSA v3.0 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     Microsec Micro Software Engineering & Consulting Private Company Limited by Shares 
 
-        Qualified e-Szigno CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified e-Szigno CA7 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno CA7 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified e-Szigno PCA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno PCA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified Pseudonymous e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified Pseudonymous e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified e-Szigno QCP CA 2012 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno QCP CA 2012 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Qualified KET e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified KET e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified e-Szigno Organization CA 2016 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Qualified e-Szigno Organization CA 2016 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Advanced e-Szigno CA3 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced e-Szigno CA3 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Advanced e-Szigno CA2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced e-Szigno CA2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Signature e-Szigno CA6 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Signature e-Szigno CA6 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Advanced Class 3 e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced Class 3 e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Advanced Class 2 e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced Class 2 e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Advanced Pseudonymous e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced Pseudonymous e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Microsec e-Szigno Server CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Microsec e-Szigno Server CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        e-Szigno SSL CA 2014 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        e-Szigno SSL CA 2014 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        Advanced eIDAS Class2 e-Szigno CA 2016 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Advanced eIDAS Class2 e-Szigno CA 2016 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Qualified e-Szigno QCP CA 2012 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
-
-            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
-
-        Signature Class 3 KET e-Szigno CA 2009 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
-
-        e-Szignó Minősített Archiválás Szolgáltatás - http://uri.etsi.org/TrstSvc/Svctype/Archiv 
+        Qualified e-Szigno QCP CA 2012 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        e-Szignó Archívum - http://uri.etsi.org/TrstSvc/Svctype/Archiv 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
+
+        Signature Class 3 KET e-Szigno CA 2009 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
+
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
+
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
+
+        e-Szignó Minősített Archiválás Szolgáltatás - https://uri.etsi.org/TrstSvc/Svctype/Archiv
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        e-Szignó Archívum - http://uri.etsi.org/TrstSvc/Svctype/Archiv 
+        e-Szignó Archívum - https://uri.etsi.org/TrstSvc/Svctype/Archiv
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        e-Szignó Archívum - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
-
-        e-Szigno OCSP CA - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
-
-        Qualified e-Szigno TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        e-Szigno TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA 
-
-        Qualified e-Szigno TSA 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2009 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2009 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2009 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2009 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2009 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Advanced e-Szigno TSA - http://uri.etsi.org/TrstSvc/Svctype/TSA 
-
-        Qualified e-Szigno TSA 2010 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2010 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2010 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2010 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2010 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2011 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2011 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2011 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2011 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2011 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 06 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 07 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 08 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2012 09 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 06 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 07 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 08 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 09 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 10 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 11 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2013 12 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 06 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 07 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 08 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 09 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 10 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 11 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2014 12 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 06 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 07 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 08 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 09 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 10 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 11 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 12 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2016 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified eIDAS e-Szigno TSA 2016 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified eIDAS e-Szigno TSA 2017 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
-
-        Qualified e-Szigno TSA 2015 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        e-Szignó Archívum - https://uri.etsi.org/TrstSvc/Svctype/Archiv
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        e-Szignó Archívum - https://uri.etsi.org/TrstSvc/Svctype/PSES/Q
+
+        e-Szigno OCSP CA - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
+
+        Qualified e-Szigno TSA - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        e-Szigno TSA - https://uri.etsi.org/TrstSvc/Svctype/TSA
+
+        Qualified e-Szigno TSA 2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 4 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 5 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2009 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2009 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2009 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2009 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2009 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Advanced e-Szigno TSA - https://uri.etsi.org/TrstSvc/Svctype/TSA
+
+        Qualified e-Szigno TSA 2010 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2010 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2010 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2010 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2010 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2011 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2011 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2011 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2011 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2011 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 06 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 07 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 08 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2012 09 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 06 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 07 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 08 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 09 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 10 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 11 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2013 12 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 06 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 07 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 08 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 09 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 10 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 11 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2014 12 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 06 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 07 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 08 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 09 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 10 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 11 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 12 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2016 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified eIDAS e-Szigno TSA 2016 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified eIDAS e-Szigno TSA 2017 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified e-Szigno TSA 2015 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 06 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2015 07 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 06 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Qualified e-Szigno TSA 2016 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        Qualified e-Szigno TSA 2015 07 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
+
+            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
+
+        Qualified e-Szigno TSA 2016 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
     Magyar Telekom Public Limited Company 
 
-        Magyar Telekom Minositett CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Magyar Telekom Minositett CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Matav Minositett CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Matav Minositett CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Magyar Telekom Minositett KET CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Magyar Telekom Minositett KET CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Magyar Telekom Fokozott CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Magyar Telekom Fokozott CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Matav Shared CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Matav Shared CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Magyar Telekom Root CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Magyar Telekom Root CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Magyar Telekom RootCA 2011 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Magyar Telekom RootCA 2011 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS2-2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS2-2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSS2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSS2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA1 2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA1 2011 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA2 2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA2 2011 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA3 2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA3 2011 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA1 2014 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA1 2014 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA2 2014 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        TSA2 2014 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        TSA3 2011 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
-
-            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
-
-        TSA1 2014 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        TSA3 2011 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        TSA2 2014 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        TSA1 2014 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        TSU1 2017 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        TSA2 2014 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        TSU2 2017 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        TSU1 2017 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        TSU3 2017 - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        TSU2 2017 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
+
+            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
+
+        TSU3 2017 - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
     Educatio Társadalmi Szolgáltató Nonprofit Korlátolt Felelősségű Társaság 
 
-        EDUCA-2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        EDUCA-2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     GIRO Private Limited Company 
 
-        GIRO Rt. Fokozott Biztonsagu CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        GIRO Rt. Fokozott Biztonsagu CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
     NETLOCK Informatics and Network Privacy services Limited Company 
 
-        NetLock Minositett Kozjegyzoi (Class QA) Tanusitvanykiado - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        NetLock Minositett Kozjegyzoi (Class QA) Tanusitvanykiado - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Minositett Kozigazgatasi Tanusitvanykiado - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        NetLock Minositett Kozigazgatasi Tanusitvanykiado - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Minősített Eat. (Class Q Legal) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        NetLock Minősített Eat. (Class Q Legal) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Minősített Közigazgatási (Class Q) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        NetLock Minősített Közigazgatási (Class Q) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Minősített Eat. Spec. (Class Q Legal Spec.) Kiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        NetLock Minősített Eat. Spec. (Class Q Legal Spec.) Kiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Expressz (Class C) Tanusitvanykiado - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Expressz (Class C) Tanusitvanykiado - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Online SSL Hitelesítő Alegység (Online SSL CA) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Online SSL Hitelesítő Alegység (Online SSL CA) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NetLock (Class B) Közigazgatási Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock (Class B) Közigazgatási Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NetLock Uzleti (Class B) Tanusitvanykiado - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Uzleti (Class B) Tanusitvanykiado - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NetLock Kozjegyzoi (Class A) Tanusitvanykiado - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Kozjegyzoi (Class A) Tanusitvanykiado - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NetLock Üzleti (Class B) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Üzleti (Class B) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        NetLock Üzleti Eat. (Class B Legal) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Üzleti Eat. (Class B Legal) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NetLock Expressz Eat. (Class C Legal) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Expressz Eat. (Class C Legal) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NetLock Expressz (Class C) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Expressz (Class C) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        NetLock Közigazgatási (Class B) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Közigazgatási (Class B) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NetLock Közjegyzői (Class A) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Közjegyzői (Class A) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        NetLock Közjegyzői Eat. (Class A Legal ) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Közjegyzői Eat. (Class A Legal ) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NetLock OnlineSSL (Class Online) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock OnlineSSL (Class Online) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NETLOCK Trust Advanced Plus CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NETLOCK Trust Advanced Plus CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NETLOCK Trust Advanced CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NETLOCK Trust Advanced CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NETLOCK Trust CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NETLOCK Trust CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        NetLock Minősített Eat. Spec. (Class Q Legal Spec.) Kiadó - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NetLock Minősített Eat. Spec. (Class Q Legal Spec.) Kiadó - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        NETLOCK Trust EV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        NETLOCK Trust EV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication
 
-        MKB CA 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MKB CA 2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Keler CA Eat. - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Keler CA Eat. - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        MNB CA 2. (Eat.) - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        MNB CA 2. (Eat.) - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        NetLock Minositett Idobelyeg Szolgaltato 6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 5 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 4 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 7 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 7 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 8 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 8 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 9 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 9 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 10 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 10 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minositett Idobelyeg Szolgaltato 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minositett Idobelyeg Szolgaltato 3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G4 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G5 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G5 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G6 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G6 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Üzleti Időbélyeg Szolgáltató - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        NetLock Üzleti Időbélyeg Szolgáltató - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        NetLock Üzleti Időbélyeg Szolgáltató 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        NetLock Üzleti Időbélyeg Szolgáltató 4 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
-        NetLock Minősített Időbélyeg Szolgáltató G7 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G7 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G8 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G8 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G9 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G9 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató G10 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató G10 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató 4 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató 4 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató 2 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató 2 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató 1 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató 1 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Időbélyeg Szolgáltató 3 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        NetLock Minősített Időbélyeg Szolgáltató 3 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        NetLock Minősített Eat. (Class Q Legal) Tanúsítványkiadó - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+        NetLock Minősített Eat. (Class Q Legal) Tanúsítványkiadó - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Netlock Kft. Minősített Archiválás SHA256 (*) - http://uri.etsi.org/TrstSvc/Svctype/Archiv 
+        Netlock Kft. Minősített Archiválás SHA256 (*) - https://uri.etsi.org/TrstSvc/Svctype/Archiv
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
     Digitoll Information Technology and Servicing Ltd. 
 
-        Digitoll Fokozott CA v1.1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Digitoll Fokozott CA v1.1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Digitoll Fokozott TSA v1.1 - http://uri.etsi.org/TrstSvc/Svctype/TSA 
+        Digitoll Fokozott TSA v1.1 - https://uri.etsi.org/TrstSvc/Svctype/TSA
 
     NISZ National Infocommunications Services Company Limited by Shares 
 
-        Minősített Tanúsítványkiadó v2 - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Minősített Tanúsítványkiadó v2 - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Minősített Közigazgatási Tanúsítványkiadó - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Minősített Közigazgatási Tanúsítványkiadó - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Állampolgári Tanúsítványkiadó - Qualified Citizen CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Állampolgári Tanúsítványkiadó - Qualified Citizen CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Minősített Tanúsítványkiadó v2 - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
-
-            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
-
-        Fokozott Tanúsítványkiadó v2 - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
-
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
-
-        Minősített Közigazgatási Tanúsítványkiadó - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Minősített Tanúsítványkiadó v2 - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Qualified Time Stamp Service TSS 2014 01 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Fokozott Tanúsítványkiadó v2 - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Qualified Time Stamp Service TSS 2014 02 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Qualified Time Stamp Service TSS 2014 03 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Qualified Time Stamp Service TSS 2014 04 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Minősített Közigazgatási Tanúsítványkiadó - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-        Qualified Time Stamp Service TSS 2014 05 - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+            http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 
-        Minősített Tanúsítványkiadó v2 - GOV CA - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
+
+        Qualified Time Stamp Service TSS 2014 01 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified Time Stamp Service TSS 2014 02 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified Time Stamp Service TSS 2014 03 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified Time Stamp Service TSS 2014 04 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Qualified Time Stamp Service TSS 2014 05 - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
+
+        Minősített Tanúsítványkiadó v2 - GOV CA - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-AdESQCandQES
 
             http://www.nmhh.hu/tl/ServiceStatus/QualifiedatNationalLevel 
 

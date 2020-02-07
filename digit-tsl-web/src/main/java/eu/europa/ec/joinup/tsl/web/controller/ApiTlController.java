@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.controller;
 
 import java.io.BufferedInputStream;
@@ -157,8 +137,8 @@ public class ApiTlController {
     @RequestMapping(value = "/clone", method = RequestMethod.PUT)
     @ResponseBody
     public ServiceResponse<TrustedListsReport> getDraftCloneTL(@RequestBody Clone obj) {
-        StringBuffer metrics = new StringBuffer();
-        metrics.append("METRICS - CLONE OF " + obj.getTerritory() + " TL");
+        StringBuilder metrics = new StringBuilder();
+        metrics.append("METRICS - CLONE OF ").append(obj.getTerritory()).append(" TL");
         long startTime = System.currentTimeMillis();
         ServiceResponse<TrustedListsReport> response = new ServiceResponse<>();
         if (StringUtils.isAlpha(obj.getTerritory())) {
@@ -184,7 +164,7 @@ public class ApiTlController {
         }
         long endTime = System.currentTimeMillis();
         long executionTime = endTime - startTime;
-        metrics.append(" --> ALL was executed in " + executionTime + " ms");
+        metrics.append(" --> ALL was executed in ").append(executionTime).append(" ms");
         LOGGER.info(metrics.toString());
         return response;
     }
@@ -254,7 +234,11 @@ public class ApiTlController {
                         sortie.write(tampon, 0, longueur);
                     }
                 } finally {
-                    sortie.close();
+                    if (sortie != null) {
+                        sortie.close();
+                    }
+                    assert entree != null;
+                    assert entree != null;
                     entree.close();
                 }
             } catch (IOException ex) {

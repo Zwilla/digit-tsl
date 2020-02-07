@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.IOException;
@@ -72,11 +52,11 @@ public class ErrorAnalysisService {
 
         List<TrustedListsReport> allProdTlReports = tlService.getAllProdTlReports();
         Iterable<DBCheck> checks = checkRepository.findAllByOrderByTarget();
-        List<ErrorAnalysisDTO> countErrorDto = new ArrayList<ErrorAnalysisDTO>();
+        List<ErrorAnalysisDTO> countErrorDto = new ArrayList<>();
         for (DBCheck check : checks) {
             int totalCheck = 0;
             int tlImpacted = 0;
-            String tlImpactedCc = "";
+            StringBuilder tlImpactedCc = new StringBuilder();
             ErrorAnalysisDTO errorDTO = new ErrorAnalysisDTO();
             errorDTO.setCheck(check);
             for (TrustedListsReport dbTl : allProdTlReports) {
@@ -85,14 +65,14 @@ public class ErrorAnalysisService {
                 if (!CollectionUtils.isEmpty(results)) {
                     totalCheck = totalCheck + results.size();
                     tlImpacted = tlImpacted + 1;
-                    tlImpactedCc = tlImpactedCc + ";" + dbTl.getTerritoryCode();
+                    tlImpactedCc.append(";").append(dbTl.getTerritoryCode());
                 }
 
             }
 
             errorDTO.setTotalCheck(totalCheck);
             errorDTO.setTlImpacted(tlImpacted);
-            errorDTO.setTlImpactedCc(tlImpactedCc);
+            errorDTO.setTlImpactedCc(tlImpactedCc.toString());
             countErrorDto.add(errorDTO);
         }
         try {
@@ -104,7 +84,7 @@ public class ErrorAnalysisService {
         return out.getBytes();
     }
 
-    private ByteOutputStream generateExcelFile(List<ErrorAnalysisDTO> countErrorDto, ByteOutputStream out) throws IOException {
+    private void generateExcelFile(List<ErrorAnalysisDTO> countErrorDto, ByteOutputStream out) throws IOException {
         @SuppressWarnings("resource")
         HSSFWorkbook workbook = new HSSFWorkbook();
         HSSFSheet sheet = workbook.createSheet("Check Analysis");
@@ -165,7 +145,7 @@ public class ErrorAnalysisService {
 
         // Row 2
         row = sheet.createRow(1);
-        Map<String, Integer> checkHeadTitle = new LinkedHashMap<String, Integer>();
+        Map<String, Integer> checkHeadTitle = new LinkedHashMap<>();
         checkHeadTitle.put("Name", 15000);
         checkHeadTitle.put("Impact", 4800);
         checkHeadTitle.put("Target", 9000);
@@ -239,7 +219,6 @@ public class ErrorAnalysisService {
         }
 
         workbook.write(out);
-        return out;
     }
 
 }

@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.controller;
 
 import java.util.ArrayList;
@@ -69,24 +49,22 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<List<List<TLDifference>>> getChanges(@RequestBody TLCookie cookie) {
-        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<List<List<TLDifference>>>();
+        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<>();
         if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-            List<List<TLDifference>> diffList = new ArrayList<List<TLDifference>>();
-            List<TLDifference> diffSchemeInfo = new ArrayList<TLDifference>();
-            List<TLDifference> diffPointers = new ArrayList<TLDifference>();
-            List<TLDifference> diffSignature = new ArrayList<TLDifference>();
+            List<List<TLDifference>> diffList = new ArrayList<>();
+            List<TLDifference> diffSchemeInfo = new ArrayList<>();
+            List<TLDifference> diffSignature = new ArrayList<>();
             TL tl = tlService.getTL(cookie.getTlId());
             if ((tl != null) && TLStatus.DRAFT.equals(tl.getDbStatus())) {
                 TL publishedTl = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
                 if (publishedTl != null) {
                     diffSchemeInfo.addAll(tl.asPublishedDiff(publishedTl));
-                    diffPointers.addAll(tl.getPointersDiff(publishedTl.getPointers(), tl.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
+                    List<TLDifference> diffPointers = new ArrayList<TLDifference>(tl.getPointersDiff(publishedTl.getPointers(), tl.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
 
                     diffList.add(diffSchemeInfo);
                     diffList.add(diffPointers);
                     if ((tl.getServiceProviders() != null) && (publishedTl.getServiceProviders() != null)) {
-                        List<TLDifference> diffProviders = new ArrayList<TLDifference>();
-                        diffProviders.addAll(tl.getTrustServiceProvidersDiff(publishedTl.getServiceProviders(), tl.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
+                        List<TLDifference> diffProviders = new ArrayList<TLDifference>(tl.getTrustServiceProvidersDiff(publishedTl.getServiceProviders(), tl.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
                         diffList.add(diffProviders);
                     }
 
@@ -104,9 +82,9 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/pointers", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<List<TLDifference>> getPointerChanges(@RequestBody TLCookie cookie) {
-        ServiceResponse<List<TLDifference>> response = new ServiceResponse<List<TLDifference>>();
+        ServiceResponse<List<TLDifference>> response = new ServiceResponse<>();
         if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-            List<TLDifference> diffList = new ArrayList<TLDifference>();
+            List<TLDifference> diffList = new ArrayList<>();
             TL tl = tlService.getTL(cookie.getTlId());
             if ((tl != null) && TLStatus.DRAFT.equals(tl.getDbStatus())) {
                 TL publishedTl = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
@@ -124,10 +102,10 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/notification/{checkHr}", method = RequestMethod.PUT)
     public @ResponseBody ServiceResponse<List<List<TLDifference>>> getDifList(@RequestBody NotificationPointers notification, @PathVariable("checkHr") int checkHr) {
-        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<List<List<TLDifference>>>();
-        List<List<TLDifference>> responseContent = new ArrayList<List<TLDifference>>();
-        List<TLDifference> diffListMP = new ArrayList<TLDifference>();
-        List<TLDifference> diffListHR = new ArrayList<TLDifference>();
+        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<>();
+        List<List<TLDifference>> responseContent = new ArrayList<>();
+        List<TLDifference> diffListMP = new ArrayList<>();
+        List<TLDifference> diffListHR = new ArrayList<>();
         NotificationPointers lotl = null;
         if (notification.getMpPointer() != null) {
             lotl = notificationService.getNotification(notification.getMpPointer().getSchemeTerritory());
@@ -167,8 +145,7 @@ public class ApiChangesController {
                         diffListHR.add(diff);
                     }
                 } else {
-                    if (((notification.getHrPointer() != null) && (notification.getHrPointer().getTlLocation() != "")) && (lotl.getHrPointer() == null)) {
-                        /** Set a new difference if no HR pointer exist before **/
+                    if (((notification.getHrPointer() != null) && (!notification.getHrPointer().getTlLocation().equals(""))) && (lotl.getHrPointer() == null)) {
                         TLDifference diff = new TLDifference("newHR", "", notification.getHrPointer().getTlLocation());
                         diffListHR.add(diff);
                     }
@@ -191,9 +168,9 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/schemeInfo", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<List<TLDifference>> getSchemeInfoChanges(@RequestBody TLCookie cookie) {
-        ServiceResponse<List<TLDifference>> response = new ServiceResponse<List<TLDifference>>();
+        ServiceResponse<List<TLDifference>> response = new ServiceResponse<>();
         if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-            List<TLDifference> diffList = new ArrayList<TLDifference>();
+            List<TLDifference> diffList = new ArrayList<>();
             TL tl = tlService.getTL(cookie.getTlId());
             if ((tl != null) && TLStatus.DRAFT.equals(tl.getDbStatus())) {
                 TL publishedTl = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
@@ -211,9 +188,9 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/serviceProvider", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<List<TLDifference>> getProvidersChanges(@RequestBody TLCookie cookie) {
-        ServiceResponse<List<TLDifference>> response = new ServiceResponse<List<TLDifference>>();
+        ServiceResponse<List<TLDifference>> response = new ServiceResponse<>();
         if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-            List<TLDifference> diffList = new ArrayList<TLDifference>();
+            List<TLDifference> diffList = new ArrayList<>();
             TL tl = tlService.getTL(cookie.getTlId());
             if ((tl != null) && TLStatus.DRAFT.equals(tl.getDbStatus())) {
                 TL publishedTl = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
@@ -231,9 +208,9 @@ public class ApiChangesController {
 
     @RequestMapping(value = "/signature", produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody ServiceResponse<List<TLDifference>> getSignature(@RequestBody TLCookie cookie) {
-        ServiceResponse<List<TLDifference>> response = new ServiceResponse<List<TLDifference>>();
+        ServiceResponse<List<TLDifference>> response = new ServiceResponse<>();
         if (tlService.inStoreOrProd(cookie.getTlId(), cookie.getCookie())) {
-            List<TLDifference> diffList = new ArrayList<TLDifference>();
+            List<TLDifference> diffList = new ArrayList<>();
             TL tl = tlService.getTL(cookie.getTlId());
             if ((tl != null) && TLStatus.DRAFT.equals(tl.getDbStatus())) {
                 TL publishedTl = tlService.getPublishedTLByCountryCode(tl.getSchemeInformation().getTerritory());
@@ -251,21 +228,18 @@ public class ApiChangesController {
     public @ResponseBody ServiceResponse<List<List<TLDifference>>> getChangesProd(@PathVariable("prodId") int prodId, @PathVariable("archiveId") int archiveId) {
         TL prod = tlService.getTL(prodId);
         TL archived = tlService.getTL(archiveId);
-        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<List<List<TLDifference>>>();
+        ServiceResponse<List<List<TLDifference>>> response = new ServiceResponse<>();
         if (prod.getDbStatus().equals(TLStatus.PROD) && archived.getDbStatus().equals(TLStatus.PROD)) {
-            List<List<TLDifference>> diffList = new ArrayList<List<TLDifference>>();
-            List<TLDifference> diffSchemeInfo = new ArrayList<TLDifference>();
-            List<TLDifference> diffPointers = new ArrayList<TLDifference>();
-            List<TLDifference> diffSignature = new ArrayList<TLDifference>();
+            List<List<TLDifference>> diffList = new ArrayList<>();
+            List<TLDifference> diffSignature = new ArrayList<>();
 
-            diffSchemeInfo.addAll(prod.asPublishedDiff(archived));
-            diffPointers.addAll(prod.getPointersDiff(archived.getPointers(), archived.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
+            List<TLDifference> diffSchemeInfo = new ArrayList<TLDifference>(prod.asPublishedDiff(archived));
+            List<TLDifference> diffPointers = new ArrayList<TLDifference>(prod.getPointersDiff(archived.getPointers(), archived.getId() + "_" + Tag.POINTERS_TO_OTHER_TSL));
 
             diffList.add(diffSchemeInfo);
             diffList.add(diffPointers);
             if ((prod.getServiceProviders() != null) && (archived.getServiceProviders() != null)) {
-                List<TLDifference> diffProviders = new ArrayList<TLDifference>();
-                diffProviders.addAll(prod.getTrustServiceProvidersDiff(archived.getServiceProviders(), prod.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
+                List<TLDifference> diffProviders = new ArrayList<TLDifference>(prod.getTrustServiceProvidersDiff(archived.getServiceProviders(), prod.getId() + "_" + Tag.TSP_SERVICE_PROVIDER));
                 diffList.add(diffProviders);
             }
 

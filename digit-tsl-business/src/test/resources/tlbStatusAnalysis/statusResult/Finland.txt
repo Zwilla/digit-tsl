@@ -2,23 +2,23 @@ Finland
 
     Population Register Centre 
 
-        VRK Gov. CA for Citizen Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK Gov. CA for Citizen Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        VRK Gov. CA for Citizen Qualified Certificates - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK Gov. CA for Citizen Qualified Certificates - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        VRK CA for Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        VRK CA for Qualified Certificates - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Qualified Certificates - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        VRK CA for Healthcare Professionals Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        VRK CA for Healthcare Professionals Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

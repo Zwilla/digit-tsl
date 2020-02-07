@@ -2,7 +2,7 @@ Denmark
 
     Nets DanID A/S 
 
-        Root Certification Authority of TRUST2408 OCES Primary CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Root Certification Authority of TRUST2408 OCES Primary CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 

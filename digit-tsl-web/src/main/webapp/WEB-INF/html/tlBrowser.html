@@ -89,7 +89,7 @@
 }
 
 .noMargin {
-	margin-bottom: 0px !important;
+	margin-bottom: 0 !important;
 }
 </style>
 
@@ -115,7 +115,7 @@
 		</main>
 		<main class="panel panel-primary" style="border-style:none;" ng-if="load==true && myTl!=undefined">
 		<div class="col-sm-12 heading-information">
-			<div ng-bind-html="styleTbStatus(myTl.checkStatus)" class="inline-block" style="padding: 0px 5px 0px 5px;"></div>
+			<div ng-bind-html="styleTbStatus(myTl.checkStatus)" class="inline-block" style="padding: 0 5px 0 5px;"></div>
 			<span>{{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}})</span>
 
 			<!-- Export -->
@@ -171,7 +171,7 @@
 		</div>
 		<br />
 		<!-- Warning - Check disabled -->
-		<div ng-if="!myTl.checkToRun" class="alert alert-warning" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+		<div ng-if="!myTl.checkToRun" class="alert alert-warning" role="alert" style="margin-top: 5px; margin-bottom: 0; padding: 5px;">
 			<div>
 				<span th:text="#{browserController.checkToRunWarning}"></span>
 			</div>
@@ -181,7 +181,7 @@
 			</div>
 		</div>
 		<!-- Info - TL filtered -->
-		<div ng-if="tspFilter.value" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+		<div ng-if="tspFilter.value" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0; padding: 5px;">
 			<div>
 				<span th:text="#{tlBrowser.filterInfo}"></span>
 				<label> {{splitFilter}}</label>
@@ -191,7 +191,7 @@
 			</div>
 		</div>
 
-		<div ng-if="tlChangesProd!=null" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0px; padding: 5px;">
+		<div ng-if="tlChangesProd!=null" class="alert alert-info" role="alert" style="margin-top: 5px; margin-bottom: 0; padding: 5px;">
 			<span th:text="#{tl.changes.prod.to}"></span>
 			<span> ({{myTl.dbName}} (Sn{{myTl.schemeInformation.sequenceNumber}}) </span>
 			<span th:text="#{tl.changes.prod.to3}"></span>

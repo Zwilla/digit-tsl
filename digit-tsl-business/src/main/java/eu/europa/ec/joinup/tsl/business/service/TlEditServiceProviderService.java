@@ -1,26 +1,7 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -133,7 +114,7 @@ public class TlEditServiceProviderService {
                                                 try {
                                                     DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
                                                     dbf.setNamespaceAware(true);
-                                                    Element newOtherElement = dbf.newDocumentBuilder().parse(new ByteArrayInputStream(((String) obj).getBytes("UTF-16"))).getDocumentElement();
+                                                    Element newOtherElement = dbf.newDocumentBuilder().parse(new ByteArrayInputStream(((String) obj).getBytes(StandardCharsets.UTF_16))).getDocumentElement();
                                                     LOGGER.warn("other element is a String, casting to Element");
                                                     obj = newOtherElement;
                                                 } catch (Exception e) {
@@ -191,6 +172,7 @@ public class TlEditServiceProviderService {
             Iterator<TLServiceProvider> it = tl.getServiceProviders().iterator();
             while (it.hasNext()) {
                 TLServiceProvider p = it.next();
+                assert p != null;
                 if (((p != null) & (p.getId() != null)) && p.getId().equalsIgnoreCase(serviceProvider.getId())) {
                     it.remove();
                     nbreRemove++;

@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" xmlns:tlx509="http://ep.nbu.gov.sk/kca/tsl/x509types#" TSLTag="http://uri.etsi.org/19612/TSLTag" Id="TLISK-101">
+<?xml version="1.0" encoding="utf-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" xmlns:tlx509="http://ep.nbu.gov.sk/kca/tsl/x509types#" TSLTag="https://uri.etsi.org/19612/TSLTag" Id="TLISK-101">
   <SchemeInformation>
     <TSLVersionIdentifier>5</TSLVersionIdentifier>
     <TSLSequenceNumber>40</TSLSequenceNumber>
-    <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+    <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
     <SchemeOperatorName>
       <Name xml:lang="en">NATIONAL SECURITY AUTHORITY</Name>
       <Name xml:lang="sk">NÁRODNÝ BEZPEČNOSTNÝ ÚRAD</Name>
@@ -38,10 +38,10 @@
       <URI xml:lang="en">http://www.nbu.gov.sk/en/trust-services/supervision-schemes/index.html</URI>
       <URI xml:lang="sk">http://www.nbu.gov.sk/doveryhodne-sluzby/dohlad/index.html</URI>
     </SchemeInformationURI>
-    <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+    <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
     <SchemeTypeCommunityRules>
-      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-      <URI xml:lang="sk">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SK</URI>
+      <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+      <URI xml:lang="sk">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SK</URI>
     </SchemeTypeCommunityRules>
     <SchemeTerritory>SK</SchemeTerritory>
     <PolicyOrLegalNotice>
@@ -235,7 +235,7 @@ MS13+MYIeQJgAK3ofJcuKCKYQ5uUEZaU2CKiR6TzvzzGqQ==</X509Certificate>
         <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
         <AdditionalInformation>
           <OtherInformation>
-            <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+            <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
           </OtherInformation>
           <OtherInformation>
             <SchemeTerritory>EU</SchemeTerritory>
@@ -250,7 +250,7 @@ MS13+MYIeQJgAK3ofJcuKCKYQ5uUEZaU2CKiR6TzvzzGqQ==</X509Certificate>
           </OtherInformation>
           <OtherInformation>
             <SchemeTypeCommunityRules>
-              <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+              <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
             </SchemeTypeCommunityRules>
           </OtherInformation>
         </AdditionalInformation>
@@ -311,7 +311,7 @@ MS13+MYIeQJgAK3ofJcuKCKYQ5uUEZaU2CKiR6TzvzzGqQ==</X509Certificate>
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(1) Root Certification Authority 2</Name>
               <Name xml:lang="sk">(1) Koreňová certifikačná autorita 2</Name>
@@ -367,7 +367,7 @@ phGzdDmE3P8N69JlgDYKtv3cotuYEukcL+k7PrkBGV49XApkBdU/I2cfAFTe82e/
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/kca/crls2/kcanbusr2.crl</ServiceSupplyPoint>
@@ -379,7 +379,7 @@ phGzdDmE3P8N69JlgDYKtv3cotuYEukcL+k7PrkBGV49XApkBdU/I2cfAFTe82e/
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(1) Root Certification Authority 2</Name>
                 <Name xml:lang="sk">(1) Koreňová certifikačná autorita 2</Name>
@@ -392,14 +392,14 @@ phGzdDmE3P8N69JlgDYKtv3cotuYEukcL+k7PrkBGV49XApkBdU/I2cfAFTe82e/
                   <X509SKI>BtqJ59OOUzp5d+nr+aa2MmU/RiQ=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
               <StatusStartingTime>2002-03-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(2) Root Certification Authority 3</Name>
               <Name xml:lang="sk">(2) Koreňová certifikačná autorita 3</Name>
@@ -475,7 +475,7 @@ JnbL2YXCVemtb9PUYdZG+gWpH5DlEAxhsMpY+qH7x1sunu4NtwIZmdBKZG76MDwz
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/kca/crls3/kcanbusr3.crl</ServiceSupplyPoint>
@@ -502,7 +502,7 @@ JnbL2YXCVemtb9PUYdZG+gWpH5DlEAxhsMpY+qH7x1sunu4NtwIZmdBKZG76MDwz
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(2) Root Certification Authority 3</Name>
                 <Name xml:lang="sk">(2) Koreňová certifikačná autorita 3</Name>
@@ -515,14 +515,14 @@ JnbL2YXCVemtb9PUYdZG+gWpH5DlEAxhsMpY+qH7x1sunu4NtwIZmdBKZG76MDwz
                   <X509SKI>f/E9IcKXWi6XBw6xaYMl/SGGPgc=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
               <StatusStartingTime>2002-03-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(3) Trusted publishing of signature policies 2</Name>
               <Name xml:lang="sk">(3) Dôveryhodné zverejňovanie podpisových politík 2</Name>
@@ -586,7 +586,7 @@ BsOIH0B8Bg==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/trusted_data/TrustedList.p7m</ServiceSupplyPoint>
@@ -600,7 +600,7 @@ BsOIH0B8Bg==</X509Certificate>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(3) Trusted publishing of signature policies 2</Name>
                 <Name xml:lang="sk">(3) Dôveryhodné zverejňovanie podpisových politík 2</Name>
@@ -613,14 +613,14 @@ BsOIH0B8Bg==</X509Certificate>
                   <X509SKI>TaUQjpIf8bzLVDN7h4UPqI/X3bg=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/setbynationallaw</ServiceStatus>
               <StatusStartingTime>2002-03-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/SignaturePolicyAuthority</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(74) Trusted publishing of TL and signature policies 2</Name>
               <Name xml:lang="sk">(74) Dôveryhodné zverejňovanie DZ a podpisových politík 2</Name>
@@ -684,7 +684,7 @@ OwdWux5r5g==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/trusted_data/TrustedList.p7m</ServiceSupplyPoint>
@@ -699,7 +699,7 @@ OwdWux5r5g==</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(4) The Slovak National Certification Authority 2 (SNCA2)</Name>
               <Name xml:lang="sk">(4) Slovenská národná certifikačná autorita 2 (SNCA2)</Name>
@@ -767,7 +767,7 @@ gr8oYmuXhURGKWaXrm/oTlnwiqrFkOOiE5eorPqb9Nb+UPtNCXUVpI1XhA+oiso4
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/snca/crls2/snca2.crl</ServiceSupplyPoint>
@@ -792,19 +792,19 @@ gr8oYmuXhURGKWaXrm/oTlnwiqrFkOOiE5eorPqb9Nb+UPtNCXUVpI1XhA+oiso4
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(4) The Slovak National Certification Authority 2 (SNCA2)</Name>
                 <Name xml:lang="sk">(4) Slovenská národná certifikačná autorita 2 (SNCA2)</Name>
@@ -817,14 +817,14 @@ gr8oYmuXhURGKWaXrm/oTlnwiqrFkOOiE5eorPqb9Nb+UPtNCXUVpI1XhA+oiso4
                   <X509SKI>AUF7cc3AZSNiuYhyCmlP2vqFL4o=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2006-08-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(5) The Slovak National Certification Authority (SNCA)</Name>
               <Name xml:lang="sk">(5) Slovenská národná certifikačná autorita (SNCA)</Name>
@@ -885,7 +885,7 @@ xExbpzhZLjvlJhffNHjJ</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/snca/crls/snca1.crl</ServiceSupplyPoint>
@@ -897,14 +897,14 @@ xExbpzhZLjvlJhffNHjJ</X509Certificate>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(5) The Slovak National Certification Authority (SNCA)</Name>
                 <Name xml:lang="sk">(5) Slovenská národná certifikačná autorita (SNCA)</Name>
@@ -917,14 +917,14 @@ xExbpzhZLjvlJhffNHjJ</X509Certificate>
                   <X509SKI>OLPZAKX2gblLDZsq201lZ7GlG8w=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2006-08-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(6) Time Stamp Authority 1</Name>
             </ServiceName>
@@ -971,7 +971,7 @@ YEQ4KflE8/HCwh5VwuTJxEZuw9lwqz722dAXY0M=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://84.245.65.250:8080/tsa1/TSQServer</ServiceSupplyPoint>
@@ -980,7 +980,7 @@ YEQ4KflE8/HCwh5VwuTJxEZuw9lwqz722dAXY0M=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(7) Time Stamp Authority 2</Name>
             </ServiceName>
@@ -1027,7 +1027,7 @@ uNzQNDgESxCExSH176xvkNW9tA5n1xXXfTmIsLU=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://195.49.191.66:8080/tsa1/TSQServer</ServiceSupplyPoint>
@@ -1036,7 +1036,7 @@ uNzQNDgESxCExSH176xvkNW9tA5n1xXXfTmIsLU=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(8) Time Stamp Authority 3</Name>
             </ServiceName>
@@ -1083,7 +1083,7 @@ GgChjBu4EL30+zSqXJX6FTj1Ea67VWZ+E7tu8Vo=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://tsa.nbu.sk:8080/tsa3/TSQServer</ServiceSupplyPoint>
@@ -1092,7 +1092,7 @@ GgChjBu4EL30+zSqXJX6FTj1Ea67VWZ+E7tu8Vo=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(38) Time Stamp Authority 1</Name>
             </ServiceName>
@@ -1139,7 +1139,7 @@ pyZTWrmA1cS7LKVUQu9PWoPI+CjoXeGhhElqYfWk</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk:8080/tsa1/TSQServer</ServiceSupplyPoint>
@@ -1148,7 +1148,7 @@ pyZTWrmA1cS7LKVUQu9PWoPI+CjoXeGhhElqYfWk</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(39) Time Stamp Authority 2</Name>
             </ServiceName>
@@ -1195,7 +1195,7 @@ V2jSY8K2GT4+oCxPG7uZPx12TPe5oQDKYuNd7ATW</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://195.49.188.42:8080/tsa1/TSQServer</ServiceSupplyPoint>
@@ -1204,7 +1204,7 @@ V2jSY8K2GT4+oCxPG7uZPx12TPe5oQDKYuNd7ATW</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(40) Time Stamp Authority 3</Name>
             </ServiceName>
@@ -1251,7 +1251,7 @@ GqRtn2n+iAaLU4xh/jQEAcEyOW+iTOso3tAkUJ7Y</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://tsa.nbu.sk:8080/tsa3/TSQServer</ServiceSupplyPoint>
@@ -1260,7 +1260,7 @@ GqRtn2n+iAaLU4xh/jQEAcEyOW+iTOso3tAkUJ7Y</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(82) SNCA3</Name>
               <Name xml:lang="sk">(82) SNCA3</Name>
@@ -1333,7 +1333,7 @@ BvonKTl/GSldqYTMUwiurEU4Zb8qXTH1lhQjwl6F</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-18T00:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ep.nbu.gov.sk/snca/crls3/snca3.crl</ServiceSupplyPoint>
@@ -1354,12 +1354,12 @@ BvonKTl/GSldqYTMUwiurEU4Zb8qXTH1lhQjwl6F</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -1367,7 +1367,7 @@ BvonKTl/GSldqYTMUwiurEU4Zb8qXTH1lhQjwl6F</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(83) Time Stamp Authority 5</Name>
             </ServiceName>
@@ -1415,13 +1415,13 @@ CL928DcvfghDdGz4vKBA+1NAeVRliFYS1+jnrjpVL+mSxH0fsbG+</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-18T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(84) Time Stamp Authority 4</Name>
             </ServiceName>
@@ -1472,13 +1472,13 @@ dfg8s5GveIht/26Ddkqoccs=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-18T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
 		<TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(99) NSA OCSP</Name>
             </ServiceName>
@@ -1530,17 +1530,17 @@ OLt9fTkbswU4ITNtunPj</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-27T03:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -1586,7 +1586,7 @@ OLt9fTkbswU4ITNtunPj</X509Certificate>
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(9) SVK eID ACA</Name>
             </ServiceName>
@@ -1659,7 +1659,7 @@ Q+2Abh+zzw==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://eidrep2.disig.sk/svkeidaca/crl/svkeidaca.crl</ServiceSupplyPoint>
@@ -1677,19 +1677,19 @@ Q+2Abh+zzw==</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(9) SVK eID ACA</Name>
               </ServiceName>
@@ -1701,14 +1701,14 @@ Q+2Abh+zzw==</X509Certificate>
                   <X509SKI>scrGpdrvqa+jvtPbQMnp6qFvkWE=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(10) CA Disig</Name>
             </ServiceName>
@@ -1781,7 +1781,7 @@ hrEwTQ==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://www.disig.sk/aca2/crl/aca2_disig.crl</ServiceSupplyPoint>
@@ -1790,19 +1790,19 @@ hrEwTQ==</X509Certificate>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(10) CA Disig</Name>
               </ServiceName>
@@ -1814,14 +1814,14 @@ hrEwTQ==</X509Certificate>
                   <X509SKI>FX9fXwhpKsZwA6H6UWpNrI1fmFM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(11) CA Disig</Name>
             </ServiceName>
@@ -1881,7 +1881,7 @@ dpBi9w4GYMWJmgnWDLFoujqSC4BCN6k3Io3lvX5F3tuo2Za5lXOSDn21DOtuy51S
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://www.disig.sk/aca/crl/aca_disig.crl</ServiceSupplyPoint>
@@ -1890,14 +1890,14 @@ dpBi9w4GYMWJmgnWDLFoujqSC4BCN6k3Io3lvX5F3tuo2Za5lXOSDn21DOtuy51S
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(11) CA Disig</Name>
               </ServiceName>
@@ -1909,14 +1909,14 @@ dpBi9w4GYMWJmgnWDLFoujqSC4BCN6k3Io3lvX5F3tuo2Za5lXOSDn21DOtuy51S
                   <X509SKI>8Sp+5ArGH/e3himjRwAE2lTQvIs=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(73) CA Disig QCA3</Name>
             </ServiceName>
@@ -1989,7 +1989,7 @@ iP1eSRvhxLDAcvYGvbWJTW574n+4DHKZ+lmfsEKys7FPQ7UMJD0A4zZtibNVj9bj
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://cdp1.disig.sk/aca3/crl/aca3_disig.crl</ServiceSupplyPoint>
@@ -2007,24 +2007,24 @@ iP1eSRvhxLDAcvYGvbWJTW574n+4DHKZ+lmfsEKys7FPQ7UMJD0A4zZtibNVj9bj
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForWebSiteAuthentication</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(73) CA Disig QCA3</Name>
               </ServiceName>
@@ -2036,23 +2036,23 @@ iP1eSRvhxLDAcvYGvbWJTW574n+4DHKZ+lmfsEKys7FPQ7UMJD0A4zZtibNVj9bj
                   <X509SKI>9FgiC3T8jAqPjDqlhZcvhFnZHyg=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
               <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
               <ServiceInformationExtensions>
                 <Extension Critical="true">
                   <AdditionalServiceInformation>
-                    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                   </AdditionalServiceInformation>
                 </Extension>
                 <Extension Critical="true">
                   <AdditionalServiceInformation>
-                    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                   </AdditionalServiceInformation>
                 </Extension>
               </ServiceInformationExtensions>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(73) CA Disig QCA3</Name>
               </ServiceName>
@@ -2064,14 +2064,14 @@ iP1eSRvhxLDAcvYGvbWJTW574n+4DHKZ+lmfsEKys7FPQ7UMJD0A4zZtibNVj9bj
                   <X509SKI>9FgiC3T8jAqPjDqlhZcvhFnZHyg=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(12) TSA CA Disig</Name>
             </ServiceName>
@@ -2128,13 +2128,13 @@ uLzltHnRuGYuwhnI5HvpeATUSb1hEAa8xOBk9Lfjaw9U2jUp8vzH/10W0Jme9K7x
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(13) aTSA CA Disig</Name>
             </ServiceName>
@@ -2191,13 +2191,13 @@ Je99Wl9lxbX0zFtuRNdAOeIw+aoIp2c9282MRtY=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(14) aTSA CA Disig QCA</Name>
             </ServiceName>
@@ -2254,13 +2254,13 @@ Hc9+SS50nZbzr1UFQxhorWXGufspO+kuUfcIycUEF3zp</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(15) TSA2 CA Disig QCA</Name>
             </ServiceName>
@@ -2317,13 +2317,13 @@ NrlLpcdLtOlni1x6a7w1BH6ZMK/4WpFPUmbZJnnKGvDN</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(16) TSA CA Disig</Name>
             </ServiceName>
@@ -2380,13 +2380,13 @@ m16u/jjVh+/3OTGT4KvdfIa/IFWg5Tm9PN8tIrSOmFq6Xog7PjGUXY+D7/XWociS
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(17) aTSA CA Disig</Name>
             </ServiceName>
@@ -2443,13 +2443,13 @@ MveA71Bks9n7AAEvjb4YdR9bKVpLjPEh0yiVJAM=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(18) aTSA CA Disig QCA</Name>
             </ServiceName>
@@ -2506,13 +2506,13 @@ xaxzYmgA1PeDrBlqZrxUL1r6dibfUEwChNTxTP79TssO</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(19) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -2568,24 +2568,24 @@ tw==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(19) OCSP CA Disig QCA</Name>
               </ServiceName>
@@ -2597,14 +2597,14 @@ tw==</X509Certificate>
                   <X509SKI>/rWf8lMgMZ7AejB3cjsf4x9y8Bw=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(20) OCSP2 CA Disig QCA</Name>
             </ServiceName>
@@ -2660,24 +2660,24 @@ b35vfP6pfo3gx6wZbfXriA8B3gzKheQW9da7pkyEW829MO7s0uEk3HUdFWkShxry
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(20) OCSP2 CA Disig QCA</Name>
               </ServiceName>
@@ -2689,14 +2689,14 @@ b35vfP6pfo3gx6wZbfXriA8B3gzKheQW9da7pkyEW829MO7s0uEk3HUdFWkShxry
                   <X509SKI>YCUuX6PVklupzzfewrru/0J0UTk=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(42) TSA CA Disig</Name>
             </ServiceName>
@@ -2753,13 +2753,13 @@ TnoZB5bahNieRgTMTbtI5yvtGsOuib3jZJoxfw==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(43) aTSA CA Disig</Name>
             </ServiceName>
@@ -2816,13 +2816,13 @@ bIsdkwoxe+MYIYPRuVAiQl+tN0O4r1BFh4Y4e/w=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(44) aTSA CA Disig QCA</Name>
             </ServiceName>
@@ -2880,13 +2880,13 @@ NhgM1D5m</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(45) TSA2 CA Disig QCA</Name>
             </ServiceName>
@@ -2944,13 +2944,13 @@ eB81jzco</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(46) TSA CA Disig</Name>
             </ServiceName>
@@ -3008,13 +3008,13 @@ iRuce2Fj1Q==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(47) TSA CA Disig</Name>
             </ServiceName>
@@ -3072,13 +3072,13 @@ M+DTJJSRzkUjVZiWYH1530xKxKOa6Hg=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(48) TSA CA Disig</Name>
             </ServiceName>
@@ -3136,13 +3136,13 @@ A7cOzH72JoF0vga7s8XTQ2i/fVcHqzs=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(49) TSA CA Disig</Name>
             </ServiceName>
@@ -3200,13 +3200,13 @@ j+FhGxmb4ne3ldkL+a5rwlLdAGdMr6k=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(50) aTSA CA Disig</Name>
             </ServiceName>
@@ -3264,13 +3264,13 @@ IniHTpEJ46UlNI8MgpNuvI4//LsRhAa7</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(51) aTSA CA Disig</Name>
             </ServiceName>
@@ -3328,13 +3328,13 @@ zPp+BkFySgQyXB8HO+HdxvIF6K2vZ1Mf</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(52) aTSA CA Disig</Name>
             </ServiceName>
@@ -3392,13 +3392,13 @@ ZkVQHUCs8uHHLLHwdCA4SnWBCZFfaLyXfVxeZoCmdFFNCycJh/Iq0pLXu/0Bljl4
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(53) TSA TSU01</Name>
             </ServiceName>
@@ -3456,13 +3456,13 @@ KhJIoCbA5eKFWoxfxgivew==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(54) TSA TSU02</Name>
             </ServiceName>
@@ -3520,13 +3520,13 @@ mCzf9RQeU8Tdc82T3X/CeA==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(55) TSA TSU03</Name>
             </ServiceName>
@@ -3584,13 +3584,13 @@ C/kE5K9VTu7fROUk/2/KQqusaAzD+A==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(56) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -3645,24 +3645,24 @@ CqS4bQxjfQy8ujoJnFesXj4A6iax+xFj4ikGRF3gEXVO2tVXRhy1FuSSTLML9n8=</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(56) OCSP CA Disig QCA</Name>
               </ServiceName>
@@ -3674,14 +3674,14 @@ CqS4bQxjfQy8ujoJnFesXj4A6iax+xFj4ikGRF3gEXVO2tVXRhy1FuSSTLML9n8=</X509Certificat
                   <X509SKI>WRPSk/GsGlaoDWzaZR/s8EY9pqA=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(57) OCSP2 CA Disig QCA</Name>
             </ServiceName>
@@ -3736,24 +3736,24 @@ FUJLD/qfJrDUbhlj4Wg/6A0MAuxUFuoOKoayaq4T40ng3uQy7NOmJpQXPdEXri25</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(57) OCSP2 CA Disig QCA</Name>
               </ServiceName>
@@ -3765,14 +3765,14 @@ FUJLD/qfJrDUbhlj4Wg/6A0MAuxUFuoOKoayaq4T40ng3uQy7NOmJpQXPdEXri25</X509Certificat
                   <X509SKI>jDrseYXlScpDlpboRAwSTlqiYS8=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(58) OCSP SVK eID ACA</Name>
             </ServiceName>
@@ -3827,24 +3827,24 @@ ZV88uI6x2/MIt3CcaTMsJ5E5sqe748EVlGq4PlWaVTxcP/mJ0qM=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(58) OCSP SVK eID ACA</Name>
               </ServiceName>
@@ -3856,14 +3856,14 @@ ZV88uI6x2/MIt3CcaTMsJ5E5sqe748EVlGq4PlWaVTxcP/mJ0qM=</X509Certificate>
                   <X509SKI>bsIOppX3idwuuItqW82V/Cyfsl8=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(59) OCSP SVK eID ACA</Name>
             </ServiceName>
@@ -3918,24 +3918,24 @@ AFHmSQkfXeO8hNck0Dw1qQQzqcU2/pXdjRAN5batP7wGLocnG0A=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(59) OCSP SVK eID ACA</Name>
               </ServiceName>
@@ -3947,14 +3947,14 @@ AFHmSQkfXeO8hNck0Dw1qQQzqcU2/pXdjRAN5batP7wGLocnG0A=</X509Certificate>
                   <X509SKI>8iN8II1fHXOv3was3co/jKQCWWM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(60) OCSP SVK eID ACA</Name>
             </ServiceName>
@@ -4009,24 +4009,24 @@ vD80Fhg/vaM8Q5J+phKNezzx68avU9qxyzuzaWF2lvNb4wncA3A=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(60) OCSP SVK eID ACA</Name>
               </ServiceName>
@@ -4038,14 +4038,14 @@ vD80Fhg/vaM8Q5J+phKNezzx68avU9qxyzuzaWF2lvNb4wncA3A=</X509Certificate>
                   <X509SKI>cPzXwBZ4eHfsao0388Hm21pe2AM=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(61) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -4099,24 +4099,24 @@ joHAESaw</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(61) OCSP CA Disig QCA</Name>
               </ServiceName>
@@ -4128,14 +4128,14 @@ joHAESaw</X509Certificate>
                   <X509SKI>CfclUxQT1QVXH8HmD8QFVUSJZ/0=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(62) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -4234,24 +4234,24 @@ uvGB1YjdMlR4VPcO2U1bO18lds5uFXVtwvtzFbBUDrOCMQY=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(62) OCSP CA Disig QCA</Name>
               </ServiceName>
@@ -4263,14 +4263,14 @@ uvGB1YjdMlR4VPcO2U1bO18lds5uFXVtwvtzFbBUDrOCMQY=</X509Certificate>
                   <X509SKI>L1csd4SIiG6WMrREGBkfz97ipfg=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(63) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -4369,24 +4369,24 @@ NeBjUd8hAxKF3LTZrtu6T/z8O+P8EMbBfstbGAbJLYwZeIg=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(63) OCSP CA Disig QCA</Name>
               </ServiceName>
@@ -4398,14 +4398,14 @@ NeBjUd8hAxKF3LTZrtu6T/z8O+P8EMbBfstbGAbJLYwZeIg=</X509Certificate>
                   <X509SKI>KiS9tl65bZ2aeokUampFTzBXI6Q=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2007-07-26T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(64) TSA TSU01</Name>
             </ServiceName>
@@ -4463,13 +4463,13 @@ MZLQZqsc688/8aEz5CYbjl4u6PTv5Q==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(65) TSA TSU02</Name>
             </ServiceName>
@@ -4527,13 +4527,13 @@ OaQ+Vo8zlvYkMPD/ZHCNjeSpomAKMCBHlSoan5wKDkSQF0zCbFgsqkNlMhaYZ8Mh
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(66) TSA TSU03</Name>
             </ServiceName>
@@ -4591,13 +4591,13 @@ FOqeZQo7T1jlm8WuL6TnnzGtyaljXlQvt6H+iijlZnhVsceBs4iCBh5CSG+xySi6
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(67) TSA CA Disig</Name>
             </ServiceName>
@@ -4654,13 +4654,13 @@ OrsNkM/dhz7NiCL/qXDZIJnVlZ4p7I79Vk6VjR41NCFsdpjs2PLbsQHbUCPYSDEx
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(68) TSA CA Disig</Name>
             </ServiceName>
@@ -4717,13 +4717,13 @@ arHtxocjF1LB+dSuhU7RzX9oLEMoWdinDzlANNtY2miozYXiQdSUaHR1hA==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(69) TSA CA Disig</Name>
             </ServiceName>
@@ -4780,13 +4780,13 @@ KV3vY5LZruu9kGhcl2waQgkO/ztINKIJz9k4Xh/KHUc5mphu/F1Kqrsdww==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(70) aTSA CA</Name>
             </ServiceName>
@@ -4843,13 +4843,13 @@ J8nwBHyleVdTKQ6k1dXibnYMSmL4rZMBp/igFz28BJZINS7KLT9MdLwAVhs=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(71) aTSA CA </Name>
             </ServiceName>
@@ -4906,13 +4906,13 @@ FIH6U/wGJkzf6ojdmdC9nvkzOIoeerpnRSBrNts+u4W4eKes/EhkCK1BaTs=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(72) aTSA CA</Name>
             </ServiceName>
@@ -4968,13 +4968,13 @@ ax21Wz9WdL7Oa7zun9J1e7f6HV4dqruFQOW7JqAkzaM2PgyfYpclXmoZ25g=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(78) TSA Disig TSU 1</Name>
             </ServiceName>
@@ -5025,13 +5025,13 @@ C8fmVez2CBov8QR6JOfVZAtRo0nTOrNRtnrWnq+OMArAUgbpMIDc6rPHV8k=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(79) TSA Disig TSU 2</Name>
             </ServiceName>
@@ -5082,13 +5082,13 @@ afKiMDJY4GJJrkkTW+vl5cns4Hqw9u0c7iButi8kfmBGHg/9sQHQxVIaD/o=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(80) TSA Disig TSU 3</Name>
             </ServiceName>
@@ -5139,13 +5139,13 @@ R63h+1Cjb4x1BaQitH65nuEM4ZphrxuPw3i/IqClFe1gwfH0hkDx0eu6DNzRkuxX
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(75) TSA Disig aTSU 1</Name>
             </ServiceName>
@@ -5246,13 +5246,13 @@ LWUof37xpZuJyd2ofLXJP042FJR3HHekAMnCvyzIL96Xs3k=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(76) TSA Disig aTSU 2</Name>
             </ServiceName>
@@ -5353,13 +5353,13 @@ SY5QUngQQ+gf9+37DYZeR28QvjidgZ1GcO/uljwMzwLSoW8=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(77) TSA Disig aTSU 3</Name>
             </ServiceName>
@@ -5460,13 +5460,13 @@ mo4Khd8KqGYslWvgp+MVd4SyRZ0KBAlVEnfVLFxawQOooqQ=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(88) Qualified validation service for QES</Name>
             </ServiceName>
@@ -5517,17 +5517,17 @@ R4nVCAuvuSWtQc0NBmJ9IYS307ZfJBakRrhKND0K</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5535,7 +5535,7 @@ R4nVCAuvuSWtQc0NBmJ9IYS307ZfJBakRrhKND0K</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/PSES/Q</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/PSES/Q</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(89) Qualified preservation service for QES</Name>
             </ServiceName>
@@ -5586,17 +5586,17 @@ GwwvkQzNinO0i3Sxg8t5xNFitV0ki38eBd/KMXvytS/e31GMsqg6cQPIus9PVkV/
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5605,7 +5605,7 @@ GwwvkQzNinO0i3Sxg8t5xNFitV0ki38eBd/KMXvytS/e31GMsqg6cQPIus9PVkV/
 
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(92) OCSP CA Disig QCA</Name>
             </ServiceName>
@@ -5658,17 +5658,17 @@ JdKMfnCq</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5676,7 +5676,7 @@ JdKMfnCq</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(93) OCSP CA DISIG QCA3</Name>
             </ServiceName>
@@ -5730,17 +5730,17 @@ XC2xcgJ/kX4PIMEiXKtN7riaKi8AUmBpcrBGFN62onmTX7+7VvCaU/70QmaDavQE
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5748,7 +5748,7 @@ XC2xcgJ/kX4PIMEiXKtN7riaKi8AUmBpcrBGFN62onmTX7+7VvCaU/70QmaDavQE
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(94) OCSP CA DISIG QCA3</Name>
             </ServiceName>
@@ -5801,17 +5801,17 @@ zaVbiQARHDmYe7ydXOkcS1XYprpLWj8cPhfT4z2lsAUxxu0Ivm3f0/2C9V0NHXE=</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5819,7 +5819,7 @@ zaVbiQARHDmYe7ydXOkcS1XYprpLWj8cPhfT4z2lsAUxxu0Ivm3f0/2C9V0NHXE=</X509Certificat
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(95) OCSP CA DISIG QCA3</Name>
             </ServiceName>
@@ -5872,17 +5872,17 @@ uc1C2zKKgYQ6NhhOoH81zfKsNrMLlYr0ffdEeGgfyVJ7rdUnZOp7gsvblbI7scU=</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-10-26T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -5933,7 +5933,7 @@ uc1C2zKKgYQ6NhhOoH81zfKsNrMLlYr0ffdEeGgfyVJ7rdUnZOp7gsvblbI7scU=</X509Certificat
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(21) Certification Authority Ministry of Defence Slovak Republic (CAMOSR)</Name>
               <Name xml:lang="sk">(21) Certifikačná autorita Ministerstva obrany Slovenskej republiky (CAMOSR)</Name>
@@ -5994,7 +5994,7 @@ JRoni953faWVQNdzxpEE</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://www.pki.mil.sk/8828/crl.php</ServiceSupplyPoint>
@@ -6002,14 +6002,14 @@ JRoni953faWVQNdzxpEE</X509Certificate>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(21) Certification Authority Ministry of Defence Slovak Republic (CAMOSR)</Name>
                 <Name xml:lang="sk">(21) Certifikačná autorita Ministerstva obrany Slovenskej republiky (CAMOSR)</Name>
@@ -6022,14 +6022,14 @@ JRoni953faWVQNdzxpEE</X509Certificate>
                   <X509SKI>R4gHNj4nY/KNWT9LXGrVqmX1lms=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2006-10-31T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(22) Certification Authority Ministry of Defence Slovak Republic 2 (CAMOSR2)</Name>
               <Name xml:lang="sk">(22) Certifikačná autorita Ministerstva obrany Slovenskej republiky 2 (CAMOSR2)</Name>
@@ -6102,7 +6102,7 @@ FkPK4IKw7cllbwLFmQunduCzha9IUOBvN4dso/W/934J5uqrbkvtvyLKn8OrBAQ/
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://pki.mil.sk/ACA2/camosr2.crl</ServiceSupplyPoint>
@@ -6120,19 +6120,19 @@ FkPK4IKw7cllbwLFmQunduCzha9IUOBvN4dso/W/934J5uqrbkvtvyLKn8OrBAQ/
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(22) Certification Authority Ministry of Defence Slovak Republic 2 (CAMOSR2)</Name>
                 <Name xml:lang="sk">(22) Certifikačná autorita Ministerstva obrany Slovenskej republiky 2 (CAMOSR2)</Name>
@@ -6145,14 +6145,14 @@ FkPK4IKw7cllbwLFmQunduCzha9IUOBvN4dso/W/934J5uqrbkvtvyLKn8OrBAQ/
                   <X509SKI>UeLpwDTkQOZWmso+SdQmT/zeimI=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2006-10-31T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(23) TSA vfp</Name>
             </ServiceName>
@@ -6207,13 +6207,13 @@ cP6ov1L+wjKB7pfUT1NC3Qa9PnaOGOpk+Z2+rEZmu+XEQppXnA==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(24) TSA ext</Name>
             </ServiceName>
@@ -6268,13 +6268,13 @@ S7X6xwUauBpwIhGkDuKhC/2UslD8LOoG2zvKZOMWkQ/sYpVheUR8utT0y6KLHBiK
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(25) TSA mil</Name>
             </ServiceName>
@@ -6329,13 +6329,13 @@ rU3hlU45amd9YRldzUblAH8ZgvZyYDLtPcLnSMhxyHoqvcnOzQ==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(90) TSAmil</Name>
             </ServiceName>
@@ -6385,13 +6385,13 @@ jI/zS0GOPuxg9mE=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2018-01-09T07:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(91) TSAext</Name>
             </ServiceName>
@@ -6441,13 +6441,13 @@ pqoC3eUDpHXvx6nPNIC08hGH8Zl0extm</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2018-01-09T07:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
 		<TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(98) OCSP</Name>
             </ServiceName>
@@ -6492,17 +6492,17 @@ E05XxK+y0QedUg==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-27T03:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -6552,7 +6552,7 @@ E05XxK+y0QedUg==</X509Certificate>
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(26) PSCA</Name>
               <Name xml:lang="sk">(26) PSCA</Name>
@@ -6607,7 +6607,7 @@ dA9Hz3SfyoMUfIvHTzPoMjgKihI2UPdmvBmLAlaEwf12JDV8Cg==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
             <StatusStartingTime>2017-12-31T23:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ocsp.nbu.gov.sk/ocsp/pqc</ServiceSupplyPoint>
@@ -6627,14 +6627,14 @@ dA9Hz3SfyoMUfIvHTzPoMjgKihI2UPdmvBmLAlaEwf12JDV8Cg==</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-             <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+             <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                 <ServiceName>
                    <Name xml:lang="en">(26) PSCA</Name>
                    <Name xml:lang="sk">(26) PSCA</Name>
@@ -6647,18 +6647,18 @@ dA9Hz3SfyoMUfIvHTzPoMjgKihI2UPdmvBmLAlaEwf12JDV8Cg==</X509Certificate>
                   <X509SKI>b0ywszHBmfwniFph9kCvuooG4CY=</X509SKI>
                </DigitalId>
              </ServiceDigitalIdentity>
-             <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+             <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
              <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
              <ServiceInformationExtensions>
                 <Extension Critical="true">
                  <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                  </AdditionalServiceInformation>
                 </Extension>
              </ServiceInformationExtensions>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(26) PSCA</Name>
                 <Name xml:lang="sk">(26) PSCA</Name>
@@ -6671,14 +6671,14 @@ dA9Hz3SfyoMUfIvHTzPoMjgKihI2UPdmvBmLAlaEwf12JDV8Cg==</X509Certificate>
                   <X509SKI>b0ywszHBmfwniFph9kCvuooG4CY=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2005-06-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(27) PSCA2</Name>
               <Name xml:lang="sk">(27) PSCA2</Name>
@@ -6746,7 +6746,7 @@ F8nlQktwoeaPRy5T7TmQkzXyUq/4TqRt7g==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
             <StatusStartingTime>2017-12-31T23:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ocsp.nbu.gov.sk/ocsp/pqc</ServiceSupplyPoint>
@@ -6766,14 +6766,14 @@ F8nlQktwoeaPRy5T7TmQkzXyUq/4TqRt7g==</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-                <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                 <ServiceName>
                   <Name xml:lang="en">(27) PSCA2</Name>
                   <Name xml:lang="sk">(27) PSCA2</Name>
@@ -6786,18 +6786,18 @@ F8nlQktwoeaPRy5T7TmQkzXyUq/4TqRt7g==</X509Certificate>
                    <X509SKI>cFCEg/Zv63y1LwBQYi400knWTcU=</X509SKI>
                   </DigitalId>
                 </ServiceDigitalIdentity>
-                <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                 <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                 <ServiceInformationExtensions>
                   <Extension Critical="true">
                     <AdditionalServiceInformation>
-                      <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                      <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                     </AdditionalServiceInformation>
                   </Extension>
                 </ServiceInformationExtensions>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(27) PSCA2</Name>
                 <Name xml:lang="sk">(27) PSCA2</Name>
@@ -6810,14 +6810,14 @@ F8nlQktwoeaPRy5T7TmQkzXyUq/4TqRt7g==</X509Certificate>
                   <X509SKI>cFCEg/Zv63y1LwBQYi400knWTcU=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2005-06-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(28) PSCA3</Name>
               <Name xml:lang="sk">(28) PSCA3</Name>
@@ -6890,7 +6890,7 @@ ZSu1EnFUVK3L9r9EOtMRZwd1/eua2hlApVQPLs/e7Kqy5svKMJ/5B00=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
             <StatusStartingTime>2017-12-31T23:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ocsp.nbu.gov.sk/ocsp/pqc</ServiceSupplyPoint>
@@ -6910,19 +6910,19 @@ ZSu1EnFUVK3L9r9EOtMRZwd1/eua2hlApVQPLs/e7Kqy5svKMJ/5B00=</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-               <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+               <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                <ServiceName>
                  <Name xml:lang="en">(28) PSCA3</Name>
                  <Name xml:lang="sk">(28) PSCA3</Name>
@@ -6935,23 +6935,23 @@ ZSu1EnFUVK3L9r9EOtMRZwd1/eua2hlApVQPLs/e7Kqy5svKMJ/5B00=</X509Certificate>
                    <X509SKI>fQJZWquxOCX9VXSJIwy75NwyTuI=</X509SKI>
                  </DigitalId>
                </ServiceDigitalIdentity>
-               <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+               <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                <ServiceInformationExtensions>
                  <Extension Critical="true">
                    <AdditionalServiceInformation>
-                     <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                     <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                    </AdditionalServiceInformation>
                  </Extension>
                  <Extension Critical="true">
                    <AdditionalServiceInformation>
-                    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                    </AdditionalServiceInformation>
                  </Extension>
                </ServiceInformationExtensions>
             </ServiceHistoryInstance>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(28) PSCA3</Name>
                 <Name xml:lang="sk">(28) PSCA3</Name>
@@ -6964,14 +6964,14 @@ ZSu1EnFUVK3L9r9EOtMRZwd1/eua2hlApVQPLs/e7Kqy5svKMJ/5B00=</X509Certificate>
                   <X509SKI>fQJZWquxOCX9VXSJIwy75NwyTuI=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2005-06-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(29) PSCA (TSA2007)</Name>
             </ServiceName>
@@ -7019,13 +7019,13 @@ PdrBnvnXo74P4ZHz17eT5JObge+7lCaXDuh2vAvwxE+62aWkaevHAj2pFCFyEa2z
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(30) PSCA (TSA2008)</Name>
             </ServiceName>
@@ -7073,13 +7073,13 @@ nyMVlUaeaYAFWlgoSjWy0Ahabv3C</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(31) PSCA (TSA2010)</Name>
             </ServiceName>
@@ -7127,13 +7127,13 @@ jRXgZQ870DRwhR+R+zTFHQPwq98RZY8LGgbyMLGEHEClZPKuGgJGIcQSFWGW2kiO
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(32) PSCA (TSA2012)</Name>
             </ServiceName>
@@ -7181,13 +7181,13 @@ U3IlBuAPuNVyBOzqu6A0YPPri6TG2rPLhzPBxyKQ/J+m2Gw=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(96) PSCA TSA 2017</Name>
             </ServiceName>
@@ -7231,7 +7231,7 @@ woW3rYuEdJdfnpKn2ImKXJUweqlODp0UgAL/CoGAeIKt8X9h4sh5kZ6TJgeP05C3
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-08T02:00:00Z</StatusStartingTime>
           </ServiceInformation>
         </TSPService>
@@ -7281,7 +7281,7 @@ woW3rYuEdJdfnpKn2ImKXJUweqlODp0UgAL/CoGAeIKt8X9h4sh5kZ6TJgeP05C3
       <TSPServices>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(33) I.CA - Qualified Certification Authority, 09/2009</Name>
             </ServiceName>
@@ -7350,7 +7350,7 @@ Q2Fm48w45iGje9TtLx6b0fwExSWruuZriw==</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             
             <ServiceInformationExtensions>
@@ -7373,19 +7373,19 @@ Q2Fm48w45iGje9TtLx6b0fwExSWruuZriw==</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(33) I.CA - Qualified Certification Authority, 09/2009</Name>
               </ServiceName>
@@ -7397,14 +7397,14 @@ Q2Fm48w45iGje9TtLx6b0fwExSWruuZriw==</X509Certificate>
                   <X509SKI>ecvQI+k6Z3CRdE/TUeLgIP3hKPs=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2005-06-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(41) I.CA Qualified CA/RSA 07/2015</Name>
             </ServiceName>
@@ -7477,7 +7477,7 @@ hC+y0y+tlqxsOHK5T94l2S1C67F5zV2ftjixPD/X</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>http://ocsp.ica.cz/qcaRR_rsa</ServiceSupplyPoint>
@@ -7493,19 +7493,19 @@ hC+y0y+tlqxsOHK5T94l2S1C67F5zV2ftjixPD/X</X509Certificate>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
           </ServiceInformation>
           <ServiceHistory>
             <ServiceHistoryInstance>
-              <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+              <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
               <ServiceName>
                 <Name xml:lang="en">(41) I.CA Qualified CA/RSA 07/2015</Name>
               </ServiceName>
@@ -7517,14 +7517,14 @@ hC+y0y+tlqxsOHK5T94l2S1C67F5zV2ftjixPD/X</X509Certificate>
                   <X509SKI>bIEnWTPiopohGIspFLw4bdRzeT0=</X509SKI>
                 </DigitalId>
               </ServiceDigitalIdentity>
-              <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
+              <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/accredited</ServiceStatus>
               <StatusStartingTime>2005-06-15T00:00:00Z</StatusStartingTime>
             </ServiceHistoryInstance>
           </ServiceHistory>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(34) I.CA - Time Stamping Authority, TSS/TSU 1, 11/2013</Name>
             </ServiceName>
@@ -7574,7 +7574,7 @@ RBi98JZQCGG5jkS2eVQLOLKxy/5SfYbhDJWMxlAMvvUVqy9hcEs=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>https://tsa.ica.cz/cgi-bin/razitko.cgi</ServiceSupplyPoint>
@@ -7583,7 +7583,7 @@ RBi98JZQCGG5jkS2eVQLOLKxy/5SfYbhDJWMxlAMvvUVqy9hcEs=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(35) I.CA - Time Stamping Authority, TSS/TSU 2, 11/2013</Name>
             </ServiceName>
@@ -7633,7 +7633,7 @@ a3QP+UT3uxrjxWAPjcRVc2+8e7FZQQSRPBRrDV1WP6zHBAYYBiM=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>https://tsa.ica.cz/cgi-bin/razitko.cgi</ServiceSupplyPoint>
@@ -7642,7 +7642,7 @@ a3QP+UT3uxrjxWAPjcRVc2+8e7FZQQSRPBRrDV1WP6zHBAYYBiM=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(36) I.CA - Time Stamping Authority, TSS/TSU 3, 11/2013</Name>
             </ServiceName>
@@ -7692,7 +7692,7 @@ aREl7Un803WLQvOTD6hYRnOfk/sdr8TOjCibTJv8Qd7y4bq0AQA=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>https://tsa.ica.cz/cgi-bin/razitko.cgi</ServiceSupplyPoint>
@@ -7701,7 +7701,7 @@ aREl7Un803WLQvOTD6hYRnOfk/sdr8TOjCibTJv8Qd7y4bq0AQA=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(37) I.CA - Time Stamping Authority, TSS/TSU 4, 11/2013</Name>
             </ServiceName>
@@ -7750,7 +7750,7 @@ FCgDoCDkYB1ziK5vD8i/2qdd7QZouX+/KwrALGoUpyNUTmWCVww=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
             <ServiceSupplyPoints>
               <ServiceSupplyPoint>https://tsa.ica.cz/cgi-bin/razitko.cgi</ServiceSupplyPoint>
@@ -7759,7 +7759,7 @@ FCgDoCDkYB1ziK5vD8i/2qdd7QZouX+/KwrALGoUpyNUTmWCVww=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(81) I.CA Time Stamping Authority TSS/TSU 6 09/2016</Name>
             </ServiceName>
@@ -7811,7 +7811,7 @@ eXtEvSCxylOst6Ot9+TG2Y7tYAxfREvjBhoC4gI=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-11-07T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
@@ -7836,7 +7836,7 @@ eXtEvSCxylOst6Ot9+TG2Y7tYAxfREvjBhoC4gI=</X509Certificate>
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(85) I.CA Time Stamping Authority TSU 1 08/2017</Name>
             </ServiceName>
@@ -7893,7 +7893,7 @@ jHPZ8U9wtX6iNCsCobZXkIblSMwPUh61yqnKdcMdJzRupitjMpK/wBM6yxCysxSA
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-11-07T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
@@ -7918,7 +7918,7 @@ jHPZ8U9wtX6iNCsCobZXkIblSMwPUh61yqnKdcMdJzRupitjMpK/wBM6yxCysxSA
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(86) I.CA Time Stamping Authority TSU 2 08/2017</Name>
             </ServiceName>
@@ -7975,7 +7975,7 @@ kZJvT0VvUOruRrlPFnYEEqlSVug97SzPq/5dZl9hJvnbZgx2bkhIPMvNsvu3TBo8</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-11-07T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
@@ -8000,7 +8000,7 @@ kZJvT0VvUOruRrlPFnYEEqlSVug97SzPq/5dZl9hJvnbZgx2bkhIPMvNsvu3TBo8</X509Certificat
         </TSPService>
         <TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(87) I.CA Time Stamping Authority TSS/TSU 4 02/2017</Name>
             </ServiceName>
@@ -8048,7 +8048,7 @@ R8nByMgs9YEieim0gjxz500CZszIbyElHk552axAz+VBM3O9p/pMGi+jbiEIug==</X509Certificat
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-11-07T00:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
@@ -8073,7 +8073,7 @@ R8nByMgs9YEieim0gjxz500CZszIbyElHk552axAz+VBM3O9p/pMGi+jbiEIug==</X509Certificat
         </TSPService>
 		<TSPService>
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(97) I.CA Qualified CA/RSA 07/2015 OCSP responder</Name>
             </ServiceName>
@@ -8119,17 +8119,17 @@ oK/A7v01H2XDW7LILpg=</X509Certificate>
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2017-12-21T13:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -8178,7 +8178,7 @@ oK/A7v01H2XDW7LILpg=</X509Certificate>
         <TSPService>
 		
           <ServiceInformation>
-            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/PSES/Q</ServiceTypeIdentifier>
+            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/PSES/Q</ServiceTypeIdentifier>
             <ServiceName>
               <Name xml:lang="en">(100) Úrád vlády Slovenskej republiky - ÚPVS</Name>
             </ServiceName>
@@ -8235,17 +8235,17 @@ tnFBdYlf
                 </Other>
               </DigitalId>
             </ServiceDigitalIdentity>
-            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
             <StatusStartingTime>2018-01-14T10:00:00Z</StatusStartingTime>
             <ServiceInformationExtensions>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
                 </AdditionalServiceInformation>
               </Extension>
               <Extension Critical="true">
                 <AdditionalServiceInformation>
-                  <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+                  <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
                 </AdditionalServiceInformation>
               </Extension>
             </ServiceInformationExtensions>
@@ -8253,5 +8253,5 @@ tnFBdYlf
         </TSPService>
 	</TSPServices>
     </TrustServiceProvider>
-    </TrustServiceProviderList><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-1574187795"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="id-LockItSignatureReference-1x205653219" URI="#TLISK-101"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>euzE/dd+McJTk8Kel/l61AEr4gRgkq1u18kXsDd8E7c=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-1685639134"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>UhItUZQPKZi8BGbour7Nfr1Qr+7zImdja34LE3afJ8g=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>gzJPV9IVzY5SwRalLUlrGXLKOOPWgPL9/CuKnG5+Vpiu/uCmnidPxmJYgfL4yIooUkpAegu3fH2poiDpqwTP854HvjSV+cFfHFlMsPiYmHIe4jmYqHIjz3iyssgU1ujpz3IsodpJ165XLsdByLZdVlM8Rc81YKCTK9Wmmj492gl1Hs/vxQ6H1bNCv9HL8FwSos4a8JHZqCerI29OPIuQJnPHPFk5o3gZoA0UVtmTzeGl4Nb6Bt9WhCifBJPZbrZU2nHZbX5TQyIW83YMcKbNpxPn+gmudambu53Qn45prnE2vwHexdMUnxmAqPtyirxdAZz0MUu9ZZdYc/6JBRapRQ==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>i40m/11UjpIxDLjNIbh4nGY3yQRFg83N70BWMsm7yMmC8wlWRCsOqVOv0c3nbnKYlwEtQW1QdSnie4FymDcblEXX0wmE0oVsH/i8hELHhIW6CqpymyIX4LaF00XqaYOTjIhNFPcOzVubI44izL02H1BsPYKiW84zg1HYp17svaXKKuOIhi+VTZlboxAoQEgR1lIGJIxk5+st47N2L9aOY4MPzRhzXmzeTAP7S4oCCnR1LEeaR54Qv24/Z+JKCyVSicYbac/gSlt1kxSwG6MKPElRGktRDyERAkSTV4O4Nx+Dog/2yF0D4+i3euMLIZkKxeQdeOYtHvtEoXl+r2u8dQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509IssuerSerial><ds:X509IssuerName>CN=KCA NBU SR 3, OU=SIBEP, O=Narodny bezpecnostny urad, L=Bratislava, C=SK</ds:X509IssuerName><ds:X509SerialNumber>1906</ds:X509SerialNumber></ds:X509IssuerSerial><ds:X509SubjectName>SERIALNUMBER=NTRSK 36061701, CN=TL and Signature Policy List 2, OU=CIS Operation division, O=NATIONAL SECURITY AUTHORITY, L=Bratislava, C=SK</ds:X509SubjectName><ds:X509Certificate>MIIIczCCBlugAwIBAgICB3IwDQYJKoZIhvcNAQELBQAwbTELMAkGA1UEBhMCU0sxEzARBgNVBAcMCkJyYXRpc2xhdmExIjAgBgNVBAoMGU5hcm9kbnkgYmV6cGVjbm9zdG55IHVyYWQxDjAMBgNVBAsMBVNJQkVQMRUwEwYDVQQDDAxLQ0EgTkJVIFNSIDMwHhcNMTYwNjA2MTIxMzM3WhcNMTkwNjA2MTIxMTE1WjCBqzELMAkGA1UEBhMCU0sxEzARBgNVBAcMCkJyYXRpc2xhdmExJDAiBgNVBAoMG05BVElPTkFMIFNFQ1VSSVRZIEFVVEhPUklUWTEfMB0GA1UECwwWQ0lTIE9wZXJhdGlvbiBkaXZpc2lvbjEnMCUGA1UEAwweVEwgYW5kIFNpZ25hdHVyZSBQb2xpY3kgTGlzdCAyMRcwFQYDVQQFEw5OVFJTSyAzNjA2MTcwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIuNJv9dVI6SMQy4zSG4eJxmN8kERYPNze9AVjLJu8jJgvMJVkQrDqlTr9HN525ymJcBLUFtUHUp4nuBcpg3G5RF19MJhNKFbB/4vIRCx4SFugqqcpsiF+C2hdNF6mmDk4yITRT3Ds1bmyOOIsy9Nh9QbD2ColvOM4NR2Kde7L2lyirjiIYvlU2ZW6MQKEBIEdZSBiSMZOfrLeOzdi/WjmODD80Yc15s3kwD+0uKAgp0dSxHmkeeEL9uP2fiSgslUonGG2nP4EpbdZMUsBujCjxJURpLUQ8hEQJEk1eDuDcfg6IP9shdA+Pot3rjCyGZCsXkHXjmLR77RKF5fq9rvHUCAwEAAaOCA9wwggPYMAkGA1UdEwQCMAAwYgYDVR0gBFswWTBFBg0rgR6RmYQFAAAAAQICMDQwMgYIKwYBBQUHAgEWJmh0dHA6Ly9lcC5uYnVzci5zay9rY2EvZG9jL2tjYV9jcHMucGRmMBAGDiuBHpGZhAUAAAEKBQABMIIBQAYIKwYBBQUHAQEEggEyMIIBLjA/BggrBgEFBQcwAoYzaHR0cDovL2VwLm5idXNyLnNrL2tjYS9jZXJ0cy9rY2EzL2tjYW5idXNyM19wN2MucDdjMHoGCCsGAQUFBzAChm5sZGFwOi8vZXAubmJ1c3Iuc2svY249S0NBIE5CVSBTUiAzLG91PVNJQkVQLG89TmFyb2RueSBiZXpwZWNub3N0bnkgdXJhZCxsPUJyYXRpc2xhdmEsYz1TSz9jYUNlcnRpZmljYXRlO2JpbmFyeTBvBggrBgEFBQcwAoZjbGRhcDovLy9jbj1LQ0EgTkJVIFNSIDMsb3U9U0lCRVAsbz1OYXJvZG55IGJlenBlY25vc3RueSB1cmFkLGw9QnJhdGlzbGF2YSxjPVNLP2NhQ2VydGlmaWNhdGU7YmluYXJ5MGQGA1UdEQRdMFuBEnBvZGF0ZWxuYUBuYnVzci5za4ZFaHR0cDovL3d3dy5uYnVzci5zay9lbi9lbGVjdHJvbmljLXNpZ25hdHVyZS9zaWduYXR1cmUtcG9saWNpZXMuMS5odG1sMA4GA1UdDwEB/wQEAwIGQDARBgNVHSUECjAIBgYEAJE3AwAwHwYDVR0jBBgwFoAUf/E9IcKXWi6XBw6xaYMl/SGGPgcwggFYBgNVHR8EggFPMIIBSzAwoC6gLIYqaHR0cDovL2VwLm5idXNyLnNrL2tjYS9jcmxzMy9rY2FuYnVzcjMuY3JsMIGQoIGNoIGKhoGHbGRhcDovL2VwLm5idXNyLnNrL2NuJTNkS0NBJTIwTkJVJTIwU1IlMjAzLG91JTNkU0lCRVAsbyUzZE5hcm9kbnklMjBiZXpwZWNub3N0bnklMjB1cmFkLGwlM2RCcmF0aXNsYXZhLGMlM2RTSz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0MIGDoIGAoH6GfGxkYXA6Ly8vY24lM2RLQ0ElMjBOQlUlMjBTUiUyMDMsb3UlM2RTSUJFUCxvJTNkTmFyb2RueSUyMGJlenBlY25vc3RueSUyMHVyYWQsbCUzZEJyYXRpc2xhdmEsYyUzZFNLP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QwHQYDVR0OBBYEFBrIRac4LSTSPJoAbfh8zSAj2TbbMA0GCSqGSIb3DQEBCwUAA4ICAQBQp/Y2gtMPFh9uF4yTe4G0HfnbrkWjzEvYnlP2T4vxiYEjwqvc+NFB5QIX3F9oLSFLhPsQR+yDL51Z6MOTQyzGbgBWR+3jfIMhyylF7MfOGc7sIW8GiiJmuqq+IMHpZ2k2LRbzzmfPwBKrTCmc5nHvcqrR+S7w68wmWQ6FzDRlyiTz8oN30pAIaRb4e1EElyGJrlhinjfAkbTCN0Wetj4K62gmzfQqIF6kQHia22xRfDlqZl/mWcWqeTQ/dvvFhs8gGR+nhUytI1c5rQWkqKS3J5PgxQxYUFJ1A6dReZW7adPxfSa9W18jSHLhIB8QjKUXh7dsG6H3wwLr4y+SYtDmE5mLU5RFepqCpHHD/Jo1lAgxoFXRIJkXpnLTxNyVjXMgo82yFLYcLJWi330UP3Qm/SvPFQEIuhWaRlX9kIT7kkZh3mUutdJSzcvfDqeCCRRsczq8uLYvLg/PpPTBZQPI8yWWGyH9JZ2YOxrnpvRbIbSCLSRVmIZMLI7+haQa6hflH++uH1RkGODopO4t+bkkCbjy5uYlN1Y57ePZzuR3mcAwZ/fx3xXlSuKEVoZ2qhQqCCDcZXWHOXU5zsJ3DD2paLN4qK0g/ElcBvWHA1NSOZRGrMKe+adVecjJhRtDSzo6fLZ6186Hll26FYXfz2Q0fg5fenK6uxYzOwdWux5r5g==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature-1574187795"><xades:SignedProperties Id="SignedProperties-1685639134"><xades:SignedSignatureProperties><xades:SigningTime>2018-01-14T10:00:00.836Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>B5YlX+O3h7mkChw1bcANsRpSnt7urxVOTMaWjWwrDNE=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=KCA NBU SR 3, OU=SIBEP, O=Narodny bezpecnostny urad, L=Bratislava, C=SK</ds:X509IssuerName><ds:X509SerialNumber>1906</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier><xades:SignatureProductionPlace><xades:City>Bratislava</xades:City><xades:CountryName>SK SLOVAKIA</xades:CountryName></xades:SignatureProductionPlace></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#id-LockItSignatureReference-1x205653219"><xades:Description>Content-Type: text/xml; charset=UTF-8; name="doc.xml"</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature>
+    </TrustServiceProviderList><ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature-1574187795"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="id-LockItSignatureReference-1x205653219" URI="#TLISK-101"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>euzE/dd+McJTk8Kel/l61AEr4gRgkq1u18kXsDd8E7c=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#SignedProperties-1685639134"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>UhItUZQPKZi8BGbour7Nfr1Qr+7zImdja34LE3afJ8g=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>gzJPV9IVzY5SwRalLUlrGXLKOOPWgPL9/CuKnG5+Vpiu/uCmnidPxmJYgfL4yIooUkpAegu3fH2poiDpqwTP854HvjSV+cFfHFlMsPiYmHIe4jmYqHIjz3iyssgU1ujpz3IsodpJ165XLsdByLZdVlM8Rc81YKCTK9Wmmj492gl1Hs/vxQ6H1bNCv9HL8FwSos4a8JHZqCerI29OPIuQJnPHPFk5o3gZoA0UVtmTzeGl4Nb6Bt9WhCifBJPZbrZU2nHZbX5TQyIW83YMcKbNpxPn+gmudambu53Qn45prnE2vwHexdMUnxmAqPtyirxdAZz0MUu9ZZdYc/6JBRapRQ==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>i40m/11UjpIxDLjNIbh4nGY3yQRFg83N70BWMsm7yMmC8wlWRCsOqVOv0c3nbnKYlwEtQW1QdSnie4FymDcblEXX0wmE0oVsH/i8hELHhIW6CqpymyIX4LaF00XqaYOTjIhNFPcOzVubI44izL02H1BsPYKiW84zg1HYp17svaXKKuOIhi+VTZlboxAoQEgR1lIGJIxk5+st47N2L9aOY4MPzRhzXmzeTAP7S4oCCnR1LEeaR54Qv24/Z+JKCyVSicYbac/gSlt1kxSwG6MKPElRGktRDyERAkSTV4O4Nx+Dog/2yF0D4+i3euMLIZkKxeQdeOYtHvtEoXl+r2u8dQ==</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue><ds:X509Data><ds:X509IssuerSerial><ds:X509IssuerName>CN=KCA NBU SR 3, OU=SIBEP, O=Narodny bezpecnostny urad, L=Bratislava, C=SK</ds:X509IssuerName><ds:X509SerialNumber>1906</ds:X509SerialNumber></ds:X509IssuerSerial><ds:X509SubjectName>SERIALNUMBER=NTRSK 36061701, CN=TL and Signature Policy List 2, OU=CIS Operation division, O=NATIONAL SECURITY AUTHORITY, L=Bratislava, C=SK</ds:X509SubjectName><ds:X509Certificate>MIIIczCCBlugAwIBAgICB3IwDQYJKoZIhvcNAQELBQAwbTELMAkGA1UEBhMCU0sxEzARBgNVBAcMCkJyYXRpc2xhdmExIjAgBgNVBAoMGU5hcm9kbnkgYmV6cGVjbm9zdG55IHVyYWQxDjAMBgNVBAsMBVNJQkVQMRUwEwYDVQQDDAxLQ0EgTkJVIFNSIDMwHhcNMTYwNjA2MTIxMzM3WhcNMTkwNjA2MTIxMTE1WjCBqzELMAkGA1UEBhMCU0sxEzARBgNVBAcMCkJyYXRpc2xhdmExJDAiBgNVBAoMG05BVElPTkFMIFNFQ1VSSVRZIEFVVEhPUklUWTEfMB0GA1UECwwWQ0lTIE9wZXJhdGlvbiBkaXZpc2lvbjEnMCUGA1UEAwweVEwgYW5kIFNpZ25hdHVyZSBQb2xpY3kgTGlzdCAyMRcwFQYDVQQFEw5OVFJTSyAzNjA2MTcwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIuNJv9dVI6SMQy4zSG4eJxmN8kERYPNze9AVjLJu8jJgvMJVkQrDqlTr9HN525ymJcBLUFtUHUp4nuBcpg3G5RF19MJhNKFbB/4vIRCx4SFugqqcpsiF+C2hdNF6mmDk4yITRT3Ds1bmyOOIsy9Nh9QbD2ColvOM4NR2Kde7L2lyirjiIYvlU2ZW6MQKEBIEdZSBiSMZOfrLeOzdi/WjmODD80Yc15s3kwD+0uKAgp0dSxHmkeeEL9uP2fiSgslUonGG2nP4EpbdZMUsBujCjxJURpLUQ8hEQJEk1eDuDcfg6IP9shdA+Pot3rjCyGZCsXkHXjmLR77RKF5fq9rvHUCAwEAAaOCA9wwggPYMAkGA1UdEwQCMAAwYgYDVR0gBFswWTBFBg0rgR6RmYQFAAAAAQICMDQwMgYIKwYBBQUHAgEWJmh0dHA6Ly9lcC5uYnVzci5zay9rY2EvZG9jL2tjYV9jcHMucGRmMBAGDiuBHpGZhAUAAAEKBQABMIIBQAYIKwYBBQUHAQEEggEyMIIBLjA/BggrBgEFBQcwAoYzaHR0cDovL2VwLm5idXNyLnNrL2tjYS9jZXJ0cy9rY2EzL2tjYW5idXNyM19wN2MucDdjMHoGCCsGAQUFBzAChm5sZGFwOi8vZXAubmJ1c3Iuc2svY249S0NBIE5CVSBTUiAzLG91PVNJQkVQLG89TmFyb2RueSBiZXpwZWNub3N0bnkgdXJhZCxsPUJyYXRpc2xhdmEsYz1TSz9jYUNlcnRpZmljYXRlO2JpbmFyeTBvBggrBgEFBQcwAoZjbGRhcDovLy9jbj1LQ0EgTkJVIFNSIDMsb3U9U0lCRVAsbz1OYXJvZG55IGJlenBlY25vc3RueSB1cmFkLGw9QnJhdGlzbGF2YSxjPVNLP2NhQ2VydGlmaWNhdGU7YmluYXJ5MGQGA1UdEQRdMFuBEnBvZGF0ZWxuYUBuYnVzci5za4ZFaHR0cDovL3d3dy5uYnVzci5zay9lbi9lbGVjdHJvbmljLXNpZ25hdHVyZS9zaWduYXR1cmUtcG9saWNpZXMuMS5odG1sMA4GA1UdDwEB/wQEAwIGQDARBgNVHSUECjAIBgYEAJE3AwAwHwYDVR0jBBgwFoAUf/E9IcKXWi6XBw6xaYMl/SGGPgcwggFYBgNVHR8EggFPMIIBSzAwoC6gLIYqaHR0cDovL2VwLm5idXNyLnNrL2tjYS9jcmxzMy9rY2FuYnVzcjMuY3JsMIGQoIGNoIGKhoGHbGRhcDovL2VwLm5idXNyLnNrL2NuJTNkS0NBJTIwTkJVJTIwU1IlMjAzLG91JTNkU0lCRVAsbyUzZE5hcm9kbnklMjBiZXpwZWNub3N0bnklMjB1cmFkLGwlM2RCcmF0aXNsYXZhLGMlM2RTSz9jZXJ0aWZpY2F0ZVJldm9jYXRpb25MaXN0MIGDoIGAoH6GfGxkYXA6Ly8vY24lM2RLQ0ElMjBOQlUlMjBTUiUyMDMsb3UlM2RTSUJFUCxvJTNkTmFyb2RueSUyMGJlenBlY25vc3RueSUyMHVyYWQsbCUzZEJyYXRpc2xhdmEsYyUzZFNLP2NlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QwHQYDVR0OBBYEFBrIRac4LSTSPJoAbfh8zSAj2TbbMA0GCSqGSIb3DQEBCwUAA4ICAQBQp/Y2gtMPFh9uF4yTe4G0HfnbrkWjzEvYnlP2T4vxiYEjwqvc+NFB5QIX3F9oLSFLhPsQR+yDL51Z6MOTQyzGbgBWR+3jfIMhyylF7MfOGc7sIW8GiiJmuqq+IMHpZ2k2LRbzzmfPwBKrTCmc5nHvcqrR+S7w68wmWQ6FzDRlyiTz8oN30pAIaRb4e1EElyGJrlhinjfAkbTCN0Wetj4K62gmzfQqIF6kQHia22xRfDlqZl/mWcWqeTQ/dvvFhs8gGR+nhUytI1c5rQWkqKS3J5PgxQxYUFJ1A6dReZW7adPxfSa9W18jSHLhIB8QjKUXh7dsG6H3wwLr4y+SYtDmE5mLU5RFepqCpHHD/Jo1lAgxoFXRIJkXpnLTxNyVjXMgo82yFLYcLJWi330UP3Qm/SvPFQEIuhWaRlX9kIT7kkZh3mUutdJSzcvfDqeCCRRsczq8uLYvLg/PpPTBZQPI8yWWGyH9JZ2YOxrnpvRbIbSCLSRVmIZMLI7+haQa6hflH++uH1RkGODopO4t+bkkCbjy5uYlN1Y57ePZzuR3mcAwZ/fx3xXlSuKEVoZ2qhQqCCDcZXWHOXU5zsJ3DD2paLN4qK0g/ElcBvWHA1NSOZRGrMKe+adVecjJhRtDSzo6fLZ6186Hll26FYXfz2Q0fg5fenK6uxYzOwdWux5r5g==</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#Signature-1574187795"><xades:SignedProperties Id="SignedProperties-1685639134"><xades:SignedSignatureProperties><xades:SigningTime>2018-01-14T10:00:00.836Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>B5YlX+O3h7mkChw1bcANsRpSnt7urxVOTMaWjWwrDNE=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=KCA NBU SR 3, OU=SIBEP, O=Narodny bezpecnostny urad, L=Bratislava, C=SK</ds:X509IssuerName><ds:X509SerialNumber>1906</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate><xades:SignaturePolicyIdentifier><xades:SignaturePolicyImplied/></xades:SignaturePolicyIdentifier><xades:SignatureProductionPlace><xades:City>Bratislava</xades:City><xades:CountryName>SK SLOVAKIA</xades:CountryName></xades:SignatureProductionPlace></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#id-LockItSignatureReference-1x205653219"><xades:Description>Content-Type: text/xml; charset=UTF-8; name="doc.xml"</xades:Description><xades:MimeType>text/xml</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature>
 </TrustServiceStatusList>

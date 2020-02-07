@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.File;
@@ -160,7 +140,7 @@ public class PDFReportServiceTest extends AbstractSpringTest {
             file.delete();
         }
 
-        int id = createTLinDB(TLType.TL);
+        int id = createTLinDB();
         TrustStatusListType tsl = jaxbService.unmarshallTSL(new File("src/test/resources/tsl/BE-TEST/2016-10-13_12-55-38.xml"));
         TL tl = tlBuilder.buildTLV4(id, tsl);
         tl.setDbCountryName("Belgium");
@@ -189,9 +169,9 @@ public class PDFReportServiceTest extends AbstractSpringTest {
         Assert.assertTrue(file.exists());
     }
 
-    private int createTLinDB(TLType type) {
+    private int createTLinDB() {
         DBTrustedLists trustedList = new DBTrustedLists();
-        trustedList.setType(type);
+        trustedList.setType(TLType.TL);
         trustedList.setXmlFile(new DBFiles());
         tlRepository.save(trustedList);
         return trustedList.getId();
@@ -205,7 +185,7 @@ public class PDFReportServiceTest extends AbstractSpringTest {
             file.delete();
         }
 
-        int lotlId = createTLinDB(TLType.TL);
+        int lotlId = createTLinDB();
         TrustStatusListType tsl = jaxbService.unmarshallTSL(new File("src/test/resources/tsl/CZ/2016-10-13_13-09-15.xml"));
         TL tl = tlBuilder.buildTLV4(lotlId, tsl);
         tl.setDbCountryName("Czech Republic");

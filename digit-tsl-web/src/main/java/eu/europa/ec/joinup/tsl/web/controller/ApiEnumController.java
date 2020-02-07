@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,9 +21,9 @@ public class ApiEnumController {
     private UserService userService;
 
     @RequestMapping("/js/tag.js")
-    public ResponseEntity<String> loadScript() throws Exception {
+    public ResponseEntity<String> loadScript() {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             sb.append("function initScope($scope) {\n");
             for (Tag myTag : Tag.values()) {
                 sb.append("$scope.TAG_");
@@ -64,10 +44,10 @@ public class ApiEnumController {
     }
 
     @RequestMapping("/js/checkStatus.js")
-    public ResponseEntity<String> loadCheckStatus() throws Exception {
+    public ResponseEntity<String> loadCheckStatus() {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
 
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             sb.append("function initStatusEnum($scope) {\n");
             sb.append("$scope.STATUS=[];\n");
             for (CheckStatus myEnum : CheckStatus.values()) {
@@ -90,9 +70,9 @@ public class ApiEnumController {
     }
 
     @RequestMapping("/js/checkImpact.js")
-    public ResponseEntity<String> loadCheckImpact() throws Exception {
+    public ResponseEntity<String> loadCheckImpact() {
         if ((SecurityContextHolder.getContext().getAuthentication() != null) && userService.isAuthenticated(SecurityContextHolder.getContext().getAuthentication().getName())) {
-            StringBuffer sb = new StringBuffer();
+            StringBuilder sb = new StringBuilder();
             sb.append("function initImpactEnum($scope) {\n");
             sb.append("$scope.IMPACT=[];\n");
             for (CheckImpact myEnum : CheckImpact.values()) {

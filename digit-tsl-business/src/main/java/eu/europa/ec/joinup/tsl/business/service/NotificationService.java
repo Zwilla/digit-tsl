@@ -1,29 +1,8 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -164,7 +143,7 @@ public class NotificationService {
     /**
      * Get signature from the XML model attribute
      */
-    public TLSignature getSignatureModelXML(String territory, DSSDocument xmlDoc) throws IOException, FileNotFoundException {
+    public TLSignature getSignatureModelXML(String territory, DSSDocument xmlDoc) throws IOException {
         File tmp = File.createTempFile("Notif", "xml");
         FileOutputStream fos = null;
         fos = new FileOutputStream(tmp);
@@ -241,7 +220,7 @@ public class NotificationService {
         if (notif != null) {
             for (OtherTSLPointerTypeV5 tPtot : notif.getPointersToOtherTSL()) {
                 TLPointersToOtherTSL tPtotMarshalled = new TLPointersToOtherTSL(0, "", tPtot);
-                if ((tPtotMarshalled != null) && tPtotMarshalled.getMimeType().equals(mimeType)) {
+                if (tPtotMarshalled.getMimeType().equals(mimeType)) {
                     return tPtotMarshalled;
                 }
             }
@@ -556,9 +535,8 @@ public class NotificationService {
      * @param pdfByteArray
      * @param cookieId
      * @throws XmlMappingException
-     * @throws IOException
      */
-    public DBNotification persistNotification(byte[] xmlByteArray, byte[] pdfByteArray, String cookieId) throws XmlMappingException, IOException {
+    public DBNotification persistNotification(byte[] xmlByteArray, byte[] pdfByteArray, String cookieId) throws XmlMappingException {
 
         DBNotification dbNotif = new DBNotification();
         try {
@@ -611,14 +589,12 @@ public class NotificationService {
      *
      * @param notificationId
      * @param draftId
-     * @return
      */
-    public DBNotification putInDraft(int notificationId, int draftId) {
+    public void putInDraft(int notificationId, int draftId) {
         DBNotification notif = notificationRepository.findOne(notificationId);
         DBTrustedLists tl = tlService.getDbTL(draftId);
         notif.getTls().add(tl); // KO
         notif.setStatus(NotificationStatus.INDRAFT);
-        return notif;
     }
 
     /**
@@ -639,14 +615,12 @@ public class NotificationService {
 
     /**
      * Update notification status by @DBNotification
-     *
-     * @param notif
+     *  @param notif
      * @param status
      */
-    public DBNotification updateStatus(DBNotification notif, NotificationStatus status) {
+    public void updateStatus(DBNotification notif, NotificationStatus status) {
         notif.setStatus(status);
         notificationRepository.save(notif);
-        return notif;
     }
 
     /**

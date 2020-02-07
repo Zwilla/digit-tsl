@@ -19,7 +19,7 @@
 	</table>
 </div>
 <div align="center" ng-if="nbPage>1">
-	<ul class="pagination cursor-pointer" style="margin: 0px; padding: 0px">
+	<ul class="pagination cursor-pointer" style="margin: 0; padding: 0">
 		<li ng-click="setPage(1)" ng-class="{'disabled' : selectPage==1}"><span>&laquo; First</span></li>
 		<li ng-click="setPage(selectPage-1)" ng-class="{'disabled' : selectPage==1}"><span>&laquo;</span></li>
 		<li ng-repeat="n in pagination" ng-click="setPage(n)" ng-class="isActive(n)"><span>{{n}}</span></li>

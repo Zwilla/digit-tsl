@@ -2,295 +2,295 @@ Poland
 
     National Bank of Poland 
 
-        Polish National Root (NCCert) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+        Polish National Root (NCCert) - https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC
 
-        Polish National Root (Centrast) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+        Polish National Root (Centrast) - https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC
 
-        Polish National Root (NCCert2016) - http://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC 
+        Polish National Root (NCCert2016) - https://uri.etsi.org/TrstSvc/Svctype/NationalRootCA-QC
 
     Unizeto Technologies S.A. 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+        Certification Authority issuing Qualified Attribute Certificates - https://uri.etsi.org/TrstSvc/Svctype/ACA
 
-        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+        Certification Authority issuing Qualified Attribute Certificates - https://uri.etsi.org/TrstSvc/Svctype/ACA
 
-        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+        Data Validation and Certification Server - https://uri.etsi.org/TrstSvc/Svctype/PSES/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+        Data Validation and Certification Server - https://uri.etsi.org/TrstSvc/Svctype/PSES/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+        Delivery Authority - https://uri.etsi.org/TrstSvc/Svctype/EDS/Q
 
-        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+        Delivery Authority - https://uri.etsi.org/TrstSvc/Svctype/EDS/Q
 
-        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Object Deposits Authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Object Deposits Authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Registries and repositories authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Registries and repositories authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     Polish Security Printing Works 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
     Krajowa Izba Rozliczeniowa S.A. 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     TP Internet sp. z o.o. 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     MobiCert Sp. z o.o. 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Safe Technologies S.A. 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP Responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     ENIGMA Systemy Ochrony Informacji Sp.z o.o. 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP Responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP Responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP Responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        OCSP Responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/TSS-QC
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     EuroCert Sp. z. o.o. 
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification Authority issuing Qualified Certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification Authority issuing Qualified Certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Asseco Data Systems S.A. 
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification Authority issuing Qualified Attribute Certificates - http://uri.etsi.org/TrstSvc/Svctype/ACA 
+        Certification Authority issuing Qualified Attribute Certificates - https://uri.etsi.org/TrstSvc/Svctype/ACA
 
-        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/PSES/Q 
+        Data Validation and Certification Server - https://uri.etsi.org/TrstSvc/Svctype/PSES/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+        Data Validation and Certification Server - https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Delivery Authority - http://uri.etsi.org/TrstSvc/Svctype/EDS/Q 
+        Delivery Authority - https://uri.etsi.org/TrstSvc/Svctype/EDS/Q
 
-        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP 
+        OCSP responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        OCSP responder - http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC 
+        OCSP responder - https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Object Deposits Authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Object Deposits Authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Registries and repositories authority - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Registries and repositories authority - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Certification authority issuing qualified certificates - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Certification authority issuing qualified certificates - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Data Validation and Certification Server - http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q 
+        Data Validation and Certification Server - https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals
 
-        Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 

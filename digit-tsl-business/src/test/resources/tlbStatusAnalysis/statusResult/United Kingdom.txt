@@ -2,93 +2,93 @@ United Kingdom
 
     Royal Bank of Scotland Plc 
 
-        Trustassured - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Trustassured - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Trustis Ltd 
 
-        Certificate Factory - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        Certificate Factory - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
             non Regulatory; 
 
     British Telecommunications Plc 
 
-        BT Assure PKI - http://uri.etsi.org/TrstSvc/Svctype/unspecified 
+        BT Assure PKI - https://uri.etsi.org/TrstSvc/Svctype/unspecified
 
             non Regulatory; 
 
     Health & Social Care Information Centre 
 
-        Root CA for NHS PKI - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Root CA for NHS PKI - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
     Registers of Scotland Executive Agency 
 
-        ARTL - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        ARTL - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
     Home Office Technology 
 
-        Police Service Root CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Police Service Root CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
-        Police Service IAM Central Services CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Police Service IAM Central Services CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
     BT Global Financial Services 
 
-        BT Radianz Messaging - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        BT Radianz Messaging - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
     Metropolitan Police Service 
 
-        Digital Policing - Secure Services - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Digital Policing - Secure Services - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
-        Metropolitan Police Class 3 Secondary CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Metropolitan Police Class 3 Secondary CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Undefined; 
 
     Experian Ltd 
 
-        IDaaS (Identity as a Service) - http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid 
+        IDaaS (Identity as a Service) - https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid
 
             non Regulatory; 
 
     Verizon UK Ltd 
 
-        Universal Identity Service - http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid 
+        Universal Identity Service - https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid
 
             non Regulatory; 
 
     GB Group plc 
 
-        ID3global Service - http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid 
+        ID3global Service - https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid
 
             non Regulatory; 
 
     Digidentity BV 
 
-        Digidentity BV Identity Service for Verify - http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid 
+        Digidentity BV Identity Service for Verify - https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid
 
             non Regulatory; 
 
     Barclays Bank Plc 
 
-        Barclays Identity Service - http://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid 
+        Barclays Identity Service - https://uri.etsi.org/TrstSvc/Svctype/IdV/nothavingPKIid
 
             non Regulatory; 
 
     Exostar UK Limited 
 
-        Digital Certificate Service - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Digital Certificate Service - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

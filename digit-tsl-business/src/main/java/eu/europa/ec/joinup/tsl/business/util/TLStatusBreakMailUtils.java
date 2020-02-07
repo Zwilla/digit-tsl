@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.util;
 
 import java.util.List;
@@ -32,23 +12,22 @@ public class TLStatusBreakMailUtils {
 
     private static final String dash = " - ";
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     public static String getContent(TLBreakStatus tlStatus) {
         StringBuilder builder = new StringBuilder();
 
-        builder.append("<div>" + bundle.getString("mail.dear.tlso") + ",</div><br/>");
+        builder.append("<div>").append(bundle.getString("mail.dear.tlso")).append(",</div><br/>");
 
-        builder.append("<div>" + bundle.getString("mail.approach.break.alert.disclaimer") + "</div><br/>");
+        builder.append("<div>").append(bundle.getString("mail.approach.break.alert.disclaimer")).append("</div><br/>");
 
         // Certificates expiration
         List<CertificateElement> certLimitReach = tlStatus.retrieveCertificatesLimitReach();
         if (!CollectionUtils.isEmpty(certLimitReach)) {
-            builder.append("<div>" + bundle.getString("mail.approach.break.cert.list").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()) + "</div>");
+            builder.append("<div>").append(bundle.getString("mail.approach.break.cert.list").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName())).append("</div>");
             for (CertificateElement certificate : certLimitReach) {
                 builder.append("<div>");
-                builder.append(dash + "<b>C" + certificate.getIndex() + "</b>: " + certificate.getSubjectShortName() + ": " + DateUtils.getToFormatYMDHMS(certificate.getNotBefore()) + " - "
-                        + DateUtils.getToFormatYMDHMS(certificate.getNotAfter()) + " ");
+                builder.append(dash + "<b>C").append(certificate.getIndex()).append("</b>: ").append(certificate.getSubjectShortName()).append(": ").append(DateUtils.getToFormatYMDHMS(certificate.getNotBefore())).append(" - ").append(DateUtils.getToFormatYMDHMS(certificate.getNotAfter())).append(" ");
                 if (certificate.getExpirationIn() == 0) {
                     builder.append(bundle.getString("mail.approach.break.cert.today.expire"));
                 } else if (certificate.isExpired()) {
@@ -125,7 +104,7 @@ public class TLStatusBreakMailUtils {
 
         // Next Update Date
         if (tlStatus.getNextUpdateDateElement().isAlert()) {
-            builder.append("<div>" + bundle.getString("mail.approach.break.consequences.next.update").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()));
+            builder.append("<div>").append(bundle.getString("mail.approach.break.consequences.next.update").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()));
             if (tlStatus.getNextUpdateDateElement().getExpireIn() == 0) {
                 builder.append(bundle.getString("mail.approach.break.alert.next.update.today.expire"));
             } else if (tlStatus.getNextUpdateDateElement().isExpired()) {
@@ -135,12 +114,12 @@ public class TLStatusBreakMailUtils {
             }
             builder.append("</div><br/>");
 
-            builder.append("<div>" + bundle.getString("mail.approach.break.consequences.next.update2") + "</div><br/>");
+            builder.append("<div>").append(bundle.getString("mail.approach.break.consequences.next.update2")).append("</div><br/>");
         }
 
-        builder.append("<div>" + bundle.getString("mail.approach.break.alert.footer").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName()) + "</div><br/>");
+        builder.append("<div>").append(bundle.getString("mail.approach.break.alert.footer").replace("%COUNTRY%", tlStatus.getTl().getTerritory().getCountryName())).append("</div><br/>");
 
-        builder.append("<div>" + bundle.getString("mail.best.regards") + "</div>" + "<div>" + bundle.getString("mail.ec.team") + "<div>");
+        builder.append("<div>").append(bundle.getString("mail.best.regards")).append("</div>").append("<div>").append(bundle.getString("mail.ec.team")).append("<div>");
 
         return builder.toString();
     }
@@ -153,7 +132,7 @@ public class TLStatusBreakMailUtils {
         StringBuilder builder = new StringBuilder();
         builder.append(bundle.getString("mail.approach.break.due.to"));
         for (int i = 0; i < certificatesAffected.size(); i++) {
-            builder.append("<b>C" + getCertificateIndex(certificates, certificatesAffected.get(i)) + "</b>");
+            builder.append("<b>C").append(getCertificateIndex(certificates, certificatesAffected.get(i))).append("</b>");
             if (i < (certificatesAffected.size() - 1)) {
                 builder.append(" & ");
             }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" TSLTag="http://uri.etsi.org/19612/TSsdfsdfLTag" Id="rtrrrtrtrt">
+<TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns4="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" TSLTag="https://uri.etsi.org/19612/TSsdfsdfLTag" Id="rtrrrtrtrt">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber></TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLTypsdfsd sdfsdfde/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLTypsdfsd sdfsdfde/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="de">Amt für Kommunikation</Name>
         </SchemeOperatorName>
@@ -29,7 +29,7 @@
         </SchemeInformationURI>
         <StatusDeterminationApproach></StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstdffdfSvc/TrustedList/schemerules/LI</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstdffdfSvc/TrustedList/schemerules/LI</URI>
             <URI xml:lang="el-latn"></URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>LI</SchemeTerritory>
@@ -88,7 +88,7 @@
                 <TSLLocation>http//ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelifgdfgdfgfdgsts</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelifgdfgdfgfdgsts</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -104,7 +104,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="el-latn">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="el-latn">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                             <URI xml:lang="es"></URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
@@ -154,7 +154,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Archsdfsdfsdfdsfiv</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Archsdfsdfsdfdsfiv</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="da">Liechtenstein Post Advanced CA</Name>
                             <Name xml:lang="de"></Name>
@@ -176,7 +176,7 @@
 <Other>dsfsdfs</Other>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/dsfsdfsqsdqsdetbynationallaw</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/dsfsdfsqsdqsdetbynationallaw</ServiceStatus>
                         <StatusStartingTime>2020-11-12T23:00:00Z</StatusStartingTime>
                         <SchemeServiceDefinitionURI>
                             <URI xml:lang="cs">http://www.llv.li/#/112176/electronic-signature</URI>
@@ -202,14 +202,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/AdESGedfggggggggggneration</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/AdESGedfggggggggggneration</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">Liechtenstein Post Advanced CA</Name>
 <Name xml:lang="de">Liechtenstein Post Advanced CA</Name>

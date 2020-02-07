@@ -1,27 +1,4 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
-
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -49,6 +26,8 @@ import eu.europa.ec.joinup.tsl.model.DBTrustedLists;
 import eu.europa.ec.joinup.tsl.model.enums.AuditAction;
 import eu.europa.ec.joinup.tsl.model.enums.AuditStatus;
 import eu.europa.ec.joinup.tsl.model.enums.AuditTarget;
+
+import static org.junit.Assert.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AuditServiceTest extends AbstractSpringTest {
@@ -102,7 +81,7 @@ public class AuditServiceTest extends AbstractSpringTest {
 
         List<Audit> auditList = auditService.searchAuditByCriteria(dto);
         Assert.assertNotNull(auditList);
-        assertTrue(auditList.size() == 1);
+        assertEquals(1, auditList.size());
 
         dto.setCountryCode("BE");
         dto.setTarget(AuditTarget.DRAFT_TL);
@@ -111,13 +90,13 @@ public class AuditServiceTest extends AbstractSpringTest {
 
         List<Audit> auditList2 = auditService.searchAuditByCriteria(dto);
         Assert.assertNotNull(auditList2);
-        assertTrue(auditList2.size() == 0);
+        assertEquals(0, auditList2.size());
 
         dto = new AuditSearchDTO();
         dto.setAction(AuditAction.CREATE);
         List<Audit> auditList3 = auditService.searchAuditByCriteria(dto);
         Assert.assertNotNull(auditList3);
-        assertTrue(auditList3.size() == 2);
+        assertEquals(2, auditList3.size());
 
     }
 

@@ -2,37 +2,37 @@ Liechtenstein
 
     Liechtensteinische Post AG 
 
-        Liechtenstein Post Advanced CA - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Liechtenstein Post Advanced CA - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Cert for eSig; 
 
-        Liechtenstein Post Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Liechtenstein Post Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     FLZ-Anstalt 
 
-        lisign-qualified-01 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        lisign-qualified-01 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
     Office for Communications 
 
-        Trusted List CA 1 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trusted List CA 1 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Cert for eSeal; 
 
-        Trusted List CA 2 - http://uri.etsi.org/TrstSvc/Svctype/CA/PKC 
+        Trusted List CA 2 - https://uri.etsi.org/TrstSvc/Svctype/CA/PKC
 
             Cert for eSeal; 
 
     SwissSign AG 
 
-        SwissSign LI Qualified Platinum CA 2016 - G22 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SwissSign LI Qualified Platinum CA 2016 - G22 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 
-        SwissSign LI Platinum Qualified CA 2016 - G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        SwissSign LI Platinum Qualified CA 2016 - G3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
             QCert for eSig; 
 

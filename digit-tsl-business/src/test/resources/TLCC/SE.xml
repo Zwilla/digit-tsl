@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="http://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="http://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="http://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="http://uri.etsi.org/01903/v1.4.1#" Id="id_for_enveloped_signing_of_the_entire_list" TSLTag="http://uri.etsi.org/19612/TSLTag">
+<?xml version="1.0" encoding="UTF-8"?><TrustServiceStatusList xmlns="https://uri.etsi.org/02231/v2#" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="https://uri.etsi.org/02231/v2/additionaltypes#" xmlns:ns4="https://uri.etsi.org/01903/v1.3.2#" xmlns:ns5="https://uri.etsi.org/TrstSvc/SvcInfoExt/eSigDir-1999-93-EC-TrustedList/#" xmlns:ns6="https://uri.etsi.org/01903/v1.4.1#" Id="id_for_enveloped_signing_of_the_entire_list" TSLTag="https://uri.etsi.org/19612/TSLTag">
     <SchemeInformation>
         <TSLVersionIdentifier>5</TSLVersionIdentifier>
         <TSLSequenceNumber>25</TSLSequenceNumber>
-        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
+        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric</TSLType>
         <SchemeOperatorName>
             <Name xml:lang="en">Swedish Post and Telecom Agency (PTS)</Name>
             <Name xml:lang="sv">Post- och telestyrelsen (PTS)</Name>
@@ -27,10 +27,10 @@
         <SchemeInformationURI>
             <URI xml:lang="en">https://trustedlist.pts.se/</URI>
         </SchemeInformationURI>
-        <StatusDeterminationApproach>http://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
+        <StatusDeterminationApproach>https://uri.etsi.org/TrstSvc/TrustedList/StatusDetn/EUappropriate</StatusDeterminationApproach>
         <SchemeTypeCommunityRules>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
-            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/SE</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUcommon</URI>
+            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/SE</URI>
         </SchemeTypeCommunityRules>
         <SchemeTerritory>SE</SchemeTerritory>
         <PolicyOrLegalNotice>
@@ -64,7 +64,7 @@
                 <TSLLocation>https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml</TSLLocation>
                 <AdditionalInformation>
                     <OtherInformation>
-                        <TSLType>http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
+                        <TSLType>https://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists</TSLType>
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTerritory>EU</SchemeTerritory>
@@ -79,7 +79,7 @@
                     </OtherInformation>
                     <OtherInformation>
                         <SchemeTypeCommunityRules>
-                            <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
+                            <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/schemerules/EUlistofthelists</URI>
                         </SchemeTypeCommunityRules>
                     </OtherInformation>
                 </AdditionalInformation>
@@ -124,7 +124,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SignGuard Europe AB - qualified certificate service</Name>
                         </ServiceName>
@@ -133,14 +133,14 @@
 <X509Certificate>MIIFNjCCBB6gAwIBAgIBCjANBgkqhkiG9w0BAQUFADBhMQswCQYDVQQGEwJTRTEcMBoGA1UEChMTU2lnbmd1YXJkIEV1cm9wZSBBQjEZMBcGA1UECxMQU2lnbmd1YXJkUm9vdENBMTEZMBcGA1UEAxMQU2lnbmd1YXJkUm9vdENBMTAeFw0wODA2MDYxMzE0NTlaFw0xODA2MDQxMzE0NTlaMHExCzAJBgNVBAYTAlNFMRwwGgYDVQQKExNTaWduZ3VhcmQgRXVyb3BlIEFCMRwwGgYDVQQLExNRdWFsaWZpZWRVc2VyQ0EyMDA4MSYwJAYDVQQDEx1TaWduZ3VhcmQgUXVhbGlmaWVkVXNlckNBMjAwODCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMxB3GofmVIZU4XV+ACNaShLq9/es8M0HTbH2U/NTJ3N0kSps481K/YUCWr1hvFE4uDUmGsPBFJ32yxBZzRCaG3PPb3+jRy0GIvusOPV84i00PBEg6DskqdFOzNjYyqBRcuevMSe90aeZ0XlppRQe+sIGvSpRfgLHVDls+2wLGdCOqqOtJidWuZAhSP8NPHS0JB3oPdOGvxqHGOrbbV2I7NwlLzrAl+YKFNMzV1vcGrE0QLh1SkS8C2Q/LrSdc90LrsalX/MJf4Yl9v8Iq2R4gdSkF5t8fpVVfAgBFRz85bl/vSmqL4/NQizbaNvvdpSwFN5fynwWi9hcOG3nPWiM9UCAwEAAaOCAecwggHjMA8GA1UdEwEB/wQFMAMBAf8wQQYJYIZIAYb4QgENBDQWMk9wZW5TU0wgR2VuZXJhdGVkIENlcnRpZmljYXRlIGZvciBTaWduZ3VhcmRSb290Q0ExMA4GA1UdDwEB/wQEAwIBBjBPBgNVHR8ESDBGMESgQqBAhj5sZGFwOi8vcGtpLnNpZ25ndWFyZC5zZS9jbj1TaWduZ3VhcmRSb290Q0ExLGRjPXNpZ25ndWFyZCxkYz1zZTCBgwYDVR0jBHwweoAUrZ3K4PM91yAXfYcjeNTkSdowT56hX6RdMFsxCzAJBgNVBAYTAlNFMRMwEQYDVQQHEwpHb3RoZW5idXJnMRwwGgYDVQQKExNTaWduZ3VhcmQgRXVyb3BlIEFCMRkwFwYDVQQDExBTaWduZ3VhcmQgUm9vdENBggEBMB0GA1UdDgQWBBQHlSDwmeK5eiBFZptfEDmBLtTLLjA7BglghkgBhvhCAQgELhYsaHR0cDovL3d3dy5zaWduZ3VhcmQuc2UvcG9saWNpZXMvcG9saWN5Lmh0bWwwSgYDVR0gBEMwQTA/BgEAMDowOAYIKwYBBQUHAgEWLGh0dHA6Ly93d3cuc2lnbmd1YXJkLnNlL3BvbGljaWVzL3BvbGljeS5odG1sMA0GCSqGSIb3DQEBBQUAA4IBAQCmBtj656kVLL7u2+/uoU7j9iyjei7cA5JYQrSQBbZelVj9ygtOOpSCt+TMG+l6fQFSsD4xxWW1dIzwhH7uJJVdDwk2Y9QHxV9pa7H7URotcFhGqVf6FdreV9/PuO5Cke3/3KKpAWv7L43A7jMlje95ykCdCpDm6Lp20MIfQLUivqEjVcH8NPmj1kZOpJDFGLiIlg/mnEpKTdqmfYtd5Q+b6oTkU9X168zxr+WPtYs+xBregJc7E28T2SWSMAJLeHR4GosyQC5IYGBs5ec9+/FyczhK8GX6fjYwZy0XJtHf1ZpCSZuwyIV0B+7kGW6rJC/F58oo3+g1Sio1e4IGT/GG</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-01-08T23:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <ns5:Qualifications>
     <ns5:QualificationElement>
         <ns5:Qualifiers>
-            <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+            <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
         </ns5:Qualifiers>
         <ns5:CriteriaList assert="none">
             <ns5:KeyUsage>
@@ -160,14 +160,14 @@
                             </Extension>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SignGuard Europe AB - qualified certificate service</Name>
                             </ServiceName>
@@ -179,14 +179,14 @@
     <X509SKI>B5Ug8JniuXogRWabXxA5gS7Uyy4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoQSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="none">
                 <ns5:KeyUsage>
@@ -206,13 +206,13 @@
 </Extension>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/CA/QC</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SignGuard Europe AB - qualified certificate service</Name>
                             </ServiceName>
@@ -224,14 +224,14 @@
     <X509SKI>B5Ug8JniuXogRWabXxA5gS7Uyy4=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-11T12:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <ns5:Qualifications>
         <ns5:QualificationElement>
             <ns5:Qualifiers>
-                <ns5:Qualifier uri="http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
+                <ns5:Qualifier uri="https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/QCNoSSCD"/>
             </ns5:Qualifiers>
             <ns5:CriteriaList assert="none">
                 <ns5:KeyUsage>
@@ -255,7 +255,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">SignGuard Europe AB – Qualified OCSP Service</Name>
                         </ServiceName>
@@ -264,19 +264,19 @@
 <X509Certificate>MIIDlzCCAn+gAwIBAgIBDTANBgkqhkiG9w0BAQUFADBhMQswCQYDVQQGEwJTRTEcMBoGA1UEChMTU2lnbmd1YXJkIEV1cm9wZSBBQjEZMBcGA1UECxMQU2lnbmd1YXJkUm9vdENBMTEZMBcGA1UEAxMQU2lnbmd1YXJkUm9vdENBMTAeFw0wODExMDYxNDE3MTRaFw0xODExMDQxNDE3MTRaMIGLMQswCQYDVQQGEwJTRTEcMBoGA1UEChMTU2lnbmd1YXJkIEV1cm9wZSBBQjEeMBwGA1UECxMVQ2VydGlmaWNhdGUgQXV0aG9yaXR5MRwwGgYDVQQDExNTaWduZ3VhcmQgT0NTUC0xOlBOMSAwHgYJKoZIhvcNAQkBFhFvY3NwQHNpZ25ndWFyZC5zZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMEoiYxFse6cGSCgLiYLIZDgTzFR7Xhh0Fgp4WlgoHeYYkB74E7ZFcKP6Dv4GgQLYbX+zGtjxP2kD7yfXXD3lxkGQZ6OJWXexBoKkmEvJlRtCZzEHGpIuPG03vOh2LYpee6Fn45v2cYQViCQSWIeEfyL9pYy3bvZ/yfPJ8eR2CJ6YZSTzR13G4s7D9z4LE142vI+y+iUWmrdmy+0NwxBuXbqJwn4ogS9+pjnvhmqs2duXbIbScHvx58oZiD/AXXgp5/RpvTamC9vhyTWUDFqeQ5g2HUWY+M2AkGUI0VGGgy0M9fMlp85jAwQjrtY8wowPJbDbPXkHoLufSp0OZUjbyMCAwEAAaMvMC0wEwYDVR0lBAwwCgYIKwYBBQUHAwkwCQYDVR0TBAIwADALBgNVHQ8EBAMCBkAwDQYJKoZIhvcNAQEFBQADggEBAFkUazUmM82mH8Fo4AnKJBVE2OiE0nXiFTMEmD3e+pjyJikspVDR6mq3AVoieLni9MbqwqvgGwpId9/OtDLyuFZRTaRjWVBkuiu++kxUGLWXKsP0fn9ot6HAwwF2S9pQVw99Ps+rTpAtDAdpSEVjOJfJZ8RbCEG+SpRiLpeMHo+OQh46tgZ2Nmzm51KWAv+ziaauW9UwqIfMkY4KvCWLxV4j0QO+r5iQiRWztvIeTTZIkIjHIfZNTFYDSM5AC3JobYql0jFFTREk76gH6Cl/zyZuWsuZ6jlL8+ajh0Mcd/OZN+Sg2Dr2+BNpO5lQ1ULaex6okW2FgiyAi9gMH+0ApRc=</X509Certificate>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2017-01-08T23:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="true">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SignGuard Europe AB – Qualified OCSP Service</Name>
                             </ServiceName>
@@ -288,18 +288,18 @@
     <X509SKI>t1IhwTbJN4HC92s+wN2QeAXkeC0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/recognisedatnationallevel</ServiceStatus>
                             <StatusStartingTime>2016-06-30T22:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="true">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
                         </ServiceHistoryInstance>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/Certstatus/OCSP</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">SignGuard Europe AB – Qualified OCSP Service</Name>
                             </ServiceName>
@@ -311,7 +311,7 @@
     <X509SKI>t1IhwTbJN4HC92s+wN2QeAXkeC0=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/undersupervision</ServiceStatus>
                             <StatusStartingTime>2008-06-11T12:00:00Z</StatusStartingTime>
                         </ServiceHistoryInstance>
                     </ServiceHistory>
@@ -349,7 +349,7 @@
             <TSPServices>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TrustWeaver Signature Validation Service</Name>
                         </ServiceName>
@@ -364,24 +364,24 @@
 <X509SKI>S/9TfMoMbgg=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/withdrawn</ServiceStatus>
                         <StatusStartingTime>2016-12-05T23:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
                     </ServiceInformation>
                     <ServiceHistory>
                         <ServiceHistoryInstance>
-                            <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
+                            <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
                             <ServiceName>
 <Name xml:lang="en">TrustWeaver Signature Validation Service</Name>
                             </ServiceName>
@@ -393,17 +393,17 @@
     <X509SKI>S/9TfMoMbgg=</X509SKI>
 </DigitalId>
                             </ServiceDigitalIdentity>
-                            <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                            <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                             <StatusStartingTime>2016-08-10T05:00:00Z</StatusStartingTime>
                             <ServiceInformationExtensions>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
     </AdditionalServiceInformation>
 </Extension>
 <Extension Critical="false">
     <AdditionalServiceInformation>
-        <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+        <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
     </AdditionalServiceInformation>
 </Extension>
                             </ServiceInformationExtensions>
@@ -412,7 +412,7 @@
                 </TSPService>
                 <TSPService>
                     <ServiceInformation>
-                        <ServiceTypeIdentifier>http://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
+                        <ServiceTypeIdentifier>https://uri.etsi.org/TrstSvc/Svctype/QESValidation/Q</ServiceTypeIdentifier>
                         <ServiceName>
                             <Name xml:lang="en">TrustWeaver Signature Validation Service</Name>
                         </ServiceName>
@@ -427,17 +427,17 @@
 <X509SKI>fxP3y96TZ9HQk67ajmj4UihZDtE=</X509SKI>
                             </DigitalId>
                         </ServiceDigitalIdentity>
-                        <ServiceStatus>http://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
+                        <ServiceStatus>https://uri.etsi.org/TrstSvc/TrustedList/Svcstatus/granted</ServiceStatus>
                         <StatusStartingTime>2016-12-05T23:00:00Z</StatusStartingTime>
                         <ServiceInformationExtensions>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures</URI>
 </AdditionalServiceInformation>
                             </Extension>
                             <Extension Critical="false">
 <AdditionalServiceInformation>
-    <URI xml:lang="en">http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
+    <URI xml:lang="en">https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSeals</URI>
 </AdditionalServiceInformation>
                             </Extension>
                         </ServiceInformationExtensions>
@@ -446,4 +446,4 @@
             </TSPServices>
         </TrustServiceProvider>
     </TrustServiceProviderList>
-<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-b38ad4907288cf0d6fffef5cdb19d0a5"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>6zvHfEQxjbWyrKU7s34ovaanau4jZFf3XRSFEAGsCDM=</ds:DigestValue></ds:Reference><ds:Reference Type="http://uri.etsi.org/01903#SignedProperties" URI="#xades-id-b38ad4907288cf0d6fffef5cdb19d0a5"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>IUatpruRKRjtE+EzjGMlktjPbpxzZMjb8Zv1wtwyHlc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-b38ad4907288cf0d6fffef5cdb19d0a5">VP/GMv7xz8ldBKj62PJXxiJchsW66nMib5rakAQD5KtSXmvpXw0IWBsrYLH5WnWW147z8s1yrS0WU39ssbwvJPTuvUiBDJVqIH5c9pl48ikm15DO5x7ZlE4lPVOFRyh+Ou9dLffnERou+Zk5BLcFd5iUsBFQMxrwZfV4SpK9kXRsyFia2t1lzXTjmMAkTSWnk7a5Ary6bUOCItQdsC9iOn1FwB2kaOoXbNe3T7sRU6yBnnJs0W5WJxM/GXUqa/aD2Hmn/IikarF5ME/Hf6Qb97Kp0PdMgOSx+Ff4C8Ek98tW3sNp2UJ1ugEyPYiTgEFg99hUxKTxdxCqhlm+k9wsgw==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIID+zCCAuOgAwIBAgIJAJQ9RQFU8czIMA0GCSqGSIb3DQEBCwUAMIGVMS4wLAYDVQQKDCVTd2VkaXNoIFBvc3QgYW5kIFRlbGVjb20gQWdlbmN5IChQVFMpMRIwEAYDVQQHDAlTdG9ja2hvbG0xEjAQBgNVBAgMCVN0b2NraG9sbTELMAkGA1UEBhMCU0UxLjAsBgNVBAMMJVN3ZWRpc2ggUG9zdCBhbmQgVGVsZWNvbSBBZ2VuY3kgKFBUUykwHhcNMTcwMjA2MTE0MjU1WhcNMjAwMjA2MTE0MjU1WjCBlTEuMCwGA1UECgwlU3dlZGlzaCBQb3N0IGFuZCBUZWxlY29tIEFnZW5jeSAoUFRTKTESMBAGA1UEBwwJU3RvY2tob2xtMRIwEAYDVQQIDAlTdG9ja2hvbG0xCzAJBgNVBAYTAlNFMS4wLAYDVQQDDCVTd2VkaXNoIFBvc3QgYW5kIFRlbGVjb20gQWdlbmN5IChQVFMpMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArF1Tfs9qxGo7Bnnyx00SQhTVT8gYwhroX4P4G46hu+o4KV13iro0EzE0v4qhNBVJALqDlUlUhRjTuHN/mzjjDnYTe55bJTrS0SotEOT47Nq0qlhKbT50Zsu6AyFvIhsvX3blIOcxYDPNVVI8enGby8RHMFeAmCPEUX3i6CBg/X2nf7DtKc9K6cIw5By0z38pkdEsg5g1GhAoELoMUSI/EW8sJeDIZDj0Fb96tGz7xyV25B+7YclJCcJJDpLzfxFHK+9veh5HCHk6rNS56r2D3q3aowj218fQ7MTo8fwBYQy+UgI15jILiDBaRIfOUGpNsX3ln8PpjY1UQTx+YHHlJQIDAQABo0wwSjAJBgNVHRMEAjAAMAsGA1UdDwQEAwIGQDARBgNVHSUECjAIBgYEAJE3AwAwHQYDVR0OBBYEFL2M2/Z7z12w0va3QqvpaZGR+TbMMA0GCSqGSIb3DQEBCwUAA4IBAQBaujdxsR2laXbXsZPvwe35B0/9vlPQy/OxoY08OhPIyQ9Laloc8sWyX92ed7byPGAw6cO5X6aTH+e5d1OqUhv5hdfs7h4yR3dRTGdSFxK9rirMkvWAsrx/ILuwi9dq/KXDbgx8XIg+1yecCkLDVwQoOcYi5jQNhGJsW0BT7/Yy/SSTUSq9Apzq+3oVLzefqnGP8ZUKCXP5vOtdxVyBIom+L4pMS4rBxOJi4bLV2l6Pc3CoL4HgpRr/tTkDqlK7/jDx5lClDVOzRzr9CnCDze0K9jirXJTrlrUVw7KvA2ow7idwla2Cl9g+yHrbzZTmm3fhUFcRooke14emfoWOSTUV</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#id-b38ad4907288cf0d6fffef5cdb19d0a5"><xades:SignedProperties Id="xades-id-b38ad4907288cf0d6fffef5cdb19d0a5"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-17T14:00:58Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>GOrh29Kh86/OQQoTrKz0cu8vE1w=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Swedish Post and Telecom Agency (PTS),C=SE,ST=Stockholm,L=Stockholm,O=Swedish Post and Telecom Agency (PTS)</ds:X509IssuerName><ds:X509SerialNumber>10681769763215101128</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="id-b38ad4907288cf0d6fffef5cdb19d0a5"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><ds:Reference Id="xml_ref_id" Type="" URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>6zvHfEQxjbWyrKU7s34ovaanau4jZFf3XRSFEAGsCDM=</ds:DigestValue></ds:Reference><ds:Reference Type="https://uri.etsi.org/01903#SignedProperties" URI="#xades-id-b38ad4907288cf0d6fffef5cdb19d0a5"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>IUatpruRKRjtE+EzjGMlktjPbpxzZMjb8Zv1wtwyHlc=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue Id="value-id-b38ad4907288cf0d6fffef5cdb19d0a5">VP/GMv7xz8ldBKj62PJXxiJchsW66nMib5rakAQD5KtSXmvpXw0IWBsrYLH5WnWW147z8s1yrS0WU39ssbwvJPTuvUiBDJVqIH5c9pl48ikm15DO5x7ZlE4lPVOFRyh+Ou9dLffnERou+Zk5BLcFd5iUsBFQMxrwZfV4SpK9kXRsyFia2t1lzXTjmMAkTSWnk7a5Ary6bUOCItQdsC9iOn1FwB2kaOoXbNe3T7sRU6yBnnJs0W5WJxM/GXUqa/aD2Hmn/IikarF5ME/Hf6Qb97Kp0PdMgOSx+Ff4C8Ek98tW3sNp2UJ1ugEyPYiTgEFg99hUxKTxdxCqhlm+k9wsgw==</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIID+zCCAuOgAwIBAgIJAJQ9RQFU8czIMA0GCSqGSIb3DQEBCwUAMIGVMS4wLAYDVQQKDCVTd2VkaXNoIFBvc3QgYW5kIFRlbGVjb20gQWdlbmN5IChQVFMpMRIwEAYDVQQHDAlTdG9ja2hvbG0xEjAQBgNVBAgMCVN0b2NraG9sbTELMAkGA1UEBhMCU0UxLjAsBgNVBAMMJVN3ZWRpc2ggUG9zdCBhbmQgVGVsZWNvbSBBZ2VuY3kgKFBUUykwHhcNMTcwMjA2MTE0MjU1WhcNMjAwMjA2MTE0MjU1WjCBlTEuMCwGA1UECgwlU3dlZGlzaCBQb3N0IGFuZCBUZWxlY29tIEFnZW5jeSAoUFRTKTESMBAGA1UEBwwJU3RvY2tob2xtMRIwEAYDVQQIDAlTdG9ja2hvbG0xCzAJBgNVBAYTAlNFMS4wLAYDVQQDDCVTd2VkaXNoIFBvc3QgYW5kIFRlbGVjb20gQWdlbmN5IChQVFMpMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArF1Tfs9qxGo7Bnnyx00SQhTVT8gYwhroX4P4G46hu+o4KV13iro0EzE0v4qhNBVJALqDlUlUhRjTuHN/mzjjDnYTe55bJTrS0SotEOT47Nq0qlhKbT50Zsu6AyFvIhsvX3blIOcxYDPNVVI8enGby8RHMFeAmCPEUX3i6CBg/X2nf7DtKc9K6cIw5By0z38pkdEsg5g1GhAoELoMUSI/EW8sJeDIZDj0Fb96tGz7xyV25B+7YclJCcJJDpLzfxFHK+9veh5HCHk6rNS56r2D3q3aowj218fQ7MTo8fwBYQy+UgI15jILiDBaRIfOUGpNsX3ln8PpjY1UQTx+YHHlJQIDAQABo0wwSjAJBgNVHRMEAjAAMAsGA1UdDwQEAwIGQDARBgNVHSUECjAIBgYEAJE3AwAwHQYDVR0OBBYEFL2M2/Z7z12w0va3QqvpaZGR+TbMMA0GCSqGSIb3DQEBCwUAA4IBAQBaujdxsR2laXbXsZPvwe35B0/9vlPQy/OxoY08OhPIyQ9Laloc8sWyX92ed7byPGAw6cO5X6aTH+e5d1OqUhv5hdfs7h4yR3dRTGdSFxK9rirMkvWAsrx/ILuwi9dq/KXDbgx8XIg+1yecCkLDVwQoOcYi5jQNhGJsW0BT7/Yy/SSTUSq9Apzq+3oVLzefqnGP8ZUKCXP5vOtdxVyBIom+L4pMS4rBxOJi4bLV2l6Pc3CoL4HgpRr/tTkDqlK7/jDx5lClDVOzRzr9CnCDze0K9jirXJTrlrUVw7KvA2ow7idwla2Cl9g+yHrbzZTmm3fhUFcRooke14emfoWOSTUV</ds:X509Certificate></ds:X509Data></ds:KeyInfo><ds:Object><xades:QualifyingProperties xmlns:xades="https://uri.etsi.org/01903/v1.3.2#" Target="#id-b38ad4907288cf0d6fffef5cdb19d0a5"><xades:SignedProperties Id="xades-id-b38ad4907288cf0d6fffef5cdb19d0a5"><xades:SignedSignatureProperties><xades:SigningTime>2017-02-17T14:00:58Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>GOrh29Kh86/OQQoTrKz0cu8vE1w=</ds:DigestValue></xades:CertDigest><xades:IssuerSerial><ds:X509IssuerName>CN=Swedish Post and Telecom Agency (PTS),C=SE,ST=Stockholm,L=Stockholm,O=Swedish Post and Telecom Agency (PTS)</ds:X509IssuerName><ds:X509SerialNumber>10681769763215101128</ds:X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties><xades:SignedDataObjectProperties><xades:DataObjectFormat ObjectReference="#xml_ref_id"><xades:MimeType>application/octet-stream</xades:MimeType></xades:DataObjectFormat></xades:SignedDataObjectProperties></xades:SignedProperties></xades:QualifyingProperties></ds:Object></ds:Signature></TrustServiceStatusList>

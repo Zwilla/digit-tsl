@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.dto.tl;
 
 import java.io.Serializable;
@@ -71,16 +51,16 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         List<Serializable> textualInformationOrOtherInformation = tslPointerType.getAdditionalInformation().getTextualInformationOrOtherInformation();
         Map<String, Object> properties = TLUtils.extractAsMap(textualInformationOrOtherInformation);
 
-        Object mm = properties.get("{http://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
+        Object mm = properties.get("{https://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
         if (mm instanceof String) {
             setMimeType(TLUtils.convert((String) mm));
         }
 
         setTlLocation(tslPointerType.getTSLLocation());
-        Object st = properties.get("{http://uri.etsi.org/02231/v2#}SchemeTerritory");
+        Object st = properties.get("{https://uri.etsi.org/02231/v2#}SchemeTerritory");
 
         setSchemeTerritory(st.toString());
-        Object tlt = properties.get("{http://uri.etsi.org/02231/v2#}TSLType");
+        Object tlt = properties.get("{https://uri.etsi.org/02231/v2#}TSLType");
         if (tlt == null) {
             setTlType("");
         } else {
@@ -88,7 +68,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         }
 
         List<TLSchemeTypeCommunityRule> schemeTypeCommunity = new ArrayList<>();
-        Object cr = properties.get("{http://uri.etsi.org/02231/v2#}SchemeTypeCommunityRules");
+        Object cr = properties.get("{https://uri.etsi.org/02231/v2#}SchemeTypeCommunityRules");
         NonEmptyMultiLangURIListType communityTsl = (NonEmptyMultiLangURIListType) cr;
         int i = 0;
         for (NonEmptyMultiLangURIType uriType : communityTsl.getURI()) {
@@ -98,7 +78,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         setSchemeTypeCommunity(schemeTypeCommunity);
 
         List<TLName> schemeOpeName = new ArrayList<>();
-        Object son = properties.get("{http://uri.etsi.org/02231/v2#}SchemeOperatorName");
+        Object son = properties.get("{https://uri.etsi.org/02231/v2#}SchemeOperatorName");
         InternationalNamesType nameTsl = (InternationalNamesType) son;
         i = 0;
         for (MultiLangNormStringType name : nameTsl.getName()) {
@@ -125,7 +105,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         List<Serializable> textualInformationOrOtherInformation = tslPointerType.getAdditionalInformation().getTextualInformationOrOtherInformation();
         Map<String, Object> properties = TLUtils.extractAsMapV5(textualInformationOrOtherInformation);
 
-        Object mm = properties.get("{http://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
+        Object mm = properties.get("{https://uri.etsi.org/02231/v2/additionaltypes#}MimeType");
         if ((mm instanceof String) && (((String) mm).length() > 1)) {
             setMimeType(TLUtils.convert((String) mm));
         }
@@ -134,18 +114,18 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
             setTlLocation(tslPointerType.getTSLLocation());
         }
 
-        Object st = properties.get("{http://uri.etsi.org/02231/v2#}SchemeTerritory");
+        Object st = properties.get("{https://uri.etsi.org/02231/v2#}SchemeTerritory");
         if (st != null) {
             setSchemeTerritory(st.toString());
         }
 
-        Object tlt = properties.get("{http://uri.etsi.org/02231/v2#}TSLType");
+        Object tlt = properties.get("{https://uri.etsi.org/02231/v2#}TSLType");
         if (tlt != null) {
             setTlType(tlt.toString());
         }
 
         List<TLSchemeTypeCommunityRule> schemeTypeCommunity = new ArrayList<>();
-        Object cr = properties.get("{http://uri.etsi.org/02231/v2#}SchemeTypeCommunityRules");
+        Object cr = properties.get("{https://uri.etsi.org/02231/v2#}SchemeTypeCommunityRules");
         NonEmptyMultiLangURIListTypeV5 communityTsl = (NonEmptyMultiLangURIListTypeV5) cr;
         int i = 0;
         if (communityTsl != null) {
@@ -157,7 +137,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         setSchemeTypeCommunity(schemeTypeCommunity);
 
         List<TLName> schemeOpeName = new ArrayList<>();
-        Object son = properties.get("{http://uri.etsi.org/02231/v2#}SchemeOperatorName");
+        Object son = properties.get("{https://uri.etsi.org/02231/v2#}SchemeOperatorName");
         InternationalNamesTypeV5 nameTsl = (InternationalNamesTypeV5) son;
         i = 0;
         if (nameTsl != null) {
@@ -171,11 +151,9 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         // DIGITAL IDENTIFICATION
         List<TLDigitalIdentification> svcDigitalIdentification = new ArrayList<>();
         i = 0;
-        if (tslPointerType != null) {
-            for (DigitalIdentityListTypeV5 jxbPointerDigitalList : tslPointerType.getServiceDigitalIdentities().getServiceDigitalIdentity()) {
-                i++;
-                svcDigitalIdentification.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_" + i, jxbPointerDigitalList));
-            }
+        for (DigitalIdentityListTypeV5 jxbPointerDigitalList : tslPointerType.getServiceDigitalIdentities().getServiceDigitalIdentity()) {
+            i++;
+            svcDigitalIdentification.add(new TLDigitalIdentification(getTlId(), getId() + "_" + Tag.SERVICE_DIGITAL_IDENTITY + "_" + i, jxbPointerDigitalList));
         }
         setServiceDigitalId(svcDigitalIdentification);
     }
@@ -188,17 +166,17 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
         AdditionalInformationTypeV5 additional = new AdditionalInformationTypeV5();
         tslPointers.setAdditionalInformation(additional);
 
-        JAXBElement<String> el = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "TSLType"), String.class, getTlType());
+        JAXBElement<String> el = new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2#", "TSLType"), String.class, getTlType());
         AnyTypeV5 anyTSLType = new AnyTypeV5();
         anyTSLType.getContent().add(el);
         additional.getTextualInformationOrOtherInformation().add(anyTSLType);
 
-        el = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeTerritory"), String.class, getSchemeTerritory());
+        el = new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2#", "SchemeTerritory"), String.class, getSchemeTerritory());
         AnyTypeV5 anySchemeTerritory = new AnyTypeV5();
         anySchemeTerritory.getContent().add(el);
         additional.getTextualInformationOrOtherInformation().add(anySchemeTerritory);
 
-        el = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2/additionaltypes#", "MimeType"), String.class, TLUtils.convert(getMimeType()));
+        el = new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2/additionaltypes#", "MimeType"), String.class, TLUtils.convert(getMimeType()));
         AnyTypeV5 anyMime = new AnyTypeV5();
         anyMime.getContent().add(el);
         additional.getTextualInformationOrOtherInformation().add(anyMime);
@@ -209,7 +187,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
                 intSchemeOperatorName.getName().add(tlName.asTSLTypeV5());
             }
         }
-        JAXBElement<InternationalNamesTypeV5> el2 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeOperatorName"), InternationalNamesTypeV5.class, intSchemeOperatorName);
+        JAXBElement<InternationalNamesTypeV5> el2 = new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2#", "SchemeOperatorName"), InternationalNamesTypeV5.class, intSchemeOperatorName);
         AnyTypeV5 anySchemeOpe = new AnyTypeV5();
         anySchemeOpe.getContent().add(el2);
         additional.getTextualInformationOrOtherInformation().add(anySchemeOpe);
@@ -220,7 +198,7 @@ public class TLPointersToOtherTSL extends AbstractTLDTO {
                 typeCommunity.getURI().add(tlTypeComm.asTSLTypeV5());
             }
         }
-        JAXBElement<NonEmptyMultiLangURIListTypeV5> el3 = new JAXBElement<>(new QName("http://uri.etsi.org/02231/v2#", "SchemeTypeCommunityRules"), NonEmptyMultiLangURIListTypeV5.class,
+        JAXBElement<NonEmptyMultiLangURIListTypeV5> el3 = new JAXBElement<>(new QName("https://uri.etsi.org/02231/v2#", "SchemeTypeCommunityRules"), NonEmptyMultiLangURIListTypeV5.class,
                 typeCommunity);
         AnyTypeV5 anyComm = new AnyTypeV5();
         anyComm.getContent().add(el3);

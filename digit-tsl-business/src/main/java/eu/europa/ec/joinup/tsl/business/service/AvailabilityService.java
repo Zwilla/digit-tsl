@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
@@ -54,7 +34,7 @@ public class AvailabilityService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AvailabilityService.class);
 
-    private static ResourceBundle bundle = ResourceBundle.getBundle("messages");
+    private static final ResourceBundle bundle = ResourceBundle.getBundle("messages");
 
     @Autowired
     private AvailabilityRepository availabilityRepository;
@@ -262,9 +242,9 @@ public class AvailabilityService {
 
     private DBFilesAvailability getAvailabilityGap(Date dMin, List<DBFilesAvailability> availabilityFullDbList) {
         // Init Params
-        Boolean valueFind = false;
+        boolean valueFind = false;
         int index = 0;
-        while (!valueFind && (index < (availabilityFullDbList.size()))) {
+        while (index < availabilityFullDbList.size()) {
             if (availabilityFullDbList.get(index).getCheckDate().before(dMin)) {
                 DBFilesAvailability missingGap = new DBFilesAvailability();
                 missingGap.setStatus(availabilityFullDbList.get(index).getStatus());
@@ -316,7 +296,7 @@ public class AvailabilityService {
      * @param countryCode
      * @return
      */
-    public Boolean unavailabilityAlertVerification(int fileId) {
+    public boolean unavailabilityAlertVerification(int fileId) {
         AvailabilityState currentStatusTiming = getCurrentStatusDuration(fileId);
         if (currentStatusTiming == null) {
             LOGGER.error("Unavailability Alert Verification currentStatus timing is null for fileId : " + fileId);

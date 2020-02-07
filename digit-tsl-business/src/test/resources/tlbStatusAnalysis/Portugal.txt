@@ -2,121 +2,121 @@ Portugal
 
     ECCE 
 
-        ECCE (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ECCE (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        ECCE 001 (CA-Qualified certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ECCE 001 (CA-Qualified certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Cartão de Cidadão 
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0001 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0001 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0002 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0002 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0003 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0003 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0004 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0004 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0005 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0005 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0006 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0006 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0007 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0007 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0008 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0008 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0009 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0009 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0010 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0010 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0011 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        EC de Assinatura Digital Qualificada do Cartão de Cidadão 0011 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     Justica 
 
-        ECM Justica (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ECM Justica (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     ECAR 
 
-        ECAR (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        ECAR (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
     MULTICERT - Serviços de Certificação Electrónica S.A. 
 
-        Multicert 001 (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Multicert 001 (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        Multicert 002 (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        Multicert 002 (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        MULTICERT Qualified Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        MULTICERT Qualified Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        MULTICERT Qualified Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        MULTICERT Qualified Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        MULTICERT Qualified Time Stamping Authority - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        MULTICERT Qualified Time Stamping Authority - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
     British Telecommunications plc 
 
-        BT/DigitalSign (CA-Qualified Certificates) - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        BT/DigitalSign (CA-Qualified Certificates) - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigitalSign (LRA in Portugal) - http://uri.etsi.org/TrstSvc/Svctype/RA 
+        DigitalSign (LRA in Portugal) - https://uri.etsi.org/TrstSvc/Svctype/RA
 
     DigitalSign - Certificadora Digital 
 
-        DigitalSign Qualified CA - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigitalSign Qualified CA - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigitalSign TSA (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        DigitalSign TSA (Qualified TSA) - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        DigitalSign TSA - G2 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        DigitalSign TSA - G2 (Qualified TSA) - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        DigitalSign TSA - G2 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        DigitalSign TSA - G2 (Qualified TSA) - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        DigitalSign Qualified CA - G2 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigitalSign Qualified CA - G2 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigitalSign TSA - G3 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        DigitalSign TSA - G3 (Qualified TSA) - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 
-        DigitalSign Qualified CA - G3 - http://uri.etsi.org/TrstSvc/Svctype/CA/QC 
+        DigitalSign Qualified CA - G3 - https://uri.etsi.org/TrstSvc/Svctype/CA/QC
 
-            http://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures 
+            https://uri.etsi.org/TrstSvc/TrustedList/SvcInfoExt/ForeSignatures
 
-        DigitalSign TSA - G4 (Qualified TSA) - http://uri.etsi.org/TrstSvc/Svctype/TSA/QTST 
+        DigitalSign TSA - G4 (Qualified TSA) - https://uri.etsi.org/TrstSvc/Svctype/TSA/QTST
 

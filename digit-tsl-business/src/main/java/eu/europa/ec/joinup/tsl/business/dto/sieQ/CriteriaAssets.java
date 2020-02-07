@@ -6,7 +6,7 @@ public enum CriteriaAssets {
 
     private String label;
 
-    private CriteriaAssets(String label) {
+    CriteriaAssets(String label) {
         this.label = label;
     }
 

@@ -1,23 +1,3 @@
-/*******************************************************************************
- * DIGIT-TSL - Trusted List Manager
- * Copyright (C) 2018 European Commission, provided under the CEF E-Signature programme
- *  
- * This file is part of the "DIGIT-TSL - Trusted List Manager" project.
- *  
- * This library is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as published by
- * the Free Software Foundation; either version 2.1 of the License, or (at
- * your option) any later version.
- *  
- * This library is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public License
- * along with this library; if not, write to the Free Software Foundation,
- * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
- ******************************************************************************/
 package eu.europa.ec.joinup.tsl.business.service;
 
 import java.util.ArrayList;
@@ -61,7 +41,7 @@ public class ApplicationPropertyService {
     @Autowired
     private ApplicationPropertyRepository propertyRepository;
 
-    public List<DBApplicationProperty> getBooleanProperties() {
+    public List<DBApplicationProperty> getbooleanProperties() {
         return propertyRepository.findByTypeNotIn(booleanProperties);
     }
 
@@ -109,23 +89,23 @@ public class ApplicationPropertyService {
         return getPropertyValue(CHECK_LOTL);
     }
 
-    public Boolean sendNewTL() {
+    public boolean sendNewTL() {
         return getPropertyValue(MAIL_SEND_NEW_TL);
     }
 
-    public Boolean sendNewNotification() {
+    public boolean sendNewNotification() {
         return getPropertyValue(MAIL_SEND_NOTIFICATION);
     }
 
-    public Boolean sendNotificationPublished() {
+    public boolean sendNotificationPublished() {
         return getPropertyValue(MAIL_SEND_NOTIFICATION_PUBLISHED);
     }
 
-    public Boolean mailAlert() {
+    public boolean mailAlert() {
         return getPropertyValue(MAIL_ALERT);
     }
 
-    public Boolean useTlContact() {
+    public boolean useTlContact() {
         return getPropertyValue(MAIL_USE_TL_CONTACT);
     }
 
@@ -161,7 +141,7 @@ public class ApplicationPropertyService {
         return getPropertyValue(MAIL_ACCESS_LIST_MAIL);
     }
 
-    private Boolean getPropertyValue(String type) {
+    private boolean getPropertyValue(String type) {
         DBApplicationProperty property = propertyRepository.findByType(type);
         if (property == null) {
             return false;
